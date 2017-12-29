@@ -1,0 +1,79 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'AMS.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{317.40762677bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.53376846)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{AMS.pdf}}%
+    \put(0.11967269,0.51749158){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Pre-selection electrode}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{AMS.pdf}}%
+    \put(0.51037164,0.51749158){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Stripping canal}}}%
+    \put(0.56337288,0.32605436){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Stripping gas}}}%
+    \put(0.23745494,0.19394691){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\\ Microscope}}}%
+    \put(0.33080039,0.081616){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Extraction electrode}}}%
+    \put(0.33159141,0.0058013){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Sample holder}}}%
+    \put(0.60292594,0.27305319){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{pump}}}%
+    \put(0.1471051,0.00477653){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{L1}}}%
+    \put(0.1573889,0.36708329){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{M1}}}%
+    \put(0.21283805,0.3570016){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{F2}}}%
+    \put(0.25971289,0.38893858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{L4}}}%
+    \put(0.65366216,0.38893863){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{L5}}}%
+    \put(0.79397475,0.36362464){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{F3}}}%
+    \put(0.90314146,0.39488035){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{M5}}}%
+    \put(0.86150962,0.29402862){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{F5}}}%
+    \put(0.83244237,0.3251745){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{F4}}}%
+    \put(0.96959068,0.23350352){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{M3}}}%
+    \put(0.12273019,0.32423856){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{L3}}}%
+    \put(0.15630658,0.22224401){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{F1}}}%
+    \put(0.12102075,0.15167227){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{E1}}}%
+    \put(0.07061239,0.10126391){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{L2}}}%
+    \put(-0.00602023,0.0791063){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.0893901\unitlength}\centering Cesium\\ gun\end{minipage}}}%
+    \put(0.26161843,0.31484301){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10442028\unitlength}\centering Voltage\\ multiplier\end{minipage}}}%
+    \put(0.73978964,0.16108238){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12024156\unitlength}\centering Gas\\ ionisation\\ detector\end{minipage}}}%
+  \end{picture}%
+\endgroup%

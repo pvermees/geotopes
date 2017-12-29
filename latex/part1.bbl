@@ -1,0 +1,98 @@
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aldrich and Nier(1948)]{aldrich1948}
+Aldrich, L.~T. and Nier, A.~O.
+\newblock Argon 40 in potassium minerals.
+\newblock \emph{Physical Review}, 74\penalty0 (8):\penalty0 876, 1948.
+
+\bibitem[All{\`e}gre(2008)]{allegre2008}
+All{\`e}gre, C.~J.
+\newblock \emph{Isotope geology}.
+\newblock Cambridge University Press, 2008.
+
+\bibitem[Braun et~al.(2006)Braun, Van Der~Beek, and Batt]{braun2006}
+Braun, J., Van Der~Beek, P., and Batt, G.
+\newblock \emph{Quantitative thermochronology: numerical methods for the
+  interpretation of thermochronological data}.
+\newblock Cambridge University Press, 2006.
+
+\bibitem[Dickin(2005)]{dickin2005}
+Dickin, A.~P.
+\newblock \emph{Radiogenic isotope geology}.
+\newblock Cambridge University Press, 2005.
+
+\bibitem[Galbraith(2005)]{galbraith2005}
+Galbraith, R.~F.
+\newblock \emph{Statistics for fission track analysis}.
+\newblock CRC Press, 2005.
+
+\bibitem[Hahn et~al.(1943)Hahn, Strassman, Mattauch, and Ewald]{hahn1943}
+Hahn, O., Strassman, F., Mattauch, J., and Ewald, H.
+\newblock {Geologische Altersbestimmungen mit der strontiummethode}.
+\newblock \emph{Chem. Zeitung}, 67:\penalty0 55--6, 1943.
+
+\bibitem[Holmes(1911)]{holmes1911}
+Holmes, A.
+\newblock The association of lead with uranium in rock-minerals, and its
+  application to the measurement of geological time.
+\newblock \emph{Proceedings of the Royal Society of London. Series A,
+  Containing Papers of a Mathematical and Physical Character}, 85\penalty0
+  (578):\penalty0 248--256, 1911.
+
+\bibitem[Holmes(1913)]{holmes1913}
+Holmes, A.
+\newblock \emph{The age of the Earth}.
+\newblock Harper \& Brothers, 1913.
+
+\bibitem[Holmes(1947)]{holmes1947}
+Holmes, A.
+\newblock {The Construction of a Geological Time-Scale}.
+\newblock \emph{Transactions of the Geological Society of Glasgow}, 21\penalty0
+  (1):\penalty0 117--152, 1947.
+
+\bibitem[Libby(1946)]{libby1946}
+Libby, W.~F.
+\newblock Atmospheric helium three and radiocarbon from cosmic radiation.
+\newblock \emph{Physical Review}, 69\penalty0 (11-12):\penalty0 671, 1946.
+
+\bibitem[Lugmair(1974)]{lugmair1974}
+Lugmair, G.
+\newblock Sm-nd ages: a new dating method.
+\newblock \emph{Meteoritics}, 9:\penalty0 369, 1974.
+
+\bibitem[Merrihue and Turner(1966)]{merrihue1966}
+Merrihue, C. and Turner, G.
+\newblock Potassium-argon dating by activation with fast neutrons.
+\newblock \emph{Journal of Geophysical Research}, 71\penalty0 (11):\penalty0
+  2852--2857, 1966.
+
+\bibitem[Price and Walker(1963)]{price1963}
+Price, P. and Walker, R.
+\newblock Fossil tracks of charged particles in mica and the age of minerals.
+\newblock \emph{Journal of Geophysical Research}, 68\penalty0 (16):\penalty0
+  4847--4862, 1963.
+
+\bibitem[Rutherford and Soddy(1902{\natexlab{a}})]{rutherford1902a}
+Rutherford, E. and Soddy, F.
+\newblock The cause and nature of radioactivity -- part i.
+\newblock \emph{The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 4\penalty0 (21):\penalty0 370--396, 1902{\natexlab{a}}.
+
+\bibitem[Rutherford and Soddy(1902{\natexlab{b}})]{rutherford1902b}
+Rutherford, E. and Soddy, F.
+\newblock The cause and nature of radioactivity -- part ii.
+\newblock \emph{The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 4\penalty0 (23):\penalty0 569--585, 1902{\natexlab{b}}.
+
+\bibitem[Urey(1947)]{urey1947}
+Urey, H.~C.
+\newblock The thermodynamic properties of isotopic substances.
+\newblock \emph{Journal of the Chemical Society (Resumed)}, pages 562--581,
+  1947.
+
+\end{thebibliography}

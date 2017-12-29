@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>10 Error propagation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,2,next --> 
+<meta name="src" content="index.tex"> 
+<meta name="date" content="2017-12-29 21:07:00"> 
+<link rel="stylesheet" type="text/css" href="index.css"> 
+</head><body 
+>
+   <!--l. 2326--><div class="crosslinks"><p class="noindent">[<a 
+href="indexch12.html" >next</a>] [<a 
+href="indexch10.html" >prev</a>] [<a 
+href="indexch10.html#tailindexch10.html" >prev-tail</a>] [<a 
+href="indexch9.html#tailindexch10.html">tail</a>] [<a 
+href="index.html#indexch11.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;10</span><br /><a 
+ id="x14-3900010"></a>Error propagation</h2>
+<!--l. 2329--><p class="noindent" >All the methods and equations presented thus far have assumed that all
+parameters are either known or measured with infinite precision. In
+reality, however, the analytical equipment used to measure isotopic
+compositions, elemental concentrations and radioactive half-lives is
+not perfect. It is crucially important that we quantify the resulting
+analytical uncertainty before we can reliably interpret the resulting
+ages.<br 
+class="newline" />
+<!--l. 2337--><p class="indent" >   For example, suppose that the extinction of the dinosaurs has been
+dated at 65 Ma in one field location, and a meteorite impact has been dated
+at 64 Ma elsewhere. These two numbers are effectively meaningless in the
+absence of an estimate of precision. Taken at face value, the dates imply
+that the meteorite impact took place 1 million years after the mass
+extinction, which rules out a causal relationship between the two events. If,
+however, the analytical uncertainty is significantly greater than 1 Myr (e.g.
+64 <span 
+class="cmsy-10">± </span>2 Ma and 65 <span 
+class="cmsy-10">± </span>2 Ma), then such of a causal relationship remains very
+plausible.
+   <h3 class="sectionHead"><span class="titlemark">10.1   </span> <a 
+ id="x14-4000010.1"></a>Some basic definitions</h3>
+<!--l. 2349--><p class="noindent" >Suppose that our geochronological age (<span 
+class="cmmi-10">t</span>) is calculated as a function (<span 
+class="cmmi-10">f</span>) of
+some measurements (<span 
+class="cmmi-10">X </span>and <span 
+class="cmmi-10">Y </span>):
+   <table 
+class="equation"><tr><td><a 
+ id="x14-40001r1"></a>
+   <center class="math-display" >
+<img 
+src="index91x.png" alt="t = f(X, Y)
+" class="math-display" ></center></td><td class="equation-label">(10.1)</td></tr></table>
+<!--l. 2355--><p class="nopar" >
+                                                           
+                                                           
+<!--l. 2357--><p class="indent" >   Suppose that we have performed a large number (<span 
+class="cmmi-10">n</span>) of replicate
+measurements of <span 
+class="cmmi-10">X </span>and <span 
+class="cmmi-10">Y </span>:
+   <table 
+class="equation"><tr><td><a 
+ id="x14-40002r2"></a>
+   <center class="math-display" >
+<img 
+src="index92x.png" alt="{ X  =  {X1,X2, &sdot;&sdot;&sdot;,Xi,&sdot;&sdot;&sdot;,Xn }
+   Y =  {Y1,Y2,&sdot;&sdot;&sdot;,Yi,&sdot;&sdot;&sdot;,Yn}
+" class="math-display" ></center></td><td class="equation-label">(10.2)</td></tr></table>
+<!--l. 2368--><p class="nopar" >
+<!--l. 2370--><p class="indent" >   It is useful to define the following <span 
+class="cmti-10">summary statistics</span>:
+<!--l. 2372--><p class="indent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x14-40004x1">The mean:
+     <table 
+class="equation"><tr><td><a 
+ id="x14-40005r3"></a>
+     <center class="math-display" >
+     <img 
+src="index93x.png" alt="{ X-&equiv;   1 &sum;n  Xi
+  Y-&equiv;   n1 &sum;ni=1Yi
+        n   i=1
+     " class="math-display" ></center></td><td class="equation-label">(10.3)</td></tr></table>
+     <!--l. 2382--><p class="nopar" >
+     <!--l. 2384--><p class="noindent" >is a useful definition for the &#8216;most representative&#8217; value of <span 
+class="cmmi-10">X </span>and <span 
+class="cmmi-10">Y </span>,
+     which can be plugged into Equation <a 
+href="#x14-40001r1">10.1<!--tex4ht:ref: eq:tfXY --></a> to calculate the &#8216;most
+     representative&#8217; age.
+                                                           
+                                                           
+     </li>
+     <li 
+  class="enumerate" id="x14-40007x2">The variance:
+     <table 
+class="equation"><tr><td><a 
+ id="x14-40008r4"></a>
+     <center class="math-display" >
+     <img 
+src="index94x.png" alt="{  &sigma;2 &equiv;  --1 &sum;n  (X  &minus; X)2
+    X2    n&minus;11&sum;ni=1   i -- 2
+   &sigma;Y &equiv;  n&minus; 1  i=1(Yi &minus; Y )
+     " class="math-display" ></center></td><td class="equation-label">(10.4)</td></tr></table>
+     <!--l. 2397--><p class="nopar" >
+     <!--l. 2399--><p class="noindent" >with <span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">X</span></sub> and <span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">Y</span> </sub> the &#8216;standard deviations&#8217;, is used to quantify the
+     amount of dispersion around the mean.
+     </li>
+     <li 
+  class="enumerate" id="x14-40010x3">The covariance:
+     <table 
+class="equation"><tr><td><a 
+ id="x14-40011r5"></a>
+     <center class="math-display" >
+     <img 
+src="index95x.png" alt="             1  &sum;n      --     --
+cov(X,Y ) &equiv; n-&minus; 1  (Xi &minus; X )(Yi &minus; Y )
+                i=1
+     " class="math-display" ></center></td><td class="equation-label">(10.5)</td></tr></table>
+     <!--l. 2406--><p class="nopar" >
+                                                           
+                                                           
+     <!--l. 2408--><p class="noindent" >quantifies the degree of correlation between variables <span 
+class="cmmi-10">X </span>and
+     <span 
+class="cmmi-10">Y </span>.</li></ol>
+<!--l. 2411--><p class="indent" >   <span class="overline"><span 
+class="cmmi-10">X</span></span>, <span class="overline"><span 
+class="cmmi-10">Y</span> </span>, <span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">X</span></sub><sup><span 
+class="cmr-7">2</span></sup>, <span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">Y</span> </sub><sup><span 
+class="cmr-7">2</span></sup> and <span 
+class="cmmi-10">cov</span>(<span 
+class="cmmi-10">X,Y </span>) can all be estimated from the
+input data (<span 
+class="cmmi-10">X,Y </span>). These values can then be used to infer <span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">t</span></sub><sup><span 
+class="cmr-7">2</span></sup>, the
+variance of the calculated age <span 
+class="cmmi-10">t</span>, a process that is known as &#8216;error
+propagation&#8217;. To this end, recall the definition of the variance (Equation
+<a 
+href="#x14-40008r4">10.4<!--tex4ht:ref: eq:variance --></a>):
+   <table 
+class="equation"><tr><td><a 
+ id="x14-40012r6"></a>
+   <center class="math-display" >
+<img 
+src="index96x.png" alt="       1  &sum;n     -
+&sigma;2t &equiv;-----   (ti &minus; t)2
+     n &minus; 1i=1
+" class="math-display" ></center></td><td class="equation-label">(10.6)</td></tr></table>
+<!--l. 2421--><p class="nopar" >
+<!--l. 2423--><p class="indent" >   We can estimate (<span 
+class="cmmi-10">t</span><sub><span 
+class="cmmi-7">i</span></sub> <span 
+class="cmsy-10">&minus;</span><span class="overline"><span 
+class="cmmi-10">t</span></span>) by differentiating Equation <a 
+href="#x14-40001r1">10.1<!--tex4ht:ref: eq:tfXY --></a>:
+   <table 
+class="equation"><tr><td><a 
+ id="x14-40013r7"></a>
+   <center class="math-display" >
+<img 
+src="index97x.png" alt="ti &minus; t = (Xi &minus; X-) &part;f-+ (Yi &minus; Y)-&part;f
+               &part;X          &part;Y
+" class="math-display" ></center></td><td class="equation-label">(10.7)</td></tr></table>
+<!--l. 2430--><p class="nopar" >
+<!--l. 2432--><p class="indent" >   Plugging Equation <a 
+href="#x14-40013r7">10.7<!--tex4ht:ref: eq:ti-t --></a> into <a 
+href="#x14-40012r6">10.6<!--tex4ht:ref: eq:vart --></a>, we obtain:
+                                                           
+                                                           
+<!--l. 2434--><p class="indent" >
+<table 
+class="align">
+    <tr><td 
+class="align-odd"><span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">t</span></sub><sup><span 
+class="cmr-7">2</span></sup></td>    <td 
+class="align-even"> = <img 
+src="index98x.png" alt="--1--
+n&minus; 1"  class="frac" align="middle"><span 
+class="cmex-10">&sum;</span>
+      <sub><span 
+class="cmmi-7">i</span><span 
+class="cmr-7">=1</span></sub><sup><span 
+class="cmmi-7">n</span></sup><img 
+src="index99x.png" alt="[        (    )          (   ) ]
+ (X &minus; X-)  &part;f- + (Y &minus; Y-) -&part;f
+   i       &part;X      i      &part;Y"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup></td>        <td 
+class="align-label"><a 
+ id="x14-40014r8"></a>(10.8)
+    </td></tr><tr><td 
+class="align-odd"><span 
+class="cmmi-10">&#x00A0;</span></td>      <td 
+class="align-even"> = <span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">X</span></sub><sup><span 
+class="cmr-7">2</span></sup><img 
+src="index100x.png" alt="( &part;f )
+  &part;X-"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup> + <span 
+class="cmmi-10">&sigma;</span><sub>
+<span 
+class="cmmi-7">Y</span> </sub><sup><span 
+class="cmr-7">2</span></sup><img 
+src="index101x.png" alt="( &part;f)
+ &part;Y-"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup> + 2<span 
+class="cmmi-10">&#x00A0;cov</span>(<span 
+class="cmmi-10">X,Y </span>)<img 
+src="index102x.png" alt="&part;f
+&part;X-"  class="frac" align="middle"><img 
+src="index103x.png" alt="&part;f
+&part;Y-"  class="frac" align="middle"></td>          <td 
+class="align-label"><a 
+ id="x14-40015r9"></a>(10.9)    </td></tr></table>
+<!--l. 2443--><p class="indent" >   This is the general equation for the propagation of uncertainty with two
+variables, which is most easily extended to more than two variables by
+reformulating Equation <a 
+href="#x14-40015r9">10.9<!--tex4ht:ref: eq:s2t --></a> into a matrix form:
+   <table 
+class="equation"><tr><td><a 
+ id="x14-40016r10"></a>
+   <center class="math-display" >
+<img 
+src="index104x.png" alt="             [                     ][ &part;t ]
+&sigma;2= [ -&part;t-&part;t-]     &sigma;2X     cov(X,Y )    &part;X-
+ t    &part;X &part;Y    cov(X,Y )    &sigma;2Y        &part;&part;tY-
+" class="math-display" ></center></td><td class="equation-label">(10.10)</td></tr></table>
+                                                           
+                                                           
+<!--l. 2467--><p class="nopar" >
+<!--l. 2469--><p class="indent" >   where the innermost matrix is known as the <span 
+class="cmti-10">variance-covariance </span>matrix
+and the outermost matrix (and its transpose) as the <span 
+class="cmti-10">Jacobian matrix</span>. Let us
+now apply this equation to some simple functions.
+<!--l. 2474--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">10.2   </span> <a 
+ id="x14-4100010.2"></a>Examples</h3>
+<!--l. 2476--><p class="noindent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x14-41002x1">addition:
+     <table 
+class="align">
+            <tr><td 
+class="align-odd"></td>            <td 
+class="align-even"><span 
+class="cmmi-10">t </span>= <span 
+class="cmmi-10">aX </span>+ <span 
+class="cmmi-10">bY </span><span 
+class="cmsy-10">&rArr;</span><img 
+src="index105x.png" alt="&part;t-
+&part;X"  class="frac" align="middle"> = <span 
+class="cmmi-10">a,</span><img 
+src="index106x.png" alt="-&part;t
+&part;Y"  class="frac" align="middle"> = <span 
+class="cmmi-10">b</span></td>                              <td 
+class="align-label"><a 
+ id="x14-41003r11"></a>(10.11)
+            </td></tr><tr><td 
+class="align-odd"></td>            <td 
+class="align-even"> <span 
+class="cmsy-10">&rArr; </span><span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">t</span></sub><sup><span 
+class="cmr-7">2</span></sup> = <span 
+class="cmmi-10">a</span><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmmi-10">&sigma;</span><sub>
+<span 
+class="cmmi-7">X</span></sub><sup><span 
+class="cmr-7">2</span></sup> + <span 
+class="cmmi-10">b</span><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmmi-10">&sigma;</span><sub>
+<span 
+class="cmmi-7">Y</span> </sub><sup><span 
+class="cmr-7">2</span></sup> + 2<span 
+class="cmmi-10">ab</span><span 
+class="cmmi-10">&#x00A0;cov</span>(<span 
+class="cmmi-10">X,Y </span>)</td>                        <td 
+class="align-label"><a 
+ id="x14-41004r12"></a>(10.12)            </td></tr></table>
+     </li>
+     <li 
+  class="enumerate" id="x14-41006x2">subtraction:
+     <table 
+class="equation"><tr><td><a 
+ id="x14-41007r13"></a>
+                                                           
+                                                           
+     <center class="math-display" >
+     <img 
+src="index107x.png" alt="t = aX &minus; bY &rArr; &sdot;&sdot;&sdot; &rArr; &sigma;2t = a2&sigma;2X + b2&sigma;2Y &minus; 2ab cov(X, Y)
+     " class="math-display" ></center></td><td class="equation-label">(10.13)</td></tr></table>
+     <!--l. 2490--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x14-41009x3">multiplication:
+     <table 
+class="align">
+     <tr><td 
+class="align-odd"></td>     <td 
+class="align-even"><span 
+class="cmmi-10">t </span>= <span 
+class="cmmi-10">aXY </span><span 
+class="cmsy-10">&rArr;</span><img 
+src="index108x.png" alt="&part;t-
+&part;X"  class="frac" align="middle"> = <span 
+class="cmmi-10">aY,</span><img 
+src="index109x.png" alt="&part;t-
+&part;Y"  class="frac" align="middle"> = <span 
+class="cmmi-10">aX</span></td>                               <td 
+class="align-label"><a 
+ id="x14-41010r14"></a>(10.14)
+     </td></tr><tr><td 
+class="align-odd"></td>     <td 
+class="align-even"> <span 
+class="cmsy-10">&rArr; </span><span 
+class="cmmi-10">&sigma;</span><sub><span 
+class="cmmi-7">t</span></sub><sup><span 
+class="cmr-7">2</span></sup> = (<span 
+class="cmmi-10">aY </span>)<sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmmi-10">&sigma;</span><sub>
+<span 
+class="cmmi-7">X</span></sub><sup><span 
+class="cmr-7">2</span></sup> + (<span 
+class="cmmi-10">aX</span>)<sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmmi-10">&sigma;</span><sub>
+<span 
+class="cmmi-7">Y</span> </sub><sup><span 
+class="cmr-7">2</span></sup> + 2<span 
+class="cmmi-10">a</span><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmmi-10">XY </span><span 
+class="cmmi-10">&#x00A0;cov</span>(<span 
+class="cmmi-10">X,Y </span>)</td>          <td 
+class="align-label"><a 
+ id="x14-41011r15"></a>(10.15)
+     </td></tr><tr><td 
+class="align-odd"></td>     <td 
+class="align-even"> <span 
+class="cmsy-10">&rArr;</span><img 
+src="index110x.png" alt="( &sigma; )
+  -t
+  t"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup> = <img 
+src="index111x.png" alt="(&sigma;  )
+ -X-
+  X"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup> + <img 
+src="index112x.png" alt="(&sigma;  )
+ -Y-
+  Y"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup> + 2<img 
+src="index113x.png" alt="cov(X, Y)
+---------
+  XY"  class="frac" align="middle"></td>                <td 
+class="align-label"><a 
+ id="x14-41012r16"></a>(10.16)     </td></tr></table>
+                                                           
+                                                           
+     </li>
+     <li 
+  class="enumerate" id="x14-41014x4">division:
+     <table 
+class="equation"><tr><td><a 
+ id="x14-41015r17"></a>
+     <center class="math-display" >
+     <img 
+src="index114x.png" alt="t = aX-&rArr;  &sdot;&sdot;&sdot; &rArr; (&sigma;t)2 = (&sigma;X-)2 + ( &sigma;Y)2 &minus; 2cov(X,-Y)
+     Y           t       X       Y         XY
+     " class="math-display" ></center></td><td class="equation-label">(10.17)</td></tr></table>
+     <!--l. 2508--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x14-41017x5">exponentiation:
+     <table 
+class="equation"><tr><td><a 
+ id="x14-41018r18"></a>
+     <center class="math-display" >
+     <img 
+src="index115x.png" alt="           &part;f
+t = a ebX &rArr; ---= ab ebX &rArr;  &sigma;2t = (bt)2&sigma;2X
+           &part;X
+     " class="math-display" ></center></td><td class="equation-label">(10.18)</td></tr></table>
+     <!--l. 2515--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x14-41020x6">logarithms:
+     <table 
+class="equation"><tr><td><a 
+ id="x14-41021r19"></a>
+                                                           
+                                                           
+     <center class="math-display" >
+     <img 
+src="index116x.png" alt="              &part;f-   a-    2  ( a-)2 2
+t = a ln(bX ) &rarr; &part;X = X &rArr;  &sigma;t =  X   &sigma;X
+     " class="math-display" ></center></td><td class="equation-label">(10.19)</td></tr></table>
+     <!--l. 2522--><p class="nopar" >
+     </li></ol>
+<!--l. 2526--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">10.3   </span> <a 
+ id="x14-4200010.3"></a>Accuracy vs. precision</h3>
+<!--l. 2528--><p class="noindent" >Recall the definition of the arithmetic mean (Equation <a 
+href="#x14-40005r3">10.3<!--tex4ht:ref: eq:mean --></a>):
+<!--l. 2530--><p class="indent" >
+   <center class="math-display" >
+<img 
+src="index117x.png" alt="--    &sum;n
+X  &equiv; 1-   Xi
+     n i=1
+" class="math-display" ></center>
+<!--l. 2532--><p class="indent" >   Applying the equation for the error propagation of a sum (Equation
+<a 
+href="#x14-41004r12">10.12<!--tex4ht:ref: eq:addition --></a>):
+   <table 
+class="equation"><tr><td><a 
+ id="x14-42001r20"></a>
+                                                           
+                                                           
+   <center class="math-display" >
+<img 
+src="index118x.png" alt="        n
+ 2-  1-&sum;   2    &sigma;2X-
+&sigma;X = n i=1 &sigma;Xi = n
+" class="math-display" ></center></td><td class="equation-label">(10.20)</td></tr></table>
+<!--l. 2538--><p class="nopar" >
+<!--l. 2540--><p class="indent" >   where we assume that all n measurements were done <span 
+class="cmti-10">independently</span>, so
+that <span 
+class="cmmi-10">cov</span>(<span 
+class="cmmi-10">X</span><sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmmi-10">,X</span><sub><span 
+class="cmmi-7">j</span></sub>) = 0 <span 
+class="cmsy-10">&forall; </span>i, j. The standard deviation of the mean is known as
+the <span class="underline">standard error</span>:
+   <table 
+class="equation"><tr><td><a 
+ id="x14-42002r21"></a>
+   <center class="math-display" >
+<img 
+src="index119x.png" alt="&sigma;--= &sigma;&radic;X--
+ X     n
+" class="math-display" ></center></td><td class="equation-label">(10.21)</td></tr></table>
+<!--l. 2547--><p class="nopar" >
+<!--l. 2549--><p class="indent" >   This means that the standard error of the mean monotonically decreases
+with the square root of sample size. In other words, we can arbitrarily
+increase the <span 
+class="cmti-10">precision </span>of our analytical data by acquiring more data.
+However, it is important to note that the same is generaly not the case for
+the <span 
+class="cmti-10">accuracy </span>of those data. The difference between precision and accuracy is
+best explained by a darts board analogy:
+<!--l. 2557--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                           
+                                                           
+                                                           
+                                                           
+
+<!--l. 2563--><p class="noindent" ><img 
+src="bullseye.png" alt="PIC"  
+>
+                                                           
+                                                           
+<!--l. 2565--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 2567--><p class="indent" >   Whereas the analytical precision can be computed from the data using
+the error propagation formulas introduced above, the only way to get a grip
+on the accuracy is by analysing another sample of independently
+determined age. Such test samples are also known as &#8216;secondary
+standards&#8217;.
+<!--l. 2573--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                           
+                                                           
+<a 
+ id="x14-420031"></a>
+                                                           
+                                                           
+
+<!--l. 2579--><p class="noindent" ><img 
+src="covariance.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;10.1:  </span><span  
+class="content">Four  datasets  of  100  random  numbers  (black  dots)
+which have the same means (white squares) but different (co-)variance
+structures. The marginal distributions of the X and Y variables are
+shown as &#8216;bell curves&#8217; on the top and right axis of each plot.</span></div><!--tex4ht:label?: x14-420031 -->
+                                                           
+                                                           
+<!--l. 2587--><p class="indent" >   </div><hr class="endfigure">
+                                                           
+                                                           
+   <!--l. 2589--><div class="crosslinks"><p class="noindent">[<a 
+href="indexch12.html" >next</a>] [<a 
+href="indexch10.html" >prev</a>] [<a 
+href="indexch10.html#tailindexch10.html" >prev-tail</a>] [<a 
+href="indexch10.html" >front</a>] [<a 
+href="index.html#indexch11.html" >up</a>] </p></div>
+<!--l. 2589--><p class="indent" >   <a 
+ id="tailindexch10.html"></a>   
+</body></html> 

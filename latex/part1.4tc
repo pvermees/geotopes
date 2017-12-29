@@ -1,0 +1,63 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{2}{x2-1000}{QQ2-2-1}{Contents}}{4}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{3}{x3-20001}{QQ2-3-2}{Introduction}}{7}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{4}{x4-30001}{QQ2-4-3}{Bibliography}}{11}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{5}{x5-40002}{QQ2-5-4}{Basic Notions}}{15}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{5}{x5-50002.1}{QQ2-5-5}{Isotopes and radioactivity}}{15}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{5}{x5-60002.2}{QQ2-5-6}{Radioactivity}}{15}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{5}{x5-60101}{}{\ignorespaces A schematic `\emph  {Chart of Nuclides}' \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{5}{x5-70002.3}{QQ2-5-8}{The age equation}}{21}\relax 
+\doTocEntry\tocsection{2.4}{\csname a:TocLink\endcsname{5}{x5-80002.4}{QQ2-5-9}{Decay series}}{24}\relax 
+\doTocEntry\toclof{2.2}{\csname a:TocLink\endcsname{5}{x5-80182}{}{\ignorespaces The decay series of $^{232}$Th, $^{235}$U and $^{238}$U, which form the basis of the U-Th-Pb, U-Th-He and U-Th-series methods \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{6}{x6-90003}{QQ2-6-11}{Analytical techniques}}{37}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{6}{x6-100003.1}{QQ2-6-12}{Mass spectrometry}}{37}\relax 
+\doTocEntry\toclof{3.1}{\csname a:TocLink\endcsname{6}{x6-100121}{}{\ignorespaces Schematic diagram of a sector-field noble gas or TIMS mass spectrometer \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\toclof{3.2}{\csname a:TocLink\endcsname{6}{x6-100212}{}{\ignorespaces Schematic diagram of an Accelerator Mass Spectrometer (AMS) \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{6}{x6-110003.2}{QQ2-6-15}{Isotope dilution}}{47}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{6}{x6-120003.3}{QQ2-6-16}{Sample-standard bracketing}}{50}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{7}{x7-130004}{QQ2-7-17}{Simple parent-daughter pairs}}{55}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{7}{x7-140004.1}{QQ2-7-18}{$^{14}$C dating}}{55}\relax 
+\doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{7}{x7-150004.2}{QQ2-7-19}{The Rb-Sr method}}{57}\relax 
+\doTocEntry\tocsection{4.3}{\csname a:TocLink\endcsname{7}{x7-160004.3}{QQ2-7-20}{Isochrons}}{60}\relax 
+\doTocEntry\toclof{4.1}{\csname a:TocLink\endcsname{7}{x7-160011}{}{\ignorespaces Schematic evolution of the $^{87}$Sr$/{}^{86}$Sr-system as a function of time for multiple aliquots of a hypthetical sample with initial ratio $({}^{87}$Sr$/{}^{86}$Sr$)_\circ $=0.700. The slope of the isochron is a function of the age as per Equation 4.7\hbox {} \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\tocsection{4.4}{\csname a:TocLink\endcsname{7}{x7-170004.4}{QQ2-7-22}{The Sm-Nd method}}{63}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{8}{x8-180005}{QQ2-8-23}{The U-Pb system}}{67}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{8}{x8-190005.1}{QQ2-8-24}{The U-(Th-)Pb method}}{68}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{8}{x8-200005.2}{QQ2-8-25}{The Pb-Pb method}}{70}\relax 
+\doTocEntry\tocsection{5.3}{\csname a:TocLink\endcsname{8}{x8-210005.3}{QQ2-8-26}{Concordia}}{72}\relax 
+\doTocEntry\toclof{5.1}{\csname a:TocLink\endcsname{8}{x8-210021}{}{\ignorespaces `Wetherill' concordia diagram showing concordant (filled symbols) and discordant (empty symbols) analyses affected by different degrees of Pb (or U) loss \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\tocsection{5.4}{\csname a:TocLink\endcsname{8}{x8-220005.4}{QQ2-8-28}{Detrital geochronology}}{76}\relax 
+\doTocEntry\tocchapter{6}{\csname a:TocLink\endcsname{9}{x9-230006}{QQ2-9-29}{The K-Ar system}}{79}\relax 
+\doTocEntry\tocsection{6.1}{\csname a:TocLink\endcsname{9}{x9-240006.1}{QQ2-9-30}{K-Ar dating}}{79}\relax 
+\doTocEntry\tocsection{6.2}{\csname a:TocLink\endcsname{9}{x9-250006.2}{QQ2-9-31}{$^{40}$Ar/$^{39}$Ar dating}}{80}\relax 
+\doTocEntry\toclof{6.1}{\csname a:TocLink\endcsname{9}{x9-250041}{}{\ignorespaces $^{40}$Ar/$^{39}$Ar age spectra obtained by stepwise heating of three different K-bearing minerals. Biotite exhibits a flat `plateau', indicating a simple history of rapid crystallisation and/or cooling. K-feldspar shows a rising age spectrum, consistent with a more complex evolution comprising multiple growth phases and/or thermal resetting. Finally, hornblende shows a `U-shaped' release spectrum in which the first heating step releases a large amount of `excess' argon \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\tocsection{6.3}{\csname a:TocLink\endcsname{9}{x9-260006.3}{QQ2-9-33}{Applications}}{86}\relax 
+\doTocEntry\tocchapter{7}{\csname a:TocLink\endcsname{10}{x10-270007}{QQ2-10-34}{Thermochronology}}{89}\relax 
+\doTocEntry\tocsection{7.1}{\csname a:TocLink\endcsname{10}{x10-280007.1}{QQ2-10-35}{The U-Th-He method}}{89}\relax 
+\doTocEntry\toclof{7.1}{\csname a:TocLink\endcsname{10}{x10-280061}{}{\ignorespaces `Arrhenius' diagram of three step-heating experiments of $^4$He in apatite, showing simple diffusion behaviour in agreement with Equation 7.3\hbox {}. Extrapolating the linear trend to geological time scales yields a `closure temperature' of $\sim $60$^\circ $C (Equation 7.5\hbox {}). Modified from \citet  {braun2006}.}}{figure}\relax 
+\doTocEntry\tocsection{7.2}{\csname a:TocLink\endcsname{10}{x10-290007.2}{QQ2-10-37}{Fission tracks}}{95}\relax 
+\doTocEntry\toclof{7.2}{\csname a:TocLink\endcsname{10}{x10-290082}{}{\ignorespaces Schematic diagram illustrating the external detector method for fission track geochronology \citep  [modified from][]{galbraith2005}.}}{figure}\relax 
+\doTocEntry\toclof{7.3}{\csname a:TocLink\endcsname{10}{x10-290093}{}{\ignorespaces Vertical profile of U-Th-He and fission track ages in apatite, collected along the footwall of an exhumed normal fault block in the White Mountains of eastern California. Samples at the highest elevations have resided at shallow depths for up to 55 Myr. Dashed lines show the extent of the `Partial Retention Zone' (PRZ), in which apatite has partially lost its radiogenic helium. The grey area indicates the `Partial Annealing Zone', where fission tracks have been shortened. At low elevations, young ages are observed, indicating rapid exhumation by the normal fault at 12 Ma. Additionally, the U-Th-He data show a hint of a second exhumation phase at 5 Ma (modified from Stockli, Farley and Dumitru, 2000, \textit  {Geology} v. 28, no. 11, p. 983-986).}}{figure}\relax 
+\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{11}{x11-300008}{QQ2-11-40}{Cosmogenic Nuclides}}{107}\relax 
+\doTocEntry\toclot{8.1}{\csname a:TocLink\endcsname{11}{x11-300021}{}{\ignorespaces Commonly used terrestrial cosmogenic nuclides.}}{table}\relax 
+\doTocEntry\tocsection{8.1}{\csname a:TocLink\endcsname{11}{x11-310008.1}{QQ2-11-42}{Stable nuclides}}{111}\relax 
+\doTocEntry\tocsection{8.2}{\csname a:TocLink\endcsname{11}{x11-320008.2}{QQ2-11-43}{Radionuclides}}{112}\relax 
+\doTocEntry\tocsection{8.3}{\csname a:TocLink\endcsname{11}{x11-330008.3}{QQ2-11-44}{The `Banana Plot'}}{114}\relax 
+\doTocEntry\toclof{8.1}{\csname a:TocLink\endcsname{11}{x11-330011}{}{\ignorespaces $^{10}$Be/$^{26}$Al (i) and $^{21}$Ne/$^{10}$Be (ii) two nuclide (`banana') plots. Sample a has undergone a simple exposure history with $t$ = 2Ma, $\epsilon = 0$ and $\tau $ = 0, sample b has undergone steady-state erosion at $\epsilon $ = 0.1cm/kyr (t = $\infty $ and $\tau $ = 0), whereas sample c has experience a complex exposure history. Assuming steady-state erosion prior to burial, the data are compatible with $\epsilon $ = 1 cm/kyr followed by 2 Myr of burial. The ellipses mark the 95\% confidence bounds for the analytical uncertainties (see Section 10\hbox {}).}}{figure}\relax 
+\doTocEntry\tocsection{8.4}{\csname a:TocLink\endcsname{11}{x11-340008.4}{QQ2-11-46}{Scaling models}}{118}\relax 
+\doTocEntry\tocchapter{9}{\csname a:TocLink\endcsname{13}{x13-350009}{QQ2-13-47}{U-series dating}}{121}\relax 
+\doTocEntry\tocsection{9.1}{\csname a:TocLink\endcsname{13}{x13-360009.1}{QQ2-13-48}{The $^{234}$U-$^{238}$U method}}{121}\relax 
+\doTocEntry\tocsection{9.2}{\csname a:TocLink\endcsname{13}{x13-370009.2}{QQ2-13-49}{The $^{230}$Th method}}{123}\relax 
+\doTocEntry\tocsection{9.3}{\csname a:TocLink\endcsname{13}{x13-380009.3}{QQ2-13-50}{The $^{230}$Th-$^{238}$U method}}{124}\relax 
+\doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{14}{x14-3900010}{QQ2-14-51}{Error propagation}}{129}\relax 
+\doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{14}{x14-4000010.1}{QQ2-14-52}{Some basic definitions}}{129}\relax 
+\doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{14}{x14-4100010.2}{QQ2-14-53}{Examples}}{134}\relax 
+\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{14}{x14-4200010.3}{QQ2-14-54}{Accuracy vs. precision}}{137}\relax 
+\doTocEntry\toclof{10.1}{\csname a:TocLink\endcsname{14}{x14-420031}{}{\ignorespaces Four datasets of 100 random numbers (black dots) which have the same means (white squares) but different (co-)variance structures. The marginal distributions of the X and Y variables are shown as `bell curves' on the top and right axis of each plot.}}{figure}\relax 
+\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{15}{x15-4300011}{QQ2-15-56}{Exercises}}{147}\relax 
+\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{16}{x16-4400012}{QQ2-16-57}{{\tt  Matlab} practicals}}{151}\relax 
+\doTocEntry\tocsection{12.1}{\csname a:TocLink\endcsname{16}{x16-4500012.1}{QQ2-16-58}{Introduction to {\tt  Matlab}}}{151}\relax 
+\doTocEntry\tocsection{12.2}{\csname a:TocLink\endcsname{16}{x16-4600012.2}{QQ2-16-59}{U-Th-Pb data reduction}}{159}\relax 
+\doTocEntry\tocsection{12.3}{\csname a:TocLink\endcsname{16}{x16-4700012.3}{QQ2-16-60}{$^{40}$Ar/$^{39}$Ar data reduction}}{160}\relax 
+\doTocEntry\tocsection{12.4}{\csname a:TocLink\endcsname{16}{x16-4800012.4}{QQ2-16-61}{Error propagation}}{161}\relax 
+\doTocEntry\tocsection{12.5}{\csname a:TocLink\endcsname{16}{x16-4900012.5}{QQ2-16-62}{Fission tracks}}{164}\relax 

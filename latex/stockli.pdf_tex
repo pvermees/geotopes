@@ -1,0 +1,73 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'stockli.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{190.27399443bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.86432383)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{stockli.pdf}}%
+    \put(0.71011113,0.54249585){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sim 40^\circ$C}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{stockli.pdf}}%
+    \put(0.25867845,0.71256772){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Apatite fission-track age}}}%
+    \put(0.05275625,0.7465088){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0}}}%
+    \put(0.05275625,0.56435551){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.05275625,0.37810298){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.05275625,0.19109367){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{6}}}%
+    \put(0.05275625,0.00055263){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{8}}}%
+    \put(0.02799139,0.24526296){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{Palaeo-depth (km)}}}}%
+    \put(0.08764734,0.78655102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0}}}%
+    \put(0.25304564,0.78655102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{20}}}%
+    \put(0.42856094,0.78655102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{40}}}%
+    \put(0.60408136,0.78655102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{60}}}%
+    \put(0.7796023,0.78655102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{80}}}%
+    \put(0.31005277,0.83636842){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Apparent Age (Myr)}}}%
+    \put(0.25867845,0.65370523){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Apatite U-Th-He age}}}%
+    \put(0.71011113,0.44158873){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sim 60^\circ$C}}}%
+    \put(0.71011113,0.34068161){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sim 80^\circ$C}}}%
+    \put(0.71011113,0.19772987){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sim 110^\circ$C}}}%
+  \end{picture}%
+\endgroup%

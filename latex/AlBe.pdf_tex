@@ -1,0 +1,77 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'AlBe.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{550.86597593bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.80729356)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{AlBe.pdf}}%
+    \put(-0.00049638,0.27612986){\makebox(0,0)[lb]{\smash{2}}}%
+    \put(-0.00049638,0.51754973){\makebox(0,0)[lb]{\smash{4}}}%
+    \put(-0.00049638,0.65901795){\makebox(0,0)[lb]{\smash{6}}}%
+    \put(-0.00049638,0.71267893){\makebox(0,0)[lb]{\smash{7}}}%
+    \put(0.74385984,0.03965677){\rotatebox{67.68346059}{\makebox(0,0)[lb]{\smash{0cm/ka}}}}%
+    \put(0.52159664,0.13378415){\rotatebox{68.27915211}{\makebox(0,0)[lb]{\smash{0.1cm/ka}}}}%
+    \put(0.2616172,0.19798096){\rotatebox{68.49680062}{\makebox(0,0)[lb]{\smash{1cm/ka}}}}%
+    \put(0.09934975,0.41908216){\rotatebox{67.79943103}{\makebox(0,0)[lb]{\smash{10cm/ka}}}}%
+    \put(0.69830132,0.48988672){\rotatebox{-36.803867}{\makebox(0,0)[lb]{\smash{1Ma burial}}}}%
+    \put(0.63577415,0.32008589){\rotatebox{-38.43345471}{\makebox(0,0)[lb]{\smash{2Ma burial}}}}%
+    \put(0.80745679,0.65590952){\makebox(0,0)[lb]{\smash{1Ma}}}%
+    \put(0.87643705,0.59546137){\makebox(0,0)[lb]{\smash{2Ma}}}%
+    \put(0.03029144,0.00041128){\makebox(0,0)[lb]{\smash{10${^4}$}}}%
+    \put(0.32232258,0.00041128){\makebox(0,0)[lb]{\smash{10$^{5}$}}}%
+    \put(0.62887629,0.00041128){\makebox(0,0)[lb]{\smash{10$^{6}$}}}%
+    \put(0.90353492,0.00041128){\makebox(0,0)[lb]{\smash{10$^{7}$}}}%
+    \put(0.08494132,0.06518196){\rotatebox{90.00000252}{\makebox(0,0)[lb]{\smash{$^{26}$Al /$^{10}$Be}}}}%
+    \put(0.78062971,0.05375246){\makebox(0,0)[lb]{\smash{$^{10}$Be[at/g]}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{AlBe.pdf}}%
+    \put(0.85516373,0.59715938){\makebox(0,0)[lb]{\smash{a}}}%
+    \put(0.33899395,0.38217423){\makebox(0,0)[lb]{\smash{c}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{AlBe.pdf}}%
+    \put(0.73036333,0.64697246){\makebox(0,0)[lb]{\smash{b}}}%
+  \end{picture}%
+\endgroup%

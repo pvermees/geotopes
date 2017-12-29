@@ -1,0 +1,319 @@
+htfcss: cmti  font-style: italic;
+htfcss: cmtt font-family: monospace;
+htfcss: wasyb font-weight: bold;
+htfcss: cmtt font-family: monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+File: index.html
+File: index.css
+File: index.tmp
+File: indexli1.html
+File: indexch1.html
+File: indexli2.html
+File: indexch2.html
+File: indexch3.html
+File: indexch4.html
+File: indexch5.html
+File: indexch6.html
+File: indexch7.html
+File: indexch8.html
+File: index12.html
+File: indexch9.html
+File: indexch10.html
+File: indexch11.html
+File: indexch12.html
+Css: @media print {span.next {visibility:hidden;}}
+Css: p.noindent { text-indent: 0em }
+Css: td p.noindent { text-indent: 0em; margin-top:0em; }
+Css: p.nopar { text-indent: 0em; }
+Css: p.indent{ text-indent: 1.5em }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: div.verbatim {font-family: monospace; white-space: nowrap; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 1px; margin:0px; }
+Css: .tabbing-right {text-align:right;}
+Css: span.TEX {letter-spacing: -0.125em; }
+Css: span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
+Css: a span.TEX span.E {text-decoration: none; }
+Css: span.LATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
+Css: span.LATEX span.TEX{ position:relative; left: -0.4em; }
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+Css: h1.partHead{text-align: center}
+Css:  .chapterToc, .likechapterToc {margin-left:0em;}
+Css:  .chapterToc ~ .likesectionToc, .chapterToc ~ .sectionToc, .likechapterToc ~ .likesectionToc, .likechapterToc ~ .sectionToc {margin-left:2em;}
+Css:  .chapterToc ~ .likesectionToc ~ .likesubsectionToc, .chapterToc ~ .likesectionToc ~ .subsectionToc, .chapterToc ~ .sectionToc ~ .likesubsectionToc, .chapterToc ~ .sectionToc ~ .subsectionToc, .likechapterToc ~ .likesectionToc ~ .likesubsectionToc, .likechapterToc ~ .likesectionToc ~ .subsectionToc, .likechapterToc ~ .sectionToc ~ .likesubsectionToc, .likechapterToc ~ .sectionToc ~ .subsectionToc {margin-left:4em;}
+Css: .chapterToc ~ .likesectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .chapterToc ~ .likesectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .chapterToc ~ .likesectionToc ~ .subsectionToc ~ .likesubsubsectionToc, .chapterToc ~ .likesectionToc ~ .subsectionToc ~ .subsubsectionToc, .chapterToc ~ .sectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .chapterToc ~ .sectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .chapterToc ~ .sectionToc ~ .subsectionToc ~ .likesubsubsectionToc, .chapterToc ~ .sectionToc ~ .subsectionToc ~ .subsubsectionToc, .likechapterToc ~ .likesectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .likechapterToc ~ .likesectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .likechapterToc ~ .likesectionToc ~ .subsectionToc ~ .likesubsubsectionToc, .likechapterToc ~ .likesectionToc ~ .subsectionToc ~ .subsubsectionToc, .likechapterToc ~ .sectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .likechapterToc ~ .sectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .likechapterToc ~ .sectionToc ~ .subsectionToc ~ .likesubsubsectionToc .likechapterToc ~ .sectionToc ~ .subsectionToc ~ .subsubsectionToc {margin-left:6em;}
+Css:  .likesectionToc , .sectionToc {margin-left:0em;}
+Css:  .likesectionToc ~ .likesubsectionToc, .likesectionToc ~ .subsectionToc, .sectionToc ~ .likesubsectionToc, .sectionToc ~ .subsectionToc {margin-left:2em;}
+Css: .likesectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .likesectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .likesectionToc ~ .subsectionToc ~ .likesubsubsectionToc, .likesectionToc ~ .subsectionToc ~ .subsubsectionToc, .sectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .sectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .sectionToc ~ .subsectionToc ~ .likesubsubsectionToc, .sectionToc ~ .subsectionToc ~ .subsubsectionToc {margin-left:4em;}
+Css:  .likesubsectionToc, .subsectionToc {margin-left:0em;}
+Css:  .likesubsectionToc ~ .subsubsectionToc, .subsectionToc ~ .subsubsectionToc, {margin-left:2em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:100%; margin-left:5%; white-space: nowrap;}
+Css: table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+Css: td.align-label { width:5%; text-align:center; }
+Css: td.align-odd { text-align:right; padding-right:0.3em;}
+Css: td.align-even { text-align:left; padding-right:0.6em;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: .figure img.graphics {margin-left:10%;}
+--- needs --- index.idv[2] ==> index0x.png ---
+File: chart-of-nuclides.png
+--- needs --- index.idv[4] ==> index1x.png ---
+--- needs --- index.idv[6] ==> index2x.png ---
+--- needs --- index.idv[8] ==> index3x.png ---
+--- needs --- index.idv[10] ==> index4x.png ---
+--- needs --- index.idv[12] ==> index5x.png ---
+--- needs --- index.idv[14] ==> index6x.png ---
+--- needs --- index.idv[16] ==> index7x.png ---
+--- needs --- index.idv[18] ==> index8x.png ---
+--- needs --- index.idv[20] ==> index9x.png ---
+--- needs --- index.idv[22] ==> index10x.png ---
+--- needs --- index.idv[24] ==> index11x.png ---
+--- needs --- index.idv[26] ==> index12x.png ---
+--- needs --- index.idv[28] ==> index13x.png ---
+--- needs --- index.idv[30] ==> index14x.png ---
+--- needs --- index.idv[32] ==> index15x.png ---
+--- needs --- index.idv[34] ==> index16x.png ---
+--- needs --- index.idv[36] ==> index17x.png ---
+--- needs --- index.idv[38] ==> index18x.png ---
+--- needs --- index.idv[40] ==> index19x.png ---
+--- needs --- index.idv[42] ==> index20x.png ---
+File: U-Th-series.png
+--- needs --- index.idv[44] ==> index21x.png ---
+--- needs --- index.idv[46] ==> index22x.png ---
+--- needs --- index.idv[48] ==> index23x.png ---
+--- needs --- index.idv[50] ==> index24x.png ---
+--- needs --- index.idv[52] ==> index25x.png ---
+File: mass-spec.png
+--- needs --- index.idv[54] ==> index26x.png ---
+File: AMS.png
+--- needs --- index.idv[56] ==> index27x.png ---
+--- needs --- index.idv[58] ==> index28x.png ---
+--- needs --- index.idv[59] ==> index29x.png ---
+--- needs --- index.idv[61] ==> index30x.png ---
+--- needs --- index.idv[63] ==> index31x.png ---
+--- needs --- index.idv[65] ==> index32x.png ---
+--- needs --- index.idv[67] ==> index33x.png ---
+--- needs --- index.idv[68] ==> index34x.png ---
+--- needs --- index.idv[70] ==> index35x.png ---
+--- needs --- index.idv[72] ==> index36x.png ---
+--- needs --- index.idv[74] ==> index37x.png ---
+--- needs --- index.idv[76] ==> index38x.png ---
+--- needs --- index.idv[78] ==> index39x.png ---
+--- needs --- index.idv[80] ==> index40x.png ---
+--- needs --- index.idv[82] ==> index41x.png ---
+--- needs --- index.idv[84] ==> index42x.png ---
+--- needs --- index.idv[86] ==> index43x.png ---
+File: isochron.png
+--- needs --- index.idv[88] ==> index44x.png ---
+--- needs --- index.idv[90] ==> index45x.png ---
+--- needs --- index.idv[92] ==> index46x.png ---
+--- needs --- index.idv[94] ==> index47x.png ---
+--- needs --- index.idv[96] ==> index48x.png ---
+--- needs --- index.idv[98] ==> index49x.png ---
+--- needs --- index.idv[100] ==> index50x.png ---
+--- needs --- index.idv[102] ==> index51x.png ---
+--- needs --- index.idv[104] ==> index52x.png ---
+--- needs --- index.idv[106] ==> index53x.png ---
+--- needs --- index.idv[108] ==> index54x.png ---
+--- needs --- index.idv[110] ==> index55x.png ---
+File: wetherill.png
+--- needs --- index.idv[112] ==> index56x.png ---
+--- needs --- index.idv[114] ==> index57x.png ---
+--- needs --- index.idv[116] ==> index58x.png ---
+--- needs --- index.idv[118] ==> index59x.png ---
+--- needs --- index.idv[120] ==> index60x.png ---
+--- needs --- index.idv[122] ==> index61x.png ---
+--- needs --- index.idv[124] ==> index62x.png ---
+--- needs --- index.idv[125] ==> index63x.png ---
+File: Ar-Ar.png
+--- needs --- index.idv[127] ==> index64x.png ---
+--- needs --- index.idv[129] ==> index65x.png ---
+--- needs --- index.idv[131] ==> index66x.png ---
+--- needs --- index.idv[133] ==> index67x.png ---
+--- needs --- index.idv[135] ==> index68x.png ---
+File: Arrhenius.png
+--- needs --- index.idv[137] ==> index69x.png ---
+--- needs --- index.idv[139] ==> index70x.png ---
+--- needs --- index.idv[141] ==> index71x.png ---
+--- needs --- index.idv[143] ==> index72x.png ---
+--- needs --- index.idv[145] ==> index73x.png ---
+--- needs --- index.idv[147] ==> index74x.png ---
+--- needs --- index.idv[149] ==> index75x.png ---
+File: EDM.png
+File: stockli.png
+--- needs --- index.idv[151] ==> index76x.png ---
+--- needs --- index.idv[153] ==> index77x.png ---
+--- needs --- index.idv[155] ==> index78x.png ---
+--- needs --- index.idv[157] ==> index79x.png ---
+File: AlBe.png
+File: NeBe.png
+--- needs --- index.idv[159] ==> index80x.png ---
+--- needs --- index.idv[161] ==> index81x.png ---
+--- needs --- index.idv[163] ==> index82x.png ---
+--- needs --- index.idv[165] ==> index83x.png ---
+--- needs --- index.idv[167] ==> index84x.png ---
+--- needs --- index.idv[169] ==> index85x.png ---
+--- needs --- index.idv[171] ==> index86x.png ---
+--- needs --- index.idv[172] ==> index87x.png ---
+--- needs --- index.idv[174] ==> index88x.png ---
+--- needs --- index.idv[176] ==> index89x.png ---
+--- needs --- index.idv[178] ==> index90x.png ---
+--- needs --- index.idv[180] ==> index91x.png ---
+--- needs --- index.idv[182] ==> index92x.png ---
+--- needs --- index.idv[184] ==> index93x.png ---
+--- needs --- index.idv[186] ==> index94x.png ---
+--- needs --- index.idv[188] ==> index95x.png ---
+--- needs --- index.idv[190] ==> index96x.png ---
+--- needs --- index.idv[192] ==> index97x.png ---
+--- needs --- index.idv[194] ==> index98x.png ---
+--- needs --- index.idv[195] ==> index99x.png ---
+--- needs --- index.idv[196] ==> index100x.png ---
+--- needs --- index.idv[197] ==> index101x.png ---
+--- needs --- index.idv[198] ==> index102x.png ---
+--- needs --- index.idv[199] ==> index103x.png ---
+--- needs --- index.idv[200] ==> index104x.png ---
+--- needs --- index.idv[202] ==> index105x.png ---
+--- needs --- index.idv[203] ==> index106x.png ---
+--- needs --- index.idv[205] ==> index107x.png ---
+--- needs --- index.idv[207] ==> index108x.png ---
+--- needs --- index.idv[208] ==> index109x.png ---
+--- needs --- index.idv[209] ==> index110x.png ---
+--- needs --- index.idv[210] ==> index111x.png ---
+--- needs --- index.idv[211] ==> index112x.png ---
+--- needs --- index.idv[212] ==> index113x.png ---
+--- needs --- index.idv[214] ==> index114x.png ---
+--- needs --- index.idv[216] ==> index115x.png ---
+--- needs --- index.idv[218] ==> index116x.png ---
+--- needs --- index.idv[220] ==> index117x.png ---
+--- needs --- index.idv[222] ==> index118x.png ---
+--- needs --- index.idv[224] ==> index119x.png ---
+File: bullseye.png
+File: covariance.png
+--- needs --- index.idv[226] ==> index120x.png ---
+--- needs --- index.idv[228] ==> index121x.png ---
+--- needs --- index.idv[230] ==> index122x.png ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","5","5","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","5","5","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+Font("cmr","17","17","100")
+Font("cmr","12","12","100")
+Font("cmr","8","8","100")
+Font("cmti","12","12","100")
+Font("cmtt","12","12","100")
+Font("cmex","7","7","100")
+Font("wasy","10","10","100")
+Font("cmtt","10","10","100")
+Font("cmti","10","10","100")
+Font("cmr","9","9","100")

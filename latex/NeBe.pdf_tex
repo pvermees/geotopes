@@ -1,0 +1,76 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'NeBe.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{568.60613477bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.78975209)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{NeBe.pdf}}%
+    \put(0.00684502,0.21209857){\makebox(0,0)[lb]{\smash{5}}}%
+    \put(-0.00206096,0.45488526){\makebox(0,0)[lb]{\smash{10}}}%
+    \put(-0.00206096,0.69728507){\makebox(0,0)[lb]{\smash{20}}}%
+    \put(0.59684752,0.68065823){\rotatebox{-64.8296106}{\makebox(0,0)[lb]{\smash{0.05cm/ka}}}}%
+    \put(0.34004733,0.75036541){\rotatebox{-65.43199912}{\makebox(0,0)[lb]{\smash{0.2cm/ka}}}}%
+    \put(0.11041839,0.6795196){\rotatebox{-65.88137831}{\makebox(0,0)[lb]{\smash{1cm/ka}}}}%
+    \put(0.91063406,0.50980906){\makebox(0,0)[lb]{\smash{5Ma}}}%
+    \put(0.85708439,0.32833475){\makebox(0,0)[lb]{\smash{2Ma}}}%
+    \put(0.32761737,0.22688593){\rotatebox{15.33588551}{\makebox(0,0)[lb]{\smash{500ka burial}}}}%
+    \put(0.29017145,0.31810034){\rotatebox{16.66292548}{\makebox(0,0)[lb]{\smash{1Ma burial}}}}%
+    \put(0.22421647,0.49630182){\rotatebox{13.948537}{\makebox(0,0)[lb]{\smash{2Ma burial}}}}%
+    \put(0.16776479,0.00039845){\makebox(0,0)[lb]{\smash{10$^5$}}}%
+    \put(0.54646276,0.00039845){\makebox(0,0)[lb]{\smash{10$^6$}}}%
+    \put(0.92517801,0.00039845){\makebox(0,0)[lb]{\smash{10$^7$}}}%
+    \put(0.09352992,0.46488046){\rotatebox{90.00000252}{\makebox(0,0)[lb]{\smash{$^{21}$Ne /$$^{10}$Be}}}}%
+    \put(0.784615,0.06335319){\makebox(0,0)[lb]{\smash{$^{10}$Be [at/g]}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{NeBe.pdf}}%
+    \put(0.8345918,0.32489332){\makebox(0,0)[lb]{\smash{a}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{NeBe.pdf}}%
+    \put(0.67096063,0.2402708){\makebox(0,0)[lb]{\smash{b}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{NeBe.pdf}}%
+    \put(0.17866878,0.47424971){\makebox(0,0)[lb]{\smash{c}}}%
+  \end{picture}%
+\endgroup%

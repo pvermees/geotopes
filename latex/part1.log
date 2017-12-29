@@ -1,0 +1,1032 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.11.25)  29 DEC 2017 21:06
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCo
+de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
+{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
+documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
+ tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,2,next.a.b.c.\input  p
+art1.tex
+(./part1.tex (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/generic/tex4ht/tex4ht.sty
+version 2008-10-27-17:23
+Package: tex4ht 
+--------------------------------------
+--- Note --- for _ at preamble, use the command line option `early_'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ at preamble, use the command line option `early^'
+--------------------------------------
+\tmp:toks=\toks14
+)
+(/usr/share/texmf/tex/generic/tex4ht/usepackage.4ht
+version 2009-05-21-09:32
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen111
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks18
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks19
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks20
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count103
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 143.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texmf/tex/generic/tex4ht/tex4ht.4ht
+version 2009-01-07-07:11
+--------------------------------------
+--- Note --- for additional information, use the command line option `info'
+--------------------------------------
+
+::::::::::::::::::::::::::::::::::::::::::
+ TeX4ht info is available in the log file 
+::::::::::::::::::::::::::::::::::::::::::
+) (/usr/share/texmf/tex/generic/tex4ht/tex4ht.sty
+version 2008-10-27-17:23
+
+--- needs --- tex4ht part1 ---
+\tmp:cnt=\count104
+\openout15 = `part1.tmp'.
+
+(./part1.tmp)
+\tmp:dim=\skip48
+--------------------------------------
+--- Note --- for XML code, use the command line option `xml' or `xhtml'
+--------------------------------------
+ (./part1.xref)
+\:refout=\write3
+\openout3 = `part1.xref'.
+
+ (/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- to remove the <?xml version=...?> processing instruction use the c
+ommand line option `no-VERSION'
+--------------------------------------
+--------------------------------------
+--- Note --- to remove the DOCTYPE declaration use the command line option `no-
+DOCTYPE'
+--------------------------------------
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+)
+--------------------------------------
+--- Note --- for marking of the base font, use the command line option `fonts+'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for non active _, use the command line option `no_'
+--------------------------------------
+--------------------------------------
+--- Note --- for _ of catcode 13, use the command line option `_13'
+--------------------------------------
+--------------------------------------
+--- Note --- for non active ^, use the command line option `no^'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ of catcode 13, use the command line option `^13'
+--------------------------------------
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- For section filenames that reflect on their titles use the command
+ line option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for alternative charset, use the command line option `charset=...'
+
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
+on
+--------------------------------------
+--------------------------------------
+--- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for content and toc in 2 frames, use the command line option `fram
+es'
+--------------------------------------
+--------------------------------------
+--- Note --- for content, toc, and footnotes in 3 frames, use the command line 
+option `frames-fn'
+--------------------------------------
+--------------------------------------
+--- Note --- for file extension name xht, use the command line option `xht'
+--------------------------------------
+TeX4ht package options: html,2,next
+--------------------------------------
+--- Note --- to ignore CSS code, use the command line option `-css
+--------------------------------------
+--------------------------------------
+--- Note --- for inline CSS code, use the command line option `css-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for pop ups on mouse over, use the command line option `mouseover'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for addressing images in a subdirectory, use the command line opti
+on `imgdir:.../'
+--------------------------------------
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+)
+\:tokwrite=\toks22
+\:tokpage=\toks23
+--------------------------------------
+--- Note --- for back links to toc, use the command line option `sections+'
+--------------------------------------
+\openout15 = `part1.4ct'.
+
+\:tocout=\write4
+\openout4 = `part1.4tc'.
+
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/latex.4ht
+version 2009-05-21-09:32
+--------------------------------------
+--- Note --- for links into captions, instead of float heads, use the command l
+ine option `refcaption'
+--------------------------------------
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- For mini tocs immediately aftter the header use the command line o
+ption `minitoc<'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements with valued data, use the command lin
+e option `enumerate+'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements li's with value attributes, use the c
+ommand line option `enumerate-'
+--------------------------------------
+--------------------------------------
+--- Note --- for CSS2 code, use the command line option `css2'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial tabular, use the command line option `pic-tabular'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for inline footnotes use command line option `fn-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for tracing of latex font commands, use the command line option `f
+onts'
+--------------------------------------
+--------------------------------------
+--- Note --- for width specifications of tabular p entries, use the `p-width' c
+ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
+style="width:\HColWidth"}}
+--------------------------------------
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ environments, use the command line option `pic
+-m' (not recommended!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
+he command line option `pic-m+' (not safe!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+))
+(/usr/share/texmf/tex/generic/tex4ht/fontmath.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/book.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- for tocs without * entries, use command line option `notoc*'
+--------------------------------------
+--------------------------------------
+--- Note --- for tocs without * entries, use command line option `notoc*'
+--------------------------------------
+--------------------------------------
+--- Note --- to eliminate mini tables of contents, use the command line option 
+`nominitoc'
+--------------------------------------
+--------------------------------------
+--- Note --- for frames-like object-based table of contents, use the command li
+ne option `obj-toc'
+--------------------------------------
+--------------------------------------
+--- Note --- for files named derived from section titles, use the command line 
+option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for i-columns index, use the command line option `index=i' (e.g., 
+index=2)
+--------------------------------------
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/amsmath.4ht
+version 2009-05-21-09:32
+\tmp:muskip=\muskip11
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/amstext.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/amsbsy.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/amsopn.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/graphicx.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/graphics.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- if included graphics are of degraded quality, try the command line
+ options `graphics-num' or `graphics-'. The `num' should provide the density of
+ pixels in the bitmaps (e.g., 110). 
+--------------------------------------
+--------------------------------------
+--- Note --- for key dimensions try the option `Gin-dim'; for key dimensions wh
+en bounding box is unavailable try `Gin-dim+'; neither is recommended
+--------------------------------------
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/dvips.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/natbib.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/color.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/dvipsnam.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def)
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
+version 2009-05-18-23:01
+)
+(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+)) (./part1.aux)
+\openout1 = `part1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: a5paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 307.28978pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 483.69687pt, 56.9055pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=307.28978pt
+* \textheight=483.69687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-45.43198pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+--- file part1.css ---
+[1
+
+] [2
+
+] [3]
+LaTeX Font Info:    Try loading font information for U+wasy on input line 20.
+ (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+) [1]
+[2] (./part1.4ct [3
+
+])
+--- file part1li1.html ---
+ (./part1.4ct [4]) [5] [6
+
+]
+Chapter 1.
+--- file part1ch1.html ---
+[7
+
+] [8] [9
+
+] [10
+
+]
+--- file part1li2.html ---
+ [11] [12] [13] [14
+
+]
+Chapter 2.
+--- file part1ch2.html ---
+[15
+
+] [16]
+l. 315 Writing part1.idv[1] (part10x.png)
+ [17] [18] [19
+
+]
+l.336 --- TeX4ht warning --- Cannot determine size of graphic in chart-of-nucli
+des.png (no BoundingBox) ---
+l. 336 --- needs --- chart-of-nuclides.png ---
+[20
+
+]
+l. 357 Writing part1.idv[2] (part11x.png)
+l. 364 Writing part1.idv[3] (part12x.png)
+ [21
+
+]
+l. 376 Writing part1.idv[4] (part13x.png)
+l. 383 Writing part1.idv[5] (part14x.png)
+ [22]
+l. 391 Writing part1.idv[6] (part15x.png)
+l. 401 Writing part1.idv[7] (part16x.png)
+ [23]
+l. 420 Writing part1.idv[8] (part17x.png)
+ [24]
+l. 436 Writing part1.idv[9] (part18x.png)
+l. 443 Writing part1.idv[10] (part19x.png)
+ [25]
+l. 451 Writing part1.idv[11] (part110x.png)
+l. 462 Writing part1.idv[12] (part111x.png)
+ [26]
+l. 469 Writing part1.idv[13] (part112x.png)
+l. 478 Writing part1.idv[14] (part113x.png)
+ [27]
+l. 485 Writing part1.idv[15] (part114x.png)
+l. 492 Writing part1.idv[16] (part115x.png)
+l. 507 Writing part1.idv[17] (part116x.png)
+ [28]
+l. 516 Writing part1.idv[18] (part117x.png)
+l. 523 Writing part1.idv[19] (part118x.png)
+ [29]
+l. 531 Writing part1.idv[20] (part119x.png)
+l. 541 Writing part1.idv[21] (part120x.png)
+ [30] [31] [32
+
+]
+l.560 --- TeX4ht warning --- Cannot determine size of graphic in U-Th-series.pn
+g (no BoundingBox) ---
+l. 560 --- needs --- U-Th-series.png ---
+[33
+
+] [34
+
+] [35
+
+] [36
+
+]
+Chapter 3.
+--- file part1ch3.html ---
+[37]
+l. 617 Writing part1.idv[22] (part121x.png)
+l. 628 Writing part1.idv[23] (part122x.png)
+ [38]
+l. 635 Writing part1.idv[24] (part123x.png)
+l. 642 Writing part1.idv[25] (part124x.png)
+ [39]
+l. 649 Writing part1.idv[26] (part125x.png)
+ [40] [41
+
+]
+l.674 --- TeX4ht warning --- Cannot determine size of graphic in mass-spec.png 
+(no BoundingBox) ---
+l. 674 --- needs --- mass-spec.png ---
+[42
+
+] [43
+
+]
+l. 732 Writing part1.idv[27] (part126x.png)
+ [44] [45
+
+]
+l.754 --- TeX4ht warning --- Cannot determine size of graphic in AMS.png (no Bo
+undingBox) ---
+l. 754 --- needs --- AMS.png ---
+[46
+
+]
+l. 774 Writing part1.idv[28] (part127x.png)
+l. 781 Writing part1.idv[29] (part128x.png)
+ [47
+
+]
+l. 793 Writing part1.idv[30] (part129x.png)
+l. 803 Writing part1.idv[31] (part130x.png)
+ [48]
+l. 810 Writing part1.idv[32] (part131x.png)
+l. 818 Writing part1.idv[33] (part132x.png)
+ [49]
+l. 855 Writing part1.idv[34] (part133x.png)
+ [50]
+l. 862 Writing part1.idv[35] (part134x.png)
+l. 872 Writing part1.idv[36] (part135x.png)
+ [51] [52] [53
+
+] [54
+
+]
+Chapter 4.
+--- file part1ch4.html ---
+l. 901 Writing part1.idv[37] (part136x.png)
+[55]
+l. 911 Writing part1.idv[38] (part137x.png)
+ [56]
+l. 975 Writing part1.idv[39] (part138x.png)
+ [57]
+l. 985 Writing part1.idv[40] (part139x.png)
+l. 997 Writing part1.idv[41] (part140x.png)
+ [58]
+l. 1006 Writing part1.idv[42] (part141x.png)
+l. 1013 Writing part1.idv[43] (part142x.png)
+l. 1028 Writing part1.idv[44] (part143x.png)
+ [59] [60] [61
+
+]
+l.1061 --- TeX4ht warning --- Cannot determine size of graphic in isochron.png 
+(no BoundingBox) ---
+l. 1061 --- needs --- isochron.png ---
+[62
+
+]
+l. 1106 Writing part1.idv[45] (part144x.png)
+ [63
+
+]
+l. 1113 Writing part1.idv[46] (part145x.png)
+l. 1125 Writing part1.idv[47] (part146x.png)
+ [64] [65] [66
+
+]
+Chapter 5.
+--- file part1ch5.html ---
+l. 1158 Writing part1.idv[48] (part147x.png)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1178
+.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1178.
+
+ [67
+
+]
+l. 1190 Writing part1.idv[49] (part148x.png)
+l. 1205 Writing part1.idv[50] (part149x.png)
+ [68]
+l. 1226 Writing part1.idv[51] (part150x.png)
+l. 1238 Writing part1.idv[52] (part151x.png)
+l. 1242 Writing part1.idv[53] (part152x.png)
+ [69]
+[70]
+l. 1282 Writing part1.idv[54] (part153x.png)
+l. 1308 Writing part1.idv[55] (part154x.png)
+ [71]
+l. 1326 Writing part1.idv[56] (part155x.png)
+ [72] [73] [74
+
+]
+l.1361 --- TeX4ht warning --- Cannot determine size of graphic in wetherill.png
+ (no BoundingBox) ---
+l. 1361 --- needs --- wetherill.png ---
+[75
+
+] [76
+
+] [77
+
+] [78
+
+]
+Chapter 6.
+--- file part1ch6.html ---
+l. 1425 Writing part1.idv[57] (part156x.png)
+l. 1442 Writing part1.idv[58] (part157x.png)
+[79]
+l. 1453 Writing part1.idv[59] (part158x.png)
+ [80]
+l. 1476 Writing part1.idv[60] (part159x.png)
+l. 1489 Writing part1.idv[61] (part160x.png)
+ [81]
+l. 1521 Writing part1.idv[62] (part161x.png)
+ [82]
+l. 1529 Writing part1.idv[63] (part162x.png)
+l. 1530 Writing part1.idv[64] (part163x.png)
+ [83] [84
+
+]
+l.1539 --- TeX4ht warning --- Cannot determine size of graphic in Ar-Ar.png (no
+ BoundingBox) ---
+l. 1539 --- needs --- Ar-Ar.png ---
+[85
+
+] [86
+
+] [87
+
+] [88
+
+]
+Chapter 7.
+--- file part1ch7.html ---
+l. 1605 Writing part1.idv[65] (part164x.png)
+[89]
+l. 1635 Writing part1.idv[66] (part165x.png)
+l. 1645 Writing part1.idv[67] (part166x.png)
+ [90]
+l. 1655 Writing part1.idv[68] (part167x.png)
+ [91]
+l. 1676 Writing part1.idv[69] (part168x.png)
+ [92] [93
+
+]
+l.1708 --- TeX4ht warning --- Cannot determine size of graphic in Arrhenius.png
+ (no BoundingBox) ---
+l. 1708 --- needs --- Arrhenius.png ---
+[94
+
+]
+l. 1739 Writing part1.idv[70] (part169x.png)
+ [95
+
+]
+l. 1752 Writing part1.idv[71] (part170x.png)
+l. 1761 Writing part1.idv[72] (part171x.png)
+ [96]
+l. 1782 Writing part1.idv[73] (part172x.png)
+ [97]
+l. 1806 Writing part1.idv[74] (part173x.png)
+l. 1816 Writing part1.idv[75] (part174x.png)
+l. 1824 Writing part1.idv[76] (part175x.png)
+ [98] [99] [100
+
+]
+l.1857 --- TeX4ht warning --- Cannot determine size of graphic in EDM.png (no B
+oundingBox) ---
+l. 1857 --- needs --- EDM.png ---
+[101
+
+] [102
+
+] [103
+
+]
+l.1871 --- TeX4ht warning --- Cannot determine size of graphic in stockli.png (
+no BoundingBox) ---
+l. 1871 --- needs --- stockli.png ---
+[104
+
+] [105
+
+] [106
+
+]
+Chapter 8.
+--- file part1ch8.html ---
+--- file part112.html ---
+[107
+
+
+] [108] [109
+
+] [110
+
+]
+l. 1971 Writing part1.idv[77] (part176x.png)
+ [111
+
+]
+l. 1989 Writing part1.idv[78] (part177x.png)
+l. 2007 Writing part1.idv[79] (part178x.png)
+ [112]
+l. 2016 Writing part1.idv[80] (part179x.png)
+ [113] [114] [115
+
+]
+l.2066 --- TeX4ht warning --- Cannot determine size of graphic in AlBe.png (no 
+BoundingBox) ---
+l. 2066 --- needs --- AlBe.png ---
+l.2067 --- TeX4ht warning --- Cannot determine size of graphic in NeBe.png (no 
+BoundingBox) ---
+l. 2067 --- needs --- NeBe.png ---
+[116
+
+] [117
+
+]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [118] [119
+
+] [120
+
+]
+Chapter 9.
+--- file part1ch9.html ---
+l. 2171 Writing part1.idv[81] (part180x.png)
+[121]
+l. 2211 Writing part1.idv[82] (part181x.png)
+l. 2221 Writing part1.idv[83] (part182x.png)
+ [122]
+l. 2228 Writing part1.idv[84] (part183x.png)
+l. 2246 Writing part1.idv[85] (part184x.png)
+ [123]
+l. 2259 Writing part1.idv[86] (part185x.png)
+ [124]
+l. 2288 Writing part1.idv[87] (part186x.png)
+l. 2288 Writing part1.idv[88] (part187x.png)
+l. 2296 Writing part1.idv[89] (part188x.png)
+ [125]
+l. 2307 Writing part1.idv[90] (part189x.png)
+l. 2317 Writing part1.idv[91] (part190x.png)
+ [126] [127] [128
+
+]
+Chapter 10.
+--- file part1ch10.html ---
+l. 2352 Writing part1.idv[92] (part191x.png)
+[129
+
+]
+l. 2360 Writing part1.idv[93] (part192x.png)
+l. 2374 Writing part1.idv[94] (part193x.png)
+ [130]
+l. 2389 Writing part1.idv[95] (part194x.png)
+l. 2403 Writing part1.idv[96] (part195x.png)
+ [131]
+l. 2418 Writing part1.idv[97] (part196x.png)
+l. 2426 Writing part1.idv[98] (part197x.png)
+ [132]
+l. 2441 Writing part1.idv[99] (part198x.png)
+l. 2441 Writing part1.idv[100] (part199x.png)
+l. 2441 Writing part1.idv[101] (part1100x.png)
+l. 2441 Writing part1.idv[102] (part1101x.png)
+l. 2441 Writing part1.idv[103] (part1102x.png)
+l. 2441 Writing part1.idv[104] (part1103x.png)
+l. 2447 Writing part1.idv[105] (part1104x.png)
+ [133]
+l. 2483 Writing part1.idv[106] (part1105x.png)
+l. 2483 Writing part1.idv[107] (part1106x.png)
+ [134]
+l. 2486 Writing part1.idv[108] (part1107x.png)
+l. 2500 Writing part1.idv[109] (part1108x.png)
+l. 2500 Writing part1.idv[110] (part1109x.png)
+l. 2500 Writing part1.idv[111] (part1110x.png)
+l. 2500 Writing part1.idv[112] (part1111x.png)
+l. 2500 Writing part1.idv[113] (part1112x.png)
+l. 2500 Writing part1.idv[114] (part1113x.png)
+ [135]
+l. 2503 Writing part1.idv[115] (part1114x.png)
+l. 2511 Writing part1.idv[116] (part1115x.png)
+ [136]
+l. 2518 Writing part1.idv[117] (part1116x.png)
+l. 2530 Writing part1.idv[118] (part1117x.png)
+l. 2535 Writing part1.idv[119] (part1118x.png)
+ [137]
+l. 2544 Writing part1.idv[120] (part1119x.png)
+ [138] [139
+
+]
+l.2563 --- TeX4ht warning --- Cannot determine size of graphic in bullseye.png 
+(no BoundingBox) ---
+l. 2563 --- needs --- bullseye.png ---
+[140
+
+] [141
+
+] [142
+
+]
+l.2579 --- TeX4ht warning --- Cannot determine size of graphic in covariance.pn
+g (no BoundingBox) ---
+l. 2579 --- needs --- covariance.png ---
+[143
+
+] [144
+
+] [145
+
+] [146
+
+]
+Chapter 11.
+--- file part1ch11.html ---
+[147] [148] [149] [150
+
+]
+Chapter 12.
+--- file part1ch12.html ---
+[151
+
+] [152] [153] [154] [155] [156] [157
+
+] [158
+
+] [159
+
+] [160] [161]
+l. 3006 Writing part1.idv[121] (part1120x.png)
+ [162]
+[163] [164]
+l. 3081 Writing part1.idv[122] (part1121x.png)
+l. 3086 Writing part1.idv[123] (part1122x.png)
+ [165] [166] [167
+
+] (./part1.aux) ) 
+Here is how much of TeX's memory you used:
+ 7535 strings out of 493030
+ 92027 string characters out of 6136259
+ 285406 words of memory out of 5000000
+ 10922 multiletter control sequences out of 15000+600000
+ 12323 words of font info for 46 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 32i,12n,35p,2142b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on part1.dvi (170 pages, 426472 bytes).

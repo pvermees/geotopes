@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>12 Matlab practicals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,2,next --> 
+<meta name="src" content="index.tex"> 
+<meta name="date" content="2017-12-29 21:07:00"> 
+<link rel="stylesheet" type="text/css" href="index.css"> 
+</head><body 
+>
+   <!--l. 2723--><div class="crosslinks"><p class="noindent">[<a 
+href="indexch12.html" >prev</a>] [<a 
+href="indexch12.html#tailindexch12.html" >prev-tail</a>] [<a 
+href="indexch11.html#tailindexch12.html">tail</a>] [<a 
+href="index.html# " >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;12</span><br /><a 
+ id="x16-4400012"></a><span 
+class="cmtt-10">Matlab </span>practicals</h2>
+<!--l. 2726--><p class="noindent" ><span 
+class="cmtt-10">Matlab </span>is a mathematical scripting language that is both powerful
+and easy to use. The full version of the software is very expensive
+but a reasonably complete student version can be purchased for
+<span 
+class="cmti-10">£</span>55 + VAT from <span 
+class="cmtt-10">http://mathworks.com</span>. Alternatively, <span 
+class="cmtt-10">Octave </span>is
+an open source clone of Matlab that can be downloaded for free
+from<br 
+class="newline" /><span 
+class="cmtt-10">http://www.gnu.org/software/octave</span>.
+   <h3 class="sectionHead"><span class="titlemark">12.1   </span> <a 
+ id="x16-4500012.1"></a>Introduction to <span 
+class="cmtt-10">Matlab</span></h3>
+<!--l. 2735--><p class="noindent" >This exercise will present a brief tutorial of the most basic functionality in
+<span 
+class="cmtt-10">Matlab</span>, which will cover most commands you will need for the subsequent
+computer practicals.
+                                                           
+                                                           
+   <div class="verbatim" id="verbatim-1">
+%&#x00A0;Anything&#x00A0;following&#x00A0;a&#x00A0;percent&#x00A0;symbol&#x00A0;is&#x00A0;a
+&#x00A0;<br />%&#x00A0;comment&#x00A0;and&#x00A0;is&#x00A0;ignored&#x00A0;by&#x00A0;Matlab.&#x00A0;It&#x00A0;is
+&#x00A0;<br />%&#x00A0;considered&#x00A0;good&#x00A0;practice&#x00A0;to&#x00A0;document&#x00A0;your
+&#x00A0;<br />%&#x00A0;code&#x00A0;with&#x00A0;lots&#x00A0;of&#x00A0;comments,&#x00A0;as&#x00A0;will&#x00A0;be
+&#x00A0;<br />%&#x00A0;done&#x00A0;for&#x00A0;this&#x00A0;tutorial.
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Ending&#x00A0;a&#x00A0;line&#x00A0;with&#x00A0;a&#x00A0;semi-colon
+&#x00A0;<br />%&#x00A0;suppresses&#x00A0;output&#x00A0;to&#x00A0;the&#x00A0;console:
+&#x00A0;<br />'be&#x00A0;loud'
+&#x00A0;<br />'stay&#x00A0;quiet';
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Matlab&#x00A0;can&#x00A0;be&#x00A0;used&#x00A0;as&#x00A0;a&#x00A0;fancy&#x00A0;calculator:
+&#x00A0;<br />1&#x00A0;+&#x00A0;1
+&#x00A0;<br />sqrt(2)
+&#x00A0;<br />exp(log(10))
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Intermediate&#x00A0;values&#x00A0;can&#x00A0;be&#x00A0;stored&#x00A0;in&#x00A0;variables:
+&#x00A0;<br />foo&#x00A0;=&#x00A0;2;
+&#x00A0;<br />bar&#x00A0;=&#x00A0;4;
+&#x00A0;<br />foo&#x00A0;=&#x00A0;foo*bar;
+&#x00A0;<br />foo
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Data&#x00A0;can&#x00A0;be&#x00A0;entered&#x00A0;as&#x00A0;vectors:
+&#x00A0;<br />x&#x00A0;=&#x00A0;[0&#x00A0;2&#x00A0;4&#x00A0;6&#x00A0;8&#x00A0;10]
+&#x00A0;<br />%&#x00A0;or&#x00A0;using&#x00A0;shorthand&#x00A0;syntax:
+&#x00A0;<br />y&#x00A0;=&#x00A0;0:2:10
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Define&#x00A0;a&#x00A0;matrix
+&#x00A0;<br />z&#x00A0;=&#x00A0;[1&#x00A0;2&#x00A0;3
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;4&#x00A0;5&#x00A0;6
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;7&#x00A0;8&#x00A0;9];
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Accessing&#x00A0;one&#x00A0;or&#x00A0;more&#x00A0;elements
+&#x00A0;<br />%&#x00A0;from&#x00A0;a&#x00A0;matrix&#x00A0;or&#x00A0;vector:
+&#x00A0;<br />x(3)
+&#x00A0;<br />y(1:3)
+&#x00A0;<br />z(1:2,2:3)
+                                                           
+                                                           
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Attention:&#x00A0;'*',&#x00A0;'/'&#x00A0;and&#x00A0;'^'&#x00A0;symbols
+&#x00A0;<br />%&#x00A0;are&#x00A0;reserved&#x00A0;for&#x00A0;matrix&#x00A0;operations:
+&#x00A0;<br />a&#x00A0;=&#x00A0;[1&#x00A0;1&#x00A0;1]&#x00A0;&#x00A0;%&#x00A0;row&#x00A0;vector
+&#x00A0;<br />b&#x00A0;=&#x00A0;[1;1;1]&#x00A0;&#x00A0;%&#x00A0;column&#x00A0;vector
+&#x00A0;<br />a*b
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Use&#x00A0;'.*',&#x00A0;'./'&#x00A0;and&#x00A0;'.^'&#x00A0;for
+&#x00A0;<br />%&#x00A0;element-wise&#x00A0;operations:
+&#x00A0;<br />a.*a
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Transpose&#x00A0;of&#x00A0;a&#x00A0;matrix:
+&#x00A0;<br />z'
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;In&#x00A0;addition&#x00A0;to&#x00A0;Matlab's&#x00A0;built-in&#x00A0;operators
+&#x00A0;<br />%&#x00A0;and&#x00A0;functions,&#x00A0;you&#x00A0;can&#x00A0;also&#x00A0;define&#x00A0;your&#x00A0;own:
+&#x00A0;<br />function&#x00A0;out&#x00A0;=&#x00A0;cube(in)
+&#x00A0;<br />&#x00A0;&#x00A0;out&#x00A0;=&#x00A0;in^3;
+&#x00A0;<br />end
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;After&#x00A0;saving&#x00A0;the&#x00A0;code&#x00A0;in&#x00A0;a&#x00A0;file&#x00A0;named&#x00A0;cube.m,
+&#x00A0;<br />%&#x00A0;you&#x00A0;can&#x00A0;then&#x00A0;use&#x00A0;this&#x00A0;function&#x00A0;as&#x00A0;follows:
+&#x00A0;<br />c3&#x00A0;=&#x00A0;cube(3)
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;A&#x00A0;useful&#x00A0;feature&#x00A0;of&#x00A0;Matlab&#x00A0;that&#x00A0;is&#x00A0;missing&#x00A0;from
+&#x00A0;<br />%&#x00A0;most&#x00A0;other&#x00A0;programming&#x00A0;languages&#x00A0;is&#x00A0;the&#x00A0;ability
+&#x00A0;<br />%&#x00A0;to&#x00A0;accommodate&#x00A0;several&#x00A0;output&#x00A0;parameters:
+&#x00A0;<br />function&#x00A0;[m,s]&#x00A0;=&#x00A0;basicStats(dat)
+&#x00A0;<br />&#x00A0;&#x00A0;m&#x00A0;=&#x00A0;mean(dat);&#x00A0;%&#x00A0;mean
+&#x00A0;<br />&#x00A0;&#x00A0;s&#x00A0;=&#x00A0;std(dat);&#x00A0;&#x00A0;%&#x00A0;standard&#x00A0;deviation
+&#x00A0;<br />end
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;create&#x00A0;a&#x00A0;row&#x00A0;vector&#x00A0;of&#x00A0;10&#x00A0;random&#x00A0;numbers
+&#x00A0;<br />randnum&#x00A0;=&#x00A0;rand(1,10);
+&#x00A0;<br />%&#x00A0;use&#x00A0;our&#x00A0;new&#x00A0;function
+&#x00A0;<br />[m,s]&#x00A0;=&#x00A0;basicStats(randnum)
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Conditional&#x00A0;statement:
+&#x00A0;<br />function&#x00A0;coinToss
+&#x00A0;<br />&#x00A0;&#x00A0;%&#x00A0;'rand'&#x00A0;produces&#x00A0;numbers&#x00A0;between&#x00A0;0&#x00A0;and&#x00A0;1
+                                                           
+                                                           
+&#x00A0;<br />&#x00A0;&#x00A0;if&#x00A0;(rand&#x00A0;&#x003E;&#x00A0;0.5)
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;%&#x00A0;display&#x00A0;a&#x00A0;message&#x00A0;to&#x00A0;the&#x00A0;console
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;disp('head')
+&#x00A0;<br />&#x00A0;&#x00A0;else
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;disp('tail')
+&#x00A0;<br />&#x00A0;&#x00A0;end
+&#x00A0;<br />end
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;For&#x00A0;loop:
+&#x00A0;<br />for&#x00A0;i=1:10,
+&#x00A0;<br />&#x00A0;&#x00A0;coinToss
+&#x00A0;<br />end
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;List&#x00A0;all&#x00A0;the&#x00A0;variables&#x00A0;in&#x00A0;the&#x00A0;current&#x00A0;workspace:
+&#x00A0;<br />who
+&#x00A0;<br />whos
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Remove&#x00A0;some&#x00A0;or&#x00A0;all&#x00A0;variables
+&#x00A0;<br />%&#x00A0;from&#x00A0;the&#x00A0;current&#x00A0;workspace:
+&#x00A0;<br />clear&#x00A0;m,s
+&#x00A0;<br />who
+&#x00A0;<br />clear&#x00A0;all
+&#x00A0;<br />who
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Copy&#x00A0;the&#x00A0;'coinToss'&#x00A0;function&#x00A0;into&#x00A0;a&#x00A0;text&#x00A0;file
+&#x00A0;<br />%&#x00A0;named&#x00A0;'coinToss.m'&#x00A0;and&#x00A0;save&#x00A0;it&#x00A0;in&#x00A0;the&#x00A0;current
+&#x00A0;<br />%&#x00A0;directory.&#x00A0;You&#x00A0;can&#x00A0;then&#x00A0;load&#x00A0;the&#x00A0;contents&#x00A0;of
+&#x00A0;<br />%&#x00A0;the&#x00A0;file&#x00A0;by&#x00A0;simply&#x00A0;typing&#x00A0;its&#x00A0;name&#x00A0;without
+&#x00A0;<br />%&#x00A0;the&#x00A0;'.m'&#x00A0;extension:
+&#x00A0;<br />coinToss
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Basic&#x00A0;file&#x00A0;management&#x00A0;is&#x00A0;done&#x00A0;with&#x00A0;UNIX&#x00A0;commands:
+&#x00A0;<br />pwd&#x00A0;&#x00A0;&#x00A0;%&#x00A0;pass&#x00A0;the&#x00A0;working&#x00A0;directory
+&#x00A0;<br />cd&#x00A0;..&#x00A0;%&#x00A0;move&#x00A0;up&#x00A0;one&#x00A0;directory
+&#x00A0;<br />ls&#x00A0;&#x00A0;&#x00A0;&#x00A0;%&#x00A0;list&#x00A0;all&#x00A0;files&#x00A0;in&#x00A0;the&#x00A0;current&#x00A0;directory
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Use&#x00A0;the&#x00A0;above&#x00A0;commands&#x00A0;to&#x00A0;navigate&#x00A0;to&#x00A0;the
+&#x00A0;<br />%&#x00A0;directory&#x00A0;containing&#x00A0;the&#x00A0;'population.csv'&#x00A0;file.
+&#x00A0;<br />%&#x00A0;To&#x00A0;view&#x00A0;the&#x00A0;contents&#x00A0;of&#x00A0;the&#x00A0;file:
+&#x00A0;<br />type('population.csv')
+                                                           
+                                                           
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;To&#x00A0;read&#x00A0;the&#x00A0;actual&#x00A0;population&#x00A0;dataset
+&#x00A0;<br />%&#x00A0;into&#x00A0;memory,&#x00A0;ignoring&#x00A0;the&#x00A0;header:
+&#x00A0;<br />pop&#x00A0;=&#x00A0;csvread('population.csv',1,0);
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;To&#x00A0;access&#x00A0;the&#x00A0;help&#x00A0;files&#x00A0;of&#x00A0;the&#x00A0;'csvread'
+&#x00A0;<br />%&#x00A0;function&#x00A0;and&#x00A0;find&#x00A0;out&#x00A0;the&#x00A0;meaning&#x00A0;of&#x00A0;the
+&#x00A0;<br />%&#x00A0;various&#x00A0;input&#x00A0;arguments:
+&#x00A0;<br />doc&#x00A0;csvread
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Incidentally,&#x00A0;the&#x00A0;'type'&#x00A0;function&#x00A0;can&#x00A0;also
+&#x00A0;<br />%&#x00A0;be&#x00A0;used&#x00A0;to&#x00A0;view&#x00A0;the&#x00A0;Matlab&#x00A0;code&#x00A0;of&#x00A0;built-in
+&#x00A0;<br />%&#x00A0;and&#x00A0;other&#x00A0;functions:
+&#x00A0;<br />type('mean')
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Plot&#x00A0;the&#x00A0;first&#x00A0;column&#x00A0;of&#x00A0;'pop'
+&#x00A0;<br />%&#x00A0;against&#x00A0;the&#x00A0;second&#x00A0;one:
+&#x00A0;<br />plot(pop(:,1),pop(:,2),'-k')
+&#x00A0;<br />title("World&#x00A0;population&#x00A0;through&#x00A0;time")
+&#x00A0;<br />xlabel('year')
+&#x00A0;<br />ylabel('population&#x00A0;[millions]')
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Get&#x00A0;the&#x00A0;number&#x00A0;of&#x00A0;rows&#x00A0;and&#x00A0;columns&#x00A0;of&#x00A0;the&#x00A0;dataset:
+&#x00A0;<br />[nc,nr]&#x00A0;=&#x00A0;size(pop);
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Extract&#x00A0;the&#x00A0;data&#x00A0;from&#x00A0;1965&#x00A0;until&#x00A0;2014:
+&#x00A0;<br />years&#x00A0;=&#x00A0;pop(:,1);
+&#x00A0;<br />pop65&#x00A0;=&#x00A0;pop(years&#x003E;=1965,:);
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Fit&#x00A0;a&#x00A0;linear&#x00A0;model&#x00A0;through&#x00A0;these&#x00A0;data:
+&#x00A0;<br />x&#x00A0;=&#x00A0;pop65(:,1);
+&#x00A0;<br />y&#x00A0;=&#x00A0;pop65(:,2);
+&#x00A0;<br />[fit,S]&#x00A0;=&#x00A0;polyfit(x,y,1);
+&#x00A0;<br />%&#x00A0;We&#x00A0;won't&#x00A0;use&#x00A0;S&#x00A0;today&#x00A0;but&#x00A0;we&#x00A0;will&#x00A0;in&#x00A0;Practical&#x00A0;4!
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Create&#x00A0;a&#x00A0;new&#x00A0;figure&#x00A0;window
+&#x00A0;<br />figure(2)
+&#x00A0;<br />plot(x,y,'ok')
+&#x00A0;<br />hold&#x00A0;on
+&#x00A0;<br />ypred&#x00A0;=&#x00A0;fit(1)*x+fit(2);
+                                                           
+                                                           
+&#x00A0;<br />plot(x,ypred,'-k')
+&#x00A0;<br />
+&#x00A0;<br />%&#x00A0;Close&#x00A0;all&#x00A0;plot&#x00A0;windows:
+&#x00A0;<br />close&#x00A0;all;
+</div>
+<!--l. 2901--><p class="nopar" >
+<!--l. 2903--><p class="indent" >   And that concludes this short tutorial. Now try to calculate a Rb-Sr age
+by regressing an isochron through the following data (recall that <span 
+class="cmmi-10">&lambda;</span><sub><span 
+class="cmr-7">87</span></sub> =
+0.0000142 Myr<sup><span 
+class="cmsy-7">&minus;</span><span 
+class="cmr-7">1</span></sup>.
+   <div class="table">
+                                                           
+                                                           
+<!--l. 2907--><p class="indent" >   <hr class="float"><div class="float" 
+>
+                                                           
+                                                           
+<div class="tabular"> <table id="TBL-6" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-6-1g"><col 
+id="TBL-6-1"></colgroup><colgroup id="TBL-6-2g"><col 
+id="TBL-6-2"><col 
+id="TBL-6-3"><col 
+id="TBL-6-4"><col 
+id="TBL-6-5"><col 
+id="TBL-6-6"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-6-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-1"  
+class="td11"><sup><span 
+class="cmr-7">87</span></sup>Sr/<sup><span 
+class="cmr-7">86</span></sup>Sr</td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-2"  
+class="td11">0.707</td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-3"  
+class="td11">0.736</td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-4"  
+class="td11">0.771</td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-5"  
+class="td11">0.757</td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-6"  
+class="td11">0.785</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-1"  
+class="td11"><sup><span 
+class="cmr-7">87</span></sup>Rb/<sup><span 
+class="cmr-7">86</span></sup>Sr</td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-2"  
+class="td11">1.00  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-3"  
+class="td11">5.00  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-4"  
+class="td11">10.00</td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-5"  
+class="td11">8.00  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-6"  
+class="td11">12.00</td></tr></table>
+</div>
+                                                           
+                                                           
+   </div><hr class="endfloat" />
+   </div>
+   <h3 class="sectionHead"><span class="titlemark">12.2   </span> <a 
+ id="x16-4600012.2"></a>U-Th-Pb data reduction</h3>
+<!--l. 2918--><p class="noindent" >You are supplied with two data files that were produced by the quadrupole
+laser ablation ICP-MS system at UCL&#8217;s London Geochronology Centre. At
+the time of the analysis, this instrument could not resolve <sup><span 
+class="cmr-7">204</span></sup>Pb from the
+isobaric interference at <sup><span 
+class="cmr-7">204</span></sup>Hg. Therefore, it is not possible to apply a
+common lead correction as explained in Section <a 
+href="indexch5.html#x8-180005">5<!--tex4ht:ref: sec:U-Pb --></a>. However, this does not
+cause any major issues to us because:
+<!--l. 2926--><p class="indent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x16-46002x1">The  mineral  analysed  is  zircon,  which  is  a  mineral  that
+     incorporates very little common Pb in its crystal structure during
+     crystallisation.
+     </li>
+     <li 
+  class="enumerate" id="x16-46004x2">The ages are sufficiently old for the radiogenic Pb to dominate
+     the common Pb component by orders of magnitude.</li></ol>
+<!--l. 2934--><p class="indent" >   In this exercise, we will use standard-sample bracketing (Section <a 
+href="indexch3.html#x6-120003.3">3.3<!--tex4ht:ref: sec:bracketing --></a>) to
+process some raw mass spectrometer data in <span 
+class="cmtt-10">Matlab</span>:
+<!--l. 2938--><p class="indent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x16-46006x1">Load the input files <span 
+class="cmtt-10">91500.csv </span>(sample) and <span 
+class="cmtt-10">GJ1.csv </span>(standard)
+     into <span 
+class="cmtt-10">Matlab</span>.
+     </li>
+     <li 
+  class="enumerate" id="x16-46008x2">Plot the <sup><span 
+class="cmr-7">238</span></sup>U signal against time.
+     </li>
+     <li 
+  class="enumerate" id="x16-46010x3">Given that GJ-1 has a known age of 600.3874 Ma, what are its
+     expected <sup><span 
+class="cmr-7">206</span></sup>Pb/<sup><span 
+class="cmr-7">238</span></sup>U, <sup><span 
+class="cmr-7">207</span></sup>Pb/<sup><span 
+class="cmr-7">235</span></sup>U and <sup><span 
+class="cmr-7">208</span></sup>Pb/<sup><span 
+class="cmr-7">232</span></sup>Th ratios?
+     </li>
+     <li 
+  class="enumerate" id="x16-46012x4">Compare these values with the measured ratios, computed as the
+     arithmetic mean signal. Is there a significant difference between
+     the measured and the expected ratios? What could be causing
+     this?
+                                                           
+                                                           
+     </li>
+     <li 
+  class="enumerate" id="x16-46014x5">Calculate a correction factor by dividing the measured GJ-1 ratios
+     by the expected values. <a 
+ id="x16-460135"></a>
+     </li>
+     <li 
+  class="enumerate" id="x16-46016x6">Calculate the measured isotopic ratios for sample 91500.
+     </li>
+     <li 
+  class="enumerate" id="x16-46018x7">Apply  the  correction  factor  calculated  in  step  <a 
+href="#x16-460135">5<!--tex4ht:ref: corr --></a>  to  these
+     measurements.
+     </li>
+     <li 
+  class="enumerate" id="x16-46020x8">What is the age of 91500?
+     </li>
+     <li 
+  class="enumerate" id="x16-46022x9">Can you plot the results on a Wetherill concordia diagram?</li></ol>
+<!--l. 2958--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">12.3   </span> <a 
+ id="x16-4700012.3"></a><sup><span 
+class="cmr-7">40</span></sup>Ar/<sup><span 
+class="cmr-7">39</span></sup>Ar data reduction</h3>
+<!--l. 2961--><p class="noindent" >In this exercise, we will use <span 
+class="cmtt-10">Matlab </span>to reduce some synthetic <sup><span 
+class="cmr-7">40</span></sup>Ar/<sup><span 
+class="cmr-7">39</span></sup>Ar
+data. You are provided with three input files:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x16-47002x1"><span 
+class="cmtt-10">smpl.csv</span>: <sup><span 
+class="cmr-7">36</span></sup>Ar, <sup><span 
+class="cmr-7">39</span></sup>Ar and <sup><span 
+class="cmr-7">40</span></sup>Ar as a function of time (t) for the
+     sample.
+     </li>
+     <li 
+  class="enumerate" id="x16-47004x2"><span 
+class="cmtt-10">stnd.csv</span>: the same data for the standard, which is a Fish Canyon
+     sanidine with a conventional K-Ar age of 27.8 Ma.
+     </li>
+     <li 
+  class="enumerate" id="x16-47006x3"><span 
+class="cmtt-10">blnk.csv</span>: a &#8216;blank&#8217; run, i.e. a measurement of the background
+     levels of Argon present in the mass spectrometer in the absence
+     of a sample.</li></ol>
+<!--l. 2973--><p class="indent" >   To perform the data reduction, please follow the following steps:
+<!--l. 2975--><p class="indent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x16-47008x1">Load the three input files.
+                                                           
+                                                           
+     </li>
+     <li 
+  class="enumerate" id="x16-47010x2">Plot the <sup><span 
+class="cmr-7">40</span></sup>Ar signal of the sample against time. Do the same for
+     the <sup><span 
+class="cmr-7">36</span></sup>Ar signal in the blank. What&#8217;s the difference?
+     </li>
+     <li 
+  class="enumerate" id="x16-47012x3">Perform a linear regression of the <sup><span 
+class="cmr-7">36</span></sup>Ar, <sup><span 
+class="cmr-7">39</span></sup>Ar and <sup><span 
+class="cmr-7">40</span></sup>Ar signals
+     through time and determine the intercept at t=0.
+     </li>
+     <li 
+  class="enumerate" id="x16-47014x4">Subtract the blank signals from the sample and standard signals.
+     </li>
+     <li 
+  class="enumerate" id="x16-47016x5">Apply an atmospheric correction assuming that all <sup><span 
+class="cmr-7">36</span></sup>Ar has an
+     atmospheric origin.
+     </li>
+     <li 
+  class="enumerate" id="x16-47018x6">Calculate the J-value of the standard.
+     </li>
+     <li 
+  class="enumerate" id="x16-47020x7">Calculate the age of the sample.</li></ol>
+<!--l. 2988--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">12.4   </span> <a 
+ id="x16-4800012.4"></a>Error propagation</h3>
+<!--l. 2990--><p class="noindent" >This exercise will build on the results from the previous two practicals.
+<!--l. 2993--><p class="indent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x16-48002x1">Plot the <sup><span 
+class="cmr-7">206</span></sup>Pb/<sup><span 
+class="cmr-7">238</span></sup>U-ratios of the sample against those of the
+     standard  (data  from  Section  <a 
+href="#x16-4600012.2">12.2<!--tex4ht:ref: sec:U-Pb-R --></a>).  Verify  that  the  covariance
+     between the two can safely be neglected.
+     </li>
+     <li 
+  class="enumerate" id="x16-48004x2">Calculate  the  standard  errors  of  the  mean  <sup><span 
+class="cmr-7">206</span></sup>Pb/<sup><span 
+class="cmr-7">238</span></sup>U  signal
+     ratios  for  the  sample  (91500)  and  the  standard  (GJ-1),  using
+     <span 
+class="cmtt-10">Matlab</span>&#8217;s <span 
+class="cmtt-10">mean </span>and <span 
+class="cmtt-10">std </span>functions.
+     </li>
+     <li 
+  class="enumerate" id="x16-48006x3">Propagate the analytical uncertainties of the U-Pb age, ignoring
+     the covariance terms. Recall that
+     <!--l. 3006--><p class="noindent" >
+                                                           
+                                                           
+     <center class="math-display" >
+     <img 
+src="index120x.png" alt="   -1--  (    206P-b)
+t = &lambda;238 ln 1 + 238U
+     " class="math-display" ></center>
+     <!--l. 3008--><p class="noindent" >If  you  want  you  can  use  the  simplifying  approximation  that
+     ln(1+X) <span 
+class="cmsy-10">&asymp; </span><span 
+class="cmmi-10">X </span>if X <span 
+class="cmsy-10">&#x226A; </span>1 (this assumption may not be correct for
+     the <sup><span 
+class="cmr-7">207</span></sup>Pb/<sup><span 
+class="cmr-7">235</span></sup>U-age). <a 
+ id="x16-480053"></a>
+     </li>
+     <li 
+  class="enumerate" id="x16-48008x4">Compute the analytical uncertainties associated with the linear
+     extrapolation of the argon signals of the sample and the standard
+     in Section <a 
+href="#x16-4700012.3">12.3<!--tex4ht:ref: sec:Ar-Ar-R --></a>. All the relevant information is provided in the
+     output of the <span 
+class="cmtt-10">polyfit </span>function:
+                                                           
+                                                           
+     <div class="verbatim" id="verbatim-2">
+     help(polyfit)
+     &#x00A0;<br />...
+     &#x00A0;<br />[P,S]&#x00A0;=&#x00A0;POLYFIT(X,Y,N)&#x00A0;returns&#x00A0;the&#x00A0;polynomial
+     &#x00A0;<br />coefficients&#x00A0;P&#x00A0;and&#x00A0;a&#x00A0;structure&#x00A0;S&#x00A0;for&#x00A0;use&#x00A0;with
+     &#x00A0;<br />POLYVAL&#x00A0;to&#x00A0;obtain&#x00A0;error&#x00A0;estimates&#x00A0;for&#x00A0;predictions.
+     &#x00A0;<br />S&#x00A0;contains&#x00A0;fields&#x00A0;for&#x00A0;the&#x00A0;triangular&#x00A0;factor&#x00A0;(R)
+     &#x00A0;<br />from&#x00A0;a&#x00A0;QR&#x00A0;decomposition&#x00A0;of&#x00A0;the&#x00A0;Vandermonde&#x00A0;matrix
+     &#x00A0;<br />of&#x00A0;X,&#x00A0;the&#x00A0;degrees&#x00A0;of&#x00A0;freedom&#x00A0;(df),&#x00A0;and&#x00A0;the&#x00A0;norm
+     &#x00A0;<br />of&#x00A0;the&#x00A0;residuals&#x00A0;(normr).&#x00A0;If&#x00A0;the&#x00A0;data&#x00A0;Y&#x00A0;are
+     &#x00A0;<br />random,&#x00A0;an&#x00A0;estimate&#x00A0;of&#x00A0;the&#x00A0;covariance&#x00A0;matrix
+     &#x00A0;<br />of&#x00A0;P&#x00A0;is&#x00A0;(Rinv*Rinv')*normr^2/df,&#x00A0;where&#x00A0;Rinv
+     &#x00A0;<br />is&#x00A0;the&#x00A0;inverse&#x00A0;of&#x00A0;R.
+</div>
+     <!--l. 3030--><p class="nopar" >
+     <!--l. 3032--><p class="noindent" >Based on these instructions, I have written the following function to
+     calculate the standard errors of the fitting parameters from the second
+     output parameter of the <span 
+class="cmtt-10">polyfit </span>function:
+                                                           
+                                                           
+     <div class="verbatim" id="verbatim-3">
+     function&#x00A0;se&#x00A0;=&#x00A0;S2se(S)
+     &#x00A0;<br />&#x00A0;&#x00A0;covmat&#x00A0;=&#x00A0;(inv(S.R)*inv(S.R'))*S.normr^2/S.df;
+     &#x00A0;<br />&#x00A0;&#x00A0;se&#x00A0;=&#x00A0;sqrt(diag(covmat));
+     &#x00A0;<br />end
+</div>
+     <!--l. 3041--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x16-48010x5">Use these error estimates to propagate the analytical uncertainty of
+     the J-value and the sample age. Again you can use the linear
+     approximation to the age equation mentioned in point <a 
+href="#x16-480053">3<!--tex4ht:ref: loglin --></a>.
+     </li></ol>
+<!--l. 3050--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">12.5   </span> <a 
+ id="x16-4900012.5"></a>Fission tracks</h3>
+<!--l. 3052--><p class="noindent" >In this exercise, you will use your <span 
+class="cmtt-10">Matlab </span>programming skills to calculate
+some fission track ages. You are given the following datasets:
+<!--l. 3056--><p class="indent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x16-49002x1"><span 
+class="cmtt-10">DUR.csv</span>:  a  table  with  two  columns  listing  the  number  of
+     spontaneous  tracks  <span 
+class="cmmi-10">N</span><sub><span 
+class="cmmi-7">s</span></sub>  and  induced  tracks  <span 
+class="cmmi-10">N</span><sub><span 
+class="cmmi-7">i</span></sub>  counted  in  25
+     grains of an apatite age standard (t = 31.4 Ma) from Durango,
+     Mexico. Note that these pairs of tracks were counted over the
+     same area, so that <span 
+class="cmmi-10">&rho;</span><sub><span 
+class="cmmi-7">s</span></sub><span 
+class="cmmi-10">&#x2215;&rho;</span><sub><span 
+class="cmmi-7">i</span></sub> = <span 
+class="cmmi-10">N</span><sub><span 
+class="cmmi-7">s</span></sub><span 
+class="cmmi-10">&#x2215;N</span><sub><span 
+class="cmmi-7">i</span></sub> in Equation&#x00A0;<a 
+href="indexch7.html#x10-29004r9">7.9<!--tex4ht:ref: eq:tzeta --></a>.
+     </li>
+     <li 
+  class="enumerate" id="x16-49004x2"><span 
+class="cmtt-10">MD.csv</span>:  a  similar  table  for  an  apatite  sample  from  Mount
+     Dromedary, Australia.</li></ol>
+<!--l. 3066--><p class="indent" >   You will need to:
+<!--l. 3068--><p class="indent" >
+                                                           
+                                                           
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x16-49006x1">Rewrite Equation <a 
+href="indexch7.html#x10-29004r9">7.9<!--tex4ht:ref: eq:tzeta --></a> in terms of the <span 
+class="cmmi-10">&zeta; </span>calibration factor and
+     use this new formula to calculate the <span 
+class="cmmi-10">&zeta; </span>factor for each single
+     grain analysis of the Durango age standard. Use a dosimeter track
+     density of <span 
+class="cmmi-10">&rho;</span><sub><span 
+class="cmmi-7">D</span></sub> = 300<span 
+class="cmmi-10">,</span>000 cm<sup><span 
+class="cmsy-7">&minus;</span><span 
+class="cmr-7">2</span></sup>.
+     </li>
+     <li 
+  class="enumerate" id="x16-49008x2">Use the mean of these <span 
+class="cmmi-10">&zeta; </span>factors to calculate the age of the Mount
+     Dromedary sample (i.e., the single grain ages and their mean).
+     </li>
+     <li 
+  class="enumerate" id="x16-49010x3">Propagate the analytical uncertainties for each of those single
+     grain ages, using the fact that fission track counts (N, say) follow
+     a Poisson distribution for which it is true that:
+     <!--l. 3081--><p class="noindent" >
+     <center class="math-display" >
+     <img 
+src="index121x.png" alt="&sigma;2N = N
+     " class="math-display" ></center>
+     <!--l. 3083--><p class="noindent" >To  simplify  the  calculations,  you  can  also  use  the  following
+     approximation:
+     <!--l. 3086--><p class="noindent" >
+     <center class="math-display" >
+     <img 
+src="index122x.png" alt=" 1  (    gi    Ns )   gi   Ns
+&lambda;-ln 1 + g-&lambda;&zeta;&rho;dN--  &asymp; g-&zeta;&rho;dN--
+          s      i     s    i
+     " class="math-display" ></center>
+     </li>
+     <li 
+  class="enumerate" id="x16-49012x4">How does the single grain age precision of the fission track method
+     compare to the U-Pb and <sup><span 
+class="cmr-7">40</span></sup>Ar/<sup><span 
+class="cmr-7">39</span></sup>Ar age uncertainties in Sections
+     <a 
+href="#x16-4600012.2">12.2<!--tex4ht:ref: sec:U-Pb-R --></a> and <a 
+href="#x16-4700012.3">12.3<!--tex4ht:ref: sec:Ar-Ar-R --></a>? Also compare with the standard deviation and
+     standard error of the mean age of Mount Dromedary apatite.
+     </li></ol>
+                                                           
+                                                           
+   <!--l. 3101--><div class="crosslinks"><p class="noindent">[<a 
+href="indexch12.html" >prev</a>] [<a 
+href="indexch12.html#tailindexch12.html" >prev-tail</a>] [<a 
+href="indexch12.html" >front</a>] [<a 
+href="index.html# " >up</a>] </p></div>
+<!--l. 3101--><p class="indent" >   <a 
+ id="tailindexch12.html"></a>   
+</body></html> 

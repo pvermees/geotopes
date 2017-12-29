@@ -1,0 +1,144 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'U-Th-series.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{254.87698328bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.09239748)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{U-Th-series.pdf}}%
+    \put(-0.00152273,1.02337874){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{929}}}%
+    \put(0.98597675,0.69829297){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{2\\ 90\\ 88\\ 90\\ 88\\ 86\\ 84\\ 82\\ 90\\ 88\\ 86\\ 84\\ 86\\ 84\\ 82\\ 124126128130132134136138140142144146\\ 82}}}%
+    \put(0.03882262,0.63205544){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{0}\textbf{6}}}}%
+    \put(0.05667554,0.6235533){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{b}}}}%
+    \put(0.12023012,0.10397205){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{0}\textbf{8}}}}%
+    \put(0.13808305,0.09546598){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{b}}}}%
+    \put(0.16368677,0.06465936){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{0}\textbf{8}}}}%
+    \put(0.1815397,0.05615329){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{I}\textbf{\\ }\textbf{3}\textbf{.}\textbf{1}\textbf{ }\textbf{m}}}}%
+    \put(0.08218393,0.30524483){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{0}\textbf{7}}}}%
+    \put(0.10003646,0.29673877){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{b}}}}%
+    \put(0.12018618,0.71480203){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{0}}}}%
+    \put(0.13803911,0.70629832){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{o}\textbf{\\ }\textbf{1}\textbf{3}\textbf{8}\textbf{ }\textbf{d}}}}%
+    \put(0.12617495,0.2668773){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{0}\textbf{7}}}}%
+    \put(0.14402788,0.25837124){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{i}\textbf{\\ }\textbf{4}\textbf{.}\textbf{8}\textbf{ }\textbf{m}}}}%
+    \put(0.20412275,0.34801802){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{1}}}}%
+    \put(0.22197528,0.33951195){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{B}\textbf{i}\textbf{\\ }\textbf{2}\textbf{.}\textbf{2}\textbf{ }\textbf{m}}}}%
+    \put(0.24667112,0.30657057){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{1}}}}%
+    \put(0.26452405,0.2980649){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{b}\textbf{\\ }\textbf{3}\textbf{6}\textbf{ }\textbf{m}}}}%
+    \put(0.32412456,0.39115216){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{5}}}}%
+    \put(0.34197749,0.38264649){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{o}\textbf{\\ }\textbf{2}\textbf{x}\textbf{1}\textbf{0}}}}%
+    \put(0.34809456,0.36658776){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{–}\textbf{3}\textbf{ }}}}%
+    \put(0.36306413,0.36138525){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{s}}}}%
+    \put(0.40508675,0.4712924){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{9}}}}%
+    \put(0.42294243,0.46278634){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{n}\textbf{\\ }\textbf{3}\textbf{.}\textbf{9}\textbf{ }\textbf{s}}}}%
+    \put(0.48494057,0.55107559){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{3}}}}%
+    \put(0.50279232,0.54256953){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{a}\textbf{\\ }\textbf{1}\textbf{1}\textbf{ }\textbf{d}}}}%
+    \put(0.56546138,0.63316186){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{7}}}}%
+    \put(0.58331313,0.62465972){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{h}\textbf{\\ }\textbf{1}\textbf{7}\textbf{ }\textbf{d}}}}%
+    \put(0.60737572,0.59233471){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{7}}}}%
+    \put(0.62522707,0.58382865){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{A}\textbf{c}\textbf{\\ }\textbf{2}\textbf{2}\textbf{ }\textbf{y}\textbf{r}}}}%
+    \put(0.52528121,0.3483672){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{4}}}}%
+    \put(0.54312904,0.33986114){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{a}\textbf{\\ }\textbf{3}\textbf{.}\textbf{6}\textbf{ }\textbf{d}}}}%
+    \put(0.44500405,0.26647711){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{0}}}}%
+    \put(0.46285541,0.25797105){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{n}\textbf{\\ }\textbf{5}\textbf{5}\textbf{ }\textbf{s}}}}%
+    \put(0.36209661,0.18335897){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{6}}}}%
+    \put(0.37994914,0.17485291){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{o}\textbf{\\ }\textbf{0}\textbf{.}\textbf{1}\textbf{6}\textbf{ }\textbf{s}}}}%
+    \put(0.20169138,0.18720397){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{2}}}}%
+    \put(0.21874157,0.1786979){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{o}\textbf{\\ }\textbf{3}\textbf{x}\textbf{1}\textbf{0}}}}%
+    \put(0.22472642,0.16263957){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{–}\textbf{7}\textbf{ }}}}%
+    \put(0.2388548,0.15743666){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{s}}}}%
+    \put(0.24519786,0.14363432){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{2}}}}%
+    \put(0.26305079,0.13512826){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{B}\textbf{i}\textbf{\\ }\textbf{6}\textbf{1}\textbf{ }\textbf{m}}}}%
+    \put(0.28399736,0.10110792){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{2}}}}%
+    \put(0.3018499,0.09260186){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{b}\textbf{\\ }\textbf{1}\textbf{1}\textbf{ }\textbf{h}}}}%
+    \put(0.72880214,0.62218048){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{1}}}}%
+    \put(0.74664957,0.61367403){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{h}\textbf{\\ }\textbf{2}\textbf{6}\textbf{ }\textbf{h}}}}%
+    \put(0.15931133,0.6733538){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{0}}}}%
+    \put(0.17716426,0.66484773){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{B}\textbf{i}\textbf{\\ }\textbf{5}\textbf{0}\textbf{ }\textbf{d}}}}%
+    \put(0.32563784,0.67420911){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{4}}}}%
+    \put(0.34349077,0.66570305){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{B}\textbf{i}\textbf{\\ }\textbf{2}\textbf{0}\textbf{ }\textbf{m}}}}%
+    \put(0.36418114,0.63158071){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{4}}}}%
+    \put(0.38203368,0.62307857){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{b}\textbf{\\ }\textbf{2}\textbf{7}\textbf{ }\textbf{m}}}}%
+    \put(0.44540424,0.71480203){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{8}}}}%
+    \put(0.4632556,0.70629832){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{o}\textbf{\\ }\textbf{3}\textbf{.}\textbf{1}\textbf{ }\textbf{m}}}}%
+    \put(0.52599567,0.79628055){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{2}}}}%
+    \put(0.54384703,0.78777684){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{n}\textbf{\\ }\textbf{3}\textbf{8}\textbf{ }\textbf{d}}}}%
+    \put(0.28128468,0.71838847){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{4}}}}%
+    \put(0.29913722,0.70988436){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{o}\textbf{\\ }\textbf{2}\textbf{x}\textbf{1}\textbf{0}}}}%
+    \put(0.30775235,0.6938221){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{-}\textbf{4}}}}%
+    \put(0.31772775,0.68861999){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{s}}}}%
+    \put(0.20398857,0.63056453){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{1}\textbf{0}}}}%
+    \put(0.22184149,0.62206239){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{b}\textbf{\\ }\textbf{2}\textbf{2}\textbf{ }\textbf{y}\textbf{r}}}}%
+    \put(0.60737572,0.87984165){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{6}}}}%
+    \put(0.62522707,0.87133755){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{a}\textbf{\\ }\textbf{1}\textbf{6}\textbf{2}\textbf{2}\textbf{ }\textbf{y}\textbf{r}}}}%
+    \put(0.81237147,0.71800711){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{5}}}}%
+    \put(0.82942244,0.7095034){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{U}\textbf{\\ }\textbf{7}\textbf{1}\textbf{3}\textbf{ }\textbf{M}\textbf{a}}}}%
+    \put(0.7664709,0.42993166){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{2}}}}%
+    \put(0.78432265,0.4214256){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{h}\textbf{\\ }\textbf{1}\textbf{4}\textbf{ }\textbf{B}\textbf{a}}}}%
+    \put(0.68888092,0.34547561){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{8}}}}%
+    \put(0.70673267,0.33696955){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{a}\textbf{\\ }\textbf{6}\textbf{.}\textbf{7}\textbf{ }\textbf{y}\textbf{r}}}}%
+    \put(0.68717421,0.96246582){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{0}}}}%
+    \put(0.70681114,0.95311111){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{h}\textbf{\\ }\textbf{7}\textbf{5}\textbf{ }\textbf{k}\textbf{a}}}}%
+    \put(0.81229693,0.99751018){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{4}}}}%
+    \put(0.83014828,0.98900608){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{a}\textbf{\\ }\textbf{1}\textbf{.}\textbf{2}\textbf{ }\textbf{m}}}}%
+    \put(0.85293575,0.95528353){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{4}}}}%
+    \put(0.8707875,0.94677943){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{h}\textbf{\\ }\textbf{2}\textbf{4}\textbf{ }\textbf{d}}}}%
+    \put(0.93160468,1.04287324){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{8}}}}%
+    \put(0.94945643,1.03436914){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{U}\textbf{\\ }\textbf{4}\textbf{.}\textbf{5}\textbf{ }\textbf{B}\textbf{a}}}}%
+    \put(0.75870637,0.06854751){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{\textsl{N}}\textbf{\textsl{Z}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{U-Th-series.pdf}}%
+    \put(0.60715953,0.42971587){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{8}}}}%
+    \put(0.62500736,0.42120981){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{h}\textbf{\\ }\textbf{1}\textbf{.}\textbf{9}\textbf{ }\textbf{y}\textbf{r}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{U-Th-series.pdf}}%
+    \put(0.68884953,0.67664558){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{1}}}}%
+    \put(0.70670128,0.66814344){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{a}\textbf{\\ }\textbf{3}\textbf{4}\textbf{ }\textbf{k}\textbf{a}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{U-Th-series.pdf}}%
+    \put(0.77306231,1.04130228){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{4}}}}%
+    \put(0.79091406,1.03279818){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{U}\textbf{\\ }\textbf{2}\textbf{4}\textbf{8}\textbf{ }\textbf{k}\textbf{a}}}}%
+    \put(0.65009789,0.38800201){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{8}}}}%
+    \put(0.66794964,0.37949595){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{A}\textbf{c}\textbf{\\ }\textbf{6}\textbf{.}\textbf{1}\textbf{ }\textbf{h}}}}%
+  \end{picture}%
+\endgroup%
