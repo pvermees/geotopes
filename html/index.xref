@@ -1,6 +1,4 @@
 \:CrossWord{)F1F-}{index.html}{1}%
-\:CrossWord{TITLE+}{Isotope Geology\\ Part I: Radiometric Geochronology}{1}%
-\:CrossWord{)M1x0}{;}{1}%
 \:CrossWord{)QQQ2-2-1}{1}{3}%
 \:CrossWord{)QQQ2-3-2}{1}{3}%
 \:CrossWord{)QQQ2-4-3}{1}{3}%
@@ -117,7 +115,7 @@
 \:CrossWord{)Qx5-8002r9}{5}{25}%
 \:CrossWord{)Qx5-8003r10}{5}{25}%
 \:CrossWord{)Qx5-8004r11}{5}{25}%
-\:CrossWord{)M2x9}{;}{25}%
+\:CrossWord{)M1x9}{;}{25}%
 \:CrossWord{)Qx5-8005r12}{5}{25}%
 \:CrossWord{)Qx5-8006r13}{5}{25}%
 \:CrossWord{)Qx5-8007r14}{5}{26}%
@@ -272,14 +270,14 @@
 \:CrossWord{indexch8.html(L }{indexch8.html}{107}%
 \:CrossWord{)N 10(L }{indexch8.html}{107}%
 \:CrossWord{)Qx11-300008}{11}{107}%
-\:CrossWord{fn1x9}{}{107}%
+\:CrossWord{fn1x8}{}{107}%
 \:CrossWord{)Qx11-30001f1}{11}{107}%
 \:CrossWord{)Bindex12.html(L }{indexch8.html}{107}%
 \:CrossWord{)F12F-}{index12.html}{107}%
 \:CrossWord{index12.html(L }{index12.html}{107}%
-\:CrossWord{)Qfn1x9}{12}{107}%
+\:CrossWord{)Qfn1x8}{12}{107}%
 \:CrossWord{)Qx11-300021}{11}{109}%
-\:CrossWord{)M3x40}{;}{110}%
+\:CrossWord{)M2x40}{;}{110}%
 \:CrossWord{11cAp0}{x11-300021}{110}%
 \:CrossWord{)Qx11-310008.1}{11}{111}%
 \:CrossWord{)Qx11-31001r1}{11}{111}%
@@ -312,7 +310,7 @@
 \:CrossWord{)Qx13-38001r6}{13}{125}%
 \:CrossWord{)Qx13-38002r7}{13}{125}%
 \:CrossWord{)Qx13-38003r8}{13}{125}%
-\:CrossWord{)M4x50}{;}{125}%
+\:CrossWord{)M3x50}{;}{125}%
 \:CrossWord{)Qx13-38004r9}{13}{125}%
 \:CrossWord{)Qx13-38005r10}{13}{126}%
 \:CrossWord{)Qx13-38006r11}{13}{126}%
@@ -337,20 +335,20 @@
 \:CrossWord{)Qx14-40013r7}{14}{132}%
 \:CrossWord{)Qx14-40014r8}{14}{133}%
 \:CrossWord{)Qx14-40015r9}{14}{133}%
-\:CrossWord{)M5x52}{;}{133}%
+\:CrossWord{)M4x52}{;}{133}%
 \:CrossWord{)Qx14-40016r10}{14}{133}%
 \:CrossWord{)Qx14-4100010.2}{14}{134}%
 \:CrossWord{)Qx14-41002x1}{14}{134}%
 \:CrossWord{)Qx14-41003r11}{14}{134}%
 \:CrossWord{)Qx14-41004r12}{14}{134}%
-\:CrossWord{)M6x53}{;}{134}%
+\:CrossWord{)M5x53}{;}{134}%
 \:CrossWord{)Qx14-41006x2}{14}{134}%
 \:CrossWord{)Qx14-41007r13}{14}{134}%
 \:CrossWord{)Qx14-41009x3}{14}{135}%
 \:CrossWord{)Qx14-41010r14}{14}{135}%
 \:CrossWord{)Qx14-41011r15}{14}{135}%
 \:CrossWord{)Qx14-41012r16}{14}{135}%
-\:CrossWord{)M7x53}{;}{135}%
+\:CrossWord{)M6x53}{;}{135}%
 \:CrossWord{)Qx14-41014x4}{14}{136}%
 \:CrossWord{)Qx14-41015r17}{14}{136}%
 \:CrossWord{)Qx14-41017x5}{14}{136}%
@@ -376,11 +374,11 @@
 \:CrossWord{)Qx15-43008x4}{15}{147}%
 \:CrossWord{)Qx15-43010x5}{15}{148}%
 \:CrossWord{)Qx15-43012x6}{15}{148}%
-\:CrossWord{)M8x56}{;}{148}%
+\:CrossWord{)M7x56}{;}{148}%
 \:CrossWord{)Qx15-43014x7}{15}{148}%
 \:CrossWord{)Qx15-43016x8}{15}{148}%
-\:CrossWord{)M9x56}{;}{148}%
-\:CrossWord{)M10x56}{;}{149}%
+\:CrossWord{)M8x56}{;}{148}%
+\:CrossWord{)M9x56}{;}{149}%
 \:CrossWord{)Qx15-43018x9}{15}{149}%
 \:CrossWord{)Qx15-43020x10}{15}{149}%
 \:CrossWord{)Qtailindexch11.html}{15}{150}%
@@ -392,7 +390,7 @@
 \:CrossWord{)N 15(L }{indexch12.html}{151}%
 \:CrossWord{)Qx16-4400012}{16}{151}%
 \:CrossWord{)Qx16-4500012.1}{16}{151}%
-\:CrossWord{)M11x58}{;}{158}%
+\:CrossWord{)M10x58}{;}{158}%
 \:CrossWord{)Qx16-4600012.2}{16}{159}%
 \:CrossWord{)Qx16-46002x1}{16}{159}%
 \:CrossWord{)Qx16-46004x2}{16}{159}%
@@ -432,4 +430,3 @@
 \:CrossWord{)Qx16-49010x3}{16}{165}%
 \:CrossWord{)Qx16-49012x4}{16}{166}%
 \:CrossWord{)Qtailindexch12.html}{16}{167}%
-\:CrossWord{)Qtailindex}{1}{167}%

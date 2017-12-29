@@ -22,7 +22,6 @@ File: indexch9.html
 File: indexch10.html
 File: indexch11.html
 File: indexch12.html
-Css: @media print {span.next {visibility:hidden;}}
 Css: p.noindent { text-indent: 0em }
 Css: td p.noindent { text-indent: 0em; margin-top:0em; }
 Css: p.nopar { text-indent: 0em; }
@@ -307,9 +306,9 @@ Font("cmmi","10","10","100")
 Font("cmsy","5","5","100")
 Font("cmsy","7","7","100")
 Font("cmsy","10","10","100")
-Font("cmr","17","17","100")
+Font("cmr","17","17","143")
+Font("cmr","17","17","120")
 Font("cmr","12","12","100")
-Font("cmr","8","8","100")
 Font("cmti","12","12","100")
 Font("cmtt","12","12","100")
 Font("cmex","7","7","100")
@@ -317,3 +316,4 @@ Font("wasy","10","10","100")
 Font("cmtt","10","10","100")
 Font("cmti","10","10","100")
 Font("cmr","9","9","100")
+Font("cmr","8","8","100")

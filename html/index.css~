@@ -7,9 +7,9 @@
 .cmmi-10{font-style: italic;}
 .cmsy-5{font-size:50%;}
 .cmsy-7{font-size:70%;}
-.cmr-17{font-size:170%;}
+.cmr-17x-x-143{font-size:243%;}
+.cmr-17x-x-120{font-size:204%;}
 .cmr-12{font-size:120%;}
-.cmr-8{font-size:80%;}
 .cmti-12{font-size:120%; font-style: italic;}
 .cmtt-12{font-size:120%;font-family: monospace;}
 .cmtt-12{font-family: monospace;}
@@ -18,7 +18,7 @@
 .cmtt-10{font-family: monospace;}
 .cmti-10{ font-style: italic;}
 .cmr-9{font-size:90%;}
-@media print {span.next {visibility:hidden;}}
+.cmr-8{font-size:80%;}
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
 p.nopar { text-indent: 0em; }

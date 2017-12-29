@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.11.25)  29 DEC 2017 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.11.25)  29 DEC 2017 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,8 +7,8 @@ de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
 {\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
 documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
  tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
-\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,2,next.a.b.c.\input  i
-ndex.tex
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,2,nextcd.a.b.c.\input 
+ index.tex
 (./index.tex (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
@@ -269,7 +269,7 @@ option `frames-fn'
 --------------------------------------
 --- Note --- for file extension name xht, use the command line option `xht'
 --------------------------------------
-TeX4ht package options: html,2,next
+TeX4ht package options: html,2,nextcd
 --------------------------------------
 --- Note --- to ignore CSS code, use the command line option `-css
 --------------------------------------
@@ -292,6 +292,10 @@ version 2009-05-18-23:01
 \:tokpage=\toks23
 --------------------------------------
 --- Note --- for back links to toc, use the command line option `sections+'
+--------------------------------------
+--------------------------------------
+--- Note --- for linear crosslinks of pages, use the command line option `next'
+
 --------------------------------------
 \openout15 = `index.4ct'.
 
@@ -522,18 +526,18 @@ version 2009-05-18-23:01
 )) (./index.aux)
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -574,16 +578,17 @@ LaTeX Font Info:    ... okay on input line 19.
 
 ] [2
 
-] [3]
-LaTeX Font Info:    Try loading font information for U+wasy on input line 20.
- (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+] [3] [1] [2] (./index.4ct
+LaTeX Font Info:    Try loading font information for U+wasy on input line 19.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-) [1]
-[2] (./index.4ct [3
+) [3
 
 ])
 --- file indexli1.html ---
- (./index.4ct [4]) [5] [6
+ (./index.4ct
+[4]) [5] [6
 
 ]
 Chapter 1.
@@ -604,53 +609,53 @@ Chapter 2.
 [15
 
 ] [16]
-l. 315 Writing index.idv[1] (index0x.png)
+l. 329 Writing index.idv[1] (index0x.png)
  [17] [18] [19
 
 ]
-l.336 --- TeX4ht warning --- Cannot determine size of graphic in chart-of-nucli
+l.350 --- TeX4ht warning --- Cannot determine size of graphic in chart-of-nucli
 des.png (no BoundingBox) ---
-l. 336 --- needs --- chart-of-nuclides.png ---
+l. 350 --- needs --- chart-of-nuclides.png ---
 [20
 
 ]
-l. 357 Writing index.idv[2] (index1x.png)
-l. 364 Writing index.idv[3] (index2x.png)
+l. 371 Writing index.idv[2] (index1x.png)
+l. 378 Writing index.idv[3] (index2x.png)
  [21
 
 ]
-l. 376 Writing index.idv[4] (index3x.png)
-l. 383 Writing index.idv[5] (index4x.png)
+l. 390 Writing index.idv[4] (index3x.png)
+l. 397 Writing index.idv[5] (index4x.png)
  [22]
-l. 391 Writing index.idv[6] (index5x.png)
-l. 401 Writing index.idv[7] (index6x.png)
+l. 405 Writing index.idv[6] (index5x.png)
+l. 415 Writing index.idv[7] (index6x.png)
  [23]
-l. 420 Writing index.idv[8] (index7x.png)
+l. 434 Writing index.idv[8] (index7x.png)
  [24]
-l. 436 Writing index.idv[9] (index8x.png)
-l. 443 Writing index.idv[10] (index9x.png)
+l. 450 Writing index.idv[9] (index8x.png)
+l. 457 Writing index.idv[10] (index9x.png)
  [25]
-l. 451 Writing index.idv[11] (index10x.png)
-l. 462 Writing index.idv[12] (index11x.png)
+l. 465 Writing index.idv[11] (index10x.png)
+l. 476 Writing index.idv[12] (index11x.png)
  [26]
-l. 469 Writing index.idv[13] (index12x.png)
-l. 478 Writing index.idv[14] (index13x.png)
+l. 483 Writing index.idv[13] (index12x.png)
+l. 492 Writing index.idv[14] (index13x.png)
  [27]
-l. 485 Writing index.idv[15] (index14x.png)
-l. 492 Writing index.idv[16] (index15x.png)
-l. 507 Writing index.idv[17] (index16x.png)
+l. 499 Writing index.idv[15] (index14x.png)
+l. 506 Writing index.idv[16] (index15x.png)
+l. 521 Writing index.idv[17] (index16x.png)
  [28]
-l. 516 Writing index.idv[18] (index17x.png)
-l. 523 Writing index.idv[19] (index18x.png)
+l. 530 Writing index.idv[18] (index17x.png)
+l. 537 Writing index.idv[19] (index18x.png)
  [29]
-l. 531 Writing index.idv[20] (index19x.png)
-l. 541 Writing index.idv[21] (index20x.png)
+l. 545 Writing index.idv[20] (index19x.png)
+l. 555 Writing index.idv[21] (index20x.png)
  [30] [31] [32
 
 ]
-l.560 --- TeX4ht warning --- Cannot determine size of graphic in U-Th-series.pn
+l.574 --- TeX4ht warning --- Cannot determine size of graphic in U-Th-series.pn
 g (no BoundingBox) ---
-l. 560 --- needs --- U-Th-series.png ---
+l. 574 --- needs --- U-Th-series.png ---
 [33
 
 ] [34
@@ -663,49 +668,49 @@ l. 560 --- needs --- U-Th-series.png ---
 Chapter 3.
 --- file indexch3.html ---
 [37]
-l. 617 Writing index.idv[22] (index21x.png)
-l. 628 Writing index.idv[23] (index22x.png)
+l. 631 Writing index.idv[22] (index21x.png)
+l. 642 Writing index.idv[23] (index22x.png)
  [38]
-l. 635 Writing index.idv[24] (index23x.png)
-l. 642 Writing index.idv[25] (index24x.png)
+l. 649 Writing index.idv[24] (index23x.png)
+l. 656 Writing index.idv[25] (index24x.png)
  [39]
-l. 649 Writing index.idv[26] (index25x.png)
+l. 663 Writing index.idv[26] (index25x.png)
  [40] [41
 
 ]
-l.674 --- TeX4ht warning --- Cannot determine size of graphic in mass-spec.png 
+l.688 --- TeX4ht warning --- Cannot determine size of graphic in mass-spec.png 
 (no BoundingBox) ---
-l. 674 --- needs --- mass-spec.png ---
+l. 688 --- needs --- mass-spec.png ---
 [42
 
 ] [43
 
 ]
-l. 732 Writing index.idv[27] (index26x.png)
+l. 746 Writing index.idv[27] (index26x.png)
  [44] [45
 
 ]
-l.754 --- TeX4ht warning --- Cannot determine size of graphic in AMS.png (no Bo
+l.768 --- TeX4ht warning --- Cannot determine size of graphic in AMS.png (no Bo
 undingBox) ---
-l. 754 --- needs --- AMS.png ---
+l. 768 --- needs --- AMS.png ---
 [46
 
 ]
-l. 774 Writing index.idv[28] (index27x.png)
-l. 781 Writing index.idv[29] (index28x.png)
+l. 788 Writing index.idv[28] (index27x.png)
+l. 795 Writing index.idv[29] (index28x.png)
  [47
 
 ]
-l. 793 Writing index.idv[30] (index29x.png)
-l. 803 Writing index.idv[31] (index30x.png)
+l. 807 Writing index.idv[30] (index29x.png)
+l. 817 Writing index.idv[31] (index30x.png)
  [48]
-l. 810 Writing index.idv[32] (index31x.png)
-l. 818 Writing index.idv[33] (index32x.png)
+l. 824 Writing index.idv[32] (index31x.png)
+l. 832 Writing index.idv[33] (index32x.png)
  [49]
-l. 855 Writing index.idv[34] (index33x.png)
+l. 869 Writing index.idv[34] (index33x.png)
  [50]
-l. 862 Writing index.idv[35] (index34x.png)
-l. 872 Writing index.idv[36] (index35x.png)
+l. 876 Writing index.idv[35] (index34x.png)
+l. 886 Writing index.idv[36] (index35x.png)
  [51] [52] [53
 
 ] [54
@@ -713,68 +718,68 @@ l. 872 Writing index.idv[36] (index35x.png)
 ]
 Chapter 4.
 --- file indexch4.html ---
-l. 901 Writing index.idv[37] (index36x.png)
+l. 915 Writing index.idv[37] (index36x.png)
 [55]
-l. 911 Writing index.idv[38] (index37x.png)
+l. 925 Writing index.idv[38] (index37x.png)
  [56]
-l. 975 Writing index.idv[39] (index38x.png)
+l. 989 Writing index.idv[39] (index38x.png)
  [57]
-l. 985 Writing index.idv[40] (index39x.png)
-l. 997 Writing index.idv[41] (index40x.png)
+l. 999 Writing index.idv[40] (index39x.png)
+l. 1011 Writing index.idv[41] (index40x.png)
  [58]
-l. 1006 Writing index.idv[42] (index41x.png)
-l. 1013 Writing index.idv[43] (index42x.png)
-l. 1028 Writing index.idv[44] (index43x.png)
+l. 1020 Writing index.idv[42] (index41x.png)
+l. 1027 Writing index.idv[43] (index42x.png)
+l. 1042 Writing index.idv[44] (index43x.png)
  [59] [60] [61
 
 ]
-l.1061 --- TeX4ht warning --- Cannot determine size of graphic in isochron.png 
+l.1075 --- TeX4ht warning --- Cannot determine size of graphic in isochron.png 
 (no BoundingBox) ---
-l. 1061 --- needs --- isochron.png ---
+l. 1075 --- needs --- isochron.png ---
 [62
 
 ]
-l. 1106 Writing index.idv[45] (index44x.png)
+l. 1120 Writing index.idv[45] (index44x.png)
  [63
 
 ]
-l. 1113 Writing index.idv[46] (index45x.png)
-l. 1125 Writing index.idv[47] (index46x.png)
+l. 1127 Writing index.idv[46] (index45x.png)
+l. 1139 Writing index.idv[47] (index46x.png)
  [64] [65] [66
 
 ]
 Chapter 5.
 --- file indexch5.html ---
-l. 1158 Writing index.idv[48] (index47x.png)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1178
+l. 1172 Writing index.idv[48] (index47x.png)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1192
 .
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1178.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1192.
 
  [67
 
 ]
-l. 1190 Writing index.idv[49] (index48x.png)
-l. 1205 Writing index.idv[50] (index49x.png)
+l. 1204 Writing index.idv[49] (index48x.png)
+l. 1219 Writing index.idv[50] (index49x.png)
  [68]
-l. 1226 Writing index.idv[51] (index50x.png)
-l. 1238 Writing index.idv[52] (index51x.png)
-l. 1242 Writing index.idv[53] (index52x.png)
+l. 1240 Writing index.idv[51] (index50x.png)
+l. 1252 Writing index.idv[52] (index51x.png)
+l. 1256 Writing index.idv[53] (index52x.png)
  [69]
 [70]
-l. 1282 Writing index.idv[54] (index53x.png)
-l. 1308 Writing index.idv[55] (index54x.png)
+l. 1296 Writing index.idv[54] (index53x.png)
+l. 1322 Writing index.idv[55] (index54x.png)
  [71]
-l. 1326 Writing index.idv[56] (index55x.png)
+l. 1340 Writing index.idv[56] (index55x.png)
  [72] [73] [74
 
 ]
-l.1361 --- TeX4ht warning --- Cannot determine size of graphic in wetherill.png
+l.1375 --- TeX4ht warning --- Cannot determine size of graphic in wetherill.png
  (no BoundingBox) ---
-l. 1361 --- needs --- wetherill.png ---
+l. 1375 --- needs --- wetherill.png ---
 [75
 
 ] [76
@@ -786,24 +791,24 @@ l. 1361 --- needs --- wetherill.png ---
 ]
 Chapter 6.
 --- file indexch6.html ---
-l. 1425 Writing index.idv[57] (index56x.png)
-l. 1442 Writing index.idv[58] (index57x.png)
+l. 1439 Writing index.idv[57] (index56x.png)
+l. 1456 Writing index.idv[58] (index57x.png)
 [79]
-l. 1453 Writing index.idv[59] (index58x.png)
+l. 1467 Writing index.idv[59] (index58x.png)
  [80]
-l. 1476 Writing index.idv[60] (index59x.png)
-l. 1489 Writing index.idv[61] (index60x.png)
+l. 1490 Writing index.idv[60] (index59x.png)
+l. 1503 Writing index.idv[61] (index60x.png)
  [81]
-l. 1521 Writing index.idv[62] (index61x.png)
+l. 1535 Writing index.idv[62] (index61x.png)
  [82]
-l. 1529 Writing index.idv[63] (index62x.png)
-l. 1530 Writing index.idv[64] (index63x.png)
+l. 1543 Writing index.idv[63] (index62x.png)
+l. 1544 Writing index.idv[64] (index63x.png)
  [83] [84
 
 ]
-l.1539 --- TeX4ht warning --- Cannot determine size of graphic in Ar-Ar.png (no
+l.1553 --- TeX4ht warning --- Cannot determine size of graphic in Ar-Ar.png (no
  BoundingBox) ---
-l. 1539 --- needs --- Ar-Ar.png ---
+l. 1553 --- needs --- Ar-Ar.png ---
 [85
 
 ] [86
@@ -815,41 +820,41 @@ l. 1539 --- needs --- Ar-Ar.png ---
 ]
 Chapter 7.
 --- file indexch7.html ---
-l. 1605 Writing index.idv[65] (index64x.png)
+l. 1619 Writing index.idv[65] (index64x.png)
 [89]
-l. 1635 Writing index.idv[66] (index65x.png)
-l. 1645 Writing index.idv[67] (index66x.png)
+l. 1649 Writing index.idv[66] (index65x.png)
+l. 1659 Writing index.idv[67] (index66x.png)
  [90]
-l. 1655 Writing index.idv[68] (index67x.png)
+l. 1669 Writing index.idv[68] (index67x.png)
  [91]
-l. 1676 Writing index.idv[69] (index68x.png)
+l. 1690 Writing index.idv[69] (index68x.png)
  [92] [93
 
 ]
-l.1708 --- TeX4ht warning --- Cannot determine size of graphic in Arrhenius.png
+l.1722 --- TeX4ht warning --- Cannot determine size of graphic in Arrhenius.png
  (no BoundingBox) ---
-l. 1708 --- needs --- Arrhenius.png ---
+l. 1722 --- needs --- Arrhenius.png ---
 [94
 
 ]
-l. 1739 Writing index.idv[70] (index69x.png)
+l. 1753 Writing index.idv[70] (index69x.png)
  [95
 
 ]
-l. 1752 Writing index.idv[71] (index70x.png)
-l. 1761 Writing index.idv[72] (index71x.png)
+l. 1766 Writing index.idv[71] (index70x.png)
+l. 1775 Writing index.idv[72] (index71x.png)
  [96]
-l. 1782 Writing index.idv[73] (index72x.png)
+l. 1796 Writing index.idv[73] (index72x.png)
  [97]
-l. 1806 Writing index.idv[74] (index73x.png)
-l. 1816 Writing index.idv[75] (index74x.png)
-l. 1824 Writing index.idv[76] (index75x.png)
+l. 1820 Writing index.idv[74] (index73x.png)
+l. 1830 Writing index.idv[75] (index74x.png)
+l. 1838 Writing index.idv[76] (index75x.png)
  [98] [99] [100
 
 ]
-l.1857 --- TeX4ht warning --- Cannot determine size of graphic in EDM.png (no B
+l.1871 --- TeX4ht warning --- Cannot determine size of graphic in EDM.png (no B
 oundingBox) ---
-l. 1857 --- needs --- EDM.png ---
+l. 1871 --- needs --- EDM.png ---
 [101
 
 ] [102
@@ -857,9 +862,9 @@ l. 1857 --- needs --- EDM.png ---
 ] [103
 
 ]
-l.1871 --- TeX4ht warning --- Cannot determine size of graphic in stockli.png (
+l.1885 --- TeX4ht warning --- Cannot determine size of graphic in stockli.png (
 no BoundingBox) ---
-l. 1871 --- needs --- stockli.png ---
+l. 1885 --- needs --- stockli.png ---
 [104
 
 ] [105
@@ -878,23 +883,23 @@ Chapter 8.
 ] [110
 
 ]
-l. 1971 Writing index.idv[77] (index76x.png)
+l. 1985 Writing index.idv[77] (index76x.png)
  [111
 
 ]
-l. 1989 Writing index.idv[78] (index77x.png)
-l. 2007 Writing index.idv[79] (index78x.png)
+l. 2003 Writing index.idv[78] (index77x.png)
+l. 2021 Writing index.idv[79] (index78x.png)
  [112]
-l. 2016 Writing index.idv[80] (index79x.png)
+l. 2030 Writing index.idv[80] (index79x.png)
  [113] [114] [115
 
 ]
-l.2066 --- TeX4ht warning --- Cannot determine size of graphic in AlBe.png (no 
+l.2080 --- TeX4ht warning --- Cannot determine size of graphic in AlBe.png (no 
 BoundingBox) ---
-l. 2066 --- needs --- AlBe.png ---
-l.2067 --- TeX4ht warning --- Cannot determine size of graphic in NeBe.png (no 
+l. 2080 --- needs --- AlBe.png ---
+l.2081 --- TeX4ht warning --- Cannot determine size of graphic in NeBe.png (no 
 BoundingBox) ---
-l. 2067 --- needs --- NeBe.png ---
+l. 2081 --- needs --- NeBe.png ---
 [116
 
 ] [117
@@ -910,74 +915,73 @@ Missing character: There is no ™ in font cmr10!
 ]
 Chapter 9.
 --- file indexch9.html ---
-l.2162 --- TeX4ht warning --- \Link{tailindexch9.html}? ---
-l. 2171 Writing index.idv[81] (index80x.png)
+l. 2185 Writing index.idv[81] (index80x.png)
 [121]
-l. 2211 Writing index.idv[82] (index81x.png)
-l. 2221 Writing index.idv[83] (index82x.png)
+l. 2225 Writing index.idv[82] (index81x.png)
+l. 2235 Writing index.idv[83] (index82x.png)
  [122]
-l. 2228 Writing index.idv[84] (index83x.png)
-l. 2246 Writing index.idv[85] (index84x.png)
+l. 2242 Writing index.idv[84] (index83x.png)
+l. 2260 Writing index.idv[85] (index84x.png)
  [123]
-l. 2259 Writing index.idv[86] (index85x.png)
+l. 2273 Writing index.idv[86] (index85x.png)
  [124]
-l. 2288 Writing index.idv[87] (index86x.png)
-l. 2288 Writing index.idv[88] (index87x.png)
-l. 2296 Writing index.idv[89] (index88x.png)
+l. 2302 Writing index.idv[87] (index86x.png)
+l. 2302 Writing index.idv[88] (index87x.png)
+l. 2310 Writing index.idv[89] (index88x.png)
  [125]
-l. 2307 Writing index.idv[90] (index89x.png)
-l. 2317 Writing index.idv[91] (index90x.png)
+l. 2321 Writing index.idv[90] (index89x.png)
+l. 2331 Writing index.idv[91] (index90x.png)
  [126] [127] [128
 
 ]
 Chapter 10.
 --- file indexch10.html ---
-l. 2352 Writing index.idv[92] (index91x.png)
+l. 2366 Writing index.idv[92] (index91x.png)
 [129
 
 ]
-l. 2360 Writing index.idv[93] (index92x.png)
-l. 2374 Writing index.idv[94] (index93x.png)
+l. 2374 Writing index.idv[93] (index92x.png)
+l. 2388 Writing index.idv[94] (index93x.png)
  [130]
-l. 2389 Writing index.idv[95] (index94x.png)
-l. 2403 Writing index.idv[96] (index95x.png)
+l. 2403 Writing index.idv[95] (index94x.png)
+l. 2417 Writing index.idv[96] (index95x.png)
  [131]
-l. 2418 Writing index.idv[97] (index96x.png)
-l. 2426 Writing index.idv[98] (index97x.png)
+l. 2432 Writing index.idv[97] (index96x.png)
+l. 2440 Writing index.idv[98] (index97x.png)
  [132]
-l. 2441 Writing index.idv[99] (index98x.png)
-l. 2441 Writing index.idv[100] (index99x.png)
-l. 2441 Writing index.idv[101] (index100x.png)
-l. 2441 Writing index.idv[102] (index101x.png)
-l. 2441 Writing index.idv[103] (index102x.png)
-l. 2441 Writing index.idv[104] (index103x.png)
-l. 2447 Writing index.idv[105] (index104x.png)
+l. 2455 Writing index.idv[99] (index98x.png)
+l. 2455 Writing index.idv[100] (index99x.png)
+l. 2455 Writing index.idv[101] (index100x.png)
+l. 2455 Writing index.idv[102] (index101x.png)
+l. 2455 Writing index.idv[103] (index102x.png)
+l. 2455 Writing index.idv[104] (index103x.png)
+l. 2461 Writing index.idv[105] (index104x.png)
  [133]
-l. 2483 Writing index.idv[106] (index105x.png)
-l. 2483 Writing index.idv[107] (index106x.png)
+l. 2497 Writing index.idv[106] (index105x.png)
+l. 2497 Writing index.idv[107] (index106x.png)
  [134]
-l. 2486 Writing index.idv[108] (index107x.png)
-l. 2500 Writing index.idv[109] (index108x.png)
-l. 2500 Writing index.idv[110] (index109x.png)
-l. 2500 Writing index.idv[111] (index110x.png)
-l. 2500 Writing index.idv[112] (index111x.png)
-l. 2500 Writing index.idv[113] (index112x.png)
-l. 2500 Writing index.idv[114] (index113x.png)
+l. 2500 Writing index.idv[108] (index107x.png)
+l. 2514 Writing index.idv[109] (index108x.png)
+l. 2514 Writing index.idv[110] (index109x.png)
+l. 2514 Writing index.idv[111] (index110x.png)
+l. 2514 Writing index.idv[112] (index111x.png)
+l. 2514 Writing index.idv[113] (index112x.png)
+l. 2514 Writing index.idv[114] (index113x.png)
  [135]
-l. 2503 Writing index.idv[115] (index114x.png)
-l. 2511 Writing index.idv[116] (index115x.png)
+l. 2517 Writing index.idv[115] (index114x.png)
+l. 2525 Writing index.idv[116] (index115x.png)
  [136]
-l. 2518 Writing index.idv[117] (index116x.png)
-l. 2530 Writing index.idv[118] (index117x.png)
-l. 2535 Writing index.idv[119] (index118x.png)
+l. 2532 Writing index.idv[117] (index116x.png)
+l. 2544 Writing index.idv[118] (index117x.png)
+l. 2549 Writing index.idv[119] (index118x.png)
  [137]
-l. 2544 Writing index.idv[120] (index119x.png)
+l. 2558 Writing index.idv[120] (index119x.png)
  [138] [139
 
 ]
-l.2563 --- TeX4ht warning --- Cannot determine size of graphic in bullseye.png 
+l.2577 --- TeX4ht warning --- Cannot determine size of graphic in bullseye.png 
 (no BoundingBox) ---
-l. 2563 --- needs --- bullseye.png ---
+l. 2577 --- needs --- bullseye.png ---
 [140
 
 ] [141
@@ -985,9 +989,9 @@ l. 2563 --- needs --- bullseye.png ---
 ] [142
 
 ]
-l.2579 --- TeX4ht warning --- Cannot determine size of graphic in covariance.pn
+l.2593 --- TeX4ht warning --- Cannot determine size of graphic in covariance.pn
 g (no BoundingBox) ---
-l. 2579 --- needs --- covariance.png ---
+l. 2593 --- needs --- covariance.png ---
 [143
 
 ] [144
@@ -1013,21 +1017,21 @@ Chapter 12.
 ] [159
 
 ] [160] [161]
-l. 3006 Writing index.idv[121] (index120x.png)
+l. 3020 Writing index.idv[121] (index120x.png)
  [162]
 [163] [164]
-l. 3081 Writing index.idv[122] (index121x.png)
-l. 3086 Writing index.idv[123] (index122x.png)
+l. 3095 Writing index.idv[122] (index121x.png)
+l. 3100 Writing index.idv[123] (index122x.png)
  [165] [166] [167
 
 ] (./index.aux) ) 
 Here is how much of TeX's memory you used:
- 7550 strings out of 493030
- 92251 string characters out of 6136259
- 285359 words of memory out of 5000000
- 10938 multiletter control sequences out of 15000+600000
- 12323 words of font info for 46 fonts, out of 8000000 for 9000
+ 7503 strings out of 493030
+ 91713 string characters out of 6136259
+ 285097 words of memory out of 5000000
+ 10900 multiletter control sequences out of 15000+600000
+ 8869 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,12n,35p,2142b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,12n,35p,2144b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on index.dvi (170 pages, 426392 bytes).
+Output written on index.dvi (170 pages, 425908 bytes).

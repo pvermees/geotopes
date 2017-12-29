@@ -1,14 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.11.25)  29 DEC 2017 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.25)  29 DEC 2017 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCo
-de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
-{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
-documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
- tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
-\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,2,next.a.b.c.\input  p
-art1.tex
+**\nonstopmode\input part1.tex
 (./part1.tex (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
@@ -27,30 +21,16 @@ File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf/tex/generic/tex4ht/tex4ht.sty
-version 2008-10-27-17:23
-Package: tex4ht 
---------------------------------------
---- Note --- for _ at preamble, use the command line option `early_'
---------------------------------------
---------------------------------------
---- Note --- for ^ at preamble, use the command line option `early^'
---------------------------------------
-\tmp:toks=\toks14
-)
-(/usr/share/texmf/tex/generic/tex4ht/usepackage.4ht
-version 2009-05-21-09:32
-)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks14
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
@@ -70,7 +50,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen108
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
-\Gm@dimlist=\toks16
+\Gm@dimlist=\toks15
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/03 v2.15a AMS math features
@@ -82,7 +62,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
+\@emptytoks=\toks16
 \ex@=\dimen111
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -112,21 +92,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \dotsspace@=\muskip10
 \c@parentequation=\count98
 \dspbrk@lvl=\count99
-\tag@help=\toks18
+\tag@help=\toks17
 \row@=\count100
 \column@=\count101
 \maxfields@=\count102
-\andhelp@=\toks19
+\andhelp@=\toks18
 \eqnshift@=\dimen114
 \alignsep@=\dimen115
 \tagshift@=\dimen116
 \tagwidth@=\dimen117
 \totwidth@=\dimen118
 \lineht@=\dimen119
-\@envbody=\toks20
+\@envbody=\toks19
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
 )
@@ -142,10 +122,18 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: dvips.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
 ))
 \Gin@req@height=\dimen120
 \Gin@req@width=\dimen121
@@ -165,7 +153,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip46
 \bibsep=\skip47
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count103
+\c@NAT@ctr=\count104
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
@@ -173,372 +161,27 @@ Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: dvips.def on input line 143.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
-))
-(/usr/share/texmf/tex/generic/tex4ht/tex4ht.4ht
-version 2009-01-07-07:11
---------------------------------------
---- Note --- for additional information, use the command line option `info'
---------------------------------------
-
-::::::::::::::::::::::::::::::::::::::::::
- TeX4ht info is available in the log file 
-::::::::::::::::::::::::::::::::::::::::::
-) (/usr/share/texmf/tex/generic/tex4ht/tex4ht.sty
-version 2008-10-27-17:23
-
---- needs --- tex4ht part1 ---
-\tmp:cnt=\count104
-\openout15 = `part1.tmp'.
-
-(./part1.tmp)
-\tmp:dim=\skip48
---------------------------------------
---- Note --- for XML code, use the command line option `xml' or `xhtml'
---------------------------------------
- (./part1.xref)
-\:refout=\write3
-\openout3 = `part1.xref'.
-
- (/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- to remove the <?xml version=...?> processing instruction use the c
-ommand line option `no-VERSION'
---------------------------------------
---------------------------------------
---- Note --- to remove the DOCTYPE declaration use the command line option `no-
-DOCTYPE'
---------------------------------------
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-)
---------------------------------------
---- Note --- for marking of the base font, use the command line option `fonts+'
-
---------------------------------------
---------------------------------------
---- Note --- for non active _, use the command line option `no_'
---------------------------------------
---------------------------------------
---- Note --- for _ of catcode 13, use the command line option `_13'
---------------------------------------
---------------------------------------
---- Note --- for non active ^, use the command line option `no^'
---------------------------------------
---------------------------------------
---- Note --- for ^ of catcode 13, use the command line option `^13'
---------------------------------------
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- For section filenames that reflect on their titles use the command
- line option `sec-filename'
---------------------------------------
---------------------------------------
---- Note --- for alternative charset, use the command line option `charset=...'
-
---------------------------------------
---------------------------------------
---- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
-on
---------------------------------------
---------------------------------------
---- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for content and toc in 2 frames, use the command line option `fram
-es'
---------------------------------------
---------------------------------------
---- Note --- for content, toc, and footnotes in 3 frames, use the command line 
-option `frames-fn'
---------------------------------------
---------------------------------------
---- Note --- for file extension name xht, use the command line option `xht'
---------------------------------------
-TeX4ht package options: html,2,next
---------------------------------------
---- Note --- to ignore CSS code, use the command line option `-css
---------------------------------------
---------------------------------------
---- Note --- for inline CSS code, use the command line option `css-in'
---------------------------------------
---------------------------------------
---- Note --- for pop ups on mouse over, use the command line option `mouseover'
-
---------------------------------------
---------------------------------------
---- Note --- for addressing images in a subdirectory, use the command line opti
-on `imgdir:.../'
---------------------------------------
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-)
-\:tokwrite=\toks22
-\:tokpage=\toks23
---------------------------------------
---- Note --- for back links to toc, use the command line option `sections+'
---------------------------------------
-\openout15 = `part1.4ct'.
-
-\:tocout=\write4
-\openout4 = `part1.4tc'.
-
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/latex.4ht
-version 2009-05-21-09:32
---------------------------------------
---- Note --- for links into captions, instead of float heads, use the command l
-ine option `refcaption'
---------------------------------------
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- For mini tocs immediately aftter the header use the command line o
-ption `minitoc<'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements with valued data, use the command lin
-e option `enumerate+'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements li's with value attributes, use the c
-ommand line option `enumerate-'
---------------------------------------
---------------------------------------
---- Note --- for CSS2 code, use the command line option `css2'
---------------------------------------
---------------------------------------
---- Note --- for pictorial tabular, use the command line option `pic-tabular'
---------------------------------------
---------------------------------------
---- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
---------------------------------------
---------------------------------------
---- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
-
---------------------------------------
---------------------------------------
---- Note --- for inline footnotes use command line option `fn-in'
---------------------------------------
---------------------------------------
---- Note --- for tracing of latex font commands, use the command line option `f
-onts'
---------------------------------------
---------------------------------------
---- Note --- for width specifications of tabular p entries, use the `p-width' c
-ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
-style="width:\HColWidth"}}
---------------------------------------
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
-
---------------------------------------
---------------------------------------
---- Note --- for pictorial array, use the command line option `pic-array'
---------------------------------------
---------------------------------------
---- Note --- for pictorial $...$ environments, use the command line option `pic
--m' (not recommended!!)
---------------------------------------
---------------------------------------
---- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
-he command line option `pic-m+' (not safe!!)
---------------------------------------
---------------------------------------
---- Note --- for pictorial array, use the command line option `pic-array'
---------------------------------------
-))
-(/usr/share/texmf/tex/generic/tex4ht/fontmath.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/book.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- for tocs without * entries, use command line option `notoc*'
---------------------------------------
---------------------------------------
---- Note --- for tocs without * entries, use command line option `notoc*'
---------------------------------------
---------------------------------------
---- Note --- to eliminate mini tables of contents, use the command line option 
-`nominitoc'
---------------------------------------
---------------------------------------
---- Note --- for frames-like object-based table of contents, use the command li
-ne option `obj-toc'
---------------------------------------
---------------------------------------
---- Note --- for files named derived from section titles, use the command line 
-option `sec-filename'
---------------------------------------
---------------------------------------
---- Note --- for i-columns index, use the command line option `index=i' (e.g., 
-index=2)
---------------------------------------
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/amsmath.4ht
-version 2009-05-21-09:32
-\tmp:muskip=\muskip11
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/amstext.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/amsbsy.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/amsopn.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/graphicx.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/graphics.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- if included graphics are of degraded quality, try the command line
- options `graphics-num' or `graphics-'. The `num' should provide the density of
- pixels in the bitmaps (e.g., 110). 
---------------------------------------
---------------------------------------
---- Note --- for key dimensions try the option `Gin-dim'; for key dimensions wh
-en bounding box is unavailable try `Gin-dim+'; neither is recommended
---------------------------------------
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/dvips.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/natbib.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/color.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/dvipsnam.4ht
-version 2009-05-21-09:32
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def)
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-))
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/html4-math.4ht
-version 2009-05-18-23:01
-)) (./part1.aux)
+Package color Info: Driver file: pdftex.def on input line 143.
+) (./part1.aux)
 \openout1 = `part1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: a5paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -549,8 +192,8 @@ LaTeX Font Info:    ... okay on input line 19.
 * \paperheight=597.50787pt
 * \textwidth=307.28978pt
 * \textheight=483.69687pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
 * \topmargin=-45.43198pt
 * \headheight=12.0pt
 * \headsep=18.06749pt
@@ -569,464 +212,873 @@ LaTeX Font Info:    ... okay on input line 19.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
---- file part1.css ---
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen122
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen123
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks22
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 [1
 
-] [2
 
-] [3]
-LaTeX Font Info:    Try loading font information for U+wasy on input line 20.
- (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+] (./part1.toc
+LaTeX Font Info:    Try loading font information for U+wasy on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-) [1]
-[2] (./part1.4ct [3
+) [3])
+\tf@toc=\write3
+\openout3 = `part1.toc'.
 
-])
---- file part1li1.html ---
- (./part1.4ct [4]) [5] [6
-
-]
+ [4]
 Chapter 1.
---- file part1ch1.html ---
-[7
 
-] [8] [9
+Underfull \hbox (badness 10000) in paragraph at lines 40--54
 
-] [10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--72
+
+ []
+
+
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [5
 
 ]
---- file part1li2.html ---
- [11] [12] [13] [14
+Underfull \hbox (badness 10000) in paragraph at lines 73--88
 
-]
+ []
+
+[6] [7
+
+] [8]
 Chapter 2.
---- file part1ch2.html ---
-[15
+[9
 
-] [16]
-l. 315 Writing part1.idv[1] (part10x.png)
- [17] [18] [19
+] [10] [11] (./chart-of-nuclides.pdf_tex
+<chart-of-nuclides.pdf, id=51, page=1, 237.73386pt x 161.78697pt>
+File: chart-of-nuclides.pdf Graphic file (type pdf)
 
-]
-l.336 --- TeX4ht warning --- Cannot determine size of graphic in chart-of-nucli
-des.png (no BoundingBox) ---
-l. 336 --- needs --- chart-of-nuclides.png ---
-[20
+<use chart-of-nuclides.pdf, page 1>
+Package pdftex.def Info: chart-of-nuclides.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 215.1019pt x 146.39195pt.
+) [12 <./chart-of-nuclides.pdf>] [13]
+[14] <U-Th-series.pdf, id=73, 255.83278pt x 279.4714pt>
+File: U-Th-series.pdf Graphic file (type pdf)
+ <use U-Th-series.pdf>
+Package pdftex.def Info: U-Th-series.pdf used on input line 572.
+(pdftex.def)             Requested size: 307.28978pt x 335.70515pt.
 
-]
-l. 357 Writing part1.idv[2] (part11x.png)
-l. 364 Writing part1.idv[3] (part12x.png)
- [21
-
-]
-l. 376 Writing part1.idv[4] (part13x.png)
-l. 383 Writing part1.idv[5] (part14x.png)
- [22]
-l. 391 Writing part1.idv[6] (part15x.png)
-l. 401 Writing part1.idv[7] (part16x.png)
- [23]
-l. 420 Writing part1.idv[8] (part17x.png)
- [24]
-l. 436 Writing part1.idv[9] (part18x.png)
-l. 443 Writing part1.idv[10] (part19x.png)
- [25]
-l. 451 Writing part1.idv[11] (part110x.png)
-l. 462 Writing part1.idv[12] (part111x.png)
- [26]
-l. 469 Writing part1.idv[13] (part112x.png)
-l. 478 Writing part1.idv[14] (part113x.png)
- [27]
-l. 485 Writing part1.idv[15] (part114x.png)
-l. 492 Writing part1.idv[16] (part115x.png)
-l. 507 Writing part1.idv[17] (part116x.png)
- [28]
-l. 516 Writing part1.idv[18] (part117x.png)
-l. 523 Writing part1.idv[19] (part118x.png)
- [29]
-l. 531 Writing part1.idv[20] (part119x.png)
-l. 541 Writing part1.idv[21] (part120x.png)
- [30] [31] [32
-
-]
-l.560 --- TeX4ht warning --- Cannot determine size of graphic in U-Th-series.pn
-g (no BoundingBox) ---
-l. 560 --- needs --- U-Th-series.png ---
-[33
-
-] [34
-
-] [35
-
-] [36
-
-]
+[15] [16 <./U-Th-series.pdf>]
 Chapter 3.
---- file part1ch3.html ---
-[37]
-l. 617 Writing part1.idv[22] (part121x.png)
-l. 628 Writing part1.idv[23] (part122x.png)
- [38]
-l. 635 Writing part1.idv[24] (part123x.png)
-l. 642 Writing part1.idv[25] (part124x.png)
- [39]
-l. 649 Writing part1.idv[26] (part125x.png)
- [40] [41
 
-]
-l.674 --- TeX4ht warning --- Cannot determine size of graphic in mass-spec.png 
-(no BoundingBox) ---
-l. 674 --- needs --- mass-spec.png ---
-[42
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
 
-] [43
+ []
 
-]
-l. 732 Writing part1.idv[27] (part126x.png)
- [44] [45
 
-]
-l.754 --- TeX4ht warning --- Cannot determine size of graphic in AMS.png (no Bo
-undingBox) ---
-l. 754 --- needs --- AMS.png ---
-[46
+Underfull \hbox (badness 10000) in paragraph at lines 613--627
 
-]
-l. 774 Writing part1.idv[28] (part127x.png)
-l. 781 Writing part1.idv[29] (part128x.png)
- [47
+ []
 
-]
-l. 793 Writing part1.idv[30] (part129x.png)
-l. 803 Writing part1.idv[31] (part130x.png)
- [48]
-l. 810 Writing part1.idv[32] (part131x.png)
-l. 818 Writing part1.idv[33] (part132x.png)
- [49]
-l. 855 Writing part1.idv[34] (part133x.png)
- [50]
-l. 862 Writing part1.idv[35] (part134x.png)
-l. 872 Writing part1.idv[36] (part135x.png)
- [51] [52] [53
+[17
 
-] [54
+] [18] (./mass-spec.pdf_tex
+<mass-spec.pdf, id=100, page=1, 399.73857pt x 142.0883pt>
+File: mass-spec.pdf Graphic file (type pdf)
+
+<use mass-spec.pdf, page 1>
+Package pdftex.def Info: mass-spec.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 307.28978pt x 109.23055pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 ...2}\makebox(0,0)[lb]{\smash{Filament \\ }}}
+                                                  %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<mass-spec.pdf, id=101, page=2, 399.73857pt x 142.0883pt>
+File: mass-spec.pdf Graphic file (type pdf)
+
+<use mass-spec.pdf, page 2>
+Package pdftex.def Info: mass-spec.pdf, page2 used on input line 56.
+(pdftex.def)             Requested size: 307.28978pt x 109.23055pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...\makebox(0,0)[lb]{\smash{Faraday cup\\ }}}
+                                                  %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 ...makebox(0,0)[lb]{\smash{High voltage\\ }}}
+                                                  %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) [19 <./mass-spec.pdf> <./mass-spec.pdf
+
+pdfTeX warning: pdflatex (file ./mass-spec.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>] [20] (./AMS.pdf_tex <AMS.pdf, id=118, page=1, 318.5979pt x 170.05751pt>
+File: AMS.pdf Graphic file (type pdf)
+
+<use AMS.pdf, page 1>
+Package pdftex.def Info: AMS.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 307.28978pt x 164.02142pt.
+ <AMS.pdf, id=119, page=2, 318.5979pt x 170.05751pt>
+File: AMS.pdf Graphic file (type pdf)
+
+<use AMS.pdf, page 2>
+Package pdftex.def Info: AMS.pdf, page2 used on input line 54.
+(pdftex.def)             Requested size: 307.28978pt x 164.02142pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ...}\makebox(0,0)[lb]{\smash{\\ Microscope}}}
+                                                  %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (4.81044pt too wide) in paragraph at lines 75--75
+ []\OT1/cmr/m/n/10 Cesium 
+ []
+
+
+Overfull \hbox (0.69193pt too wide) in paragraph at lines 76--76
+ []\OT1/cmr/m/n/10 Voltage 
+ []
+
+
+Overfull \hbox (10.44196pt too wide) in paragraph at lines 76--76
+ []\OT1/cmr/m/n/10 multiplier 
+ []
+
+
+Overfull \hbox (5.3296pt too wide) in paragraph at lines 77--77
+ []\OT1/cmr/m/n/10 ionisation 
+ []
+
+) [21 <./AMS.pdf> <./AMS.pdf
+
+pdfTeX warning: pdflatex (file ./AMS.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+>] [22] [23] [24
 
 ]
 Chapter 4.
---- file part1ch4.html ---
-l. 901 Writing part1.idv[37] (part136x.png)
-[55]
-l. 911 Writing part1.idv[38] (part137x.png)
- [56]
-l. 975 Writing part1.idv[39] (part138x.png)
- [57]
-l. 985 Writing part1.idv[40] (part139x.png)
-l. 997 Writing part1.idv[41] (part140x.png)
- [58]
-l. 1006 Writing part1.idv[42] (part141x.png)
-l. 1013 Writing part1.idv[43] (part142x.png)
-l. 1028 Writing part1.idv[44] (part143x.png)
- [59] [60] [61
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 931--949
 
-]
-l.1061 --- TeX4ht warning --- Cannot determine size of graphic in isochron.png 
-(no BoundingBox) ---
-l. 1061 --- needs --- isochron.png ---
-[62
+ []
 
-]
-l. 1106 Writing part1.idv[45] (part144x.png)
- [63
+[26] [27] (./isochron.pdf_tex
+<isochron.pdf, id=144, page=1, 209.61066pt x 154.84886pt>
+File: isochron.pdf Graphic file (type pdf)
 
-]
-l. 1113 Writing part1.idv[46] (part145x.png)
-l. 1125 Writing part1.idv[47] (part146x.png)
- [64] [65] [66
+<use isochron.pdf, page 1>
+Package pdftex.def Info: isochron.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 245.83275pt x 181.6072pt.
 
-]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...0,0,0}\makebox(0,0)[lb]{\smash{0.760\\ }}}
+                                                  %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<isochron.pdf, id=145, page=2, 209.61066pt x 154.84886pt>
+File: isochron.pdf Graphic file (type pdf)
+
+<use isochron.pdf, page 2>
+Package pdftex.def Info: isochron.pdf, page2 used on input line 54.
+(pdftex.def)             Requested size: 245.83275pt x 181.6072pt.
+
+<isochron.pdf, id=146, page=3, 209.61066pt x 154.84886pt>
+File: isochron.pdf Graphic file (type pdf)
+
+<use isochron.pdf, page 3>
+Package pdftex.def Info: isochron.pdf, page3 used on input line 56.
+(pdftex.def)             Requested size: 245.83275pt x 181.6072pt.
+
+<isochron.pdf, id=147, page=4, 209.61066pt x 154.84886pt>
+File: isochron.pdf Graphic file (type pdf)
+
+<use isochron.pdf, page 4>
+Package pdftex.def Info: isochron.pdf, page4 used on input line 58.
+(pdftex.def)             Requested size: 245.83275pt x 181.6072pt.
+
+<isochron.pdf, id=148, page=5, 209.61066pt x 154.84886pt>
+File: isochron.pdf Graphic file (type pdf)
+
+<use isochron.pdf, page 5>
+Package pdftex.def Info: isochron.pdf, page5 used on input line 60.
+(pdftex.def)             Requested size: 245.83275pt x 181.6072pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1110
+
+ []
+
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29 <./isochron.pdf> <./isochron.pdf
+
+pdfTeX warning: pdflatex (file ./isochron.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+> <./isochron.pdf
+
+pdfTeX warning: pdflatex (file ./isochron.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+> <./isochron.pdf
+
+pdfTeX warning: pdflatex (file ./isochron.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+> <./isochron.pdf
+
+pdfTeX warning: pdflatex (file ./isochron.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1151
+
+ []
+
+[30]
 Chapter 5.
---- file part1ch5.html ---
-l. 1158 Writing part1.idv[48] (part147x.png)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1178
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1192
 .
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1178.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1192.
 
- [67
 
-]
-l. 1190 Writing part1.idv[49] (part148x.png)
-l. 1205 Writing part1.idv[50] (part149x.png)
- [68]
-l. 1226 Writing part1.idv[51] (part150x.png)
-l. 1238 Writing part1.idv[52] (part151x.png)
-l. 1242 Writing part1.idv[53] (part152x.png)
- [69]
-[70]
-l. 1282 Writing part1.idv[54] (part153x.png)
-l. 1308 Writing part1.idv[55] (part154x.png)
- [71]
-l. 1326 Writing part1.idv[56] (part155x.png)
- [72] [73] [74
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+ [31
 
 ]
-l.1361 --- TeX4ht warning --- Cannot determine size of graphic in wetherill.png
- (no BoundingBox) ---
-l. 1361 --- needs --- wetherill.png ---
-[75
+Overfull \hbox (5.70522pt too wide) in paragraph at lines 1213--1218
+[]\OT1/cmr/m/n/10 With $\OML/cmm/m/it/10 ^^U[]$ \OT1/cmr/m/n/10 = 1.551359 $\OM
+S/cmsy/m/n/10 ^^B\OT1/cmr/m/n/10 10[]\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 (t$[
+]$ = 4.468 Gyr), $\OML/cmm/m/it/10 ^^U[]$ \OT1/cmr/m/n/10 = 9.845841
+ []
 
-] [76
 
-] [77
+Underfull \vbox (badness 2573) has occurred while \output is active []
 
-] [78
+ [32]
+Overfull \hbox (16.90521pt too wide) in paragraph at lines 1268--1287
+[]\OT1/cmr/m/n/10 U-Pb dat-ing grants ac-cess to two sep-a-rate geochronome-ter
+s ($[]$Pb/$[][]$U
+ []
 
-]
+
+Overfull \hbox (2.23752pt too wide) in paragraph at lines 1268--1287
+\OT1/cmr/m/n/10 and $[]$Pb/$[][]$U) based on dif-fer-ent iso-topes of the same 
+parent-daughter
+ []
+
+[33] [34] (./wetherill.pdf_tex
+<wetherill.pdf, id=180, page=1, 148.9148pt x 122.25204pt>
+File: wetherill.pdf Graphic file (type pdf)
+
+<use wetherill.pdf, page 1>
+Package pdftex.def Info: wetherill.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 215.1019pt x 176.59682pt.
+
+<wetherill.pdf, id=181, page=2, 148.9148pt x 122.25204pt>
+File: wetherill.pdf Graphic file (type pdf)
+
+<use wetherill.pdf, page 2>
+Package pdftex.def Info: wetherill.pdf, page2 used on input line 54.
+(pdftex.def)             Requested size: 215.1019pt x 176.59682pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1386--1409
+
+ []
+
+[35 <./wetherill.pdf> <./wetherill.pdf
+
+pdfTeX warning: pdflatex (file ./wetherill.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>] [36]
 Chapter 6.
---- file part1ch6.html ---
-l. 1425 Writing part1.idv[57] (part156x.png)
-l. 1442 Writing part1.idv[58] (part157x.png)
-[79]
-l. 1453 Writing part1.idv[59] (part158x.png)
- [80]
-l. 1476 Writing part1.idv[60] (part159x.png)
-l. 1489 Writing part1.idv[61] (part160x.png)
- [81]
-l. 1521 Writing part1.idv[62] (part161x.png)
- [82]
-l. 1529 Writing part1.idv[63] (part162x.png)
-l. 1530 Writing part1.idv[64] (part163x.png)
- [83] [84
+
+Overfull \hbox (6.52904pt too wide) in paragraph at lines 1453--1455
+\OT1/cmr/m/n/10 The $[]$K $\OMS/cmsy/m/n/10 !$ $[]$\OT1/cmr/m/n/10 Ar$[]$ de-ca
+y scheme forms the ba-sis of the K-Ar geochronome-
+ []
+
+[37
 
 ]
-l.1539 --- TeX4ht warning --- Cannot determine size of graphic in Ar-Ar.png (no
- BoundingBox) ---
-l. 1539 --- needs --- Ar-Ar.png ---
-[85
+Overfull \hbox (5.44229pt too wide) in paragraph at lines 1473--1476
+\OT1/cmr/m/n/10 all the in-her-ited ar-gon has an at-mo-spheric ori-gin, so tha
+t $([][]\OML/cmm/m/it/10 Ar=[][]Ar\OT1/cmr/m/n/10 )[] =
+ []
 
-] [86
 
-] [87
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1515
 
-] [88
+ []
+
+[38] (./Ar-Ar.pdf_tex
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 ...}\makebox(0,0)[lb]{\smash{Hornblende\\ }}}
+                                                  %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<Ar-Ar.pdf, id=210, page=1, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 1>
+Package pdftex.def Info: Ar-Ar.pdf, page1 used on input line 55.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=211, page=2, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 2>
+Package pdftex.def Info: Ar-Ar.pdf, page2 used on input line 58.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=212, page=3, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 3>
+Package pdftex.def Info: Ar-Ar.pdf, page3 used on input line 60.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=213, page=4, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 4>
+Package pdftex.def Info: Ar-Ar.pdf, page4 used on input line 62.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=214, page=5, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 5>
+Package pdftex.def Info: Ar-Ar.pdf, page5 used on input line 64.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=215, page=6, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 6>
+Package pdftex.def Info: Ar-Ar.pdf, page6 used on input line 66.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=216, page=7, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 7>
+Package pdftex.def Info: Ar-Ar.pdf, page7 used on input line 68.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=217, page=8, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 8>
+Package pdftex.def Info: Ar-Ar.pdf, page8 used on input line 70.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=218, page=9, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+ <use Ar-Ar.pdf, page 9>
+Package pdftex.def Info: Ar-Ar.pdf, page9 used on input line 73.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+
+<Ar-Ar.pdf, id=219, page=10, 166.96739pt x 201.69394pt>
+File: Ar-Ar.pdf Graphic file (type pdf)
+
+<use Ar-Ar.pdf, page 10>
+Package pdftex.def Info: Ar-Ar.pdf, page10 used on input line 75.
+(pdftex.def)             Requested size: 215.1019pt x 259.86pt.
+) [39] [40 <./Ar-Ar.pdf> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+> <./Ar-Ar.pdf
+
+pdfTeX warning: pdflatex (file ./Ar-Ar.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+>] [41] [42
 
 ]
 Chapter 7.
---- file part1ch7.html ---
-l. 1605 Writing part1.idv[65] (part164x.png)
-[89]
-l. 1635 Writing part1.idv[66] (part165x.png)
-l. 1645 Writing part1.idv[67] (part166x.png)
- [90]
-l. 1655 Writing part1.idv[68] (part167x.png)
- [91]
-l. 1676 Writing part1.idv[69] (part168x.png)
- [92] [93
 
-]
-l.1708 --- TeX4ht warning --- Cannot determine size of graphic in Arrhenius.png
- (no BoundingBox) ---
-l. 1708 --- needs --- Arrhenius.png ---
-[94
+Underfull \hbox (badness 10000) in paragraph at lines 1627--1644
 
-]
-l. 1739 Writing part1.idv[70] (part169x.png)
- [95
+ []
 
-]
-l. 1752 Writing part1.idv[71] (part170x.png)
-l. 1761 Writing part1.idv[72] (part171x.png)
- [96]
-l. 1782 Writing part1.idv[73] (part172x.png)
- [97]
-l. 1806 Writing part1.idv[74] (part173x.png)
-l. 1816 Writing part1.idv[75] (part174x.png)
-l. 1824 Writing part1.idv[76] (part175x.png)
- [98] [99] [100
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1674--1678
 
-]
-l.1857 --- TeX4ht warning --- Cannot determine size of graphic in EDM.png (no B
-oundingBox) ---
-l. 1857 --- needs --- EDM.png ---
-[101
+ []
 
-] [102
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1695--1701
 
-] [103
+ []
 
-]
-l.1871 --- TeX4ht warning --- Cannot determine size of graphic in stockli.png (
-no BoundingBox) ---
-l. 1871 --- needs --- stockli.png ---
-[104
+(./Arrhenius.pdf_tex
+<Arrhenius.pdf, id=247, page=1, 246.95279pt x 194.18416pt>
+File: Arrhenius.pdf Graphic file (type pdf)
 
-] [105
+<use Arrhenius.pdf, page 1>
+Package pdftex.def Info: Arrhenius.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 261.19818pt x 205.39569pt.
 
-] [106
+! Missing $ inserted.
+<inserted text> 
+                $
+l.79 ...(0,0)[lb]{\smash{ln(D/a$^2$) (s$^{-1})}}}}
+                                                  %
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-]
+) [45] [46 <./Arrhenius.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1801--1806
+
+ []
+
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 1843--1852
+
+ []
+
+(./EDM.pdf_tex <EDM.pdf, id=259, page=1, 202.17679pt x 273.38663pt>
+File: EDM.pdf Graphic file (type pdf)
+
+<use EDM.pdf, page 1>
+Package pdftex.def Info: EDM.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 261.19818pt x 353.2292pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\\ }}}
+                                                  %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<EDM.pdf, id=260, page=2, 202.17679pt x 273.38663pt>
+File: EDM.pdf Graphic file (type pdf)
+ <use EDM.pdf, page 2>
+Package pdftex.def Info: EDM.pdf, page2 used on input line 62.
+(pdftex.def)             Requested size: 261.19818pt x 353.2292pt.
+)
+(./stockli.pdf_tex <stockli.pdf, id=261, page=1, 190.98752pt x 165.07506pt>
+File: stockli.pdf Graphic file (type pdf)
+
+<use stockli.pdf, page 1>
+Package pdftex.def Info: stockli.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 307.28978pt x 265.62166pt.
+
+<stockli.pdf, id=262, page=2, 190.98752pt x 165.07506pt>
+File: stockli.pdf Graphic file (type pdf)
+
+<use stockli.pdf, page 2>
+Package pdftex.def Info: stockli.pdf, page2 used on input line 54.
+(pdftex.def)             Requested size: 307.28978pt x 265.62166pt.
+) [48] [49 <./EDM.pdf> <./EDM.pdf
+
+pdfTeX warning: pdflatex (file ./EDM.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+>] [50 <./stockli.pdf> <./stockli.pdf
+
+pdfTeX warning: pdflatex (file ./stockli.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+>]
 Chapter 8.
---- file part1ch8.html ---
---- file part112.html ---
-[107
+
+Underfull \hbox (badness 10000) in paragraph at lines 1905--1918
+
+ []
 
 
-] [108] [109
+Underfull \hbox (badness 10000) in paragraph at lines 1919--1937
 
-] [110
+ []
 
-]
-l. 1971 Writing part1.idv[77] (part176x.png)
- [111
-
-]
-l. 1989 Writing part1.idv[78] (part177x.png)
-l. 2007 Writing part1.idv[79] (part178x.png)
- [112]
-l. 2016 Writing part1.idv[80] (part179x.png)
- [113] [114] [115
+[51
 
 ]
-l.2066 --- TeX4ht warning --- Cannot determine size of graphic in AlBe.png (no 
-BoundingBox) ---
-l. 2066 --- needs --- AlBe.png ---
-l.2067 --- TeX4ht warning --- Cannot determine size of graphic in NeBe.png (no 
-BoundingBox) ---
-l. 2067 --- needs --- NeBe.png ---
-[116
+Underfull \hbox (badness 10000) in paragraph at lines 1938--1948
 
-] [117
+ []
 
-]
+
+Underfull \vbox (badness 7832) has occurred while \output is active []
+
+ [52]
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 2036--2037
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2038--2046
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2067--2071
+
+ []
+
+(./AlBe.pdf_tex <AlBe.pdf, id=318, page=1, 552.93172pt x 446.37823pt>
+File: AlBe.pdf Graphic file (type pdf)
+
+<use AlBe.pdf, page 1>
+Package pdftex.def Info: AlBe.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 245.83275pt x 198.45718pt.
+ <AlBe.pdf, id=319, page=2, 552.93172pt x 446.37823pt>
+File: AlBe.pdf Graphic file (type pdf)
+
+<use AlBe.pdf, page 2>
+Package pdftex.def Info: AlBe.pdf, page2 used on input line 71.
+(pdftex.def)             Requested size: 245.83275pt x 198.45718pt.
+ <AlBe.pdf, id=320, page=3, 552.93172pt x 446.37823pt>
+File: AlBe.pdf Graphic file (type pdf)
+
+<use AlBe.pdf, page 3>
+Package pdftex.def Info: AlBe.pdf, page3 used on input line 74.
+(pdftex.def)             Requested size: 245.83275pt x 198.45718pt.
+) (./NeBe.pdf_tex
+<NeBe.pdf, id=321, page=1, 570.73842pt x 450.74185pt>
+File: NeBe.pdf Graphic file (type pdf)
+ <use NeBe.pdf, page 1>
+Package pdftex.def Info: NeBe.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 245.83275pt x 194.14534pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.67 ...(0,0)[lb]{\smash{$^{21}$Ne /$$^{10}$Be}}}}
+                                                  %
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<NeBe.pdf, id=322, page=2, 570.73842pt x 450.74185pt>
+File: NeBe.pdf Graphic file (type pdf)
+ <use NeBe.pdf, page 2>
+Package pdftex.def Info: NeBe.pdf, page2 used on input line 69.
+(pdftex.def)             Requested size: 245.83275pt x 194.14534pt.
+
+<NeBe.pdf, id=323, page=3, 570.73842pt x 450.74185pt>
+File: NeBe.pdf Graphic file (type pdf)
+ <use NeBe.pdf, page 3>
+Package pdftex.def Info: NeBe.pdf, page3 used on input line 71.
+(pdftex.def)             Requested size: 245.83275pt x 194.14534pt.
+
+<NeBe.pdf, id=324, page=4, 570.73842pt x 450.74185pt>
+File: NeBe.pdf Graphic file (type pdf)
+ <use NeBe.pdf, page 4>
+Package pdftex.def Info: NeBe.pdf, page4 used on input line 73.
+(pdftex.def)             Requested size: 245.83275pt x 194.14534pt.
+)
+
+LaTeX Warning: Float too large for page by 20.9093pt on input line 2093.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2095--2105
+
+ []
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 2106--2119
+
+ []
+
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [55]
+Underfull \hbox (badness 10000) in paragraph at lines 2146--2158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2166
+
+ []
+
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [118] [119
+[56] [57 <./AlBe.pdf> <./AlBe.pdf
 
-] [120
+pdfTeX warning: pdflatex (file ./AlBe.pdf): PDF inclusion: multiple pdfs with p
+age group included in a single page
+> <./AlBe.pdf
+
+pdfTeX warning: pdflatex (file ./AlBe.pdf): PDF inclusion: multiple pdfs with p
+age group included in a single page
+> <./NeBe.pdf
+
+pdfTeX warning: pdflatex (file ./NeBe.pdf): PDF inclusion: multiple pdfs with p
+age group included in a single page
+> <./NeBe.pdf
+
+pdfTeX warning: pdflatex (file ./NeBe.pdf): PDF inclusion: multiple pdfs with p
+age group included in a single page
+> <./NeBe.pdf
+
+pdfTeX warning: pdflatex (file ./NeBe.pdf): PDF inclusion: multiple pdfs with p
+age group included in a single page
+> <./NeBe.pdf
+
+pdfTeX warning: pdflatex (file ./NeBe.pdf): PDF inclusion: multiple pdfs with p
+age group included in a single page
+>] [58
 
 ]
 Chapter 9.
---- file part1ch9.html ---
-l. 2171 Writing part1.idv[81] (part180x.png)
-[121]
-l. 2211 Writing part1.idv[82] (part181x.png)
-l. 2221 Writing part1.idv[83] (part182x.png)
- [122]
-l. 2228 Writing part1.idv[84] (part183x.png)
-l. 2246 Writing part1.idv[85] (part184x.png)
- [123]
-l. 2259 Writing part1.idv[86] (part185x.png)
- [124]
-l. 2288 Writing part1.idv[87] (part186x.png)
-l. 2288 Writing part1.idv[88] (part187x.png)
-l. 2296 Writing part1.idv[89] (part188x.png)
- [125]
-l. 2307 Writing part1.idv[90] (part189x.png)
-l. 2317 Writing part1.idv[91] (part190x.png)
- [126] [127] [128
-
-]
+[59] [60] [61] [62]
 Chapter 10.
---- file part1ch10.html ---
-l. 2352 Writing part1.idv[92] (part191x.png)
-[129
 
-]
-l. 2360 Writing part1.idv[93] (part192x.png)
-l. 2374 Writing part1.idv[94] (part193x.png)
- [130]
-l. 2389 Writing part1.idv[95] (part194x.png)
-l. 2403 Writing part1.idv[96] (part195x.png)
- [131]
-l. 2418 Writing part1.idv[97] (part196x.png)
-l. 2426 Writing part1.idv[98] (part197x.png)
- [132]
-l. 2441 Writing part1.idv[99] (part198x.png)
-l. 2441 Writing part1.idv[100] (part199x.png)
-l. 2441 Writing part1.idv[101] (part1100x.png)
-l. 2441 Writing part1.idv[102] (part1101x.png)
-l. 2441 Writing part1.idv[103] (part1102x.png)
-l. 2441 Writing part1.idv[104] (part1103x.png)
-l. 2447 Writing part1.idv[105] (part1104x.png)
- [133]
-l. 2483 Writing part1.idv[106] (part1105x.png)
-l. 2483 Writing part1.idv[107] (part1106x.png)
- [134]
-l. 2486 Writing part1.idv[108] (part1107x.png)
-l. 2500 Writing part1.idv[109] (part1108x.png)
-l. 2500 Writing part1.idv[110] (part1109x.png)
-l. 2500 Writing part1.idv[111] (part1110x.png)
-l. 2500 Writing part1.idv[112] (part1111x.png)
-l. 2500 Writing part1.idv[113] (part1112x.png)
-l. 2500 Writing part1.idv[114] (part1113x.png)
- [135]
-l. 2503 Writing part1.idv[115] (part1114x.png)
-l. 2511 Writing part1.idv[116] (part1115x.png)
- [136]
-l. 2518 Writing part1.idv[117] (part1116x.png)
-l. 2530 Writing part1.idv[118] (part1117x.png)
-l. 2535 Writing part1.idv[119] (part1118x.png)
- [137]
-l. 2544 Writing part1.idv[120] (part1119x.png)
- [138] [139
+Underfull \hbox (badness 10000) in paragraph at lines 2343--2350
 
-]
-l.2563 --- TeX4ht warning --- Cannot determine size of graphic in bullseye.png 
-(no BoundingBox) ---
-l. 2563 --- needs --- bullseye.png ---
-[140
+ []
 
-] [141
+[63
 
-] [142
+] [64] [65] (./bullseye.pdf_tex
+<bullseye.pdf, id=370, page=1, 506.53244pt x 164.14139pt>
+File: bullseye.pdf Graphic file (type pdf)
 
-]
-l.2579 --- TeX4ht warning --- Cannot determine size of graphic in covariance.pn
-g (no BoundingBox) ---
-l. 2579 --- needs --- covariance.png ---
-[143
+<use bullseye.pdf, page 1>
+Package pdftex.def Info: bullseye.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 307.28978pt x 99.5826pt.
+) (./covariance.pdf_tex
+<covariance.pdf, id=371, page=1, 473.80183pt x 403.49167pt>
+File: covariance.pdf Graphic file (type pdf)
 
-] [144
+<use covariance.pdf, page 1>
+Package pdftex.def Info: covariance.pdf, page1 used on input line 52.
+(pdftex.def)             Requested size: 307.28978pt x 261.6939pt.
 
-] [145
+<covariance.pdf, id=372, page=2, 473.80183pt x 403.49167pt>
+File: covariance.pdf Graphic file (type pdf)
 
-] [146
+<use covariance.pdf, page 2>
+Package pdftex.def Info: covariance.pdf, page2 used on input line 82.
+(pdftex.def)             Requested size: 307.28978pt x 261.6939pt.
+) [66] [67 <./bullseye.pdf> <./covariance.pdf
+
+pdfTeX warning: pdflatex (file ./covariance.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+> <./covariance.pdf
+
+pdfTeX warning: pdflatex (file ./covariance.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+>] [68
 
 ]
 Chapter 11.
---- file part1ch11.html ---
-[147] [148] [149] [150
+[69] [70] [71] [72
 
 ]
 Chapter 12.
---- file part1ch12.html ---
-[151
+[73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [152] [153] [154] [155] [156] [157
+ [74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [158
+ [75]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [159
+ [76]
+Overfull \hbox (9.04407pt too wide) in paragraph at lines 2932--2939
+\OT1/cmr/m/n/10 You are sup-plied with two data files that were pro-duced by th
+e quadrupole
+ []
 
-] [160] [161]
-l. 3006 Writing part1.idv[121] (part1120x.png)
- [162]
-[163] [164]
-l. 3081 Writing part1.idv[122] (part1121x.png)
-l. 3086 Writing part1.idv[123] (part1122x.png)
- [165] [166] [167
 
-] (./part1.aux) ) 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+[78]
+Overfull \hbox (5.80768pt too wide) in paragraph at lines 3013--3016
+\OT1/cmr/m/n/10 tios for the sam-ple (91500) and the stan-dard (GJ-1), us-ing \
+OT1/cmtt/m/n/10 Matlab\OT1/cmr/m/n/10 's
+ []
+
+[79]
+Overfull \hbox (7.57199pt too wide) in paragraph at lines 3022--3025
+[]\OT1/cmr/m/n/10 If you want you can use the sim-pli-fy-ing ap-prox-i-ma-tion 
+that $[]$(1+X)
+ []
+
+[80]
+Overfull \hbox (15.43272pt too wide) in paragraph at lines 3076--3078
+[]\OT1/cmtt/m/n/10 MD.csv\OT1/cmr/m/n/10 : a sim-i-lar ta-ble for an ap-atite s
+am-ple from Mount Dromedary,
+ []
+
+[81] (./part1.aux) ) 
 Here is how much of TeX's memory you used:
- 7535 strings out of 493030
- 92027 string characters out of 6136259
- 285406 words of memory out of 5000000
- 10922 multiletter control sequences out of 15000+600000
- 12323 words of font info for 46 fonts, out of 8000000 for 9000
+ 3618 strings out of 493029
+ 48889 string characters out of 6136233
+ 124059 words of memory out of 5000000
+ 7058 multiletter control sequences out of 15000+600000
+ 14036 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,12n,35p,2142b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,32p,887b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on part1.pdf (81 pages, 1156264 bytes).
+PDF statistics:
+ 507 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on part1.dvi (170 pages, 426472 bytes).
