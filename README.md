@@ -13,7 +13,7 @@ This respository contains the following directories:
 
 * [latex](https://www.github.com/pvermees/geotopes/tree/master/latex) -
   The LaTeX source code for the PDF version of the lecture notes, as
-  hosted on [EarthArXiv]{http://dx.doi.org/10.17605/OSF.IO/SJ4FT}.
+  hosted on [EarthArXiv](http://dx.doi.org/10.17605/OSF.IO/SJ4FT).
 
 * [matlab](https://www.github.com/pvermees/geotopes/tree/master/matlab) -
   Input files for the Matlab practicals.
