@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.11.25)  29 DEC 2017 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.11.25)  30 DEC 2017 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,8 +7,8 @@ de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
 {\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
 documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
  tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
-\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,2,nextcd.a.b.c.\input 
- index.tex
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,2,next.a.b.c.\input  i
+ndex.tex
 (./index.tex (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
@@ -269,7 +269,7 @@ option `frames-fn'
 --------------------------------------
 --- Note --- for file extension name xht, use the command line option `xht'
 --------------------------------------
-TeX4ht package options: html,2,nextcd
+TeX4ht package options: html,2,next
 --------------------------------------
 --- Note --- to ignore CSS code, use the command line option `-css
 --------------------------------------
@@ -292,10 +292,6 @@ version 2009-05-18-23:01
 \:tokpage=\toks23
 --------------------------------------
 --- Note --- for back links to toc, use the command line option `sections+'
---------------------------------------
---------------------------------------
---- Note --- for linear crosslinks of pages, use the command line option `next'
-
 --------------------------------------
 \openout15 = `index.4ct'.
 
@@ -1026,12 +1022,12 @@ l. 3100 Writing index.idv[123] (index122x.png)
 
 ] (./index.aux) ) 
 Here is how much of TeX's memory you used:
- 7503 strings out of 493030
- 91713 string characters out of 6136259
- 285097 words of memory out of 5000000
- 10900 multiletter control sequences out of 15000+600000
+ 7506 strings out of 493030
+ 91739 string characters out of 6136259
+ 285192 words of memory out of 5000000
+ 10903 multiletter control sequences out of 15000+600000
  8869 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,12n,35p,2144b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,12n,35p,2233b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on index.dvi (170 pages, 425908 bytes).
+Output written on index.dvi (170 pages, 426308 bytes).

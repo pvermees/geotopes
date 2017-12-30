@@ -1,0 +1,6 @@
+find ./*html -type f | xargs perl -pi~ -e 's/\xe8/&egrave;/g'
+find ./*html -type f | xargs perl -pi~ -e 's/\xf7/&divide;/g'
+find ./*html -type f | xargs perl -pi~ -e 's/\xfc/&uuml;/g'
+find ./*html -type f | xargs perl -pi~ -e 's/\xc5/&#197;/g'
+find ./*html -type f | xargs perl -pi~ -e 's/\xb1/&plusmn;/g'
+find ./*html -type f | xargs perl -pi~ -e 's/\xa3/&pound;/g'

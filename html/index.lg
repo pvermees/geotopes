@@ -22,6 +22,7 @@ File: indexch9.html
 File: indexch10.html
 File: indexch11.html
 File: indexch12.html
+Css: @media print {span.next {visibility:hidden;}}
 Css: p.noindent { text-indent: 0em }
 Css: td p.noindent { text-indent: 0em; margin-top:0em; }
 Css: p.nopar { text-indent: 0em; }

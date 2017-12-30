@@ -1,4 +1,12 @@
- 
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+img[alt*="PIC"] {
+    width: 800px;
+}
+
 /* start css.sty */
 .cmr-5{font-size:50%;}
 .cmr-7{font-size:70%;}
@@ -152,11 +160,3 @@ div.gather-star {text-align:center;}
 .figure img.graphics {margin-left:10%;}
 /* end css.sty */
 
-body {
-    max-width: 800px;
-    margin: auto;
-}
-
-img[alt*="PIC"] {
-    width: 800px;
-}
