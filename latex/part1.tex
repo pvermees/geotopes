@@ -2757,26 +2757,229 @@ The half-life of $^{238}$U is t$_{1/2}$ = 4.47 Gyr.\\
 \chapter{Programming practicals}
 \label{sec:programming}
 
-{\tt Matlab} is a mathematical scripting language that is both
-powerful and easy to use. The full version of the software is very
-expensive but a reasonably complete student version can be purchased
-for $\pounds$55 + VAT from {\tt http://mathworks.com}. Alternatively,
-{\tt Octave} is an open source clone of Matlab that can be downloaded
-for free from\\ {\tt http://www.gnu.org/software/octave}.
+In this Chapter you will process some real geochronological datasets
+using either \texttt{R} or \texttt{Matlab}. These are both
+mathematical scripting languages that are both powerful and easy to
+use.\\
 
-\section{Introduction to {\tt Matlab}}
+\texttt{R} is a free and open programming language that works on any
+operating system, including \texttt{Windows}, \texttt{OS-X} and
+\texttt{Unix/Linux}. It can be downloaded and installed from
+\texttt{http://r-project.org}.\\
 
-This exercise will present a brief tutorial of the most basic
-functionality in {\tt Matlab}, which will cover most commands you will
-need for the subsequent computer practicals.
+\texttt{Matlab} is a proprietary programming environment. The full
+version of this software is very expensive but a reasonably complete
+student version can be purchased for $\pounds$55 + VAT from
+\texttt{http://mathworks.com}. Alternatively, \texttt{Octave} is an
+open source clone of \texttt{Matlab} that can be downloaded for free
+from \texttt{http://www.gnu.org/software/octave}.\\
+
+Sections~\ref{sec:R} and \ref{sec:Matlab} will present two brief
+tutorials of the most basic functionality in \texttt{R} and
+\texttt{Matlab}, respectively.  These will cover most commands that
+you will need for the subsequent computer practicals.
+
+\section{Introduction to \texttt{R}}
+\label{sec:R}
+
+A number of different graphical user interfaces (GUIs) are available
+to interact with \texttt{R}. The most popular of these are
+\texttt{Rgui}, \texttt{RStudio}, \texttt{RCommander} and
+\texttt{Tinn-R}.
+
+\begin{enumerate}
+  \item Starting these applications or running \texttt{R} in a text
+    terminal presents the user with a command line prompt. Anything
+    that is typed after the \texttt{>} symbol will be evaluated
+    immediately. Thus, we can use \texttt{R} as a calculator:
 
 \begin{verbatim}
-% Anything following a percent symbol is a 
-% comment and is ignored by Matlab. It is 
-% considered good practice to document your 
-% code with lots of comments, as will be 
-% done for this tutorial.
+> 1 + 1
+> sqrt(2)
+> exp(log(10))
+\end{verbatim}
 
+\item Alternatively, code can also be saved as text (using a built-in text
+  editor) and saved as \texttt{mycode.R}, say. This code can then be
+  copied and pasted at the command line prompt. Or it can be called from
+  the command line using the \texttt{source()} function:
+
+\begin{verbatim}
+> source('mycode.R')
+\end{verbatim}
+
+\item In the remainder of this tutorial, we will assume that your code is
+  run from a text file unless explicitly stated otherwise. The
+  \texttt{\#}~symbol marks the beginning of a comment.  \texttt{R}
+  ignores anything that follows it:
+
+\begin{verbatim}
+# The arrow symbol is used to assign a value to a
+# variable. Note that the arrow can point both ways:
+foo <- 2
+4 -> bar
+print(foo*bar)
+
+# Defining a vector of multiple values:
+myvec <- c(0,2,4,6,8,10)
+# or equivalently:
+myvec <- seq(from=0,to=10,by=2)
+
+# Turn myvec into a 2x3 matrix:
+mymat <- matrix(myvec,nrow=2)
+
+# Accessing one or more elements from a vector or matrix:
+x <- myvec[3]
+y <- myvec[1:3]
+z <- mymat[1,2:3]
+
+# Change the third value in the second row of mymat to 5:
+mymat[2,3] <- 5
+
+# Change the entire second column of mymat to 0:
+mymat[,2] <- 0
+
+# Transpose of a matrix:
+flipped <- t(mymat)
+
+# Element-wise multiplication (*) 
+# vs. matrix multiplication (%*%):
+rectangle <- mymat * mymat
+square <- mymat %*% flipped
+\end{verbatim}
+
+\item If you want to learn more about a function, type \texttt{help()} or
+\texttt{?} at the command line prompt:
+
+\begin{verbatim}
+> help(c)
+> ?matrix
+\end{verbatim}
+
+\item In addition to \texttt{R}'s built-in functions, you can also define
+  your own:
+
+\begin{verbatim}
+cube <- function(n){
+    return(n^3)
+}
+
+# Using this function to take the cube of 3:
+c3 <- cube(3)
+
+# Conditional statement:
+toss <- function(){
+    if (runif(1)>0.5){ # runif(n) draws n random 
+        print("head")  # numbers between 0 and 1
+    } else {
+        print("tail")
+    }
+}
+
+# Use a for loop to toss 10 virtual coins:
+for (i in 1:10) {
+    toss()
+}
+\end{verbatim}
+
+\item The purpose of the practical exercises in
+  Sections~\ref{sec:U-Pb-R}-\ref{sec:FT-R} is to process datasets
+  contained in external data files. For this you will need to be able
+  to navigate through your file system and load the necessary files:
+
+\begin{verbatim}
+> ls()          # list all the variables
+> rm(list=ls()) # clear the current workspace
+> getwd()       # get the current working directory
+> setwd("path_to_a_valid_directory")
+\end{verbatim}
+
+\item Use the above commands to navigate to the directory containing the
+file named \texttt{RbSr.csv}. Then read this file into memory:
+
+\begin{verbatim}
+RbSr <- read.csv("RbSr.csv",header=TRUE)
+\end{verbatim}
+
+Type \texttt{names(RbSr)} or \texttt{colnames(RbSr)} at the command
+prompt to list the variable names (column headers) contained in this
+dataset.
+
+\item Let us now perform an isochron regression
+  (Section~\ref{sec:Rb-Sr}) through these Rb-Sr data: \label{itm:lm}
+
+\begin{verbatim}
+# Plot Sr87Sr86 against Rb87Sr86:
+plot(RbSr[,'Rb87Sr86'],RbSr[,'Sr87Sr86'],type="p")
+
+# fit a linear model to the data
+fit <- lm(Sr87Sr86 ~ Rb87Sr86, data = RbSr)
+\end{verbatim}
+
+\item \texttt{fit} is a `list' object. Type \texttt{str(fit)} at the
+  command prompt to see its structure. One of its items is
+  \verb|fit$coefficients|, which contains the slope and the intercept
+  of the linear fit. Alternatively, we can also access these values
+  using the \texttt{coef()} function. The following code uses this
+  function to calculate the isochron age:
+
+\begin{verbatim}
+# define the 87Rb decay constant (in Ma-1):
+lam87 <- 1.42e-5
+# compute the age from the slope:
+age <- log(1 + coef(fit)[2])/lam87
+
+# predict the Sr87Sr86-ratios for the
+# full range of Rb87Sr86-values:
+Rb87Sr86 <- c(0,max(RbSr[,'Rb87Sr86']))
+Sr87Sr86 <- coef(fit)[1] + coef(fit)[2]*Rb87Sr86
+
+# add the predicted ratios to the existing plot:
+lines(Rb87Sr86,Sr87Sr86)
+# label with the isochron age: 
+title(age)
+\end{verbatim}
+
+\item One of the most powerful features of \texttt{R} is the
+  availability of thousands of `packages' providing additional
+  functionality to the built-in functions.  For example, let us
+  download and install the \texttt{IsoplotR} package from the
+  `Comprehensive R Archive Network' (CRAN):
+
+\begin{verbatim}
+> install.packages('IsoplotR')
+\end{verbatim}
+
+\item We can use \texttt{IsoplotR} to redo the isochron regression
+  exercise using a more rigorous weighted regression algorithm that
+  takes into account the analytical uncertainties in both the
+  \textsuperscript{87}Sr/\textsuperscript{86}Sr- and
+  \textsuperscript{87}Rb/\textsuperscript{86}Sr-ratios:
+
+\begin{verbatim}
+# load the functionality of the IsoplotR package:
+library('IsoplotR')
+
+# load the data (see ?read.data for details):
+RbSr2 <- read.data('RbSr.csv',method='Rb-Sr',format=1)
+
+# compute and plot the isochron diagram:
+isochron(RbSr2)
+\end{verbatim}
+
+\end{enumerate}
+
+\section{Introduction to \texttt{Matlab}}
+\label{sec:Matlab}
+
+\begin{enumerate}
+\item \texttt{Matlab}, like \texttt{R}, allows the user to run code
+  either directly at the command line prompt, or from a built-in text
+  editor. Anything following a percent symbol (\texttt{\%}) is a
+  comment and is ignored. It is considered good practice to document
+  your code with lots of comments, as will be done for this tutorial.
+  
+\begin{verbatim}
 % Ending a line with a semi-colon 
 % suppresses output to the console:
 'be loud'
@@ -2792,7 +2995,14 @@ foo = 2;
 bar = 4;
 foo = foo*bar;
 foo
+\end{verbatim}
 
+\item As the name suggest, \texttt{Matlab} (which stands for
+  \texttt{MAT}rix \texttt{LAB}oratory) is capable of, and excels at,
+  dealing with collections of multiple numbers arranged in vectors and
+  matrices:
+
+\begin{verbatim}
 % Data can be entered as vectors:
 x = [0 2 4 6 8 10]
 % or using shorthand syntax:
@@ -2821,20 +3031,26 @@ a.*a
 
 % Transpose of a matrix:
 z'
+\end{verbatim}
 
-% In addition to Matlab's built-in operators 
-% and functions, you can also define your own:
+\item In addition to Matlab's built-in operators and functions, you
+  can also define your own:
+  
+\begin{verbatim}
+% take the cube of the input argument:
 function out = cube(in)
   out = in^3;
 end
 
-% After saving the code in a file named cube.m,
-% you can then use this function as follows:
+You can use this function as follows:
 c3 = cube(3)
+\end{verbatim}
 
-% A useful feature of Matlab that is missing from 
-% most other programming languages is the ability 
-% to accommodate several output parameters:
+\item A useful feature of Matlab that is missing from most other
+  programming languages is the ability to accommodate several output
+  parameters:
+
+\begin{verbatim}
 function [m,s] = basicStats(dat)
   m = mean(dat); % mean
   s = std(dat);  % standard deviation
@@ -2842,9 +3058,21 @@ end
 
 % create a row vector of 10 random numbers
 randnum = rand(1,10);
+
 % use our new function
 [m,s] = basicStats(randnum)
+\end{verbatim}
 
+An extensive library of documentation is built into \texttt{Matlab}.
+For example, to access further information about the \texttt{rand}
+function, simply type \texttt{help rand} or \texttt{doc rand} at the
+command prompt.
+
+\item\texttt{Matlab} is a fully fledged programming language, which
+  has flow structures such as \texttt{if} statements and \texttt{for}
+  loops:
+
+\begin{verbatim}
 % Conditional statement:
 function coinToss
   % 'rand' produces numbers between 0 and 1
@@ -2855,96 +3083,94 @@ function coinToss
     disp('tail')
   end
 end
+\end{verbatim}
 
-% For loop:
+Copy the \texttt{coinToss} function into a text file named
+\texttt{coinToss.m} and save it in the current directory. You can then
+load the contents of the file by simply typing its name without the
+\texttt{.m} extension:
+
+\begin{verbatim}
+% Use this function in a for loop:
 for i=1:10,
   coinToss
 end
+\end{verbatim}
 
+\item File and variable management:
+
+\begin{verbatim}
 % List all the variables in the current workspace:
 who
 whos
 
-% Remove some or all variables
-% from the current workspace:
+% Remove some or all variables from the workspace:
 clear m,s
 who
 clear all
 who
 
-% Copy the 'coinToss' function into a text file 
-% named 'coinToss.m' and save it in the current 
-% directory. You can then load the contents of 
-% the file by simply typing its name without 
-% the '.m' extension:
-coinToss
-
 % Basic file management is done with UNIX commands:
 pwd   % pass the working directory
 cd .. % move up one directory
 ls    % list all files in the current directory
-
-% Use the above commands to navigate to the 
-% directory containing the 'population.csv' file.
-% To view the contents of the file:
-type('population.csv')
-
-% To read the actual population dataset
-% into memory, ignoring the header:
-pop = csvread('population.csv',1,0);
-
-% To access the help files of the 'csvread' 
-% function and find out the meaning of the 
-% various input arguments:
-doc csvread
-
-% Incidentally, the 'type' function can also 
-% be used to view the Matlab code of built-in 
-% and other functions:
-type('mean')
-
-% Plot the first column of 'pop' 
-% against the second one:
-plot(pop(:,1),pop(:,2),'-k')
-title("World population through time")
-xlabel('year')
-ylabel('population [millions]')
-
-% Get the number of rows and columns of the dataset:
-[nc,nr] = size(pop);
-
-% Extract the data from 1965 until 2014:
-years = pop(:,1);
-pop65 = pop(years>=1965,:);
-
-% Fit a linear model through these data:
-x = pop65(:,1);
-y = pop65(:,2);
-[fit,S] = polyfit(x,y,1);
-% We won't use S today but we will in Practical 4!
-
-% Create a new figure window
-figure(2)
-plot(x,y,'ok')
-hold on
-ypred = fit(1)*x+fit(2);
-plot(x,ypred,'-k')
-
-% Close all plot windows:
-close all;
 \end{verbatim}
 
-And that concludes this short tutorial. Now try to calculate a Rb-Sr
-age by regressing an isochron through the following data (recall that
-$\lambda_{87}$ = 0.0000142 Myr$^{-1}$.%, see Section \ref{sec:Rb-Sr}):
+Use the above commands to navigate to the directory containing the
+\texttt{RbSr.csv} file.
 
-\begin{table}[!ht]
-\centering
-\begin{tabular}{l|lllll}
-$^{87}$Sr/$^{86}$Sr & 0.707 & 0.736 & 0.771 & 0.757 & 0.785\\
-$^{87}$Rb/$^{86}$Sr & 1.00 & 5.00 & 10.00 & 8.00 & 12.00
-\end{tabular}
-\end{table}
+\begin{verbatim}
+% To view the contents of this file:
+type('RbSr.csv')
+
+% Incidentally, the 'type' function can also 
+% be used to view the code of Matlab functions:
+type('mean')
+\end{verbatim}
+
+\item Let us now apply our knowledge of \texttt{Matlab} to a
+  geochronological problem:
+
+\begin{verbatim}
+% Read the Rb-Sr dataset ignoring the header:
+RbSr = csvread('RbSr.csv',1,0);
+
+% Plot the Sr87Sr86-ratio (first column)
+% against the Rb87Sr86-ratio (third column):
+Rb87Sr86 = RbSr(:,1);
+Sr87Sr86 = RbSr(:,3);
+plot(Rb87Sr86,Sr87Sr86,'ok')
+xlabel('87Rb/86Sr')
+ylabel('87Sr/86Sr')
+\end{verbatim}
+
+\item This should yield a linear array of Rb-Sr data. Let us now fit
+  an isochron through these data. \texttt{Matlab} includes several
+  functions to perform linear regression, including \texttt{regress}
+  and \texttt{fitlm}. We will use the \texttt{polyfit} function:
+
+\begin{verbatim}
+% Fit a first order polynomial through the data:
+[fit,S] = polyfit(Rb87Sr86,Sr87Sr86,1);
+% (S will be used in a later practical)
+
+% define the 87Rb decay constant (in Ma-1):
+lam87 = 1.42e-5;
+% compute the age from the slope:
+age = log(1 + fit(1))/lam87;
+
+% predict the Sr87Sr86-ratio for the
+% full range of Rb87Sr86-values:
+x = [0,max(Rb87Sr86)];
+y = fit(2) + fit(1)*x;
+
+# add the prediction and age to the existing plot:
+hold on;
+plot(x,y,'-r')
+title(age)
+\end{verbatim}
+
+\end{enumerate}
 
 \section{U-Th-Pb data reduction}
 \label{sec:U-Pb-R}
@@ -2964,15 +3190,15 @@ to us because:
   the common Pb component by orders of magnitude.
 \end{enumerate}
 
-In this exercise, we will use standard-sample bracketing (Section
-\ref{sec:bracketing}) to process some raw mass spectrometer data in
-    {\tt Matlab}:
+In this exercise, we will use standard-sample bracketing
+(Section~\ref{sec:bracketing}) to process some raw mass spectrometer
+data in \texttt{R} or \texttt{Matlab}:
 
 \begin{enumerate}
 \item Load the input files {\tt 91500.csv} (sample) and {\tt GJ1.csv}
-  (standard) into {\tt Matlab}.
+  (standard) into memory.
 \item Plot the $^{238}$U signal against time.
-\item Given that GJ-1 has a known age of 600.3874 Ma, what are its
+\item Given that GJ-1 has a known age of 600.4 Ma, what are its
   expected $^{206}$Pb/$^{238}$U, $^{207}$Pb/$^{235}$U and
   $^{208}$Pb/$^{232}$Th ratios?
 \item Compare these values with the measured ratios, computed as the
@@ -2991,8 +3217,8 @@ In this exercise, we will use standard-sample bracketing (Section
 \section{$^{40}$Ar/$^{39}$Ar data reduction}
 \label{sec:Ar-Ar-R}
 
-In this exercise, we will use {\tt Matlab} to reduce some synthetic
-$^{40}$Ar/$^{39}$Ar data. You are provided with three input files:
+In this exercise, we will reduce some synthetic $^{40}$Ar/$^{39}$Ar
+data. You are provided with three input files:
 \begin{enumerate}
 \item{\tt smpl.csv}: $^{36}$Ar, $^{39}$Ar and $^{40}$Ar as a function
   of time (t) for the sample.
@@ -3019,6 +3245,7 @@ To perform the data reduction, please follow the following steps:
 \end{enumerate}
 
 \section{Error propagation}
+\label{sec:errorprop-R}
 
 This exercise will build on the results from the previous two
 practicals.
@@ -3030,13 +3257,15 @@ practicals.
   the covariance between the two can safely be neglected.
 
 \item Calculate the standard errors of the mean $^{206}$Pb/$^{238}$U
-  signal ratios for the sample (91500) and the standard (GJ-1), using
-  {\tt Matlab}'s {\tt mean} and {\tt std} functions.
+  signal ratios for the sample (91500) and the standard (GJ-1) using
+  the \texttt{mean} and \texttt{sd} (for \texttt{R}) or \texttt{std}
+  (for \texttt{Matlab}) functions.
 
 \item Propagate the analytical uncertainties of the U-Pb age, ignoring
   the covariance terms. Recall that 
 
-$$ t = \frac{1}{\lambda_{238}}\ln\left(1 + \frac{{}^{206}Pb}{{}^{238}U}\right) $$
+$$ t = \frac{1}{\lambda_{238}}\ln\left(1 +
+  \frac{{}^{206}Pb}{{}^{238}U}\right) $$
 
 If you want you can use the simplifying approximation that $\ln$(1+X)
 $\approx X$ if X $\ll$ 1 (this assumption may not be correct for the
@@ -3044,8 +3273,16 @@ $^{207}$Pb/$^{235}$U-age). \label{loglin}
 
 \item Compute the analytical uncertainties associated with the linear
   extrapolation of the argon signals of the sample and the standard in
-  Section \ref{sec:Ar-Ar-R}. All the relevant information is provided
-  in the output of the {\tt polyfit} function:
+  Section \ref{sec:Ar-Ar-R}. If you use \texttt{R}, the covariance
+  matrix of the slope and intercept can be simply obtained from the
+  \texttt{vcov(fit)} function, where \texttt{fit} is the output of the
+  \texttt{lm} function (see item~\ref{itm:lm} of
+  Section~\ref{sec:R}). The corresponding standard errors are then
+  found by taking the square root of the diagonal elements of this
+  matrix.
+
+  For \texttt{Matlab}, all the relevant information is provided in the
+  output of the \texttt{polyfit} function:
 
 \begin{verbatim}
 help(polyfit)
@@ -3064,7 +3301,7 @@ is the inverse of R.
 
 Based on these instructions, I have written the following function to
 calculate the standard errors of the fitting parameters from the
-second output parameter of the {\tt polyfit} function:
+second output parameter of the \texttt{polyfit} function:
 
 \begin{verbatim}
 function se = S2se(S)
@@ -3081,18 +3318,19 @@ end
 \end{enumerate}
 
 \section{Fission tracks}
+\label{sec:FT-R}
 
-In this exercise, you will use your {\tt Matlab} programming skills to
-calculate some fission track ages. You are given the following
-datasets:
+In this exercise, you will use your programming skills to calculate
+some fission track ages. You are given the following datasets:
 
 \begin{enumerate}
-\item {\tt DUR.csv}: a table with two columns listing the number of
+\item\texttt{DUR.csv}: a table with two columns listing the number of
   spontaneous tracks $N_s$ and induced tracks $N_i$ counted in 25
   grains of an apatite age standard (t = 31.4 Ma) from Durango,
   Mexico.  Note that these pairs of tracks were counted over the same
-  area, so that $\rho_s/\rho_i$ = $N_s/N_i$ in Equation~\ref{eq:tzeta}.
-\item{\tt MD.csv}: a similar table for an apatite sample from Mount
+  area, so that $\rho_s/\rho_i$ = $N_s/N_i$ in
+  Equation~\ref{eq:tzeta}.
+\item\texttt{MD.csv}: a similar table for an apatite sample from Mount
   Dromedary, Australia.
 \end{enumerate}
 

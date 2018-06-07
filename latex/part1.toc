@@ -40,8 +40,9 @@
 \contentsline {section}{\numberline {10.3}Accuracy vs. precision}{66}
 \contentsline {chapter}{\numberline {11}Exercises}{69}
 \contentsline {chapter}{\numberline {12}Programming practicals}{73}
-\contentsline {section}{\numberline {12.1}Introduction to {\tt Matlab}}{73}
-\contentsline {section}{\numberline {12.2}U-Th-Pb data reduction}{78}
-\contentsline {section}{\numberline {12.3}$^{40}$Ar/$^{39}$Ar data reduction}{79}
-\contentsline {section}{\numberline {12.4}Error propagation}{79}
-\contentsline {section}{\numberline {12.5}Fission tracks}{81}
+\contentsline {section}{\numberline {12.1}Introduction to \texttt {R}}{73}
+\contentsline {section}{\numberline {12.2}Introduction to \texttt {Matlab}}{77}
+\contentsline {section}{\numberline {12.3}U-Th-Pb data reduction}{82}
+\contentsline {section}{\numberline {12.4}$^{40}$Ar/$^{39}$Ar data reduction}{83}
+\contentsline {section}{\numberline {12.5}Error propagation}{83}
+\contentsline {section}{\numberline {12.6}Fission tracks}{85}
