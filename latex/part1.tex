@@ -56,18 +56,18 @@ such as planetology (origin and evolution of the Solar system) and
 archaeology (origin and age of settlements, tools and artifacts).\\
 
 The use of naturally occurring radioactive isotopes to date minerals
-and rocks is the oldest and best known branch of isotope geology. The
-foundations of these so-called isotopic or radiometric dating methods
-were laid shortly after the turn of the XX\textsuperscript{th} century
-with the discovery of the laws of radioactive decay by eminent
-physicists such as Ernest Rutherford and Frederick Soddy
-\citep{rutherford1902a, rutherford1902b}.  The application of these
-principles to the field of Geology and the calibration of the
-geological time scale were pioneered by Arthur \citet{holmes1911,
-  holmes1913, holmes1947}. Initially, radiometric geochronology was
-exclusively based on uranium and its daughter products, but with the
-development of increasingly sensitive analytical equipment, ever more
-isotopic `clocks' were added over the course of the century: Rb/Sr
+and rocks is the oldest branch of isotope geology. The foundations of
+these so-called isotopic or radiometric dating methods were laid
+shortly after the turn of the XX\textsuperscript{th} century with the
+discovery of the laws of radioactive decay by eminent physicists such
+as Ernest Rutherford and Frederick Soddy \citep{rutherford1902a,
+  rutherford1902b}.  The application of these principles to the field
+of Geology and the calibration of the geological time scale were
+pioneered by Arthur \citet{holmes1911, holmes1913,
+  holmes1947}. Initially, radiometric geochronology was exclusively
+based on uranium and its daughter products, but with the development
+of increasingly sensitive analytical equipment, ever more isotopic
+`clocks' were added over the course of the century: Rb/Sr
 \citep{hahn1943}, $^{14}$C \citep{libby1946}, K/Ar
 \citep{aldrich1948}, $^{238}$U fission tracks \citep{price1963},
 $^{40}$Ar/$^{39}$Ar \citep{merrihue1966}, Sm/Nd \citep{lugmair1974},
@@ -101,10 +101,10 @@ dating (Section~\ref{sec:U-Th-He}). Some figures were modified from
 published sources, including \citet{allegre2008}, \citet{braun2006},
 and \citet{galbraith2005}. These books are recommended further reading
 material, as is the detailed textbook by \citet{dickin2005}, from
-which both Prof.~van den Haute's notes and \citet{allegre2008} heavily
-borrow. Additional lecture material, including the data files used in
-the \texttt{Matlab} practicals of Section~\ref{sec:programming}, can
-be found at \texttt{http://github.com/pvermees/geotopes}.
+which both van den Haute and \citet{allegre2008} heavily
+borrowed. Additional lecture material, including the data files used
+in the \texttt{Matlab} practicals of Section~\ref{sec:programming},
+can be found at \texttt{http://github.com/pvermees/geotopes}.
 
 \begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
@@ -1213,11 +1213,10 @@ the three radiogenic Pb isotopes are given by:
   \label{eq:Pb*}
 \end{equation}
 
-With $\lambda_{238}$ = 1.551359 $\times 10^{-10} a^{-1}$ (t$_{1/2}$ =
-4.468 Gyr), $\lambda_{235}$ = 9.845841 $\times 10^{-10} a^{-1}$
-(t$_{1/2}$ = 703.8 Myr), and $\lambda_{232}$ = 0.4933431 $\times
-10^{-10} a^{-1}$ (t$_{1/2}$ = 14.05 Gyr). The corresponding age
-equations are:
+With $\lambda_{238}$ = 1.55125 $\times 10^{-10} a^{-1}$ (t$_{1/2}$ =
+4.468 Gyr), $\lambda_{235}$ = 9.8485 $\times 10^{-10} a^{-1}$
+(t$_{1/2}$ = 703.8 Myr), and $\lambda_{232}$ = 0.495 $\times 10^{-10}
+a^{-1}$ (t$_{1/2}$ = 14.05 Gyr). The corresponding age equations are:
 
 \begin{equation}
   \begin{array}{rl}
@@ -1434,7 +1433,7 @@ billion years. The positron emission mechanism mentioned in Chapter
 therefore safely be neglected. In addition to $^{40}$Ar, argon has two
 more stable isotopes: $^{36}$Ar and $^{38}$Ar. Argon makes up
 $\sim$1\% of the terrestrial atmosphere, with a fixed isotopic
-composition of $^{40}$Ar/$^{36}$Ar = 295.5 and $^{38}$Ar/$^{36}$Ar =
+composition of $^{40}$Ar/$^{36}$Ar = 298.5 and $^{38}$Ar/$^{36}$Ar =
 0.187. The argon contained in K-bearing minerals is made up of a
 mixture of radiogenic ($^{40}$Ar$^*$) and non-radiogenic gas
 ($^{40}$Ar$_\circ$):
@@ -1475,7 +1474,7 @@ or minerals with different K (and therefore $^{40}Ar^*$) contents, an
 
 which can be solved for t. Alternatively, we can simply assume that
 all the inherited argon has an atmospheric origin, so that
-$({}^{40}Ar/{}^{36}Ar)_\circ = 295.5$.
+$({}^{40}Ar/{}^{36}Ar)_\circ = 298.5$.
 
 \section{$^{40}$Ar/$^{39}$Ar dating}
 \label{sec:Ar-Ar}
@@ -1750,11 +1749,11 @@ behind. Although fission tracks can be directly observed by
 transmission electron microscopy (TEM), a more practical approach is
 to etch (a polished surface of) the host mineral with acid. This
 enlarges the damage zones and makes it possible to count them under an
-ordinary petrographic microscope. The volume density $N_s$ (in
+ordinary petrographic microscope. The volume density $n_s$ (in
 cm$^{-3}$) of the fission tracks is given by:
 
 \begin{equation}
-N_{s} = \frac{\lambda_f}{\lambda} [^{238}U] \left(e^{\lambda t}-1\right)
+n_{s} = \frac{\lambda_f}{\lambda} [^{238}U] \left(e^{\lambda t}-1\right)
 \label{eq:Ns}
 \end{equation}
 
@@ -1767,17 +1766,18 @@ related to the (observable) surface density $\rho_s$ (in cm$^{-2}$)
 by:
 
 \begin{equation}
-\rho_s = g L N_s
+\rho_s = g_s L n_s
 \label{eq:rhos}
 \end{equation}
 
-Where g is geometry factor (g=1 if determined on an internal and g=1/2
-on an external surface) and L is the etchable length of a fission
-track ($\sim$15$\mu$m). Rearranging Equation \ref{eq:Ns} for time:
+Where g\textsubscript{s} is geometry factor (g\textsubscript{s}=1 if
+determined on an internal and g\textsubscript{s}=1/2 on an external
+surface) and L is the etchable length of a fission track
+($\sim$15$\mu$m). Rearranging Equation \ref{eq:Ns} for time:
 
 \begin{equation}
 t = \frac{1}{\lambda}
-\ln\left(\frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g L
+\ln\left(\frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g_s L
 }+1\right)
 \label{eq:tFT}
 \end{equation}
@@ -2490,18 +2490,22 @@ functions.
 
 \section{Examples}
 
+Let $X$ and $Y$ indicate measured quantities associated with
+analytical uncertainty.  And let $a$ and $b$ be some error free
+parameters.
+
 \begin{enumerate}
 \item{addition:}
 \begin{align}
 & t = a X + b Y \Rightarrow \frac{\partial t}{\partial X} = a, 
-\frac{\partial t}{\partial Y} = b\\
+\frac{\partial t}{\partial Y} = b \nonumber\\
 & \Rightarrow \sigma^2_t = a^2 \sigma^2_X + b^2 \sigma^2_Y + 2ab~cov(X,Y)
 \label{eq:addition}
 \end{align}
 
 \item{subtraction:}
 \begin{equation}
-t = a X - b Y \Rightarrow \cdots \Rightarrow 
+t = a X - b Y \Rightarrow
 \sigma^2_t = a^2 \sigma^2_X + b^2 \sigma^2_Y - 2ab~cov(X,Y)
 \label{eq:subtraction}
 \end{equation}
@@ -2509,8 +2513,8 @@ t = a X - b Y \Rightarrow \cdots \Rightarrow
 \item{multiplication:}
 \begin{align}
 & t = a X Y \Rightarrow \frac{\partial t}{\partial X} = a Y, 
-\frac{\partial t}{\partial Y} = aX\\
-& \Rightarrow \sigma^2_t = (aY)^2 \sigma^2_X + (aX)^2 \sigma^2_Y + 2a^2 XY~cov(X,Y)\\
+\frac{\partial t}{\partial Y} = aX \nonumber\\
+& \Rightarrow \sigma^2_t = (aY)^2 \sigma^2_X + (aX)^2 \sigma^2_Y + 2a^2 XY~cov(X,Y) \nonumber\\
 & \Rightarrow \left(\frac{\sigma_t}{t}\right)^2 = \left(\frac{\sigma_X}{X}\right)^2 + 
   \left(\frac{\sigma_Y}{Y}\right)^2 + 2 \frac{cov(X,Y)}{X Y}
 \label{eq:multiplication}
@@ -2518,7 +2522,7 @@ t = a X - b Y \Rightarrow \cdots \Rightarrow
 
 \item{division:}
 \begin{equation}
-t = a \frac{X}{Y} \Rightarrow \cdots \Rightarrow 
+t = a \frac{X}{Y} \Rightarrow
 \left(\frac{\sigma_t}{t}\right)^2 = \left(\frac{\sigma_X}{X}\right)^2 + 
   \left(\frac{\sigma_Y}{Y}\right)^2 - 2 \frac{cov(X,Y)}{X Y}
 \label{eq:division}
@@ -2533,9 +2537,17 @@ t = a~e^{bX} \Rightarrow \frac{\partial f}{\partial X} = ab~e^{bX}
 
 \item{logarithms:}
 \begin{equation}
-t = a~\ln(bX) \rightarrow \frac{\partial f}{\partial X} = \frac{a}{X}
-\Rightarrow \sigma_t^2 = \left(\frac{a}{X}\right)^2 \sigma_X^2
+t = a~\ln(bX) \Rightarrow \frac{\partial f}{\partial X} = \frac{a}{X}
+\Rightarrow \sigma_t^2 = a^2 \left(\frac{\sigma_X}{X}\right)^2
 \label{eq:logarithms}
+\end{equation}
+
+\item{power:}
+\begin{equation}
+  t = a X^b \Rightarrow \frac{\partial f}{\partial X} = b \frac{a
+    X^b}{X} \Rightarrow \left(\frac{\sigma_t}{t}\right)^2 =
+  b^2\left(\frac{\sigma_X}{X}\right)^2
+\label{eq:power}
 \end{equation}
 
 \end{enumerate}
@@ -2550,13 +2562,15 @@ Applying the equation for the error propagation of a sum (Equation
 \ref{eq:addition}):
 
 \begin{equation}
-\sigma_{\overline{X}}^2 = \frac{1}{n} \sum_{i=1}^{n} \sigma^2_{X_i} = \frac{\sigma^2_X}{n}
+\sigma_{\overline{X}}^2 = \frac{1}{n} \sum_{i=1}^{n} \sigma^2_{X_i} =
+\frac{\sigma^2_X}{n}
 \label{eq:varianceofthemean}
 \end{equation}
 
-where we assume that all n measurements were done
-\emph{independently}, so that $cov(X_i,X_j)=0$ $\forall$ i, j.  The
-standard deviation of the mean is known as the \underline{standard error}:
+where we assume that all $n$ measurements were done
+\emph{independently}, so that $cov(X_i,X_j)=0 \forall i, j$.  The
+standard deviation of the mean is known as the \underline{standard
+  error}:
 
 \begin{equation}
 \sigma_{\overline{X}} = \frac{\sigma_X}{\sqrt{n}}
@@ -2569,9 +2583,10 @@ arbitrarily increase the \emph{precision} of our analytical data by
 acquiring more data. However, it is important to note that the same is
 generally not the case for the \emph{accuracy} of those data. The
 difference between precision and accuracy is best explained by a darts
-board analogy:
+board analogy:\\
 
-\begin{figure}[!ht]
+\noindent
+\begin{minipage}{\textwidth}
   \centering
   \ifpdf
   \def\svgwidth{\textwidth}
@@ -2579,7 +2594,9 @@ board analogy:
   \else
   \includegraphics[width=10cm]{bullseye.png}
   \fi
-\end{figure}
+\end{minipage}
+
+\bigskip
 
 Whereas the analytical precision can be computed from the data using
 the error propagation formulas introduced above, the only way to get a
@@ -2737,7 +2754,7 @@ The half-life of $^{238}$U is t$_{1/2}$ = 4.47 Gyr.\\
 
 \end{enumerate}
 
-\chapter{{\tt Matlab} practicals}
+\chapter{Programming practicals}
 \label{sec:programming}
 
 {\tt Matlab} is a mathematical scripting language that is both
@@ -2941,9 +2958,8 @@ Section \ref{sec:U-Pb}. However, this does not cause any major issues
 to us because:
 
 \begin{enumerate}
-\item The mineral analysed is zircon, which is a mineral that
-  incorporates very little common Pb in its crystal structure during
-  crystallisation.
+\item The mineral analysed is zircon, which incorporates very little
+  common Pb in its crystal structure during crystallisation.
 \item The ages are sufficiently old for the radiogenic Pb to dominate
   the common Pb component by orders of magnitude.
 \end{enumerate}
@@ -2962,8 +2978,8 @@ In this exercise, we will use standard-sample bracketing (Section
 \item Compare these values with the measured ratios, computed as the
   arithmetic mean signal.  Is there a significant difference between
   the measured and the expected ratios? What could be causing this?
-\item Calculate a correction factor by dividing the measured GJ-1
-  ratios by the expected values. \label{corr}
+\item Calculate a correction factor by dividing the expected GJ-1
+  ratios by the measured values. \label{corr}
 \item Calculate the measured isotopic ratios for sample 91500.
 \item Apply the correction factor calculated in step \ref{corr} to
   these measurements.

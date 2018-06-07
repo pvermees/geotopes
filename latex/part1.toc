@@ -39,7 +39,7 @@
 \contentsline {section}{\numberline {10.2}Examples}{65}
 \contentsline {section}{\numberline {10.3}Accuracy vs. precision}{66}
 \contentsline {chapter}{\numberline {11}Exercises}{69}
-\contentsline {chapter}{\numberline {12}{\tt Matlab} practicals}{73}
+\contentsline {chapter}{\numberline {12}Programming practicals}{73}
 \contentsline {section}{\numberline {12.1}Introduction to {\tt Matlab}}{73}
 \contentsline {section}{\numberline {12.2}U-Th-Pb data reduction}{78}
 \contentsline {section}{\numberline {12.3}$^{40}$Ar/$^{39}$Ar data reduction}{79}
