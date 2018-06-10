@@ -101,10 +101,10 @@ dating (Section~\ref{sec:U-Th-He}). Some figures were modified from
 published sources, including \citet{allegre2008}, \citet{braun2006},
 and \citet{galbraith2005}. These books are recommended further reading
 material, as is the detailed textbook by \citet{dickin2005}, from
-which both van den Haute and \citet{allegre2008} heavily
+which both \citet{allegre2008} and van den Haute heavily
 borrowed. Additional lecture material, including the data files used
-in the \texttt{Matlab} practicals of Section~\ref{sec:programming},
-can be found at \texttt{http://github.com/pvermees/geotopes}.
+in the programming practicals of Section~\ref{sec:programming}, can be
+found at \texttt{http://github.com/pvermees/geotopes}.
 
 \begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
@@ -2775,9 +2775,9 @@ open source clone of \texttt{Matlab} that can be downloaded for free
 from \texttt{http://www.gnu.org/software/octave}.\\
 
 Sections~\ref{sec:R} and \ref{sec:Matlab} will present two brief
-tutorials of the most basic functionality in \texttt{R} and
-\texttt{Matlab}, respectively.  These will cover most commands that
-you will need for the subsequent computer practicals.
+tutorials of \texttt{R} and \texttt{Matlab}, respectively.  These will
+cover most commands that you will need for the subsequent computer
+practicals.
 
 \section{Introduction to \texttt{R}}
 \label{sec:R}
@@ -2821,9 +2821,13 @@ foo <- 2
 print(foo*bar)
 
 # Defining a vector of multiple values:
-myvec <- c(0,2,4,6,8,10)
-# or equivalently:
-myvec <- seq(from=0,to=10,by=2)
+myvec <- c(0,1,2,3,4,5)
+# or, equivalently:
+myvec <- seq(0,5)
+# or
+myvec <- seq(from=0,to=5,by=1)
+# or
+myvec <- 0:5
 
 # Turn myvec into a 2x3 matrix:
 mymat <- matrix(myvec,nrow=2)
@@ -2833,11 +2837,11 @@ x <- myvec[3]
 y <- myvec[1:3]
 z <- mymat[1,2:3]
 
-# Change the third value in the second row of mymat to 5:
-mymat[2,3] <- 5
+# Change the third value in the second row of mymat to 10:
+mymat[2,3] <- 10
 
-# Change the entire second column of mymat to 0:
-mymat[,2] <- 0
+# Change the entire second column of mymat to -1:
+mymat[,2] <- -1
 
 # Transpose of a matrix:
 flipped <- t(mymat)
@@ -2977,7 +2981,7 @@ isochron(RbSr2)
   either directly at the command line prompt, or from a built-in text
   editor. Anything following a percent symbol (\texttt{\%}) is a
   comment and is ignored. It is considered good practice to document
-  your code with lots of comments, as will be done for this tutorial.
+  your code with lots of comments, as will be done in this tutorial.
   
 \begin{verbatim}
 % Ending a line with a semi-colon 
@@ -3201,9 +3205,9 @@ data in \texttt{R} or \texttt{Matlab}:
 \item Given that GJ-1 has a known age of 600.4 Ma, what are its
   expected $^{206}$Pb/$^{238}$U, $^{207}$Pb/$^{235}$U and
   $^{208}$Pb/$^{232}$Th ratios?
-\item Compare these values with the measured ratios, computed as the
-  arithmetic mean signal.  Is there a significant difference between
-  the measured and the expected ratios? What could be causing this?
+\item Compare these values with the arithmetic mean of the measured
+  ratios.  Is there a significant difference between the measured and
+  the expected ratios? What could be causing this?
 \item Calculate a correction factor by dividing the expected GJ-1
   ratios by the measured values. \label{corr}
 \item Calculate the measured isotopic ratios for sample 91500.
@@ -3234,10 +3238,11 @@ To perform the data reduction, please follow the following steps:
 \begin{enumerate}
 \item Load the three input files.
 \item Plot the $^{40}$Ar signal of the sample against time. Do the
-  same for the $^{36}$Ar signal in the blank. What's the difference?
+  same for the $^{36}$Ar signal in the blank. What is the difference?
 \item Perform a linear regression of the $^{36}$Ar, $^{39}$Ar and
   $^{40}$Ar signals through time and determine the intercept at t=0.
-\item Subtract the blank signals from the sample and standard signals.
+\item Subtract the `time zero' intercepts of the blank from those of
+  the sample and standard.
 \item Apply an atmospheric correction assuming that all $^{36}$Ar has
   an atmospheric origin.
 \item Calculate the J-value of the standard.

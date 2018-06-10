@@ -1,0 +1,12 @@
+\documentclass[a4paper]{article}
+\usepackage[final]{pdfpages}
+\begin{document}
+	\includepdf[pages=-,% 
+  		%nup=1x2,
+		landscape,		
+		%booklet=true,	%make a booklet  max 36 page, than use signature
+		signature=88,	%Page Page per packet, divisible by 4		
+		%frame=true,	%frame around page
+		delta=0 40	%offset(0 40 for binding)
+	]{part1.pdf}
+\end{document}
