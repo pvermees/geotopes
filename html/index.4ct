@@ -19,7 +19,7 @@
 \doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{7}{x7-140004.1}{QQ2-7-18}{$^{14}$C dating}}{55}\relax 
 \doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{7}{x7-150004.2}{QQ2-7-19}{The Rb-Sr method}}{57}\relax 
 \doTocEntry\tocsection{4.3}{\csname a:TocLink\endcsname{7}{x7-160004.3}{QQ2-7-20}{Isochrons}}{60}\relax 
-\doTocEntry\toclof{4.1}{\csname a:TocLink\endcsname{7}{x7-160011}{}{\ignorespaces Schematic evolution of the $^{87}$Sr$/{}^{86}$Sr-system as a function of time for multiple aliquots of a hypthetical sample with initial ratio $({}^{87}$Sr$/{}^{86}$Sr$)_\circ $=0.700. The slope of the isochron is a function of the age as per Equation 4.7\hbox {} \citep  [modified from][]{allegre2008}.}}{figure}\relax 
+\doTocEntry\toclof{4.1}{\csname a:TocLink\endcsname{7}{x7-160011}{}{\ignorespaces Schematic evolution of the $^{87}$Sr$/{}^{86}$Sr-system as a function of time for multiple aliquots of a hypothetical sample with initial ratio $({}^{87}$Sr$/{}^{86}$Sr$)_\circ $=0.700. The slope of the isochron is a function of the age as per Equation 4.7\hbox {} \citep  [modified from][]{allegre2008}.}}{figure}\relax 
 \doTocEntry\tocsection{4.4}{\csname a:TocLink\endcsname{7}{x7-170004.4}{QQ2-7-22}{The Sm-Nd method}}{63}\relax 
 \doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{8}{x8-180005}{QQ2-8-23}{The U-Pb system}}{67}\relax 
 \doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{8}{x8-190005.1}{QQ2-8-24}{The U-(Th-)Pb method}}{68}\relax 
@@ -52,13 +52,14 @@
 \doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{14}{x14-3900010}{QQ2-14-51}{Error propagation}}{129}\relax 
 \doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{14}{x14-4000010.1}{QQ2-14-52}{Some basic definitions}}{129}\relax 
 \doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{14}{x14-4100010.2}{QQ2-14-53}{Examples}}{134}\relax 
-\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{14}{x14-4200010.3}{QQ2-14-54}{Accuracy vs. precision}}{137}\relax 
+\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{14}{x14-4200010.3}{QQ2-14-54}{Accuracy vs. precision}}{138}\relax 
 \doTocEntry\toclof{10.1}{\csname a:TocLink\endcsname{14}{x14-420031}{}{\ignorespaces Four datasets of 100 random numbers (black dots) which have the same means (white squares) but different (co-)variance structures. The marginal distributions of the X and Y variables are shown as `bell curves' on the top and right axis of each plot.}}{figure}\relax 
-\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{15}{x15-4300011}{QQ2-15-56}{Exercises}}{147}\relax 
-\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{16}{x16-4400012}{QQ2-16-57}{{\tt  Matlab} practicals}}{151}\relax 
-\doTocEntry\tocsection{12.1}{\csname a:TocLink\endcsname{16}{x16-4500012.1}{QQ2-16-58}{Introduction to {\tt  Matlab}}}{151}\relax 
-\doTocEntry\tocsection{12.2}{\csname a:TocLink\endcsname{16}{x16-4600012.2}{QQ2-16-59}{U-Th-Pb data reduction}}{159}\relax 
-\doTocEntry\tocsection{12.3}{\csname a:TocLink\endcsname{16}{x16-4700012.3}{QQ2-16-60}{$^{40}$Ar/$^{39}$Ar data reduction}}{160}\relax 
-\doTocEntry\tocsection{12.4}{\csname a:TocLink\endcsname{16}{x16-4800012.4}{QQ2-16-61}{Error propagation}}{161}\relax 
-\doTocEntry\tocsection{12.5}{\csname a:TocLink\endcsname{16}{x16-4900012.5}{QQ2-16-62}{Fission tracks}}{164}\relax 
+\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{15}{x15-4300011}{QQ2-15-56}{Exercises}}{145}\relax 
+\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{16}{x16-4400012}{QQ2-16-57}{Programming practicals}}{149}\relax 
+\doTocEntry\tocsection{12.1}{\csname a:TocLink\endcsname{16}{x16-4500012.1}{QQ2-16-58}{Introduction to \texttt  {R}}}{149}\relax 
+\doTocEntry\tocsection{12.2}{\csname a:TocLink\endcsname{16}{x16-4600012.2}{QQ2-16-59}{Introduction to \texttt  {Matlab}}}{161}\relax 
+\doTocEntry\tocsection{12.3}{\csname a:TocLink\endcsname{16}{x16-4700012.3}{QQ2-16-60}{U-Th-Pb data reduction}}{171}\relax 
+\doTocEntry\tocsection{12.4}{\csname a:TocLink\endcsname{16}{x16-4800012.4}{QQ2-16-61}{$^{40}$Ar/$^{39}$Ar data reduction}}{173}\relax 
+\doTocEntry\tocsection{12.5}{\csname a:TocLink\endcsname{16}{x16-4900012.5}{QQ2-16-62}{Error propagation}}{174}\relax 
+\doTocEntry\tocsection{12.6}{\csname a:TocLink\endcsname{16}{x16-5000012.6}{QQ2-16-63}{Fission tracks}}{177}\relax 
 \par 

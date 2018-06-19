@@ -7,6 +7,20 @@
 \newif\ifpdf
 \pdffalse
 
+% to compile html file, set \pdffalse on the previous line
+% copy latex/part1.tex as latex/index.tex
+% run htlatex index.tex "html,2,next" at the terminal
+% run ./fixencodings.sh to fix possible unicode errors
+% add the following lines to index.ssh to adjust page width:
+% body {
+%     max-width: 800px;
+%     margin: auto;
+% }
+%
+% img[alt*="PIC"] {
+%     width: 800px;
+% }
+
 \begin{document}
 
 \begin{titlepage}
@@ -47,24 +61,24 @@ palaeoclimatology etc.  Isotope geochemistry forms an integral part of
 modern Earth Sciences and numerous important discoveries have been
 made thanks to this research.  Every Earth Scientist needs to be aware
 of these techniques in order to understand research reports and
-geological intepretations based on isotopic methods. Isotope
+geological interpretations based on isotopic methods. Isotope
 geochemistry plays an important role in peripheral fields of research
 such as planetology (origin and evolution of the Solar system) and
 archaeology (origin and age of settlements, tools and artifacts).\\
 
 The use of naturally occurring radioactive isotopes to date minerals
-and rocks is the oldest and best known branch of isotope geology. The
-foundations of these so-called isotopic or radiometric dating methods
-were laid shortly after the turn of the XX\textsuperscript{th} century
-with the discovery of the laws of radioactive decay by eminent
-physicists such as Ernest Rutherford and Frederick Soddy
-\citep{rutherford1902a, rutherford1902b}.  The application of these
-principles to the field of Geology and the calibration of the
-geological time scale were pioneered by Arthur \citet{holmes1911,
-  holmes1913, holmes1947}. Initially, radiometric geochronology was
-exclusively based on uranium and its daughter products, but with the
-development of increasingly sensitive analytical equipment, ever more
-isotopic `clocks' were added over the course of the century: Rb/Sr
+and rocks is the oldest branch of isotope geology. The foundations of
+these so-called isotopic or radiometric dating methods were laid
+shortly after the turn of the XX\textsuperscript{th} century with the
+discovery of the laws of radioactive decay by eminent physicists such
+as Ernest Rutherford and Frederick Soddy \citep{rutherford1902a,
+  rutherford1902b}.  The application of these principles to the field
+of Geology and the calibration of the geological time scale were
+pioneered by Arthur \citet{holmes1911, holmes1913,
+  holmes1947}. Initially, radiometric geochronology was exclusively
+based on uranium and its daughter products, but with the development
+of increasingly sensitive analytical equipment, ever more isotopic
+`clocks' were added over the course of the century: Rb/Sr
 \citep{hahn1943}, $^{14}$C \citep{libby1946}, K/Ar
 \citep{aldrich1948}, $^{238}$U fission tracks \citep{price1963},
 $^{40}$Ar/$^{39}$Ar \citep{merrihue1966}, Sm/Nd \citep{lugmair1974},
@@ -89,7 +103,7 @@ aforementioned elements are often used for palaeothermometry.\\
 These lecture notes cover the first half of an Isotope Geology module
 at UCL that deals with the geochronological aspects of the subject.
 The second part of the module deals with stable isotopes. It is taught
-by Dr. Philip Pogge Von Strandmann and covered in a separate set of
+by Dr.~Philip Pogge Von Strandmann and covered in a separate set of
 notes. The core of the geochronology notes is formed by Prof. Peter
 van den Haute's lecture notes (in Dutch) at the University of Ghent.
 This was expanded with additional material, notably on the subjects of
@@ -98,10 +112,10 @@ dating (Section~\ref{sec:U-Th-He}). Some figures were modified from
 published sources, including \citet{allegre2008}, \citet{braun2006},
 and \citet{galbraith2005}. These books are recommended further reading
 material, as is the detailed textbook by \citet{dickin2005}, from
-which both Prof. van den Haute's notes and \citet{allegre2008} heavily
-borrow. Additional lecture material, including the data files used in
-the \texttt{Matlab} practicals of Section~\ref{sec:programming}, can
-be found at \texttt{http://github.com/pvermees/geotopes}.
+which both \citet{allegre2008} and van den Haute heavily
+borrowed. Additional lecture material, including the data files used
+in the programming practicals of Section~\ref{sec:programming}, can be
+found at \texttt{http://github.com/pvermees/geotopes}.
 
 \begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
@@ -303,9 +317,9 @@ means of a number of different mechanisms:
   `extra-nuclear' electron (generally from the K-shell) is captured by
   the nucleus. This causes a transformation of (N,Z) $\rightarrow$
   (N+1,Z-1), similar to positron emission, with which if often
-  co-exists. The vacant electon position in the K-shell is filled with
+  co-exists. The vacant electron position in the K-shell is filled with
   an electron from a higher shell, releasing X-rays ($\sim$
-  10$^{-10}$m wavelength), which is the diagonistic signal of electron
+  10$^{-10}$m wavelength), which is the diagnostic signal of electron
   capture. This mechanism occurs in the
   \textsuperscript{40}K-\textsuperscript{40}Ar decay scheme (Section
   \ref{sec:K-Ar}).
@@ -513,7 +527,7 @@ both radioactive members is proportional to their respective half
 lives. In the geochronological isotope systems $^{235}$U/$^{207}$Pb,
 $^{238}$U/$^{206}$Pb and $^{232}$Th/$^{207}$Pb, the lead isotopes are
 the end points of a long decay series comprised of several $\alpha$
-and $\beta^-$ disentegrations, in which the decay constants of the
+and $\beta^-$ disintegrations, in which the decay constants of the
 parent nuclide is orders of magnitude shorter than the other nuclides
 in the chain. For a decay series like that, Equation \ref{eq:ND1L1}
 can be generalised to:
@@ -563,7 +577,7 @@ the parent isotope.  All intermediate decay steps are therefore
 inconsequential. In rare cases, however, the isotopic equilibrium is
 disturbed by a dissolution or recrystallisation event, say. The
 intermediate parent/daughter pairs can then be used to date phenomena
-occuring over much shorter time scales than those probed by the U-Pb
+occurring over much shorter time scales than those probed by the U-Pb
 method (Section \ref{sec:U-series}).
 
 \begin{figure}[!ht]
@@ -602,7 +616,7 @@ following parts:
   in an incandescent light bulb), a plasma torch, a primary ion beam,
   or a spray chamber, among other possibilities.
 \item mass analyser: this can be an electromagnet (possibly combined
-  with an electrostatic field), or a rapidly fluctuationg electric
+  with an electrostatic field), or a rapidly fluctuating electric
   field.
 \item ion detector: this is, essentially, a volt meter.
 \end{enumerate}
@@ -726,7 +740,7 @@ applications:
   solution mode).
 
 \item{\emph{Secondary ion mass spectrometry (SIMS)}}\\ Prior to the
-  develoment of laser ablation (LA-) ICP-MS, the only other method to
+  development of laser ablation (LA-) ICP-MS, the only other method to
   produce spot measurements in solid samples was by firing a beam of
   negative (e.g. oxygen) or positive (e.g. caesium) ions at the target
   under high vacuum.  This releases (`sputters') positive (or
@@ -974,7 +988,7 @@ earth metal that forms bivalent positive ions with a radius of 1.13
 substitutes Ca$^{2+}$ in many minerals such as plagioclase, apatite,
 gypsum and calcite in sites with 8 neighbours, but not in pyroxene
 where Ca$^{2+}$ has a coordination number of 6. Native Sr$^{2+}$ can
-also subsitute K$^+$ in feldspars (where radiogenic Sr is expected to
+also substitute K$^+$ in feldspars (where radiogenic Sr is expected to
 be found), but this substitution is limited and requires the
 simultaneous replacement of Si$^{4+}$ by Al$^{3+}$ in order to
 preserve electric neutrality.  Sr therefore predominantly occurs in
@@ -1075,7 +1089,7 @@ the data and obviating the need to assume any initial Sr-ratios.
   \includegraphics[width=10cm]{isochron.png}
   \fi
   \caption{Schematic evolution of the $^{87}$Sr$/{}^{86}$Sr-system as
-    a function of time for multiple aliquots of a hypthetical sample
+    a function of time for multiple aliquots of a hypothetical sample
     with initial ratio $({}^{87}$Sr$/{}^{86}$Sr$)_\circ$=0.700. The
     slope of the isochron is a function of the age as per Equation
     \ref{eq:87Sr86Sr} \citep[modified from][]{allegre2008}.}
@@ -1210,11 +1224,10 @@ the three radiogenic Pb isotopes are given by:
   \label{eq:Pb*}
 \end{equation}
 
-With $\lambda_{238}$ = 1.551359 $\times 10^{-10} a^{-1}$ (t$_{1/2}$ =
-4.468 Gyr), $\lambda_{235}$ = 9.845841 $\times 10^{-10} a^{-1}$
-(t$_{1/2}$ = 703.8 Myr), and $\lambda_{232}$ = 0.4933431 $\times
-10^{-10} a^{-1}$ (t$_{1/2}$ = 14.05 Gyr). The corresponding age
-equations are:
+With $\lambda_{238}$ = 1.55125 $\times 10^{-10} a^{-1}$ (t$_{1/2}$ =
+4.468 Gyr), $\lambda_{235}$ = 9.8485 $\times 10^{-10} a^{-1}$
+(t$_{1/2}$ = 703.8 Myr), and $\lambda_{232}$ = 0.495 $\times 10^{-10}
+a^{-1}$ (t$_{1/2}$ = 14.05 Gyr). The corresponding age equations are:
 
 \begin{equation}
   \begin{array}{rl}
@@ -1290,14 +1303,14 @@ zircon and, to a lesser extent, apatite, monazite and allanite.
 
 The $^{207}$Pb/$^{206}$Pb method is based on the U-Pb method and is
 obtained by dividing the two U-Pb members of Equation \ref{eq:Pb*} (or
-\ref{eq:Pb}), and taking into account that the natural
-$^{238}$U/$^{235}$U-ratio is 137.88:
+\ref{eq:Pb}), and taking into account that the average natural
+$^{238}$U/$^{235}$U-ratio is 137.818:
 
 \begin{equation}
 \frac{^{207}Pb^*}{^{206}Pb^*} = 
 \frac{\left(\frac{^{207}Pb}{^{204}Pb}\right)-\left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ}
 {\left(\frac{^{206}Pb}{^{204}Pb}\right)-\left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ}
-= \frac{1}{137.88} \frac{e^{\lambda_{235}t}-1}{e^{\lambda_{238}t}-1}
+= \frac{1}{137.818} \frac{e^{\lambda_{235}t}-1}{e^{\lambda_{238}t}-1}
 \label{eq:PbPb}
 \end{equation}
 
@@ -1321,7 +1334,7 @@ t$\rightarrow$0:
 
 \begin{equation}
   \left(\frac{^{207}Pb}{^{206}Pb}\right)^*_p =
-  \frac{\lambda_{235}}{137.88\lambda_{238}} = 0.04604
+  \frac{\lambda_{235}}{137.818\lambda_{238}} = 0.04607
 \label{eq:commonPb}
 \end{equation}
 
@@ -1431,7 +1444,7 @@ billion years. The positron emission mechanism mentioned in Chapter
 therefore safely be neglected. In addition to $^{40}$Ar, argon has two
 more stable isotopes: $^{36}$Ar and $^{38}$Ar. Argon makes up
 $\sim$1\% of the terrestrial atmosphere, with a fixed isotopic
-composition of $^{40}$Ar/$^{36}$Ar = 295.5 and $^{38}$Ar/$^{36}$Ar =
+composition of $^{40}$Ar/$^{36}$Ar = 298.5 and $^{38}$Ar/$^{36}$Ar =
 0.187. The argon contained in K-bearing minerals is made up of a
 mixture of radiogenic ($^{40}$Ar$^*$) and non-radiogenic gas
 ($^{40}$Ar$_\circ$):
@@ -1472,7 +1485,7 @@ or minerals with different K (and therefore $^{40}Ar^*$) contents, an
 
 which can be solved for t. Alternatively, we can simply assume that
 all the inherited argon has an atmospheric origin, so that
-$({}^{40}Ar/{}^{36}Ar)_\circ = 295.5$.
+$({}^{40}Ar/{}^{36}Ar)_\circ = 298.5$.
 
 \section{$^{40}$Ar/$^{39}$Ar dating}
 \label{sec:Ar-Ar}
@@ -1618,7 +1631,7 @@ of the U-Th-He chronometer:
 
 \begin{equation}
 \begin{array}{rl}
-^4He = & \left[8 \frac{137.88}{138.88} (e^{\lambda_{238}t} - 1) + 7 \frac{1}{138.88} (e^{\lambda_{235}t} - 1) \right] U +\\
+^4He = & \left[8 \frac{137.818}{138.818} (e^{\lambda_{238}t} - 1) + 7 \frac{1}{138.818} (e^{\lambda_{235}t} - 1) \right] U +\\[8pt]
 ~ & 6 (e^{\lambda_{232}t} - 1) Th + 0.1499 (e^{\lambda_{147}t} - 1) Sm
 \end{array}
 \label{eq:U-Th-He}
@@ -1627,8 +1640,8 @@ of the U-Th-He chronometer:
 Where the values `8', `7' and `6' refer to the number of
 $\alpha$-particles produced in the decay chains of $^{238}$U,
 $^{235}$U and $^{232}$Th, respectively (Figure \ref{fig:U-Th-series}),
-137.88 is the (constant) ratio of naturally occurring $^{238}$U and
-$^{235}$U, and the last term accounts for the (often negligible)
+137.818 is the (average) ratio of naturally occurring $^{238}$U and
+$^{235}$U in accessory minerals, and the last term accounts for the (often negligible)
 accumulation of helium by Sm-decay (Section \ref{sec:Sm-Nd}). It was
 Ernest Rutherford who first proposed that the U-Th-He decay scheme
 could be used as an absolute dating technique, making it the oldest
@@ -1681,7 +1694,7 @@ He through radioactive decay of U and Th, (b) loses He by thermal
 diffusion, and (c) undergoes monotonic cooling at a variable rate
 dT/dt. At high temperatures, the He will be lost quickly but as time
 progresses, the thermal diffusion becomes increasingly sluggish until
-the He is eventually `locked' into the crystal lattice and the istopic
+the He is eventually `locked' into the crystal lattice and the isotopic
 system is effectively \emph{closed}. If the thermal history is so that
 1/T increases linearly with time, then it is possible to calculate an
 equivalent `closure temperature' T$_c$. This is known as `Dodson's
@@ -1699,7 +1712,7 @@ aforementioned thermal history equals that which would have been
 obtained if He accumulated linearly since the rock passed through
 T$_c$.\\
 
-Although the closure temperature concept is an oversimplication of
+Although the closure temperature concept is an oversimplification of
 reality, it has great intuitive appeal. Consider, for example, a
 vertical transect in a rapidly exhuming mountain range. The
 \emph{apparent} U-Th-He ages along such a transect are approximately
@@ -1747,11 +1760,11 @@ behind. Although fission tracks can be directly observed by
 transmission electron microscopy (TEM), a more practical approach is
 to etch (a polished surface of) the host mineral with acid. This
 enlarges the damage zones and makes it possible to count them under an
-ordinary petrographic microscope. The volume density $N_s$ (in
+ordinary petrographic microscope. The volume density $n_s$ (in
 cm$^{-3}$) of the fission tracks is given by:
 
 \begin{equation}
-N_{s} = \frac{\lambda_f}{\lambda} [^{238}U] \left(e^{\lambda t}-1\right)
+n_{s} = \frac{\lambda_f}{\lambda} [^{238}U] \left(e^{\lambda t}-1\right)
 \label{eq:Ns}
 \end{equation}
 
@@ -1764,17 +1777,18 @@ related to the (observable) surface density $\rho_s$ (in cm$^{-2}$)
 by:
 
 \begin{equation}
-\rho_s = g L N_s
+\rho_s = g_s L n_s
 \label{eq:rhos}
 \end{equation}
 
-Where g is geometry factor (g=1 if determined on an internal and g=1/2
-on an external surface) and L is the etchable length of a fission
-track ($\sim$15$\mu$m). Rearranging Equation \ref{eq:Ns} for time:
+Where g\textsubscript{s} is geometry factor (g\textsubscript{s}=1 if
+determined on an internal and g\textsubscript{s}=1/2 on an external
+surface) and L is the etchable length of a fission track
+($\sim$15$\mu$m). Rearranging Equation \ref{eq:Ns} for time:
 
 \begin{equation}
 t = \frac{1}{\lambda}
-\ln\left(\frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g L
+\ln\left(\frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g_s L
 }+1\right)
 \label{eq:tFT}
 \end{equation}
@@ -1856,7 +1870,7 @@ shorter than those that subsequently formed above the PAZ. The
 probability distribution of the fission track lengths can be
 determined by measuring the distance between the two tips of a large
 number of (100, say) \emph{horizontally confined} fission tracks under
-the optical microscrope.  Sophisticated inverse modelling algorithms
+the optical microscope.  Sophisticated inverse modelling algorithms
 have been developed to interpret these length distributions and
 extract continuous time-temperature (t-T) paths from them. Such
 modelling exercises have become an integral part of modern fission
@@ -1995,7 +2009,7 @@ exponentially increasing cosmic ray intensity and cosmogenic nuclide
 production rate. So in the case of an eroding surface, the cosmogenic
 nuclide content can be used not to measure an exposure age, but an
 erosion rate ($\epsilon$). $\epsilon$ is a simple function of the
-production rate $P$ and the concentration $N$, multplied by a factor
+production rate $P$ and the concentration $N$, multiplied by a factor
 $\Lambda/\rho$, where $\rho$ is the rock density and $\Lambda$ is the
 attenuation length ($\sim$160 g/cm$^{-2}$).  This factor quantifies
 how rapidly the cosmic ray intensity decreases with depth in the rock:
@@ -2165,7 +2179,7 @@ equations giving the (spallogenic + muogenic) production rate relative
 to SLHL as a function of geographic latitude and elevation.\\
 
 Despite their limitations, the production rate scaling factors allow
-the calculation of TCN production rates at any location on the Earthâ€™s
+the calculation of TCN production rates at any location on the Earth'€™s
 surface, assuming that the sample is a slab of zero thickness taken
 from a horizontal planar surface. If these assumption are not
 fulfilled, the SLHL production rates must be multiplied by a second
@@ -2487,18 +2501,22 @@ functions.
 
 \section{Examples}
 
+Let $X$ and $Y$ indicate measured quantities associated with
+analytical uncertainty.  And let $a$ and $b$ be some error free
+parameters.
+
 \begin{enumerate}
 \item{addition:}
 \begin{align}
 & t = a X + b Y \Rightarrow \frac{\partial t}{\partial X} = a, 
-\frac{\partial t}{\partial Y} = b\\
+\frac{\partial t}{\partial Y} = b \nonumber\\
 & \Rightarrow \sigma^2_t = a^2 \sigma^2_X + b^2 \sigma^2_Y + 2ab~cov(X,Y)
 \label{eq:addition}
 \end{align}
 
 \item{subtraction:}
 \begin{equation}
-t = a X - b Y \Rightarrow \cdots \Rightarrow 
+t = a X - b Y \Rightarrow
 \sigma^2_t = a^2 \sigma^2_X + b^2 \sigma^2_Y - 2ab~cov(X,Y)
 \label{eq:subtraction}
 \end{equation}
@@ -2506,8 +2524,8 @@ t = a X - b Y \Rightarrow \cdots \Rightarrow
 \item{multiplication:}
 \begin{align}
 & t = a X Y \Rightarrow \frac{\partial t}{\partial X} = a Y, 
-\frac{\partial t}{\partial Y} = aX\\
-& \Rightarrow \sigma^2_t = (aY)^2 \sigma^2_X + (aX)^2 \sigma^2_Y + 2a^2 XY~cov(X,Y)\\
+\frac{\partial t}{\partial Y} = aX \nonumber\\
+& \Rightarrow \sigma^2_t = (aY)^2 \sigma^2_X + (aX)^2 \sigma^2_Y + 2a^2 XY~cov(X,Y) \nonumber\\
 & \Rightarrow \left(\frac{\sigma_t}{t}\right)^2 = \left(\frac{\sigma_X}{X}\right)^2 + 
   \left(\frac{\sigma_Y}{Y}\right)^2 + 2 \frac{cov(X,Y)}{X Y}
 \label{eq:multiplication}
@@ -2515,7 +2533,7 @@ t = a X - b Y \Rightarrow \cdots \Rightarrow
 
 \item{division:}
 \begin{equation}
-t = a \frac{X}{Y} \Rightarrow \cdots \Rightarrow 
+t = a \frac{X}{Y} \Rightarrow
 \left(\frac{\sigma_t}{t}\right)^2 = \left(\frac{\sigma_X}{X}\right)^2 + 
   \left(\frac{\sigma_Y}{Y}\right)^2 - 2 \frac{cov(X,Y)}{X Y}
 \label{eq:division}
@@ -2530,9 +2548,17 @@ t = a~e^{bX} \Rightarrow \frac{\partial f}{\partial X} = ab~e^{bX}
 
 \item{logarithms:}
 \begin{equation}
-t = a~\ln(bX) \rightarrow \frac{\partial f}{\partial X} = \frac{a}{X}
-\Rightarrow \sigma_t^2 = \left(\frac{a}{X}\right)^2 \sigma_X^2
+t = a~\ln(bX) \Rightarrow \frac{\partial f}{\partial X} = \frac{a}{X}
+\Rightarrow \sigma_t^2 = a^2 \left(\frac{\sigma_X}{X}\right)^2
 \label{eq:logarithms}
+\end{equation}
+
+\item{power:}
+\begin{equation}
+  t = a X^b \Rightarrow \frac{\partial f}{\partial X} = b \frac{a
+    X^b}{X} \Rightarrow \left(\frac{\sigma_t}{t}\right)^2 =
+  b^2\left(\frac{\sigma_X}{X}\right)^2
+\label{eq:power}
 \end{equation}
 
 \end{enumerate}
@@ -2547,13 +2573,15 @@ Applying the equation for the error propagation of a sum (Equation
 \ref{eq:addition}):
 
 \begin{equation}
-\sigma_{\overline{X}}^2 = \frac{1}{n} \sum_{i=1}^{n} \sigma^2_{X_i} = \frac{\sigma^2_X}{n}
+\sigma_{\overline{X}}^2 = \frac{1}{n} \sum_{i=1}^{n} \sigma^2_{X_i} =
+\frac{\sigma^2_X}{n}
 \label{eq:varianceofthemean}
 \end{equation}
 
-where we assume that all n measurements were done
-\emph{independently}, so that $cov(X_i,X_j)=0$ $\forall$ i, j.  The
-standard deviation of the mean is known as the \underline{standard error}:
+where we assume that all $n$ measurements were done
+\emph{independently}, so that $cov(X_i,X_j)=0 \forall i, j$.  The
+standard deviation of the mean is known as the \underline{standard
+  error}:
 
 \begin{equation}
 \sigma_{\overline{X}} = \frac{\sigma_X}{\sqrt{n}}
@@ -2564,11 +2592,12 @@ This means that the standard error of the mean monotonically decreases
 with the square root of sample size. In other words, we can
 arbitrarily increase the \emph{precision} of our analytical data by
 acquiring more data. However, it is important to note that the same is
-generaly not the case for the \emph{accuracy} of those data. The
+generally not the case for the \emph{accuracy} of those data. The
 difference between precision and accuracy is best explained by a darts
-board analogy:
+board analogy:\\
 
-\begin{figure}[!ht]
+\noindent
+\begin{minipage}{\textwidth}
   \centering
   \ifpdf
   \def\svgwidth{\textwidth}
@@ -2576,7 +2605,9 @@ board analogy:
   \else
   \includegraphics[width=10cm]{bullseye.png}
   \fi
-\end{figure}
+\end{minipage}
+
+\bigskip
 
 Whereas the analytical precision can be computed from the data using
 the error propagation formulas introduced above, the only way to get a
@@ -2639,7 +2670,7 @@ standards'.
   $^{208}$Pb = 10.63\%. Assume the following initial Pb composition:
   204 : 206 : 207 : 208 = 1.00 : 16.25 : 15.51 : 35.73. The decay
   constants for $^{238}$U, $^{235}$U and $^{232}$Th are given in
-  Section \ref{sec:U-Pb}. $^{238}$U/$^{235}$U = 137.88. Calculate the
+  Section \ref{sec:U-Pb}. $^{238}$U/$^{235}$U = 137.818. Calculate the
   $^{206}$Pb/$^{238}$U, $^{207}$Pb/$^{235}$U, $^{208}$Pb/$^{232}$Th
   and $^{206}$Pb/$^{207}$Pb-age of the zircon. Give an account of its
   formation history. \\ \rotatebox[origin=c]{180}{[Answer: 1.405,
@@ -2667,7 +2698,7 @@ $^{40}$Ar$^*/^{39}$Ar & 2.27 & 4.97 & 6.68 & 9.58 & 10.25 & 10.10 & 10.26 \\
 \end{tabular}
 \end{table}
 
-The analysis was done using a co-irradated 1.062 Ga biotite age
+The analysis was done using a co-irradiated 1.062 Ga biotite age
 standard yielding a $^{40}$Ar$^*$/$^{39}$Ar-ratio of 27.64.  Construct
 the $^{40}$Ar/$^{39}$Ar age spectrum and use this to comment on the
 thermal history of the host rock. t$_{1/2}$($^{40}$Ar) = 1.248
@@ -2677,7 +2708,7 @@ Gyr.\\ \rotatebox[origin=c]{180}{[Answer: 115, 243, 319, 442, 470, 463
 \item How many cm$^3$ of helium does a rock weighing 1 kg and
   containing 2 ppm of uranium produce after 1 billion years? The molar
   volume of an ideal gas is 22.414 litres. Uranium has an atomic mass
-  of 238.04 with $^{238}$U/$^{235}$U = 137.88. Decay constants of U
+  of 238.04 with $^{238}$U/$^{235}$U = 137.818. Decay constants of U
   are given in Section \ref{sec:U-Pb}.
 \rotatebox[origin=c]{180}{[Answer: 0.27 cm$^3$]}
 
@@ -2734,29 +2765,237 @@ The half-life of $^{238}$U is t$_{1/2}$ = 4.47 Gyr.\\
 
 \end{enumerate}
 
-\chapter{{\tt Matlab} practicals}
+\chapter{Programming practicals}
 \label{sec:programming}
 
-{\tt Matlab} is a mathematical scripting language that is both
-powerful and easy to use. The full version of the software is very
-expensive but a reasonably complete student version can be purchased
-for $\pounds$55 + VAT from {\tt http://mathworks.com}. Alternatively,
-{\tt Octave} is an open source clone of Matlab that can be downloaded
-for free from\\ {\tt http://www.gnu.org/software/octave}.
+In this Chapter you will process some real geochronological datasets
+using either \texttt{R} or \texttt{Matlab}. These are both
+mathematical scripting languages that are both powerful and easy to
+use.\\
 
-\section{Introduction to {\tt Matlab}}
+\texttt{R} is a free and open programming language that works on any
+operating system, including \texttt{Windows}, \texttt{OS-X} and
+\texttt{Unix/Linux}. It can be downloaded and installed from
+\texttt{http://r-project.org}.\\
 
-This exercise will present a brief tutorial of the most basic
-functionality in {\tt Matlab}, which will cover most commands you will
-need for the subsequent computer practicals.
+\texttt{Matlab} is a proprietary programming environment. The full
+version of this software is very expensive but a reasonably complete
+student version can be purchased for $\pounds$55 + VAT from
+\texttt{http://mathworks.com}. Alternatively, \texttt{Octave} is an
+open source clone of \texttt{Matlab} that can be downloaded for free
+from \texttt{http://www.gnu.org/software/octave}.\\
+
+Sections~\ref{sec:R} and \ref{sec:Matlab} will present two brief
+tutorials of \texttt{R} and \texttt{Matlab}, respectively.  These will
+cover most commands that you will need for the subsequent computer
+practicals.
+
+\section{Introduction to \texttt{R}}
+\label{sec:R}
+
+A number of different graphical user interfaces (GUIs) are available
+to interact with \texttt{R}. The most popular of these are
+\texttt{Rgui}, \texttt{RStudio}, \texttt{RCommander} and
+\texttt{Tinn-R}.
+
+\begin{enumerate}
+  \item Starting these applications or running \texttt{R} in a text
+    terminal presents the user with a command line prompt. Anything
+    that is typed after the \texttt{>} symbol will be evaluated
+    immediately. Thus, we can use \texttt{R} as a calculator:
 
 \begin{verbatim}
-% Anything following a percent symbol is a 
-% comment and is ignored by Matlab. It is 
-% considered good practice to document your 
-% code with lots of comments, as will be 
-% done for this tutorial.
+> 1 + 1
+> sqrt(2)
+> exp(log(10))
+> 31 %% 14
+\end{verbatim}
 
+\item Alternatively, code can also be saved as text (using a built-in text
+  editor) and saved as \texttt{mycode.R}, say. This code can then be
+  copied and pasted at the command line prompt. Or it can be called from
+  the command line using the \texttt{source()} function:
+
+\begin{verbatim}
+> source('mycode.R')
+\end{verbatim}
+
+\item In the remainder of this tutorial, we will assume that your code is
+  run from a text file unless explicitly stated otherwise. The
+  \texttt{\#}~symbol marks the beginning of a comment.  \texttt{R}
+  ignores anything that follows it:
+
+\begin{verbatim}
+# The arrow symbol is used to assign a value to a
+# variable. Note that the arrow can point both ways:
+foo <- 2
+4 -> bar
+print(foo*bar)
+
+# Defining a vector of multiple values:
+myvec <- c(0,1,2,3,4,5)
+# or, equivalently:
+myvec <- seq(0,5)
+# or
+myvec <- seq(from=0,to=5,by=1)
+# or
+myvec <- 0:5
+
+# Turn myvec into a 2x3 matrix:
+mymat <- matrix(myvec,nrow=2)
+
+# Accessing one or more elements from a vector or matrix:
+x <- myvec[3]
+y <- myvec[1:3]
+z <- mymat[1,2:3]
+
+# Change the third value in the second row of mymat to 10:
+mymat[2,3] <- 10
+
+# Change the entire second column of mymat to -1:
+mymat[,2] <- -1
+
+# Transpose of a matrix:
+flipped <- t(mymat)
+
+# Element-wise multiplication (*) 
+# vs. matrix multiplication (%*%):
+rectangle <- mymat * mymat
+square <- mymat %*% flipped
+\end{verbatim}
+
+\item If you want to learn more about a function, type \texttt{help()} or
+\texttt{?} at the command line prompt:
+
+\begin{verbatim}
+> help(c)
+> ?matrix
+\end{verbatim}
+
+\item In addition to \texttt{R}'s built-in functions, you can also define
+  your own:
+
+\begin{verbatim}
+cube <- function(n){
+    return(n^3)
+}
+
+# Using this function to take the cube of 3:
+c3 <- cube(3)
+
+# Conditional statement:
+toss <- function(){
+    if (runif(1)>0.5){ # runif(n) draws n random 
+        print("head")  # numbers between 0 and 1
+    } else {
+        print("tail")
+    }
+}
+
+# Use a for loop to toss 10 virtual coins:
+for (i in 1:10) {
+    toss()
+}
+\end{verbatim}
+
+\item The purpose of the practical exercises in
+  Sections~\ref{sec:U-Pb-R}-\ref{sec:FT-R} is to process datasets
+  contained in external data files. For this you will need to be able
+  to navigate through your file system and load the necessary files:
+
+\begin{verbatim}
+> ls()          # list all the variables
+> rm(list=ls()) # clear the current workspace
+> getwd()       # get the current working directory
+> setwd("path_to_a_valid_directory")
+\end{verbatim}
+
+\item Use the above commands to navigate to the directory containing the
+file named \texttt{RbSr.csv}. Then read this file into memory:
+
+\begin{verbatim}
+RbSr <- read.csv("RbSr.csv",header=TRUE)
+\end{verbatim}
+
+Type \texttt{names(RbSr)} or \texttt{colnames(RbSr)} at the command
+prompt to list the variable names (column headers) contained in this
+dataset.
+
+\item Let us now perform an isochron regression
+  (Section~\ref{sec:Rb-Sr}) through these Rb-Sr data: \label{itm:lm}
+
+\begin{verbatim}
+# Plot Sr87Sr86 against Rb87Sr86:
+plot(RbSr[,'Rb87Sr86'],RbSr[,'Sr87Sr86'],type="p")
+
+# fit a linear model to the data
+fit <- lm(Sr87Sr86 ~ Rb87Sr86, data = RbSr)
+\end{verbatim}
+
+\item \texttt{fit} is a `list' object. Type \texttt{str(fit)} at the
+  command prompt to see its structure. One of its items is
+  \verb|fit$coefficients|, which contains the slope and the intercept
+  of the linear fit. Alternatively, we can also access these values
+  using the \texttt{coef()} function. The following code uses this
+  function to calculate the isochron age:
+
+\begin{verbatim}
+# define the 87Rb decay constant (in Ma-1):
+lam87 <- 1.42e-5
+# compute the age from the slope:
+age <- log(1 + coef(fit)[2])/lam87
+
+# predict the Sr87Sr86-ratios for the
+# full range of Rb87Sr86-values:
+Rb87Sr86 <- c(0,max(RbSr[,'Rb87Sr86']))
+Sr87Sr86 <- coef(fit)[1] + coef(fit)[2]*Rb87Sr86
+
+# add the predicted ratios to the existing plot:
+lines(Rb87Sr86,Sr87Sr86)
+# label with the isochron age: 
+title(age)
+\end{verbatim}
+
+\item One of the most powerful features of \texttt{R} is the
+  availability of thousands of `packages' providing additional
+  functionality to the built-in functions.  For example, let us
+  download and install the \texttt{IsoplotR} package from the
+  `Comprehensive R Archive Network' (CRAN):
+
+\begin{verbatim}
+> install.packages('IsoplotR')
+\end{verbatim}
+
+\item We can use \texttt{IsoplotR} to redo the isochron regression
+  exercise using a more rigorous weighted regression algorithm that
+  takes into account the analytical uncertainties in both the
+  \textsuperscript{87}Sr/\textsuperscript{86}Sr- and
+  \textsuperscript{87}Rb/\textsuperscript{86}Sr-ratios:
+
+\begin{verbatim}
+# load the functionality of the IsoplotR package:
+library('IsoplotR')
+
+# load the data (see ?read.data for details):
+RbSr2 <- read.data('RbSr.csv',method='Rb-Sr',format=1)
+
+# compute and plot the isochron diagram:
+isochron(RbSr2)
+\end{verbatim}
+
+\end{enumerate}
+
+\section{Introduction to \texttt{Matlab}}
+\label{sec:Matlab}
+
+\begin{enumerate}
+\item \texttt{Matlab}, like \texttt{R}, allows the user to run code
+  either directly at the command line prompt, or from a built-in text
+  editor. Anything following a percent symbol (\texttt{\%}) is a
+  comment and is ignored. It is considered good practice to document
+  your code with lots of comments, as will be done in this tutorial.
+  
+\begin{verbatim}
 % Ending a line with a semi-colon 
 % suppresses output to the console:
 'be loud'
@@ -2772,7 +3011,14 @@ foo = 2;
 bar = 4;
 foo = foo*bar;
 foo
+\end{verbatim}
 
+\item As the name suggest, \texttt{Matlab} (which stands for
+  \texttt{MAT}rix \texttt{LAB}oratory) is capable of, and excels at,
+  dealing with collections of multiple numbers arranged in vectors and
+  matrices:
+
+\begin{verbatim}
 % Data can be entered as vectors:
 x = [0 2 4 6 8 10]
 % or using shorthand syntax:
@@ -2801,20 +3047,26 @@ a.*a
 
 % Transpose of a matrix:
 z'
+\end{verbatim}
 
-% In addition to Matlab's built-in operators 
-% and functions, you can also define your own:
+\item In addition to Matlab's built-in operators and functions, you
+  can also define your own:
+  
+\begin{verbatim}
+% take the cube of the input argument:
 function out = cube(in)
   out = in^3;
 end
 
-% After saving the code in a file named cube.m,
-% you can then use this function as follows:
+You can use this function as follows:
 c3 = cube(3)
+\end{verbatim}
 
-% A useful feature of Matlab that is missing from 
-% most other programming languages is the ability 
-% to accommodate several output parameters:
+\item A useful feature of Matlab that is missing from most other
+  programming languages is the ability to accommodate several output
+  parameters:
+
+\begin{verbatim}
 function [m,s] = basicStats(dat)
   m = mean(dat); % mean
   s = std(dat);  % standard deviation
@@ -2822,9 +3074,21 @@ end
 
 % create a row vector of 10 random numbers
 randnum = rand(1,10);
+
 % use our new function
 [m,s] = basicStats(randnum)
+\end{verbatim}
 
+An extensive library of documentation is built into \texttt{Matlab}.
+For example, to access further information about the \texttt{rand}
+function, simply type \texttt{help rand} or \texttt{doc rand} at the
+command prompt.
+
+\item\texttt{Matlab} is a fully fledged programming language, which
+  has flow structures such as \texttt{if} statements and \texttt{for}
+  loops:
+
+\begin{verbatim}
 % Conditional statement:
 function coinToss
   % 'rand' produces numbers between 0 and 1
@@ -2835,96 +3099,94 @@ function coinToss
     disp('tail')
   end
 end
+\end{verbatim}
 
-% For loop:
+Copy the \texttt{coinToss} function into a text file named
+\texttt{coinToss.m} and save it in the current directory. You can then
+load the contents of the file by simply typing its name without the
+\texttt{.m} extension:
+
+\begin{verbatim}
+% Use this function in a for loop:
 for i=1:10,
   coinToss
 end
+\end{verbatim}
 
+\item File and variable management:
+
+\begin{verbatim}
 % List all the variables in the current workspace:
 who
 whos
 
-% Remove some or all variables
-% from the current workspace:
+% Remove some or all variables from the workspace:
 clear m,s
 who
 clear all
 who
 
-% Copy the 'coinToss' function into a text file 
-% named 'coinToss.m' and save it in the current 
-% directory. You can then load the contents of 
-% the file by simply typing its name without 
-% the '.m' extension:
-coinToss
-
 % Basic file management is done with UNIX commands:
 pwd   % pass the working directory
 cd .. % move up one directory
 ls    % list all files in the current directory
-
-% Use the above commands to navigate to the 
-% directory containing the 'population.csv' file.
-% To view the contents of the file:
-type('population.csv')
-
-% To read the actual population dataset
-% into memory, ignoring the header:
-pop = csvread('population.csv',1,0);
-
-% To access the help files of the 'csvread' 
-% function and find out the meaning of the 
-% various input arguments:
-doc csvread
-
-% Incidentally, the 'type' function can also 
-% be used to view the Matlab code of built-in 
-% and other functions:
-type('mean')
-
-% Plot the first column of 'pop' 
-% against the second one:
-plot(pop(:,1),pop(:,2),'-k')
-title("World population through time")
-xlabel('year')
-ylabel('population [millions]')
-
-% Get the number of rows and columns of the dataset:
-[nc,nr] = size(pop);
-
-% Extract the data from 1965 until 2014:
-years = pop(:,1);
-pop65 = pop(years>=1965,:);
-
-% Fit a linear model through these data:
-x = pop65(:,1);
-y = pop65(:,2);
-[fit,S] = polyfit(x,y,1);
-% We won't use S today but we will in Practical 4!
-
-% Create a new figure window
-figure(2)
-plot(x,y,'ok')
-hold on
-ypred = fit(1)*x+fit(2);
-plot(x,ypred,'-k')
-
-% Close all plot windows:
-close all;
 \end{verbatim}
 
-And that concludes this short tutorial. Now try to calculate a Rb-Sr
-age by regressing an isochron through the following data (recall that
-$\lambda_{87}$ = 0.0000142 Myr$^{-1}$.%, see Section \ref{sec:Rb-Sr}):
+Use the above commands to navigate to the directory containing the
+\texttt{RbSr.csv} file.
 
-\begin{table}[!ht]
-\centering
-\begin{tabular}{l|lllll}
-$^{87}$Sr/$^{86}$Sr & 0.707 & 0.736 & 0.771 & 0.757 & 0.785\\
-$^{87}$Rb/$^{86}$Sr & 1.00 & 5.00 & 10.00 & 8.00 & 12.00
-\end{tabular}
-\end{table}
+\begin{verbatim}
+% To view the contents of this file:
+type('RbSr.csv')
+
+% Incidentally, the 'type' function can also 
+% be used to view the code of Matlab functions:
+type('mean')
+\end{verbatim}
+
+\item Let us now apply our knowledge of \texttt{Matlab} to a
+  geochronological problem:
+
+\begin{verbatim}
+% Read the Rb-Sr dataset ignoring the header:
+RbSr = csvread('RbSr.csv',1,0);
+
+% Plot the Sr87Sr86-ratio (first column)
+% against the Rb87Sr86-ratio (third column):
+Rb87Sr86 = RbSr(:,1);
+Sr87Sr86 = RbSr(:,3);
+plot(Rb87Sr86,Sr87Sr86,'ok')
+xlabel('87Rb/86Sr')
+ylabel('87Sr/86Sr')
+\end{verbatim}
+
+\item This should yield a linear array of Rb-Sr data. Let us now fit
+  an isochron through these data. \texttt{Matlab} includes several
+  functions to perform linear regression, including \texttt{regress}
+  and \texttt{fitlm}. We will use the \texttt{polyfit} function:
+
+\begin{verbatim}
+% Fit a first order polynomial through the data:
+[fit,S] = polyfit(Rb87Sr86,Sr87Sr86,1);
+% (S will be used in a later practical)
+
+% define the 87Rb decay constant (in Ma-1):
+lam87 = 1.42e-5;
+% compute the age from the slope:
+age = log(1 + fit(1))/lam87;
+
+% predict the Sr87Sr86-ratio for the
+% full range of Rb87Sr86-values:
+x = [0,max(Rb87Sr86)];
+y = fit(2) + fit(1)*x;
+
+# add the prediction and age to the existing plot:
+hold on;
+plot(x,y,'-r')
+title(age)
+\end{verbatim}
+
+\end{enumerate}
 
 \section{U-Th-Pb data reduction}
 \label{sec:U-Pb-R}
@@ -2938,29 +3200,35 @@ Section \ref{sec:U-Pb}. However, this does not cause any major issues
 to us because:
 
 \begin{enumerate}
-\item The mineral analysed is zircon, which is a mineral that
-  incorporates very little common Pb in its crystal structure during
-  crystallisation.
+\item The mineral analysed is zircon, which incorporates very little
+  common Pb in its crystal structure during crystallisation.
 \item The ages are sufficiently old for the radiogenic Pb to dominate
   the common Pb component by orders of magnitude.
 \end{enumerate}
 
-In this exercise, we will use standard-sample bracketing (Section
-\ref{sec:bracketing}) to process some raw mass spectrometer data in
-    {\tt Matlab}:
+In this exercise, we will use standard-sample bracketing
+(Section~\ref{sec:bracketing}) to process some raw mass spectrometer
+data in \texttt{R} or \texttt{Matlab}:
 
 \begin{enumerate}
 \item Load the input files {\tt 91500.csv} (sample) and {\tt GJ1.csv}
-  (standard) into {\tt Matlab}.
-\item Plot the $^{238}$U signal against time.
-\item Given that GJ-1 has a known age of 600.3874 Ma, what are its
-  expected $^{206}$Pb/$^{238}$U, $^{207}$Pb/$^{235}$U and
-  $^{208}$Pb/$^{232}$Th ratios?
-\item Compare these values with the measured ratios, computed as the
-  arithmetic mean signal.  Is there a significant difference between
-  the measured and the expected ratios? What could be causing this?
-\item Calculate a correction factor by dividing the measured GJ-1
-  ratios by the expected values. \label{corr}
+  (standard) into memory.
+\item Plot the $^{238}$U signal against time. The resulting curve
+  consists of three segments: (i) the first 20 seconds record the
+  background (`blank') signal of the ICP-MS, measured while the laser
+  was switched off; (ii) 20~seconds into the run, the laser is turned
+  on and the ions arrive in the ICP-MS; (iii) After the signal has
+  ramped up quickly, it slowly drops over time as the laser goes out
+  of focus whilst drilling deeper into the sample. This is the
+  `signal'.
+\item Given that GJ-1 has a known age of 600.4 Ma, what are its
+  expected $^{206}$Pb/$^{238}$U and $^{207}$Pb/$^{235}$U ratios?
+\item Compare these values with the arithmetic mean of the measured
+  ratios, ignoring the first 25~seconds of the ICP-MS signal. 
+  Is there a significant difference between the measured and
+  the expected ratios? What could be causing this?
+\item Calculate a correction factor by dividing the expected GJ-1
+  ratios by the measured values. \label{corr}
 \item Calculate the measured isotopic ratios for sample 91500.
 \item Apply the correction factor calculated in step \ref{corr} to
   these measurements.
@@ -2972,8 +3240,8 @@ In this exercise, we will use standard-sample bracketing (Section
 \section{$^{40}$Ar/$^{39}$Ar data reduction}
 \label{sec:Ar-Ar-R}
 
-In this exercise, we will use {\tt Matlab} to reduce some synthetic
-$^{40}$Ar/$^{39}$Ar data. You are provided with three input files:
+In this exercise, we will reduce some synthetic $^{40}$Ar/$^{39}$Ar
+data. You are provided with three input files:
 \begin{enumerate}
 \item{\tt smpl.csv}: $^{36}$Ar, $^{39}$Ar and $^{40}$Ar as a function
   of time (t) for the sample.
@@ -2989,10 +3257,11 @@ To perform the data reduction, please follow the following steps:
 \begin{enumerate}
 \item Load the three input files.
 \item Plot the $^{40}$Ar signal of the sample against time. Do the
-  same for the $^{36}$Ar signal in the blank. What's the difference?
+  same for the $^{36}$Ar signal in the blank. What is the difference?
 \item Perform a linear regression of the $^{36}$Ar, $^{39}$Ar and
   $^{40}$Ar signals through time and determine the intercept at t=0.
-\item Subtract the blank signals from the sample and standard signals.
+\item Subtract the `time zero' intercepts of the blank from those of
+  the sample and standard.
 \item Apply an atmospheric correction assuming that all $^{36}$Ar has
   an atmospheric origin.
 \item Calculate the J-value of the standard.
@@ -3000,6 +3269,7 @@ To perform the data reduction, please follow the following steps:
 \end{enumerate}
 
 \section{Error propagation}
+\label{sec:errorprop-R}
 
 This exercise will build on the results from the previous two
 practicals.
@@ -3011,13 +3281,15 @@ practicals.
   the covariance between the two can safely be neglected.
 
 \item Calculate the standard errors of the mean $^{206}$Pb/$^{238}$U
-  signal ratios for the sample (91500) and the standard (GJ-1), using
-  {\tt Matlab}'s {\tt mean} and {\tt std} functions.
+  signal ratios for the sample (91500) and the standard (GJ-1) using
+  the \texttt{mean} and \texttt{sd} (for \texttt{R}) or \texttt{std}
+  (for \texttt{Matlab}) functions.
 
 \item Propagate the analytical uncertainties of the U-Pb age, ignoring
   the covariance terms. Recall that 
 
-$$ t = \frac{1}{\lambda_{238}}\ln\left(1 + \frac{{}^{206}Pb}{{}^{238}U}\right) $$
+$$ t = \frac{1}{\lambda_{238}}\ln\left(1 +
+  \frac{{}^{206}Pb}{{}^{238}U}\right) $$
 
 If you want you can use the simplifying approximation that $\ln$(1+X)
 $\approx X$ if X $\ll$ 1 (this assumption may not be correct for the
@@ -3025,8 +3297,16 @@ $^{207}$Pb/$^{235}$U-age). \label{loglin}
 
 \item Compute the analytical uncertainties associated with the linear
   extrapolation of the argon signals of the sample and the standard in
-  Section \ref{sec:Ar-Ar-R}. All the relevant information is provided
-  in the output of the {\tt polyfit} function:
+  Section \ref{sec:Ar-Ar-R}. If you use \texttt{R}, the covariance
+  matrix of the slope and intercept can be simply obtained from the
+  \texttt{vcov(fit)} function, where \texttt{fit} is the output of the
+  \texttt{lm} function (see item~\ref{itm:lm} of
+  Section~\ref{sec:R}). The corresponding standard errors are then
+  found by taking the square root of the diagonal elements of this
+  matrix.
+
+  For \texttt{Matlab}, all the relevant information is provided in the
+  output of the \texttt{polyfit} function:
 
 \begin{verbatim}
 help(polyfit)
@@ -3045,7 +3325,7 @@ is the inverse of R.
 
 Based on these instructions, I have written the following function to
 calculate the standard errors of the fitting parameters from the
-second output parameter of the {\tt polyfit} function:
+second output parameter of the \texttt{polyfit} function:
 
 \begin{verbatim}
 function se = S2se(S)
@@ -3062,18 +3342,19 @@ end
 \end{enumerate}
 
 \section{Fission tracks}
+\label{sec:FT-R}
 
-In this exercise, you will use your {\tt Matlab} programming skills to
-calculate some fission track ages. You are given the following
-datasets:
+In this exercise, you will use your programming skills to calculate
+some fission track ages. You are given the following datasets:
 
 \begin{enumerate}
-\item {\tt DUR.csv}: a table with two columns listing the number of
+\item\texttt{DUR.csv}: a table with two columns listing the number of
   spontaneous tracks $N_s$ and induced tracks $N_i$ counted in 25
   grains of an apatite age standard (t = 31.4 Ma) from Durango,
   Mexico.  Note that these pairs of tracks were counted over the same
-  area, so that $\rho_s/\rho_i$ = $N_s/N_i$ in Equation~\ref{eq:tzeta}.
-\item{\tt MD.csv}: a similar table for an apatite sample from Mount
+  area, so that $\rho_s/\rho_i$ = $N_s/N_i$ in
+  Equation~\ref{eq:tzeta}.
+\item\texttt{MD.csv}: a similar table for an apatite sample from Mount
   Dromedary, Australia.
 \end{enumerate}
 

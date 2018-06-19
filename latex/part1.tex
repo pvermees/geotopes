@@ -8,7 +8,18 @@
 \pdftrue
 
 % to compile html file, set \pdffalse on the previous line
-% and run htlatex index.tex "html,2,next" at the terminal
+% copy latex/part1.tex as latex/index.tex
+% run htlatex index.tex "html,2,next" at the terminal
+% run ./fixencodings.sh to fix possible unicode errors
+% add the following lines to index.ssh to adjust page width:
+% body {
+%     max-width: 800px;
+%     margin: auto;
+% }
+%
+% img[alt*="PIC"] {
+%     width: 800px;
+% }
 
 \begin{document}
 

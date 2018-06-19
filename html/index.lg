@@ -290,12 +290,13 @@ File: NeBe.png
 --- needs --- index.idv[218] ==> index116x.png ---
 --- needs --- index.idv[220] ==> index117x.png ---
 --- needs --- index.idv[222] ==> index118x.png ---
---- needs --- index.idv[224] ==> index119x.png ---
+--- needs --- index.idv[223] ==> index119x.png ---
+--- needs --- index.idv[225] ==> index120x.png ---
 File: bullseye.png
 File: covariance.png
---- needs --- index.idv[226] ==> index120x.png ---
---- needs --- index.idv[228] ==> index121x.png ---
---- needs --- index.idv[230] ==> index122x.png ---
+--- needs --- index.idv[227] ==> index121x.png ---
+--- needs --- index.idv[229] ==> index122x.png ---
+--- needs --- index.idv[231] ==> index123x.png ---
 --- characters ---
 Font("cmex","10","10","100")
 Font("cmr","5","5","100")
