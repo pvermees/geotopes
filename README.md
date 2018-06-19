@@ -14,8 +14,8 @@ This respository contains the following directories:
   [home page](http://ucl.ac.uk/~ucfbpve/geotopes). These files
   were compiled from the LaTeX source code using htlatex.
 
-* [matlab](https://www.github.com/pvermees/geotopes/tree/master/matlab) -
-  Input files for the Matlab practicals.
+* [practicals](https://www.github.com/pvermees/geotopes/tree/master/practicals) -
+  Input files for the R/Matlab practicals.
 
 ## Author
 

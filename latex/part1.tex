@@ -2797,6 +2797,7 @@ to interact with \texttt{R}. The most popular of these are
 > 1 + 1
 > sqrt(2)
 > exp(log(10))
+> 31 %% 14
 \end{verbatim}
 
 \item Alternatively, code can also be saved as text (using a built-in text
@@ -3201,12 +3202,19 @@ data in \texttt{R} or \texttt{Matlab}:
 \begin{enumerate}
 \item Load the input files {\tt 91500.csv} (sample) and {\tt GJ1.csv}
   (standard) into memory.
-\item Plot the $^{238}$U signal against time.
+\item Plot the $^{238}$U signal against time. The resulting curve
+  consists of three segments: (i) the first 20 seconds record the
+  background (`blank') signal of the ICP-MS, measured while the laser
+  was switched off; (ii) 20~seconds into the run, the laser is turned
+  on and the ions arrive in the ICP-MS; (iii) After the signal has
+  ramped up quickly, it slowly drops over time as the laser goes out
+  of focus whilst drilling deeper into the sample. This is the
+  `signal'.
 \item Given that GJ-1 has a known age of 600.4 Ma, what are its
-  expected $^{206}$Pb/$^{238}$U, $^{207}$Pb/$^{235}$U and
-  $^{208}$Pb/$^{232}$Th ratios?
+  expected $^{206}$Pb/$^{238}$U and $^{207}$Pb/$^{235}$U ratios?
 \item Compare these values with the arithmetic mean of the measured
-  ratios.  Is there a significant difference between the measured and
+  ratios, ignoring the first 25~seconds of the ICP-MS signal. 
+  Is there a significant difference between the measured and
   the expected ratios? What could be causing this?
 \item Calculate a correction factor by dividing the expected GJ-1
   ratios by the measured values. \label{corr}
