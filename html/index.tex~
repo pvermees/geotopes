@@ -8,10 +8,10 @@
 \pdffalse
 
 % to compile html file, set \pdffalse on the previous line
-% copy latex/part1.tex as html/index.tex
+% copy latex/part1.tex as latex/index.tex
 % run htlatex index.tex "html,2,next" at the terminal
 % run ./fixencodings.sh to fix possible unicode errors
-% add the following lines to index.css to adjust page width:
+% add the following lines to index.ssh to adjust page width:
 % body {
 %     max-width: 800px;
 %     margin: auto;
@@ -43,7 +43,7 @@
   KLB 116
   \end{large}
   \vfill
-  doi:10.31223/osf.io/sj4ft
+  doi:10.17605/OSF.IO/SJ4FT
 \end{titlepage}
 
 \tableofcontents
@@ -59,12 +59,12 @@ problems, such as the age of the Earth, the origin and formation of
 magmatic rocks, palaeotemperatures in sedimentary basins,
 palaeoclimatology etc.  Isotope geochemistry forms an integral part of
 modern Earth Sciences and numerous important discoveries have been
-made thanks to this research.  Awareness of these techniques is
-required to understand research reports and geological interpretations
-based on isotopic methods. Isotope geochemistry plays an important
-role in peripheral fields of research such as planetology (origin and
-evolution of the Solar system) and archaeology (origin and age of
-settlements, tools and artifacts).\\
+made thanks to this research.  Every Earth Scientist needs to be aware
+of these techniques in order to understand research reports and
+geological interpretations based on isotopic methods. Isotope
+geochemistry plays an important role in peripheral fields of research
+such as planetology (origin and evolution of the Solar system) and
+archaeology (origin and age of settlements, tools and artifacts).\\
 
 The use of naturally occurring radioactive isotopes to date minerals
 and rocks is the oldest branch of isotope geology. The foundations of
@@ -84,19 +84,20 @@ of increasingly sensitive analytical equipment, ever more isotopic
 $^{40}$Ar/$^{39}$Ar \citep{merrihue1966}, Sm/Nd \citep{lugmair1974},
 etc.\\
 
-During the 1960s, geochemists began to investigate the non-radiogenic
-composition of igneous rocks with the aim to understand their source
-and origin. This line of research greatly expanded over the course of
-the 1970s and 80s and nowadays the isotopic composition of elements
-such as Sr and Nd in rocks and minerals is an established petrogenetic
-indicator. The discovery that the isotopes of the light elements (H,
-C, N, O, S) are fractionated by physical and chemical processes dates
-back to the 1930s. The isotopic composition of these elements can
-therefore be used to detect and understand the hydrospheric and
-lithospheric processes causing such fractionation
+During the 1960s, geochemists began to investigate the isotopic
+composition of elements which are partly made of radiogenic isotopes
+with the aim to understand the source and origin of the igneous
+rocks. This line of research greatly expanded over the course of the
+1970s and 80s and nowadays the isotopic composition of elements such
+as Sr and Nd in rocks and minerals is generally considered as an
+important petrogenetic indicator. The discovery that the isotopes of
+the light elements (H, C, N, O, S) are fractionated by physical and
+chemical processes dates back to the 1930s. The isotopic composition
+of these elements can therefore be used to detect and understand the
+hydrospheric and lithospheric processes causing such fractionation
 \citep{urey1947}. This has led to a better understanding of the
 physiochemical conditions under which rocks and minerals are
-formed. Temperature is the most important of these parameters and the
+formed. Temperature is the most important of these conditions and the
 aforementioned elements are often used for palaeothermometry.\\
 
 These lecture notes cover the first half of an Isotope Geology module
@@ -180,7 +181,7 @@ Libby, W.~F.
 
 \bibitem[Lugmair(1974)]{lugmair1974}
 Lugmair, G.
-\newblock Sm-Nd ages: a new dating method.
+\newblock Sm-nd ages: a new dating method.
 \newblock \emph{Meteoritics}, 9:\penalty0 369, 1974.
 
 \bibitem[Merrihue and Turner(1966)]{merrihue1966}
@@ -250,7 +251,7 @@ by several natural processes, forming the basis of
 $^{18}_{~8}$O/$^{16}_{~8}$O palaeothermometry (see the second half of
 this course). When we try to add yet another neutron to the atomic
 nucleus of oxygen, the nucleus becomes unstable and undergoes
-radioactive decay.  Therefore, no $^{19}_{~8}$O exists in nature.
+radioactive decay.  Therefore, no $^{19}_{~8}$O exists in Nature.
 
 \section{Radioactivity}
 \label{sec:radioactivity}
@@ -281,12 +282,12 @@ means of a number of different mechanisms:
   the basis of the U-Th-He chronometer, which is further discussed in
   Section \ref{sec:U-Th-He}. The recoil energy of the decay is divided
   between the $\alpha$ particle and the parent nucleus, which
-  eventually relaxes into its ground state by emitting
-  $\gamma$-radiation, i.e. photons with a wavelength of 10$^{-12}$m or
-  less.  In addition to the aforementioned U-Th-He method,
-  $\alpha$-decay is central to the $^{147}$Sm-$^{143}$Nd (Section
-  \ref{sec:Rb-Sr}), $^{235}$U-$^{207}$Pb, $^{238}$U-$^{206}$Pb and
-  $^{232}$Th-$^{208}$Pb methods (Section \ref{sec:U-Pb}).
+  eventually relaxes into its ground state by emitting $\gamma$
+  radiation, i.e. photons with a wavelength of 10$^{-10}$m or less.
+  In addition to the aforementioned U-Th-He method, $\alpha$-decay is
+  central to the $^{147}$Sm-$^{143}$Nd (Section \ref{sec:Rb-Sr}),
+  $^{235}$U-$^{207}$Pb, $^{238}$U-$^{206}$Pb and $^{232}$Th-$^{208}$Pb
+  methods (Section \ref{sec:U-Pb}).
 
 \item{$\beta$-decay}\\ Comprises negatron ($\beta^-$) and positron
   ($\beta^+$) emission, in which either an electron or a positron is
@@ -328,11 +329,11 @@ means of a number of different mechanisms:
   energy ($\sim$ 200 MeV). The two daughter nuclei move in opposite
   directions from the parent location, damaging the crystal lattice of
   the host mineral in their wake. The two daughter nuclides are
-  generally radioactive themselves, giving rise to $\beta$-radiation
+  generally radioactive themselves, giving rise to $\beta$ radiation
   before coming to rest as stable isotopes.  $^{238}_{~92}$U is the
-  only naturally occurring nuclide that undergoes this type of
+  only naturally occurring nuclide which undergoes this type of
   radioactive decay in measurable quantities, and even then it only
-  occurs once for every $\sim$2$\times$10$^6$ $\alpha$-decay events.
+  occurs once for every $\sim$2$\times$10$^6$ $\alpha$ decay events.
   Nevertheless, the fission mechanism forms the basis of an important
   geochronological method, in which the damage zones or `fission
   tracks' are counted (Section \ref{sec:fission-tracks}). Nuclear
@@ -348,7 +349,7 @@ means of a number of different mechanisms:
 
 Note that every neutron on the left hand side of this formula
 generates three neutrons on the right hand side. The latter may react
-with further $^{235}$U nuclei and generate a chain reaction. This
+with further $^{235}$U nuclei and generate a chain reaction which
 forms the basis of nuclear reactors, the atom bomb and the `external
 detector' method (Section \ref{sec:fission-tracks}).
 
@@ -373,60 +374,60 @@ A characteristic property of radioactive decay is its absolute
 independence of external physical and chemical effects. In other
 words, it is not affected by changes in pressure, temperature, or the
 molecular bonds connecting a radioactive nuclide to neighbouring
-atoms. This means that the rate at which a radioactive parent decays
-to a radiogenic daughter per unit time, i.e. $dP/dt$ only depends on
-$P$, the number of parent atoms present. The \emph{decay constant}
-$\lambda$ expresses the likelihood that a radioactive disintegration
-takes place in any given time (i.e., $\lambda$ has units of atoms per
-atoms per year). This can be expressed mathematically with the
-following differential equation:
+atoms. This means that the rate at which a radioactive parent atom
+($P$) decays to a radiogenic daughter ($D$) per unit time,
+i.e. $dN_P/dt$ only depends on $N_P$, the number of parent atoms
+present. The \emph{decay constant} $\lambda$ expresses the likelihood
+that a radioactive disintegration takes place in any given time (i.e.,
+$\lambda$ has units of atoms per atoms per year). This can be
+expressed mathematically with the following differential equation:
 
 \begin{equation}
-\frac{dP}{dt} = -\lambda P
-\label{eq:dPdt}
+\frac{dN_P}{dt} = -\lambda N_P
+\label{eq:dNpdt}
 \end{equation}
 
 Integrating this equation over time yields:
 
 \begin{equation}
-P = P_\circ e^{-\lambda t}
-\label{eq:P}
+N_P = (N_P)_\circ e^{-\lambda t}
+\label{eq:Np}
 \end{equation}
 
-where $P_\circ$ is the number of parent atoms present at time
+where $(N_P)_\circ$ is the number of parent atoms present at time
 $t=0$.  Since this number is generally unknown (one exception is
-$^{14}$C, see Section \ref{sec:14C}), Equation \ref{eq:P} generally
+$^{14}$C, see Section \ref{sec:14C}), Equation \ref{eq:Np} generally
 cannot be used in this form. We can, however, measure the
 \emph{present} number of parent and daughter nuclides in the
-sample. Rewriting Equation \ref{eq:P}:
+sample. Rewriting Equation \ref{eq:Np}:
 
 \begin{equation}
-P_\circ = P e^{\lambda t}
-\label{eq:P0}
+(N_P)_\circ = N_P e^{\lambda t}
+\label{eq:Np0}
 \end{equation}
 
-and bearing in mind that $P_\circ = P + D$, we obtain:
+and bearing in mind that $N_D = (N_P)_\circ - N_P$, we obtain:
 
 \begin{equation}
-D = P (e^{\lambda t}- 1)
-\label{eq:D}
+N_D = N_P (e^{\lambda t}- 1)
+\label{eq:Nd}
 \end{equation}
 
 This equation forms the foundation of most geochronological
 methods. It can be rewritten explicitly as a function of time:
 
 \begin{equation}
-t = \frac{1}{\lambda} \ln\left(\frac{D}{P} + 1\right)
+t = \frac{1}{\lambda} \ln\left(\frac{N_D}{N_P} + 1\right)
 \label{eq:t}
 \end{equation}
 
 The degree of instability of a radioactive nuclide can be expressed by
 $\lambda$ or by the \emph{half life} $t_{1/2}$, which is the time
 required for half of the parent nuclides to decay. This follows
-directly from Equation \ref{eq:P}:
+directly from Equation \ref{eq:Np}:
 
 \begin{equation}
-\frac{P_\circ}{2} = P_\circ e^{-\lambda t_{1/2}} 
+\frac{(N_P)_\circ}{2} = (N_P)_\circ e^{-\lambda t_{1/2}} 
 \Rightarrow t_{1/2} = \frac{\ln(2)}{\lambda}
 \label{eq:T12}
 \end{equation}
@@ -453,30 +454,30 @@ The increase (or decrease) of the number of atoms per unit time for
 each of the nuclides is given by:
 
 \begin{align}
-\mbox{for~} P &: dP/dt = -\lambda_P P\\
-\mbox{for~} D_1 &: dD_1/dt = \lambda_P P - \lambda_1 D_1 \label{eq:D1}\\
-\mbox{for~} D_* &: dD_*/dt = -\lambda_1 D_1 \label{eq:D*}
+\mbox{for~} P &: dN_P/dt = -\lambda_P N_P \label{eq:P}\\
+\mbox{for~} D_1 &: dN_{D_1}/dt = \lambda_P N_P - \lambda_1 N_{D_1} \label{eq:D1}\\
+\mbox{for~} D_* &: dN_{D_*}/dt = -\lambda_1 N_{D_1} \label{eq:D*}
 \end{align}
 
-The number of parent atoms $P$ can be written as a function of $t$:
+The number of atoms $N_P$ can be written as a function of $t$:
 
 \begin{equation}
-P = P_\circ e^{-\lambda_P t}
-\label{eq:P2}
+N_P = (N_P)_\circ e^{-\lambda_P t}
+\label{eq:Np2}
 \end{equation}
 
-Plugging Equation \ref{eq:P2} into \ref{eq:D1} yields
+Plugging Equation \ref{eq:Np2} into \ref{eq:D1} yields
 
 \begin{equation}
-dD_1/dt = \lambda_P P_\circ e^{-\lambda_P t} - \lambda_1 D_1
-\label{eq:dD1dt}
+dN_{D_1}/dt = \lambda_P (N_P)_\circ e^{-\lambda_P t} - \lambda_1 N_{D_1}
+\label{eq:ND1dt}
 \end{equation}
 
 Solving this differential equation yields the evolution of $D_1$ with
-time. Assuming that $D_1=0$ at $t=0$:
+time. Assuming that $N_{D_1}=0$ at $t=0$:
 
 \begin{equation}
-D_1 = \frac{\lambda_P}{\lambda_1 - \lambda_P} P_\circ \left[
+N_{D_1} = \frac{\lambda_P}{\lambda_1 - \lambda_P} (N_P)_\circ \left[
   e^{-\lambda_P t} - e^{-\lambda_1 t}\right]
 \label{eq:ND1}
 \end{equation}
@@ -487,37 +488,37 @@ $e^{-\lambda_P t}$ after a sufficiently long time so that Equation
 \ref{eq:ND1} can be simplified:
 
 \begin{equation}
-D_1 = \frac{\lambda_P}{\lambda_1 - \lambda_P} P_\circ e^{-\lambda_P t}
+N_{D_1} = \frac{\lambda_P}{\lambda_1 - \lambda_P} (N_P)_\circ e^{-\lambda_P t}
 \label{eq:ND1b}
 \end{equation}
 
-\noindent or, alternatively:
+or, alternatively:
 
 \begin{equation}
-D_1 = \frac{\lambda_P}{\lambda_1 - \lambda_P} P
+N_{D_1} = \frac{\lambda_P}{\lambda_1 - \lambda_P} N_P
 \label{eq:ND1c}
 \end{equation}
 
-This means that the ratio of $D_1$ and $P$ remains constant
+This means that the ratio of $N_{D_1}$ and $N_P$ remains constant
 through time. If $\lambda_P \ll \lambda_1$, then $\lambda_1 -
 \lambda_P \approx \lambda_1$, from which it follows that:
 
 \begin{equation}
-D_1 = \frac{\lambda_P}{\lambda_1} P
+N_{D_1} = \frac{\lambda_P}{\lambda_1} N_P
 \label{eq:ND1d}
 \end{equation}
 
 Rearranging:
 
 \begin{equation}
-D_1 \lambda_1 = P \lambda_P
+N_{D_1} \lambda_1 = N_P \lambda_P
 \label{eq:ND1L1}
 \end{equation}
 
 or, equivalently:
 
 \begin{equation}
-\frac{P}{D_1} = \frac{t_{1/2}(P)}{t_{1/2}(D_1)}
+\frac{N_P}{N_{D_1}} = \frac{t_{1/2}(P)}{t_{1/2}(D_1)}
 \label{eq:NPND1}
 \end{equation}
 
@@ -532,7 +533,7 @@ in the chain. For a decay series like that, Equation \ref{eq:ND1L1}
 can be generalised to:
 
 \begin{equation}
-D_n \lambda_n = \cdots  = D_2 \lambda_2 = D_1 \lambda_1 = P \lambda_P
+N_{D_n} \lambda_n = \cdots  = N_{D_2} \lambda_2 = N_{D_1} \lambda_1 = N_{P} \lambda_P
 \label{eq:NDnLn}
 \end{equation}
 
@@ -541,22 +542,22 @@ members occur in mutually constant proportions. The number of atoms of
 the stable end member $D_*$ is given by:
 
 \begin{equation}
-D_* = P_\circ - P - D_1 - D_2 - \cdots - D_n
+N_{D_*} = (N_{P})_\circ - N_P - N_{D_1} - N_{D_2} - \cdots N_{D_n}
 \label{eq:ND*}
 \end{equation}
 
 Using Equation \ref{eq:NDnLn}, this becomes:
 
 \begin{equation}
-D_* = P_\circ - P - \frac{P \lambda_P}{\lambda_1} - 
-\frac{P \lambda_P}{\lambda_2} - \cdots - \frac{P \lambda_P}{\lambda_n}
+N_{D_*} = (N_{P})_\circ - N_P - \frac{N_P \lambda_P}{\lambda_1} - 
+\frac{N_P \lambda_P}{\lambda_2} - \cdots - \frac{N_P \lambda_P}{\lambda_n}
 \label{eq:ND*2}
 \end{equation}
 
 or
 
 \begin{equation}
-D_* = P_\circ - P \left( 1 + \frac{\lambda_P}{\lambda_1} - 
+N_{D_*} = (N_{P})_\circ - N_P \left( 1 + \frac{\lambda_P}{\lambda_1} - 
 \frac{\lambda_P}{\lambda_2} - \cdots - \frac{\lambda_P}{\lambda_n}\right)
 \label{eq:ND*3}
 \end{equation}
@@ -566,7 +567,7 @@ etc.  are vanishingly small, we can simplify Equation \ref{eq:ND*3}
 as:
 
 \begin{equation}
-D_* = P_\circ - P = P \left( e^{\lambda_P t} -1 \right)
+N_{D_*} = (N_{P})_\circ - N_P = N_P \left( e^{\lambda_P t} -1 \right)
 \label{eq:ND*4}
 \end{equation}
 
@@ -879,7 +880,7 @@ yielding two electronic signal intensities $S_P$ and $S_D$. These
 signals may be recorded in units of V, A, or Hz. We cannot directly
 use the signal ratios as a proxy for the isotopic ratio:
 
-$$\frac{D}{P} \neq \frac{S_D}{S_P}$$
+$$\frac{N_D}{N_P} \neq \frac{S_D}{S_P}$$
 
 because the parent and daughter are two different elements with
 different chemical properties and ionisation efficiencies. We can,
@@ -887,14 +888,14 @@ however, assume that the isotopic ratio is proportional to the signal
 ratio:
 
 \begin{equation}
-\frac{D}{P} = C \frac{S_D}{S_P}
+\frac{N_D}{N_P} = C \frac{S_D}{S_P}
 \label{eq:eqC}
 \end{equation}
 
-Thus, if we double $D$ (and thus $D/P$), we would also expect to
+Thus, if we double $N_D$ (and thus $N_D/N_P$), we would also expect to
 double $S_D$ (and thus $S_D/S_P$). To determine the constant of
 proportionality $C$, we analyse a standard of known age ($t_s$) and,
-hence ($D/P$)-ratio (due to Equation \ref{eq:D}):
+hence ($N_D/N_P$)-ratio (due to Equation \ref{eq:Nd}):
 
 \begin{equation}
 C = \left(e^{\lambda_Pt_s} - 1\right) \frac{S^s_P}{S^s_D}
@@ -923,7 +924,7 @@ animals that eat them. Prior to the industrial revolution, a gram of
 fresh organic carbon underwent 13.56 ($\beta^-$) decays per
 minute. When a plant dies, it ceases to exchange carbon with the
 atmosphere and the $^{14}$C concentration decays with time according
-to Equation \ref{eq:dPdt}:
+to Equation \ref{eq:dNpdt}:
 
 \begin{equation}
 \frac{d^{14}C}{dt} = -\lambda_{14} \times {}^{14}C
@@ -933,7 +934,7 @@ to Equation \ref{eq:dPdt}:
 where $\lambda_{14}$ = 0.120968 ka$^{-1}$. Thus, the radiocarbon
 concentration is directly proportional to the radioactivity, which can
 be measured by $\beta$-counting. This can then be used to calculate
-the radiocarbon age by rearranging Equation \ref{eq:P}:
+the radiocarbon age by rearranging Equation \ref{eq:Np}:
 
 \begin{equation}
 t = -\frac{1}{\lambda_{14}}
@@ -2195,7 +2196,7 @@ reach a state of \emph{secular equilibrium}, in which the activity
 (expressed in decay events per unit time) of each intermediate
 daughter product is the same, so that:
 
-$$D_n \lambda_n = \cdots  = D_2 \lambda_2 = D_1 \lambda_1 = P \lambda_P$$
+$$N_{D_n} \lambda_n = \cdots  = N_{D_2} \lambda_2 = N_{D_1} \lambda_1 = N_{P} \lambda_P$$
 
 as described by Equation \ref{eq:NDnLn}. However, certain natural
 processes can disturb this equilibrium situation, such as chemical
@@ -3056,14 +3057,8 @@ z'
 function out = cube(in)
   out = in^3;
 end
-\end{verbatim}
 
-Copy the \texttt{cube} function into a text file named \texttt{cube.m}
-and save it in the current directory. You can then load the contents
-of the file by simply typing its name without the \texttt{.m}
-extension:
-
-\begin{verbatim}
+You can use this function as follows:
 c3 = cube(3)
 \end{verbatim}
 
@@ -3096,15 +3091,22 @@ command prompt.
 \begin{verbatim}
 % Conditional statement:
 function coinToss
-  % 'rand()' produces numbers between 0 and 1
-  if (rand() > 0.5)
+  % 'rand' produces numbers between 0 and 1
+  if (rand > 0.5)
     % display a message to the console
     disp('head')
   else
     disp('tail')
   end
 end
+\end{verbatim}
 
+Copy the \texttt{coinToss} function into a text file named
+\texttt{coinToss.m} and save it in the current directory. You can then
+load the contents of the file by simply typing its name without the
+\texttt{.m} extension:
+
+\begin{verbatim}
 % Use this function in a for loop:
 for i=1:10,
   coinToss
@@ -3387,7 +3389,8 @@ $$\frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{N_s}{N_i}\r
 
 \end{enumerate}
 
-\newpage\pagestyle{empty}~
-\newpage\pagestyle{empty}~
+%\newpage
+%\pagestyle{empty}
+%~
 
 \end{document}
