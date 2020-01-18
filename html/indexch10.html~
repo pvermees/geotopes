@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="index.css"> 
 </head><body 
 >
-   <!--l. 2353--><div class="crosslinks"><p class="noindent">[<a 
+   <!--l. 2354--><div class="crosslinks"><p class="noindent">[<a 
 href="indexch11.html" >next</a>] [<a 
 href="indexch9.html" >prev</a>] [<a 
 href="indexch9.html#tailindexch9.html" >prev-tail</a>] [<a 
@@ -18,7 +18,7 @@ href="#tailindexch10.html">tail</a>] [<a
 href="index.html#indexch10.html" >up</a>] </p></div>
    <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;10</span><br /><a 
  id="x14-3900010"></a>Error propagation</h2>
-<!--l. 2356--><p class="noindent" >All the methods and equations presented thus far have assumed that all
+<!--l. 2357--><p class="noindent" >All the methods and equations presented thus far have assumed that all
 parameters are either known or measured with infinite precision. In
 reality, however, the analytical equipment used to measure isotopic
 compositions, elemental concentrations and radioactive half-lives is
@@ -26,7 +26,7 @@ not perfect. It is crucially important that we quantify the resulting
 analytical uncertainty before we can reliably interpret the resulting
 ages.<br 
 class="newline" />
-<!--l. 2364--><p class="indent" >   For example, suppose that the extinction of the dinosaurs has been
+<!--l. 2365--><p class="indent" >   For example, suppose that the extinction of the dinosaurs has been
 dated at 65 Ma in one field location, and a meteorite impact has been dated
 at 64 Ma elsewhere. These two numbers are effectively meaningless in the
 absence of an estimate of precision. Taken at face value, the dates imply
@@ -39,7 +39,7 @@ class="cmsy-10">&plusmn; </span>2 Ma), then such of a causal relationship remain
 plausible.
    <h3 class="sectionHead"><span class="titlemark">10.1   </span> <a 
  id="x14-4000010.1"></a>Some basic definitions</h3>
-<!--l. 2376--><p class="noindent" >Suppose that our geochronological age (<span 
+<!--l. 2377--><p class="noindent" >Suppose that our geochronological age (<span 
 class="cmmi-10">t</span>) is calculated as a function (<span 
 class="cmmi-10">f</span>) of
 some measurements (<span 
@@ -52,10 +52,10 @@ class="equation"><tr><td><a
 <img 
 src="index91x.png" alt="t = f(X, Y)
 " class="math-display" ></center></td><td class="equation-label">(10.1)</td></tr></table>
-<!--l. 2382--><p class="nopar" >
+<!--l. 2383--><p class="nopar" >
                                                            
                                                            
-<!--l. 2384--><p class="indent" >   Suppose that we have performed a large number (<span 
+<!--l. 2385--><p class="indent" >   Suppose that we have performed a large number (<span 
 class="cmmi-10">n</span>) of replicate
 measurements of <span 
 class="cmmi-10">X </span>and <span 
@@ -68,10 +68,10 @@ class="equation"><tr><td><a
 src="index92x.png" alt="{ X  =  {X1,X2, &#x22C5;&#x22C5;&#x22C5;,Xi,&#x22C5;&#x22C5;&#x22C5;,Xn }
    Y =  {Y1,Y2,&#x22C5;&#x22C5;&#x22C5;,Yi,&#x22C5;&#x22C5;&#x22C5;,Yn}
 " class="math-display" ></center></td><td class="equation-label">(10.2)</td></tr></table>
-<!--l. 2395--><p class="nopar" >
-<!--l. 2397--><p class="indent" >   It is useful to define the following <span 
+<!--l. 2396--><p class="nopar" >
+<!--l. 2398--><p class="indent" >   It is useful to define the following <span 
 class="cmti-10">summary statistics</span>:
-<!--l. 2399--><p class="indent" >
+<!--l. 2400--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x14-40004x1">The mean:
@@ -84,8 +84,8 @@ src="index93x.png" alt="{ X-&#x2261;   1 &#x2211;n  Xi
   Y-&#x2261;   n1 &#x2211;ni=1Yi
         n   i=1
      " class="math-display" ></center></td><td class="equation-label">(10.3)</td></tr></table>
-     <!--l. 2409--><p class="nopar" >
-     <!--l. 2411--><p class="noindent" >is a useful definition for the &#8216;most representative&#8217; value of <span 
+     <!--l. 2410--><p class="nopar" >
+     <!--l. 2412--><p class="noindent" >is a useful definition for the &#8216;most representative&#8217; value of <span 
 class="cmmi-10">X </span>and <span 
 class="cmmi-10">Y </span>,
      which can be plugged into Equation <a 
@@ -105,8 +105,8 @@ src="index94x.png" alt="{  &#x03C3;2 &#x2261;  --1 &#x2211;n  (X  - X)2
     X2    n-11&#x2211;ni=1   i -- 2
    &#x03C3;Y &#x2261;  n- 1  i=1(Yi - Y )
      " class="math-display" ></center></td><td class="equation-label">(10.4)</td></tr></table>
-     <!--l. 2424--><p class="nopar" >
-     <!--l. 2426--><p class="noindent" >with <span 
+     <!--l. 2425--><p class="nopar" >
+     <!--l. 2427--><p class="noindent" >with <span 
 class="cmmi-10">&#x03C3;</span><sub><span 
 class="cmmi-7">X</span></sub> and <span 
 class="cmmi-10">&#x03C3;</span><sub><span 
@@ -124,14 +124,14 @@ src="index95x.png" alt="             1  &#x2211;n      --     --
 cov(X,Y ) &#x2261; n-- 1  (Xi - X )(Yi - Y )
                 i=1
      " class="math-display" ></center></td><td class="equation-label">(10.5)</td></tr></table>
-     <!--l. 2433--><p class="nopar" >
+     <!--l. 2434--><p class="nopar" >
                                                            
                                                            
-     <!--l. 2435--><p class="noindent" >quantifies the degree of correlation between variables <span 
+     <!--l. 2436--><p class="noindent" >quantifies the degree of correlation between variables <span 
 class="cmmi-10">X </span>and
      <span 
 class="cmmi-10">Y </span>.</li></ol>
-<!--l. 2438--><p class="indent" >   <span class="overline"><span 
+<!--l. 2439--><p class="indent" >   <span class="overline"><span 
 class="cmmi-10">X</span></span>, <span class="overline"><span 
 class="cmmi-10">Y</span> </span>, <span 
 class="cmmi-10">&#x03C3;</span><sub><span 
@@ -161,8 +161,8 @@ src="index96x.png" alt="       1  &#x2211;n     -
 &#x03C3;2t &#x2261;-----   (ti - t)2
      n - 1i=1
 " class="math-display" ></center></td><td class="equation-label">(10.6)</td></tr></table>
-<!--l. 2448--><p class="nopar" >
-<!--l. 2450--><p class="indent" >   We can estimate (<span 
+<!--l. 2449--><p class="nopar" >
+<!--l. 2451--><p class="indent" >   We can estimate (<span 
 class="cmmi-10">t</span><sub><span 
 class="cmmi-7">i</span></sub> <span 
 class="cmsy-10">-</span><span class="overline"><span 
@@ -176,13 +176,13 @@ class="equation"><tr><td><a
 src="index97x.png" alt="ti - t = (Xi - X-) &#x2202;f-+ (Yi - Y)-&#x2202;f
                &#x2202;X          &#x2202;Y
 " class="math-display" ></center></td><td class="equation-label">(10.7)</td></tr></table>
-<!--l. 2457--><p class="nopar" >
-<!--l. 2459--><p class="indent" >   Plugging Equation <a 
+<!--l. 2458--><p class="nopar" >
+<!--l. 2460--><p class="indent" >   Plugging Equation <a 
 href="#x14-40013r7">10.7<!--tex4ht:ref: eq:ti-t --></a> into <a 
 href="#x14-40012r6">10.6<!--tex4ht:ref: eq:vart --></a>, we obtain:
                                                            
                                                            
-<!--l. 2461--><p class="indent" >
+<!--l. 2462--><p class="indent" >
 <table 
 class="align">
     <tr><td 
@@ -229,7 +229,7 @@ src="index103x.png" alt="&#x2202;f
 &#x2202;Y-"  class="frac" align="middle"></td>          <td 
 class="align-label"><a 
  id="x14-40015r9"></a>(10.9)    </td></tr></table>
-<!--l. 2470--><p class="indent" >   This is the general equation for the propagation of uncertainty with two
+<!--l. 2471--><p class="indent" >   This is the general equation for the propagation of uncertainty with two
 variables, which is most easily extended to more than two variables by
 reformulating Equation <a 
 href="#x14-40015r9">10.9<!--tex4ht:ref: eq:s2t --></a> into a matrix form:
@@ -244,22 +244,22 @@ src="index104x.png" alt="             [                     ][ &#x2202;t ]
 " class="math-display" ></center></td><td class="equation-label">(10.10)</td></tr></table>
                                                            
                                                            
-<!--l. 2494--><p class="nopar" >
-<!--l. 2496--><p class="indent" >   where the innermost matrix is known as the <span 
+<!--l. 2495--><p class="nopar" >
+<!--l. 2497--><p class="indent" >   where the innermost matrix is known as the <span 
 class="cmti-10">variance-covariance </span>matrix
 and the outermost matrix (and its transpose) as the <span 
 class="cmti-10">Jacobian matrix</span>. Let us
 now apply this equation to some simple functions.
-<!--l. 2501--><p class="noindent" >
+<!--l. 2502--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">10.2   </span> <a 
  id="x14-4100010.2"></a>Examples</h3>
-<!--l. 2503--><p class="noindent" >Let <span 
+<!--l. 2504--><p class="noindent" >Let <span 
 class="cmmi-10">X </span>and <span 
 class="cmmi-10">Y </span>indicate measured quantities associated with analytical
 uncertainty. And let <span 
 class="cmmi-10">a </span>and <span 
 class="cmmi-10">b </span>be some error free parameters.
-<!--l. 2507--><p class="indent" >
+<!--l. 2508--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x14-41002x1">addition:
@@ -317,7 +317,7 @@ class="equation"><tr><td><a
 src="index107x.png" alt="t = aX - bY  &#x21D2; &#x03C3;2=  a2&#x03C3;2 + b2&#x03C3;2 - 2ab cov(X,Y )
                t     X      Y
      " class="math-display" ></center></td><td class="equation-label">(10.12)</td></tr></table>
-     <!--l. 2521--><p class="nopar" >
+     <!--l. 2522--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x14-41008x3">multiplication:
@@ -398,7 +398,7 @@ class="equation"><tr><td><a
 src="index114x.png" alt="    X    ( &#x03C3;t)2  ( &#x03C3;X)2   (&#x03C3;Y )2   cov(X,Y )
 t = a-Y &#x21D2;  t-  =   X--  +  Y--  - 2---XY----
      " class="math-display" ></center></td><td class="equation-label">(10.14)</td></tr></table>
-     <!--l. 2539--><p class="nopar" >
+     <!--l. 2540--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x14-41014x5">exponentiation:
@@ -411,7 +411,7 @@ src="index115x.png" alt="           &#x2202;f
 t = a ebX &#x21D2; ---= ab ebX &#x21D2;  &#x03C3;2t = (bt)2&#x03C3;2X
            &#x2202;X
      " class="math-display" ></center></td><td class="equation-label">(10.15)</td></tr></table>
-     <!--l. 2546--><p class="nopar" >
+     <!--l. 2547--><p class="nopar" >
                                                            
                                                            
      </li>
@@ -425,7 +425,7 @@ class="equation"><tr><td><a
 src="index116x.png" alt="              &#x2202;f    a     2   2( &#x03C3;X )2
 t = a ln(bX ) &#x21D2; &#x2202;X = X-&#x21D2;  &#x03C3;t = a  X--
      " class="math-display" ></center></td><td class="equation-label">(10.16)</td></tr></table>
-     <!--l. 2553--><p class="nopar" >
+     <!--l. 2554--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x14-41020x7">power:
@@ -437,23 +437,23 @@ class="equation"><tr><td><a
 src="index117x.png" alt="          &#x2202;f     aXb   ( &#x03C3;t)2    ( &#x03C3;X)2
 t = aXb &#x21D2; &#x2202;X- = b-X--&#x21D2;   t-  = b2  X--
      " class="math-display" ></center></td><td class="equation-label">(10.17)</td></tr></table>
-     <!--l. 2561--><p class="nopar" >
+     <!--l. 2562--><p class="nopar" >
      </li></ol>
                                                            
                                                            
-<!--l. 2565--><p class="noindent" >
+<!--l. 2566--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">10.3   </span> <a 
  id="x14-4200010.3"></a>Accuracy vs. precision</h3>
-<!--l. 2567--><p class="noindent" >Recall the definition of the arithmetic mean (Equation <a 
+<!--l. 2568--><p class="noindent" >Recall the definition of the arithmetic mean (Equation <a 
 href="#x14-40005r3">10.3<!--tex4ht:ref: eq:mean --></a>):
-<!--l. 2569--><p class="indent" >
+<!--l. 2570--><p class="indent" >
    <center class="math-display" >
 <img 
 src="index118x.png" alt="       n
 X- &#x2261; 1&#x2211;   X
      n i=1  i
 " class="math-display" ></center>
-<!--l. 2571--><p class="indent" >   Applying the equation for the error propagation of a sum (Equation
+<!--l. 2572--><p class="indent" >   Applying the equation for the error propagation of a sum (Equation
 <a 
 href="#x14-41003r11">10.11<!--tex4ht:ref: eq:addition --></a>):
    <table 
@@ -465,8 +465,8 @@ src="index119x.png" alt="     1 &#x2211;n       &#x03C3;2
 &#x03C3;2X-= --   &#x03C3;2Xi = -X-
      n i=1       n
 " class="math-display" ></center></td><td class="equation-label">(10.18)</td></tr></table>
-<!--l. 2578--><p class="nopar" >
-<!--l. 2580--><p class="indent" >   where we assume that all <span 
+<!--l. 2579--><p class="nopar" >
+<!--l. 2581--><p class="indent" >   where we assume that all <span 
 class="cmmi-10">n </span>measurements were done <span 
 class="cmti-10">independently</span>, so
 that <span 
@@ -489,8 +489,8 @@ src="index120x.png" alt="     &#x03C3;
 &#x03C3;X-= &#x221A;X--
        n
 " class="math-display" ></center></td><td class="equation-label">(10.19)</td></tr></table>
-<!--l. 2588--><p class="nopar" >
-<!--l. 2590--><p class="indent" >   This means that the standard error of the mean monotonically decreases
+<!--l. 2589--><p class="nopar" >
+<!--l. 2591--><p class="indent" >   This means that the standard error of the mean monotonically decreases
 with the square root of sample size. In other words, we can arbitrarily
 increase the <span 
 class="cmti-10">precision </span>of our analytical data by acquiring more data.
@@ -499,16 +499,16 @@ the <span
 class="cmti-10">accuracy </span>of those data. The difference between precision and accuracy is
 best explained by a darts board analogy:<br 
 class="newline" />
-<!--l. 2598--><p class="noindent" ><div class="minipage"><img 
+<!--l. 2599--><p class="noindent" ><div class="minipage"><img 
 src="bullseye.png" alt="PIC"  
 >
 </div>
-<!--l. 2611--><p class="indent" >   Whereas the analytical precision can be computed from the data using
+<!--l. 2612--><p class="indent" >   Whereas the analytical precision can be computed from the data using
 the error propagation formulas introduced above, the only way to get a grip
 on the accuracy is by analysing another sample of independently
 determined age. Such test samples are also known as &#8216;secondary
 standards&#8217;.
-<!--l. 2617--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 2618--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                            
                                                            
@@ -516,7 +516,7 @@ standards&#8217;.
  id="x14-420031"></a>
                                                            
                                                            
-<!--l. 2623--><p class="noindent" ><img 
+<!--l. 2624--><p class="noindent" ><img 
 src="covariance.png" alt="PIC"  
 >
 <br /> <div class="caption" 
@@ -527,15 +527,15 @@ structures. The marginal distributions of the X and Y variables are
 shown as &#8216;bell curves&#8217; on the top and right axis of each plot.</span></div><!--tex4ht:label?: x14-420031 -->
                                                            
                                                            
-<!--l. 2631--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 2632--><p class="indent" >   </div><hr class="endfigure">
                                                            
                                                            
-   <!--l. 2633--><div class="crosslinks"><p class="noindent">[<a 
+   <!--l. 2634--><div class="crosslinks"><p class="noindent">[<a 
 href="indexch11.html" >next</a>] [<a 
 href="indexch9.html" >prev</a>] [<a 
 href="indexch9.html#tailindexch9.html" >prev-tail</a>] [<a 
 href="indexch10.html" >front</a>] [<a 
 href="index.html#indexch10.html" >up</a>] </p></div>
-<!--l. 2633--><p class="indent" >   <a 
+<!--l. 2634--><p class="indent" >   <a 
  id="tailindexch10.html"></a>   
 </body></html> 

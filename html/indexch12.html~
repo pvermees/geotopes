@@ -10,20 +10,20 @@
 <link rel="stylesheet" type="text/css" href="index.css"> 
 </head><body 
 >
-   <!--l. 2767--><div class="crosslinks"><p class="noindent">[<a 
+   <!--l. 2768--><div class="crosslinks"><p class="noindent">[<a 
 href="indexch11.html" >prev</a>] [<a 
 href="indexch11.html#tailindexch11.html" >prev-tail</a>] [<a 
 href="#tailindexch12.html">tail</a>] [<a 
 href="index.html#indexch12.html" >up</a>] </p></div>
    <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;12</span><br /><a 
  id="x16-4400012"></a>Programming practicals</h2>
-<!--l. 2770--><p class="noindent" >In this Chapter you will process some real geochronological datasets using
+<!--l. 2771--><p class="noindent" >In this Chapter you will process some real geochronological datasets using
 either <span 
 class="cmtt-10">R </span>or <span 
 class="cmtt-10">Matlab</span>. These are both mathematical scripting languages that
 are both powerful and easy to use.<br 
 class="newline" />
-<!--l. 2775--><p class="indent" >   <span 
+<!--l. 2776--><p class="indent" >   <span 
 class="cmtt-10">R </span>is a free and open programming language that works on any operating
 system, including <span 
 class="cmtt-10">Windows</span>, <span 
@@ -32,7 +32,7 @@ class="cmtt-10">Unix/Linux</span>. It can be downloaded
 and installed from <span 
 class="cmtt-10">http://r-project.org</span>.<br 
 class="newline" />
-<!--l. 2780--><p class="indent" >   <span 
+<!--l. 2781--><p class="indent" >   <span 
 class="cmtt-10">Matlab </span>is a proprietary programming environment. The full version of
 this software is very expensive but a reasonably complete student version
 can be purchased for <span 
@@ -44,7 +44,7 @@ class="cmtt-10">Matlab </span>that can be
 downloaded for free from <span 
 class="cmtt-10">http://www.gnu.org/software/octave</span>.<br 
 class="newline" />
-<!--l. 2787--><p class="indent" >   Sections&#x00A0;<a 
+<!--l. 2788--><p class="indent" >   Sections&#x00A0;<a 
 href="#x16-4500012.1">12.1<!--tex4ht:ref: sec:R --></a> and <a 
 href="#x16-4600012.2">12.2<!--tex4ht:ref: sec:Matlab --></a> will present two brief tutorials of <span 
 class="cmtt-10">R </span>and <span 
@@ -54,7 +54,7 @@ subsequent computer practicals.
    <h3 class="sectionHead"><span class="titlemark">12.1   </span> <a 
  id="x16-4500012.1"></a>Introduction to <span 
 class="cmtt-10">R</span></h3>
-<!--l. 2795--><p class="noindent" >A number of different graphical user interfaces (GUIs) are available to
+<!--l. 2796--><p class="noindent" >A number of different graphical user interfaces (GUIs) are available to
 interact with <span 
 class="cmtt-10">R</span>. The most popular of these are <span 
 class="cmtt-10">Rgui</span>, <span 
@@ -62,7 +62,7 @@ class="cmtt-10">RStudio</span>, <span
 class="cmtt-10">RCommander</span>
 and <span 
 class="cmtt-10">Tinn-R</span>.
-<!--l. 2800--><p class="indent" >
+<!--l. 2801--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x16-45002x1">Starting  these  applications  or  running  <span 
@@ -80,7 +80,7 @@ class="cmtt-10">R </span>as a calculator:
      &#x00A0;<br />&#x003E;&#x00A0;exp(log(10))
      &#x00A0;<br />&#x003E;&#x00A0;31&#x00A0;%%&#x00A0;14
 </div>
-     <!--l. 2811--><p class="nopar" >
+     <!--l. 2812--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45004x2">Alternatively, code can also be saved as text (using a built-in text
@@ -94,7 +94,7 @@ class="cmtt-10">source() </span>function:
      <div class="verbatim" id="verbatim-2">
      &#x003E;&#x00A0;source('mycode.R')
 </div>
-     <!--l. 2820--><p class="nopar" >
+     <!--l. 2821--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45006x3">In the remainder of this tutorial, we will assume that your code is run
@@ -145,7 +145,7 @@ class="cmtt-10">R </span>ignores anything that follows
                                                            
                                                            
 </div>
-     <!--l. 2864--><p class="nopar" >
+     <!--l. 2865--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45008x4">If you want to learn more about a function, type <span 
@@ -158,7 +158,7 @@ class="cmtt-10">? </span>at the
      &#x003E;&#x00A0;help(c)
      &#x00A0;<br />&#x003E;&#x00A0;?matrix
 </div>
-     <!--l. 2872--><p class="nopar" >
+     <!--l. 2873--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45010x5">In addition to <span 
@@ -188,7 +188,7 @@ class="cmtt-10">R</span>&#8217;s built-in functions, you can also define your
      &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;toss()
      &#x00A0;<br />}
 </div>
-     <!--l. 2898--><p class="nopar" >
+     <!--l. 2899--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45012x6">The purpose of the practical exercises in Sections&#x00A0;<a 
@@ -205,7 +205,7 @@ href="#x16-5000012.6">12.6<!--tex4ht:ref: sec:FT-R --></a> is to
      &#x00A0;<br />&#x003E;&#x00A0;getwd()&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;#&#x00A0;get&#x00A0;the&#x00A0;current&#x00A0;working&#x00A0;directory
      &#x00A0;<br />&#x003E;&#x00A0;setwd("path_to_a_valid_directory")
 </div>
-     <!--l. 2910--><p class="nopar" >
+     <!--l. 2911--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45014x7">Use the above commands to navigate to the directory containing the
@@ -216,8 +216,8 @@ class="cmtt-10">RbSr.csv</span>. Then read this file into memory:
      <div class="verbatim" id="verbatim-7">
      RbSr&#x00A0;&#x003C;-&#x00A0;read.csv("RbSr.csv",header=TRUE)
 </div>
-     <!--l. 2917--><p class="nopar" >
-     <!--l. 2919--><p class="noindent" >Type <span 
+     <!--l. 2918--><p class="nopar" >
+     <!--l. 2920--><p class="noindent" >Type <span 
 class="cmtt-10">names(RbSr) </span>or <span 
 class="cmtt-10">colnames(RbSr) </span>at the command prompt to
      list the variable names (column headers) contained in this
@@ -237,7 +237,7 @@ href="indexch4.html#x7-150004.2">4.2<!--tex4ht:ref: sec:Rb-Sr --></a>) through t
      &#x00A0;<br />#&#x00A0;fit&#x00A0;a&#x00A0;linear&#x00A0;model&#x00A0;to&#x00A0;the&#x00A0;data
      &#x00A0;<br />fit&#x00A0;&#x003C;-&#x00A0;lm(Sr87Sr86&#x00A0;~&#x00A0;Rb87Sr86,&#x00A0;data&#x00A0;=&#x00A0;RbSr)
 </div>
-     <!--l. 2932--><p class="nopar" >
+     <!--l. 2933--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45018x9"><span 
@@ -268,7 +268,7 @@ class="cmtt-10">coef() </span>function.
      &#x00A0;<br />#&#x00A0;label&#x00A0;with&#x00A0;the&#x00A0;isochron&#x00A0;age:
      &#x00A0;<br />title(age)
 </div>
-     <!--l. 2956--><p class="nopar" >
+     <!--l. 2957--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45020x10">One of the most powerful features of <span 
@@ -283,7 +283,7 @@ class="cmtt-10">IsoplotR </span>package from the &#8216;Comprehensive R Archive 
      <div class="verbatim" id="verbatim-10">
      &#x003E;&#x00A0;install.packages('IsoplotR')
 </div>
-     <!--l. 2966--><p class="nopar" >
+     <!--l. 2967--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-45022x11">We can use <span 
@@ -307,13 +307,13 @@ class="cmr-9">86</span></sup>Sr-ratios:
      &#x00A0;<br />#&#x00A0;compute&#x00A0;and&#x00A0;plot&#x00A0;the&#x00A0;isochron&#x00A0;diagram:
      &#x00A0;<br />isochron(RbSr2)
 </div>
-     <!--l. 2983--><p class="nopar" >
+     <!--l. 2984--><p class="nopar" >
      </li></ol>
-<!--l. 2987--><p class="noindent" >
+<!--l. 2988--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">12.2   </span> <a 
  id="x16-4600012.2"></a>Introduction to <span 
 class="cmtt-10">Matlab</span></h3>
-<!--l. 2990--><p class="noindent" >
+<!--l. 2991--><p class="noindent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x16-46002x1"><span 
@@ -343,7 +343,7 @@ class="cmtt-10">%</span>) is a comment and is ignored. It
      &#x00A0;<br />foo&#x00A0;=&#x00A0;foo*bar;
      &#x00A0;<br />foo
 </div>
-     <!--l. 3013--><p class="nopar" >
+     <!--l. 3014--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-46004x2">As the name suggest, <span 
@@ -384,7 +384,7 @@ class="cmtt-10">LAB</span>oratory) is
      &#x00A0;<br />%&#x00A0;Transpose&#x00A0;of&#x00A0;a&#x00A0;matrix:
      &#x00A0;<br />z'
 </div>
-     <!--l. 3049--><p class="nopar" >
+     <!--l. 3050--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-46006x3">In addition to Matlab&#8217;s built-in operators and functions, you can also
@@ -397,8 +397,8 @@ class="cmtt-10">LAB</span>oratory) is
      &#x00A0;<br />&#x00A0;&#x00A0;out&#x00A0;=&#x00A0;in^3;
      &#x00A0;<br />end
 </div>
-     <!--l. 3059--><p class="nopar" >
-     <!--l. 3061--><p class="noindent" >Copy the <span 
+     <!--l. 3060--><p class="nopar" >
+     <!--l. 3062--><p class="noindent" >Copy the <span 
 class="cmtt-10">cube </span>function into a text file named <span 
 class="cmtt-10">cube.m </span>and save it in
      the current directory. You can then load the contents of the file by
@@ -409,7 +409,7 @@ class="cmtt-10">.m </span>extension:
      <div class="verbatim" id="verbatim-15">
      c3&#x00A0;=&#x00A0;cube(3)
 </div>
-     <!--l. 3068--><p class="nopar" >
+     <!--l. 3069--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-46008x4">A useful feature of Matlab that is missing from most other
@@ -429,8 +429,8 @@ class="cmtt-10">.m </span>extension:
      &#x00A0;<br />%&#x00A0;use&#x00A0;our&#x00A0;new&#x00A0;function
      &#x00A0;<br />[m,s]&#x00A0;=&#x00A0;basicStats(randnum)
 </div>
-     <!--l. 3085--><p class="nopar" >
-     <!--l. 3087--><p class="noindent" >An extensive library of documentation is built into <span 
+     <!--l. 3086--><p class="nopar" >
+     <!--l. 3088--><p class="noindent" >An extensive library of documentation is built into <span 
 class="cmtt-10">Matlab</span>.
      For example, to access further information about the <span 
 class="cmtt-10">rand</span>
@@ -464,7 +464,7 @@ class="cmtt-10">for </span>loops:
      &#x00A0;<br />&#x00A0;&#x00A0;coinToss
      &#x00A0;<br />end
 </div>
-     <!--l. 3112--><p class="nopar" >
+     <!--l. 3113--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-46012x6">File and variable management:
@@ -486,8 +486,8 @@ class="cmtt-10">for </span>loops:
      &#x00A0;<br />cd&#x00A0;..&#x00A0;%&#x00A0;move&#x00A0;up&#x00A0;one&#x00A0;directory
      &#x00A0;<br />ls&#x00A0;&#x00A0;&#x00A0;&#x00A0;%&#x00A0;list&#x00A0;all&#x00A0;files&#x00A0;in&#x00A0;the&#x00A0;current&#x00A0;directory
 </div>
-     <!--l. 3131--><p class="nopar" >
-     <!--l. 3133--><p class="noindent" >Use the above commands to navigate to the directory containing the
+     <!--l. 3132--><p class="nopar" >
+     <!--l. 3134--><p class="noindent" >Use the above commands to navigate to the directory containing the
      <span 
 class="cmtt-10">RbSr.csv </span>file.
                                                            
@@ -500,7 +500,7 @@ class="cmtt-10">RbSr.csv </span>file.
      &#x00A0;<br />%&#x00A0;be&#x00A0;used&#x00A0;to&#x00A0;view&#x00A0;the&#x00A0;code&#x00A0;of&#x00A0;Matlab&#x00A0;functions:
      &#x00A0;<br />type('mean')
 </div>
-     <!--l. 3143--><p class="nopar" >
+     <!--l. 3144--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-46014x7">Let us now apply our knowledge of <span 
@@ -520,7 +520,7 @@ class="cmtt-10">Matlab </span>to a geochronological
      &#x00A0;<br />xlabel('87Rb/86Sr')
      &#x00A0;<br />ylabel('87Sr/86Sr')
 </div>
-     <!--l. 3159--><p class="nopar" >
+     <!--l. 3160--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-46016x8">This should yield a linear array of Rb-Sr data. Let us now fit an
@@ -553,12 +553,12 @@ class="cmtt-10">polyfit </span>function:
      &#x00A0;<br />plot(x,y,'-r')
      &#x00A0;<br />title(age)
 </div>
-     <!--l. 3185--><p class="nopar" >
+     <!--l. 3186--><p class="nopar" >
      </li></ol>
-<!--l. 3189--><p class="noindent" >
+<!--l. 3190--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">12.3   </span> <a 
  id="x16-4700012.3"></a>U-Th-Pb data reduction</h3>
-<!--l. 3192--><p class="noindent" >You are supplied with two data files that were produced by the quadrupole
+<!--l. 3193--><p class="noindent" >You are supplied with two data files that were produced by the quadrupole
 laser ablation ICP-MS system at UCL&#8217;s London Geochronology Centre. At
 the time of the analysis, this instrument could not resolve <sup><span 
 class="cmr-7">204</span></sup>Pb from the
@@ -567,7 +567,7 @@ class="cmr-7">204</span></sup>Hg. Therefore, it is not possible to apply a
 common lead correction as explained in Section <a 
 href="indexch5.html#x8-180005">5<!--tex4ht:ref: sec:U-Pb --></a>. However, this does not
 cause any major issues to us because:
-<!--l. 3200--><p class="indent" >
+<!--l. 3201--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x16-47002x1">The  mineral  analysed  is  zircon,  which  incorporates  very  little
@@ -578,12 +578,12 @@ cause any major issues to us because:
      <li 
   class="enumerate" id="x16-47004x2">The ages are sufficiently old for the radiogenic Pb to dominate
      the common Pb component by orders of magnitude.</li></ol>
-<!--l. 3207--><p class="indent" >   In this exercise, we will use standard-sample bracketing (Section&#x00A0;<a 
+<!--l. 3208--><p class="indent" >   In this exercise, we will use standard-sample bracketing (Section&#x00A0;<a 
 href="indexch3.html#x6-120003.3">3.3<!--tex4ht:ref: sec:bracketing --></a>) to
 process some raw mass spectrometer data in <span 
 class="cmtt-10">R </span>or <span 
 class="cmtt-10">Matlab</span>:
-<!--l. 3211--><p class="indent" >
+<!--l. 3212--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x16-47006x1">Load the input files <span 
@@ -635,12 +635,12 @@ href="#x16-470135">5<!--tex4ht:ref: corr --></a>  to  these
      </li>
      <li 
   class="enumerate" id="x16-47022x9">Can you plot the results on a Wetherill concordia diagram?</li></ol>
-<!--l. 3238--><p class="noindent" >
+<!--l. 3239--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">12.4   </span> <a 
  id="x16-4800012.4"></a><sup><span 
 class="cmr-7">40</span></sup>Ar/<sup><span 
 class="cmr-7">39</span></sup>Ar data reduction</h3>
-<!--l. 3241--><p class="noindent" >In this exercise, we will reduce some synthetic <sup><span 
+<!--l. 3242--><p class="noindent" >In this exercise, we will reduce some synthetic <sup><span 
 class="cmr-7">40</span></sup>Ar/<sup><span 
 class="cmr-7">39</span></sup>Ar data. You are
 provided with three input files:
@@ -663,8 +663,8 @@ class="cmtt-10">stnd.csv</span>: the same data for the standard, which is a Fish
 class="cmtt-10">blnk.csv</span>: a &#8216;blank&#8217; run, i.e. a measurement of the background
      levels of Argon present in the mass spectrometer in the absence
      of a sample.</li></ol>
-<!--l. 3253--><p class="indent" >   To perform the data reduction, please follow the following steps:
-<!--l. 3255--><p class="indent" >
+<!--l. 3254--><p class="indent" >   To perform the data reduction, please follow the following steps:
+<!--l. 3256--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x16-48008x1">Load the three input files.
@@ -698,11 +698,11 @@ class="cmr-7">36</span></sup>Ar has an
      </li>
      <li 
   class="enumerate" id="x16-48020x7">Calculate the age of the sample.</li></ol>
-<!--l. 3269--><p class="noindent" >
+<!--l. 3270--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">12.5   </span> <a 
  id="x16-4900012.5"></a>Error propagation</h3>
-<!--l. 3272--><p class="noindent" >This exercise will build on the results from the previous two practicals.
-<!--l. 3275--><p class="indent" >
+<!--l. 3273--><p class="noindent" >This exercise will build on the results from the previous two practicals.
+<!--l. 3276--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x16-49002x1">Plot the <sup><span 
@@ -727,7 +727,7 @@ class="cmtt-10">Matlab</span>) functions.
      <li 
   class="enumerate" id="x16-49006x3">Propagate the analytical uncertainties of the U-Pb age, ignoring
      the covariance terms. Recall that
-     <!--l. 3289--><p class="noindent" >
+     <!--l. 3290--><p class="noindent" >
      <center class="math-display" >
      <img 
 src="index121x.png" alt="         (         )
@@ -736,7 +736,7 @@ t = &#x03BB;238 ln 1 + 238U
      " class="math-display" ></center>
                                                            
                                                            
-     <!--l. 3292--><p class="noindent" >If  you  want  you  can  use  the  simplifying  approximation  that
+     <!--l. 3293--><p class="noindent" >If  you  want  you  can  use  the  simplifying  approximation  that
      ln(1+X) <span 
 class="cmsy-10">&#x2248; </span><span 
 class="cmmi-10">X </span>if X <span 
@@ -761,7 +761,7 @@ href="#x16-450158">8<!--tex4ht:ref: itm:lm --></a> of
      Section&#x00A0;<a 
 href="#x16-4500012.1">12.1<!--tex4ht:ref: sec:R --></a>). The corresponding standard errors are then found
      by taking the square root of the diagonal elements of this matrix.
-     <!--l. 3306--><p class="noindent" >For <span 
+     <!--l. 3307--><p class="noindent" >For <span 
 class="cmtt-10">Matlab</span>, all the relevant information is provided in the output
      of the <span 
 class="cmtt-10">polyfit </span>function:
@@ -781,8 +781,8 @@ class="cmtt-10">polyfit </span>function:
      &#x00A0;<br />of&#x00A0;P&#x00A0;is&#x00A0;(Rinv*Rinv')*normr^2/df,&#x00A0;where&#x00A0;Rinv
      &#x00A0;<br />is&#x00A0;the&#x00A0;inverse&#x00A0;of&#x00A0;R.
 </div>
-     <!--l. 3322--><p class="nopar" >
-     <!--l. 3324--><p class="noindent" >Based on these instructions, I have written the following function to
+     <!--l. 3323--><p class="nopar" >
+     <!--l. 3325--><p class="noindent" >Based on these instructions, I have written the following function to
      calculate the standard errors of the fitting parameters from the second
      output parameter of the <span 
 class="cmtt-10">polyfit </span>function:
@@ -794,7 +794,7 @@ class="cmtt-10">polyfit </span>function:
      &#x00A0;<br />&#x00A0;&#x00A0;se&#x00A0;=&#x00A0;sqrt(diag(covmat));
      &#x00A0;<br />end
 </div>
-     <!--l. 3333--><p class="nopar" >
+     <!--l. 3334--><p class="nopar" >
      </li>
      <li 
   class="enumerate" id="x16-49010x5">Use these error estimates to propagate the analytical uncertainty of
@@ -802,12 +802,12 @@ class="cmtt-10">polyfit </span>function:
      approximation to the age equation mentioned in point <a 
 href="#x16-490053">3<!--tex4ht:ref: loglin --></a>.
      </li></ol>
-<!--l. 3342--><p class="noindent" >
+<!--l. 3343--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">12.6   </span> <a 
  id="x16-5000012.6"></a>Fission tracks</h3>
-<!--l. 3345--><p class="noindent" >In this exercise, you will use your programming skills to calculate some
+<!--l. 3346--><p class="noindent" >In this exercise, you will use your programming skills to calculate some
 fission track ages. You are given the following datasets:
-<!--l. 3348--><p class="indent" >
+<!--l. 3349--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x16-50002x1"><span 
@@ -834,8 +834,8 @@ href="indexch7.html#x10-29004r9">7.9<!--tex4ht:ref: eq:tzeta --></a>.
   class="enumerate" id="x16-50004x2"><span 
 class="cmtt-10">MD.csv</span>:  a  similar  table  for  an  apatite  sample  from  Mount
      Dromedary, Australia.</li></ol>
-<!--l. 3359--><p class="indent" >   You will need to:
-<!--l. 3361--><p class="indent" >
+<!--l. 3360--><p class="indent" >   You will need to:
+<!--l. 3362--><p class="indent" >
                                                            
                                                            
      <ol  class="enumerate1" >
@@ -862,14 +862,14 @@ class="cmmi-10">&#x03B6; </span>factors to calculate the age of the Mount
   class="enumerate" id="x16-50010x3">Propagate the analytical uncertainties for each of those single
      grain ages, using the fact that fission track counts (N, say) follow
      a Poisson distribution for which it is true that:
-     <!--l. 3374--><p class="noindent" >
+     <!--l. 3375--><p class="noindent" >
      <center class="math-display" >
      <img 
 src="index122x.png" alt="&#x03C3;2N = N
      " class="math-display" ></center>
-     <!--l. 3376--><p class="noindent" >To  simplify  the  calculations,  you  can  also  use  the  following
+     <!--l. 3377--><p class="noindent" >To  simplify  the  calculations,  you  can  also  use  the  following
      approximation:
-     <!--l. 3379--><p class="noindent" >
+     <!--l. 3380--><p class="noindent" >
      <center class="math-display" >
      <img 
 src="index123x.png" alt=" 1  (    gi    Ns )   gi   Ns
@@ -887,20 +887,20 @@ href="#x16-4700012.3">12.3<!--tex4ht:ref: sec:U-Pb-R --></a> and <a
 href="#x16-4800012.4">12.4<!--tex4ht:ref: sec:Ar-Ar-R --></a>? Also compare with the standard deviation and
      standard error of the mean age of Mount Dromedary apatite.
      </li></ol>
-<!--l. 3390--><p class="indent" >
-                                                           
-                                                           
-<!--l. 3390--><p class="indent" >   &#x00A0;
+<!--l. 3391--><p class="indent" >
                                                            
                                                            
 <!--l. 3391--><p class="indent" >   &#x00A0;
                                                            
                                                            
-   <!--l. 3393--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 3392--><p class="indent" >   &#x00A0;
+                                                           
+                                                           
+   <!--l. 3394--><div class="crosslinks"><p class="noindent">[<a 
 href="indexch11.html" >prev</a>] [<a 
 href="indexch11.html#tailindexch11.html" >prev-tail</a>] [<a 
 href="indexch12.html" >front</a>] [<a 
 href="index.html#indexch12.html" >up</a>] </p></div>
-<!--l. 3393--><p class="indent" >   <a 
+<!--l. 3394--><p class="indent" >   <a 
  id="tailindexch12.html"></a>   
 </body></html> 

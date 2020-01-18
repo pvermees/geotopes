@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="index.css"> 
 </head><body 
 >
-   <!--l. 222--><div class="crosslinks"><p class="noindent">[<a 
+   <!--l. 223--><div class="crosslinks"><p class="noindent">[<a 
 href="indexch3.html" >next</a>] [<a 
 href="indexli2.html" >prev</a>] [<a 
 href="indexli2.html#tailindexli2.html" >prev-tail</a>] [<a 
@@ -20,7 +20,7 @@ href="index.html#indexch2.html" >up</a>] </p></div>
  id="x5-40002"></a>Basic notions of radiometric geochronology</h2>
    <h3 class="sectionHead"><span class="titlemark">2.1   </span> <a 
  id="x5-50002.1"></a>Isotopes and radioactivity</h3>
-<!--l. 228--><p class="noindent" >Thanks to discoveries by Niels Bohr, Ernest Rutherford, Arnold
+<!--l. 229--><p class="noindent" >Thanks to discoveries by Niels Bohr, Ernest Rutherford, Arnold
 Sommerfeld, Joseph Thomson and James Chadwick, we know that rocks
 and minerals are made of atoms, atoms are made of a nucleus and an
 electron cloud, and the nucleus is made of <span 
@@ -81,10 +81,10 @@ class="cmmi-7">&#x00A0;</span><span
 class="cmr-7">8</span></sub><sup><span 
 class="cmr-7">19</span></sup>O exists in
 nature.
-<!--l. 255--><p class="noindent" >
+<!--l. 256--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">2.2   </span> <a 
  id="x5-60002.2"></a>Radioactivity</h3>
-<!--l. 258--><p class="noindent" >As mentioned before, the Periodic Table of Elements (aka &#8216;Mendeleev&#8217;s
+<!--l. 259--><p class="noindent" >As mentioned before, the Periodic Table of Elements (aka &#8216;Mendeleev&#8217;s
 Table&#8217;) arranges the elements according to the atomic number and the
 configuration of the electron cloud. The equally important <span 
 class="cmti-10">Chart</span>
@@ -116,7 +116,7 @@ years depending on the degree of instability, which generally scales
 with the &#8216;distance&#8217; from the curve of stable nuclides. Radionuclides
 eventually disintegrate to a stable form by means of a number of different
 mechanisms:
-<!--l. 276--><p class="indent" >
+<!--l. 277--><p class="indent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x5-6002x1"><span 
@@ -243,20 +243,20 @@ href="indexch6.html#x9-230006">6<!--tex4ht:ref: sec:K-Ar --></a>).
      </li>
      <li 
   class="enumerate" id="x5-6006x3">electron capture<br 
-class="newline" />This  is  a  special  form  of  decay  in  which  an  &#8216;extra-nuclear&#8217;
-     electron (generally from the K-shell) is captured by the nucleus.
-     This  causes  a  transformation  of  (N,Z)  <span 
-class="cmsy-10">&#x2192; </span>(N+1,Z-1),  similar
-     to positron emission, with which if often co-exists. The vacant
-     electron position in the K-shell is filled with an electron from a
-     higher shell, releasing X-rays (<span 
+class="newline" />This is a special form of decay in which an &#8216;extra-nuclear&#8217; electron
+     (generally  from  the  K-shell)  is  captured  by  the  nucleus.  This
+     causes a transformation of (N,Z) <span 
+class="cmsy-10">&#x2192; </span>(N+1,Z-1), similar to positron
+     emission,  with  which  it  often  co-exists.  The  vacant  electron
+     position in the K-shell is filled with an electron from a higher shell,
+     releasing X-rays (<span 
 class="cmsy-10">~ </span>10<sup><span 
 class="cmsy-7">-</span><span 
-class="cmr-7">10</span></sup>m wavelength), which is
-     the diagnostic signal of electron capture. This mechanism occurs
-     in the <sup class="textsuperscript"><span 
+class="cmr-7">10</span></sup>m wavelength), which is the diagnostic
+     signal of electron capture. This mechanism occurs in the <sup class="textsuperscript"><span 
 class="cmr-9">40</span></sup>K-<sup class="textsuperscript"><span 
-class="cmr-9">40</span></sup>Ar decay scheme (Section <a 
+class="cmr-9">40</span></sup>Ar
+     decay scheme (Section <a 
 href="indexch6.html#x9-230006">6<!--tex4ht:ref: sec:K-Ar --></a>).
      </li>
      <li 
@@ -296,8 +296,8 @@ class="equation"><tr><td><a
 src="index0x.png" alt="235        236    90    143
  92U + n &#x2192;  92U &#x2192;  36Kr +  56Ba + 3n+ energy
      " class="math-display" ></center></td><td class="equation-label">(2.1)</td></tr></table>
-     <!--l. 347--><p class="nopar" >
-     <!--l. 349--><p class="noindent" >Note that every neutron on the left hand side of this formula
+     <!--l. 348--><p class="nopar" >
+     <!--l. 350--><p class="noindent" >Note that every neutron on the left hand side of this formula
      generates three neutrons on the right hand side. The latter may react
      with further <sup><span 
 class="cmr-7">235</span></sup>U nuclei and generate a chain reaction. This forms the
@@ -305,7 +305,7 @@ class="cmr-7">235</span></sup>U nuclei and generate a chain reaction. This forms
      method (Section <a 
 href="indexch7.html#x10-290007.2">7.2<!--tex4ht:ref: sec:fission-tracks --></a>).
      </li></ol>
-<!--l. 357--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 358--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                            
                                                            
@@ -313,7 +313,7 @@ href="indexch7.html#x10-290007.2">7.2<!--tex4ht:ref: sec:fission-tracks --></a>)
  id="x5-60101"></a>
                                                            
                                                            
-<!--l. 363--><p class="noindent" ><img 
+<!--l. 364--><p class="noindent" ><img 
 src="chart-of-nuclides.png" alt="PIC"  
 >
 <br />  <div class="caption" 
@@ -325,10 +325,10 @@ href="indexli2.html#Xallegre2008">All&egrave;gre</a>,&#x00A0;<a
 href="indexli2.html#Xallegre2008">2008</a>).</span></div><!--tex4ht:label?: x5-60101 -->
                                                            
                                                            
-<!--l. 368--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 369--><p class="indent" >   </div><hr class="endfigure">
    <h3 class="sectionHead"><span class="titlemark">2.3   </span> <a 
  id="x5-70002.3"></a>The age equation</h3>
-<!--l. 372--><p class="noindent" >A characteristic property of radioactive decay is its absolute independence
+<!--l. 373--><p class="noindent" >A characteristic property of radioactive decay is its absolute independence
 of external physical and chemical effects. In other words, it is not affected
 by changes in pressure, temperature, or the molecular bonds connecting a
 radioactive nuclide to neighbouring atoms. This means that the rate at
@@ -352,8 +352,8 @@ src="index1x.png" alt="dP
 --- = - &#x03BB;P
  dt
 " class="math-display" ></center></td><td class="equation-label">(2.2)</td></tr></table>
-<!--l. 387--><p class="nopar" >
-<!--l. 389--><p class="indent" >   Integrating this equation over time yields:
+<!--l. 388--><p class="nopar" >
+<!--l. 390--><p class="indent" >   Integrating this equation over time yields:
    <table 
 class="equation"><tr><td><a 
  id="x5-7002r3"></a>
@@ -362,8 +362,8 @@ class="equation"><tr><td><a
 src="index2x.png" alt="       -&#x03BB;t
 P = P&#x2218;e
 " class="math-display" ></center></td><td class="equation-label">(2.3)</td></tr></table>
-<!--l. 394--><p class="nopar" >
-<!--l. 396--><p class="indent" >   where <span 
+<!--l. 395--><p class="nopar" >
+<!--l. 397--><p class="indent" >   where <span 
 class="cmmi-10">P</span><sub><span 
 class="cmsy-7">&#x2218;</span></sub> is the number of parent atoms present at time <span 
 class="cmmi-10">t </span>= 0. Since this
@@ -383,8 +383,8 @@ class="equation"><tr><td><a
 <img 
 src="index3x.png" alt="P&#x2218; = P e&#x03BB;t
 " class="math-display" ></center></td><td class="equation-label">(2.4)</td></tr></table>
-<!--l. 406--><p class="nopar" >
-<!--l. 408--><p class="indent" >   and bearing in mind that <span 
+<!--l. 407--><p class="nopar" >
+<!--l. 409--><p class="indent" >   and bearing in mind that <span 
 class="cmmi-10">P</span><sub><span 
 class="cmsy-7">&#x2218;</span></sub> = <span 
 class="cmmi-10">P </span>+ <span 
@@ -398,8 +398,8 @@ src="index4x.png" alt="D = P(e&#x03BB;t - 1)
 " class="math-display" ></center></td><td class="equation-label">(2.5)</td></tr></table>
                                                            
                                                            
-<!--l. 413--><p class="nopar" >
-<!--l. 415--><p class="indent" >   This equation forms the foundation of most geochronological methods. It
+<!--l. 414--><p class="nopar" >
+<!--l. 416--><p class="indent" >   This equation forms the foundation of most geochronological methods. It
 can be rewritten explicitly as a function of time:
    <table 
 class="equation"><tr><td><a 
@@ -410,8 +410,8 @@ src="index5x.png" alt="    1  ( D    )
 t = --ln  --+ 1
     &#x03BB;    P
 " class="math-display" ></center></td><td class="equation-label">(2.6)</td></tr></table>
-<!--l. 421--><p class="nopar" >
-<!--l. 423--><p class="indent" >   The degree of instability of a radioactive nuclide can be expressed
+<!--l. 422--><p class="nopar" >
+<!--l. 424--><p class="indent" >   The degree of instability of a radioactive nuclide can be expressed
 by <span 
 class="cmmi-10">&#x03BB; </span>or by the <span 
 class="cmti-10">half life </span><span 
@@ -430,20 +430,20 @@ class="equation"><tr><td><a
 src="index6x.png" alt="P&#x2218;-= P&#x2218;e-&#x03BB;t1&#x2215;2 &#x21D2; t1&#x2215;2 = ln(2)-
  2                     &#x03BB;
 " class="math-display" ></center></td><td class="equation-label">(2.7)</td></tr></table>
-<!--l. 432--><p class="nopar" >
+<!--l. 433--><p class="nopar" >
                                                            
                                                            
-<!--l. 434--><p class="indent" >   As a rule of thumb, the detection limit of a radiometric geochronometer
+<!--l. 435--><p class="indent" >   As a rule of thumb, the detection limit of a radiometric geochronometer
 is reached after about 10 half lives. Thus, <sup><span 
 class="cmr-7">14</span></sup>C goes back <span 
 class="cmsy-10">~</span>50,000 years,
 <sup><span 
 class="cmr-7">10</span></sup>Be 10 million and <sup><span 
 class="cmr-7">40</span></sup>K 10 billion years.
-<!--l. 439--><p class="noindent" >
+<!--l. 440--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">2.4   </span> <a 
  id="x5-80002.4"></a>Decay series</h3>
-<!--l. 442--><p class="noindent" >Sometimes the radiogenic daughter (<span 
+<!--l. 443--><p class="noindent" >Sometimes the radiogenic daughter (<span 
 class="cmmi-10">D</span><sub><span 
 class="cmr-7">1</span></sub>) of a radioactive parent is
 radioactive as well, decaying to a daughter of its own (<span 
@@ -460,10 +460,10 @@ class="equation"><tr><td><a
 <img 
 src="index7x.png" alt="P &#x03BB;--P&#x2192;  D1-&#x03BB;&#x2192;1 D*
 " class="math-display" ></center></td><td class="equation-label">(2.8)</td></tr></table>
-<!--l. 450--><p class="nopar" >
-<!--l. 452--><p class="indent" >   The increase (or decrease) of the number of atoms per unit time for each
+<!--l. 451--><p class="nopar" >
+<!--l. 453--><p class="indent" >   The increase (or decrease) of the number of atoms per unit time for each
 of the nuclides is given by:
-<!--l. 455--><p class="indent" >
+<!--l. 456--><p class="indent" >
                                                            
                                                            
 <table 
@@ -505,14 +505,13 @@ class="align-even"> : <span
 class="cmmi-10">dD</span><sub><span 
 class="cmsy-7">*</span></sub><span 
 class="cmmi-10">&#x2215;dt </span>= <span 
-class="cmsy-10">-</span><span 
 class="cmmi-10">&#x03BB;</span><sub><span 
 class="cmr-7">1</span></sub><span 
 class="cmmi-10">D</span><sub><span 
-class="cmr-7">1</span></sub></td>                                     <td 
+class="cmr-7">1</span></sub></td>                                      <td 
 class="align-label"><a 
  id="x5-8004r11"></a>(2.11)                </td></tr></table>
-<!--l. 461--><p class="indent" >   The number of parent atoms <span 
+<!--l. 462--><p class="indent" >   The number of parent atoms <span 
 class="cmmi-10">P </span>can be written as a function of
 <span 
 class="cmmi-10">t</span>:
@@ -523,8 +522,8 @@ class="equation"><tr><td><a
 <img 
 src="index8x.png" alt="P = P&#x2218;e-&#x03BB;Pt
 " class="math-display" ></center></td><td class="equation-label">(2.12)</td></tr></table>
-<!--l. 466--><p class="nopar" >
-<!--l. 468--><p class="indent" >   Plugging Equation <a 
+<!--l. 467--><p class="nopar" >
+<!--l. 469--><p class="indent" >   Plugging Equation <a 
 href="#x5-8005r12">2.12<!--tex4ht:ref: eq:P2 --></a> into <a 
 href="#x5-8003r10">2.10<!--tex4ht:ref: eq:D1 --></a> yields
    <table 
@@ -535,8 +534,8 @@ class="equation"><tr><td><a
 src="index9x.png" alt="              -&#x03BB;Pt
 dD1&#x2215;dt = &#x03BB;P P&#x2218;e   - &#x03BB;1D1
 " class="math-display" ></center></td><td class="equation-label">(2.13)</td></tr></table>
-<!--l. 473--><p class="nopar" >
-<!--l. 475--><p class="indent" >   Solving this differential equation yields the evolution of <span 
+<!--l. 474--><p class="nopar" >
+<!--l. 476--><p class="indent" >   Solving this differential equation yields the evolution of <span 
 class="cmmi-10">D</span><sub><span 
 class="cmr-7">1</span></sub> with time.
 Assuming that <span 
@@ -551,8 +550,8 @@ class="equation"><tr><td><a
 src="index10x.png" alt="D  = ---&#x03BB;P--P  [e- &#x03BB;Pt - e-&#x03BB;1t]
   1  &#x03BB;1 - &#x03BB;P  &#x2218;
 " class="math-display" ></center></td><td class="equation-label">(2.14)</td></tr></table>
-<!--l. 482--><p class="nopar" >
-<!--l. 484--><p class="indent" >   If <span 
+<!--l. 483--><p class="nopar" >
+<!--l. 485--><p class="indent" >   If <span 
 class="cmmi-10">&#x03BB;</span><sub><span 
 class="cmmi-7">P</span></sub> <span 
 class="cmsy-10">&#x226A; </span><span 
@@ -581,8 +580,8 @@ src="index11x.png" alt="D1 = --&#x03BB;P---P&#x2218;e-&#x03BB;Pt
 " class="math-display" ></center></td><td class="equation-label">(2.15)</td></tr></table>
                                                            
                                                            
-<!--l. 492--><p class="nopar" >
-<!--l. 494--><p class="noindent" >or, alternatively:
+<!--l. 493--><p class="nopar" >
+<!--l. 495--><p class="noindent" >or, alternatively:
    <table 
 class="equation"><tr><td><a 
  id="x5-8009r16"></a>
@@ -591,8 +590,8 @@ class="equation"><tr><td><a
 src="index12x.png" alt="D  = ---&#x03BB;P--P
   1  &#x03BB;1 - &#x03BB;P
 " class="math-display" ></center></td><td class="equation-label">(2.16)</td></tr></table>
-<!--l. 499--><p class="nopar" >
-<!--l. 501--><p class="indent" >   This means that the ratio of <span 
+<!--l. 500--><p class="nopar" >
+<!--l. 502--><p class="indent" >   This means that the ratio of <span 
 class="cmmi-10">D</span><sub><span 
 class="cmr-7">1</span></sub> and <span 
 class="cmmi-10">P </span>remains constant through time.
@@ -618,8 +617,8 @@ class="equation"><tr><td><a
 src="index13x.png" alt="D1 =  &#x03BB;PP
       &#x03BB;1
 " class="math-display" ></center></td><td class="equation-label">(2.17)</td></tr></table>
-<!--l. 508--><p class="nopar" >
-<!--l. 510--><p class="indent" >   Rearranging:
+<!--l. 509--><p class="nopar" >
+<!--l. 511--><p class="indent" >   Rearranging:
    <table 
 class="equation"><tr><td><a 
  id="x5-8011r18"></a>
@@ -629,8 +628,8 @@ class="equation"><tr><td><a
 <img 
 src="index14x.png" alt="D1&#x03BB;1 = P&#x03BB;P
 " class="math-display" ></center></td><td class="equation-label">(2.18)</td></tr></table>
-<!--l. 515--><p class="nopar" >
-<!--l. 517--><p class="indent" >   or, equivalently:
+<!--l. 516--><p class="nopar" >
+<!--l. 518--><p class="indent" >   or, equivalently:
    <table 
 class="equation"><tr><td><a 
  id="x5-8012r19"></a>
@@ -640,8 +639,8 @@ src="index15x.png" alt="P     t  (P)
 ---= -1&#x2215;2---
 D1   t1&#x2215;2(D1 )
 " class="math-display" ></center></td><td class="equation-label">(2.19)</td></tr></table>
-<!--l. 522--><p class="nopar" >
-<!--l. 524--><p class="indent" >   This is the <span 
+<!--l. 523--><p class="nopar" >
+<!--l. 525--><p class="indent" >   This is the <span 
 class="cmti-10">secular equilibrium </span>in which the number of atoms of both
 radioactive members is proportional to their respective half lives. In the
 geochronological isotope systems <sup><span 
@@ -669,8 +668,8 @@ class="equation"><tr><td><a
 <img 
 src="index16x.png" alt="Dn &#x03BB;n = &#x22C5;&#x22C5;&#x22C5; = D2 &#x03BB;2 = D1 &#x03BB;1 = P &#x03BB;P
 " class="math-display" ></center></td><td class="equation-label">(2.20)</td></tr></table>
-<!--l. 537--><p class="nopar" >
-<!--l. 539--><p class="indent" >   This means that the entire series is in equilibrium, so that all members
+<!--l. 538--><p class="nopar" >
+<!--l. 540--><p class="indent" >   This means that the entire series is in equilibrium, so that all members
 occur in mutually constant proportions. The number of atoms of the stable
 end member <span 
 class="cmmi-10">D</span><sub><span 
@@ -682,8 +681,8 @@ class="equation"><tr><td><a
 <img 
 src="index17x.png" alt="D * = P&#x2218; - P - D1 - D2 - &#x22C5;&#x22C5;&#x22C5;- Dn
 " class="math-display" ></center></td><td class="equation-label">(2.21)</td></tr></table>
-<!--l. 546--><p class="nopar" >
-<!--l. 548--><p class="indent" >   Using Equation <a 
+<!--l. 547--><p class="nopar" >
+<!--l. 549--><p class="indent" >   Using Equation <a 
 href="#x5-8013r20">2.20<!--tex4ht:ref: eq:NDnLn --></a>, this becomes:
    <table 
 class="equation"><tr><td><a 
@@ -693,8 +692,8 @@ class="equation"><tr><td><a
 src="index18x.png" alt="              P&#x03BB;P   P &#x03BB;P        P&#x03BB;P
 D * = P &#x2218; - P --&#x03BB;1---&#x03BB;2- - &#x22C5;&#x22C5;&#x22C5;- -&#x03BB;n-
 " class="math-display" ></center></td><td class="equation-label">(2.22)</td></tr></table>
-<!--l. 554--><p class="nopar" >
-<!--l. 556--><p class="indent" >   or
+<!--l. 555--><p class="nopar" >
+<!--l. 557--><p class="indent" >   or
    <table 
 class="equation"><tr><td><a 
  id="x5-8016r23"></a>
@@ -703,8 +702,8 @@ class="equation"><tr><td><a
 src="index19x.png" alt="           (    &#x03BB;P-  &#x03BB;P-       &#x03BB;P)
 D* = P&#x2218; - P 1 + &#x03BB;1 - &#x03BB;2 - &#x22C5;&#x22C5;&#x22C5;-  &#x03BB;n
 " class="math-display" ></center></td><td class="equation-label">(2.23)</td></tr></table>
-<!--l. 562--><p class="nopar" >
-<!--l. 564--><p class="indent" >   Since each of the ratios <span 
+<!--l. 563--><p class="nopar" >
+<!--l. 565--><p class="indent" >   Since each of the ratios <span 
 class="cmmi-10">&#x03BB;</span><sub><span 
 class="cmmi-7">P</span></sub><span 
 class="cmmi-10">&#x2215;&#x03BB;</span><sub><span 
@@ -722,10 +721,10 @@ class="equation"><tr><td><a
 <img 
 src="index20x.png" alt="D * = P&#x2218; - P = P (e&#x03BB;Pt - 1)
 " class="math-display" ></center></td><td class="equation-label">(2.24)</td></tr></table>
-<!--l. 571--><p class="nopar" >
+<!--l. 572--><p class="nopar" >
                                                            
                                                            
-<!--l. 573--><p class="indent" >   This means that the accumulation of the final Pb isotope of the
+<!--l. 574--><p class="indent" >   This means that the accumulation of the final Pb isotope of the
 aforementioned three decay series is only a function of the decay of the
 parent isotope. All intermediate decay steps are therefore inconsequential.
 In rare cases, however, the isotopic equilibrium is disturbed by a dissolution
@@ -734,7 +733,7 @@ pairs can then be used to date phenomena occurring over much
 shorter time scales than those probed by the U-Pb method (Section
 <a 
 href="indexch9.html#x13-350009">9<!--tex4ht:ref: sec:U-series --></a>).
-<!--l. 582--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 583--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                            
                                                            
@@ -742,7 +741,7 @@ href="indexch9.html#x13-350009">9<!--tex4ht:ref: sec:U-series --></a>).
  id="x5-80182"></a>
                                                            
                                                            
-<!--l. 587--><p class="noindent" ><img 
+<!--l. 588--><p class="noindent" ><img 
 src="U-Th-series.png" alt="PIC"  
 >
 <br /> <div class="caption" 
@@ -757,15 +756,15 @@ href="indexli2.html#Xallegre2008">All&egrave;gre</a>,&#x00A0;<a
 href="indexli2.html#Xallegre2008">2008</a>).</span></div><!--tex4ht:label?: x5-80182 -->
                                                            
                                                            
-<!--l. 593--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 594--><p class="indent" >   </div><hr class="endfigure">
                                                            
                                                            
-   <!--l. 595--><div class="crosslinks"><p class="noindent">[<a 
+   <!--l. 596--><div class="crosslinks"><p class="noindent">[<a 
 href="indexch3.html" >next</a>] [<a 
 href="indexli2.html" >prev</a>] [<a 
 href="indexli2.html#tailindexli2.html" >prev-tail</a>] [<a 
 href="indexch2.html" >front</a>] [<a 
 href="index.html#indexch2.html" >up</a>] </p></div>
-<!--l. 595--><p class="indent" >   <a 
+<!--l. 596--><p class="indent" >   <a 
  id="tailindexch2.html"></a>   
 </body></html> 
