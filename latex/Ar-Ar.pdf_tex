@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,1.20798399)%
-    \put(0.48551287,0.94812549){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Hornblende\\ }}}%
+    \put(0.48551287,0.94812549){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Hornblende}}}%
     \put(0.54075901,0.63168016){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Biotite}}}%
     \put(0.48262799,0.2710002){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{K - Feldspar }}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{Ar-Ar.pdf}}%

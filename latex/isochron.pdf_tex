@@ -50,7 +50,7 @@
   \makeatother%
   \begin{picture}(1,0.73874522)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{isochron.pdf}}%
-    \put(-0.00183342,0.59935929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.760\\ }}}%
+    \put(-0.00183342,0.59935929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.760}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{isochron.pdf}}%
     \put(0.27839588,0.04774914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{isochron.pdf}}%

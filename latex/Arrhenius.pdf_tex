@@ -76,7 +76,7 @@
     \put(0.03570406,0.24820626){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-30}}}%
     \put(0.03570406,0.1636638){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-35}}}%
     \put(0.03570406,0.07261805){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-40}}}%
-    \put(0.0216167,0.22101357){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{ln(D/a$^2$) (s$^{-1})}}}}%
+    \put(0.0216167,0.22101357){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{ln(D/a$^2$) (s$^{-1}$)}}}}%
     \put(0.47588167,0.00464009){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{10$^4$/T (K$^{-1}$)}}}%
   \end{picture}%
 \endgroup%

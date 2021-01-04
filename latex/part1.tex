@@ -2179,7 +2179,7 @@ equations giving the (spallogenic + muogenic) production rate relative
 to SLHL as a function of geographic latitude and elevation.\\
 
 Despite their limitations, the production rate scaling factors allow
-the calculation of TCN production rates at any location on the Earth's
+the calculation of TCN production rates at any location on the Earth's
 surface, assuming that the sample is a slab of zero thickness taken
 from a horizontal planar surface. If these assumption are not
 fulfilled, the SLHL production rates must be multiplied by a second
@@ -2861,6 +2861,29 @@ rectangle <- mymat * mymat
 square <- mymat %*% flipped
 \end{verbatim}
 
+\item Lists are used to store more complex data objects:
+
+\begin{verbatim}
+mylist <- list(v=myvec,m=mymat,nine=9)
+\end{verbatim}
+
+The three components of \texttt{mylist} can be accessed in a number of
+equivalent ways. For example, the first item (\texttt{v}) of
+\texttt{mylist} can be accessed either as \verb|mylist$v|, as
+\verb|mylist[[1]]| or as \verb|mylist[['v']]|.\\
+
+Data frames are list-like tables:
+
+\begin{verbatim}
+myframe <- data.frame(period=c('Cz','Mz','Pz','PC'),
+                      SrSr=c(0.708,0.707,0.709,0.708),
+                      fossils=c(TRUE,TRUE,TRUE,FALSE))
+\end{verbatim}
+
+You can access the items in the data frame \texttt{myframe} either
+like a list (e.g. \verb|myframe$period|) or like a matrix
+(\verb|myframe[,'period']|):
+
 \item If you want to learn more about a function, type \texttt{help()} or
 \texttt{?} at the command line prompt:
 
@@ -2938,19 +2961,14 @@ fit <- lm(Sr87Sr86 ~ Rb87Sr86, data = RbSr)
 
 \begin{verbatim}
 # define the 87Rb decay constant (in Ma-1):
-lam87 <- 1.42e-5
+lam87 <- 1.3972e-5 # according to Villa et al. (2015)
 # compute the age from the slope:
-age <- log(1 + coef(fit)[2])/lam87
+tRbSr <- log(1 + coef(fit)[2])/lam87
 
-# predict the Sr87Sr86-ratios for the
-# full range of Rb87Sr86-values:
-Rb87Sr86 <- c(0,max(RbSr[,'Rb87Sr86']))
-Sr87Sr86 <- coef(fit)[1] + coef(fit)[2]*Rb87Sr86
-
-# add the predicted ratios to the existing plot:
-lines(Rb87Sr86,Sr87Sr86)
+# add the best fit line to the existing plot:
+abline(fit)
 # label with the isochron age: 
-title(age)
+title(tRbSr)
 \end{verbatim}
 
 \item One of the most powerful features of \texttt{R} is the
@@ -2980,6 +2998,10 @@ RbSr2 <- read.data('RbSr.csv',method='Rb-Sr',format=1)
 isochron(RbSr2)
 \end{verbatim}
 
+Even though \texttt{IsoplotR} is powerful, convenient, and popular, we
+will not use it in the remainder of these notes. Instead, we will
+carry out all our calculations in base \texttt{R} because this will
+give you a more fundamental understanding of geochronology.
 \end{enumerate}
 
 \section{Introduction to \texttt{Matlab}}

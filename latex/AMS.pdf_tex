@@ -54,7 +54,7 @@
     \put(0,0){\includegraphics[width=\unitlength,page=2]{AMS.pdf}}%
     \put(0.51037164,0.51749158){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Stripping canal}}}%
     \put(0.56337288,0.32605436){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Stripping gas}}}%
-    \put(0.23745494,0.19394691){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\\ Microscope}}}%
+    \put(0.23745494,0.19394691){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Microscope}}}%
     \put(0.33080039,0.081616){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Extraction electrode}}}%
     \put(0.33159141,0.0058013){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Sample holder}}}%
     \put(0.60292594,0.27305319){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{pump}}}%

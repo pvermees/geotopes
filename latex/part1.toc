@@ -1,48 +1,48 @@
-\contentsline {chapter}{\numberline {1}Introduction}{5}
-\contentsline {chapter}{\numberline {2}Basic Notions}{9}
-\contentsline {section}{\numberline {2.1}Isotopes and radioactivity}{9}
-\contentsline {section}{\numberline {2.2}Radioactivity}{10}
-\contentsline {section}{\numberline {2.3}The age equation}{12}
-\contentsline {section}{\numberline {2.4}Decay series}{13}
-\contentsline {chapter}{\numberline {3}Analytical techniques}{17}
-\contentsline {section}{\numberline {3.1}Mass spectrometry}{17}
-\contentsline {section}{\numberline {3.2}Isotope dilution}{21}
-\contentsline {section}{\numberline {3.3}Sample-standard bracketing}{23}
-\contentsline {chapter}{\numberline {4}Simple parent-daughter pairs}{25}
-\contentsline {section}{\numberline {4.1}$^{14}$C dating}{25}
-\contentsline {section}{\numberline {4.2}The Rb-Sr method}{26}
-\contentsline {section}{\numberline {4.3}Isochrons}{28}
-\contentsline {section}{\numberline {4.4}The Sm-Nd method}{28}
-\contentsline {chapter}{\numberline {5}The U-Pb system}{31}
-\contentsline {section}{\numberline {5.1}The U-(Th-)Pb method}{32}
-\contentsline {section}{\numberline {5.2}The Pb-Pb method}{33}
-\contentsline {section}{\numberline {5.3}Concordia}{34}
-\contentsline {section}{\numberline {5.4}Detrital geochronology}{35}
-\contentsline {chapter}{\numberline {6}The K-Ar system}{37}
-\contentsline {section}{\numberline {6.1}K-Ar dating}{37}
-\contentsline {section}{\numberline {6.2}$^{40}$Ar/$^{39}$Ar dating}{38}
-\contentsline {section}{\numberline {6.3}Applications}{39}
-\contentsline {chapter}{\numberline {7}Thermochronology}{43}
-\contentsline {section}{\numberline {7.1}The U-Th-He method}{43}
-\contentsline {section}{\numberline {7.2}Fission tracks}{45}
-\contentsline {chapter}{\numberline {8}Cosmogenic Nuclides}{51}
-\contentsline {section}{\numberline {8.1}Stable nuclides}{53}
-\contentsline {section}{\numberline {8.2}Radionuclides}{53}
-\contentsline {section}{\numberline {8.3}The `Banana Plot'}{54}
-\contentsline {section}{\numberline {8.4}Scaling models}{56}
-\contentsline {chapter}{\numberline {9}U-series dating}{59}
-\contentsline {section}{\numberline {9.1}The $^{234}$U-$^{238}$U method}{60}
-\contentsline {section}{\numberline {9.2}The $^{230}$Th method}{60}
-\contentsline {section}{\numberline {9.3}The $^{230}$Th-$^{238}$U method}{61}
-\contentsline {chapter}{\numberline {10}Error propagation}{63}
-\contentsline {section}{\numberline {10.1}Some basic definitions}{63}
-\contentsline {section}{\numberline {10.2}Examples}{65}
-\contentsline {section}{\numberline {10.3}Accuracy vs. precision}{66}
-\contentsline {chapter}{\numberline {11}Exercises}{69}
-\contentsline {chapter}{\numberline {12}Programming practicals}{73}
-\contentsline {section}{\numberline {12.1}Introduction to \texttt {R}}{73}
-\contentsline {section}{\numberline {12.2}Introduction to \texttt {Matlab}}{77}
-\contentsline {section}{\numberline {12.3}U-Th-Pb data reduction}{82}
-\contentsline {section}{\numberline {12.4}$^{40}$Ar/$^{39}$Ar data reduction}{83}
-\contentsline {section}{\numberline {12.5}Error propagation}{84}
-\contentsline {section}{\numberline {12.6}Fission tracks}{85}
+\contentsline {chapter}{\numberline {1}Introduction}{5}%
+\contentsline {chapter}{\numberline {2}Basic Notions}{9}%
+\contentsline {section}{\numberline {2.1}Isotopes and radioactivity}{9}%
+\contentsline {section}{\numberline {2.2}Radioactivity}{10}%
+\contentsline {section}{\numberline {2.3}The age equation}{12}%
+\contentsline {section}{\numberline {2.4}Decay series}{13}%
+\contentsline {chapter}{\numberline {3}Analytical techniques}{17}%
+\contentsline {section}{\numberline {3.1}Mass spectrometry}{17}%
+\contentsline {section}{\numberline {3.2}Isotope dilution}{21}%
+\contentsline {section}{\numberline {3.3}Sample-standard bracketing}{23}%
+\contentsline {chapter}{\numberline {4}Simple parent-daughter pairs}{25}%
+\contentsline {section}{\numberline {4.1}$^{14}$C dating}{25}%
+\contentsline {section}{\numberline {4.2}The Rb-Sr method}{26}%
+\contentsline {section}{\numberline {4.3}Isochrons}{28}%
+\contentsline {section}{\numberline {4.4}The Sm-Nd method}{28}%
+\contentsline {chapter}{\numberline {5}The U-Pb system}{31}%
+\contentsline {section}{\numberline {5.1}The U-(Th-)Pb method}{32}%
+\contentsline {section}{\numberline {5.2}The Pb-Pb method}{33}%
+\contentsline {section}{\numberline {5.3}Concordia}{34}%
+\contentsline {section}{\numberline {5.4}Detrital geochronology}{35}%
+\contentsline {chapter}{\numberline {6}The K-Ar system}{37}%
+\contentsline {section}{\numberline {6.1}K-Ar dating}{37}%
+\contentsline {section}{\numberline {6.2}$^{40}$Ar/$^{39}$Ar dating}{38}%
+\contentsline {section}{\numberline {6.3}Applications}{39}%
+\contentsline {chapter}{\numberline {7}Thermochronology}{43}%
+\contentsline {section}{\numberline {7.1}The U-Th-He method}{43}%
+\contentsline {section}{\numberline {7.2}Fission tracks}{45}%
+\contentsline {chapter}{\numberline {8}Cosmogenic Nuclides}{51}%
+\contentsline {section}{\numberline {8.1}Stable nuclides}{53}%
+\contentsline {section}{\numberline {8.2}Radionuclides}{53}%
+\contentsline {section}{\numberline {8.3}The `Banana Plot'}{54}%
+\contentsline {section}{\numberline {8.4}Scaling models}{56}%
+\contentsline {chapter}{\numberline {9}U-series dating}{59}%
+\contentsline {section}{\numberline {9.1}The $^{234}$U-$^{238}$U method}{60}%
+\contentsline {section}{\numberline {9.2}The $^{230}$Th method}{60}%
+\contentsline {section}{\numberline {9.3}The $^{230}$Th-$^{238}$U method}{61}%
+\contentsline {chapter}{\numberline {10}Error propagation}{63}%
+\contentsline {section}{\numberline {10.1}Some basic definitions}{63}%
+\contentsline {section}{\numberline {10.2}Examples}{65}%
+\contentsline {section}{\numberline {10.3}Accuracy vs. precision}{66}%
+\contentsline {chapter}{\numberline {11}Exercises}{69}%
+\contentsline {chapter}{\numberline {12}Programming practicals}{73}%
+\contentsline {section}{\numberline {12.1}Introduction to \texttt {R}}{73}%
+\contentsline {section}{\numberline {12.2}Introduction to \texttt {Matlab}}{78}%
+\contentsline {section}{\numberline {12.3}U-Th-Pb data reduction}{82}%
+\contentsline {section}{\numberline {12.4}$^{40}$Ar/$^{39}$Ar data reduction}{83}%
+\contentsline {section}{\numberline {12.5}Error propagation}{84}%
+\contentsline {section}{\numberline {12.6}Fission tracks}{86}%

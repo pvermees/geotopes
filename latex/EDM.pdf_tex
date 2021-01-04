@@ -50,7 +50,7 @@
   \makeatother%
   \begin{picture}(1,1.35221571)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{EDM.pdf}}%
-    \put(0.61695996,0.46369375){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\\ }}}%
+    \put(0.61695996,0.46369375){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
     \put(0.62104763,1.34005495){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33580432\unitlength}\raggedright accumulation of spontaneous fission tracks\end{minipage}}}%
     \put(0.62104763,1.10174866){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33580432\unitlength}\raggedright polished section through crystal\end{minipage}}}%
     \put(0.62104763,0.69662797){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33580432\unitlength}\raggedright external mica detector attached\end{minipage}}}%

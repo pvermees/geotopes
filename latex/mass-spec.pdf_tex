@@ -52,11 +52,11 @@
     \put(0,0){\includegraphics[width=\unitlength,page=1]{mass-spec.pdf}}%
     \put(0.44719631,0.12938051){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{Magnet}}}%
     \put(0.09317713,0.34352576){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{ION SOURCE}}}}%
-    \put(-0.00177419,0.27538781){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{Filament \\ }}}%
+    \put(-0.00177419,0.27538781){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{Filament}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{mass-spec.pdf}}%
     \put(0.87269383,0.30470472){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{Amplifier}}}%
     \put(0.79224414,0.34352576){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{COLLECTOR}}}}%
-    \put(0.65309907,0.2874407){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{Faraday cup\\ }}}%
-    \put(0.07857833,0.06245364){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{High voltage\\ }}}%
+    \put(0.65309907,0.2874407){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{Faraday cup}}}%
+    \put(0.07857833,0.06245364){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{High voltage}}}%
   \end{picture}%
 \endgroup%

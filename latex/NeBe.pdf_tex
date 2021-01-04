@@ -64,7 +64,7 @@
     \put(0.16776479,0.00039845){\makebox(0,0)[lb]{\smash{10$^5$}}}%
     \put(0.54646276,0.00039845){\makebox(0,0)[lb]{\smash{10$^6$}}}%
     \put(0.92517801,0.00039845){\makebox(0,0)[lb]{\smash{10$^7$}}}%
-    \put(0.09352992,0.46488046){\rotatebox{90.00000252}{\makebox(0,0)[lb]{\smash{$^{21}$Ne /$$^{10}$Be}}}}%
+    \put(0.09352992,0.46488046){\rotatebox{90.00000252}{\makebox(0,0)[lb]{\smash{$^{21}$Ne /$^{10}$Be}}}}%
     \put(0.784615,0.06335319){\makebox(0,0)[lb]{\smash{$^{10}$Be [at/g]}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{NeBe.pdf}}%
     \put(0.8345918,0.32489332){\makebox(0,0)[lb]{\smash{a}}}%
