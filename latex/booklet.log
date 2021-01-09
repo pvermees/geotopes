@@ -1,58 +1,58 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.1)  20 FEB 2020 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.25)  8 JAN 2021 21:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\nonstopmode\input booklet.tex
 (./booklet.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count87
-\calc@Bcount=\count88
-\calc@Adimen=\dimen103
-\calc@Bdimen=\dimen104
-\calc@Askip=\skip43
-\calc@Bskip=\skip44
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count175
+\calc@Bcount=\count176
+\calc@Adimen=\dimen135
+\calc@Bdimen=\dimen136
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count89
-\calc@Cskip=\skip45
+\calc@Ccount=\count177
+\calc@Cskip=\skip51
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
@@ -80,10 +80,10 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -91,108 +91,78 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 )
-\Gin@req@height=\dimen105
-\Gin@req@width=\dimen106
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
 )
-\AM@pagewidth=\dimen107
-\AM@pageheight=\dimen108
+\AM@pagewidth=\dimen139
+\AM@pageheight=\dimen140
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box26
+\AM@pagebox=\box45
 \AM@global@opts=\toks15
+\AM@pagecnt=\count178
 \AM@toc@title=\toks16
-\c@AM@survey=\count90
-\AM@templatesizebox=\box27
-) (./booklet.aux)
+\c@AM@survey=\count179
+\AM@templatesizebox=\box46
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count180
+\l__pdf_internal_box=\box47
+)
+(./booklet.aux)
 \openout1 = `booklet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-\AtBeginShipoutBox=\box28
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+\AtBeginShipoutBox=\box48
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
-\scratchdimen=\dimen109
-\scratchbox=\box29
-\nofMPsegments=\count92
-\nofMParguments=\count93
+\scratchcounter=\count181
+\scratchdimen=\dimen141
+\scratchbox=\box49
+\nofMPsegments=\count182
+\nofMParguments=\count183
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count94
-\MPscratchDim=\dimen110
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
+\MPscratchCnt=\count184
+\MPscratchDim=\dimen142
+\MPnumerator=\count185
+\makeMPintoPDFobject=\count186
 \everyMPtoPDFconversion=\toks18
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
-Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-))
+)
 <part1.pdf, id=1, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf>
@@ -267,7 +237,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page2 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [2 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=42, page=86, 421.10124pt x 597.50829pt>
+<part1.pdf, id=72, page=86, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 86>
 Package pdftex.def Info: part1.pdf , page86 used on input line 11.
@@ -276,7 +246,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 86>
 Package pdftex.def Info: part1.pdf , page86 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=43, page=3, 421.10124pt x 597.50829pt>
+<part1.pdf, id=73, page=3, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 3>
 Package pdftex.def Info: part1.pdf , page3 used on input line 11.
@@ -294,7 +264,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page3 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [3 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=87, page=85, 421.10124pt x 597.50829pt>
+<part1.pdf, id=97, page=85, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 85>
 Package pdftex.def Info: part1.pdf , page85 used on input line 11.
@@ -303,7 +273,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 85>
 Package pdftex.def Info: part1.pdf , page85 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=88, page=4, 421.10124pt x 597.50829pt>
+<part1.pdf, id=98, page=4, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 4>
 Package pdftex.def Info: part1.pdf , page4 used on input line 11.
@@ -1057,7 +1027,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page31 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [31 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=335, page=57, 421.10124pt x 597.50829pt>
+<part1.pdf, id=340, page=57, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 57>
 Package pdftex.def Info: part1.pdf , page57 used on input line 11.
@@ -1066,7 +1036,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 57>
 Package pdftex.def Info: part1.pdf , page57 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=336, page=32, 421.10124pt x 597.50829pt>
+<part1.pdf, id=341, page=32, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 32>
 Package pdftex.def Info: part1.pdf , page32 used on input line 11.
@@ -1084,7 +1054,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page32 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [32 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=359, page=56, 421.10124pt x 597.50829pt>
+<part1.pdf, id=364, page=56, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 56>
 Package pdftex.def Info: part1.pdf , page56 used on input line 11.
@@ -1093,7 +1063,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 56>
 Package pdftex.def Info: part1.pdf , page56 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=360, page=33, 421.10124pt x 597.50829pt>
+<part1.pdf, id=365, page=33, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 33>
 Package pdftex.def Info: part1.pdf , page33 used on input line 11.
@@ -1111,7 +1081,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page33 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [33 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=369, page=55, 421.10124pt x 597.50829pt>
+<part1.pdf, id=374, page=55, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 55>
 Package pdftex.def Info: part1.pdf , page55 used on input line 11.
@@ -1120,7 +1090,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 55>
 Package pdftex.def Info: part1.pdf , page55 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=370, page=34, 421.10124pt x 597.50829pt>
+<part1.pdf, id=375, page=34, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 34>
 Package pdftex.def Info: part1.pdf , page34 used on input line 11.
@@ -1138,7 +1108,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page34 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [34 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=374, page=54, 421.10124pt x 597.50829pt>
+<part1.pdf, id=379, page=54, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 54>
 Package pdftex.def Info: part1.pdf , page54 used on input line 11.
@@ -1147,7 +1117,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 54>
 Package pdftex.def Info: part1.pdf , page54 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=375, page=35, 421.10124pt x 597.50829pt>
+<part1.pdf, id=380, page=35, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 35>
 Package pdftex.def Info: part1.pdf , page35 used on input line 11.
@@ -1165,7 +1135,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page35 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [35 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=396, page=53, 421.10124pt x 597.50829pt>
+<part1.pdf, id=401, page=53, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 53>
 Package pdftex.def Info: part1.pdf , page53 used on input line 11.
@@ -1174,7 +1144,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 53>
 Package pdftex.def Info: part1.pdf , page53 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=397, page=36, 421.10124pt x 597.50829pt>
+<part1.pdf, id=402, page=36, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 36>
 Package pdftex.def Info: part1.pdf , page36 used on input line 11.
@@ -1193,7 +1163,7 @@ Package pdftex.def Info: part1.pdf , page36 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
 
 [36 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=401, page=52, 421.10124pt x 597.50829pt>
+<part1.pdf, id=407, page=52, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 52>
 Package pdftex.def Info: part1.pdf , page52 used on input line 11.
@@ -1202,7 +1172,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 52>
 Package pdftex.def Info: part1.pdf , page52 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=402, page=37, 421.10124pt x 597.50829pt>
+<part1.pdf, id=408, page=37, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 37>
 Package pdftex.def Info: part1.pdf , page37 used on input line 11.
@@ -1220,7 +1190,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page37 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [37 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=407, page=51, 421.10124pt x 597.50829pt>
+<part1.pdf, id=413, page=51, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 51>
 Package pdftex.def Info: part1.pdf , page51 used on input line 11.
@@ -1229,7 +1199,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 51>
 Package pdftex.def Info: part1.pdf , page51 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=408, page=38, 421.10124pt x 597.50829pt>
+<part1.pdf, id=414, page=38, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 38>
 Package pdftex.def Info: part1.pdf , page38 used on input line 11.
@@ -1247,7 +1217,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page38 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [38 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=423, page=50, 421.10124pt x 597.50829pt>
+<part1.pdf, id=428, page=50, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 50>
 Package pdftex.def Info: part1.pdf , page50 used on input line 11.
@@ -1256,7 +1226,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 50>
 Package pdftex.def Info: part1.pdf , page50 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=424, page=39, 421.10124pt x 597.50829pt>
+<part1.pdf, id=429, page=39, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 39>
 Package pdftex.def Info: part1.pdf , page39 used on input line 11.
@@ -1274,7 +1244,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page39 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [39 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=451, page=49, 421.10124pt x 597.50829pt>
+<part1.pdf, id=456, page=49, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 49>
 Package pdftex.def Info: part1.pdf , page49 used on input line 11.
@@ -1283,7 +1253,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 49>
 Package pdftex.def Info: part1.pdf , page49 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=452, page=40, 421.10124pt x 597.50829pt>
+<part1.pdf, id=457, page=40, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 40>
 Package pdftex.def Info: part1.pdf , page40 used on input line 11.
@@ -1305,7 +1275,7 @@ Package pdftex.def Info: part1.pdf , page40 used on input line 11.
 pdfTeX warning: pdflatex (file ./part1.pdf): PDF inclusion: multiple pdfs with 
 page group included in a single page
 >]
-<part1.pdf, id=491, page=48, 421.10124pt x 597.50829pt>
+<part1.pdf, id=496, page=48, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 48>
 Package pdftex.def Info: part1.pdf , page48 used on input line 11.
@@ -1314,7 +1284,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 48>
 Package pdftex.def Info: part1.pdf , page48 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=492, page=41, 421.10124pt x 597.50829pt>
+<part1.pdf, id=497, page=41, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 41>
 Package pdftex.def Info: part1.pdf , page41 used on input line 11.
@@ -1332,7 +1302,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page41 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [41 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=496, page=47, 421.10124pt x 597.50829pt>
+<part1.pdf, id=501, page=47, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 47>
 Package pdftex.def Info: part1.pdf , page47 used on input line 11.
@@ -1341,7 +1311,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 47>
 Package pdftex.def Info: part1.pdf , page47 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=497, page=42, 421.10124pt x 597.50829pt>
+<part1.pdf, id=502, page=42, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 42>
 Package pdftex.def Info: part1.pdf , page42 used on input line 11.
@@ -1359,7 +1329,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page42 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [42 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=501, page=46, 421.10124pt x 597.50829pt>
+<part1.pdf, id=506, page=46, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 46>
 Package pdftex.def Info: part1.pdf , page46 used on input line 11.
@@ -1368,7 +1338,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 46>
 Package pdftex.def Info: part1.pdf , page46 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=502, page=43, 421.10124pt x 597.50829pt>
+<part1.pdf, id=507, page=43, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 43>
 Package pdftex.def Info: part1.pdf , page43 used on input line 11.
@@ -1386,7 +1356,7 @@ File: part1.pdf Graphic file (type pdf)
 Package pdftex.def Info: part1.pdf , page43 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [43 <./part1.pdf> <./part1.pdf>]
-<part1.pdf, id=511, page=45, 421.10124pt x 597.50829pt>
+<part1.pdf, id=516, page=45, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 45>
 Package pdftex.def Info: part1.pdf , page45 used on input line 11.
@@ -1395,7 +1365,7 @@ File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 45>
 Package pdftex.def Info: part1.pdf , page45 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
-<part1.pdf, id=512, page=44, 421.10124pt x 597.50829pt>
+<part1.pdf, id=517, page=44, 421.10124pt x 597.50829pt>
 File: part1.pdf Graphic file (type pdf)
 <use part1.pdf, page 44>
 Package pdftex.def Info: part1.pdf , page44 used on input line 11.
@@ -1414,13 +1384,13 @@ Package pdftex.def Info: part1.pdf , page44 used on input line 11.
 (pdftex.def)             Requested size: 402.54341pt x 571.17625pt.
  [44 <./part1.pdf> <./part1.pdf>] (./booklet.aux) ) 
 Here is how much of TeX's memory you used:
- 2992 strings out of 492982
- 46479 string characters out of 6134896
- 103566 words of memory out of 5000000
- 6538 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 2943 strings out of 481239
+ 46279 string characters out of 5920377
+ 279060 words of memory out of 5000000
+ 18209 multiletter control sequences out of 15000+600000
+ 532338 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,20n,49p,293b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,20n,49p,273b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
@@ -1443,12 +1413,13 @@ cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on booklet.pdf (44 pages, 1208028 bytes).
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/wasy-type1/wasy10.pfb>
+Output written on booklet.pdf (44 pages, 1216390 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
+ 553 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  456 words of extra memory for PDF output out of 10000 (max. 10000000)
 

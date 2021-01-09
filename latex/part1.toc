@@ -43,6 +43,6 @@
 \contentsline {section}{\numberline {12.1}Introduction to \texttt {R}}{73}%
 \contentsline {section}{\numberline {12.2}Introduction to \texttt {Matlab}}{78}%
 \contentsline {section}{\numberline {12.3}U-Th-Pb data reduction}{82}%
-\contentsline {section}{\numberline {12.4}$^{40}$Ar/$^{39}$Ar data reduction}{83}%
+\contentsline {section}{\numberline {12.4}$^{40}$Ar/$^{39}$Ar data reduction}{84}%
 \contentsline {section}{\numberline {12.5}Error propagation}{84}%
 \contentsline {section}{\numberline {12.6}Fission tracks}{86}%

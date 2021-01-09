@@ -103,10 +103,10 @@ aforementioned elements are often used for palaeothermometry.\\
 These lecture notes cover the first half of an Isotope Geology module
 at UCL that deals with the geochronological aspects of the subject.
 The second part of the module deals with stable isotopes. It is taught
-by Dr.~Philip Pogge Von Strandmann and covered in a separate set of
-notes. The core of the geochronology notes is formed by Prof. Peter
-van den Haute's lecture notes (in Dutch) at the University of Ghent.
-This was expanded with additional material, notably on the subjects of
+by Dr.~Susan Little and covered in a separate set of notes. The core
+of the geochronology notes is formed by Prof. Peter van den Haute's
+lecture notes (in Dutch) at the University of Ghent.  This was
+expanded with additional material, notably on the subjects of
 cosmogenic nuclide geochronology (Section~\ref{sec:cosmo}) and U-Th-He
 dating (Section~\ref{sec:U-Th-He}). Some figures were modified from
 published sources, including \citet{allegre2008}, \citet{braun2006},
@@ -2662,17 +2662,17 @@ standards'.
   0.056584 and $^{86}$Sr/$^{88}$Sr = 0.1194.
   \rotatebox[origin=c]{180}{[Answer: 2.36 Ga]}
 
-\item What is the U-Th-Pb age of a zircon with the following
-  composition: U = 792.1 ppm, Th = 318.6 ppm, Pb = 208.2 ppm. Atomic
-  masses for U, Th and Pb in the zircon are 238.04, 232.04 and 205.94,
-  respectively. The isotopic composition of the Pb is as follows:
-  $^{204}$Pb = 0.048\%, $^{206}$Pb = 80.33\%, $^{207}$Pb = 9.00\%,
-  $^{208}$Pb = 10.63\%. Assume the following initial Pb composition:
-  204 : 206 : 207 : 208 = 1.00 : 16.25 : 15.51 : 35.73. The decay
-  constants for $^{238}$U, $^{235}$U and $^{232}$Th are given in
-  Section \ref{sec:U-Pb}. $^{238}$U/$^{235}$U = 137.818. Calculate the
+\item Consider a zircon with the following composition: U = 792.1 ppm,
+  Th = 318.6 ppm, Pb = 208.2 ppm. Atomic masses for U, Th and Pb in
+  the zircon are 238.04, 232.04 and 205.94, respectively. The isotopic
+  composition of the Pb is as follows: $^{204}$Pb = 0.048\%,
+  $^{206}$Pb = 80.33\%, $^{207}$Pb = 9.00\%, $^{208}$Pb =
+  10.63\%. Assume the following initial Pb composition: 204 : 206 :
+  207 : 208 = 1.00 : 16.25 : 15.51 : 35.73. The decay constants for
+  $^{238}$U, $^{235}$U and $^{232}$Th are given in Section
+  \ref{sec:U-Pb}. $^{238}$U/$^{235}$U = 137.818. Calculate the
   $^{206}$Pb/$^{238}$U, $^{207}$Pb/$^{235}$U, $^{208}$Pb/$^{232}$Th
-  and $^{206}$Pb/$^{207}$Pb-age of the zircon. Give an account of its
+  and $^{207}$Pb/$^{206}$Pb-age of the zircon. Give an account of its
   formation history. \\ \rotatebox[origin=c]{180}{[Answer: 1.405,
       1.523, 1.284 and 1.689 Ga]}
 
@@ -3239,21 +3239,29 @@ data in \texttt{R} or \texttt{Matlab}:
   ramped up quickly, it slowly drops over time as the laser goes out
   of focus whilst drilling deeper into the sample. This is the
   `signal'.
+\item Compute the arithmetic mean U and Pb blank (measurements before
+  20 seconds), and subtract them from the signal (measurements after
+  25 seconds). Do this for both the sample and the standard.  You will
+  get two times four vectors, for $^{206}$Pb, $^{207}$Pb, $^{235}$U
+  and $^{238}$U.
+\item Use the four blank corrected signal vectors to form two pairs of
+  $^{206}$Pb/$^{238}$U and $^{207}$Pb/$^{235}$U vectors.
+\item Take the arithmetic mean of the $^{206}$Pb/$^{238}$U and
+  $^{207}$Pb/$^{235}$U ratio vectors. You will now have two pairs of
+  numbers representing the \emph{measured} $^{206}$Pb/$^{238}$U and
+  $^{207}$Pb/$^{235}$U ratios for the sample and the standard.
 \item Given that GJ-1 has a known age of 600.4 Ma, what are its
-  expected $^{206}$Pb/$^{238}$U and $^{207}$Pb/$^{235}$U ratios?
-\item Compare these values with the arithmetic mean of the measured
-  ratios, ignoring the first 25~seconds of the ICP-MS signal. 
-  Is there a significant difference between the measured and
+  \emph{expected} $^{206}$Pb/$^{238}$U, and $^{207}$Pb/$^{235}$U
+  ratios? Is there a significant difference between the measured and
   the expected ratios? What could be causing this?
 \item Calculate a correction factor by dividing the expected GJ-1
   ratios by the measured values. \label{corr}
-\item Calculate the measured isotopic ratios for sample 91500.
-\item Apply the correction factor calculated in step \ref{corr} to
-  these measurements.
+\item Apply the correction factor calculated in step \ref{corr} to the
+  measured ratios for sample 91500. This gives us two estimated atomic
+  $^{206}$Pb/$^{238}$U and $^{207}$Pb/$^{235}$U ratios.
 \item What is the age of 91500?
 \item Can you plot the results on a Wetherill concordia diagram?
 \end{enumerate}
-
 
 \section{$^{40}$Ar/$^{39}$Ar data reduction}
 \label{sec:Ar-Ar-R}
@@ -3407,7 +3415,6 @@ $$\frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{N_s}{N_i}\r
 
 \end{enumerate}
 
-\newpage\pagestyle{empty}~
 \newpage\pagestyle{empty}~
 
 \end{document}
