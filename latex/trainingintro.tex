@@ -1,0 +1,66 @@
+\begin{refsection}
+\chapter{Introduction}
+\label{ch:intro1}
+
+The use of naturally occurring radioactive isotopes to date minerals
+and rocks is the oldest branch of isotope geology. The foundations of
+these so-called isotopic or radiometric dating methods were laid
+shortly after the turn of the XX\textsuperscript{th} century with the
+discovery of the laws of radioactive decay by eminent physicists such
+as Ernest Rutherford and Frederick Soddy \citep{rutherford1902a,
+  rutherford1902b}.  The application of these principles to the field
+of Geology and the calibration of the geological time scale were
+pioneered by Arthur \citet{holmes1911, holmes1913,
+  holmes1947}. Initially, radiometric geochronology was exclusively
+based on uranium and its daughter products, but with the development
+of increasingly sensitive analytical equipment, ever more isotopic
+`clocks' were added over the course of the century: Rb/Sr
+\citep{hahn1943}, $^{14}$C \citep{libby1946}, K/Ar
+\citep{aldrich1948}, $^{238}$U fission tracks \citep{price1963},
+$^{40}$Ar/$^{39}$Ar \citep{merrihue1966}, Sm/Nd \citep{lugmair1974},
+etc.\\
+
+The first part of these lecture notes provides a basic introduction to
+all these methods. Chapter~\ref{ch:basic-notions} reviews the basic
+principles of radioactive decay, which form the basis of all isotopic
+dating techniques. It will derive the fundamental age equation and
+introduce the concepts of secular equilibrium, which will be revisited
+in later chapters. Chapter~\ref{ch:analyticaltechniques} provides the
+briefest of introductions to the world of mass spectrometry. It will
+sketch the basic operating principles of the instruments used to
+acquire the datasets that will be used for \texttt{R} programming
+exercises later on. Chapters~\ref{ch:intro2PD}--\ref{ch:intro2Useries}
+provide basic introductions to the radiocarbon, Rb--Sr, Sm--Nd, U--Pb,
+Ar--Ar, U--Th--He, fission track and Th--U methods, which will be
+fleshed out further in Part~2 of the
+notes.\\
+
+Chapter~\ref{ch:error-propagation} presents a primer in error
+propagation which is extremely important because, to quote K.R. Ludwig
+``The uncertainty of the age is as important as the age
+itself'' \citep{ludwig2003b}. Chapter~\ref{ch:exercises} contains a
+collection of exercises that are meant to be solved by pencil on
+paper, whereas Chapter~\ref{ch:programming} contains a collection of
+practical exercises that require the \texttt{R} programming language.
+In these exercises, you will process some raw data files for the
+U--Pb, Ar--Ar and fission track methods. The purpose of these
+exercises is to provide a glimpse into the `black box' data processing
+software that is normally used by geochronologists to turn mass
+spectrometer data into tables of isotopic ratios for further
+processing with the \texttt{IsoplotR} package that is the subject of
+Part~2 of this book.\\
+
+The core of these notes is formed by Prof. Peter van den Haute's
+lecture notes (in Dutch) at the University of Ghent.  This was
+expanded with additional material, exercises, and practicals. Some
+figures were modified from published sources,
+including \citet{allegre2008}, \citet{braun2006},
+and \citet{galbraith2005}. These books are recommended further reading
+material, as is the detailed textbook by \citet{dickin2005}, from
+which both \citet{allegre2008} and van den Haute heavily
+borrowed. Additional lecture material, including the data files used
+in the programming practicals of Chapter~\ref{ch:programming}, can be
+found at \texttt{https://github.com/pvermees/geotopes/}.
+
+\printbibliography[heading=subbibliography]
+\end{refsection}

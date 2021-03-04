@@ -1,0 +1,77 @@
+\section{Error propagation}
+\label{sec:errorprop-R}
+
+This exercise will build on the results from the previous two
+practicals.
+
+\begin{enumerate}
+
+\item Plot the $^{206}$Pb/$^{238}$U-ratios of the sample against those
+  of the standard (data from Section \ref{sec:U-Pb-R}).  Verify that
+  the covariance between the two can safely be neglected.
+
+\item Calculate the standard errors of the mean $^{206}$Pb/$^{238}$U
+  signal ratios for the sample (91500) and the standard (GJ-1) using
+  the \texttt{mean} and \texttt{sd} \ifuclnotes (for \texttt{R}) or \texttt{std}
+  (for \texttt{Matlab}) \fi functions.
+
+\item Propagate the standard errors of the atomic
+  \textsuperscript{206}Pb/\textsuperscript{238}U and
+  \textsuperscript{207}Pb/\textsuperscript{235}U-ratios calculated in
+  step~\ref{it:atomicUPb} of Section~\ref{sec:U-Pb-R}.
+
+\item Propagate the analytical uncertainties of the U-Pb age, ignoring
+  the covariance terms. Recall that 
+
+$$ t = \frac{1}{\lambda_{238}}\ln\left(1 +
+  \frac{{}^{206}Pb}{{}^{238}U}\right) $$
+
+If you want you can use the simplifying approximation that $\ln(1+X)
+\approx X$ if $X \ll 1$ (this assumption may not be correct for the
+$^{207}$Pb/$^{235}$U-age). \label{loglin}
+
+\item Compute the analytical uncertainties associated with the linear
+  extrapolation of the argon signals of the sample and the standard in
+  Section \ref{sec:Ar-Ar-R}. In \texttt{R}, the covariance matrix of
+  the slope and intercept can be simply obtained from the
+  \texttt{vcov(fit)} function, where \texttt{fit} is the output of the
+  \texttt{lm} function (see item~\ref{itm:lm} of
+  Section~\ref{sec:R}). The corresponding standard errors are then
+  found by taking the square root of the diagonal elements of this
+  matrix.  \ifuclnotes For \texttt{Matlab}, all the relevant
+  information is provided in the output of the \texttt{polyfit}
+  function:
+
+\begin{verbatim}
+help(polyfit)
+...
+[P,S] = POLYFIT(X,Y,N) returns the polynomial
+coefficients P and a structure S for use with 
+POLYVAL to obtain error estimates for predictions.  
+S contains fields for the triangular factor (R)
+from a QR decomposition of the Vandermonde matrix 
+of X, the degrees of freedom (df), and the norm 
+of the residuals (normr). If the data Y are 
+random, an estimate of the covariance matrix 
+of P is (Rinv*Rinv')*normr^2/df, where Rinv 
+is the inverse of R.
+\end{verbatim}
+
+Based on these instructions, I have written the following function to
+calculate the standard errors of the fitting parameters from the
+second output parameter of the \texttt{polyfit} function:
+
+\begin{verbatim}
+function se = S2se(S)
+  covmat = (inv(S.R)*inv(S.R'))*S.normr^2/S.df;
+  se = sqrt(diag(covmat));
+end
+\end{verbatim}
+\fi
+
+\item Use these error estimates to propagate the analytical
+  uncertainty of the J-value and the sample age. Again you can use the
+  linear approximation to the age equation mentioned in point
+  \ref{loglin}.
+
+\end{enumerate}

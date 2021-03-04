@@ -1,0 +1,111 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{I\hspace {1em}Basic geochronology}{4}{part.1}%
+\defcounter {refsection}{1}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Basic Notions}{7}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Isotopes and radioactivity}{7}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Radioactivity}{7}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}The age equation}{9}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Decay series}{9}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Analytical techniques}{12}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Mass spectrometry}{12}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Isotope dilution}{14}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Sample-standard bracketing}{15}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Simple parent-daughter pairs}{17}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}$^{14}$C dating}{17}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}The Rb-Sr method}{18}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Isochrons}{18}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}The Sm-Nd method}{19}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}The U-Pb system}{21}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}The U-(Th-)Pb method}{21}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}The Pb-Pb method}{22}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Concordia}{23}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Detrital geochronology}{23}{section.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}The K-Ar system}{25}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}K-Ar dating}{25}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}$^{40}$Ar/$^{39}$Ar dating}{25}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Applications}{27}{section.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Thermochronology}{28}{chapter.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}The U-Th-He method}{28}{section.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Fission tracks}{29}{section.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}U-series dating}{33}{chapter.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}The $^{234}$U-$^{238}$U method}{33}{section.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}The $^{230}$Th method}{34}{section.8.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}The $^{230}$Th-$^{238}$U method}{34}{section.8.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Error propagation}{35}{chapter.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.1}Some basic definitions}{35}{section.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.2}Examples}{36}{section.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.3}Accuracy vs. precision}{37}{section.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {10}Exercises}{39}{chapter.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Programming practicals}{41}{chapter.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.1}Introduction to \texttt {R}}{41}{section.11.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.2}U-Th-Pb data reduction}{44}{section.11.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.3}$^{40}$Ar/$^{39}$Ar data reduction}{45}{section.11.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.4}Error propagation}{45}{section.11.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.5}Fission tracks}{46}{section.11.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{II\hspace {1em}Advanced geochronology}{47}{part.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {12}Introduction}{48}{chapter.12}%
+\defcounter {refsection}{2}\relax 
+\contentsline {chapter}{\numberline {13}Some statistical considerations}{50}{chapter.13}%
+\defcounter {refsection}{2}\relax 
+\contentsline {section}{\numberline {13.1}The normal distribution}{50}{section.13.1}%
+\defcounter {refsection}{2}\relax 
+\contentsline {section}{\numberline {13.2}Error correlations}{52}{section.13.2}%
+\defcounter {refsection}{2}\relax 
+\contentsline {section}{\numberline {13.3}Linear regression}{54}{section.13.3}%
+\defcounter {refsection}{2}\relax 
+\contentsline {section}{\numberline {13.4}Dealing with (over)dispersion}{55}{section.13.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{56}{part.3}%
+\defcounter {refsection}{3}\relax 
+\contentsline {chapter}{\numberline {14}Introduction to \texttt {IsoplotR}}{57}{chapter.14}%
+\defcounter {refsection}{3}\relax 
+\contentsline {section}{\numberline {14.1}Software architecture}{57}{section.14.1}%
+\defcounter {refsection}{3}\relax 
+\contentsline {section}{\numberline {14.2}The Graphical User Interface (GUI)}{57}{section.14.2}%
+\defcounter {refsection}{3}\relax 
+\contentsline {section}{\numberline {14.3}The Command Line Interface (CLI)}{59}{section.14.3}%

@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,1.09239748)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{U-Th-series.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/U-Th-series.pdf}}%
     \put(-0.00152273,1.02337874){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{929}}}%
     \put(0.98597675,0.69829297){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{2\\ 90\\ 88\\ 90\\ 88\\ 86\\ 84\\ 82\\ 90\\ 88\\ 86\\ 84\\ 86\\ 84\\ 82\\ 124126128130132134136138140142144146\\ 82}}}%
     \put(0.03882262,0.63205544){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{0}\textbf{6}}}}%
@@ -129,13 +129,13 @@
     \put(0.93160468,1.04287324){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{8}}}}%
     \put(0.94945643,1.03436914){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{U}\textbf{\\ }\textbf{4}\textbf{.}\textbf{5}\textbf{ }\textbf{B}\textbf{a}}}}%
     \put(0.75870637,0.06854751){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{\textsl{N}}\textbf{\textsl{Z}}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{U-Th-series.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/U-Th-series.pdf}}%
     \put(0.60715953,0.42971587){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{8}}}}%
     \put(0.62500736,0.42120981){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{T}\textbf{h}\textbf{\\ }\textbf{1}\textbf{.}\textbf{9}\textbf{ }\textbf{y}\textbf{r}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{U-Th-series.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{../figures/U-Th-series.pdf}}%
     \put(0.68884953,0.67664558){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{1}}}}%
     \put(0.70670128,0.66814344){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{P}\textbf{a}\textbf{\\ }\textbf{3}\textbf{4}\textbf{ }\textbf{k}\textbf{a}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{U-Th-series.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{../figures/U-Th-series.pdf}}%
     \put(0.77306231,1.04130228){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{3}\textbf{4}}}}%
     \put(0.79091406,1.03279818){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{U}\textbf{\\ }\textbf{2}\textbf{4}\textbf{8}\textbf{ }\textbf{k}\textbf{a}}}}%
     \put(0.65009789,0.38800201){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{2}\textbf{8}}}}%

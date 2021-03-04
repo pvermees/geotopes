@@ -1,0 +1,47 @@
+\section{Fission tracks}
+\label{sec:FT-R}
+
+In this exercise, you will use your programming skills to calculate
+some fission track ages. You are given the following datasets:
+
+\begin{enumerate}
+\item\texttt{DUR.csv}: a table with two columns listing the number of
+  spontaneous tracks $N_s$ and induced tracks $N_i$ counted in 25
+  grains of an apatite age standard (t = 31.4 Ma) from Durango,
+  Mexico.  Note that these pairs of tracks were counted over the same
+  area, so that $\rho_s/\rho_i$ = $N_s/N_i$ in
+  Equation~\ref{eq:tzeta}.
+\item\texttt{MD.csv}: a similar table for an apatite sample from Mount
+  Dromedary, Australia.
+\end{enumerate}
+
+You will need to:
+
+\begin{enumerate} 
+
+\item Rewrite Equation \ref{eq:tzeta} in terms of the $\zeta$
+  calibration factor and use this new formula to calculate the $\zeta$
+  factor for each single grain analysis of the Durango age standard.
+  Use a dosimeter track density of $\rho_D = 300,000$ cm$^{-2}$.
+\item Use the mean of these $\zeta$ factors to calculate the age of
+  the Mount Dromedary sample (i.e., the single grain ages and their
+  mean).
+\item Propagate the analytical uncertainties for each of those single
+  grain ages, using the fact that fission track counts (N, say) follow
+  a Poisson distribution for which it is true that:
+
+$$\sigma^2_N = N$$
+
+To simplify the calculations, you can also use the following
+approximation:
+
+$$\frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{N_s}{N_i}\right)
+\approx \frac{g_i}{g_s}\zeta\rho_d\frac{N_s}{N_i}$$
+
+\item How does the single grain age precision of the fission track
+  method compare to the U-Pb and $^{40}$Ar/$^{39}$Ar age uncertainties
+  in Sections \ref{sec:U-Pb-R} and \ref{sec:Ar-Ar-R}? Also compare
+  with the standard deviation and standard error of the mean age of
+  Mount Dromedary apatite.
+
+\end{enumerate}

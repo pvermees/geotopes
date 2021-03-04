@@ -1,0 +1,163 @@
+\chapter[U-series dating]{U-series disequilibrium methods}
+\label{ch:intro2Useries}
+
+In Section \ref{sec:decay-series}, we saw that the
+$^{235}$U-$^{207}$Pb and $^{238}$U-$^{206}$Pb decay series generally
+reach a state of \emph{secular equilibrium}, in which the activity
+(expressed in decay events per unit time) of each intermediate
+daughter product is the same, so that:
+
+$$D_n \lambda_n = \cdots  = D_2 \lambda_2 = D_1 \lambda_1 = P \lambda_P$$
+
+as described by Equation \ref{eq:NDnLn}. However, certain natural
+processes can disturb this equilibrium situation, such as chemical
+weathering, precipitation from a solution, (re-)crystallisation
+etc. The leads to two new types of chronometric systems:
+
+\begin{enumerate}
+\item An intermediate daughter isotope in the decay series is
+  separated from its parent nuclide incorporated into a rock or
+  sediment, and decays according to its own half life.
+\item A parent nuclide has separated itself from its previous decay
+  products and it takes some time for secular equilibrium to be
+  re-established.
+\end{enumerate}
+
+This idea is most frequently applied to the $^{238}$U-decay series,
+notably $^{230}$Th and $^{234}$U. The first type of disequilibrium
+dating forms the basis of the $^{234}$U-$^{238}$U and $^{230}$Th
+methods (Sections \ref{sec:234238} and \ref{sec:230}). The second
+forms the basis of the $^{230}$Th-$^{238}$U method (Section
+\ref{sec:230238})
+
+\section{The $^{234}$U-$^{238}$U method}
+\label{sec:234238}
+
+The activity ratio of $^{238}$U to its third radioactive daughter
+$^{234}$U in the world's oceans is $A(^{234}U)/A(^{238}U)$ $\equiv$
+$\gamma_\circ$ $\approx$ 1.15. The slight enrichment of the $^{234}$U
+over $^{238}$U is attributed to $\alpha$-recoil of its immediate
+parent $^{234}$Th and the fact that $^{234}$U is more `loosely bound'
+inside the crystal lattice of the host mineral, because it is
+preferentially seated in sites which have undergone radiation
+damage. Once the oceanic U is incorporated into the crystal structure
+of marine carbonates, the radioactive equilibrium gradually restores
+itself with time. The total activity of $^{234}$U is made up of a
+component which is supported by secular equilibrium (and equals the
+activity of $^{238}U$) and an `excess' component, which decays with
+time:
+
+\begin{equation}
+A(^{234}U) = A(^{238}U) + A(^{234}U)^x_\circ e^{-\lambda_{234}t} 
+\label{eq:A234}
+\end{equation}
+
+where $A(^{234}U)^x_\circ$ is the initial amount of excess $^{234}$U
+and $\lambda_{234}$ = 2.8234 $\times$ 10$^{-6}$ yr$^{-1}$ (t$_{1/2}$ =
+245.5 kyr). Let $A(^{234}U)_\circ$ be the initial total $^{234}$U
+activity. Then:
+
+\begin{equation}
+A(^{234}U) = A(^{238}U) + \left[A(^{234}U)_\circ - A(^{238}U) \right] e^{-\lambda_{234}t} 
+\label{eq:A234b}
+\end{equation}
+
+Dividing by A($^{238}$U):
+
+\begin{equation}
+\frac{A(^{234}U)}{A(^{238}U)} = 1 + [ \gamma_\circ - 1 ] e^{-\lambda_{234}t} 
+\label{eq:A234A238}
+\end{equation}
+
+Which can be solved for $t$ until about 1 Ma.
+
+\section{The $^{230}$Th method}
+\label{sec:230}
+
+U and Th are strongly incompatible elements. This causes chemical
+fractionation and disturbs the secular equilibrium of the $^{238}$U
+decay series in young volcanic rocks. It is commonly found that the
+activity ratio $A(^{230}Th)/A(^{238}U)$ $>$ 1. As expected, the
+secular equilibrium between $^{234}$U and $^{238}$U is not disturbed
+by chemical fractionation, so that $A(^{234}U)/A(^{238}U)$ = 1. The
+total $^{230}$Th activity is given by:
+
+\begin{equation}
+A(^{230}Th) = A(^{230}Th)_\circ^x e^{-\lambda_{230}t} + A(^{238}U)(1-e^{-\lambda_{230}t})
+\label{eq:A230}
+\end{equation}
+
+where $A(^{230}Th)_\circ^x$ is the initial amount of `excess'
+$^{230}$Th at the time of crystallisation and $A(^{238}U)=A(^{234}U)$
+due to secular equilibrium of the U isotopes. Thus, the first term of
+Equation \ref{eq:A230} increases with time from 0 to A($^{238}$U)
+while the second term decreases from $A(^{230}Th)_\circ^x$ to
+0. Dividing by $A(^{232}Th)$ yields a linear relationship between
+$A(^{230}Th)/A(^{232}Th)$ and $A(^{238}U) / A(^{232}Th)$:
+
+\begin{equation}
+\frac{A(^{230}Th)}{A(^{232}Th)} = \frac{A(^{230}Th)_\circ^x}{A(^{232}Th)} e^{-\lambda_{230}t} + 
+\frac{A(^{238}U)}{A(^{232}Th)}(1-e^{-\lambda_{230}t})
+\label{eq:230232}
+\end{equation}
+
+This forms an isochron with slope ($1-e^{-\lambda_{230}t}$), from
+which the age $t$ can be calculated. This method is applicable to
+volcanic rocks and pelitic ocean sediments ranging from 3ka to 1Ma.
+
+\section{The $^{230}$Th-$^{238}$U method}
+\label{sec:230238}
+
+Uranium is significantly more soluble in water than Th. As a result,
+the intermediate daughter $^{230}$Th is largely absent from sea
+water. Thus, lacustrine and marine carbonate rocks contain some U but
+virtually no Th at the time of formation. The $^{230}$Th activity
+increases steadily with time as a result of $^{234}$U decay. The total
+$^{230}$Th activity consists of a growing component $A(^{230}Th)^s$
+that is in secular equilibrium with $^{238}U$ and a shrinking
+component $A(^{230}Th)^x$ of `excess' $^{230}$Th produced by the
+surplus of $^{234}$U commonly found in ocean water (see section
+\ref{sec:234238}):
+
+\begin{align}
+~ & A(^{230}Th) =  A(^{230}Th)^s + A(^{230}Th)^x \label{eq:230total}\\
+\mbox{with:~} & A(^{230}Th)^s = A(^{238}U) (1-e^{-\lambda_{230}t}) \label{eq:230s}\\
+\mbox{and:~} & A(^{230}Th)^x = \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} 
+A(^{234}U)_\circ^x\left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right) \label{eq:230x}
+\end{align}
+
+In which the expression for $A(^{230}Th)^x$ follows from Equation
+\ref{eq:ND1} and $A(^{234}U)_\circ^x$ denotes the initial amount of
+excess $^{234}$U activity (as in Section \ref{sec:234238}). Taking
+into account that $A(^{234}U)_\circ^x = A(^{234}U)_\circ -
+A(^{238}U)$, and dividing by $A(^{238}U)$, we obtain:
+
+\begin{equation}
+\frac{A(^{230}Th)^x}{A(^{238}U)} = \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} (\gamma_\circ-1)
+\left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right)
+\label{eq:230238x}
+\end{equation}
+
+in which $\gamma_\circ \equiv A(^{234}U)/A(^{238}U)$ as defined in
+Section \ref{sec:234238}. The formation age of the carbonate can be
+calculated by substituting Equations \ref{eq:230s} and \ref{eq:230238x}
+into \ref{eq:230total} and solving for $t$. 
+
+\begin{equation}
+  \frac{A(^{230}Th)}{A(^{238}U)} = 1 - e^{-\lambda_{230}t} +
+  \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} (\gamma_\circ-1)
+\left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right)
+\label{eq:230238}
+\end{equation}
+
+If $\gamma_\circ = 1$ (i.e., the water is in secular equilibrium for
+U), then Equation \ref{eq:230total} simplifies to:
+
+\begin{equation}
+\frac{A(^{230}Th)}{A(^{238}U)} = 1-e^{-\lambda_{230}t}
+\label{eq:230238b}
+\end{equation}
+
+If $\gamma_\circ \neq 0$, Equation \ref{eq:230238b} yields ages that
+are systematically too old, unless $t$ $<$ 100ka and $\gamma_\circ \leq
+1.15$.

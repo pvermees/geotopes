@@ -1,0 +1,84 @@
+\chapter{Introduction}
+\label{ch:intro2}
+
+Part~1 of these notes gave a very basic introduction to geochronology.
+At this basic level, it is possible to write one's own data processing
+software from scratch, as we have done in the \texttt{R} practicals.
+Unfortunately this is not so easy at a more advanced level.
+Research-grade geochronological data processing chains involve several
+layers of highly specialised software packages:
+
+\begin{enumerate}
+\item A first layer of software controls the mass spectrometer and
+  extracts the raw time resolved isotopic signals from it. This
+  software generally comes with the mass spectrometer, and was written
+  and designed by engineers who may be completely unfamiliar with the
+  geological applications of the equipment.
+\item The output files from this low level software are passed on to a
+  second layer of software, which processes the raw mass spectrometer,
+  combines standard with standards, performs isotope dilution
+  calculations, etc. This `middleware' is sometimes written by
+  geologists, and sometimes by companies. Examples are
+  \texttt{Iolite}, \texttt{GLITTER}, \texttt{Squid}, \texttt{LADR} and
+  \texttt{ET\_Redux} for U--Pb geochronology; \texttt{ArArCalc} and
+  \texttt{Pychron} for Ar--Ar geochronology, etc.
+\item The output files produced by the second layer of data processing
+  software require further processing for more advanced statistical
+  analysis and visualisation. \texttt{IsoplotR} is a software package
+  that fulfils this role.
+\end{enumerate}
+
+Chapter~\ref{ch:intro2IsoplotR} provides a brief introduction to the
+design philosophy and operating principles of \texttt{IsoplotR}, which
+will be explored further in later chapters.  Chapter~\ref{ch:formats}
+introduces the important subject of error correlations, and shows how
+these are captured by \texttt{IsoplotR}'s different input formats.  We
+will see that error correlations plays a fundamental role in all of
+\texttt{IsoplotR}'s methods.  Chapter~\ref{ch:regression} reviews the
+subject of linear regression, which underpins the construction of
+isochrons. \texttt{IsoplotR} currently implements three different
+types of error weighted linear regression algorithms that account for
+error correlations between variables and between aliquots in two or
+three dimensions.  Chapter~\ref{ch:overdispersion} explains how these
+three methods represent different approaches of dealing with
+overdispersion.  Chapter~\ref{ch:averaging} introduces a weighted mean
+plot to visualise multiple age estimates and proposes a heuristic
+method to detect outliers.  Chapter~\ref{ch:confidence} presents three
+approaches to construct confidence intervals for isochron ages,
+weighted means and so forth.  It introduces a profile log-likelihood
+method for the calculation of asymmetric confidence intervals.\\
+
+Chapter~\ref{ch:density} discusses three further methods to visualise
+multi-aliquot collections of ages. Cumulative age distributions (CADs)
+and kernel density estimates (KDEs) show the frequency distribution of
+the age measurements but do not explicitly take into account the
+analytical uncertainties. The radial plot is introduced as a more
+appropriate data visualisation tool for `heteroscedastic' data
+(i.e. data with unequal measurements uncertainties). The radial plot
+provides a good vehicle to assess the dispersion of multi-aliquot
+datasets. Overdispersed datasets require further processing with
+continuous or discrete mixture models that are discussed in
+Chapter~\ref{ch:mixtures}.\\
+
+With these basic statistical building blocks in place, the remainder
+of the notes cover issues that are specific to individual
+geochronometers and their geological applications. They will be
+discussed in the same order as they are listed in \texttt{IsoplotR}'s
+graphical user interface.
+
+Chapter~\ref{ch:UPb} provides an in-depth discussion of
+\texttt{IsoplotR}'s U--Pb functionality. This includes an overview of
+the various input formats, concordia ages, discordia regression,
+common-Pb correction methods and initial disequilibrium corrections.
+Chapter~\ref{ch:detritals} covers the subject of detrital U--Pb
+geochronology, which includes a discussion of discordance filters,
+maximum depositional age estimation and multidimensional scaling
+analysis. Chapter~\ref{ch:USeries} covers U--Th dating and
+Chapter~\ref{ch:thermochronology} thermochronology, including both the
+traditional external detector method and the new LA-ICP-MS based
+approach.\\
+
+Finally, Section~\ref{sec:future} sets out a roadmap for future
+developments to improve the accuracy and precision of geochronological
+data, and to provide closer integration of \texttt{IsoplotR} with
+earlier steps of the data processing chain.

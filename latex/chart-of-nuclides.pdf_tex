@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.68053824)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{chart-of-nuclides.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/chart-of-nuclides.pdf}}%
     \put(-0.00131942,0.6016181){\color[rgb]{0.1372549,0.12156863,0.1254902}\makebox(0,0)[lb]{\smash{80}}}%
     \put(0.54601269,0.07674106){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Neutron number (N)}}}%
     \put(0.11308155,0.26580685){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{Proton number (Z)}}}}%

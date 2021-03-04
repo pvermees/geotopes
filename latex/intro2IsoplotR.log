@@ -1,0 +1,27 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.25)  1 MAR 2021 20:48
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**intro2IsoplotR
+(./intro2IsoplotR.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+! Undefined control sequence.
+l.1 \chapter
+            {Introduction to \texttt{IsoplotR}}
+? exit
+ 
+Here is how much of TeX's memory you used:
+ 16 strings out of 481239
+ 417 string characters out of 5920377
+ 236564 words of memory out of 5000000
+ 15384 multiletter control sequences out of 15000+600000
+ 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 12i,0n,15p,89b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

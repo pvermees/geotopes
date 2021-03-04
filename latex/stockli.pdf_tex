@@ -49,9 +49,9 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.86432383)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{stockli.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/stockli.pdf}}%
     \put(0.71011113,0.54249585){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sim 40^\circ$C}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{stockli.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/stockli.pdf}}%
     \put(0.25867845,0.71256772){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Apatite fission-track age}}}%
     \put(0.05275625,0.7465088){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0}}}%
     \put(0.05275625,0.56435551){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%

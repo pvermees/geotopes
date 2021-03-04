@@ -1,0 +1,48 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Basic Notions}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Isotopes and radioactivity}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Radioactivity}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{The age equation}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Decay series}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Analytical techniques}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Mass spectrometry}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Isotope dilution}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.3}{Sample-standard bracketing}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{Simple parent-daughter pairs}{}% 11
+\BOOKMARK [1][-]{section.4.1}{14C dating}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{The Rb-Sr method}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{Isochrons}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.4}{The Sm-Nd method}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{The U-Pb system}{}% 16
+\BOOKMARK [1][-]{section.5.1}{The U-\(Th-\)Pb method}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{The Pb-Pb method}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.3}{Concordia}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.4}{Detrital geochronology}{chapter.5}% 20
+\BOOKMARK [0][-]{chapter.6}{The K-Ar system}{}% 21
+\BOOKMARK [1][-]{section.6.1}{K-Ar dating}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.2}{40Ar/39Ar dating}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.3}{Applications}{chapter.6}% 24
+\BOOKMARK [0][-]{chapter.7}{Thermochronology}{}% 25
+\BOOKMARK [1][-]{section.7.1}{The U-Th-He method}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.2}{Fission tracks}{chapter.7}% 27
+\BOOKMARK [0][-]{chapter.8}{Cosmogenic Nuclides}{}% 28
+\BOOKMARK [1][-]{section.8.1}{Stable nuclides}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.2}{Radionuclides}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.3}{The `Banana Plot'}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.4}{Scaling models}{chapter.8}% 32
+\BOOKMARK [0][-]{chapter.9}{U-series dating}{}% 33
+\BOOKMARK [1][-]{section.9.1}{The 234U-238U method}{chapter.9}% 34
+\BOOKMARK [1][-]{section.9.2}{The 230Th method}{chapter.9}% 35
+\BOOKMARK [1][-]{section.9.3}{The 230Th-238U method}{chapter.9}% 36
+\BOOKMARK [0][-]{chapter.10}{Error propagation}{}% 37
+\BOOKMARK [1][-]{section.10.1}{Some basic definitions}{chapter.10}% 38
+\BOOKMARK [1][-]{section.10.2}{Examples}{chapter.10}% 39
+\BOOKMARK [1][-]{section.10.3}{Accuracy vs. precision}{chapter.10}% 40
+\BOOKMARK [0][-]{chapter.11}{Exercises}{}% 41
+\BOOKMARK [0][-]{chapter.12}{Programming practicals}{}% 42
+\BOOKMARK [1][-]{section.12.1}{Introduction to R}{chapter.12}% 43
+\BOOKMARK [1][-]{section.12.2}{Introduction to Matlab}{chapter.12}% 44
+\BOOKMARK [1][-]{section.12.3}{U-Th-Pb data reduction}{chapter.12}% 45
+\BOOKMARK [1][-]{section.12.4}{40Ar/39Ar data reduction}{chapter.12}% 46
+\BOOKMARK [1][-]{section.12.5}{Error propagation}{chapter.12}% 47
+\BOOKMARK [1][-]{section.12.6}{Fission tracks}{chapter.12}% 48

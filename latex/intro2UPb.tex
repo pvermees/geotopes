@@ -1,0 +1,279 @@
+\chapter{The U-Pb system}
+\label{sec:U-Pb}
+
+U and Th are found on the extremely heavy end of the Periodic Table of
+Elements.  All their isotopes are radioactive and exhibit
+$\alpha$-decay and sometimes even spontaneous fission (see Section
+\ref{sec:fission-tracks}). $^{232}$Th, $^{235}$U and $^{238}$U each
+form the start of long decay series comprising multiple $\alpha$- and
+$\beta$ emissions which eventually produce various isotopes of Pb:
+
+\begin{equation}
+\begin{array}{rl}
+^{238}U \rightarrow & {}^{206}Pb + 8\alpha + 6\beta + 47\mbox{MeV} \\ 
+^{235}U \rightarrow & {}^{207}Pb + 7\alpha + 4\beta + 45\mbox{MeV} \\
+^{232}Th \rightarrow & {}^{208}Pb + 6\alpha + 4\beta + 40\mbox{MeV} 
+\end{array}
+\label{eq:UThdecay}
+\end{equation}
+
+Each of these three decay series is unique, i.e. no isotope occurs in
+more than one series (Figure \ref{fig:U-Th-series}). Furthermore, the
+half life of the parent isotope is much longer than any of the
+intermediary daughter isotopes, thus fulfilling the requirements for
+secular equilibrium (Section \ref{sec:decay-series}). We can therefore
+assume that the $^{206}$Pb is directly formed by the $^{238}$U, the
+$^{207}$Pb from the $^{235}$U and the $^{208}$Pb from the
+$^{232}$Th. Several chronometers are based on the $\alpha$-decay of U
+and Th:
+
+\begin{itemize}
+\item The U-Th-Pb method (Section \ref{sec:U-Th-Pb})
+\item The Pb-Pb method (Section \ref{sec:Pb-Pb})
+\item The U-Th-He method (Section \ref{sec:U-Th-He})
+\end{itemize}
+
+\section{The U-(Th-)Pb method}
+\label{sec:U-Th-Pb}
+
+Natural Pb consists of four isotopes $^{204}$Pb, $^{206}$Pb,
+$^{207}$Pb and $^{208}$Pb. The ingrowth equations for
+the three radiogenic Pb isotopes are given by:
+
+\begin{equation}
+  \begin{array}{rl}
+    &{}^{206}Pb^* = {}^{238}U \left(e^{\lambda_{238}t} - 1\right)\\ 
+    &{}^{207}Pb^* = {}^{235}U \left(e^{\lambda_{235}t} - 1\right)\\ 
+    &{}^{208}Pb^* = {}^{232}Th \left(e^{\lambda_{232}t} - 1\right)
+  \end{array}
+  \label{eq:Pb*}
+\end{equation}
+
+With $\lambda_{238}$ = 1.55125 $\times 10^{-10} a^{-1}$ (t$_{1/2}$ =
+4.468 Gyr), $\lambda_{235}$ = 9.8485 $\times 10^{-10} a^{-1}$
+(t$_{1/2}$ = 703.8 Myr), and $\lambda_{232}$ = 0.495 $\times 10^{-10}
+a^{-1}$ (t$_{1/2}$ = 14.05 Gyr). The corresponding age equations are:
+
+\begin{equation}
+  \begin{array}{rl}
+    t_{206} & = \frac{1}{\lambda_{238}}
+    \ln \left(\frac{{}^{206}Pb^*}{{}^{238}U}+1\right)\\
+    t_{207} & = \frac{1}{\lambda_{235}}
+    \ln \left(\frac{{}^{207}Pb^*}{{}^{235}U}+1\right)\\
+    t_{208} & = \frac{1}{\lambda_{232}}
+    \ln \left(\frac{{}^{208}Pb^*}{{}^{232}Th}+1\right)
+  \end{array}
+  \label{eq:tPb*}
+\end{equation}
+
+Some igneous minerals (notably zircon) conveniently incorporate lots
+of U and virtually no Pb upon crystallisation. For those minerals, the
+non-radiogenic Pb can be safely neglected (at least for relatively
+young ages), so that we can assume that $Pb \approx Pb^*$. This
+assumption cannot be made for other minerals, young ages, and high
+precision geochronology. In those cases, the inherited component (aka
+`common Pb') needs to be quantified, which is done by normalising to
+non-radiogenic $^{204}$Pb:
+
+\begin{equation}
+\begin{array}{c}
+  \frac{^{206}Pb}{^{204}Pb} = \left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ +
+  \frac{^{238}U}{^{204}Pb} \left(e^{\lambda_{238}t} - 1\right) \\
+  \frac{^{207}Pb}{^{204}Pb} = \left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ +
+  \frac{^{235}U}{^{204}Pb} \left(e^{\lambda_{235}t} - 1\right)\\
+  \frac{^{208}Pb}{^{204}Pb} = \left(\frac{^{208}Pb}{^{204}Pb}\right)_\circ +
+  \frac{^{232}Th}{^{204}Pb} \left(e^{\lambda_{232}t} - 1\right)
+\end{array}
+\label{eq:Pb}
+\end{equation}
+
+where $\left(\frac{^{x}Pb}{^{204}Pb}\right)_\circ$ stands for the
+common Pb component for isotope x. The corresponding age equations
+then become:
+
+\begin{equation}
+\begin{array}{c}
+  t_{206}=\frac{1}{\lambda_{238}}\ln\left(\frac{\left(\frac{^{206}Pb}{^{204}Pb}\right)-
+    \left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ}{\frac{^{238}U}{^{204}Pb}}+1\right)\\
+  t_{207}=\frac{1}{\lambda_{235}}\ln\left(\frac{\left(\frac{^{207}Pb}{^{204}Pb}\right)-
+    \left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ}{\frac{^{235}U}{^{204}Pb}}+1\right)\\
+  t_{208}=\frac{1}{\lambda_{232}}\ln\left(\frac{\left(\frac{^{208}Pb}{^{204}Pb}\right)-
+    \left(\frac{^{208}Pb}{^{204}Pb}\right)_\circ}{\frac{^{232}Th}{^{204}Pb}}+1\right)
+\end{array}
+\label{eq:tPb}
+\end{equation}
+
+U-Pb dating grants access to two separate geochronometers
+($^{206}$Pb/${}^{238}$U and $^{207}$Pb/${}^{235}$U) based on different
+isotopes of the same parent-daughter pair (i.e. U \& Pb).  This
+built-in redundancy provides a powerful internal quality check which
+makes the method arguably the most robust and reliable dating
+technique in the geological toolbox. The initial Pb composition can
+either be determined by analysing the Pb composition of a U-poor
+mineral (e.g., galena or feldspar) or by applying the isochron method
+to samples with different U and Th concentrations. As is the case for
+any isotopic system, the system needs to remain `closed' in order to
+yield meaningful isotopic ages.  This sometimes is not the case,
+resulting in a loss of Pb and/or U.  Such losses cause the
+$^{206}$Pb/$^{238}$U- and $^{207}$Pb/$^{235}$U-clocks to yield
+different ages. Note that isotopic closure is required for all
+intermediary isotopes as well.  Critical isotopes are the highly
+volatile $^{226}$Rn (t$_{1/2}$=1.6ka) and $^{222}$Rn
+(t$_{1/2}$=3.8d). Initially, the U-Pb method was applied to U-ores,
+but nowadays it is predominantly applied to accessory minerals such
+zircon and, to a lesser extent, apatite, monazite and allanite.
+
+\section{The Pb-Pb method}
+\label{sec:Pb-Pb}
+
+The $^{207}$Pb/$^{206}$Pb method is based on the U-Pb method and is
+obtained by dividing the two U-Pb members of Equation \ref{eq:Pb*} (or
+\ref{eq:Pb}), and taking into account that the average natural
+$^{238}$U/$^{235}$U-ratio is 137.818:
+
+\begin{equation}
+\frac{^{207}Pb^*}{^{206}Pb^*} = 
+\frac{\left(\frac{^{207}Pb}{^{204}Pb}\right)-\left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ}
+{\left(\frac{^{206}Pb}{^{204}Pb}\right)-\left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ}
+= \frac{1}{137.818} \frac{e^{\lambda_{235}t}-1}{e^{\lambda_{238}t}-1}
+\label{eq:PbPb}
+\end{equation}
+
+The left hand side of this equation contains only Pb isotopic ratios.
+Note that these are \emph{only} a function of time. Equations
+\ref{eq:PbPb} has no direct solution and must be solved
+iteratively. The Pb-Pb method has the following advantages over
+conventional U-Pb dating:
+
+\begin{itemize}
+\item There is no need to measure uranium.
+\item The method is insensitive to recent loss of U and even Pb,
+  because this would not affect the isotopic ratio of the Pb.
+\end{itemize}
+
+In practice, the Pb-Pb method is rarely applied by itself but is
+generally combined with the U-Pb technique. The expected
+$({}^{207}Pb/{}^{206}Pb)^*$-ratio for recently formed rocks and minerals
+can be calculated from Equation \ref{eq:PbPb} by setting
+t$\rightarrow$0:
+
+\begin{equation}
+  \left(\frac{^{207}Pb}{^{206}Pb}\right)^*_p =
+  \frac{\lambda_{235}}{137.818\lambda_{238}} = 0.04607
+\label{eq:commonPb}
+\end{equation}
+
+This ratio was progressively higher as one goes back further in time.
+It was $\approx$ 0.6 during the formation of Earth.
+
+\section{Concordia}
+\label{sec:concordia}
+
+It sometimes happens that the U-Th-Pb trio of chronometers does not
+yield mutually consistent ages. It is then generally found that
+t$_{208}$ $<$ t$_{206}$ $<$ t$_{207}$ $<$ t$_{207/206}$ which, again,
+shows that the Pb-Pb clock is least sensitive to open system
+behaviour.  From Equation \ref{eq:Pb*}, we find that:
+
+\begin{equation}
+\begin{array}{rl}
+\frac{^{206}Pb^*}{^{238}U} & = e^{\lambda_{238}t}-1 \mbox{~and}\\
+\frac{^{207}Pb^*}{^{235}U} & = e^{\lambda_{235}t}-1
+\end{array}
+\label{eq:wetherill}
+\end{equation}
+
+If we plot those $^{206}$Pb$^*$/$^{238}$U- and
+$^{207}$Pb$^*$/$^{235}$U-ratios which yield the same ages (t) against
+one another, they form a so-called `concordia' curve. The concordia
+diagram is a very useful tool for investigating and interpreting
+disruptions of the U-Pb system caused by `episodic lead loss'. This
+means that a mineral (of age T$_\circ$, say) has lost a certain
+percentage of its radiogenic Pb at a time T$_1$ after its formation
+(e.g., during metamorphism), after which the system closes again and
+further accumulation of radiogenic Pb proceeds normally until the
+present.  On the concordia diagram of multiple aliquots of a sample,
+this scenario will manifest itself as a linear array of datapoints
+connecting the concordant $^{206}$Pb$^*$/$^{238}$U -
+$^{207}$Pb$^*$/$^{235}$U composition expected at T$_\circ$ with that
+expected at T$_1$.  With time, the data shift further away from the
+origin.  The upper intercept of the linear array (aka \emph{discordia}
+line) can be used to estimate the crystallisation age, whereas the
+lower intercept yields the age of metamorphism.  The greater the
+distance from the expected composition at t, the greater the degree of
+Pb loss and the greater the linear extrapolation error on the
+crystallisation age (Figure \ref{fig:wetherill}).
+
+\ifpdf
+\ifuclnotes
+\begin{figure}[!ht]
+  \centering
+  \def\svgwidth{.7\textwidth}
+  \input{wetherill.pdf_tex}
+  \caption{`Wetherill' concordia diagram showing concordant (filled
+    symbols) and discordant (empty symbols) analyses affected by
+    different degrees of Pb (or U) loss \citep[modified
+      from][]{allegre2008}.}
+  \label{fig:wetherill}
+\end{figure}
+\else % end of uclnotes
+\begin{figure}[!ht]
+\noindent\begin{minipage}[t]{.5\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\def\svgwidth{\textwidth}
+\input{wetherill.pdf_tex}
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+\captionof{figure}{`Wetherill' concordia diagram showing concordant
+  (filled symbols) and discordant (empty symbols) analyses affected by
+  different degrees of Pb (or U) loss \citep[modified
+    from][]{allegre2008}.}
+  \label{fig:wetherill}
+\end{minipage}
+\end{figure}
+\fi % end of pdf
+\else
+\includegraphics[width=10cm]{../figures/wetherill.png}
+\captionof{figure}{`Wetherill' concordia diagram showing concordant
+  (filled symbols) and discordant (empty symbols) analyses affected by
+  different degrees of Pb (or U) loss \citep[modified
+    from][]{allegre2008}.}
+  \label{fig:wetherill}
+\fi
+
+\section{Detrital geochronology}
+
+Zircon (ZrSiO$_4$) is a common U-Th-bearing accessory mineral in
+acidic igneous rocks, which form the main proto-sources of the
+siliciclastic sediments. Zircon is a very durable mineral that
+undergoes minimal chemical alteration or mechanical
+abrasion. Therefore, zircon crystals can be considered time capsules
+carrying the igneous and metamorphic history of their
+proto-sources. The probability distribution of a representative sample
+of zircon U-Pb ages from a detrital population can serve as a
+characteristic fingerprint that may be used to trace the flow of sand
+through sediment routing systems. As a provenance tracer, zircon U-Pb
+data are less susceptible to winnowing effects than conventional
+petrographic techniques. Using modern microprobe technology (SIMS and
+LA-ICP-MS, see Chapter \ref{sec:mass-specs}), it is quite easy to
+date, say, a hundred grains of zircon in a matter of just a few
+hours. Due to the robustness of zircons as a tracer of sedimentary
+provenance, and the relative ease of dating them, the use of detrital
+zircon U-Pb geochronology has truly exploded in recent years. A
+literature survey using the keywords `detrital', `zircon', and
+`provenance' indicates that the proliferation of detrital zircon
+studies has followed an exponential trend, with the number of
+publications doubling roughly every five years over the past two
+decades. At present, nearly a thousand detrital zircon publications
+appear each year.\\
+
+An extensive survey of late Archaean sandstones from the Jack Hills in
+Australia have revealed a subpopulation of detrital zircons with
+Hadean (4.1-4.2 Ga) U-Pb ages. These are the oldest terrestrial
+minerals known to science, predating the oldest igneous rocks by 300
+million years.  The isotopic composition of oxygen, hafnium and other
+elements in the zircon represents a unique window into the earliest
+stages of Earth evolution.  They indicate that liquid water was
+present on the surface of our planet early on in its history. This
+isotopic evidence is corroborated by the geological observation that
+the Hadean zircons are preserved in fluvial deposits.

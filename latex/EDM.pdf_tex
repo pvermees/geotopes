@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,1.35221571)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{EDM.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/EDM.pdf}}%
     \put(0.61695996,0.46369375){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
     \put(0.62104763,1.34005495){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33580432\unitlength}\raggedright accumulation of spontaneous fission tracks\end{minipage}}}%
     \put(0.62104763,1.10174866){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33580432\unitlength}\raggedright polished section through crystal\end{minipage}}}%
@@ -59,7 +59,7 @@
     \put(0.62104763,0.90316009){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33580432\unitlength}\raggedright spontaneous tracks etched\end{minipage}}}%
     \put(0.0515876,0.82615002){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{surface}}}%
     \put(0.24223263,0.82615002){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{confined}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{EDM.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/EDM.pdf}}%
     \put(0.24697783,0.00511511){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{100 $\mu$m}}}%
     \put(0.000728,0.00511511){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0}}}%
   \end{picture}%

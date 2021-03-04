@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.78975209)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{NeBe.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/NeBe.pdf}}%
     \put(0.00684502,0.21209857){\makebox(0,0)[lb]{\smash{5}}}%
     \put(-0.00206096,0.45488526){\makebox(0,0)[lb]{\smash{10}}}%
     \put(-0.00206096,0.69728507){\makebox(0,0)[lb]{\smash{20}}}%
@@ -66,11 +66,11 @@
     \put(0.92517801,0.00039845){\makebox(0,0)[lb]{\smash{10$^7$}}}%
     \put(0.09352992,0.46488046){\rotatebox{90.00000252}{\makebox(0,0)[lb]{\smash{$^{21}$Ne /$^{10}$Be}}}}%
     \put(0.784615,0.06335319){\makebox(0,0)[lb]{\smash{$^{10}$Be [at/g]}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{NeBe.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/NeBe.pdf}}%
     \put(0.8345918,0.32489332){\makebox(0,0)[lb]{\smash{a}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{NeBe.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{../figures/NeBe.pdf}}%
     \put(0.67096063,0.2402708){\makebox(0,0)[lb]{\smash{b}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{NeBe.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{../figures/NeBe.pdf}}%
     \put(0.17866878,0.47424971){\makebox(0,0)[lb]{\smash{c}}}%
   \end{picture}%
 \endgroup%

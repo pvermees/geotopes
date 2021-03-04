@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.80729356)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{AlBe.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/AlBe.pdf}}%
     \put(-0.00049638,0.27612986){\makebox(0,0)[lb]{\smash{2}}}%
     \put(-0.00049638,0.51754973){\makebox(0,0)[lb]{\smash{4}}}%
     \put(-0.00049638,0.65901795){\makebox(0,0)[lb]{\smash{6}}}%
@@ -68,10 +68,10 @@
     \put(0.90353492,0.00041128){\makebox(0,0)[lb]{\smash{10$^{7}$}}}%
     \put(0.08494132,0.06518196){\rotatebox{90.00000252}{\makebox(0,0)[lb]{\smash{$^{26}$Al /$^{10}$Be}}}}%
     \put(0.78062971,0.05375246){\makebox(0,0)[lb]{\smash{$^{10}$Be[at/g]}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{AlBe.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/AlBe.pdf}}%
     \put(0.85516373,0.59715938){\makebox(0,0)[lb]{\smash{a}}}%
     \put(0.33899395,0.38217423){\makebox(0,0)[lb]{\smash{c}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{AlBe.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{../figures/AlBe.pdf}}%
     \put(0.73036333,0.64697246){\makebox(0,0)[lb]{\smash{b}}}%
   \end{picture}%
 \endgroup%

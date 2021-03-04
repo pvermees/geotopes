@@ -1,0 +1,99 @@
+\documentclass{report}
+
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=2cm,twoside,a4paper]{geometry}
+%\usepackage[top=2cm,bottom=2cm,left=2cm,right=1.5cm,twoside,a5paper]{geometry}
+\usepackage[hidelinks,linktocpage=true]{hyperref}
+\usepackage{amsmath,graphicx,wasysym,color,upquote,caption,enumitem}
+\setlist[enumerate]{leftmargin=1pc}
+\usepackage[style=authoryear,natbib=true,backend=bibtex]{biblatex}
+\addbibresource{/home/pvermees/Dropbox/biblio.bib}
+
+\newif\ifpdf
+\pdftrue
+
+\newif\ifuclnotes
+\uclnotesfalse
+
+\newif\iftraining
+\trainingtrue
+
+\raggedbottom
+
+\begin{document}
+
+\begin{titlepage}
+  
+  \parbox[t]{0.93\textwidth}{
+    \parbox[t]{0.91\textwidth}{
+      \raggedleft
+      \fontsize{50pt}{80pt}
+      \vspace{0.7cm}
+      \Huge
+      Geochronological\\
+      data processing with\\
+      \texttt{R} and \texttt{IsoplotR} \\
+    }
+  }
+
+\vfill
+  
+  \parbox[t]{0.93\textwidth}{
+    \raggedleft
+    \large
+        {\Large Pieter Vermeesch}\\[4pt]
+        Department of Earth Sciences\\
+        University College London\\[4pt]
+        \texttt{p.vermeesch@ucl.ac.uk}\\
+	
+        \hfill\rule{0.2\linewidth}{1pt}
+}
+	
+\end{titlepage}
+
+\tableofcontents
+
+\part{Basic geochronology}
+
+\input{trainingintro.tex}
+
+\input{basicnotions.tex}
+
+\input{analyticaltechniques.tex}
+
+\input{parentdaughterpairs.tex}
+
+\input{intro2UPb.tex}
+
+\input{intro2KAr.tex}
+
+\input{intro2thermochronology.tex}
+
+\input{intro2USeries.tex}
+
+\input{intro2errorprop.tex}
+
+\input{trainingexercises.tex}
+
+\input{intro2trainingpracticals.tex}
+
+\input{intro2R.tex}
+
+\input{intro2UPb-R.tex}
+
+\input{intro2ArAr-R.tex}
+
+\input{intro2errorprop-R.tex}
+
+\input{intro2FT-R.tex}
+
+\part{Advanced geochronology}
+
+\input{part2preface.tex}
+
+\input{formats.tex}
+
+\part{\texttt{IsoplotR} manual}
+
+\input{intro2IsoplotR.tex}
+
+\end{document}

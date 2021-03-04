@@ -52,27 +52,27 @@
     \put(0.48551287,0.94812549){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Hornblende}}}%
     \put(0.54075901,0.63168016){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Biotite}}}%
     \put(0.48262799,0.2710002){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{K - Feldspar }}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/Ar-Ar.pdf}}%
     \put(0.03284335,0.49900718){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{K-Ar age (Ma)}}}}%
     \put(0.07921586,0.26218534){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{780}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/Ar-Ar.pdf}}%
     \put(0.07921586,0.41140598){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{820}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{../figures/Ar-Ar.pdf}}%
     \put(0.07921586,0.55566041){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{860}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{../figures/Ar-Ar.pdf}}%
     \put(0.07921586,0.7080379){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{900}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=5]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{../figures/Ar-Ar.pdf}}%
     \put(0.07921586,0.85328536){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{940}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=6]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{../figures/Ar-Ar.pdf}}%
     \put(0.07921586,1.00351123){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{980}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=7]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{../figures/Ar-Ar.pdf}}%
     \put(0.05581855,1.14378352){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1020}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=8]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{../figures/Ar-Ar.pdf}}%
     \put(0.20934877,0.07022894){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0}}}%
     \put(0.56696051,0.07022894){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.5}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=9]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{../figures/Ar-Ar.pdf}}%
     \put(0.93399628,0.07022894){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1.0}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=10]{Ar-Ar.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{../figures/Ar-Ar.pdf}}%
     \put(0.28082873,0.007059){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Release fraction of $^{39}$Ar}}}%
   \end{picture}%
 \endgroup%

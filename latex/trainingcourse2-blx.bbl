@@ -1,0 +1,158 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{nicolaysen1961}{article}{}
+    \name{author}{1}{}{%
+      {{hash=NL}{%
+         family={Nicolaysen},
+         familyi={N\bibinitperiod},
+         given={LO},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{NL1}
+    \strng{fullhash}{NL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1961}
+    \field{labeldatesource}{}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{number}{1}
+    \field{pages}{198\bibrangedash 206}
+    \field{title}{Graphic interpretation of discordant age measurements on
+  metamorphic rocks}
+    \field{volume}{91}
+    \field{journaltitle}{Annals of the New York Academy of Sciences}
+    \field{year}{1961}
+  \endentry
+
+  \entry{pearson1896}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PK}{%
+         family={Pearson},
+         familyi={P\bibinitperiod},
+         given={Karl},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Royal Society}%
+    }
+    \strng{namehash}{PK1}
+    \strng{fullhash}{PK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1896}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{359-367}
+    \field{pages}{489\bibrangedash 498}
+    \field{title}{Mathematical contributions to the theory of evolution.--on a
+  form of spurious correlation which may arise when indices are used in the
+  measurement of organs}
+    \field{volume}{60}
+    \field{journaltitle}{Proceedings of the Royal Society of London}
+    \field{year}{1896}
+  \endentry
+
+  \entry{titterington1979}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TDM}{%
+         family={Titterington},
+         familyi={T\bibinitperiod},
+         given={D.\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HAN}{%
+         family={Halliday},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima N.},
+         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TDMHAN1}
+    \strng{fullhash}{TDMHAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1979}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{pages}{183\bibrangedash 195}
+    \field{title}{On the fitting of parallel isochrons and the method of
+  maximum likelihood}
+    \field{volume}{26}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{1979}
+  \endentry
+
+  \entry{york2004}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YD}{%
+         family={York},
+         familyi={Y\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ENM}{%
+         family={Evensen},
+         familyi={E\bibinitperiod},
+         given={Norman\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MML}{%
+         family={Mart\'{i}nez},
+         familyi={M\bibinitperiod},
+         given={Margarita\bibnamedelima L{\'o}pez},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DBDJ}{%
+         family={De\bibnamedelima Basabe\bibnamedelima Delgado},
+         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+         given={Jon{\'a}s},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {AAPT}%
+    }
+    \strng{namehash}{YD+1}
+    \strng{fullhash}{YDENMMMLDBDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{3}
+    \field{pages}{367\bibrangedash 375}
+    \field{title}{{Unified equations for the slope, intercept, and standard
+  errors of the best straight line}}
+    \field{volume}{72}
+    \field{journaltitle}{American Journal of Physics}
+    \field{year}{2004}
+  \endentry
+\enddatalist
+\endinput

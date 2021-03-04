@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.85160428)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{covariance.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/covariance.pdf}}%
     \put(0.01886791,0.49449886){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{16}}}}%
     \put(0.01886791,0.54873245){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{18}}}}%
     \put(0.01886791,0.60635566){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{20}}}}%
@@ -75,11 +75,11 @@
     \put(0.71821269,0.00035998){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{10}}}%
     \put(0.78600481,0.00035998){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{12}}}%
     \put(0.85718648,0.00035998){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{14}}}%
-    \put(0.06062969,0.73590377){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{cov(X,Y)=0}}}%
-    \put(0.56229089,0.73590377){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{cov(X,Y)=0.9}}}%
-    \put(0.56229089,0.05459362){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{cov(X,Y)=0.9}}}%
-    \put(0.05385046,0.05459362){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{cov(X,Y)=-0.9}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{covariance.pdf}}%
+    \put(0.06062969,0.73590377){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x,y]$=0}}}%
+    \put(0.56229089,0.73590377){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x,y]$=0.9}}}%
+    \put(0.56229089,0.05459362){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x,y]$=0.9}}}%
+    \put(0.05385046,0.05459362){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x,y]$=-0.9}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/covariance.pdf}}%
     \put(0.52391871,0.49449886){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{16}}}}%
     \put(0.52391871,0.54873245){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{18}}}}%
     \put(0.52391871,0.60635566){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{20}}}}%
@@ -95,13 +95,13 @@
     \put(0.01886791,0.17587611){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{20}}}}%
     \put(0.01886791,0.23349932){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{22}}}}%
     \put(0.01886791,0.28773304){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{24}}}}%
-    \put(0.16984684,0.78484939){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sigma_X=1$}}}%
-    \put(0.67828738,0.78484939){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sigma_X=1$}}}%
-    \put(0.16984684,0.35436988){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sigma_X=1$}}}%
-    \put(0.67828738,0.35436988){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\sigma_X=2$}}}%
-    \put(0.42197252,0.67404841){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$\sigma_Y=1$}}}}%
-    \put(0.92702332,0.67404841){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$\sigma_Y=1$}}}}%
-    \put(0.42197252,0.24356889){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$\sigma_Y=1$}}}}%
-    \put(0.92702332,0.24356889){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$\sigma_Y=1$}}}}%
+    \put(0.16984684,0.78484939){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x]=1$}}}%
+    \put(0.67828738,0.78484939){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x]=1$}}}%
+    \put(0.16984684,0.35436988){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x]=1$}}}%
+    \put(0.67828738,0.35436988){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s[x]=2$}}}%
+    \put(0.42197252,0.67404841){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$s[y]=1$}}}}%
+    \put(0.92702332,0.67404841){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$s[y]=1$}}}}%
+    \put(0.42197252,0.24356889){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$s[y]=1$}}}}%
+    \put(0.92702332,0.24356889){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lb]{\smash{$s[y]=1$}}}}%
   \end{picture}%
 \endgroup%

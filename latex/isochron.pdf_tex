@@ -49,15 +49,15 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.73874522)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{isochron.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/isochron.pdf}}%
     \put(-0.00183342,0.59935929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.760}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{isochron.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/isochron.pdf}}%
     \put(0.27839588,0.04774914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{isochron.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{../figures/isochron.pdf}}%
     \put(0.42507671,0.04774914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{isochron.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{../figures/isochron.pdf}}%
     \put(0.57561621,0.04774914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=5]{isochron.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{../figures/isochron.pdf}}%
     \put(0.72452328,0.04774914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
     \put(0.35241753,0.3726934){\color[rgb]{0,0,0}\rotatebox{31.46704872}{\makebox(0,0)[lb]{\smash{isochron at time $\tau$ = 1Ga }}}}%
     \put(-0.00227273,0.17265972){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.700}}}%

@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.32404911)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{bullseye.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/bullseye.pdf}}%
     \put(0.02845482,0.00494629){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{good}}}%
     \put(0.90353379,0.00494629){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{bad}}}%
     \put(0.01666572,0.3296843){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.23790742\unitlength}\raggedright high precision\\ high accuracy\end{minipage}}}%

@@ -49,9 +49,9 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.53376846)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{AMS.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/AMS.pdf}}%
     \put(0.11967269,0.51749158){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Pre-selection electrode}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{AMS.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/AMS.pdf}}%
     \put(0.51037164,0.51749158){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Stripping canal}}}%
     \put(0.56337288,0.32605436){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Stripping gas}}}%
     \put(0.23745494,0.19394691){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Microscope}}}%

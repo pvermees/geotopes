@@ -1,0 +1,201 @@
+\section{Introduction to \texttt{Matlab}}
+\label{sec:Matlab}
+
+\begin{enumerate}
+\item \texttt{Matlab}, like \texttt{R}, allows the user to run code
+  either directly at the command line prompt, or from a built-in text
+  editor. Anything following a percent symbol (\texttt{\%}) is a
+  comment and is ignored. It is considered good practice to document
+  your code with lots of comments, as will be done in this tutorial.
+  
+\begin{verbatim}
+% Ending a line with a semi-colon 
+% suppresses output to the console:
+'be loud'
+'stay quiet';
+
+% Matlab can be used as a fancy calculator:
+1 + 1
+sqrt(2)
+exp(log(10))
+
+% Intermediate values can be stored in variables:
+foo = 2;
+bar = 4;
+foo = foo*bar;
+foo
+\end{verbatim}
+
+\item As the name suggest, \texttt{Matlab} (which stands for
+  \texttt{MAT}rix \texttt{LAB}oratory) is capable of, and excels at,
+  dealing with collections of multiple numbers arranged in vectors and
+  matrices:
+
+\begin{verbatim}
+% Data can be entered as vectors:
+x = [0 2 4 6 8 10]
+% or using shorthand syntax:
+y = 0:2:10
+
+% Define a matrix
+z = [1 2 3
+     4 5 6
+     7 8 9];
+
+% Accessing one or more elements 
+% from a matrix or vector:
+x(3)
+y(1:3)
+z(1:2,2:3)
+
+% Attention: '*', '/' and '^' symbols
+% are reserved for matrix operations:
+a = [1 1 1]  % row vector
+b = [1;1;1]  % column vector
+a*b
+
+% Use '.*', './' and '.^' for 
+% element-wise operations:
+a.*a
+
+% Transpose of a matrix:
+z'
+\end{verbatim}
+
+\item In addition to Matlab's built-in operators and functions, you
+  can also define your own:
+  
+\begin{verbatim}
+% take the cube of the input argument:
+function out = cube(in)
+  out = in^3;
+end
+\end{verbatim}
+
+Copy the \texttt{cube} function into a text file named \texttt{cube.m}
+and save it in the current directory. You can then load the contents
+of the file by simply typing its name without the \texttt{.m}
+extension:
+
+\begin{verbatim}
+c3 = cube(3)
+\end{verbatim}
+
+\item A useful feature of Matlab that is missing from most other
+  programming languages is the ability to accommodate several output
+  parameters:
+
+\begin{verbatim}
+function [m,s] = basicStats(dat)
+  m = mean(dat); % mean
+  s = std(dat);  % standard deviation
+end
+
+% create a row vector of 10 random numbers
+randnum = rand(1,10);
+
+% use our new function
+[m,s] = basicStats(randnum)
+\end{verbatim}
+
+An extensive library of documentation is built into \texttt{Matlab}.
+For example, to access further information about the \texttt{rand}
+function, simply type \texttt{help rand} or \texttt{doc rand} at the
+command prompt.
+
+\item\texttt{Matlab} is a fully fledged programming language, which
+  has flow structures such as \texttt{if} statements and \texttt{for}
+  loops:
+
+\begin{verbatim}
+% Conditional statement:
+function coinToss
+  % 'rand()' produces numbers between 0 and 1
+  if (rand() > 0.5)
+    % display a message to the console
+    disp('head')
+  else
+    disp('tail')
+  end
+end
+
+% Use this function in a for loop:
+for i=1:10,
+  coinToss
+end
+\end{verbatim}
+
+\item File and variable management:
+
+\begin{verbatim}
+% List all the variables in the current workspace:
+who
+whos
+
+% Remove some or all variables from the workspace:
+clear m,s
+who
+clear all
+who
+
+% Basic file management is done with UNIX commands:
+pwd   % pass the working directory
+cd .. % move up one directory
+ls    % list all files in the current directory
+\end{verbatim}
+
+Use the above commands to navigate to the directory containing the
+\texttt{RbSr.csv} file.
+
+\begin{verbatim}
+% To view the contents of this file:
+type('RbSr.csv')
+
+% Incidentally, the 'type' function can also 
+% be used to view the code of Matlab functions:
+type('mean')
+\end{verbatim}
+
+\item Let us now apply our knowledge of \texttt{Matlab} to a
+  geochronological problem:
+
+\begin{verbatim}
+% Read the Rb-Sr dataset ignoring the header:
+RbSr = csvread('RbSr.csv',1,0);
+
+% Plot the Sr87Sr86-ratio (first column)
+% against the Rb87Sr86-ratio (third column):
+Rb87Sr86 = RbSr(:,1);
+Sr87Sr86 = RbSr(:,3);
+plot(Rb87Sr86,Sr87Sr86,'ok')
+xlabel('87Rb/86Sr')
+ylabel('87Sr/86Sr')
+\end{verbatim}
+
+\item This should yield a linear array of Rb-Sr data. Let us now fit
+  an isochron through these data. \texttt{Matlab} includes several
+  functions to perform linear regression, including \texttt{regress}
+  and \texttt{fitlm}. We will use the \texttt{polyfit} function:
+
+\begin{verbatim}
+% Fit a first order polynomial through the data:
+[fit,S] = polyfit(Rb87Sr86,Sr87Sr86,1);
+% (S will be used in a later practical)
+
+% define the 87Rb decay constant (in Ma-1):
+lam87 = 1.42e-5;
+% compute the age from the slope:
+age = log(1 + fit(1))/lam87;
+
+% predict the Sr87Sr86-ratio for the
+% full range of Rb87Sr86-values:
+x = [0,max(Rb87Sr86)];
+y = fit(2) + fit(1)*x;
+
+# add the prediction and age to the existing plot:
+hold on;
+plot(x,y,'-r')
+title(age)
+\end{verbatim}
+
+\end{enumerate}

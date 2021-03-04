@@ -1,0 +1,55 @@
+\BOOKMARK [-1][-]{part.1}{I Basic geochronology}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{part.1}% 2
+\BOOKMARK [0][-]{chapter.2}{Basic Notions}{part.1}% 3
+\BOOKMARK [1][-]{section.2.1}{Isotopes and radioactivity}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Radioactivity}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.3}{The age equation}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.4}{Decay series}{chapter.2}% 7
+\BOOKMARK [0][-]{chapter.3}{Analytical techniques}{part.1}% 8
+\BOOKMARK [1][-]{section.3.1}{Mass spectrometry}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Isotope dilution}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.3}{Sample-standard bracketing}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{Simple parent-daughter pairs}{part.1}% 12
+\BOOKMARK [1][-]{section.4.1}{14C dating}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{The Rb-Sr method}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.3}{Isochrons}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.4}{The Sm-Nd method}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{The U-Pb system}{part.1}% 17
+\BOOKMARK [1][-]{section.5.1}{The U-\(Th-\)Pb method}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.2}{The Pb-Pb method}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.3}{Concordia}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.4}{Detrital geochronology}{chapter.5}% 21
+\BOOKMARK [0][-]{chapter.6}{The K-Ar system}{part.1}% 22
+\BOOKMARK [1][-]{section.6.1}{K-Ar dating}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.2}{40Ar/39Ar dating}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.3}{Applications}{chapter.6}% 25
+\BOOKMARK [0][-]{chapter.7}{Thermochronology}{part.1}% 26
+\BOOKMARK [1][-]{section.7.1}{The U-Th-He method}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.2}{Fission tracks}{chapter.7}% 28
+\BOOKMARK [0][-]{chapter.8}{U-series dating}{part.1}% 29
+\BOOKMARK [1][-]{section.8.1}{The 234U-238U method}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.2}{The 230Th method}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.3}{The 230Th-238U method}{chapter.8}% 32
+\BOOKMARK [0][-]{chapter.9}{Error propagation}{part.1}% 33
+\BOOKMARK [1][-]{section.9.1}{Some basic definitions}{chapter.9}% 34
+\BOOKMARK [1][-]{section.9.2}{Examples}{chapter.9}% 35
+\BOOKMARK [1][-]{section.9.3}{Accuracy vs. precision}{chapter.9}% 36
+\BOOKMARK [0][-]{chapter.10}{Exercises}{part.1}% 37
+\BOOKMARK [0][-]{chapter.11}{Programming practicals}{part.1}% 38
+\BOOKMARK [1][-]{section.11.1}{Introduction to R}{chapter.11}% 39
+\BOOKMARK [1][-]{section.11.2}{U-Th-Pb data reduction}{chapter.11}% 40
+\BOOKMARK [1][-]{section.11.3}{40Ar/39Ar data reduction}{chapter.11}% 41
+\BOOKMARK [1][-]{section.11.4}{Error propagation}{chapter.11}% 42
+\BOOKMARK [1][-]{section.11.5}{Fission tracks}{chapter.11}% 43
+\BOOKMARK [-1][-]{part.2}{II Advanced geochronology}{}% 44
+\BOOKMARK [0][-]{chapter.12}{Introduction}{part.2}% 45
+\BOOKMARK [0][-]{chapter.13}{Some statistical considerations}{part.2}% 46
+\BOOKMARK [1][-]{section.13.1}{The normal distribution}{chapter.13}% 47
+\BOOKMARK [1][-]{section.13.2}{Error correlations}{chapter.13}% 48
+\BOOKMARK [1][-]{section.13.3}{Linear regression}{chapter.13}% 49
+\BOOKMARK [1][-]{section.13.4}{Dealing with \(over\)dispersion}{chapter.13}% 50
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 51
+\BOOKMARK [0][-]{chapter.14}{Introduction to IsoplotR}{part.3}% 52
+\BOOKMARK [1][-]{section.14.1}{Software architecture}{chapter.14}% 53
+\BOOKMARK [1][-]{section.14.2}{The Graphical User Interface \(GUI\)}{chapter.14}% 54
+\BOOKMARK [1][-]{section.14.3}{The Command Line Interface \(CLI\)}{chapter.14}% 55

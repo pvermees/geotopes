@@ -49,7 +49,7 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.78632099)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{Arrhenius.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/Arrhenius.pdf}}%
     \put(0.51400282,0.7655497){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{T (K)}}}%
     \put(0.55969856,0.00530216){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
     \put(0.09423347,0.72294499){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1000}}}%

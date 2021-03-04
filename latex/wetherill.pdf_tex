@@ -49,9 +49,9 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.820953)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{wetherill.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{../figures/wetherill.pdf}}%
     \put(0.16387872,0.21196716){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{T$_1$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{wetherill.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{../figures/wetherill.pdf}}%
     \put(0.78502268,0.58544476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{T$_0$}}}%
     \put(0.46297748,0.69335001){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{U-loss at T$_1$}}}%
     \put(0.58160908,0.42373273){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Pb-loss at T$_1$}}}%

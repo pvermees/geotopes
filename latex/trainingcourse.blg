@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: trainingcourse.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: trainingcourse-blx.bib
+Database file #2: /home/pvermees/Dropbox/biblio.bib
+Biblatex version: 3.13
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 4 entries,
+            6365 wiz_defined-function locations,
+            1209 strings with 9257 characters,
+and the built_in function-call counts, 20444 in all, are:
+= -- 1441
+> -- 430
+< -- 147
++ -- 410
+- -- 138
+* -- 1396
+:= -- 2091
+add.period$ -- 0
+call.type$ -- 4
+change.case$ -- 94
+chr.to.int$ -- 42
+cite$ -- 6
+duplicate$ -- 1808
+empty$ -- 1889
+format.name$ -- 184
+if$ -- 4461
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 0
+newline$ -- 106
+num.names$ -- 193
+pop$ -- 1082
+preamble$ -- 1
+purify$ -- 106
+quote$ -- 0
+skip$ -- 773
+stack$ -- 0
+substring$ -- 2554
+swap$ -- 484
+text.length$ -- 107
+text.prefix$ -- 3
+top$ -- 1
+type$ -- 124
+warning$ -- 0
+while$ -- 257
+width$ -- 0
+write$ -- 103

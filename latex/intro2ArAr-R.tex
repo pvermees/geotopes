@@ -1,0 +1,30 @@
+\section{$^{40}$Ar/$^{39}$Ar data reduction}
+\label{sec:Ar-Ar-R}
+
+In this exercise, we will reduce some synthetic $^{40}$Ar/$^{39}$Ar
+data. You are provided with three input files:
+\begin{enumerate}
+\item{\tt smpl.csv}: $^{36}$Ar, $^{39}$Ar and $^{40}$Ar as a function
+  of time (t) for the sample.
+\item{\tt stnd.csv}: the same data for the standard, which is a Fish
+  Canyon sanidine with a conventional K-Ar age of 27.8 Ma.
+\item{\tt blnk.csv}: a `blank' run, i.e. a measurement of the
+  background levels of Argon present in the mass spectrometer in the
+  absence of a sample.
+\end{enumerate}
+
+To perform the data reduction, please follow the following steps:
+
+\begin{enumerate}
+\item Load the three input files.
+\item Plot the $^{40}$Ar signal of the sample against time. Do the
+  same for the $^{36}$Ar signal in the blank. What is the difference?
+\item Perform a linear regression of the $^{36}$Ar, $^{39}$Ar and
+  $^{40}$Ar signals through time and determine the intercept at t=0.
+\item Subtract the `time zero' intercepts of the blank from those of
+  the sample and standard.
+\item Apply an atmospheric correction assuming that all $^{36}$Ar has
+  an atmospheric origin.
+\item Calculate the J-value of the standard.
+\item Calculate the age of the sample.
+\end{enumerate}
