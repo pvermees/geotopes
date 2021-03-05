@@ -98,14 +98,18 @@
 \defcounter {refsection}{2}\relax 
 \contentsline {section}{\numberline {13.3}Linear regression}{54}{section.13.3}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.4}Dealing with (over)dispersion}{55}{section.13.4}%
+\contentsline {section}{\numberline {13.4}The mean square of weighted deviates (MSWD)}{55}{section.13.4}%
+\defcounter {refsection}{2}\relax 
+\contentsline {section}{\numberline {13.5}Dealing with overdispersion}{57}{section.13.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{56}{part.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{60}{part.3}%
 \defcounter {refsection}{3}\relax 
-\contentsline {chapter}{\numberline {14}Introduction to \texttt {IsoplotR}}{57}{chapter.14}%
+\contentsline {chapter}{\numberline {14}Introduction to \texttt {IsoplotR}}{61}{chapter.14}%
 \defcounter {refsection}{3}\relax 
-\contentsline {section}{\numberline {14.1}Software architecture}{57}{section.14.1}%
+\contentsline {section}{\numberline {14.1}Software architecture}{61}{section.14.1}%
 \defcounter {refsection}{3}\relax 
-\contentsline {section}{\numberline {14.2}The Graphical User Interface (GUI)}{57}{section.14.2}%
+\contentsline {section}{\numberline {14.2}The Graphical User Interface (GUI)}{61}{section.14.2}%
 \defcounter {refsection}{3}\relax 
-\contentsline {section}{\numberline {14.3}The Command Line Interface (CLI)}{59}{section.14.3}%
+\contentsline {section}{\numberline {14.3}The Command Line Interface (CLI)}{63}{section.14.3}%
+\defcounter {refsection}{3}\relax 
+\contentsline {section}{\numberline {14.4}General purpose functions}{64}{section.14.4}%

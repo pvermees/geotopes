@@ -60,3 +60,49 @@ isochron(ReOs,inverse=TRUE)
 isochron(KCa,inverse=TRUE)
 concordia(UPb,hide=10,type=2,tlim=c(247,255),ylim=c(0.0508,0.0518))
 dev.off()
+
+dat <- cbind(c(10,20,28),c(1,1,1),c(20,30,42),c(1,1,1),c(0.9,0.9,-0.9))
+colnames(dat) <- c('X','sX','Y','sY','rXY')
+fit <- IsoplotR::york(dat)
+xyfitted <- IsoplotR:::get.york.xy(dat,a=fit$a[1],b=fit$b[1])
+
+cairo(file='chi2.pdf',width=6,height=3)
+pars(mar=c(3,3,1,1))
+x <- seq(from=0.001,to=10,length.out=50)
+y <- dchisq(x,df=1)
+plot(x,y,type='l',xlab=expression(chi^2),
+     ylab=expression('f('*chi^2*')'),
+     bty='n',ylim=c(0,0.5))
+lines(x=rep(fit$mswd,2),y=c(0,1),lty=2)
+x <- seq(from=fit$mswd,to=10,length.out=50)
+y <- dchisq(x,df=1)
+polygon(c(x,tail(x,1),x[1]),c(y,0,0),col='black')
+text(x=fit$mswd,y=0.5,pos=4,xpd=NA,
+     labels=substitute(chi[stat]^2*'='*a,
+                       list(a=signif(fit$mswd,3)) ) )
+text(x=(10+fit$mswd)/3,y=y[1],
+     pos=4,xpd=NA,
+     labels=substitute(p*'='*a,list(a=signif(fit$p.value,2)) ) )
+dev.off()
+
+cairo(file='mswd.pdf',width=7,height=3.5)
+pars(mar=c(3,3,1,1))
+M <- 2.5
+x <- seq(from=0,to=M,length.out=100)
+y <- dchisq(x,df=1)
+i <- which.max(y)
+dof <- c(2,5,10,20,50)
+plot(x,y,type='l',xlab='MSWD',ylab='f(MSWD)',bty='n',ylim=c(0,2.5))
+text(x=0,y=M,labels='df=1',xpd=NA,pos=3)
+xadj <- c(1,3,0,1,1)/2
+yadj <- c(-1,-1,-1,-1,-1)/2
+for (i in 1:length(dof)){
+    df <- dof[i]
+    x <- seq(from=0,to=M*df,length.out=100)
+    y <- dchisq(x,df=df)
+    lines(x=x/df,y=y*df)
+    j <- which.max(y)
+    text(x[j]/df,y[j]*df,labels=paste0('df=',df),adj=c(xadj[i],yadj[i]))
+}
+dev.off()
+

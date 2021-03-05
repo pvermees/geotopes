@@ -197,13 +197,14 @@ spectrometer data:\\
 
 \noindent\includegraphics[width=\textwidth]{../figures/spurious}\\
 
-\noindent where $x$, $y$ and $z$ are uncorrelated, normally
-distributed random numbers, but the ratios $y/z$ and $x/z$ are
+\noindent where $x$, $y$ and $z$ are uncorrelated (normally
+distributed) random numbers, but the ratios $y/z$ and $x/z$ are
 strongly correlated. The \emph{spurious correlation} between ratios
-was first described by \citet{pearson1896}. It is strongest when the
-common nuclide $z$ is measured less precisely than the remaining two
-nuclides $x$ and $y$. If the summary statistics of $x$, $y$ and $z$
-are known, then it is possible to predict the correlation coefficient:
+like this was first described by \citet{pearson1896}. It is strongest
+when the common nuclide $z$ is measured less precisely than the
+remaining two nuclides $x$ and $y$. If the summary statistics of $x$,
+$y$ and $z$ are known, then it is possible to predict the correlation
+coefficient:
 
 \begin{equation}
   \noindent r\left[\frac{y}{z},\frac{x}{z}\right] \approx
@@ -357,8 +358,8 @@ weighted regression algorithm:
 Alternatively (and equivalently), the best fit line can also be
 obtained by maximising the log-likelihood:
 \begin{equation}
-  \mathcal{L} = -\frac{S_w}{2} -
-  \sum\limits_{i=1}^{n} \ln\left(2 \pi s[y_i] \right)
+  \mathcal{LL} = - \sum\limits_{i=1}^{n} \ln\left(2 \pi s[y_i] \right)
+  - \frac{S_w}{2}
   \label{eq:L}
 \end{equation}
 
@@ -384,16 +385,16 @@ yields $a = 9.4$ and $b = 1.04$. This is a far more accurate result
 In isochron regression, it is typical for not only $y$ but also $x$ to
 be affected by analytical uncertainty. In this case, the best fit line
 can be found by modifying the likelihood function
-\citep{titterington1979, york2004}:
+\citep{titterington1979, york1969, york2004}:
 
 \begin{equation}
-  \mathcal{L}_y = 
+  \mathcal{LL}_y = 
   -\frac{1}{2} \sum\limits_{i=1}^{n}
   \ln\left(2 \pi |\Sigma_i| \right)
   -\frac{1}{2} \sum\limits_{i=1}^{n}
-  \left[X_i-\boldsymbol{X}_i\right]^T
+  \left[X_i-\hat{X}_i\right]^T
   \Sigma_i^{-1}
-  \left[X_i-\boldsymbol{X}_i\right]
+  \left[X_i-\hat{X}_i\right]
   \label{eq:Ly}
 \end{equation}
 
@@ -407,31 +408,31 @@ can be found by modifying the likelihood function
     \end{array}
     \right]
   \mbox{~,~}
-  \boldsymbol{X}_i = \left[
+  \hat{X}_i = \left[
     \begin{array}{@{}c@{}}
-      \boldsymbol{x}_i \\
-      a + b \boldsymbol{x}_i
+      \hat{x}_i \\
+      a + b \hat{x}_i
     \end{array}
     \right]
   \mbox{~and~}
   \Sigma_i = \left[
     \begin{array}{@{}cc@{}}
-      s[x_i]^2 & cov[x_i,y_i] \\
-      cov[x_i,y_i] & s[y_i]^2
+      s[x_i]^2 & s[x_i,y_i] \\
+      s[x_i,y_i] & s[y_i]^2
     \end{array}
     \right]
 \end{equation}
 
-\noindent where the true values $\boldsymbol{x}_i$ are, of course,
-unknown but can be estimated from the data for any value of $a$ or
-$b$. $cov[x_i,y_i]$ is the covariance of the $i$\textsuperscript{th}
-measurement's x- and y-uncertainties. To illustrate the importance of
-these covariance terms, consider a second three-point example:
+\noindent where $\hat{x}_i$ are the \emph{estimated} values of
+$\mathbf{x}_i$ for any value of $a$ or $b$. $s[x_i,y_i]$ is the
+covariance of the $i$\textsuperscript{th} measurement's x- and
+y-uncertainties. To illustrate the importance of these covariance
+terms, consider a second three-point example:
 
 \begin{center}
 \begin{tabular}{cccccc}
   $i$ & \textbf{x} & $s[\boldsymbol{x}]$ & \textbf{y} &
-  $s[\boldsymbol{y}]$ & $cov[\boldsymbol{x}_i,\boldsymbol{y}_i]$ \\
+  $s[\boldsymbol{y}]$ & $s[\boldsymbol{x}_i,\boldsymbol{y}_i]$ \\
   \hline
   1 & 10 & 1 & 20 & 1 & 0.9 \\
   2 & 20 & 1 & 30 & 1 & 0.9 \\
@@ -439,8 +440,8 @@ these covariance terms, consider a second three-point example:
 \end{tabular}
 \end{center}
 
-\noindent which again defines a straight line with $a = 10$ intercept
-and $b = 1$ slope. Let $x = \{10,20,28\}$ and $y = \{20,30,42\}$ be a
+\noindent which again defines a straight line with intercept $a = 10$
+and slope $b = 1$. Let $x = \{10,20,28\}$ and $y = \{20,30,42\}$ be a
 random realisation of \textbf{x} and \textbf{y}. Suppose that we
 ignored or did not know the covariance terms. In that case the
 ordinary and weighted regression algorithms would yield the same
@@ -452,28 +453,320 @@ the covariances, then the maximum likelihood algorithm yields $a =
 $\boldsymbol{a} = 10$ and $\boldsymbol{b} = 1$
 (Figure~\ref{fig:regression}.b).
 
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=.85\textwidth]{../figures/regression.pdf}
-  \caption{Illustration of the benefits of error-weighted linear
-    regression.  The black squares mark the true (x,y)-coordinates
-    of three samples drawn from a (dashed) line with intercept
-    $\boldsymbol{a} = 10$ and slope $\boldsymbol{b} = 1$. The black
-    dots mark random realisations of these samples, given Gaussian
-    uncertainties with uncertainties shown as 95\% confidence bars
-    or ellipses. a) three samples with analytical uncertainty in
-    the y-variable only. The ordinary least squares fit ignoring
-    these uncertainties is shown in red ($a = 5.0, b = 1.36$), the
-    weighted least squares fit in blue ($a = 9.4, b = 1.04$). b)
-    three samples with correlated uncertainties in both the x- and
-    y-variable.  Ignoring the error correlations yields the red fit
-    ($a = 7.2, b = 1.21$). Accounting for the error correlations
-    produces the blue fit ($a = 9.3, b = 1.05$). }
-  \label{fig:regression}
-\end{figure}
+\begin{center}
+\noindent\includegraphics[width=.85\textwidth]{../figures/regression.pdf}
+\captionof{figure}{Illustration of the benefits of error-weighted
+  linear regression.  The black squares mark the true
+  (x,y)-coordinates of three samples drawn from a (dashed) line with
+  intercept $\boldsymbol{a} = 10$ and slope $\boldsymbol{b} = 1$. The
+  black dots mark random realisations of these samples, given Gaussian
+  uncertainties with uncertainties shown as 95\% confidence bars or
+  ellipses. a) three samples with analytical uncertainty in the
+  y-variable only. The ordinary least squares fit ignoring these
+  uncertainties is shown in red ($a = 5.0, b = 1.36$), the weighted
+  least squares fit in blue ($a = 9.4, b = 1.04$). b) three samples
+  with correlated uncertainties in both the x- and y-variable.
+  Ignoring the error correlations yields the red fit ($a = 7.2, b =
+  1.21$). Accounting for the error correlations produces the blue fit
+  ($a = 9.3, b = 1.05$).}
+\label{fig:regression}
+\end{center}
 
-\section{Dealing with (over)dispersion}
+\section{The mean square of weighted deviates (MSWD)}
 \label{sec:mswd}
+
+The extent to which the observed scatter in the data around the best
+fit isochron line can be explained by the analytical uncertainties can
+be assessed using a chi-square test.  To this end, we define the
+chi-square statistic as:
+\begin{equation}
+  \chi_{stat}^2 = \sum\limits_{i=1}^{n} \left[X_i - \hat{X}_i\right]^T
+  \Sigma_i^{-1} \left[X_i - \hat{X}_i\right]
+  \label{eq:Chi2}
+\end{equation}
+
+\noindent in which we recognise the second term of
+Equation~\ref{eq:Ly}, which is the matrix formulation of the sum of
+squares. For example, consider the dataset shown in
+Figure~\ref{fig:regression}.b:
+
+\begin{center}
+\begin{tabular}{cccccccc}
+  $i$ & $x$ & $s[x]$ & $y$ & $s[y]$ &
+  $s[\hat{x}_i,\hat{y}_i]$ & $\hat{x}$ & $\hat{y}$ \\
+  \hline
+  1 & 10 & 1 & 20 & 1 &  0.9 & 10.13 & 19.96 \\
+  2 & 20 & 1 & 30 & 1 &  0.9 & 19.75 & 30.09 \\
+  3 & 28 & 1 & 42 & 1 & -0.9 & 29.58 & 40.43
+\end{tabular}
+\end{center}
+
+\noindent where the $\hat{x}$ and $\hat{y}$ values were estimated
+using the \citet{york1969} algorithm. Then
+\[
+\begin{split}
+\chi_{stat}^2 = &
+\left[
+  \begin{array}{cc}
+    (10 - 10.13) & (20 - 19.96)\\
+  \end{array}
+  \right]
+\left[
+  \begin{array}{cc}
+    1^2 & 0.9^2 \\
+    0.9^2 & 1^2
+  \end{array}
+  \right]^{-1}
+\left[\begin{array}{c}
+    (10 - 10.13)\\
+    (20 - 19.96)
+  \end{array}
+  \right] \\
++ & \left[
+  \begin{array}{cc}
+    (20 - 19.75) & (30 - 30.09)\\
+  \end{array}
+  \right]
+\left[
+  \begin{array}{cc}
+    1^2 & 0.9^2 \\
+    0.9^2 & 1^2
+  \end{array}
+  \right]^{-1}
+\left[\begin{array}{c}
+    (20 - 19.75) \\
+    (30 - 30.09)
+  \end{array}
+  \right] \\
++ & \left[
+  \begin{array}{cc}
+    (28 - 29.58) & (42 - 40.43)\\ 
+  \end{array}
+  \right]
+\left[
+  \begin{array}{cc}
+    1^2 & 0.9^2 \\
+    0.9^2 & 1^2
+  \end{array}
+  \right]^{-1}
+\left[\begin{array}{c}
+    (28 - 29.58) \\
+    (42 - 40.43)
+  \end{array}
+  \right] = 3.32
+\end{split}
+\]
+
+We can compare this value with a chi-square distribution with $df =
+(k-1) n - k$ degrees of freedom, where $k$ is the dimensionality of
+the linear fit. In the case of our example dataset, $k=2$ and $n=3$,
+so $df=1$. The \textbf{p-value} is defined as the probability of
+observing a value greater than $\chi_{stat}^2$ under this
+distribution:
+
+\noindent\begin{minipage}[t]{.7\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/chi2.pdf}
+\end{minipage}
+\begin{minipage}[t]{.3\textwidth}
+  \captionof{figure}{Chi-square distribution with 1 degree of freedom.
+    The p-value for an outcome of $\chi_{stat}^2=3.32$ is the integral
+    of the black area.}
+  \label{fig:chi2}
+\end{minipage}
+
+If the p-value falls below a cutoff value of 0.05, say, then this
+indicates that the data are `overdispersed' with respect to the formal
+analytical uncertainties around the best-fit line. In contrast,
+p-values that are much greater than 0.95 are indicative of
+`underdispersed' data, possibly reflecting overestimated analytical
+uncertainties.\\
+
+An alternative way to assess the degree of over- or underdispersion is
+by dividing the chi-square statistic $\chi^2_{stat}$ by the number of
+degrees of freedom $df$. The resulting numerical value is called the
+`Mean Square of the Weighted Deviates' \citep[MSWD,][]{mcintyre1966}
+by geochronologists, but is known as the `reduced chi-square
+statistic' elsewhere. For sufficiently large samples and, hence,
+degrees of freedom, the distribution of the MSWD statistic converges
+to a normal distribution with a mean of 1. However for small samples
+there is a comparatively greater probability of obtaining an MSWD
+value that is greater or smaller than 1:
+
+\noindent\begin{minipage}[t]{.7\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/mswd.pdf}
+\end{minipage}
+\begin{minipage}[t]{.3\textwidth}
+  \captionof{figure}{Expected distribution of the MSWD for different
+    degrees of freedom. With increasing sample size, the distribution
+    of the MSWD converges to a normal distribution with mean 1.}
+  \label{fig:mswd}
+\end{minipage}
+
+The MSWD is a very useful device to assess the degree to which the
+observed scatter of the data around the best fit can be explained by
+the analytical uncertainties. Three scenarios are possible:
+
+\begin{enumerate}
+  \item If the analytical uncertainties alone explain the total
+    scatter around the true mean, then the MSWD is expected to take on
+    a value of $\approx{1}$.
+\item Data sets that exhibit MSWD values close to zero are said to be
+  ``underdispersed'' with respect to the analytical
+  uncertainties. This indicates some problem with the error
+  propagation, which is often due to undetected systematic effects.
+\item Finally, MSWD values $>1$ can often be attributed to some form
+  of geological dispersion. This overdispersion carries geological
+  significance.
+\end{enumerate}
+
+\noindent\begin{minipage}[t]{.5\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/ArArMSWD.pdf}
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+  \vspace{-20pt}
+  \captionof{figure}{Three different synthetic
+    \textsuperscript{40}Ar/\textsuperscript{39}Ar data sets shown as
+    inverse isochron plots. The analytical uncertainties are shown as
+    95\% error ellipses. The grey band represents a 95\% confidence
+    envelope for the best fit line using the \citet{york1969}
+    algorithm. Each of the data sets consists of 10 aliquots that are
+    affected by a combination of analytical and geological
+    dispersion. The relative importance of these two sources of
+    scatter can be assessed using the mean square of weighted deviates
+    (MSWD) and the p-value of the chi-square test. The case where
+    MSWD$\approx{1}$ is the easiest to interpret: it means that the
+    scatter of the data around the best fit line can be completely
+    explained by the analytical uncertainty. The case where MSWD$<{1}$
+    may seem like a good outcome but it is in fact a bad one because
+    it indicates that there may be a problem with the error
+    propagation. A high p-value or low MSWD may happen once but red
+    flags should go up if all samples in a study show this type of
+    behaviour. Finally the case where MSWD$>{1}$ is not good or bad
+    but `interesting'. This requires further investigation as
+    discussed in Section~\ref{sec:overdispersion}.  }
+  \label{fig:ArArMSWD}
+\end{minipage}
+
+\section{Dealing with overdispersion}
+\label{sec:overdispersion}
+
+\texttt{IsoplotR} offers three strategies (`models') to deal with
+overdispersed datasets:
+
+\begin{enumerate}
+\item inflate the analytical uncertainties until MSWD=1;
+\item ignore the analytical uncertainties;
+\item quantify the overdispersion.
+\end{enumerate}
+
+Let us consider the simple case of a 2-dimensional dataset
+$\{x_1,y_1\},\ldots,\{x_i,y_i\},\ldots,\{x_n,y_n\}$.  Data are
+overdispersed with respect to the analytical uncertainties if:
+
+\[
+\mathrm{MSWD} \equiv
+\sum\limits_{i=1}^n X_i~\Omega_i X_i^T / df > 1
+\]
+
+\noindent with
+
+\[
+X_i = \left[
+  \begin{array}{cc}
+    (x_i - \hat{x}_i) &  (y_i - \hat{y}_i)
+  \end{array}
+  \right],
+\]
+
+\noindent where $\hat{x}_i$ and $\hat{y}_i$ are the fitted values, and
+
+\[
+\Omega_i \equiv
+\left[
+  \begin{array}{cc}
+    s[x_i]^2 & cov(x_i,y_i) \\
+    cov(x_i,y_i) & s[y_i]^2
+  \end{array}
+\right]^{-1}
+\]
+
+\texttt{IsoplotR} provides three alternative strategies (`models') to
+deal with overdispersed data. A first way (`model-1') to account for
+overdispersion is to inflate all analytical uncertainties by a common
+\emph{factor} $f$, which is chosen so as to reduce the MSWD to unity:
+
+\[
+\sum\limits_{i=1}^{n} X_i~\Omega_{i,f} X_i^T / df = 1
+\]
+
+\noindent with
+
+\[
+\Omega_{i,f}
+\equiv
+\left[
+  \begin{array}{cc}
+    f^2s[x_i]^2 & f^2cov(x_i,y_i) \\
+    f^2cov(x_i,y_i) & f^2s[y_i]^2
+  \end{array}
+\right]^{-1}
+= \Omega_i/f^2
+\]
+
+\noindent from which it is easy to show that $f=\sqrt{\mathrm{MSWD}}$.\\
+
+A second option (`model-2') for dealing with overdispersion is to
+simply ignore the analytical uncertainties and perform an ordinary
+least squares regression. This option is offered for the sake of
+completeness but is inherently flawed, because (1) its results may
+differ depending on which ratio is chosen as the dependent variable;
+(2) it assumes that only the dependent variable is subject to scatter;
+which results in (3) unreliable error calculations
+\citep[][p. 648]{ludwig2003b}. \\
+
+Finally, a third option (`model-3') is to attribute the overdispersion
+to geological scatter in the ages or in the non-radiogenic isotope
+composition. The latter hypothesis can be formalised as follows:
+
+\[
+\sum\limits_{i=1}^{n} X_i~\Omega_{i,\omega} X_i^T / df = 1
+\]
+
+\noindent with
+
+\[
+\Omega_{i,\omega} \equiv
+\left[
+  \begin{array}{cc}
+    s[x_i]^2 & cov(x_i,y_i) \\
+    cov(x_i,y_i) &  s[y_i]^2 + \omega^2
+  \end{array}
+\right]^{-1}
+\]
+
+\noindent where $\omega$ is the overdispersion \emph{term}, which can
+be found iteratively. This term has geological significance and is
+reported separately by \texttt{IsoplotR}. The third strategy is
+arguably the most sensible one, because geological scatter is a very
+common phenomenon.  For example, not all aliquots in a multi-mineral
+Rb-Sr isochron may have formed with exactly the same initial
+\textsuperscript{87}Sr/\textsuperscript{86}Sr ratio
+\citep{mcintyre1966}. As the analytical precision of mass
+spectrometers has increased over the years, geochronologists' ability
+to detect even the smallest amount of geological dispersion has
+steadily grown as well. It is reasonable to assume that this trend
+will continue into the future, and that overdispersed datasets will
+become ever more common.\\
+
+It is important to note that the overdispersion of geochronological
+datasets contains meaningful geological information. For example, the
+dispersion of igneous zircon U-Pb dates bears information on the
+magmatic residence time of these crystals \citep{matzel2006,
+  rioux2012}.  Thus, the increasing prevalence of overdispersed
+datasets should be seen as a positive trend rather than a nuisance.
 
 \printbibliography[heading=subbibliography]
 

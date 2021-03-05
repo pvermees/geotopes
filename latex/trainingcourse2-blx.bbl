@@ -17,6 +17,119 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
+  \entry{ludwig2003b}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LKR}{%
+         family={Ludwig},
+         familyi={L\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Mineral Soc America}%
+    }
+    \strng{namehash}{LKR1}
+    \strng{fullhash}{LKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{1}
+    \field{pages}{631\bibrangedash 656}
+    \field{title}{{Mathematical--statistical treatment of data and errors for
+  $^{230}$Th/U geochronology}}
+    \field{volume}{52}
+    \field{journaltitle}{Reviews in Mineralogy and Geochemistry}
+    \field{year}{2003}
+  \endentry
+
+  \entry{matzel2006}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MJE}{%
+         family={Matzel},
+         familyi={M\bibinitperiod},
+         given={Jennifer\bibnamedelima EP},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=BSA}{%
+         family={Bowring},
+         familyi={B\bibinitperiod},
+         given={Samuel\bibnamedelima A},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MRB}{%
+         family={Miller},
+         familyi={M\bibinitperiod},
+         given={Robert\bibnamedelima B},
+         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Geological Society of America}%
+    }
+    \strng{namehash}{MJEBSAMRB1}
+    \strng{fullhash}{MJEBSAMRB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{11-12}
+    \field{pages}{1412\bibrangedash 1430}
+    \field{title}{{Time scales of pluton construction at differing crustal
+  levels: Examples from the Mount Stuart and Tenpeak intrusions, North
+  Cascades, Washington}}
+    \field{volume}{118}
+    \field{journaltitle}{Geological Society of America Bulletin}
+    \field{year}{2006}
+  \endentry
+
+  \entry{mcintyre1966}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MGA}{%
+         family={{McIntyre}},
+         familyi={M\bibinitperiod},
+         given={G.\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={{Brooks}},
+         familyi={B\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CW}{%
+         family={{Compston}},
+         familyi={C\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=TA}{%
+         family={{Turek}},
+         familyi={T\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MGA+1}
+    \strng{fullhash}{MGABCCWTA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1966}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{5459\bibrangedash 5468}
+    \field{title}{{The Statistical Assessment of Rb-Sr Isochrons}}
+    \field{volume}{71}
+    \field{journaltitle}{Journal of Geophysical Research}
+    \field{year}{1966}
+  \endentry
+
   \entry{nicolaysen1961}{article}{}
     \name{author}{1}{}{%
       {{hash=NL}{%
@@ -76,6 +189,71 @@
     \field{year}{1896}
   \endentry
 
+  \entry{rioux2012}{article}{}
+    \name{author}{7}{}{%
+      {{hash=RM}{%
+         family={Rioux},
+         familyi={R\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LCJ}{%
+         family={Lissenberg},
+         familyi={L\bibinitperiod},
+         given={C\bibnamedelima Johan},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MNM}{%
+         family={McLean},
+         familyi={M\bibinitperiod},
+         given={Noah\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BSA}{%
+         family={Bowring},
+         familyi={B\bibinitperiod},
+         given={Samuel\bibnamedelima A},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MCJ}{%
+         family={MacLeod},
+         familyi={M\bibinitperiod},
+         given={Christopher\bibnamedelima J},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HE}{%
+         family={Hellebrand},
+         familyi={H\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Shimizu},
+         familyi={S\bibinitperiod},
+         given={Nobumichi},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{RM+1}
+    \strng{fullhash}{RMLCJMNMBSAMCJHESN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{4}
+    \field{pages}{275\bibrangedash 278}
+    \field{title}{{Protracted timescales of lower crustal growth at the
+  fast-spreading East Pacific Rise}}
+    \field{volume}{5}
+    \field{journaltitle}{Nature Geoscience}
+    \field{year}{2012}
+  \endentry
+
   \entry{titterington1979}{article}{}
     \name{author}{2}{}{%
       {{hash=TDM}{%
@@ -105,6 +283,34 @@
     \field{volume}{26}
     \field{journaltitle}{Chemical Geology}
     \field{year}{1979}
+  \endentry
+
+  \entry{york1969}{article}{}
+    \name{author}{1}{}{%
+      {{hash=YD}{%
+         family={York},
+         familyi={Y\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{YD1}
+    \strng{fullhash}{YD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1969}
+    \field{labeldatesource}{}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{pages}{320\bibrangedash 324}
+    \field{title}{Least squares fitting of a straight line with correlated
+  errors}
+    \field{volume}{5}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{1969}
   \endentry
 
   \entry{york2004}{article}{}
