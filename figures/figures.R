@@ -66,6 +66,43 @@ colnames(dat) <- c('X','sX','Y','sY','rXY')
 fit <- IsoplotR::york(dat)
 xyfitted <- IsoplotR:::get.york.xy(dat,a=fit$a[1],b=fit$b[1])
 
+cairo(file='wtdmean.pdf',width=5,height=3)
+pars()
+X <- c(1005, 995, 1000, 1125)
+sX <- c(10, 10, 10, 100)
+avg <- mean(X)
+wtdavg <- sum(X/sX^2)/sum(1/sX^2)
+mswd <- sum(((X-wtdavg)^2)/(sX^2))
+ns <- length(X)
+plot(1:ns,X,xlim=c(1/2,ns+1/2),ylim=c(900,1335),
+     xlab='i',ylab='t (Ma)',bty='n',xaxt='n',pch=16)
+axis(side=1,at=1:ns,labels=1:ns)
+arrows(1:ns,X-2*sX,1:ns,X+2*sX,angle=90,code=3,length=0.05)
+lines(c(1/2,ns+1/2),rep(avg,2),lty=2)
+lines(c(1/2,ns+1/2),rep(wtdavg,2))
+dev.off()
+
+cairo(file='chi2wtdmean.pdf',width=6,height=3)
+pars(mar=c(3,3,1,1))
+df <- length(X)-1
+chi2stat <- mswd*df
+x <- seq(from=0,to=20,length.out=100)
+y <- dchisq(x,df=df)
+plot(x,y,type='l',xlab=expression(chi^2),
+     ylab=expression('f('*chi^2*')'),
+     bty='n',ylim=c(0,0.3))
+lines(x=rep(chi2stat,2),y=c(0,1),lty=2)
+x <- seq(from=chi2stat,to=20,length.out=50)
+y <- dchisq(x,df=df)
+polygon(c(x,tail(x,1),x[1]),c(y,0,0),col='black')
+text(x=chi2stat,y=0.2,pos=4,xpd=NA,
+     labels=substitute(chi[stat]^2*'='*a,
+                       list(a=signif(chi2stat,3)) ) )
+p <- signif(pchisq(chi2stat,df=df,lower.tail=FALSE),3)
+text(x=10,y=0.03,pos=4,xpd=NA,
+     labels=substitute(p*'='*a,list(a=p)))
+dev.off()
+
 cairo(file='chi2.pdf',width=6,height=3)
 pars(mar=c(3,3,1,1))
 x <- seq(from=0.001,to=10,length.out=50)
@@ -105,4 +142,3 @@ for (i in 1:length(dof)){
     text(x[j]/df,y[j]*df,labels=paste0('df=',df),adj=c(xadj[i],yadj[i]))
 }
 dev.off()
-

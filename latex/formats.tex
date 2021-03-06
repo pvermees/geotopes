@@ -17,17 +17,40 @@ following probability density function (pdf):
 \end{equation}
 
 \noindent where $\mu$ is the \textbf{mean} and $\sigma$ is the
-\textbf{standard deviation}. It can be mathematically proven that the
-\emph{sum} of $n$ randomly selected values converges to a Gaussian
-distribution, provided that $n$ is large enough. This convergence is
-guaranteed \textit{regardless of the distribution of the original
-  data}.  This mathematical law is called the \textbf{Central Limit
-  Theorem}. Physically processes such as thermal diffusion are
-characterised by white noise and Brownian walks which are, in effect,
-additive processes.  So it makes sense that these give rise to
-Gaussian distributions. In fact, these additive processes are so
-common that the Gaussian distribution is also known as the normal
-distibution, implying that all other distributions are `abnormal'.\\
+\textbf{standard deviation}.
+
+\begin{enumerate}
+\item the \textbf{mean} $\mu$ controls the \textbf{location} of the
+  distribution.
+\item the \textbf{standard deviation} $\sigma$ quantifies the
+  \textbf{dispersion} of the distribution.
+\end{enumerate}
+
+The interval from $\mu-\sigma$ to $\mu+\sigma$ covers 68.27\% of the
+area under the PDF, and the interval from $\mu-2\sigma$ to
+$\mu+2\sigma$ covers 95.45\%. Conversely 95\% of the area under the
+normal PDF is contained within an interval of $\mu\pm{1.96}\sigma$.
+
+\noindent\includegraphics[width=\textwidth]{../figures/2sigma.pdf}
+\begingroup \captionof{figure}{a) pdf and b) cumulative distribution
+  fuction (cdf, i.e., the integral of the pdf) of the normal
+  distribution.  The $\mu\pm\sigma$ and $\mu\pm{2}\sigma$ intervals
+  cover $\sim$68\% and $\sim$95\% of the distribution,
+  respectively.\\}
+\label{fig:2sigma}
+\endgroup
+
+It can be mathematically proven that the \emph{sum} of $n$ randomly
+selected values converges to a Gaussian distribution, provided that
+$n$ is large enough. This convergence is guaranteed \textit{regardless
+  of the distribution of the original data}.  This mathematical law is
+called the \textbf{Central Limit Theorem}. Physically processes such
+as thermal diffusion are characterised by white noise and Brownian
+walks which are, in effect, additive processes.  So it makes sense
+that these give rise to Gaussian distributions. In fact, these
+additive processes are so common that the Gaussian distribution is
+also known as the normal distibution, implying that all other
+distributions are `abnormal'.\\
 
 $\mu$ and $\sigma$ are \emph{unknown} but can be \emph{estimated} from
 the data. This can be done using the \textbf{method of maximum
@@ -61,6 +84,7 @@ setting it to zero:
     & \Rightarrow n\mu - \sum\limits_{i=1}^{n} x_i = 0 \\
     & \Rightarrow \bar{x} = \frac{1}{n}\sum\limits_{i=1}^{n}x_i
   \end{split}
+  \label{eq:arithmeticmean}
 \end{equation}
 
 \noindent which is the same as Equation~\ref{eq:mean}. Using the same
@@ -75,8 +99,8 @@ strategy to estimate $\sigma$:
   \label{eq:stdevgivenmu}
 \end{equation}
 
-\noindent which is the formula for the standard deviation that we saw
-in Section~\ref{sec:summarystatistics}:
+\noindent which is nearly identical to the formula for the standard
+deviation that we saw in Section~\ref{sec:summarystatistics}:
 \begin{equation}
   s[x] = \sqrt{\frac{1}{n-1}\sum\limits_{i=1}^{n}(x_i-\bar{x})^2}
   \label{eq:stdev}
@@ -153,7 +177,8 @@ Thus we can estimate the \textbf{covariance matrix}
       s[x]^2 & s[x,y]\\
       s[x,y] & s[y]^2
     \end{array}
-\right]
+    \right]
+\end{equation}
 
 Finally, we can define the \textbf{correlation coefficient} as:
 \begin{equation}
@@ -165,6 +190,339 @@ Finally, we can define the \textbf{correlation coefficient} as:
 \end{equation}
   
 \end{equation}
+
+\section{Confidence intervals}
+\label{sec:CI}
+
+Figure~\ref{fig:2sigma} showed that approximately 95\% of the normal
+distribution falls within two standard deviations of the mean. Thus,
+if we know that $x$ was drawn from a normal distribution with standard
+deviation $\sigma$ and an unknown mean $\mu$, then 95\% of all $x$-values
+are expected to fall in the interval
+\[
+\mu - 2\sigma \leq x \leq \mu + 2\sigma
+\]
+
+Subtracting $x$ and $\mu$ from all terms:
+\[
+-x - 2\sigma \leq -\mu \leq -x + 2\sigma
+\]
+
+Multiplying with $-1$:
+\[
+x + 2\sigma \geq \mu \geq x - 2\sigma
+\]
+
+\noindent which gives rise to the following 95\% confidence interval
+for $\mu$:
+\[
+\mu \in \{ x \pm 2\sigma \}
+\]
+
+\noindent which gives rise to the popular `2-sigma' confidence
+interval.  Chapter~\ref{ch:error-propagation} showed that the standard
+error of the mean is given by
+\[
+s[\bar{x}] = s[x]/\sqrt{n}
+\]
+
+One might be tempted to assume that $\bar{x} \pm 2 s[\bar{x}]$
+constitutes a 95\% confidence interval for $\mu$. However, this would
+be incorrect because $\bar{x}$ does \emph{not} follow a normal
+distribution. To construct a 95\% confidence for $\mu$ based on
+$\bar{x}$, we first define the `t-statistic' as follows:
+\begin{equation}
+  \mathbf{t} = \frac{\bar{x}-\mu}{s[\bar{x}]}
+  \label{eq:tstat}
+\end{equation}
+
+\noindent where $\mathbf{t}$ is written in bold to avoid confusion
+with the geological age $t$ used elsewhere in these
+notes. $\mathbf{t}$ follows a `t-distribution with $n-1$ degrees of
+freedom'. By definition, the 95\% confidence interval is the
+collection of all those values of $\mu$ for which
+\[
+t_{df,\alpha/2} \leq \mathbf{t} \leq t_{df,1-\alpha/2}
+\]
+
+\noindent where $t_{df,\alpha/2}$ and $t_{df,1-\alpha/2}$ are the
+$\alpha/2$ and $(1-\alpha/2)$ quantiles of a t-distribution with $df$
+degrees of freedom, respectively.  Hence:
+\[
+t_{df,\alpha/2} \leq \frac{\bar{x} - \mu}{s[\bar{x}]} \leq t_{df,1-\alpha/2}
+\]
+
+\noindent Rearranging:
+\[
+\bar{x} - t_{df,\alpha/2}s[\bar{x}]} \geq \mu \geq
+\bar{x} - t_{df,1-\alpha/2}s[\bar{x}]
+\]
+
+\noindent Because the t-distribution is symmetric around zero, we can also write:
+\[
+t_{df,1-\alpha/2} = -t_{df,\alpha/2}
+\]
+
+\noindent Hence
+\[
+\bar{x} + t_{df,\alpha/2}s[\bar{x}] \leq \mu \leq \bar{x} - t_{df,\alpha/2}s[\bar{x}]
+\]
+
+\noindent or
+\begin{equation}
+  \mu \in \left\{\bar{x} \pm t_{df,\alpha/2}s[\bar{x}]\right\}
+  \label{eq:tci}
+\end{equation}
+
+For large samples (and, hence, degrees of freedom), the t-statistic is
+approximately equal to 2. But for small samples, it is greater than 2
+and the 95\% confidence interval for $\mu$ is wider as a consequence.
+
+\noindent\begin{minipage}[t][][b]{.6\textwidth}
+  \includegraphics[width=\textwidth]{../figures/tdof.pdf}\\
+\end{minipage}
+\begin{minipage}[t][][t]{.4\textwidth}
+  \captionof{figure}{a) pdfs and b) cdfs of the t-distribution for
+    three different degrees of freedom ($df$). For small sample sizes
+    (low $df$), the t-distribution has long tails towards low and high
+    values. With increasing sample size, the tails become shorter and
+    the t-distribution sharper. When $df>30$, the t-distribution is
+    indistinguishable from a standard normal distribution with $\mu=0$
+    and $\sigma=1$.}
+  \label{fig:tdof}
+\end{minipage}
+
+\section{The mean square of weighted deviates (MSWD)}
+\label{sec:mswd}
+
+Let $t = \{t_1, \ldots, t_n\}$ be a set of $n$ age estimates
+determined on different aliquots of the same sample with a true age
+$\mu[t]$, and let $\sigma[t] = \sigma[t_1] = \ldots = \sigma[t_n]$ be
+their normally distributed analytical uncertainty. Then we can
+estimate $\mu[t]$ and $\sigma[t]$ with
+Equations~\ref{eq:arithmeticmean} and \ref{eq:stdev}, respectively.
+However, if each of the $n$ age estimates has its own analytical
+uncertainty ($\sigma[t_1] \neq \ldots \neq, \sigma[t_n]$), then it is
+important to account for this \textit{heteroscedasticity}. Consider,
+for example, the following dataset of four samples:
+
+\begin{center}
+\begin{tabular}{c|ccccc}
+  i & 1 & 2 & 3 & 4 \\
+t_i & 1005 & 1000 & 995 & 1125 \\
+s[t_i] & 10 & 10 & 10 & 100
+\end{tabular}
+\captionof{table}{Heteroscedastic dataset of four age estimates (in Ma).}
+\label{tab:wtdmean}
+\end{center}
+
+Then the arithmetic mean is 1031~Ma, which plots outside the 95\%
+confidence intervals of all three of the four aliquots. The
+\textbf{error weighted mean} addresses this issue:
+\begin{equation}
+  \bar{t}_w = \frac{\sum_{i=1}^n (t_i/s[t_i]^2) }{\sum_{i=1}^n (1/s[t_i]^2) }
+  \label{eq:wtdmean}
+\end{equation}
+
+Applying Equation~\ref{eq:wtdmean} to the example dataset attaches a
+smaller weight to the imprecise fourth measurement, yielding a
+$\bar{t}_w$ value of 1000.4~Ma:
+
+\noindent\begin{minipage}[t]{.5\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/wtdmean.pdf}
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+  \captionof{figure}{ The data of Table~\ref{tab:wtdmean} with 95\%
+    confidence intervals shown as error bars, the weighted mean as a
+    dashed horizontal line and the error weighted mean as a solid
+    line.}
+  \label{fig:wtdmean}
+\end{minipage}
+
+The extent to which the observed scatter in the data around the
+weighted mean can be explained by the analytical uncertainties can be
+assessed using a chi-square test.  To this end, we define the
+chi-square statistic as:
+\begin{equation}
+  \chi^2_{stat} = \sum\limits_{i=1}^{n}\frac{(t_i-\bar{t}_w)^2}{s[t_i]^2}
+  \label{eq:chi2wtdmean}
+\end{equation}
+
+For the data of Table~\ref{tab:wtdmean}:
+\[
+\chi^2_{stat} = \frac{(1005-1000.4)^2}{10^2}
++ \frac{(1000-1000.4)^2}{10^2}
++ \frac{(995-1000.4)^2}{10^2} = 6.17
+\]
+  
+We can compare this value with a chi-square distribution with $df = n
+- 1$ degrees of freedom. In the case of the example dataset, $n=4$ and
+$df=3$. The \textbf{p-value} is defined as the probability of
+observing a value greater than $\chi_{stat}^2$ under this
+distribution:
+
+\noindent\begin{minipage}[t]{.7\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/chi2wtdmean.pdf}
+\end{minipage}
+\begin{minipage}[t]{.3\textwidth}
+  \captionof{figure}{Chi-square distribution with 3 degrees of
+    freedom.  The p-value for an outcome of $\chi_{stat}^2=6.17$ is
+    the integral of the black area.}
+  \label{fig:chi2}
+\end{minipage}
+
+A cutoff of $\alpha=0.05$ is often used to assess whether the observed
+scatter of the data around the weighted mean can be accounted for by
+the analytical uncertainty alone.  For the example dataset, the
+p-value is 0.10, which is greater than this \textbf{significance
+  level}. Therefore, we have no reason to suspect that there are any
+other sources of dispersion in the data besides analytical
+uncertainty.\\
+
+An alternative way to assess the data scatter is by dividing the
+chi-square statistic $\chi^2_{stat}$ by the number of degrees of
+freedom $df$.  The resulting numerical value is called the `Mean
+Square of the Weighted Deviates' \citep[MSWD,][]{mcintyre1966} by
+geochronologists, but is known as the `reduced chi-square statistic'
+elsewhere.
+\begin{equation}
+  MSWD = \sum\limits_{i=1}^{n}\frac{(t_i-\bar{t}_w)^2}{(n-1) s[t_i]^2}
+  \label{eq:mswd}
+\end{equation}
+
+For sufficiently large samples and, hence, degrees of
+freedom, the distribution of the MSWD statistic converges to a normal
+distribution with a mean of 1. However for small samples there is a
+comparatively greater probability of obtaining an MSWD value that is
+greater or smaller than 1:
+
+\noindent\begin{minipage}[t]{.7\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/mswd.pdf}
+\end{minipage}
+\begin{minipage}[t]{.3\textwidth}
+  \captionof{figure}{Expected distribution of the MSWD for different
+    degrees of freedom. With increasing sample size, the distribution
+    of the MSWD converges to a normal distribution with mean 1.}
+  \label{fig:mswd}
+\end{minipage}
+
+The MSWD is a very useful device to assess the degree to which the
+observed scatter of the data around the best fit can be explained by
+the analytical uncertainties. Three scenarios are possible:
+
+\begin{enumerate}
+  \item If the analytical uncertainties alone explain the total
+    scatter around the true mean, then the MSWD is expected to take on
+    a value of $\approx{1}$.
+\item Data sets that exhibit MSWD values close to zero are said to be
+  ``underdispersed'' with respect to the analytical
+  uncertainties. This indicates some problem with the error
+  propagation, which is often due to undetected systematic effects.
+\item Finally, MSWD values $>1$ can often be attributed to some form
+  of geological dispersion. This overdispersion carries geological
+  significance.
+\end{enumerate}
+
+\noindent\begin{minipage}[t]{.4\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/wtdmeanMSWD.pdf}
+\end{minipage}
+\begin{minipage}[t]{.02\textwidth}
+~
+\end{minipage}
+\begin{minipage}[t]{.58\textwidth}
+  \captionof{figure}{Three different synthetic data
+    sets shown as weighted mean plots. The analytical uncertainties
+    are shown as 95\% error bars. Each of the data sets consists of 10
+    aliquots that are affected by a combination of analytical and
+    geological dispersion. The relative importance of these two
+    sources of scatter can be assessed using the mean square of
+    weighted deviates (MSWD) and the p-value of the chi-square
+    test. The case where MSWD$\approx{1}$ is the easiest to interpret:
+    it means that the scatter of the data around the best fit line can
+    be completely explained by the analytical uncertainty. The case
+    where MSWD$<{1}$ may seem like a good outcome but it is in fact a
+    bad one because it indicates that there may be a problem with the
+    error propagation. A high p-value or low MSWD may happen once but
+    red flags should go up if all samples in a study show this type of
+    behaviour. Finally the case where MSWD$>{1}$ is not good or bad
+    but `interesting'. This requires further investigation as
+    discussed in Section~\ref{sec:overdispersion}.  }
+  \label{fig:wtdmeanMSWD}
+\end{minipage}
+
+\section{Dealing with overdispersion}
+\label{sec:overdispersion}
+
+\texttt{IsoplotR} offers three strategies (`models') to deal with
+overdispersed datasets:
+
+\begin{enumerate}
+\item\textbf{Model-1: inflate the analytical uncertainties until MSWD=1}
+
+  A `model-1' average assumes that the overdispersion of the data is due
+  to an underestimation of the analytical uncertainties by a common
+  factor $f$. To `fix' the overdispersion, the model-1 fit simply
+  multiplies the uncertainties with this number and plugs the resulting
+  value into Equation~\ref{eq:mswd}:
+  \[
+  \sum\limits_{i=1}^{n}\frac{(t_i-\bar{t}_w)^2}{(n-1) (f~s[t_i])^2} = 1
+  \Rightarrow f = \sqrt{MSWD}
+  \]
+
+  Thus, we can account for any overdispersion by replacing
+  Equation~\ref{eq:tci} with:
+  \begin{equation}
+    \mu \in \left\{\bar{x} \pm t_{df,\alpha/2} s[\bar{x}] \sqrt{MSWD} \right\}
+    \label{eq:tci}
+  \end{equation}
+
+\item\textbf{Model-2: ignore the analytical uncertainties}
+  
+  Although the $\sqrt{MSWD}$ trick is attractive from a mathematical
+  point of view, the physical meaning of the overdispersion factor are
+  not always clear. It effectively means that the reported analytical
+  uncertainties are not reliable. But if this is the case, then one
+  might wonder why the degree of unreliability should be the same for
+  all aliquots. An alternative way to deal with unreliable uncertainty
+  estimates is to ignore them altogether and use the ordinary
+  arithmetic mean as a fallback solution.
+  
+\item\textbf{Model-3: quantify the overdispersion}
+
+  The most sophisticated, and arguable most realistic method to deal
+  with overdispersed dataset is to attribute them to geological
+  effects. A `model-3' weighted mean assumes that the data were drawn
+  from a normal distribution with two sources of variance:
+  \begin{equation}
+    f(x|\mu,\sigma) = \frac{1}{\sqrt{2\pi\left(\sigma^2+\omega^2\right)}}
+    \exp\!\left[-\frac{(x-\mu)^2}{2\left(\sigma^2 + \omega^2 \right)}\right]
+    \label{eq:wtdmean-model-3}
+  \end{equation}
+
+\noindent where $\omega$ is the
+\textbf{overdispersion}. Equation~\ref{eq:wtdmean-model-3} can be
+solved for $\mu$ and $\omega$ by the method of maximum likelihood,
+yielding two estimates $\hat{\mu}$ and $\hat{\omega}$ and their
+approximate covariance matrix.\\
+
+The overdispersion $\omega$ has physical meaning and may be as useful
+as the mean age itself. Consider, for example, a batholith whose
+emplacement age is determined by TIMS U--Pb geochronology of igneous
+zircon. The analytical precision of TIMS measurements is on the order
+of a few \textperthousand. So if the batholith was intruded at 20~Ma,
+then the zircon ages can be determined to within 20ka. Large
+intrusions often take much longer than 20kyr to crystallise. Therefore
+it is unlikely that all the zircons have exactly the same age.  The
+resulting geological dispersion will cause high MSWD values.  The
+$\omega$ parameter of a model-3 weighted mean would quantify this
+dispersion and thereby estimate the residence time of zircon in the
+magma chamber.
+  
+\end{enumerate}
 
 \section{Error correlations}
 \label{sec:errorcorrelations}
@@ -252,10 +610,12 @@ ellipses. The same phenomenon manifests itself in all isotopic ratio
 data to a lesser or greater degree:
 
 \noindent\includegraphics[width=\textwidth]{../figures/errorcorrelation_edited.pdf}
+\begingroup
 \captionof{figure}{ Examples of correlated uncertainties shown as
   confidence ellipses in a) Re--Os and b) K--Ca isochron and c)
   Wetherill U--Pb concordia space.\\}
 \label{fig:errorcorrelation}
+\endgroup
 
 For some geochronometers, the error correlations can be reduced by
 recasting the isotopes into two new ratios $z/y$ vs. $x/y$. If $y$ is
@@ -281,10 +641,12 @@ The same change of variables can be applied to other geochronometers
 as well:\\
 
 \noindent\includegraphics[width=\textwidth]{../figures/inverrorcorrelation_edited.pdf}
+\begingroup
 \captionof{figure}{ Recasting the data of
   Figure~\ref{fig:errorcorrelation} into an inverse ratio form reduces
   the error correlations for the Re--Os, K--Ca and U--Pb data.\\}
 \label{fig:inverrorcorrelation}
+\endgroup
 
 Given a data table of conventional ratios ($X=x/z$ and $Y=y/z$), it is
 possible to calculate the inverse ratios ($X'=x/y$ and $Y'=z/y$),
@@ -472,13 +834,11 @@ $\boldsymbol{a} = 10$ and $\boldsymbol{b} = 1$
 \label{fig:regression}
 \end{center}
 
-\section{The mean square of weighted deviates (MSWD)}
-\label{sec:mswd}
-
 The extent to which the observed scatter in the data around the best
 fit isochron line can be explained by the analytical uncertainties can
-be assessed using a chi-square test.  To this end, we define the
-chi-square statistic as:
+be assessed using a chi-square test, in nearly exactly the same manner
+as described for the weighted mean in Section~\ref{sec:mswd}. In the
+case of linear regression, the chi-square statistic is defined as:
 \begin{equation}
   \chi_{stat}^2 = \sum\limits_{i=1}^{n} \left[X_i - \hat{X}_i\right]^T
   \Sigma_i^{-1} \left[X_i - \hat{X}_i\right]
@@ -487,147 +847,37 @@ chi-square statistic as:
 
 \noindent in which we recognise the second term of
 Equation~\ref{eq:Ly}, which is the matrix formulation of the sum of
-squares. For example, consider the dataset shown in
-Figure~\ref{fig:regression}.b:
-
-\begin{center}
-\begin{tabular}{cccccccc}
-  $i$ & $x$ & $s[x]$ & $y$ & $s[y]$ &
-  $s[\hat{x}_i,\hat{y}_i]$ & $\hat{x}$ & $\hat{y}$ \\
-  \hline
-  1 & 10 & 1 & 20 & 1 &  0.9 & 10.13 & 19.96 \\
-  2 & 20 & 1 & 30 & 1 &  0.9 & 19.75 & 30.09 \\
-  3 & 28 & 1 & 42 & 1 & -0.9 & 29.58 & 40.43
-\end{tabular}
-\end{center}
-
-\noindent where the $\hat{x}$ and $\hat{y}$ values were estimated
-using the \citet{york1969} algorithm. Then
+squares. We can compare this value with a chi-square distribution with
+$df = (k-1) n - k$ degrees of freedom, where $k$ is the dimensionality
+of the linear fit. The MSWD is again defined as
 \[
-\begin{split}
-\chi_{stat}^2 = &
-\left[
-  \begin{array}{cc}
-    (10 - 10.13) & (20 - 19.96)\\
-  \end{array}
-  \right]
-\left[
-  \begin{array}{cc}
-    1^2 & 0.9^2 \\
-    0.9^2 & 1^2
-  \end{array}
-  \right]^{-1}
-\left[\begin{array}{c}
-    (10 - 10.13)\\
-    (20 - 19.96)
-  \end{array}
-  \right] \\
-+ & \left[
-  \begin{array}{cc}
-    (20 - 19.75) & (30 - 30.09)\\
-  \end{array}
-  \right]
-\left[
-  \begin{array}{cc}
-    1^2 & 0.9^2 \\
-    0.9^2 & 1^2
-  \end{array}
-  \right]^{-1}
-\left[\begin{array}{c}
-    (20 - 19.75) \\
-    (30 - 30.09)
-  \end{array}
-  \right] \\
-+ & \left[
-  \begin{array}{cc}
-    (28 - 29.58) & (42 - 40.43)\\ 
-  \end{array}
-  \right]
-\left[
-  \begin{array}{cc}
-    1^2 & 0.9^2 \\
-    0.9^2 & 1^2
-  \end{array}
-  \right]^{-1}
-\left[\begin{array}{c}
-    (28 - 29.58) \\
-    (42 - 40.43)
-  \end{array}
-  \right] = 3.32
-\end{split}
+MSWD = \chi^2_{stat}/df
 \]
 
-We can compare this value with a chi-square distribution with $df =
-(k-1) n - k$ degrees of freedom, where $k$ is the dimensionality of
-the linear fit. In the case of our example dataset, $k=2$ and $n=3$,
-so $df=1$. The \textbf{p-value} is defined as the probability of
-observing a value greater than $\chi_{stat}^2$ under this
-distribution:
-
-\noindent\begin{minipage}[t]{.7\textwidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\textwidth]{../figures/chi2.pdf}
-\end{minipage}
-\begin{minipage}[t]{.3\textwidth}
-  \captionof{figure}{Chi-square distribution with 1 degree of freedom.
-    The p-value for an outcome of $\chi_{stat}^2=3.32$ is the integral
-    of the black area.}
-  \label{fig:chi2}
-\end{minipage}
-
-If the p-value falls below a cutoff value of 0.05, say, then this
-indicates that the data are `overdispersed' with respect to the formal
-analytical uncertainties around the best-fit line. In contrast,
-p-values that are much greater than 0.95 are indicative of
-`underdispersed' data, possibly reflecting overestimated analytical
-uncertainties.\\
-
-An alternative way to assess the degree of over- or underdispersion is
-by dividing the chi-square statistic $\chi^2_{stat}$ by the number of
-degrees of freedom $df$. The resulting numerical value is called the
-`Mean Square of the Weighted Deviates' \citep[MSWD,][]{mcintyre1966}
-by geochronologists, but is known as the `reduced chi-square
-statistic' elsewhere. For sufficiently large samples and, hence,
-degrees of freedom, the distribution of the MSWD statistic converges
-to a normal distribution with a mean of 1. However for small samples
-there is a comparatively greater probability of obtaining an MSWD
-value that is greater or smaller than 1:
-
-\noindent\begin{minipage}[t]{.7\textwidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\textwidth]{../figures/mswd.pdf}
-\end{minipage}
-\begin{minipage}[t]{.3\textwidth}
-  \captionof{figure}{Expected distribution of the MSWD for different
-    degrees of freedom. With increasing sample size, the distribution
-    of the MSWD converges to a normal distribution with mean 1.}
-  \label{fig:mswd}
-\end{minipage}
-
-The MSWD is a very useful device to assess the degree to which the
-observed scatter of the data around the best fit can be explained by
-the analytical uncertainties. Three scenarios are possible:
+In complete analogy to the weighted mean of Section~\ref{sec:mswd},
+the MSWD can be used to assess whether the scatter of the data falls
+within the range expected from the analytical uncertainties, or
+whether the data if over- or underdispersed. An in the case of
+overdispersion, there are three ways (`models') to deal with this
+overdispersion:
 
 \begin{enumerate}
-  \item If the analytical uncertainties alone explain the total
-    scatter around the true mean, then the MSWD is expected to take on
-    a value of $\approx{1}$.
-\item Data sets that exhibit MSWD values close to zero are said to be
-  ``underdispersed'' with respect to the analytical
-  uncertainties. This indicates some problem with the error
-  propagation, which is often due to undetected systematic effects.
-\item Finally, MSWD values $>1$ can often be attributed to some form
-  of geological dispersion. This overdispersion carries geological
-  significance.
+\item model-1: inflate the analytical uncertainties by a factor
+  $\sqrt{MSWD}$;
+\item model-2: ignore the uncertainties and fall back to ordinary
+  least squares regression;
+\item model-3: attribute the overdispersion to a second source of
+  uncertainty in the intercept or slope of the line.
 \end{enumerate}
+
+CHANGE TO CONVENTIONAL ISOCHRON:
 
 \noindent\begin{minipage}[t]{.5\textwidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\textwidth]{../figures/ArArMSWD.pdf}
 \end{minipage}
 \begin{minipage}[t]{.5\textwidth}
-  \vspace{-20pt}
-  \captionof{figure}{Three different synthetic
+  \vspace{-20pt} \captionof{figure}{Three different synthetic
     \textsuperscript{40}Ar/\textsuperscript{39}Ar data sets shown as
     inverse isochron plots. The analytical uncertainties are shown as
     95\% error ellipses. The grey band represents a 95\% confidence
@@ -645,128 +895,10 @@ the analytical uncertainties. Three scenarios are possible:
     propagation. A high p-value or low MSWD may happen once but red
     flags should go up if all samples in a study show this type of
     behaviour. Finally the case where MSWD$>{1}$ is not good or bad
-    but `interesting'. This requires further investigation as
-    discussed in Section~\ref{sec:overdispersion}.  }
+    but `interesting'. The dashed line marks the `overdispersion'
+    estimated by a model-3 regression.}
   \label{fig:ArArMSWD}
 \end{minipage}
-
-\section{Dealing with overdispersion}
-\label{sec:overdispersion}
-
-\texttt{IsoplotR} offers three strategies (`models') to deal with
-overdispersed datasets:
-
-\begin{enumerate}
-\item inflate the analytical uncertainties until MSWD=1;
-\item ignore the analytical uncertainties;
-\item quantify the overdispersion.
-\end{enumerate}
-
-Let us consider the simple case of a 2-dimensional dataset
-$\{x_1,y_1\},\ldots,\{x_i,y_i\},\ldots,\{x_n,y_n\}$.  Data are
-overdispersed with respect to the analytical uncertainties if:
-
-\[
-\mathrm{MSWD} \equiv
-\sum\limits_{i=1}^n X_i~\Omega_i X_i^T / df > 1
-\]
-
-\noindent with
-
-\[
-X_i = \left[
-  \begin{array}{cc}
-    (x_i - \hat{x}_i) &  (y_i - \hat{y}_i)
-  \end{array}
-  \right],
-\]
-
-\noindent where $\hat{x}_i$ and $\hat{y}_i$ are the fitted values, and
-
-\[
-\Omega_i \equiv
-\left[
-  \begin{array}{cc}
-    s[x_i]^2 & cov(x_i,y_i) \\
-    cov(x_i,y_i) & s[y_i]^2
-  \end{array}
-\right]^{-1}
-\]
-
-\texttt{IsoplotR} provides three alternative strategies (`models') to
-deal with overdispersed data. A first way (`model-1') to account for
-overdispersion is to inflate all analytical uncertainties by a common
-\emph{factor} $f$, which is chosen so as to reduce the MSWD to unity:
-
-\[
-\sum\limits_{i=1}^{n} X_i~\Omega_{i,f} X_i^T / df = 1
-\]
-
-\noindent with
-
-\[
-\Omega_{i,f}
-\equiv
-\left[
-  \begin{array}{cc}
-    f^2s[x_i]^2 & f^2cov(x_i,y_i) \\
-    f^2cov(x_i,y_i) & f^2s[y_i]^2
-  \end{array}
-\right]^{-1}
-= \Omega_i/f^2
-\]
-
-\noindent from which it is easy to show that $f=\sqrt{\mathrm{MSWD}}$.\\
-
-A second option (`model-2') for dealing with overdispersion is to
-simply ignore the analytical uncertainties and perform an ordinary
-least squares regression. This option is offered for the sake of
-completeness but is inherently flawed, because (1) its results may
-differ depending on which ratio is chosen as the dependent variable;
-(2) it assumes that only the dependent variable is subject to scatter;
-which results in (3) unreliable error calculations
-\citep[][p. 648]{ludwig2003b}. \\
-
-Finally, a third option (`model-3') is to attribute the overdispersion
-to geological scatter in the ages or in the non-radiogenic isotope
-composition. The latter hypothesis can be formalised as follows:
-
-\[
-\sum\limits_{i=1}^{n} X_i~\Omega_{i,\omega} X_i^T / df = 1
-\]
-
-\noindent with
-
-\[
-\Omega_{i,\omega} \equiv
-\left[
-  \begin{array}{cc}
-    s[x_i]^2 & cov(x_i,y_i) \\
-    cov(x_i,y_i) &  s[y_i]^2 + \omega^2
-  \end{array}
-\right]^{-1}
-\]
-
-\noindent where $\omega$ is the overdispersion \emph{term}, which can
-be found iteratively. This term has geological significance and is
-reported separately by \texttt{IsoplotR}. The third strategy is
-arguably the most sensible one, because geological scatter is a very
-common phenomenon.  For example, not all aliquots in a multi-mineral
-Rb-Sr isochron may have formed with exactly the same initial
-\textsuperscript{87}Sr/\textsuperscript{86}Sr ratio
-\citep{mcintyre1966}. As the analytical precision of mass
-spectrometers has increased over the years, geochronologists' ability
-to detect even the smallest amount of geological dispersion has
-steadily grown as well. It is reasonable to assume that this trend
-will continue into the future, and that overdispersed datasets will
-become ever more common.\\
-
-It is important to note that the overdispersion of geochronological
-datasets contains meaningful geological information. For example, the
-dispersion of igneous zircon U-Pb dates bears information on the
-magmatic residence time of these crystals \citep{matzel2006,
-  rioux2012}.  Thus, the increasing prevalence of overdispersed
-datasets should be seen as a positive trend rather than a nuisance.
 
 \printbibliography[heading=subbibliography]
 
