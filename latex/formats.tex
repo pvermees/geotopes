@@ -191,107 +191,6 @@ Finally, we can define the \textbf{correlation coefficient} as:
   
 \end{equation}
 
-\section{Confidence intervals}
-\label{sec:CI}
-
-Figure~\ref{fig:2sigma} showed that approximately 95\% of the normal
-distribution falls within two standard deviations of the mean. Thus,
-if we know that $x$ was drawn from a normal distribution with standard
-deviation $\sigma$ and an unknown mean $\mu$, then 95\% of all $x$-values
-are expected to fall in the interval
-\[
-\mu - 2\sigma \leq x \leq \mu + 2\sigma
-\]
-
-Subtracting $x$ and $\mu$ from all terms:
-\[
--x - 2\sigma \leq -\mu \leq -x + 2\sigma
-\]
-
-Multiplying with $-1$:
-\[
-x + 2\sigma \geq \mu \geq x - 2\sigma
-\]
-
-\noindent which gives rise to the following 95\% confidence interval
-for $\mu$:
-\[
-\mu \in \{ x \pm 2\sigma \}
-\]
-
-\noindent which gives rise to the popular `2-sigma' confidence
-interval.  Chapter~\ref{ch:error-propagation} showed that the standard
-error of the mean is given by
-\[
-s[\bar{x}] = s[x]/\sqrt{n}
-\]
-
-One might be tempted to assume that $\bar{x} \pm 2 s[\bar{x}]$
-constitutes a 95\% confidence interval for $\mu$. However, this would
-be incorrect because $\bar{x}$ does \emph{not} follow a normal
-distribution. To construct a 95\% confidence for $\mu$ based on
-$\bar{x}$, we first define the `t-statistic' as follows:
-\begin{equation}
-  \mathbf{t} = \frac{\bar{x}-\mu}{s[\bar{x}]}
-  \label{eq:tstat}
-\end{equation}
-
-\noindent where $\mathbf{t}$ is written in bold to avoid confusion
-with the geological age $t$ used elsewhere in these
-notes. $\mathbf{t}$ follows a `t-distribution with $n-1$ degrees of
-freedom'. By definition, the 95\% confidence interval is the
-collection of all those values of $\mu$ for which
-\[
-t_{df,\alpha/2} \leq \mathbf{t} \leq t_{df,1-\alpha/2}
-\]
-
-\noindent where $t_{df,\alpha/2}$ and $t_{df,1-\alpha/2}$ are the
-$\alpha/2$ and $(1-\alpha/2)$ quantiles of a t-distribution with $df$
-degrees of freedom, respectively.  Hence:
-\[
-t_{df,\alpha/2} \leq \frac{\bar{x} - \mu}{s[\bar{x}]} \leq t_{df,1-\alpha/2}
-\]
-
-\noindent Rearranging:
-\[
-\bar{x} - t_{df,\alpha/2}s[\bar{x}]} \geq \mu \geq
-\bar{x} - t_{df,1-\alpha/2}s[\bar{x}]
-\]
-
-\noindent Because the t-distribution is symmetric around zero, we can also write:
-\[
-t_{df,1-\alpha/2} = -t_{df,\alpha/2}
-\]
-
-\noindent Hence
-\[
-\bar{x} + t_{df,\alpha/2}s[\bar{x}] \leq \mu \leq \bar{x} - t_{df,\alpha/2}s[\bar{x}]
-\]
-
-\noindent or
-\begin{equation}
-  \mu \in \left\{\bar{x} \pm t_{df,\alpha/2}s[\bar{x}]\right\}
-  \label{eq:tci}
-\end{equation}
-
-For large samples (and, hence, degrees of freedom), the t-statistic is
-approximately equal to 2. But for small samples, it is greater than 2
-and the 95\% confidence interval for $\mu$ is wider as a consequence.
-
-\noindent\begin{minipage}[t][][b]{.6\textwidth}
-  \includegraphics[width=\textwidth]{../figures/tdof.pdf}\\
-\end{minipage}
-\begin{minipage}[t][][t]{.4\textwidth}
-  \captionof{figure}{a) pdfs and b) cdfs of the t-distribution for
-    three different degrees of freedom ($df$). For small sample sizes
-    (low $df$), the t-distribution has long tails towards low and high
-    values. With increasing sample size, the tails become shorter and
-    the t-distribution sharper. When $df>30$, the t-distribution is
-    indistinguishable from a standard normal distribution with $\mu=0$
-    and $\sigma=1$.}
-  \label{fig:tdof}
-\end{minipage}
-
 \section{The mean square of weighted deviates (MSWD)}
 \label{sec:mswd}
 
@@ -388,7 +287,7 @@ Square of the Weighted Deviates' \citep[MSWD,][]{mcintyre1966} by
 geochronologists, but is known as the `reduced chi-square statistic'
 elsewhere.
 \begin{equation}
-  MSWD = \sum\limits_{i=1}^{n}\frac{(t_i-\bar{t}_w)^2}{(n-1) s[t_i]^2}
+  MSWD = \frac{\chi^2_{stat}}{n-1}
   \label{eq:mswd}
 \end{equation}
 
@@ -434,23 +333,24 @@ the analytical uncertainties. Three scenarios are possible:
 ~
 \end{minipage}
 \begin{minipage}[t]{.58\textwidth}
-  \captionof{figure}{Three different synthetic data
-    sets shown as weighted mean plots. The analytical uncertainties
-    are shown as 95\% error bars. Each of the data sets consists of 10
-    aliquots that are affected by a combination of analytical and
-    geological dispersion. The relative importance of these two
-    sources of scatter can be assessed using the mean square of
-    weighted deviates (MSWD) and the p-value of the chi-square
-    test. The case where MSWD$\approx{1}$ is the easiest to interpret:
-    it means that the scatter of the data around the best fit line can
-    be completely explained by the analytical uncertainty. The case
-    where MSWD$<{1}$ may seem like a good outcome but it is in fact a
-    bad one because it indicates that there may be a problem with the
-    error propagation. A high p-value or low MSWD may happen once but
-    red flags should go up if all samples in a study show this type of
+  \captionof{figure}{Three different synthetic data sets shown as
+    weighted mean plots. The analytical uncertainties are shown as
+    95\% error bars. Each of the data sets consists of 10 aliquots
+    that are affected by a combination of analytical and geological
+    dispersion. The relative importance of these two sources of
+    scatter can be assessed using the mean square of weighted deviates
+    (MSWD) and the p-value of the chi-square test. The case where
+    MSWD$\approx{1}$ is the easiest to interpret: it means that the
+    scatter of the data around the best fit line can be completely
+    explained by the analytical uncertainty. The case where MSWD$<{1}$
+    may seem like a good outcome but it is in fact a bad one because
+    it indicates that there may be a problem with the error
+    propagation. A high p-value or low MSWD may happen once but red
+    flags should go up if all samples in a study show this type of
     behaviour. Finally the case where MSWD$>{1}$ is not good or bad
-    but `interesting'. This requires further investigation as
-    discussed in Section~\ref{sec:overdispersion}.  }
+    but `interesting'. The dashed lines mark the overdispersion
+    ($\omega=10 +7/-4$~Ma) as discussed in
+    Section~\ref{sec:overdispersion}.}
   \label{fig:wtdmeanMSWD}
 \end{minipage}
 
@@ -483,13 +383,14 @@ overdispersed datasets:
 \item\textbf{Model-2: ignore the analytical uncertainties}
   
   Although the $\sqrt{MSWD}$ trick is attractive from a mathematical
-  point of view, the physical meaning of the overdispersion factor are
+  point of view, the physical meaning of the overdispersion factor is
   not always clear. It effectively means that the reported analytical
   uncertainties are not reliable. But if this is the case, then one
-  might wonder why the degree of unreliability should be the same for
-  all aliquots. An alternative way to deal with unreliable uncertainty
-  estimates is to ignore them altogether and use the ordinary
-  arithmetic mean as a fallback solution.
+  might wonder why the degree of unreliability should be the same
+  (i.e. a factor of $\sqrt{MSWD}$) for all aliquots. An alternative
+  way to deal with unreliable uncertainty estimates is to ignore them
+  altogether and use the ordinary arithmetic mean as a fallback
+  solution.
   
 \item\textbf{Model-3: quantify the overdispersion}
 
@@ -507,7 +408,7 @@ overdispersed datasets:
 \textbf{overdispersion}. Equation~\ref{eq:wtdmean-model-3} can be
 solved for $\mu$ and $\omega$ by the method of maximum likelihood,
 yielding two estimates $\hat{\mu}$ and $\hat{\omega}$ and their
-approximate covariance matrix.\\
+approximate covariance matrix.
 
 The overdispersion $\omega$ has physical meaning and may be as useful
 as the mean age itself. Consider, for example, a batholith whose
@@ -521,7 +422,7 @@ resulting geological dispersion will cause high MSWD values.  The
 $\omega$ parameter of a model-3 weighted mean would quantify this
 dispersion and thereby estimate the residence time of zircon in the
 magma chamber.
-  
+
 \end{enumerate}
 
 \section{Error correlations}
@@ -870,35 +771,135 @@ overdispersion:
   uncertainty in the intercept or slope of the line.
 \end{enumerate}
 
-CHANGE TO CONVENTIONAL ISOCHRON:
-
-\noindent\begin{minipage}[t]{.5\textwidth}
+\noindent\begin{minipage}[t]{.4\textwidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\textwidth]{../figures/ArArMSWD.pdf}
+\includegraphics[width=\textwidth]{../figures/isochronMSWD.pdf}
 \end{minipage}
-\begin{minipage}[t]{.5\textwidth}
-  \vspace{-20pt} \captionof{figure}{Three different synthetic
-    \textsuperscript{40}Ar/\textsuperscript{39}Ar data sets shown as
-    inverse isochron plots. The analytical uncertainties are shown as
-    95\% error ellipses. The grey band represents a 95\% confidence
-    envelope for the best fit line using the \citet{york1969}
-    algorithm. Each of the data sets consists of 10 aliquots that are
-    affected by a combination of analytical and geological
-    dispersion. The relative importance of these two sources of
-    scatter can be assessed using the mean square of weighted deviates
-    (MSWD) and the p-value of the chi-square test. The case where
-    MSWD$\approx{1}$ is the easiest to interpret: it means that the
-    scatter of the data around the best fit line can be completely
-    explained by the analytical uncertainty. The case where MSWD$<{1}$
-    may seem like a good outcome but it is in fact a bad one because
-    it indicates that there may be a problem with the error
-    propagation. A high p-value or low MSWD may happen once but red
-    flags should go up if all samples in a study show this type of
+\begin{minipage}[t]{.6\textwidth}
+  \vspace{-10pt} \captionof{figure}{Three different synthetic Rb--Sr
+    data sets shown as conventional isochron plots. The analytical
+    uncertainties are shown as 95\% error ellipses. The grey band
+    represents a 95\% confidence envelope for the best fit line using
+    the \citet{york1969} algorithm. Each of the data sets consists of
+    10 aliquots that are affected by a combination of analytical and
+    geological dispersion. The relative importance of these two
+    sources of scatter can be assessed using the mean square of
+    weighted deviates (MSWD) and the p-value of the chi-square
+    test. The case where MSWD$\approx{1}$ is the easiest to interpret:
+    it means that the scatter of the data around the best fit line can
+    be completely explained by the analytical uncertainty. The case
+    where MSWD$<{1}$ may seem like a good outcome but it is in fact a
+    bad one because it indicates that there may be a problem with the
+    error propagation. A high p-value or low MSWD may happen once but
+    red flags should go up if all samples in a study show this type of
     behaviour. Finally the case where MSWD$>{1}$ is not good or bad
     but `interesting'. The dashed line marks the `overdispersion'
     estimated by a model-3 regression.}
-  \label{fig:ArArMSWD}
+  \label{fig:isochronMSWD}
 \end{minipage}
+
+\section{Confidence intervals}
+\label{sec:CI}
+
+Figure~\ref{fig:2sigma} showed that approximately 95\% of the normal
+distribution falls within two standard deviations of the mean. Thus,
+if we know that $x$ was drawn from a normal distribution with standard
+deviation $\sigma$ and an unknown mean $\mu$, then 95\% of all $x$-values
+are expected to fall in the interval
+\[
+\mu - 2\sigma \leq x \leq \mu + 2\sigma
+\]
+
+Subtracting $x$ and $\mu$ from all terms:
+\[
+-x - 2\sigma \leq -\mu \leq -x + 2\sigma
+\]
+
+Multiplying with $-1$:
+\[
+x + 2\sigma \geq \mu \geq x - 2\sigma
+\]
+
+\noindent which gives rise to the following 95\% confidence interval
+for $\mu$:
+\[
+\mu \in \{ x \pm 2\sigma \}
+\]
+
+\noindent which gives rise to the popular `2-sigma' confidence
+interval.  Chapter~\ref{ch:error-propagation} showed that the standard
+error of the mean is given by
+\[
+s[\bar{x}] = s[x]/\sqrt{n}
+\]
+
+One might be tempted to assume that $\bar{x} \pm 2 s[\bar{x}]$
+constitutes a 95\% confidence interval for $\mu$. However, this would
+be incorrect because $\bar{x}$ does \emph{not} follow a normal
+distribution. To construct a 95\% confidence for $\mu$ based on
+$\bar{x}$, we first define the `t-statistic' as follows:
+\begin{equation}
+  \mathbf{t} = \frac{\bar{x}-\mu}{s[\bar{x}]}
+  \label{eq:tstat}
+\end{equation}
+
+\noindent where $\mathbf{t}$ is written in bold to avoid confusion
+with the geological age $t$ used elsewhere in these
+notes. $\mathbf{t}$ follows a `t-distribution with $n-1$ degrees of
+freedom'. By definition, the 95\% confidence interval is the
+collection of all those values of $\mu$ for which
+\[
+t_{df,\alpha/2} \leq \mathbf{t} \leq t_{df,1-\alpha/2}
+\]
+
+\noindent where $t_{df,\alpha/2}$ and $t_{df,1-\alpha/2}$ are the
+$\alpha/2$ and $(1-\alpha/2)$ quantiles of a t-distribution with $df$
+degrees of freedom, respectively.  Hence:
+\[
+t_{df,\alpha/2} \leq \frac{\bar{x} - \mu}{s[\bar{x}]} \leq t_{df,1-\alpha/2}
+\]
+
+\noindent Rearranging:
+\[
+\bar{x} - t_{df,\alpha/2}s[\bar{x}]} \geq \mu \geq
+\bar{x} - t_{df,1-\alpha/2}s[\bar{x}]
+\]
+
+\noindent Because the t-distribution is symmetric around zero, we can also write:
+\[
+t_{df,1-\alpha/2} = -t_{df,\alpha/2}
+\]
+
+\noindent Hence
+\[
+\bar{x} + t_{df,\alpha/2}s[\bar{x}] \leq \mu \leq \bar{x} - t_{df,\alpha/2}s[\bar{x}]
+\]
+
+\noindent or
+\begin{equation}
+  \mu \in \left\{\bar{x} \pm t_{df,\alpha/2}s[\bar{x}]\right\}
+  \label{eq:tci}
+\end{equation}
+
+For large samples (and, hence, degrees of freedom), the t-statistic is
+approximately equal to 2. But for small samples, it is greater than 2
+and the 95\% confidence interval for $\mu$ is wider as a consequence.
+
+\noindent\begin{minipage}[t][][b]{.6\textwidth}
+  \includegraphics[width=\textwidth]{../figures/tdof.pdf}\\
+\end{minipage}
+\begin{minipage}[t][][t]{.4\textwidth}
+  \captionof{figure}{a) pdfs and b) cdfs of the t-distribution for
+    three different degrees of freedom ($df$). For small sample sizes
+    (low $df$), the t-distribution has long tails towards low and high
+    values. With increasing sample size, the tails become shorter and
+    the t-distribution sharper. When $df>30$, the t-distribution is
+    indistinguishable from a standard normal distribution with $\mu=0$
+    and $\sigma=1$.}
+  \label{fig:tdof}
+\end{minipage}
+
+EXPLAIN THREE TYPES OF REPORTED ERRORS
 
 \printbibliography[heading=subbibliography]
 

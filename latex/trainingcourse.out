@@ -45,11 +45,11 @@
 \BOOKMARK [0][-]{chapter.12}{Introduction}{part.2}% 45
 \BOOKMARK [0][-]{chapter.13}{Some statistical considerations}{part.2}% 46
 \BOOKMARK [1][-]{section.13.1}{The normal distribution}{chapter.13}% 47
-\BOOKMARK [1][-]{section.13.2}{Confidence intervals}{chapter.13}% 48
-\BOOKMARK [1][-]{section.13.3}{The mean square of weighted deviates \(MSWD\)}{chapter.13}% 49
-\BOOKMARK [1][-]{section.13.4}{Dealing with overdispersion}{chapter.13}% 50
-\BOOKMARK [1][-]{section.13.5}{Error correlations}{chapter.13}% 51
-\BOOKMARK [1][-]{section.13.6}{Linear regression}{chapter.13}% 52
+\BOOKMARK [1][-]{section.13.2}{The mean square of weighted deviates \(MSWD\)}{chapter.13}% 48
+\BOOKMARK [1][-]{section.13.3}{Dealing with overdispersion}{chapter.13}% 49
+\BOOKMARK [1][-]{section.13.4}{Error correlations}{chapter.13}% 50
+\BOOKMARK [1][-]{section.13.5}{Linear regression}{chapter.13}% 51
+\BOOKMARK [1][-]{section.13.6}{Confidence intervals}{chapter.13}% 52
 \BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 53
 \BOOKMARK [0][-]{chapter.14}{Introduction to IsoplotR}{part.3}% 54
 \BOOKMARK [1][-]{section.14.1}{Software architecture}{chapter.14}% 55

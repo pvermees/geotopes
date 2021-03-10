@@ -142,3 +142,43 @@ for (i in 1:length(dof)){
     text(x[j]/df,y[j]*df,labels=paste0('df=',df),adj=c(xadj[i],yadj[i]))
 }
 dev.off()
+
+cairo(file='isochronMSWD3.pdf',height=6,width=2.5)
+pars(mfrow=c(3,1),mar=c(3,3,3,0.5))
+set.seed(36)
+tt <- 1000
+ns <- 10
+x <- runif(ns,min=0,max=0.3)
+SrRb <- IsoplotR:::get.RbSr.ratio(tt,st=0)[1]
+y <- 0.7 + x*SrRb
+sx <- 0.004
+sy <- 0.0001
+rxy <- 0.3
+sxy <- rxy*sx*sy
+E <- rbind(c(sx^2,sxy),c(sxy,sy^2))
+dxy <- MASS::mvrnorm(ns,mu=c(0,0),Sigma=E)
+X <- x + dxy[,1]
+Y <- y + dxy[,2]
+ydat <- cbind(X,sx,Y,sy,rxy)
+colnames(ydat) <- c('Rb87/Sr86', 'err[Rb87/Sr86]',
+                    'Sr87/Sr86', 'err[Sr87/Sr86]', 'rho')
+RbSr <- list(x=ydat,format=1)
+class(RbSr) <- c('RbSr','PD')
+IsoplotR::isochron(RbSr)
+set.seed(3)
+dxy <- MASS::mvrnorm(ns,mu=c(0,0),Sigma=E)
+X <- x + dxy[,1]/10
+Y <- y + dxy[,2]/10
+ydat <- cbind(X,sx,Y,sy,rxy)
+RbSr <- list(x=ydat,format=1)
+class(RbSr) <- c('RbSr','PD')
+IsoplotR::isochron(RbSr)
+set.seed(3)
+dxy <- MASS::mvrnorm(ns,mu=c(0,0),Sigma=E)
+X <- x + dxy[,1]*5
+Y <- y + dxy[,2]*5
+ydat <- cbind(X,sx,Y,sy,rxy)
+RbSr <- list(x=ydat,format=1)
+class(RbSr) <- c('RbSr','PD')
+IsoplotR::isochron(RbSr,model=3)
+dev.off()

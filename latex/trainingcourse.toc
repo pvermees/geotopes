@@ -94,15 +94,15 @@
 \defcounter {refsection}{2}\relax 
 \contentsline {section}{\numberline {13.1}The normal distribution}{50}{section.13.1}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.2}Confidence intervals}{52}{section.13.2}%
+\contentsline {section}{\numberline {13.2}The mean square of weighted deviates (MSWD)}{52}{section.13.2}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.3}The mean square of weighted deviates (MSWD)}{53}{section.13.3}%
+\contentsline {section}{\numberline {13.3}Dealing with overdispersion}{54}{section.13.3}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.4}Dealing with overdispersion}{55}{section.13.4}%
+\contentsline {section}{\numberline {13.4}Error correlations}{55}{section.13.4}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.5}Error correlations}{56}{section.13.5}%
+\contentsline {section}{\numberline {13.5}Linear regression}{57}{section.13.5}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.6}Linear regression}{58}{section.13.6}%
+\contentsline {section}{\numberline {13.6}Confidence intervals}{59}{section.13.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{62}{part.3}%
 \defcounter {refsection}{3}\relax 
