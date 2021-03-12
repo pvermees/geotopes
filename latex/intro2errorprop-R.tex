@@ -42,7 +42,7 @@ $^{207}$Pb/$^{235}$U-age). \label{loglin}
   information is provided in the output of the \texttt{polyfit}
   function:
 
-\begin{verbatim}
+\begin{console}
 help(polyfit)
 ...
 [P,S] = POLYFIT(X,Y,N) returns the polynomial
@@ -55,18 +55,18 @@ of the residuals (normr). If the data Y are
 random, an estimate of the covariance matrix 
 of P is (Rinv*Rinv')*normr^2/df, where Rinv 
 is the inverse of R.
-\end{verbatim}
+\end{console}
 
 Based on these instructions, I have written the following function to
 calculate the standard errors of the fitting parameters from the
 second output parameter of the \texttt{polyfit} function:
 
-\begin{verbatim}
+\begin{script}
 function se = S2se(S)
   covmat = (inv(S.R)*inv(S.R'))*S.normr^2/S.df;
   se = sqrt(diag(covmat));
 end
-\end{verbatim}
+\end{script}
 \fi
 
 \item Use these error estimates to propagate the analytical

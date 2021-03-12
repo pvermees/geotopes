@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass[11pt,openany]{book}
 
 \usepackage[top=3cm,bottom=3cm,left=3cm,right=2cm,twoside,a4paper]{geometry}
 %\usepackage[top=2cm,bottom=2cm,left=2cm,right=1.5cm,twoside,a5paper]{geometry}
@@ -7,6 +7,15 @@
 \setlist[enumerate]{leftmargin=1pc}
 \usepackage[style=authoryear,natbib=true,backend=bibtex]{biblatex}
 \addbibresource{/home/pvermees/Dropbox/biblio.bib}
+
+\usepackage{fancyvrb}
+\newenvironment{console}
+               {\VerbatimEnvironment\begin{Verbatim}[frame=single,framerule=0.4mm]}
+               {\end{Verbatim}}
+
+\DefineVerbatimEnvironment{script}
+                          {Verbatim}
+                          {frame=single,numbers=left,framerule=0.4mm}
 
 \newif\ifpdf
 \pdftrue

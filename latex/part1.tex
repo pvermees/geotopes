@@ -5,6 +5,15 @@
 \setlist[enumerate]{leftmargin=1pc}
 \usepackage[hidelinks,linktocpage=true]{hyperref}
 
+\usepackage{fancyvrb}
+\newenvironment{console}
+               {\VerbatimEnvironment\begin{Verbatim}[frame=single,framerule=0.4mm]}
+               {\end{Verbatim}}
+
+\DefineVerbatimEnvironment{script}
+                          {Verbatim}
+                          {frame=single,numbers=left,framerule=0.4mm}
+
 \newif\ifpdf
 \pdftrue
 

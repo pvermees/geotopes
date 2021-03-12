@@ -42,7 +42,7 @@
 \contentsline {chapter}{\numberline {12}Programming practicals}{68}{chapter.12}%
 \contentsline {section}{\numberline {12.1}Introduction to \texttt {R}}{68}{section.12.1}%
 \contentsline {section}{\numberline {12.2}Introduction to \texttt {Matlab}}{73}{section.12.2}%
-\contentsline {section}{\numberline {12.3}U-Th-Pb data reduction}{77}{section.12.3}%
-\contentsline {section}{\numberline {12.4}$^{40}$Ar/$^{39}$Ar data reduction}{78}{section.12.4}%
-\contentsline {section}{\numberline {12.5}Error propagation}{79}{section.12.5}%
+\contentsline {section}{\numberline {12.3}U-Th-Pb data reduction}{78}{section.12.3}%
+\contentsline {section}{\numberline {12.4}$^{40}$Ar/$^{39}$Ar data reduction}{79}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Error propagation}{80}{section.12.5}%
 \contentsline {section}{\numberline {12.6}Fission tracks}{81}{section.12.6}%

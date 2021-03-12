@@ -68,16 +68,17 @@ installation. In contrast, the GUI is written in \texttt{HTML} and
 interface package. It is provided in a second \texttt{R} package
 called \texttt{IsoplotRgui} that is available from CRAN as well:
 
-\begin{verbatim}
-install.packages('IsoplotRgui')
-\end{verbatim}
+\begin{console}
+> install.packages('IsoplotRgui')
+\end{console}
 
 Once installed, \texttt{IsoplotRgui} can be started from the
 \texttt{R} console as follows:
 
-\begin{verbatim}
-library(IsoplotRgui)
-\end{verbatim}
+\begin{console}
+> library(IsoplotRgui)
+> IsoplotR()
+\end{console}
 
 This opens the GUI in a new tab of the user's default internet
 browser.  The GUI has four components: a top bar with selection menus
@@ -233,17 +234,17 @@ Contextual help can be obtained by clicking any text string within the
 CLI offers all the functionality of the GUI, and more. A complete list
 of public functions can be viewed by typing
 
-\begin{verbatim}
-help(package='IsoplotR')
-\end{verbatim}
+\begin{console}
+> help(package='IsoplotR')
+\end{console}
 
 \noindent at the command prompt. Data are read from comma-separated
 variable (\texttt{.csv}) files using the \texttt{read.data()}
 function. For example:
 
-\begin{verbatim}
+\begin{script}
 UPb_dat <- read.data('file.csv',method='U-Pb',format=1,ierr=3)
-\end{verbatim}
+\end{script}
 
 \noindent where\\
 
@@ -282,11 +283,10 @@ with the correct decay constants and axis labels.\\
 A colour scale can be added to most plots using the options
 \texttt{levels} argument. For example:
 
-\begin{verbatim}
+\begin{script}[firstnumber=2]
 ns <- length(UPb_dat)
-concordia(UPb_dat,levels=runif(ns),
-          ellipse.fill=c("yellow","red")
-\end{verbatim}
+concordia(UPb_dat,levels=runif(ns),ellipse.fill=c("yellow","red")
+\end{script}
 
 \noindent assigns a vector of random numbers to some U--Pb data and
 uses these numbers to colour the error ellipses on a concordia diagram
@@ -294,19 +294,19 @@ from yellow to red. Omitting or hiding samples from calculations
 and/or plots is achieved by specifying the indices of the relevant
 aliquots to the functions of interest. For example:
 
-\begin{verbatim}
+\begin{script}[firstnumber=2]
 weightedmean(UPb_dat,omit=10)
-\end{verbatim}
+\end{script}
 
 \noindent omits the 10\textsuperscript{th} from the weighted mean
 calculation, whereas
 
-\begin{verbatim}
+\begin{script}[firstnumber=2]
 weightedmean(UPb_dat,hide=10)
-\end{verbatim}
+\end{script}
 
 \noindent removes the aliquot from the weighted mean diagram
-altogether.
+altogether.\\
 
 The GUI may be the easiest way to interact with \texttt{IsoplotR} and
 explore various data processing strategies with individual

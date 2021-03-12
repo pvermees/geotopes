@@ -8,7 +8,7 @@
   comment and is ignored. It is considered good practice to document
   your code with lots of comments, as will be done in this tutorial.
   
-\begin{verbatim}
+\begin{script}
 % Ending a line with a semi-colon 
 % suppresses output to the console:
 'be loud'
@@ -24,14 +24,14 @@ foo = 2;
 bar = 4;
 foo = foo*bar;
 foo
-\end{verbatim}
+\end{script}
 
 \item As the name suggest, \texttt{Matlab} (which stands for
   \texttt{MAT}rix \texttt{LAB}oratory) is capable of, and excels at,
   dealing with collections of multiple numbers arranged in vectors and
   matrices:
 
-\begin{verbatim}
+\begin{script}
 % Data can be entered as vectors:
 x = [0 2 4 6 8 10]
 % or using shorthand syntax:
@@ -60,43 +60,47 @@ a.*a
 
 % Transpose of a matrix:
 z'
-\end{verbatim}
+\end{script}
 
 \item In addition to Matlab's built-in operators and functions, you
   can also define your own:
   
-\begin{verbatim}
+\begin{script}
 % take the cube of the input argument:
 function out = cube(in)
   out = in^3;
 end
-\end{verbatim}
+\end{script}
 
 Copy the \texttt{cube} function into a text file named \texttt{cube.m}
 and save it in the current directory. You can then load the contents
 of the file by simply typing its name without the \texttt{.m}
 extension:
 
-\begin{verbatim}
-c3 = cube(3)
-\end{verbatim}
+\begin{console}
+> c3 = cube(3)
+\end{console}
 
 \item A useful feature of Matlab that is missing from most other
   programming languages is the ability to accommodate several output
   parameters:
 
-\begin{verbatim}
+\begin{script}
 function [m,s] = basicStats(dat)
   m = mean(dat); % mean
   s = std(dat);  % standard deviation
 end
+\end{script}
 
+Using the new function:
+
+\begin{script}
 % create a row vector of 10 random numbers
 randnum = rand(1,10);
 
 % use our new function
 [m,s] = basicStats(randnum)
-\end{verbatim}
+\end{script}
 
 An extensive library of documentation is built into \texttt{Matlab}.
 For example, to access further information about the \texttt{rand}
@@ -107,7 +111,7 @@ command prompt.
   has flow structures such as \texttt{if} statements and \texttt{for}
   loops:
 
-\begin{verbatim}
+\begin{script}
 % Conditional statement:
 function coinToss
   % 'rand()' produces numbers between 0 and 1
@@ -118,16 +122,19 @@ function coinToss
     disp('tail')
   end
 end
+\end{script}
 
-% Use this function in a for loop:
+Use this function in a for loop:
+
+\begin{script}
 for i=1:10,
   coinToss
 end
-\end{verbatim}
+\end{script}
 
 \item File and variable management:
 
-\begin{verbatim}
+\begin{script}
 % List all the variables in the current workspace:
 who
 whos
@@ -142,24 +149,26 @@ who
 pwd   % pass the working directory
 cd .. % move up one directory
 ls    % list all files in the current directory
-\end{verbatim}
+\end{script}
 
 Use the above commands to navigate to the directory containing the
-\texttt{RbSr.csv} file.
+\texttt{RbSr.csv} file. To view the contents of this file:
 
-\begin{verbatim}
-% To view the contents of this file:
-type('RbSr.csv')
+\begin{console}
+> type('RbSr.csv')
+\end{console}
 
-% Incidentally, the 'type' function can also 
-% be used to view the code of Matlab functions:
-type('mean')
-\end{verbatim}
+Incidentally, the \texttt{type} function can also be used to view the
+code of Matlab functions:
+
+\begin{console}
+> type('mean')
+\end{console}
 
 \item Let us now apply our knowledge of \texttt{Matlab} to a
   geochronological problem:
 
-\begin{verbatim}
+\begin{script}
 % Read the Rb-Sr dataset ignoring the header:
 RbSr = csvread('RbSr.csv',1,0);
 
@@ -170,14 +179,14 @@ Sr87Sr86 = RbSr(:,3);
 plot(Rb87Sr86,Sr87Sr86,'ok')
 xlabel('87Rb/86Sr')
 ylabel('87Sr/86Sr')
-\end{verbatim}
+\end{script}
 
 \item This should yield a linear array of Rb-Sr data. Let us now fit
   an isochron through these data. \texttt{Matlab} includes several
   functions to perform linear regression, including \texttt{regress}
   and \texttt{fitlm}. We will use the \texttt{polyfit} function:
 
-\begin{verbatim}
+\begin{script}
 % Fit a first order polynomial through the data:
 [fit,S] = polyfit(Rb87Sr86,Sr87Sr86,1);
 % (S will be used in a later practical)
@@ -196,6 +205,6 @@ y = fit(2) + fit(1)*x;
 hold on;
 plot(x,y,'-r')
 title(age)
-\end{verbatim}
+\end{script}
 
 \end{enumerate}

@@ -12,28 +12,28 @@ to interact with \texttt{R}. The most popular of these are
     that is typed after the \texttt{>} symbol will be evaluated
     immediately. Thus, we can use \texttt{R} as a calculator:
 
-\begin{verbatim}
+\begin{console}
 > 1 + 1
 > sqrt(2)
 > exp(log(10))
 > 31 %% 14
-\end{verbatim}
+\end{console}
 
 \item Alternatively, code can also be saved as text (using a built-in text
   editor) and saved as \texttt{mycode.R}, say. This code can then be
   copied and pasted at the command line prompt. Or it can be called from
   the command line using the \texttt{source()} function:
 
-\begin{verbatim}
+\begin{console}
 > source('mycode.R')
-\end{verbatim}
+\end{console}
 
 \item In the remainder of this tutorial, we will assume that your code is
   run from a text file unless explicitly stated otherwise. The
   \texttt{\#}~symbol marks the beginning of a comment.  \texttt{R}
   ignores anything that follows it:
 
-\begin{verbatim}
+\begin{script}
 # The arrow symbol is used to assign a value to a
 # variable. Note that the arrow can point both ways:
 foo <- 2
@@ -52,12 +52,12 @@ myvec <- 0:5
 # Turn myvec into a 2x3 matrix:
 mymat <- matrix(myvec,nrow=2)
 
-# Accessing one or more elements from a vector or matrix:
+# Accessing one or more items from a vector or matrix:
 x <- myvec[3]
 y <- myvec[1:3]
 z <- mymat[1,2:3]
 
-# Change the third value in the second row of mymat to 10:
+# Change the 2nd value in mymat's 3rd column to 10:
 mymat[2,3] <- 10
 
 # Change the entire second column of mymat to -1:
@@ -70,13 +70,13 @@ flipped <- t(mymat)
 # vs. matrix multiplication (%*%):
 rectangle <- mymat * mymat
 square <- mymat %*% flipped
-\end{verbatim}
+\end{script}
 
 \item Lists are used to store more complex data objects:
 
-\begin{verbatim}
+\begin{script}
 mylist <- list(v=myvec,m=mymat,nine=9)
-\end{verbatim}
+\end{script}
 
 The three components of \texttt{mylist} can be accessed in a number of
 equivalent ways. For example, the first item (\texttt{v}) of
@@ -85,11 +85,11 @@ equivalent ways. For example, the first item (\texttt{v}) of
 
 Data frames are list-like tables:
 
-\begin{verbatim}
+\begin{script}
 myframe <- data.frame(period=c('Cz','Mz','Pz','PC'),
                       SrSr=c(0.708,0.707,0.709,0.708),
                       fossils=c(TRUE,TRUE,TRUE,FALSE))
-\end{verbatim}
+\end{script}
 
 You can access the items in the data frame \texttt{myframe} either
 like a list (e.g. \verb|myframe$period|) or like a matrix
@@ -98,15 +98,15 @@ like a list (e.g. \verb|myframe$period|) or like a matrix
 \item If you want to learn more about a function, type \texttt{help()} or
 \texttt{?} at the command line prompt:
 
-\begin{verbatim}
+\begin{console}
 > help(c)
 > ?matrix
-\end{verbatim}
+\end{console}
 
 \item In addition to \texttt{R}'s built-in functions, you can also define
   your own:
 
-\begin{verbatim}
+\begin{script}
 cube <- function(n){
     return(n^3)
 }
@@ -127,26 +127,26 @@ toss <- function(){
 for (i in 1:10) {
     toss()
 }
-\end{verbatim}
+\end{script}
 
 \item The purpose of the practical exercises in
   Sections~\ref{sec:U-Pb-R}-\ref{sec:FT-R} is to process datasets
   contained in external data files. For this you will need to be able
   to navigate through your file system and load the necessary files:
 
-\begin{verbatim}
+\begin{console}
 > ls()          # list all the variables
 > rm(list=ls()) # clear the current workspace
 > getwd()       # get the current working directory
 > setwd("path_to_a_valid_directory")
-\end{verbatim}
+\end{console}
 
 \item Use the above commands to navigate to the directory containing the
 file named \texttt{RbSr.csv}. Then read this file into memory:
 
-\begin{verbatim}
+\begin{script}
 RbSr <- read.csv("RbSr.csv",header=TRUE)
-\end{verbatim}
+\end{script}
 
 Type \texttt{names(RbSr)} or \texttt{colnames(RbSr)} at the command
 prompt to list the variable names (column headers) contained in this
@@ -155,13 +155,13 @@ dataset.
 \item Let us now perform an isochron regression
   (Section~\ref{sec:Rb-Sr}) through these Rb-Sr data: \label{itm:lm}
 
-\begin{verbatim}
+\begin{script}[firstnumber=2]
 # Plot Sr87Sr86 against Rb87Sr86:
 plot(RbSr[,'Rb87Sr86'],RbSr[,'Sr87Sr86'],type="p")
 
 # fit a linear model to the data
 fit <- lm(Sr87Sr86 ~ Rb87Sr86, data = RbSr)
-\end{verbatim}
+\end{script}
 
 \item \texttt{fit} is a `list' object. Type \texttt{str(fit)} at the
   command prompt to see its structure. One of its items is
@@ -170,7 +170,7 @@ fit <- lm(Sr87Sr86 ~ Rb87Sr86, data = RbSr)
   using the \texttt{coef()} function. The following code uses this
   function to calculate the isochron age:
 
-\begin{verbatim}
+\begin{script}[firstnumber=7]
 # define the 87Rb decay constant (in Ma-1):
 lam87 <- 1.3972e-5 # according to Villa et al. (2015)
 # compute the age from the slope:
@@ -180,7 +180,7 @@ tRbSr <- log(1 + coef(fit)[2])/lam87
 abline(fit)
 # label with the isochron age: 
 title(tRbSr)
-\end{verbatim}
+\end{script}
 
 \item\label{it:installingIsoplotR} One of the most powerful features
   of \texttt{R} is the availability of thousands of `packages'
@@ -188,9 +188,9 @@ title(tRbSr)
   example, let us download and install the \texttt{IsoplotR} package
   from the `Comprehensive R Archive Network' (CRAN):
 
-\begin{verbatim}
+\begin{console}
 > install.packages('IsoplotR')
-\end{verbatim}
+\end{console}
 
 \item We can use \texttt{IsoplotR} to redo the isochron regression
   exercise using a more rigorous weighted regression algorithm that
@@ -198,7 +198,7 @@ title(tRbSr)
   \textsuperscript{87}Sr/\textsuperscript{86}Sr- and
   \textsuperscript{87}Rb/\textsuperscript{86}Sr-ratios:
 
-\begin{verbatim}
+\begin{script}
 # load the functionality of the IsoplotR package:
 library('IsoplotR')
 
@@ -207,7 +207,7 @@ RbSr2 <- read.data('RbSr.csv',method='Rb-Sr',format=1)
 
 # compute and plot the isochron diagram:
 isochron(RbSr2)
-\end{verbatim}
+\end{script}
 
 Even though \texttt{IsoplotR} is powerful, convenient, and popular, we
 will not use it in the remainder of these notes. Instead, we will
