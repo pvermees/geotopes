@@ -17,77 +17,6 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{ludwig2003b}{article}{}
-    \name{author}{1}{}{%
-      {{hash=LKR}{%
-         family={Ludwig},
-         familyi={L\bibinitperiod},
-         given={Kenneth\bibnamedelima R},
-         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Mineral Soc America}%
-    }
-    \strng{namehash}{LKR1}
-    \strng{fullhash}{LKR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2003}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{number}{1}
-    \field{pages}{631\bibrangedash 656}
-    \field{title}{{Mathematical--statistical treatment of data and errors for
-  $^{230}$Th/U geochronology}}
-    \field{volume}{52}
-    \field{journaltitle}{Reviews in Mineralogy and Geochemistry}
-    \field{year}{2003}
-  \endentry
-
-  \entry{matzel2006}{article}{}
-    \name{author}{3}{}{%
-      {{hash=MJE}{%
-         family={Matzel},
-         familyi={M\bibinitperiod},
-         given={Jennifer\bibnamedelima EP},
-         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-      {{hash=BSA}{%
-         family={Bowring},
-         familyi={B\bibinitperiod},
-         given={Samuel\bibnamedelima A},
-         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=MRB}{%
-         family={Miller},
-         familyi={M\bibinitperiod},
-         given={Robert\bibnamedelima B},
-         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Geological Society of America}%
-    }
-    \strng{namehash}{MJEBSAMRB1}
-    \strng{fullhash}{MJEBSAMRB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2006}
-    \field{labeldatesource}{}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-    \field{number}{11-12}
-    \field{pages}{1412\bibrangedash 1430}
-    \field{title}{{Time scales of pluton construction at differing crustal
-  levels: Examples from the Mount Stuart and Tenpeak intrusions, North
-  Cascades, Washington}}
-    \field{volume}{118}
-    \field{journaltitle}{Geological Society of America Bulletin}
-    \field{year}{2006}
-  \endentry
-
   \entry{mcintyre1966}{article}{}
     \name{author}{4}{}{%
       {{hash=MGA}{%
@@ -128,6 +57,46 @@
     \field{volume}{71}
     \field{journaltitle}{Journal of Geophysical Research}
     \field{year}{1966}
+  \endentry
+
+  \entry{mclean2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MNM}{%
+         family={McLean},
+         familyi={M\bibinitperiod},
+         given={Noah\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BJF}{%
+         family={Bowring},
+         familyi={B\bibinitperiod},
+         given={James\bibnamedelima F},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gehrels},
+         familyi={G\bibinitperiod},
+         given={George},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{MNMBJFGG1}
+    \strng{fullhash}{MNMBJFGG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{7}
+    \field{pages}{2480\bibrangedash 2496}
+    \field{title}{{Algorithms and software for U-Pb geochronology by LA-ICPMS}}
+    \field{volume}{17}
+    \field{journaltitle}{Geochemistry, Geophysics, Geosystems}
+    \field{year}{2016}
   \endentry
 
   \entry{nicolaysen1961}{article}{}
@@ -189,71 +158,6 @@
     \field{year}{1896}
   \endentry
 
-  \entry{rioux2012}{article}{}
-    \name{author}{7}{}{%
-      {{hash=RM}{%
-         family={Rioux},
-         familyi={R\bibinitperiod},
-         given={Matthew},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=LCJ}{%
-         family={Lissenberg},
-         familyi={L\bibinitperiod},
-         given={C\bibnamedelima Johan},
-         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=MNM}{%
-         family={McLean},
-         familyi={M\bibinitperiod},
-         given={Noah\bibnamedelima M},
-         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=BSA}{%
-         family={Bowring},
-         familyi={B\bibinitperiod},
-         given={Samuel\bibnamedelima A},
-         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=MCJ}{%
-         family={MacLeod},
-         familyi={M\bibinitperiod},
-         given={Christopher\bibnamedelima J},
-         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=HE}{%
-         family={Hellebrand},
-         familyi={H\bibinitperiod},
-         given={Eric},
-         giveni={E\bibinitperiod},
-      }}%
-      {{hash=SN}{%
-         family={Shimizu},
-         familyi={S\bibinitperiod},
-         given={Nobumichi},
-         giveni={N\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Nature Publishing Group}%
-    }
-    \strng{namehash}{RM+1}
-    \strng{fullhash}{RMLCJMNMBSAMCJHESN1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2012}
-    \field{labeldatesource}{}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{number}{4}
-    \field{pages}{275\bibrangedash 278}
-    \field{title}{{Protracted timescales of lower crustal growth at the
-  fast-spreading East Pacific Rise}}
-    \field{volume}{5}
-    \field{journaltitle}{Nature Geoscience}
-    \field{year}{2012}
-  \endentry
-
   \entry{titterington1979}{article}{}
     \name{author}{2}{}{%
       {{hash=TDM}{%
@@ -283,6 +187,34 @@
     \field{volume}{26}
     \field{journaltitle}{Chemical Geology}
     \field{year}{1979}
+  \endentry
+
+  \entry{vermeesch2015b}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{pages}{325\bibrangedash 337}
+    \field{title}{{Revised error propagation of $^{40}$Ar/$^{39}$Ar data,
+  including covariances}}
+    \field{volume}{171}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{2015}
   \endentry
 
   \entry{york1969}{article}{}

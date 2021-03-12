@@ -1,5 +1,6 @@
 \begin{refsection}
-\chapter{Some statistical considerations}\label{ch:formats}
+\chapter{Some statistical considerations}
+\label{ch:formats}
 
 \section{The normal distribution}
 \label{sec:Gauss}
@@ -11,7 +12,7 @@ otherwise, we will assume that this noise follows a Gaussian
 distribution. In one dimension, this distribution is described by the
 following probability density function (pdf):
 \begin{equation}
-  f(x|\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}}
+  \mathcal{N}(x|\mu,\sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}
   \exp\!\left[-\frac{(x-\mu)^2}{2\sigma^2}\right]
   \label{eq:gauss}
 \end{equation}
@@ -58,8 +59,8 @@ the data. This can be done using the \textbf{method of maximum
 drawn from a normal distribution, we can formulate the normal
 likelihood function as
 \begin{equation}
-  \mathcal{L}(\mu,\sigma|x_1,x_2,\ldots,x_n) =
-  \prod\limits_{i=1}^{n}f(x_i|\mu,\sigma)
+  \mathcal{L}(\mu,\sigma^2|x_1,x_2,\ldots,x_n) =
+  \prod\limits_{i=1}^{n}\mathcal{N}(x_i|\mu,\sigma^2)
   \label{eq:Lnorm}
 \end{equation}
 
@@ -67,8 +68,8 @@ $\mu$ and $\sigma$ can be estimated by maximising the likelihood or,
 equivalently, the log-likelihood:
 \begin{equation}
   \begin{split}
-    \mathcal{LL}(\mu,\sigma|x_1,x_2,\ldots,x_n) & =
-    \sum\limits_{i=1}^{n}\ln\left[f(x_i|\mu,\sigma)\right] \\ & =
+    \mathcal{LL}(\mu,\sigma^2|x_1,x_2,\ldots,x_n) & =
+    \sum\limits_{i=1}^{n}\ln\left[\mathcal{N}(x_i|\mu,\sigma^2)\right] \\ & =
     \sum\limits_{i=1}^{n} -\ln[\sigma] - \frac{1}{2}\ln[2\pi] -
     \frac{(x_i-\mu)^2}{2\sigma^2}
   \end{split}
@@ -130,7 +131,7 @@ pdf that comprises five parameters: the means $\mu_x$ and $\mu_y$, the
 standard deviations $\sigma_x$ and $\sigma_y$, and the covariance
 $\sigma_{x,y}$:
 \begin{equation}
-f(x,y|\mu_x,\mu_y,\sigma_x,\sigma_y,\sigma_{x,y}) = \frac{
+\mathcal{N}(x,y|\mu_x,\mu_y,\sigma_x^2,\sigma_y^2,\sigma_{x,y}) = \frac{
 \exp\left(-
 \left[\begin{array}{@{}cc@{}}
 (x-\mu_x) & (y-\mu_y)
@@ -188,8 +189,6 @@ Finally, we can define the \textbf{correlation coefficient} as:
   \equiv \rho
   \label{eq:rho}
 \end{equation}
-  
-\end{equation}
 
 \section{The mean square of weighted deviates (MSWD)}
 \label{sec:mswd}
@@ -207,9 +206,9 @@ for example, the following dataset of four samples:
 
 \begin{center}
 \begin{tabular}{c|ccccc}
-  i & 1 & 2 & 3 & 4 \\
-t_i & 1005 & 1000 & 995 & 1125 \\
-s[t_i] & 10 & 10 & 10 & 100
+  $i$ & 1 & 2 & 3 & 4 \\
+$t_i$ & 1005 & 1000 & 995 & 1125 \\
+$s[t_i]$ & 10 & 10 & 10 & 100
 \end{tabular}
 \captionof{table}{Heteroscedastic dataset of four age estimates (in Ma).}
 \label{tab:wtdmean}
@@ -399,16 +398,21 @@ overdispersed datasets:
   effects. A `model-3' weighted mean assumes that the data were drawn
   from a normal distribution with two sources of variance:
   \begin{equation}
-    f(x|\mu,\sigma) = \frac{1}{\sqrt{2\pi\left(\sigma^2+\omega^2\right)}}
+    \mathcal{N}(x|\mu,\sigma^2+\omega^2) =
+    \frac{1}{\sqrt{2\pi\left(\sigma^2+\omega^2\right)}}
     \exp\!\left[-\frac{(x-\mu)^2}{2\left(\sigma^2 + \omega^2 \right)}\right]
-    \label{eq:wtdmean-model-3}
+    \label{eq:overdispersion}
   \end{equation}
 
-\noindent where $\omega$ is the
-\textbf{overdispersion}. Equation~\ref{eq:wtdmean-model-3} can be
-solved for $\mu$ and $\omega$ by the method of maximum likelihood,
-yielding two estimates $\hat{\mu}$ and $\hat{\omega}$ and their
-approximate covariance matrix.
+\noindent where $\omega$ is the \textbf{overdispersion}. $\mu$ and
+$\omega$ can be estimated by maximising the following log-likelihood
+function:
+  \begin{equation}
+    \mathcal{LL}_w \propto \sum\limits_{i=1}^{n}
+    - \frac{1}{2}\ln\!\left(s[t_i]^2+\omega^2\right)
+    + \left[-\frac{(x-\mu)^2}{2\left(s[t_i]^2 + \omega^2 \right)}\right]
+    \label{eq:wtdmean-model-3}
+  \end{equation}
 
 The overdispersion $\omega$ has physical meaning and may be as useful
 as the mean age itself. Consider, for example, a batholith whose
@@ -861,7 +865,7 @@ t_{df,\alpha/2} \leq \frac{\bar{x} - \mu}{s[\bar{x}]} \leq t_{df,1-\alpha/2}
 
 \noindent Rearranging:
 \[
-\bar{x} - t_{df,\alpha/2}s[\bar{x}]} \geq \mu \geq
+\bar{x} - t_{df,\alpha/2}s[\bar{x}] \geq \mu \geq
 \bar{x} - t_{df,1-\alpha/2}s[\bar{x}]
 \]
 
@@ -899,7 +903,66 @@ and the 95\% confidence interval for $\mu$ is wider as a consequence.
   \label{fig:tdof}
 \end{minipage}
 
-EXPLAIN THREE TYPES OF REPORTED ERRORS
+\texttt{IsoplotR} reports the age uncertainties in the following
+form:
+
+\[
+t = \hat{t} \pm x \mid y (\mid z)
+\]
+
+\noindent where
+
+\begin{description}
+\item[$\hat{t}$] is the age estimate
+\item[$x$] is the standard error of $\hat{t}$
+\item[$y$] $= t_{df,1-\alpha/2} \times x$ is the 95\% confidence interval for
+  $\hat{t}$
+\item[$z$] $= \sqrt{MSWD} \times y$ is the 95\% confidence interval for
+  $\hat{t}$ adjusted for overdispersion. This value is only reported
+  for model-1 fits when the p-value of the chi-square test is less
+  than 0.05.
+\end{description}
+
+\noindent\begin{minipage}[t][][b]{.6\textwidth}
+  \includegraphics[width=\textwidth]{../figures/model-1.pdf}\\
+\end{minipage}
+\begin{minipage}[t][][t]{.4\textwidth}
+  \captionof{figure}{a) weighted mean (Figure~\ref{fig:wtdmeanMSWD}c)
+    and b) Rb--Sr isochron (Figure~\ref{fig:isochronMSWD}c) regression
+    using a model-1 fit. The legend reports the best fit age and
+    uncertainties reported as standard errors, and 95\% confidence
+    intervals with and without overdispersion.  }
+  \label{fig:model-1}
+\end{minipage}
+
+With regards to error propagation, it is important to make a
+distinction between \textbf{random} and \textbf{systematic} sources of
+uncertainty. Random uncertainties can be reduced to arbitrarily low
+levels by averaging an arbitrarily large number of aliquots. In
+contrast, systematic uncertainties impose absolute limits on the
+precision of geochronological dates.  For example, no absolute age
+determination can be more precise than the decay constants
+involved. Similarly, for dating methods such as
+\textsuperscript{40}Ar/\textsuperscript{39}Ar or fission tracks, no
+sample date can be more precise than the $J$ and $\zeta$ calibration
+factors, respectively.\\
+
+When solving Equation~\ref{eq:wtdmean}, \texttt{IsoplotR} only
+incorporates the random sources of uncertainty into $s[t_i]$.  If the
+user wishes to include the systematic uncertainties as well, then this
+is done by first computing the isotopic composition corresponding to
+the weighted mean age (and its uncertainty), and then re-propagating
+the analytical uncertainty of the weighted mean age, this time
+including the decay or calibration constant uncertainties.\\
+
+Note that this procedure is unable to handle the systematic
+uncertainties associated with stable isotope ratios, molar masses
+etc. Those comparably small uncertainties demand a different approach
+in which not the ages but the isotopic data are averaged.  Doing so
+would require the addition of new input formats that can trace error
+correlations between samples (Chapter~\ref{sec:future}). It would also
+require the development of a new generation of low-level
+data-processing software \citep{vermeesch2015b,mclean2016}.
 
 \printbibliography[heading=subbibliography]
 

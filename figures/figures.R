@@ -63,7 +63,7 @@ dev.off()
 
 dat <- cbind(c(10,20,28),c(1,1,1),c(20,30,42),c(1,1,1),c(0.9,0.9,-0.9))
 colnames(dat) <- c('X','sX','Y','sY','rXY')
-fit <- IsoplotR::york(dat)
+fit <- york(dat)
 xyfitted <- IsoplotR:::get.york.xy(dat,a=fit$a[1],b=fit$b[1])
 
 cairo(file='wtdmean.pdf',width=5,height=3)
@@ -143,7 +143,7 @@ for (i in 1:length(dof)){
 }
 dev.off()
 
-cairo(file='isochronMSWD3.pdf',height=6,width=2.5)
+cairo(file='~/Desktop/isochronMSWD.pdf',height=6,width=2.5)
 pars(mfrow=c(3,1),mar=c(3,3,3,0.5))
 set.seed(36)
 tt <- 1000
@@ -164,7 +164,7 @@ colnames(ydat) <- c('Rb87/Sr86', 'err[Rb87/Sr86]',
                     'Sr87/Sr86', 'err[Sr87/Sr86]', 'rho')
 RbSr <- list(x=ydat,format=1)
 class(RbSr) <- c('RbSr','PD')
-IsoplotR::isochron(RbSr)
+isochron(RbSr)
 set.seed(3)
 dxy <- MASS::mvrnorm(ns,mu=c(0,0),Sigma=E)
 X <- x + dxy[,1]/10
@@ -172,7 +172,7 @@ Y <- y + dxy[,2]/10
 ydat <- cbind(X,sx,Y,sy,rxy)
 RbSr <- list(x=ydat,format=1)
 class(RbSr) <- c('RbSr','PD')
-IsoplotR::isochron(RbSr)
+isochron(RbSr)
 set.seed(3)
 dxy <- MASS::mvrnorm(ns,mu=c(0,0),Sigma=E)
 X <- x + dxy[,1]*5
@@ -180,5 +180,42 @@ Y <- y + dxy[,2]*5
 ydat <- cbind(X,sx,Y,sy,rxy)
 RbSr <- list(x=ydat,format=1)
 class(RbSr) <- c('RbSr','PD')
-IsoplotR::isochron(RbSr,model=3)
+isochron(RbSr,model=1)
+dev.off()
+
+cairo(file='~/Desktop/model-1.pdf',height=3,width=6)
+pars(mfrow=c(1,2),mar=c(3,3,3,0.5))
+d <- c(99.37336,97.07454,101.75070,101.43449,97.02336,
+       102.97518,101.93286,102.31634,99.57383,101.81529)
+de <- c(8.46319657,1.86649249,-0.07321272,12.75171960,-12.72951972,
+        -21.69428369,1.09848605,8.01051989,4.08519189,3.64344448)
+dd <- d + de
+d3 <- cbind(dd,2)
+weightedmean(d3,random.effects=FALSE,detect.outliers=FALSE)
+isochron(RbSr,model=1)
+dev.off()
+
+dat <- read.data('Ludwig.csv',method='other')
+cairo(file='~/Desktop/frequency1.pdf',height=3,width=8)
+pars(mfrow=c(1,2))
+cad(dat[,1])
+kde(dat[,1])
+dev.off()
+
+cairo(file='~/Desktop/frequency2.pdf',height=3,width=4)
+pars()
+radialplot(dat)
+dev.off()
+
+fn <- system.file('UPb8.csv',package='IsoplotR')
+cairo(file='~/Desktop/logtrans1.pdf',height=3,width=8)
+UPb <- read.data(fn,method='U-Pb',format=8)
+pars(mfrow=c(1,2))
+kde(UPb,type=5,from=-50,to=200,bw=20)
+kde(UPb,log=TRUE,type=5,from=1,to=500,bw=0.5)
+dev.off()
+
+cairo(file='~/Desktop/logtrans2.pdf',height=3,width=4)
+pars()
+radialplot(UPb,type=5)
 dev.off()
