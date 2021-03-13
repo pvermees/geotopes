@@ -1,0 +1,165 @@
+\begin{refsection}
+
+\chapter{U--Pb geochronology}\label{ch:U-Pb}
+
+\section{Input formats}
+\label{sec:UPbFormats}
+
+\texttt{IsoplotR} offers eight different input formats:
+\begin{enumerate}
+  \item
+  $\frac{07}{35}$,  
+  $\mbox{err}\!\left[\frac{07}{35}\right]$, 
+  $\frac{06}{38}$,  
+  $\mbox{err}\!\left[\frac{06}{38}\right]$,  
+  $\mbox{r}\!\left[\frac{06}{38},\frac{06}{38}\right]$
+  \item $\frac{38}{06}$,  
+  $\mbox{err}\!\left[\frac{38}{06}\right]$, 
+  $\frac{07}{06}$,  
+  $\mbox{err}\!\left[\frac{07}{06}\right]$,  
+  $\left(\mbox{r}\!\left[\frac{38}{06},\frac{07}{06}\right]\right)$
+  \item
+  $\frac{07}{35}$,  
+  $\mbox{err}\!\left[\frac{07}{35}\right]$, 
+  $\frac{06}{38}$,  
+  $\mbox{err}\!\left[\frac{06}{38}\right]$, 
+  $\frac{07}{06}$,  
+  $\mbox{err}\!\left[\frac{07}{06}\right]$, 
+  $\left(\mbox{r}\!\left[\frac{07}{35},\frac{06}{38}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{07}{35},\frac{07}{06}\right]\right)$, 
+  $\left(\mbox{r}\!\left[\frac{06}{38},\frac{07}{06}\right]\right)$
+  \item 
+  $\frac{07}{35}$,  
+  $\mbox{err}\!\left[\frac{07}{35}\right]$, 
+  $\frac{06}{38}$,  
+  $\mbox{err}\!\left[\frac{06}{38}\right]$,  
+  $\frac{04}{38}$,  
+  $\mbox{err}\!\left[\frac{04}{38}\right]$, 
+  $\left(\mbox{r}\!\left[\frac{07}{35},\frac{06}{38}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{07}{35},\frac{04}{38}\right]\right)$, 
+  $\left(\mbox{r}\!\left[\frac{06}{38},\frac{04}{38}\right]\right)$
+  \item 
+  $\frac{38}{06}$,  
+  $\mbox{err}\!\left[\frac{38}{06}\right]$, 
+  $\frac{07}{06}$,  
+  $\mbox{err}\!\left[\frac{07}{06}\right]$,  
+  $\frac{04}{06}$,  
+  $\mbox{err}\!\left[\frac{04}{06}\right]$, 
+  $\left(\mbox{r}\!\left[\frac{38}{06},\frac{07}{06}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{38}{06},\frac{04}{06}\right]\right)$, 
+  $\left(\mbox{r}\!\left[\frac{07}{06},\frac{04}{06}\right]\right)$
+  \item 
+  $\frac{07}{35}$,  
+  $\mbox{err}\!\left[\frac{07}{35}\right]$, 
+  $\frac{06}{38}$,  
+  $\mbox{err}\!\left[\frac{06}{38}\right]$,  
+  $\frac{04}{38}$,  
+  $\mbox{err}\!\left[\frac{04}{38}\right]$,  
+  $\frac{07}{06}$,  
+  $\mbox{err}\!\left[\frac{07}{06}\right]$, 
+  $\frac{04}{07}$,  
+  $\mbox{err}\!\left[\frac{04}{07}\right]$,  
+  $\frac{04}{06}$,  
+  $\mbox{err}\!\left[\frac{04}{06}\right]$
+  \item 
+  $\frac{07}{35}$,  
+  $\mbox{err}\!\left[\frac{07}{35}\right]$, 
+  $\frac{06}{38}$,  
+  $\mbox{err}\!\left[\frac{06}{38}\right]$,  
+  $\frac{08}{32}$,  
+  $\mbox{err}\!\left[\frac{08}{32}\right]$,  
+  $\frac{32}{38}$,  
+  $\mbox{err}\!\left[\frac{32}{38}\right]$,  \\
+  $\left(\mbox{r}\!\left[\frac{07}{35},\frac{06}{38}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{07}{35},\frac{08}{32}\right]\right)$, 
+  $\left(\mbox{r}\!\left[\frac{07}{35},\frac{32}{38}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{06}{38},\frac{08}{32}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{06}{38},\frac{32}{38}\right]\right)$, 
+  $\left(\mbox{r}\!\left[\frac{08}{32},\frac{32}{38}\right]\right)$
+  \item
+  $\frac{38}{06}$,  
+  $\mbox{err}\!\left[\frac{38}{06}\right]$, 
+  $\frac{07}{06}$,  
+  $\mbox{err}\!\left[\frac{07}{06}\right]$,  
+  $\frac{08}{06}$,  
+  $\mbox{err}\!\left[\frac{08}{06}\right]$,  
+  $\frac{32}{38}$,  
+  $\mbox{err}\!\left[\frac{32}{38}\right]$,  \\
+  $\left(\mbox{r}\!\left[\frac{38}{06},\frac{07}{06}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{38}{06},\frac{08}{06}\right]\right)$, 
+  $\left(\mbox{r}\!\left[\frac{38}{06},\frac{32}{38}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{07}{06},\frac{08}{06}\right]\right)$,  
+  $\left(\mbox{r}\!\left[\frac{07}{06},\frac{32}{38}\right]\right)$, 
+  $\left(\mbox{r}\!\left[\frac{08}{06},\frac{32}{38}\right]\right)$
+\end{enumerate}
+
+\noindent where 04, 06, 07, 08, 32, 35 and 38 stand for
+\textsuperscript{204}Pb, \textsuperscript{206}Pb,
+\textsuperscript{207}Pb, \textsuperscript{208}Pb,
+\textsuperscript{232}Th, \textsuperscript{235}U and
+\textsuperscript{238}U, respectively. `err[$\ast$]' stands for the
+analytical uncertainty of $\ast$, which can be specified as a standard
+error or as two times the standard error, either in absolute or
+relative units. And `r[$x$,$y$]' stands for the error correlation
+between $x$ and $y$.\\
+
+Formats~1--3 are meant for mass spectrometers that are unable to
+accurately measure \textsuperscript{204}Pb. This is the case for
+single collector ICP-MS instruments that are unable to resolve the
+isobaric interference on \textsuperscript{204}Hg, which is often
+present in the plasma gas. Formats~4--6 include
+\textsuperscript{204}Pb, as measured by SIMS, TIMS or multi-collector
+ICP-MS. Finally, formats~7 and 8 include \textsuperscript{208}Pb and
+\textsuperscript{232}Th. These nuclides can be used for hybrid
+U--Th--Pb dating, as discussed in Section~\ref{sec:U-Th-Pb}.\\
+
+Formats~1, 4 and 7 are `Wetherill style' input formats, in which the
+radioactive parent appears in the denominator of the isotopic ratio
+data. As explained in Section~\ref{sec:errorcorrelations} and shown in
+Figure~\ref{fig:errorcorrelation}, these formats are associated with
+strong error correlations
+($r\left[\frac{07}{35},\frac{06}{38}\right]$), which must be specified
+so as to avoid inaccurate inferences.  Formats~2, 5 and 8 are
+`Tera-Wasserburg style' input formats, in which the most abundant
+radiogenic daughter (i.e., \textsuperscript{206}Pb) appears in the
+denominator of the isotopic ratio data.  As shown in
+Figure~\ref{fig:inverrorcorrelation}, this greatly reduces the error
+correlations which, consequently, are optional (hence the brackets
+around $r\left[\frac{38}{06},\frac{07}{06}\right]$).\\
+
+Finally, formats~3 and 6 provide an alternative input format designed
+for users whose low level data processing software does not provide
+error correlation data. It uses redundant ratios to infer the
+correlation coefficients. Let $X \equiv \frac{07}{35}$, $Y \equiv
+\frac{07}{35}$, $Z \equiv \frac{07}{06}$ and $U \equiv \frac{38}{35}$,
+let $s[X]$, $s[Y]$ and $s[Z]$ be the standard errors of $X$, $Y$ and
+$Z$, and assume that $s[U]=0$ for the sake of simplicity. Then it is
+easy to see that $Z = X/(U Y)$, and
+\begin{equation}
+  \left(\frac{s[Z]}{Z}\right)^2 = \left(\frac{s[X/Y]}{X/Y}\right)^2
+  \approx \left(\frac{s[X]}{X}\right)^2 + \left(\frac{s[Y]}{Y}\right)^2 -
+  2 \frac{s[X,Y]}{XY}
+\end{equation}
+
+\noindent from which the covariance (and, hence, the correlation
+coefficient) between $X$ and $Y$ can be inferred as
+\begin{equation}
+  s[X,Y] \approx \frac{XY}{2}
+  \left[
+    \left(\frac{s[X]}{X}\right)^2 +
+    \left(\frac{s[Y]}{Y}\right)^2 -
+    \left(\frac{s[Z]}{Z}\right)^2
+    \right]
+\end{equation}
+
+It is important to note that this approach makes the crucial
+assumption that all three standard errors ($s[X]$, $s[Y]$ and $s[Z]$)
+are based on the same number of data points. This means that formats~3
+and 6 are not applicable to TIMS data.
+
+\section{Concordia diagrams and ages}
+\label{sec:concordia}
+
+\printbibliography[heading=subbibliography]
+
+\end{refsection}

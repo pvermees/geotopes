@@ -2,8 +2,8 @@ library(IsoplotR)
 
 setwd('/home/pvermees/Documents/geotopes/figures/')
 
-pars <- function(mar=c(2.5,2.3,0.5,0.25),mgp=c(1.5,0.5,0),mfrow=c(1,1)){
-    par(list(mar=mar,mgp=mgp,mfrow=mfrow))
+pars <- function(mar=c(2.5,2.3,0.5,0.25),mgp=c(1.5,0.5,0),...){
+    par(list(mar=mar,mgp=mgp,...))
 }
 
 cairo <- function(file,width,height,family="serif",pointsize=13,...){
@@ -143,7 +143,7 @@ for (i in 1:length(dof)){
 }
 dev.off()
 
-cairo(file='~/Desktop/isochronMSWD.pdf',height=6,width=2.5)
+cairo(file='~/Documents/temp/isochronMSWD.pdf',height=6,width=2.5)
 pars(mfrow=c(3,1),mar=c(3,3,3,0.5))
 set.seed(36)
 tt <- 1000
@@ -183,7 +183,7 @@ class(RbSr) <- c('RbSr','PD')
 isochron(RbSr,model=1)
 dev.off()
 
-cairo(file='~/Desktop/model-1.pdf',height=3,width=6)
+cairo(file='~/Documents/temp/model-1.pdf',height=3,width=6)
 pars(mfrow=c(1,2),mar=c(3,3,3,0.5))
 d <- c(99.37336,97.07454,101.75070,101.43449,97.02336,
        102.97518,101.93286,102.31634,99.57383,101.81529)
@@ -196,26 +196,100 @@ isochron(RbSr,model=1)
 dev.off()
 
 dat <- read.data('Ludwig.csv',method='other')
-cairo(file='~/Desktop/frequency1.pdf',height=3,width=8)
+cairo(file='~/Documents/temp/frequency1.pdf',height=3,width=8)
 pars(mfrow=c(1,2))
 cad(dat[,1])
 kde(dat[,1])
 dev.off()
 
-cairo(file='~/Desktop/frequency2.pdf',height=3,width=4)
+cairo(file='~/Documents/temp/frequency2.pdf',height=3,width=4)
 pars()
 radialplot(dat)
 dev.off()
 
 fn <- system.file('UPb8.csv',package='IsoplotR')
-cairo(file='~/Desktop/logtrans1.pdf',height=3,width=8)
+cairo(file='~/Documents/temp/logtrans1.pdf',height=3,width=8)
 UPb <- read.data(fn,method='U-Pb',format=8)
 pars(mfrow=c(1,2))
 kde(UPb,type=5,from=-50,to=200,bw=20)
 kde(UPb,log=TRUE,type=5,from=1,to=500,bw=0.5)
 dev.off()
 
-cairo(file='~/Desktop/logtrans2.pdf',height=3,width=4)
+cairo(file='~/Documents/temp/logtrans2.pdf',height=3,width=4)
 pars()
 radialplot(UPb,type=5)
+dev.off()
+
+cairo(file='~/Documents/temp/3means.pdf',height=3,width=9)
+set.seed(3)
+pars(mfcol=c(2,3))
+mu <- 1000
+sigma <- 5
+err <- 5
+m <- mu-3*(sigma+err)
+M <- mu+3*(sigma+err)
+x <- seq(from=m,to=M,length.out=100)
+ns <- 20
+# column 1
+plot(x=rep(mu,2),y=c(0,0.1),type='l',xlim=c(m,M),yaxt='n',bty='n',col='blue')
+lines(x=c(m,M),y=rep(0,2))
+legend('topleft',legend='1a',bty='n')
+lines(x=x,y=dnorm(x,mean=mu,sd=err),col='red')
+rx <- rnorm(ns,mean=mu,sd=sigma)
+sx <- rep(err,ns)
+dat <- cbind(x=rx,err=sx)
+weightedmean(dat,random.effects=FALSE)
+legend('topleft',legend='1b',bty='n')
+# column 2
+plot(x=x,y=dnorm(x,mean=mu,sd=sigma),type='l',
+     xlim=c(m,M),yaxt='n',bty='n',col='blue')
+legend('topleft',legend='2a',bty='n')
+lines(x=x,y=dnorm(x,mean=mu,sd=sqrt(sigma^2+err^2)),col='red')
+rx <- rnorm(ns,mean=mu,sd=sqrt(sigma^2+err^2))
+sx <- rep(err,ns)
+dat <- cbind(x=rx,err=sx)
+weightedmean(dat,random.effects=TRUE)
+legend('topleft',legend='2b',bty='n')
+# column 3
+lmu <- log(10)
+lsigma <- 5/10
+lerr <- 5/10
+m <- lmu-3*(lsigma+lerr)
+M <- lmu+1.5*(lsigma+lerr)
+lx <- seq(from=m,to=M,length.out=100)
+d1 <- dnorm(lx,mean=lmu,sd=lsigma)
+d2 <- dnorm(lx,mean=lmu,sd=sqrt(lsigma^2+lerr^2))
+x <- exp(lx)
+dxin <- diff(lx)
+dxout <- diff(x)
+y1 <- c(dxin,utils::tail(dxin,1))*d1/c(dxout,utils::tail(dxout,1))
+y2 <- c(dxin,utils::tail(dxin,1))*d2/c(dxout,utils::tail(dxout,1))
+plot(x,y1,type='l',bty='n',col='blue')
+lines(x,y2,col='red')
+legend('topleft',legend='3a',bty='n')
+rx <- exp(rnorm(ns,mean=lmu,sd=sqrt(lsigma^2+lerr^2)))
+sx <- rx*rnorm(ns,mean=lerr,sd=lerr/3)
+radialplot(cbind(rx,sx),transformation='log')
+legend('topleft',legend='3b',bty='n')
+if (FALSE){
+    # column 4
+    M <- lmu+3*(lsigma+lerr)
+    lx <- seq(from=m,to=M,length.out=100)
+    d1 <- dnorm(lx,mean=lmu,sd=lsigma)
+    d2 <- dnorm(lx,mean=lmu,sd=sqrt(lsigma^2+lerr^2))
+    x <- exp(lx)
+    plot(x,d1,type='l',bty='n',log='x',col='blue')
+    lines(x,d2,col='red')
+    legend('topleft',legend='3c',bty='n')
+    rx <- rnorm(ns,mean=lmu,sd=sqrt(lsigma^2+lerr^2))
+    sx <- rnorm(ns,mean=lerr,sd=lerr/3)
+    radialplot(cbind(rx,sx),transformation='log')
+    legend('topleft',legend='3d',bty='n')
+}
+dev.off()
+
+cairo(file='~/Documents/temp/3meansb.pdf',height=3,width=6)
+pars()
+radialplot(cbind(rx,sx),transformation='log')
+legend('topleft',legend='3d',bty='n')
 dev.off()

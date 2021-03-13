@@ -113,13 +113,19 @@
 \contentsline {section}{\numberline {14.3}Radial plots}{70}{section.14.3}%
 \defcounter {refsection}{3}\relax 
 \contentsline {section}{\numberline {14.4}Mixture models}{72}{section.14.4}%
+\defcounter {refsection}{4}\relax 
+\contentsline {chapter}{\numberline {15}U--Pb geochronology}{76}{chapter.15}%
+\defcounter {refsection}{4}\relax 
+\contentsline {section}{\numberline {15.1}Input formats}{76}{section.15.1}%
+\defcounter {refsection}{4}\relax 
+\contentsline {section}{\numberline {15.2}Concordia diagrams and ages}{77}{section.15.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{75}{part.3}%
-\defcounter {refsection}{4}\relax 
-\contentsline {chapter}{\numberline {15}Introduction to \texttt {IsoplotR}}{76}{chapter.15}%
-\defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.1}Software architecture}{76}{section.15.1}%
-\defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.2}The Graphical User Interface (GUI)}{77}{section.15.2}%
-\defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.3}The Command Line Interface (CLI)}{79}{section.15.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{78}{part.3}%
+\defcounter {refsection}{5}\relax 
+\contentsline {chapter}{\numberline {16}Introduction to \texttt {IsoplotR}}{79}{chapter.16}%
+\defcounter {refsection}{5}\relax 
+\contentsline {section}{\numberline {16.1}Software architecture}{79}{section.16.1}%
+\defcounter {refsection}{5}\relax 
+\contentsline {section}{\numberline {16.2}The Graphical User Interface (GUI)}{80}{section.16.2}%
+\defcounter {refsection}{5}\relax 
+\contentsline {section}{\numberline {16.3}The Command Line Interface (CLI)}{82}{section.16.3}%

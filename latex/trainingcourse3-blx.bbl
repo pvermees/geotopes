@@ -105,36 +105,61 @@
     \field{year}{1990}
   \endentry
 
+  \entry{galbraith2005}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GRF}{%
+         family={Galbraith},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima F.},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CRC Press}%
+    }
+    \strng{namehash}{GRF1}
+    \strng{fullhash}{GRF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{pages}{219}
+    \field{title}{Statistics for fission track analysis}
+    \field{year}{2005}
+  \endentry
+
   \entry{galbraith1999}{article}{}
     \name{author}{5}{}{%
       {{hash=GRF}{%
          family={Galbraith},
          familyi={G\bibinitperiod},
-         given={Rex\bibnamedelima F},
+         given={R.\bibnamedelima F.},
          giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
       {{hash=RRG}{%
          family={Roberts},
          familyi={R\bibinitperiod},
-         given={Richard\bibnamedelima G},
+         given={R.\bibnamedelima G.},
          giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
       }}%
       {{hash=LGM}{%
          family={Laslett},
          familyi={L\bibinitperiod},
-         given={Geoff\bibnamedelima M},
+         given={G.\bibnamedelima M.},
          giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
       {{hash=YH}{%
          family={Yoshida},
          familyi={Y\bibinitperiod},
-         given={Hiroshi},
+         given={H.},
          giveni={H\bibinitperiod},
       }}%
       {{hash=OJM}{%
          family={Olley},
          familyi={O\bibinitperiod},
-         given={Jon\bibnamedelima M},
+         given={J.\bibnamedelima M.},
          giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
     }
@@ -213,7 +238,7 @@
       {{hash=VP}{%
          family={Vermeesch},
          familyi={V\bibinitperiod},
-         given={P.},
+         given={Pieter},
          giveni={P\bibinitperiod},
       }}%
     }
@@ -242,7 +267,7 @@
       {{hash=VP}{%
          family={Vermeesch},
          familyi={V\bibinitperiod},
-         given={P.},
+         given={Pieter},
          giveni={P\bibinitperiod},
       }}%
     }
@@ -273,8 +298,8 @@
          giveni={P\bibinitperiod},
       }}%
     }
-    \strng{namehash}{VP2}
-    \strng{fullhash}{VP2}
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2018}
@@ -301,8 +326,8 @@
          giveni={P\bibinitperiod},
       }}%
     }
-    \strng{namehash}{VP2}
-    \strng{fullhash}{VP2}
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2018}
@@ -314,6 +339,47 @@
     \field{title}{Statistical models for point-counting data}
     \field{volume}{501}
     \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{2018}
+  \endentry
+
+  \entry{vermeesch2019b}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=MM}{%
+         family={Malus\'{a}},
+         familyi={M\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FP}{%
+         family={Fitzgerald},
+         familyi={F\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{extradate}{3}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{booktitle}{Fission track thermochronology and its application to
+  geology}
+    \field{title}{{Statistics for fission tracks}}
     \field{year}{2018}
   \endentry
 \enddatalist

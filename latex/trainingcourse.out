@@ -55,8 +55,11 @@
 \BOOKMARK [1][-]{section.14.2}{Frequency distributions}{chapter.14}% 55
 \BOOKMARK [1][-]{section.14.3}{Radial plots}{chapter.14}% 56
 \BOOKMARK [1][-]{section.14.4}{Mixture models}{chapter.14}% 57
-\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 58
-\BOOKMARK [0][-]{chapter.15}{Introduction to IsoplotR}{part.3}% 59
-\BOOKMARK [1][-]{section.15.1}{Software architecture}{chapter.15}% 60
-\BOOKMARK [1][-]{section.15.2}{The Graphical User Interface \(GUI\)}{chapter.15}% 61
-\BOOKMARK [1][-]{section.15.3}{The Command Line Interface \(CLI\)}{chapter.15}% 62
+\BOOKMARK [0][-]{chapter.15}{U\205Pb geochronology}{part.2}% 58
+\BOOKMARK [1][-]{section.15.1}{Input formats}{chapter.15}% 59
+\BOOKMARK [1][-]{section.15.2}{Concordia diagrams and ages}{chapter.15}% 60
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 61
+\BOOKMARK [0][-]{chapter.16}{Introduction to IsoplotR}{part.3}% 62
+\BOOKMARK [1][-]{section.16.1}{Software architecture}{chapter.16}% 63
+\BOOKMARK [1][-]{section.16.2}{The Graphical User Interface \(GUI\)}{chapter.16}% 64
+\BOOKMARK [1][-]{section.16.3}{The Command Line Interface \(CLI\)}{chapter.16}% 65

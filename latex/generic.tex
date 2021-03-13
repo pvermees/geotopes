@@ -298,36 +298,76 @@ central age and the weighted mean age is usually small unless the data
 are imprecise and/or strongly overdispersed. In those cases, the
 central age yields the geologically most meaningful value.\\
 
-The model represented by Equation~\ref{eq:central} is referred to as a
-\emph{continuous mixture} model. It assumes that the overdispersion of
-the data is caused by a continuous process that yields a (log)normal
-distribution of true ages. One example of such a process is the
-fractional crystallisation of plutons, which may take hundreds of
-thousands of years, resulting in a range of zircon U-Pb ages.\\
+\noindent\includegraphics[width=\textwidth]{../figures/3means.pdf}
+\begingroup \captionof{figure}{Three different age models implemented
+  in \texttt{IsoplotR}. 1a) If the true age is a discrete event (blue
+  peak at 1000~Ma), and the analytical uncertainties follow a normal
+  distribution with zero mean and 5~Ma standard deviation, then the
+  predicted distribution of the dates (red line) is a normal
+  distribution with mean at 1000~Ma and a 5~Ma standard deviation. 1b)
+  In this case the ordinary weighted mean (Equation~\ref{eq:wtdmean})
+  is the most appropriate estimator of the true age. 2a) If the true
+  age is drawn from a normal distribution with a mean of 1000~Ma and a
+  standard deviation of 5~Ma (blue line), and if the analytical
+  uncertainties follow a normal distribution with zero mean and 5~Ma
+  standard deviation, then the predicted distribution of the dates
+  (red line) is a normal distribution with mean at 1000~Ma and a
+  $\sqrt{50}$~Ma standard deviation. 2b) In this case the random
+  effects model of Equation~\ref{eq:wtdmean-model-3} is the most
+  appropriate estimator of the mean \emph{and} the standard deviation
+  of the true ages. The latter parameter is reported as the dispersion
+  in the legend. 3a) If the true ages are drawn from a lognormal
+  distribution with location parameter 10~Ma and a dispersion
+  parameter of 50\% (blue line), and the analytical uncertainties are
+  $\sim$50\%, then the distribution of the measured dates (red line)
+  is a lognormal distribution with $10/\sqrt{2}$\% dispersion
+  parameter. 3b) In this case the random effects model of
+  Equation~\ref{eq:central} is the best way to average the data, and
+  the radial plot with logarithmic scale is the best way to visualise
+  the results.\\} \endgroup
 
-A second example is the gradual cooling of tectonic blocks during
-exhumation, which may cause the fission track system in
+The random effects model represented by Equation~\ref{eq:central} is
+referred to as a \textbf{continuous mixture} model. It assumes that
+the overdispersion of the data is caused by a continuous process that
+yields a (log)normal distribution of true ages. As previously
+mentioned in Section~\ref{sec:overdispersion}, one example of such a
+process is the fractional crystallisation of plutons, which may take
+hundreds of thousands of years, resulting in a range of zircon U-Pb
+ages. A second example is the gradual cooling of tectonic blocks
+during exhumation, which may cause the fission track system in
 compositionally heterogeneous apatite populations to `close' at
 different times. However, such continuous processes are by no means
 the only cause of overdispersion in geochronology.\\
 
 Consider, for instance, a detrital mixture originating from two or
-more differently aged sources. Such a \emph{discrete mixture} is more
-adequately described by the following equation:
+more differently aged sources. Such a \textbf{discrete mixture} is
+more adequately described by the following equation:
 \begin{equation}
-  p(z_i|\mu,\omega) = \sum_{j=1}^k \pi_j \mathcal{N}\left( z_i |
-  \mu_j, s[z_j]^2 \right)
+  \mathcal{LL}({\boldsymbol\mu},{\boldsymbol\pi}|\mathbf{z},\mathbf{s[z]}) =
+  \sum_{i=1}^n\ln\!\left[\sum_{j=1}^k \pi_j \mathcal{N}\left( z_i | \mu_j, s[z_i]^2\right)\right]
   \label{eq:mixture}
 \end{equation}
 
-\noindent where $k$ is the number of components, $\mu_j$ is the mean
-of the $j$\textsuperscript{th} component (so that $\exp[\mu_j]$ is the
-corresponding age), and $\pi_j$ is the proportion of the population
-that belongs to the $j$\textsuperscript{th}
-component. Equation~\ref{eq:mixture} comprises $n$ measurements and
-$2k-1$ unknowns ($\mu_j$ and $\pi_j$ for $1 \leq j \leq k$ with
-$\pi_k=1-\sum_{j=1}^{k-1}\pi_j$). It can be solved by the method of
-maximum likelihood.\\
+\noindent where ${\boldsymbol\mu}=\{\mu_1,\ldots,\mu_k\}$,
+${\boldsymbol\pi}=\{\pi_1,\ldots,\pi_k\}$,
+$\mathbf{z}=\{z_1,\ldots,z_k\}$,
+$\mathbf{s[z]}=\{s[z_1],\ldots,s[z_k]\}$, $k$ is the number of
+components, $\mu_j$ is the mean of the $j$\textsuperscript{th}
+component (so that $\exp[\mu_j]$ is the corresponding age), and
+$\pi_j$ is the proportion of the population that belongs to the
+$j$\textsuperscript{th} component. Equation~\ref{eq:mixture} comprises
+$n$ measurements and $2k-1$ unknowns ($\mu_j$ and $\pi_j$ for $1 \leq
+j \leq k$ with $\pi_k=1-\sum_{j=1}^{k-1}\pi_j$). It can be solved by
+the method of maximum likelihood.\\
+
+\noindent\includegraphics[width=\textwidth]{../figures/discretemixtures.pdf}
+\begingroup \captionof{figure}{a) cumulative distribution of the true
+  ages of a binary mixture of two discrete age components (red) and
+  the CAD of the measured ages of 50 measured dates (blue). b)
+  histogram and KDE of the binary mixture. c) results of the mixture
+  model, shown as a radial plot.\\}
+\label{fig:discretemixtures}
+\endgroup
 
 Choosing the right number of components ($k$) is a problem that merits
 further discussion. \texttt{IsoplotR} implements the Bayes Information
@@ -348,12 +388,33 @@ most cases it is, therefore, best to resist the temptation to use the
 automatic peak fitting option. It is better to choose a specific
 number of components instead, based on geological considerations.\\
 
+\noindent\includegraphics[width=\textwidth]{../figures/increasingn.png}
+\begingroup \captionof{figure}{Application of finite mixture modelling
+  to a continuous mixture. Increasing sample size from left (a) to
+  right (c) provides statistical justification to fit more
+  components. Note that the age of the youngest age component gets
+  progressively younger with increasing sample size, from 150~Ma for
+  sample (a) to 94~Ma for sample (c), and is therefore not a reliable
+  estimator of the minimum age. Figure adapted from
+  \citet{vermeesch2019b}.\\}
+\label{fig:increasingn}
+\endgroup
+
 If one is mainly interested in the youngest age component, then it is
 more productive to use an alternative parameterisation, in which all
 grains are assumed to come from one of two components, whereby the
-first component is a single discrete age peak ($\exp[m]$, say) and the
-second component is a continuous distribution such as
-Equation~\ref{eq:central}, but truncated at this discrete value.\\
+first component is a single discrete age peak ($\exp[\gamma]$, say)
+and the second component ($\mathcal{N}'(\ldots)$) is a continuous
+distribution such as Equation~\ref{eq:central}, but truncated at this
+discrete value.
+\begin{equation}
+  \mathcal{LL}(\pi,\gamma,\mu,\omega|\mathbf{z},\mathbf{s[z]}) =
+  \sum\limits_{j=1}^{n} \ln\!\left[
+    \pi \mathcal{N}(z_i|\gamma,s[z_i]^2) +
+    (1-\pi) \mathcal{N}'(z_i|\mu,s[z_i]^2+\omega^2)
+    \right]
+\label{eq:Lminagemod}
+\end{equation}
 
 One caveat is that, if this minimum age model is applied to relatively
 small and/or high precision datasets such as most U-Pb measurements,
@@ -362,7 +423,16 @@ date.  It is only for large and/or low precision datasets (such as
 fission tracks), that the minimum age estimate will be older than then
 youngest grain.  Crucially, this value will not drift to smaller
 values with increasing sample size, but will converge to a distinct
-minimum age (Figure~\ref{fig:1}.e).
+minimum age.\\
+
+\noindent\includegraphics[width=\textwidth]{../figures/minagemod.pdf}
+\begingroup \captionof{figure}{A binary mixture combining discrete and
+  continuous age components shown as a) CADs and b) histograms and
+  KDEs, with the true age components shown in red, and the measured
+  age distribution in blue. c) radial plot with the minimum age model
+  of Equation~\ref{eq:Lminagemod}.}
+\label{fig:minagemod}
+\endgroup
 
 \printbibliography[heading=subbibliography]
 

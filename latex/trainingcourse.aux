@@ -550,48 +550,74 @@
 \newlabel{sec:mixtures}{{14.4}{72}{Mixture models}{section.14.4}{}}
 \@writefile{lof}{\defcounter {refsection}{3}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {14.3}{\ignorespaces Young U--Pb carbonate dates shown a) on a linear scale, whose KDE spills over into nonsensical negative data space, and b) on a logarithmic scale, which fixes this problem. c) shows the same data as a radial plot with a logarithmic time scale. \relax }}{72}{figure.14.3}\protected@file@percent }
 \newlabel{eq:central}{{14.4}{72}{Mixture models}{equation.14.4.4}{}}
+\@writefile{lof}{\defcounter {refsection}{3}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {14.4}{\ignorespaces Three different age models implemented in \texttt  {IsoplotR}. 1a) If the true age is a discrete event (blue peak at 1000\nobreakspace  {}Ma), and the analytical uncertainties follow a normal distribution with zero mean and 5\nobreakspace  {}Ma standard deviation, then the predicted distribution of the dates (red line) is a normal distribution with mean at 1000\nobreakspace  {}Ma and a 5\nobreakspace  {}Ma standard deviation. 1b) In this case the ordinary weighted mean (Equation\nobreakspace  {}\ref  {eq:wtdmean}) is the most appropriate estimator of the true age. 2a) If the true age is drawn from a normal distribution with a mean of 1000\nobreakspace  {}Ma and a standard deviation of 5\nobreakspace  {}Ma (blue line), and if the analytical uncertainties follow a normal distribution with zero mean and 5\nobreakspace  {}Ma standard deviation, then the predicted distribution of the dates (red line) is a normal distribution with mean at 1000\nobreakspace  {}Ma and a $\sqrt  {50}$\nobreakspace  {}Ma standard deviation. 2b) In this case the random effects model of Equation\nobreakspace  {}\ref  {eq:wtdmean-model-3} is the most appropriate estimator of the mean \emph  {and} the standard deviation of the true ages. The latter parameter is reported as the dispersion in the legend. 3a) If the true ages are drawn from a lognormal distribution with location parameter 10\nobreakspace  {}Ma and a dispersion parameter of 50\% (blue line), and the analytical uncertainties are $\sim $50\%, then the distribution of the measured dates (red line) is a lognormal distribution with $10/\sqrt  {2}$\% dispersion parameter. 3b) In this case the random effects model of Equation\nobreakspace  {}\ref  {eq:central} is the best way to average the data, and the radial plot with logarithmic scale is the best way to visualise the results. \relax }}{72}{figure.14.4}\protected@file@percent }
+\newlabel{eq:mixture}{{14.5}{73}{Mixture models}{equation.14.4.5}{}}
+\@writefile{lof}{\defcounter {refsection}{3}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {14.5}{\ignorespaces a) cumulative distribution of the true ages of a binary mixture of two discrete age components (red) and the CAD of the measured ages of 50 measured dates (blue). b) histogram and KDE of the binary mixture. c) results of the mixture model, shown as a radial plot. \relax }}{73}{figure.14.5}\protected@file@percent }
 \abx@aux@cite{galbraith2005}
 \abx@aux@segm{3}{0}{galbraith2005}
-\newlabel{eq:mixture}{{14.5}{73}{Mixture models}{equation.14.4.5}{}}
-\abx@aux@page{84}{73}
-\abx@aux@page{85}{73}
-\abx@aux@page{86}{73}
-\abx@aux@page{87}{73}
-\abx@aux@page{88}{74}
-\abx@aux@page{89}{74}
-\abx@aux@page{90}{74}
-\abx@aux@page{91}{74}
-\abx@aux@page{92}{74}
-\abx@aux@page{93}{74}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {part}{III\hspace  {1em}\texttt  {IsoplotR} manual}{75}{part.3}\protected@file@percent }
-\abx@aux@refsection{4}{76}
-\abx@aux@cite{ludwig1988}
-\abx@aux@segm{4}{0}{ludwig1988}
-\abx@aux@cite{ludwig1999}
-\abx@aux@segm{4}{0}{ludwig1999}
-\abx@aux@cite{ludwig2003}
-\abx@aux@segm{4}{0}{ludwig2003}
-\abx@aux@cite{ludwig2012}
-\abx@aux@segm{4}{0}{ludwig2012}
-\abx@aux@cite{vermeesch2018c}
-\abx@aux@segm{4}{0}{vermeesch2018c}
-\newlabel{refsection:4}{{III}{76}{\texttt {IsoplotR} manual}{part.3}{}}
-\@writefile{toc}{\defcounter {refsection}{4}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {15}Introduction to \texttt  {IsoplotR}}{76}{chapter.15}\protected@file@percent }
+\abx@aux@cite{vermeesch2019b}
+\abx@aux@segm{3}{0}{vermeesch2019b}
+\abx@aux@cite{vermeesch2019b}
+\abx@aux@segm{3}{0}{vermeesch2019b}
+\newlabel{fig:discretemixtures}{{14.5}{74}{a) cumulative distribution of the true ages of a binary mixture of two discrete age components (red) and the CAD of the measured ages of 50 measured dates (blue). b) histogram and KDE of the binary mixture. c) results of the mixture model, shown as a radial plot.\\\relax }{figure.14.5}{}}
+\abx@aux@page{84}{74}
+\@writefile{lof}{\defcounter {refsection}{3}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {14.6}{\ignorespaces Application of finite mixture modelling to a continuous mixture. Increasing sample size from left (a) to right (c) provides statistical justification to fit more components. Note that the age of the youngest age component gets progressively younger with increasing sample size, from 150\nobreakspace  {}Ma for sample (a) to 94\nobreakspace  {}Ma for sample (c), and is therefore not a reliable estimator of the minimum age. Figure adapted from \citet {vermeesch2019b}. \relax }}{74}{figure.14.6}\protected@file@percent }
+\abx@aux@page{86}{74}
+\newlabel{fig:increasingn}{{14.6}{74}{Application of finite mixture modelling to a continuous mixture. Increasing sample size from left (a) to right (c) provides statistical justification to fit more components. Note that the age of the youngest age component gets progressively younger with increasing sample size, from 150~Ma for sample (a) to 94~Ma for sample (c), and is therefore not a reliable estimator of the minimum age. Figure adapted from \citet {vermeesch2019b}.\\\relax }{figure.14.6}{}}
+\newlabel{eq:Lminagemod}{{14.6}{74}{Mixture models}{equation.14.4.6}{}}
+\abx@aux@refsection{4}{75}
+\@writefile{lof}{\defcounter {refsection}{3}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {14.7}{\ignorespaces A binary mixture combining discrete and continuous age components shown as a) CADs and b) histograms and KDEs, with the true age components shown in red, and the measured age distribution in blue. c) radial plot with the minimum age model of Equation\nobreakspace  {}\ref  {eq:Lminagemod}.\relax }}{75}{figure.14.7}\protected@file@percent }
+\newlabel{fig:minagemod}{{14.7}{75}{A binary mixture combining discrete and continuous age components shown as a) CADs and b) histograms and KDEs, with the true age components shown in red, and the measured age distribution in blue. c) radial plot with the minimum age model of Equation~\ref {eq:Lminagemod}.\relax }{figure.14.7}{}}
+\abx@aux@page{87}{75}
+\abx@aux@page{88}{75}
+\abx@aux@page{89}{75}
+\abx@aux@page{90}{75}
+\abx@aux@page{91}{75}
+\abx@aux@page{92}{75}
+\abx@aux@page{93}{75}
+\abx@aux@page{94}{75}
+\abx@aux@page{95}{75}
+\abx@aux@page{96}{75}
+\abx@aux@page{97}{75}
+\abx@aux@page{98}{75}
+\newlabel{refsection:4}{{12}{75}{Introduction}{section*.14}{}}
+\@writefile{toc}{\defcounter {refsection}{4}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {15}U--Pb geochronology}{76}{chapter.15}\protected@file@percent }
 \@writefile{lof}{\defcounter {refsection}{4}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{4}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:intro2IsoplotR}{{15}{76}{Introduction to \texttt {IsoplotR}}{chapter.15}{}}
-\abx@aux@page{94}{76}
-\abx@aux@page{95}{76}
-\abx@aux@page{96}{76}
-\abx@aux@page{97}{76}
-\abx@aux@page{98}{76}
-\@writefile{toc}{\defcounter {refsection}{4}\relax }\@writefile{toc}{\contentsline {section}{\numberline {15.1}Software architecture}{76}{section.15.1}\protected@file@percent }
-\newlabel{sec:architecture}{{15.1}{76}{Software architecture}{section.15.1}{}}
-\@writefile{toc}{\defcounter {refsection}{4}\relax }\@writefile{toc}{\contentsline {section}{\numberline {15.2}The Graphical User Interface (GUI)}{77}{section.15.2}\protected@file@percent }
-\newlabel{sec:GUI}{{15.2}{77}{The Graphical User Interface (GUI)}{section.15.2}{}}
-\@writefile{toc}{\defcounter {refsection}{4}\relax }\@writefile{toc}{\contentsline {section}{\numberline {15.3}The Command Line Interface (CLI)}{79}{section.15.3}\protected@file@percent }
+\newlabel{ch:U-Pb}{{15}{76}{U--Pb geochronology}{chapter.15}{}}
+\@writefile{toc}{\defcounter {refsection}{4}\relax }\@writefile{toc}{\contentsline {section}{\numberline {15.1}Input formats}{76}{section.15.1}\protected@file@percent }
+\newlabel{sec:UPbFormats}{{15.1}{76}{Input formats}{section.15.1}{}}
+\@writefile{toc}{\defcounter {refsection}{4}\relax }\@writefile{toc}{\contentsline {section}{\numberline {15.2}Concordia diagrams and ages}{77}{section.15.2}\protected@file@percent }
+\newlabel{sec:concordia}{{15.2}{77}{Concordia diagrams and ages}{section.15.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {part}{III\hspace  {1em}\texttt  {IsoplotR} manual}{78}{part.3}\protected@file@percent }
+\abx@aux@refsection{5}{79}
+\abx@aux@cite{ludwig1988}
+\abx@aux@segm{5}{0}{ludwig1988}
+\abx@aux@cite{ludwig1999}
+\abx@aux@segm{5}{0}{ludwig1999}
+\abx@aux@cite{ludwig2003}
+\abx@aux@segm{5}{0}{ludwig2003}
+\abx@aux@cite{ludwig2012}
+\abx@aux@segm{5}{0}{ludwig2012}
+\abx@aux@cite{vermeesch2018c}
+\abx@aux@segm{5}{0}{vermeesch2018c}
+\newlabel{refsection:5}{{III}{79}{\texttt {IsoplotR} manual}{part.3}{}}
+\@writefile{toc}{\defcounter {refsection}{5}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {16}Introduction to \texttt  {IsoplotR}}{79}{chapter.16}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{5}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{5}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:intro2IsoplotR}{{16}{79}{Introduction to \texttt {IsoplotR}}{chapter.16}{}}
+\abx@aux@page{99}{79}
+\abx@aux@page{100}{79}
+\abx@aux@page{101}{79}
+\abx@aux@page{102}{79}
+\abx@aux@page{103}{79}
+\@writefile{toc}{\defcounter {refsection}{5}\relax }\@writefile{toc}{\contentsline {section}{\numberline {16.1}Software architecture}{79}{section.16.1}\protected@file@percent }
+\newlabel{sec:architecture}{{16.1}{79}{Software architecture}{section.16.1}{}}
+\@writefile{toc}{\defcounter {refsection}{5}\relax }\@writefile{toc}{\contentsline {section}{\numberline {16.2}The Graphical User Interface (GUI)}{80}{section.16.2}\protected@file@percent }
+\newlabel{sec:GUI}{{16.2}{80}{The Graphical User Interface (GUI)}{section.16.2}{}}
+\@writefile{toc}{\defcounter {refsection}{5}\relax }\@writefile{toc}{\contentsline {section}{\numberline {16.3}The Command Line Interface (CLI)}{82}{section.16.3}\protected@file@percent }
 \abx@aux@cite{wilkinson2016}
-\abx@aux@segm{4}{0}{wilkinson2016}
+\abx@aux@segm{5}{0}{wilkinson2016}
 \abx@aux@refcontextdefaultsdone
 \abx@aux@defaultrefcontext{1}{aldrich1948}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{1}{allegre2008}{nyt/global//global/global}
@@ -620,6 +646,7 @@
 \abx@aux@defaultrefcontext{3}{abramson1982}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{3}{botev2010}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{3}{galbraith1990a}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{3}{galbraith2005}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{3}{galbraith1999}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{3}{ludwig2003}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{3}{kerm2003}{nyt/global//global/global}
@@ -627,12 +654,13 @@
 \abx@aux@defaultrefcontext{3}{vermeesch2012b}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{3}{vermeesch2018b}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{3}{vermeesch2018d}{nyt/global//global/global}
-\abx@aux@defaultrefcontext{4}{ludwig1988}{nyt/global//global/global}
-\abx@aux@defaultrefcontext{4}{ludwig1999}{nyt/global//global/global}
-\abx@aux@defaultrefcontext{4}{ludwig2003}{nyt/global//global/global}
-\abx@aux@defaultrefcontext{4}{ludwig2012}{nyt/global//global/global}
-\abx@aux@defaultrefcontext{4}{vermeesch2018c}{nyt/global//global/global}
-\abx@aux@defaultrefcontext{4}{wilkinson2016}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{3}{vermeesch2019b}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{5}{ludwig1988}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{5}{ludwig1999}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{5}{ludwig2003}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{5}{ludwig2012}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{5}{vermeesch2018c}{nyt/global//global/global}
+\abx@aux@defaultrefcontext{5}{wilkinson2016}{nyt/global//global/global}
 \abx@aux@defaultlabelprefix{1}{aldrich1948}{}
 \abx@aux@defaultlabelprefix{1}{allegre2008}{}
 \abx@aux@defaultlabelprefix{1}{braun2006}{}
@@ -660,6 +688,7 @@
 \abx@aux@defaultlabelprefix{3}{abramson1982}{}
 \abx@aux@defaultlabelprefix{3}{botev2010}{}
 \abx@aux@defaultlabelprefix{3}{galbraith1990a}{}
+\abx@aux@defaultlabelprefix{3}{galbraith2005}{}
 \abx@aux@defaultlabelprefix{3}{galbraith1999}{}
 \abx@aux@defaultlabelprefix{3}{ludwig2003}{}
 \abx@aux@defaultlabelprefix{3}{kerm2003}{}
@@ -667,16 +696,17 @@
 \abx@aux@defaultlabelprefix{3}{vermeesch2012b}{}
 \abx@aux@defaultlabelprefix{3}{vermeesch2018b}{}
 \abx@aux@defaultlabelprefix{3}{vermeesch2018d}{}
-\abx@aux@defaultlabelprefix{4}{ludwig1988}{}
-\abx@aux@defaultlabelprefix{4}{ludwig1999}{}
-\abx@aux@defaultlabelprefix{4}{ludwig2003}{}
-\abx@aux@defaultlabelprefix{4}{ludwig2012}{}
-\abx@aux@defaultlabelprefix{4}{vermeesch2018c}{}
-\abx@aux@defaultlabelprefix{4}{wilkinson2016}{}
-\abx@aux@page{99}{80}
-\abx@aux@page{100}{80}
-\abx@aux@page{101}{80}
-\abx@aux@page{102}{80}
-\abx@aux@page{103}{80}
-\abx@aux@page{104}{80}
-\abx@aux@page{105}{80}
+\abx@aux@defaultlabelprefix{3}{vermeesch2019b}{}
+\abx@aux@defaultlabelprefix{5}{ludwig1988}{}
+\abx@aux@defaultlabelprefix{5}{ludwig1999}{}
+\abx@aux@defaultlabelprefix{5}{ludwig2003}{}
+\abx@aux@defaultlabelprefix{5}{ludwig2012}{}
+\abx@aux@defaultlabelprefix{5}{vermeesch2018c}{}
+\abx@aux@defaultlabelprefix{5}{wilkinson2016}{}
+\abx@aux@page{104}{83}
+\abx@aux@page{105}{83}
+\abx@aux@page{106}{83}
+\abx@aux@page{107}{83}
+\abx@aux@page{108}{83}
+\abx@aux@page{109}{83}
+\abx@aux@page{110}{83}
