@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.8)  13 MAR 2021 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.8)  14 MAR 2021 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1857,13 +1857,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--129
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 163.
+LaTeX Warning: Reference `sec:discordia' on page 77 undefined on input line 180
+.
 
-Package biblatex Info: Reference section=0 on input line 165.
-) [77]
+
+LaTeX Warning: Reference `sec:common-Pb' on page 77 undefined on input line 202
+.
+
+<../figures/3xconcordia.pdf, id=1685, 543.4582pt x 174.29907pt>
+File: ../figures/3xconcordia.pdf Graphic file (type pdf)
+<use ../figures/3xconcordia.pdf>
+Package pdftex.def Info: ../figures/3xconcordia.pdf  used on input line 205.
+(pdftex.def)             Requested size: 455.24411pt x 146.01126pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 208.
+See the caption package documentation for explanation.
+
+[77]
+<../figures/concordia_age.pdf, id=1698, 588.62697pt x 145.84163pt>
+File: ../figures/concordia_age.pdf Graphic file (type pdf)
+<use ../figures/concordia_age.pdf>
+Package pdftex.def Info: ../figures/concordia_age.pdf  used on input line 324.
+(pdftex.def)             Requested size: 455.24411pt x 112.79242pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 328.
+See the caption package documentation for explanation.
+
+[78 <../figures/3xconcordia.pdf> <../figures/concordia_age.pdf
+
+pdfTeX warning: pdflatex (file ../figures/concordia_age.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>]
+Package biblatex Info: Reference section=0 on input line 333.
+) [79]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 108.
- [78
+ [80
 
 ] (./intro2IsoplotR.tex
 \blx@maxsegment@5=\count418
@@ -1899,14 +1931,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--51
 
  []
 
-[79
+[81
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 83--90
 
  []
 
-<../figures/IsoplotR.png, id=1716, 1141.26375pt x 656.4525pt>
+<../figures/IsoplotR.png, id=1786, 1141.26375pt x 656.4525pt>
 File: ../figures/IsoplotR.png Graphic file (type png)
 <use ../figures/IsoplotR.png>
 Package pdftex.def Info: ../figures/IsoplotR.png  used on input line 91.
@@ -1916,7 +1948,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<../figures/chronometerbutton.png, id=1717, 118.4425pt x 47.17625pt>
+<../figures/chronometerbutton.png, id=1787, 118.4425pt x 47.17625pt>
 File: ../figures/chronometerbutton.png Graphic file (type png)
 <use ../figures/chronometerbutton.png>
 Package pdftex.def Info: ../figures/chronometerbutton.png  used on input line 9
@@ -1932,8 +1964,8 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 93--104
 [] [] 
  []
 
-[80 <../figures/IsoplotR.png>]
-<../figures/plotdevices.png, id=1722, 159.59625pt x 46.1725pt>
+[82 <../figures/IsoplotR.png>]
+<../figures/plotdevices.png, id=1792, 159.59625pt x 46.1725pt>
 File: ../figures/plotdevices.png Graphic file (type png)
 <use ../figures/plotdevices.png>
 Package pdftex.def Info: ../figures/plotdevices.png  used on input line 107.
@@ -1948,7 +1980,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 105--114
 [] [] 
  []
 
-<../figures/Options.png, id=1723, 117.43875pt x 46.1725pt>
+<../figures/Options.png, id=1793, 117.43875pt x 46.1725pt>
 File: ../figures/Options.png Graphic file (type png)
 <use ../figures/Options.png>
 Package pdftex.def Info: ../figures/Options.png  used on input line 117.
@@ -1963,7 +1995,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 115--124
 [] [] 
  []
 
-<../figures/Help.png, id=1724, 86.3225pt x 45.16875pt>
+<../figures/Help.png, id=1794, 86.3225pt x 45.16875pt>
 File: ../figures/Help.png Graphic file (type png)
 <use ../figures/Help.png>
 Package pdftex.def Info: ../figures/Help.png  used on input line 127.
@@ -1978,12 +2010,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 125--135
 [] [] 
  []
 
-<../figures/Open.png, id=1725, 101.37875pt x 46.1725pt>
+<../figures/Open.png, id=1795, 101.37875pt x 46.1725pt>
 File: ../figures/Open.png Graphic file (type png)
 <use ../figures/Open.png>
 Package pdftex.def Info: ../figures/Open.png  used on input line 138.
 (pdftex.def)             Requested size: 37.5563pt x 17.10538pt.
-<../figures/Save.png, id=1726, 91.34125pt x 45.16875pt>
+<../figures/Save.png, id=1796, 91.34125pt x 45.16875pt>
 File: ../figures/Save.png Graphic file (type png)
 <use ../figures/Save.png>
 Package pdftex.def Info: ../figures/Save.png  used on input line 139.
@@ -2003,12 +2035,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 136--145
 [] [] 
  []
 
-<../figures/PLOT.png, id=1727, 99.37125pt x 45.16875pt>
+<../figures/PLOT.png, id=1797, 99.37125pt x 45.16875pt>
 File: ../figures/PLOT.png Graphic file (type png)
 <use ../figures/PLOT.png>
 Package pdftex.def Info: ../figures/PLOT.png  used on input line 148.
 (pdftex.def)             Requested size: 37.5563pt x 17.07124pt.
-<../figures/RUN.png, id=1728, 88.33pt x 44.165pt>
+<../figures/RUN.png, id=1798, 88.33pt x 44.165pt>
 File: ../figures/RUN.png Graphic file (type png)
 <use ../figures/RUN.png>
 Package pdftex.def Info: ../figures/RUN.png  used on input line 149.
@@ -2028,12 +2060,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 146--156
 [] [] 
  []
 
-<../figures/PDF.png, id=1729, 85.31876pt x 46.1725pt>
+<../figures/PDF.png, id=1799, 85.31876pt x 46.1725pt>
 File: ../figures/PDF.png Graphic file (type png)
 <use ../figures/PDF.png>
 Package pdftex.def Info: ../figures/PDF.png  used on input line 159.
 (pdftex.def)             Requested size: 37.5563pt x 20.3244pt.
-<../figures/CSV.png, id=1730, 88.33pt x 47.17625pt>
+<../figures/CSV.png, id=1800, 88.33pt x 47.17625pt>
 File: ../figures/CSV.png Graphic file (type png)
 <use ../figures/CSV.png>
 Package pdftex.def Info: ../figures/CSV.png  used on input line 160.
@@ -2053,7 +2085,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 157--170
 [] [] 
  []
 
-<../figures/C.png, id=1731, 68.255pt x 31.11626pt>
+<../figures/C.png, id=1801, 68.255pt x 31.11626pt>
 File: ../figures/C.png Graphic file (type png)
 <use ../figures/C.png>
 Package pdftex.def Info: ../figures/C.png  used on input line 173.
@@ -2073,7 +2105,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 171--180
 [] [] 
  []
 
-<../figures/omit.png, id=1732, 67.25125pt x 116.435pt>
+<../figures/omit.png, id=1802, 67.25125pt x 116.435pt>
 File: ../figures/omit.png Graphic file (type png)
 <use ../figures/omit.png>
 Package pdftex.def Info: ../figures/omit.png  used on input line 183.
@@ -2088,7 +2120,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 181--192
 [] [] 
  []
 
-<../figures/formats.png, id=1733, 259.97125pt x 95.35625pt>
+<../figures/formats.png, id=1803, 259.97125pt x 95.35625pt>
 File: ../figures/formats.png Graphic file (type png)
 <use ../figures/formats.png>
 Package pdftex.def Info: ../figures/formats.png  used on input line 195.
@@ -2103,7 +2135,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 193--202
 [] [] 
  []
 
-<../figures/ierr.png, id=1734, 215.80624pt x 117.43875pt>
+<../figures/ierr.png, id=1804, 215.80624pt x 117.43875pt>
 File: ../figures/ierr.png Graphic file (type png)
 <use ../figures/ierr.png>
 Package pdftex.def Info: ../figures/ierr.png  used on input line 205.
@@ -2132,7 +2164,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 214--222
 [] [] 
  []
 
-<../figures/contextualhelp.png, id=1735, 477.785pt x 260.975pt>
+<../figures/contextualhelp.png, id=1805, 477.785pt x 260.975pt>
 File: ../figures/contextualhelp.png Graphic file (type png)
 <use ../figures/contextualhelp.png>
 Package pdftex.def Info: ../figures/contextualhelp.png  used on input line 225.
@@ -2143,7 +2175,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 223--231
 [] [] 
  []
 
-[81 <../figures/chronometerbutton.png> <../figures/plotdevices.png> <../figures
+[83 <../figures/chronometerbutton.png> <../figures/plotdevices.png> <../figures
 /Options.png> <../figures/Help.png> <../figures/Open.png> <../figures/Save.png>
  <../figures/PLOT.png> <../figures/RUN.png> <../figures/PDF.png> <../figures/CS
 V.png> <../figures/C.png> <../figures/omit.png> <../figures/formats.png> <../fi
@@ -2169,7 +2201,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
 
-[82 <../figures/contextualhelp.png>]
+[84 <../figures/contextualhelp.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 308--310
 
  []
@@ -2177,7 +2209,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--310
 Package biblatex Info: Reference section=0 on input line 321.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
- [83]
+ [85]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
  (./trainingcourse.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
@@ -2197,13 +2229,13 @@ Package logreq Info: Writing requests to 'trainingcourse.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  ) 
 Here is how much of TeX's memory you used:
- 17033 strings out of 481239
- 295373 string characters out of 5920378
- 775184 words of memory out of 5000000
- 31454 multiletter control sequences out of 15000+600000
+ 17072 strings out of 481239
+ 296308 string characters out of 5920378
+ 775308 words of memory out of 5000000
+ 31479 multiletter control sequences out of 15000+600000
  548674 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,17n,71p,2075b,1768s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,17n,71p,2075b,1768s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.0@galbraith2005} has been referenced but doe
 s not exist, replaced by a fixed one
 
@@ -2240,10 +2272,10 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmb10.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sfrm1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/wasy-type1/was
 y10.pfb>
-Output written on trainingcourse.pdf (83 pages, 2055697 bytes).
+Output written on trainingcourse.pdf (85 pages, 2110927 bytes).
 PDF statistics:
- 1945 PDF objects out of 2073 (max. 8388607)
- 1630 compressed objects within 17 object streams
- 486 named destinations out of 1000 (max. 500000)
- 851 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2018 PDF objects out of 2073 (max. 8388607)
+ 1684 compressed objects within 17 object streams
+ 498 named destinations out of 1000 (max. 500000)
+ 861 words of extra memory for PDF output out of 10000 (max. 10000000)
 

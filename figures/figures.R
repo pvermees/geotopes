@@ -293,3 +293,31 @@ pars()
 radialplot(cbind(rx,sx),transformation='log')
 legend('topleft',legend='3d',bty='n')
 dev.off()
+
+cairo(file='~/Documents/temp/concordia.pdf',height=2.5,width=7.5)
+pars(mfrow=c(1,3))
+fn <- system.file('UPb8.csv',package='IsoplotR')
+UPb <- read.data(fn,method='U-Pb',format=8)
+concordia(UPb,type=1)
+concordia(UPb,type=2,ticks=c(25,50,100,500,2000,3000,4000))
+concordia(UPb,type=3)
+dev.off()
+
+cairo(file='~/Documents/temp/concordia_age.pdf',height=2,width=8)
+pars(mfrow=c(1,4))
+conc <- concordia(examples$UPb,hide=10,show.age=1)
+xconc <- IsoplotR:::age_to_Pb207U235_ratio(conc$age[1])[1]
+yconc <- IsoplotR:::age_to_Pb206U238_ratio(conc$age[1])[1]
+concordia(examples$UPb,hide=10,show.age=1,
+          xlim=c(0.28,0.2825),ylim=c(0.0396,0.0399),
+          ticks=seq(from=250,to=253,by=0.5))
+points(xconc,yconc,pch=21,bg='white')
+conc <- concordia(examples$UPb,hide=10,show.age=1,type=2,
+                  xlim=c(24.9,25.4),ylim=c(0.0508,0.0518))
+xconc <- IsoplotR:::age_to_U238Pb206_ratio(conc$age[1])[1]
+yconc <- IsoplotR:::age_to_Pb207Pb206_ratio(conc$age[1])[1]
+concordia(examples$UPb,hide=10,show.age=1,type=2,
+          xlim=c(25.1,25.2),ylim=c(0.0512,0.05145),
+          ticks=seq(from=250,to=253,by=0.5))
+points(xconc,yconc,pch=21,bg='white')
+dev.off()
