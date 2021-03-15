@@ -205,7 +205,7 @@ which will briefly mention the U--Th-Pb diagram again.
 \noindent\includegraphics[width=\textwidth]{../figures/3xconcordia.pdf}
 \begingroup \captionof{figure}{The allanite dataset of
   \citet{janots2014} shown on a) Wetherill, b) Tera-Wasserburg and c)
-  U--Th--Pb concordia diagram.}\endgroup
+  U--Th--Pb concordia diagrams.\\}\endgroup
 
 In the absence of (or after correction for) common Pb or other
 complications, multiple aliquots from the same sample may plot on the
@@ -216,12 +216,13 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
 
 \begin{enumerate}
   \item Calculate the two-dimensional error-weighted average
-    ($\{\bar{x},\bar{y}\}$) of the U--Pb ratios, by maximising the
-    likelihood function. In Wetherill space:
-    \[
-    \mathcal{LL} \propto
-    - \sum\limits_{i=1}^{n}
-    \left[
+    ($\{\bar{x},\bar{y}\}$) of the U--Pb ratios, by minimising the sum
+    of squares $S$ or, equivalently, by maximising the likelihood for
+    equivalence 
+    $\mathcal{LL}_e$. In Wetherill space:
+    \begin{equation}
+      \mathcal{LL}_e \propto - \frac{S_e}{2} =
+      -\frac{1}{2}\sum\limits_{i=1}^{n} \left[
       \begin{array}{@{}c@{}}
         \left[\frac{07}{35}\right]_i-\bar{x}\\
         \left[\frac{06}{38}\right]_i-\bar{y}
@@ -241,12 +242,12 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
         \left[\frac{06}{38}\right]_i-\bar{y}
       \end{array}
       \right]    
-    \]
+    \end{equation}
 
     or in Tera-Wasserburg space:
-        \[
-    \mathcal{LL} \propto
-    - \sum\limits_{i=1}^{n}
+        \begin{equation}
+    \mathcal{LL}_e \propto - \frac{S_e}{2} =
+      -\frac{1}{2}\sum\limits_{i=1}^{n}
     \left[
       \begin{array}{@{}c@{}}
         \left[\frac{38}{06}\right]_i-\bar{x}\\
@@ -267,20 +268,19 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
         \left[\frac{07}{06}\right]_i-\bar{y}
       \end{array}
       \right]    
-    \]
+    \end{equation}
 
     Using standard maximum likelihood theory, the covariance matrix of
     the weighted mean composition ($\Sigma_{\bar{x},\bar{y}}$) is
-    obtained by inverting the matrix of second derivatives of
-    $\mathcal{LL}$.
+    obtained by inverting the Fisher information matrix.
     
   \item Given the concordia composition $\{\bar{x},\bar{y}\}$ obtained
     in the previous step, compute the most likely age ($t_c$) of this
-    concordia composition. This is again done using the method of
-    maximum likelihood. In Wetherill space:
-        \[
-    \mathcal{LL} \propto
-    - \sum\limits_{i=1}^{n}
+    concordia composition. This is done by maximising the likelihood
+    of concordance. In Wetherill space:
+        \begin{equation}
+    \mathcal{LL}_c \propto - \frac{S_c}{2} =
+      -\frac{1}{2}\sum\limits_{i=1}^{n}
     \left[
       \begin{array}{@{}c@{}}
         \bar{x} - (\exp[\lambda_{235}t_c] - 1)\\
@@ -294,12 +294,12 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
         \bar{y} - (\exp[\lambda_{238}t_c] - 1)
       \end{array}
       \right]
-    \]
+    \end{equation}
 
     Or in Tera-Wasserburg space:
-        \[
-    \mathcal{LL} \propto
-    - \sum\limits_{i=1}^{n}
+        \begin{equation}
+    \mathcal{LL}_c \propto - \frac{S_c}{2} =
+      -\frac{1}{2}\sum\limits_{i=1}^{n}
     \left[
       \begin{array}{@{}c@{}}
         \bar{x} - \frac{1}{\exp[\lambda_{238}t_c] - 1}\\
@@ -316,20 +316,83 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
         \frac{\exp[\lambda_{235}t_c] - 1}
              {\exp[\lambda_{238}t_c] - 1}
       \end{array}
-      \right]^T
-    \]
+      \right]
+    \end{equation}
 
-    Again, the uncertainty of $t_c$ is obtained by inverting the
-    Fisher information matrix.
+    Again, the uncertainty of $t_c$ is obtained from the Fisher
+    information matrix.
     
 \end{enumerate}
+
+The same concordia age is obtained regardless of whether the
+calculations are carried out in Wetherill or Tera-Wasserburg space.\\
 
 \noindent\includegraphics[width=\textwidth]{../figures/concordia_age.pdf}
 \begingroup \captionof{figure}{1) Wetherill and 2) Tera-Wasserburg
   concordia diagram with a) the weighted mean composition shown as
-  white error ellipse, and b) the maximum concordia age shown as a red
-  circle.}\endgroup
+  white error ellipse, and b) the concordia age (251.3~Ma) is shown as
+  a red circle.\\}\endgroup
 
+The goodness-of-fit can be quantified either using a chi-square test,
+or with the MSWD. We can define three p-values and three MSWD values:
+
+\begin{description}
+\item{concordance}: MSWD\textsubscript{c} $= S_c$
+\item{equivalence}: MSWD\textsubscript{e} $= S_e/(2n-2)$
+\item{combined}: MSWD $= (S_e + S_c)/(2n-1)$
+\end{description}
+
+\noindent\includegraphics[width=\textwidth]{../figures/concordia_MSWD.pdf}
+\begingroup \captionof{figure}{MSWDs and p-values for 1) equivalence
+  and 2) concordance for data that are a) underdispersed, b) dispersed
+  by an amount that is consistent with the analytical uncertainties,
+  and c) overdispersed with respect to the analytical
+  uncertainties.\\}\endgroup
+
+In high precision geochronology, the analytical uncertainty of the
+uranium decay constants becomes a significant factor in assessing the
+degree of concordance. This uncertainty represents a systematic error,
+which can be added to the covariance matrix of the weighted mean
+composition:
+\begin{equation}
+  \Sigma_{\bar{x},\bar{y}}^{'} =
+  \Sigma_{\bar{x},\bar{y}} + t_c^2
+  \left[
+    \begin{array}{@{}c@{}}
+      \exp[\lambda_{235}t_c] \\
+      \exp[\lambda_{238}t_c]      
+    \end{array}
+    \right]^T
+  \left[
+    \begin{array}{@{}cc@{}}
+      \sigma[\lambda_{235}]^2 & \sigma[\lambda_{235},\lambda_{238}] \\
+      \sigma[\lambda_{235},\lambda_{238}] & \sigma[\lambda_{238}]^2
+    \end{array}
+    \right]
+  \left[
+    \begin{array}{@{}c@{}}
+      \exp[\lambda_{235}t_c]\\
+      \exp[\lambda_{238}t_c]
+    \end{array}
+    \right]
+\end{equation}
+
+\noindent where $\sigma[\lambda_{235}]$, $\sigma[\lambda_{238}]$ and
+$\sigma[\lambda_{235},\lambda_{238}]$ are the (co)variances of the
+\textsuperscript{235}U and \textsuperscript{238}U decay constants.
+\texttt{IsoplotR} visualises the decay constant uncertainties by
+increasing the width of the concordia line, and takes them into
+account when calculating the MSWD and p-value of concordance:
+
+\begin{center}
+\noindent\includegraphics[width=.85\textwidth]{../figures/concexterr.pdf}
+\captionof{figure}{Wetherill concordia diagram with concordia age
+  calculations a) without and b) with decay constant uncertainties.
+  The legends report the MSWD and p-value for concordance $\mid$
+  equivalence $\mid$ concordance + equivalence. Taking into account
+  the decay constant uncertainty decreases the value of
+  MSWD\textsubscript{c} and increases the p-value of concordance.}
+\end{center}
 
 \printbibliography[heading=subbibliography]
 

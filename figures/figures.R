@@ -321,3 +321,40 @@ concordia(examples$UPb,hide=10,show.age=1,type=2,
           ticks=seq(from=250,to=253,by=0.5))
 points(xconc,yconc,pch=21,bg='white')
 dev.off()
+
+UPb1 <- UPb
+UPb1$x <- matrix(rep(UPb$x[1,,drop=FALSE],9),nrow=9,byrow=TRUE)
+UPb1$x[,1] <- UPb1$x[,1] + rnorm(9,mean=0,sd=0.000001)
+UPb1$x[,3] <- UPb1$x[,3] + rnorm(9,mean=0,sd=0.00001)
+colnames(UPb1$x) <- colnames(UPb$x)
+
+
+fn <- system.file('UPb1.csv',package='IsoplotR')
+UPb <- read.data(fn,method='U-Pb',format=1)
+conc <- concordia(UPb,show.age=1,hide=10,exterr=FALSE)
+cairo(file='~/Documents/temp/concordia_MSWD.pdf',height=4.5,width=8)
+set.seed(11)
+pars(mfrow=c(2,3),mar=c(2,3,3,0.5))
+xl <- c(0.277,0.287)
+yl <- c(0.0394,0.0402)
+xy <- MASS::mvrnorm(n=10,mu=conc$x,Sigma=conc$cov/1000)
+UPb1 <- UPb
+UPb1$x[,c(1,3)] <- xy
+concordia(UPb1,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
+xy <- MASS::mvrnorm(n=10,mu=conc$x,Sigma=conc$cov*20)
+UPb2 <- UPb
+UPb2$x[,c(1,3)] <- xy
+concordia(UPb2,hide=10,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
+xy <- MASS::mvrnorm(n=10,mu=conc$x,Sigma=conc$cov*100)
+UPb3 <- examples$UPb
+UPb3$x[,c(1,3)] <- xy
+concordia(UPb3,hide=10,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
+xl <- c(0.280,0.284)
+yl <- c(0.0396,0.0399)
+UPb4 <- UPb; UPb4$x[,1] <- UPb4$x[,1]-0.000615
+concordia(UPb4,hide=10,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
+UPb5 <- UPb; UPb5$x[,1] <- UPb5$x[,1]-0.0004
+concordia(UPb5,hide=10,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
+UPb6 <- UPb; UPb6$x[,1] <- UPb6$x[,1]+0.002
+concordia(UPb6,hide=10,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
+dev.off()

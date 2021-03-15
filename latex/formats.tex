@@ -1,5 +1,5 @@
 \begin{refsection}
-\chapter{Some statistical considerations}
+\chapter{Statistical considerations}
 \label{ch:formats}
 
 \section{The normal distribution}
@@ -53,11 +53,63 @@ additive processes are so common that the Gaussian distribution is
 also known as the normal distibution, implying that all other
 distributions are `abnormal'.\\
 
-$\mu$ and $\sigma$ are \emph{unknown} but can be \emph{estimated} from
-the data. This can be done using the \textbf{method of maximum
-  likelihood}.  Given $n$ data points $\{x_1, x_2, \ldots, x_n\}$
-drawn from a normal distribution, we can formulate the normal
-likelihood function as
+The normal distribution can be generalised to two dimensions using a
+pdf that comprises five parameters: the means $\mu_x$ and $\mu_y$, the
+standard deviations $\sigma_x$ and $\sigma_y$, and the covariance
+$\sigma_{x,y}$:
+\begin{equation}
+\mathcal{N}(x,y|\mu_x,\mu_y,\sigma_x^2,\sigma_y^2,\sigma_{x,y}) = \frac{
+\exp\left(-
+\left[\begin{array}{@{}cc@{}}
+(x-\mu_x) & (y-\mu_y)
+\end{array}\right]
+\left[\begin{array}{@{}c@{}c@{}}
+\sigma^2_x & \sigma_{x,y}\\
+\sigma_{x,y} & \sigma^2_y
+\end{array}\right]^{-1}
+\left[\begin{array}{@{}c@{}}
+x-\mu_x\\
+y-\mu_y
+\end{array}\right] \biggl/ 2
+\right)
+}{2\pi\sqrt{
+\left|\begin{array}{@{}c@{}c@{}}
+\sigma^2_x & \sigma_{x,y}\\
+\sigma_{x,y} & \sigma^2_y
+\end{array}\right|
+}}
+\label{eq:2dgauss}
+\end{equation}
+
+\noindent where we recognise the \textbf{covariance matrix} as
+\[\Sigma_{x,y} = 
+\left[\begin{array}{@{}c@{}c@{}}
+\sigma^2_x & \sigma_{x,y}\\
+\sigma_{x,y} & \sigma^2_y
+\end{array}\right]
+\]
+
+Finally, we can define the \textbf{correlation coefficient} as:
+\begin{equation}
+  \rho[x,y] \equiv \frac{s[x,y]}{\sqrt{s[x]s[y]}} 
+  \approx 
+  \frac{\sigma[x,y]}{\sqrt{\sigma[x]\sigma[y]}}
+  \equiv \rho
+  \label{eq:rho}
+\end{equation}
+
+\noindent $\rho[x,y]$ is akin to a normalised covariance, whose values
+range from $-1$ (perfect negative correlation) to $+1$ (perfect
+positive correlation).
+
+\section{The method of maximum likelihood}
+\label{sec:maximum-likelihood}
+
+The parameters $\mu$ and $\sigma$ of the normal distribution are
+\emph{unknown} but can be \emph{estimated} from the data. This can be
+done using the \textbf{method of maximum likelihood}.  Given $n$ data
+points $\{x_1, x_2, \ldots, x_n\}$ drawn from a normal distribution,
+we can formulate the normal likelihood function as
 \begin{equation}
   \mathcal{L}(\mu,\sigma^2|x_1,x_2,\ldots,x_n) =
   \prod\limits_{i=1}^{n}\mathcal{N}(x_i|\mu,\sigma^2)
@@ -94,7 +146,8 @@ strategy to estimate $\sigma$:
   \begin{split}
     \frac{\partial{\mathcal{LL}}}{\partial{\sigma}} & =
     \sum\limits_{i=1}^{n} - \frac{1}{\sigma} +  \frac{(x_i-\mu)^2}{\sigma^3} = 0\\
-    & \Rightarrow  \sum\limits_{i=1}^{n} \frac{(x_i-\mu)^2}{\sigma^3} = \frac{n}{\sigma} \\
+    & \Rightarrow  \sum\limits_{i=1}^{n} \frac{(x_i-\mu)^2}{\sigma^3} =
+    \frac{n}{\sigma} \\
     & \Rightarrow \hat{\sigma} = \sqrt{\frac{1}{n}\sum\limits_{i=1}^{n}(x_i-\mu)^2}
   \end{split}
   \label{eq:stdevgivenmu}
@@ -126,38 +179,9 @@ of uncertainty in the estimate of the standard deviation. This
 additional uncertainty is accounted for by subtracting one
 \textbf{degree of freedom} from the model fit.\\
 
-The normal distribution can be generalised to two dimensions using a
-pdf that comprises five parameters: the means $\mu_x$ and $\mu_y$, the
-standard deviations $\sigma_x$ and $\sigma_y$, and the covariance
-$\sigma_{x,y}$:
-\begin{equation}
-\mathcal{N}(x,y|\mu_x,\mu_y,\sigma_x^2,\sigma_y^2,\sigma_{x,y}) = \frac{
-\exp\left(-
-\left[\begin{array}{@{}cc@{}}
-(x-\mu_x) & (y-\mu_y)
-\end{array}\right]
-\left[\begin{array}{@{}c@{}c@{}}
-\sigma^2_x & \sigma_{x,y}\\
-\sigma_{x,y} & \sigma^2_y
-\end{array}\right]^{-1}
-\left[\begin{array}{@{}c@{}}
-x-\mu_x\\
-y-\mu_y
-\end{array}\right] \biggl/ 2
-\right)
-}{2\pi\sqrt{
-\left|\begin{array}{@{}c@{}c@{}}
-\sigma^2_x & \sigma_{x,y}\\
-\sigma_{x,y} & \sigma^2_y
-\end{array}\right|
-}}
-\label{eq:2dgauss}
-\end{equation}
-
-One-dimensional projections of the data on the x- and y-axis yield two
-univariate Gaussian distributions (Figure~\ref{fig:covariance}).
 Again using the method of maximum likelihood, it is possible to
-estimate the covariance as (proof omitted):
+estimate the covariance for bivariate normal distributions as (proof
+omitted):
 \begin{equation}
   \hat{\sigma}_{x,y} = \sum\limits_{i=1}^{n}\frac{1}{n}(x_i-\mu_x)(y_i-\mu_y)
 \end{equation}
@@ -189,6 +213,63 @@ Finally, we can define the \textbf{correlation coefficient} as:
   \equiv \rho
   \label{eq:rho}
 \end{equation}
+
+Besides providing a powerful tool to estimate parameters from data,
+the method of maximum likelihood can also be used to estimate the
+standard errors of those parameters. Let $\hat{z}$ be the maximum
+likelihood estimate of some parameter $z$. We can approximate the
+log-likelihood with a second order Taylor series in the vicinity of
+$\hat{z}$:
+\[
+  \mathcal{LL}(z) \approx \mathcal{LL}(\hat{z}) +
+  \frac{\partial\mathcal{LL}}{\partial{z}} (z-\hat{z}) +
+  \frac{1}{2} \frac{\partial^2\mathcal{LL}}{\partial{z^2}} (z-\hat{z})^2
+\]
+
+By definition, $\partial{\mathcal{LL}}/\partial{z}=0$ at
+$\hat{z}$. Therefore, the likelihood ($\mathcal{L}(z) =
+\exp[\mathcal{LL}(z)]$) is proportional to:
+\[
+\mathcal{L}(z) \propto 
+\exp\left[
+  \frac{1}{2} \frac{\partial^2\mathcal{LL}}{\partial{z^2}} (z-\hat{z})^2
+  \right]
+\]
+
+\noindent which can also be written as:
+\[
+\mathcal{L}(z) \propto \exp\!\left[
+  -\frac{1}{2} \frac{(z-\hat{z})^2}{
+    -\frac{1}{\frac{\partial^2\mathcal{LL}}{\partial{z^2}}}
+  }\right]
+\]
+
+This equation fits the functional form of the normal distribution
+(Equation~\ref{eq:gauss}):
+\[
+\mathcal{L}(z) \propto \exp\!\left[
+  -\frac{1}{2} \frac{(z-\hat{z})^2}{\sigma[z]^2}
+  \right]
+\]
+
+\noindent which leads to
+\begin{equation}
+  \sigma[z]^2 = \frac{1}{-\frac{\partial^2\mathcal{LL}}{\partial{z^2}}}
+  \label{eq:Fisher}
+\end{equation}
+
+$-\frac{\partial^2\mathcal{LL}}{\partial{z^2}}$ is known as the
+\textbf{Fisher Information}. Equation~\ref{eq:Fisher} can be
+generalised to multiple dimensions:
+\begin{equation}
+  \Sigma = -\mathcal{H}^{-1}
+  \label{eq:multidimFisher}
+\end{equation}
+
+\noindent where $\Sigma$ is the covariance matrix and
+$(\mathcal{H})^{-1}$ is the inverse of the (`Hessian') matrix of
+second derivatives of the log-likelihood function with respect to the
+parameters.
 
 \section{The mean square of weighted deviates (MSWD)}
 \label{sec:mswd}
