@@ -59,8 +59,12 @@
 \BOOKMARK [0][-]{chapter.15}{U\205Pb geochronology}{part.2}% 59
 \BOOKMARK [1][-]{section.15.1}{Input formats}{chapter.15}% 60
 \BOOKMARK [1][-]{section.15.2}{Concordia diagrams and ages}{chapter.15}% 61
-\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 62
-\BOOKMARK [0][-]{chapter.16}{Introduction to IsoplotR}{part.3}% 63
-\BOOKMARK [1][-]{section.16.1}{Software architecture}{chapter.16}% 64
-\BOOKMARK [1][-]{section.16.2}{The Graphical User Interface \(GUI\)}{chapter.16}% 65
-\BOOKMARK [1][-]{section.16.3}{The Command Line Interface \(CLI\)}{chapter.16}% 66
+\BOOKMARK [1][-]{section.15.3}{Discordia/isochron regression}{chapter.15}% 62
+\BOOKMARK [1][-]{section.15.4}{Common Pb}{chapter.15}% 63
+\BOOKMARK [1][-]{section.15.5}{Initial disequilibrium}{chapter.15}% 64
+\BOOKMARK [1][-]{section.15.6}{Discordance filters}{chapter.15}% 65
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 66
+\BOOKMARK [0][-]{chapter.16}{Introduction to IsoplotR}{part.3}% 67
+\BOOKMARK [1][-]{section.16.1}{Software architecture}{chapter.16}% 68
+\BOOKMARK [1][-]{section.16.2}{The Graphical User Interface \(GUI\)}{chapter.16}% 69
+\BOOKMARK [1][-]{section.16.3}{The Command Line Interface \(CLI\)}{chapter.16}% 70

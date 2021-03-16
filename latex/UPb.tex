@@ -1,6 +1,50 @@
 \begin{refsection}
-
+  
 \chapter{U--Pb geochronology}\label{ch:U-Pb}
+
+  The U--(Th--)Pb method is a rich and complex system of three
+  radioactive decay chains that provide chronometric constraints on a
+  wide range of geological processes, mineral phases and time scales.
+  U--Pb data acquisition may focus on high throughput (using
+  LA-ICP-MS), on high spatial resolution (SIMS) or on high precision
+  (TIMS), and each of these analytical approaches comes with its own
+  tradeofs. To accommodate this diversity in equipment and
+  applications, \texttt{IsoplotR}'s U--Pb functions are more extensive
+  than those of any other geochronometer. This Chapter provides an
+  in-depth overview of these functions.\\
+
+  Section~\ref{sec:UPbFormats} introduces eight different input
+  formats that accommodate different types of input
+  data. Section~\ref{sec:concordia} discusses three different types of
+  concordia diagrams that can be used to visually assess the degree to
+  which the data form a closed isotopic system, and to calculate the
+  best age of such `concordant' data. Concordant data form the bedrock
+  of the high precision geochronology and the geologic time scale.
+  The remainder of the Chapter discusses various strategies to deal
+  with discordant U--Pb compositions. Discordance can be caused by a
+  range of mechanisms, such as:
+
+  \begin{enumerate}
+    \item non-radiogenic (`common') Pb.
+    \item mixing of different growth zones in a texturally complex
+      mineral grain.
+    \item Pb-loss (or U-gain).
+    \item initial disequilibrium of the \textsuperscript{235}U and
+      \textsuperscript{238}U decay chains.
+  \end{enumerate}
+
+  The first three mechanisms give rise to linear (or planar) trends in
+  Wetherill or Tera-Wasserburg concordia
+  space. Section~\ref{sec:discordia} shows how to fit a line (or
+  plane) through such data by constrained
+  optimisation. Section~\ref{sec:common-Pb} shows how such isochrons
+  (or `discordia') lines provides one way to correct for common Pb,
+  but introduces a few other correction strategies as well.
+  Section~\ref{sec:U-Pb-disequilibrium} shows how initial enrichment or
+  depletion of short-lived nuclides such as \textsuperscript{234}U,
+  \textsuperscript{230}Th, \textsuperscript{226}Ra or
+  \textsuperscript{231}Pa can bias U--Pb ages by as much as a million
+  years, and reviews some strategies to reduce this bias.
 
 \section{Input formats}
 \label{sec:UPbFormats}
@@ -393,6 +437,157 @@ account when calculating the MSWD and p-value of concordance:
   the decay constant uncertainty decreases the value of
   MSWD\textsubscript{c} and increases the p-value of concordance.}
 \end{center}
+
+\section{Discordia/isochron regression}
+\label{sec:discordia}
+
+As discussed in the introductory paragraphs of this Chapter, U--Pb
+data can form linear trends in Wetherill or Tera-Wasserburg concordia
+space due to:
+
+\begin{enumerate}
+\item the addition of non-radiogenic Pb components (`common Pb');
+\item binary mixing of different aged growth zones;
+\item partial loss of radiogenic Pb.
+\end{enumerate}
+
+\texttt{IsoplotR} uses three different algorithms to fit these linear
+trends:
+
+\begin{enumerate}
+\item formats 1--3: Semitotal-U/Pb regression using
+  \textsuperscript{206/7}Pb and \textsuperscript{238}U. Let
+  $\left[\frac{07}{06}\right]_i$ and $\left[\frac{38}{06}\right]_i$ be
+  $n$ \textsuperscript{207}Pb/\textsuperscript{206}Pb and
+  \textsuperscript{238}U/\textsuperscript{206}Pb ratio
+  measurements\footnote{the same calculation can also be carried out
+    in Wetherill space but is omitted here for brevity.},
+  respectively. Then this algorithm chooses the common Pb composition
+  $\left[\frac{07}{06}\right]_\circ$ and concordia intercept age $t$
+  that best fits the following mixing line in a maximum likelihood
+  sense:
+  \begin{equation}
+    \left[\frac{07}{06}\right]_i = \left[\frac{07}{06}\right]_\circ -
+    \left[\frac{38}{06}\right]_i\left\{
+    \left[\frac{07}{06}\right]_\circ\left(\exp[\lambda_{238}t]-1\right)
+    -\left[\frac{35}{38}\right]_i\left(\exp[\lambda_{235}t]-1\right)
+    \right\}
+    \label{eq:semitotal-U/Pb}
+  \end{equation}
+
+  \noindent\begin{minipage}[t]{.3\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\textwidth]{../figures/UPbisochron13.pdf}
+  \end{minipage}
+  \begin{minipage}[t]{.7\linewidth}
+    \captionof{figure}{The semitotal-U/Pb isochron is a binary mixture
+      line between a non-radiogenic Pb component with
+      \textsuperscript{207}Pb/\textsuperscript{206}Pb ratio
+      $[07/06]_\circ$ and a radiogenic
+      \textsuperscript{238}U/\textsuperscript{206}Pb ratio that marks
+      a point on the concordia line corresponding to an age $t$.}
+    \label{fig:UPbisochron13}
+  \end{minipage}
+
+\item formats 4--6: Total-U/Pb regression using
+  \textsuperscript{204/6/7}Pb and \textsuperscript{235/8}U
+  \citep{ludwig1998}.  Given $n$ sets of three-dimensional isotopic
+  ratio measurements this algorithm can be formulated as a system of
+  two equations that describe two coupled mixing lines with two common
+  Pb intercepts ($\left[\frac{04}{06}\right]_\circ$ and
+  $\left[\frac{04}{07}\right]_\circ$) and a single concordia intercept
+  age $t$:
+    \begin{align}
+    \left[\frac{04}{06}\right]_i & =
+    \left[\frac{04}{06}\right]_\circ
+    \left\{
+    1 - \left[\frac{38}{06}\right]_i(\exp[\lambda_{238}t]-1)
+    \right\}\\
+    \left[\frac{04}{07}\right]_i & =
+    \left[\frac{04}{07}\right]_\circ
+    \left\{
+    1 - \left[\frac{35}{07}\right]_i(\exp[\lambda_{235}t]-1)
+    \right\}
+    \label{eq:total-U/Pb}
+    \end{align}
+    
+  \noindent\begin{minipage}[t]{.6\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\textwidth]{../figures/UPbisochron46.pdf}
+  \end{minipage}
+  \begin{minipage}[t]{.4\linewidth}
+    \captionof{figure}{The total-U/Pb isochron is a binary mixture
+      line between a non-radiogenic Pb component with
+      \textsuperscript{204}Pb/\textsuperscript{206}Pb and
+      \textsuperscript{204}Pb/\textsuperscript{207}Pb ratios
+      $[04/06]_\circ$ and $[04/07]_\circ$, and radiogenic
+      \textsuperscript{238}U/\textsuperscript{206}Pb and
+      \textsuperscript{235}U/\textsuperscript{207}Pb ratios that mark
+      a point on the concordia line corresponding to an age $t$.}
+    \label{fig:UPbisochron46}
+  \end{minipage}
+
+\item formats 7 and 8: Total-U-Th/Pb regression using
+  \textsuperscript{206/7/8}Pb \textsuperscript{232}Th and
+  \textsuperscript{235/8}U \citep{vermeesch2020}. If
+  \textsuperscript{204}Pb cannot be measured precisely enough, then we
+  can use \textsuperscript{208}Pb as a proxy for common Pb, after
+  correction for the radiogenic contribution from
+  \textsuperscript{232}Th:
+    \begin{align}
+      \left[\frac{08}{06}\right]_i -
+      \left[\frac{32}{38}\right]_i
+      \left[\frac{38}{06}\right]_i
+      \left(\exp[\lambda_{232}t]-1\right)
+      & =
+    \left[\frac{08}{06}\right]_\circ
+    \left\{
+    1 - \left[\frac{38}{06}\right]_i(\exp[\lambda_{238}t]-1)
+    \right\}\\
+      \left[\frac{08}{07}\right]_i -
+      \left[\frac{32}{38}\right]_i
+      \left[\frac{38}{35}\right]
+      \left[\frac{35}{07}\right]_i
+      \left(\exp[\lambda_{232}t]-1\right)
+      & =
+    \left[\frac{08}{07}\right]_\circ
+    \left\{
+    1 - \left[\frac{35}{07}\right]_i(\exp[\lambda_{235}t]-1)
+    \right\}
+    \label{eq:total-U-Th/Pb}
+    \end{align}
+
+    \noindent\begin{minipage}[t][][b]{\linewidth}
+    \includegraphics[width=\textwidth]{../figures/UPbisochron78.pdf}
+    \captionof{figure}{The total-U-Th/Pb isochron is constructed in a
+      similar way to the total-U/Pb isochron of
+      Figure~\ref{fig:UPbisochron46}, but using the non-radiogenic
+      \textsuperscript{208}Pb component instead of
+      \textsuperscript{204}Pb. The first step in the calculation
+      algorithm (panel a) is the removal of the radiogenic
+      \textsuperscript{208}Pb component for each aliquot in the
+      dataset. This is achieved by projecting the
+      \textsuperscript{208}Pb/\textsuperscript{206}Pb ratio onto the
+      \textsuperscript{208}Pb/\textsuperscript{206}Pb-axis along a
+      line whose slope is given by the
+      \textsuperscript{232}Th--\textsuperscript{208}Pb ingrowth
+      equation. The algorithm then iterates over the parameters
+      $[08/06]_\circ$, $[08/07]_\circ$ and $t$ until convergence is
+      reached.}
+    \label{fig:UPbisochron78}
+    \end{minipage}
+    
+\end{enumerate}
+
+
+\section{Common Pb}
+\label{sec:common-Pb}
+
+\section{Initial disequilibrium}
+\label{sec:U-Pb-disequilibrium}
+
+\section{Discordance filters}
+\label{sec:discfilter}
 
 \printbibliography[heading=subbibliography]
 

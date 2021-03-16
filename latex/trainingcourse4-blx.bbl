@@ -77,5 +77,34 @@
     \field{journaltitle}{Geochimica et Cosmochimica Acta}
     \field{year}{1998}
   \endentry
+
+  \entry{vermeesch2020}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Copernicus GmbH}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{1}
+    \field{pages}{119\bibrangedash 131}
+    \field{title}{{Unifying the U--Pb and Th--Pb methods: joint isochron
+  regression and common Pb correction}}
+    \field{volume}{2}
+    \field{journaltitle}{Geochronology}
+    \field{year}{2020}
+  \endentry
 \enddatalist
 \endinput

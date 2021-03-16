@@ -16,7 +16,7 @@
 \DefineVerbatimEnvironment{script}
                           {Verbatim}
                           {frame=single,numbers=left,framerule=0.4mm}
-
+                          
 \newif\ifpdf
 \pdftrue
 
@@ -58,6 +58,11 @@
 }
 	
 \end{titlepage}
+
+\makeatletter
+\newlength\indentwidth
+\setlength\indentwidth{\textwidth-27pt}
+\makeatother
 
 \tableofcontents
 

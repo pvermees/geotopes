@@ -358,3 +358,42 @@ concordia(UPb5,hide=10,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
 UPb6 <- UPb; UPb6$x[,1] <- UPb6$x[,1]+0.002
 concordia(UPb6,hide=10,show.age=1,exterr=FALSE,xlim=xl,ylim=yl)
 dev.off()
+
+cairo(file='~/Documents/temp/UPbisochron13.pdf',height=3,width=3)
+pars()
+fn <- system.file('UPb5.csv',package='IsoplotR')
+dat <- read.data(fn,method='U-Pb',format=5)
+concordia(dat,type=2,show.age=2,xlim=c(0,22),ylim=c(0,0.8))
+dev.off()
+
+cairo(file='~/Documents/temp/UPbisochron46.pdf',height=3,width=6)
+pars()
+pars(mfrow=c(1,2))
+isochron(dat,type=1,xlim=c(0,22),ylim=c(0,0.05))
+isochron(dat,type=2,xlim=c(0,3.5),ylim=c(0,0.07))
+dev.off()
+
+cairo(file='~/Documents/temp/UPbisochron78.pdf',height=3,width=9)
+pars()
+pars(mfrow=c(1,3),mar=c(3,3,1,1))
+fn <- system.file('UPb8.csv',package='IsoplotR')
+dat <- read.data(fn,method='U-Pb',format=8)
+fit <- isochron(dat,type=3,plot=FALSE)
+ydat <- data2york(dat,option=6,tt=fit$age[1])
+sn <- 19
+Th2Pb6 <- dat$x[sn,'Th232U238']*dat$x[sn,'U238Pb206']
+Pb8o6 <- ydat[sn,'Y']
+l232 <- settings('lambda','Th232')[1]
+Pb86 <- Pb8o6 + Th2Pb6*(exp(l232*fit$age[1])-1)
+plot(x=c(0,Th2Pb6),y=c(Pb8o6,Pb86),type='p',
+     xlim=c(0,1500),ylim=c(0,2.5),pch=16,cex=1.2)
+arrows(x0=Th2Pb6,y0=Pb86,x1=0,y1=Pb8o6,code=2,length=0.1)
+arrows(x0=Th2Pb6,y0=Pb86-2*ydat[sn,'sY'],
+       x1=Th2Pb6,y1=Pb86+2*ydat[sn,'sY'],
+       code=3,length=0.1,angle=90)
+arrows(x0=0,y0=Pb8o6-2*ydat[sn,'sY'],
+       x1=0,y1=Pb8o6+2*ydat[sn,'sY'],
+       code=3,length=0.1,angle=90)
+isochron(dat,type=1,xlim=c(0,600),ylim=c(0,2.5))
+isochron(dat,type=2,xlim=c(0,100),ylim=c(0,3))
+dev.off()
