@@ -502,13 +502,13 @@ trends:
     \left[\frac{04}{06}\right]_\circ
     \left\{
     1 - \left[\frac{38}{06}\right]_i(\exp[\lambda_{238}t]-1)
-    \right\}\\
+    \right\} \label{eq:total-U/Pb-a} \\
     \left[\frac{04}{07}\right]_i & =
     \left[\frac{04}{07}\right]_\circ
     \left\{
     1 - \left[\frac{35}{07}\right]_i(\exp[\lambda_{235}t]-1)
     \right\}
-    \label{eq:total-U/Pb}
+    \label{eq:total-U/Pb-b}
     \end{align}
     
   \noindent\begin{minipage}[t]{.6\linewidth}
@@ -523,7 +523,9 @@ trends:
       $[04/06]_\circ$ and $[04/07]_\circ$, and radiogenic
       \textsuperscript{238}U/\textsuperscript{206}Pb and
       \textsuperscript{235}U/\textsuperscript{207}Pb ratios that mark
-      a point on the concordia line corresponding to an age $t$.}
+      a point on the concordia line corresponding to an age $t$.  a)
+      shows Equation~\ref{eq:total-U/Pb-a}, b) shows
+      Equation~\ref{eq:total-U/Pb-b}.}
     \label{fig:UPbisochron46}
   \end{minipage}
 
@@ -543,7 +545,7 @@ trends:
     \left[\frac{08}{06}\right]_\circ
     \left\{
     1 - \left[\frac{38}{06}\right]_i(\exp[\lambda_{238}t]-1)
-    \right\}\\
+    \right\} \label{eq:total-U-Th/Pb-a} \\
       \left[\frac{08}{07}\right]_i -
       \left[\frac{32}{38}\right]_i
       \left[\frac{38}{35}\right]
@@ -554,7 +556,7 @@ trends:
     \left\{
     1 - \left[\frac{35}{07}\right]_i(\exp[\lambda_{235}t]-1)
     \right\}
-    \label{eq:total-U-Th/Pb}
+    \label{eq:total-U-Th/Pb-b}
     \end{align}
 
     \noindent\begin{minipage}[t][][b]{\linewidth}
@@ -564,24 +566,197 @@ trends:
       Figure~\ref{fig:UPbisochron46}, but using the non-radiogenic
       \textsuperscript{208}Pb component instead of
       \textsuperscript{204}Pb. The first step in the calculation
-      algorithm (panel a) is the removal of the radiogenic
-      \textsuperscript{208}Pb component for each aliquot in the
-      dataset. This is achieved by projecting the
+      algorithm (panel a, left hand side of
+      Equation~\ref{eq:total-U-Th/Pb-a}) is the removal of the
+      radiogenic \textsuperscript{208}Pb component for each aliquot in
+      the dataset. This is achieved by projecting the
       \textsuperscript{208}Pb/\textsuperscript{206}Pb ratio onto the
       \textsuperscript{208}Pb/\textsuperscript{206}Pb-axis along a
       line whose slope is given by the
       \textsuperscript{232}Th--\textsuperscript{208}Pb ingrowth
       equation. The algorithm then iterates over the parameters
       $[08/06]_\circ$, $[08/07]_\circ$ and $t$ until convergence is
-      reached.}
+      reached. Panel b) shows Equation~\ref{eq:total-U-Th/Pb-a},
+      whereas panel c) shows Equation~\ref{eq:total-U-Th/Pb-b}.}
     \label{fig:UPbisochron78}
     \end{minipage}
     
 \end{enumerate}
 
+The parameterisation of these three discordia regression algorithms
+implies that the discordance is caused by common Pb. However, the
+results can also be used to interpret different scenarios such as
+Pb-loss and mixing of different aged growth zones. These mechanisms
+produce mixing lines between two concordant compositions on the
+concordia line. These intercepts can be visualised using
+\texttt{IsoplotR}'s Wetherill concordia function:
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/Hourigan.pdf}
+\end{minipage}
+\noindent\begin{minipage}[t]{.5\linewidth}
+\captionof{figure}{Wetherill concordia diagram of a depth-drilling
+  experiments for a cycle-by-cycle LA-ICP-MS depth drilling experiment
+  by Jeremy Hourigan (UC Santa Cruz). As the laser drills through the
+  grain, it exposes different mixtures between two compositional end
+  members with distinct Th/U ratios as shown by the colour scale.
+  \texttt{IsoplotR} fits the mixing line by semitotal-U/Pb regression
+  (Equation~\ref{eq:semitotal-U/Pb}), the results are subsequently
+  used to infer the upper intercept as well as the lower intercept
+  with the concordia line.  }
+\label{fig:Hourigan}
+\end{minipage}
 
 \section{Common Pb}
 \label{sec:common-Pb}
+
+There are a number of different strategies to remove the
+non-radiogenic Pb component from U--(Th--)Pb measurements.  Which of
+these is most appropriate depends on the data format and geological
+setting:
+
+\begin{enumerate}
+\item In igneous and ortho-metamorphic rocks, where one can safely
+  assume that all the aliquots are cogenetic and share the same common
+  Pb composition, isochron regression is the most reliable method.
+  \begin{enumerate}
+  \item The common Pb composition as well as the concordia intercept
+    age can be obtained using the methods reviewed in
+    Section~\ref{sec:discordia}.\\
+    
+    \noindent\begin{minipage}[t]{\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron13.pdf}
+    \end{minipage}
+    \begin{minipage}[t]{\linewidth}
+      \centering
+      \captionsetup{width=.8\textwidth}
+      \captionof{figure}{
+      For LA-ICP-MS data stored in formats 1--3, the isochron
+      regression is done by semitotal-U/Pb regression (a). Projecting
+      the data onto the concordia line (b) produces common-Pb
+      corrected U--Pb compositions that are perfectly concordant by
+      definition. The legend applies to both panels.}
+    \label{fig:commonPbisochron13}
+    \end{minipage}
+
+    \noindent\begin{minipage}[t]{\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron46.pdf}
+    \end{minipage}
+    \begin{minipage}[t]{\linewidth}
+      \centering \captionsetup{width=.8\textwidth} \captionof{figure}{
+        For SIMS or TIMS data (note the small error ellipses) stored
+        in formats 4--6, the isochron regression is done by total-U/Pb
+        regression (a). Projecting the data along this 3-dimensional
+        isochron line produces common-Pb corrected compositions that
+        do not plot exactly on the concordia line. The legend applies
+        to both panels.  }
+    \label{fig:commonPbisochron46}
+    \end{minipage}
+
+  \item Alternatively, a nominal common Pb correction can be made by
+    analysing a cogenetic mineral (such as feldspar) that is poor in
+    U, and using its Pb composition as an `anchor' for a constrained
+    discordia regression.\\
+
+    \noindent\begin{minipage}[t]{\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron46nominal.pdf}
+    \end{minipage}
+    \begin{minipage}[t]{\linewidth}
+      \centering \captionsetup{width=.8\textwidth} \captionof{figure}{
+        Common-Pb correction of the same data as
+        Figure~\ref{fig:commonPbisochron13}, but using an isochron
+        that is anchored at a nominal common Pb composition of
+        \textsuperscript{206}Pb/\textsuperscript{204}Pb = 20 and
+        \textsuperscript{207}Pb/\textsuperscript{204}Pb = 16 (note the
+        zero uncertainties in the legend). In this example, this
+        procedure is less accurate (intentionally, for the sake of
+        illustration) than the unconstrained regression of
+        Figure~\ref{fig:commonPbisochron13}.}
+    \label{fig:commonPbisochron46}
+    \end{minipage}
+    
+  \end{enumerate}
+\item In sedimentary and para-metamorphic rocks, in which the grains
+  cannot safely be assumed to be cogenetic, each aliquot must be
+  treated separately.
+  \begin{enumerate}
+  \item If there is some independent evidence to support a shared
+    common-Pb composition for all the aliquots, then the radiogenic
+    composition can be obtained by two-point isochron regression
+    between that common-Pb composition and each aliquot.\\
+
+    \noindent\begin{minipage}[t]{\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron13detrital.pdf}
+    \end{minipage}
+    \begin{minipage}[t]{\linewidth}
+      \centering \captionsetup{width=.8\textwidth} \captionof{figure}{
+        Common-Pb correction of two LA-ICP-MS based detrital
+        measurements (formats 1--3) using the same nominal common Pb
+        composition with
+        \textsuperscript{206}Pb/\textsuperscript{206}Pb = 0.7308.
+        Each aliquot forms its own mixing line, and its uncertainties
+        are magnified by the extrapolation, in proportion to its
+        distance to the concordia line. This is different from the
+        joint isochron regression of
+        Figures~\ref{fig:commonPbisochron13} and
+        \ref{fig:commonPbisochron46}, in which all aliquots are
+        projected parallel to a joint regression line and the
+        uncertainties are only mildly affected by the extrapolation.}
+    \label{fig:commonPbisochron13detrital}
+    \end{minipage}
+    
+  \item In the absence of external evidence about the common Pb
+    composition, one can infer the composition from the age using a
+    mantle evolution model \citep[e.g.,][]{stacey1975}. If $t<3.7$~Ga:
+    \begin{align}
+      \left[\frac{{}^{206}Pb}{{}^{204}Pb}\right]_\circ = &
+      11.152 + 9.74
+      \left(\exp[\lambda_{238}3.7]-\exp[\lambda_{238}t]\right)
+      \label{eq:stacey-kramers-a} \\
+      \left[\frac{{}^{207}Pb}{{}^{204}Pb}\right]_\circ = &
+      12.998 + 0.0707
+      \left(\exp[\lambda_{235}3.7]-\exp[\lambda_{235}t]\right)
+      \label{eq:stacey-kramers-b} \\
+      \left[\frac{{}^{208}Pb}{{}^{204}Pb}\right]_\circ = &
+      31.23 + 36.84
+      \left(\exp[\lambda_{232}3.7]-\exp[\lambda_{232}t]\right)
+      \label{eq:stacey-kramers-c}
+    \end{align}
+
+    Each value of $t$ represents a mixing line between a point on the
+    concordia line and a point on the common-Pb intercept of the
+    concordia diagram. Using the method of maximum likelihood,
+    \texttt{IsoplotR} finds the mixing line that is closest to the
+    each U--Pb measurement in a detrital dataset. For formats 1--3, it
+    is generally possible to find an exact solution to this problem
+    (i.e., the mixing line goes directly through the measurement).
+    For formats 4--7, the problem is overconstrained and the fit is
+    generally not perfect.
+
+    \noindent\begin{minipage}[t][][b]{.4\linewidth}
+    \includegraphics[width=\textwidth]{../figures/SK.pdf}
+    \end{minipage}
+    \begin{minipage}[t][][t]{.6\linewidth}
+      \captionof{figure}{Three mixing lines between the radiogenic
+        composition of 0.5, 1 and 3~Ga samples and the inferred
+        Pb-composition of the mantle reservoir \citep[according
+          to][]{stacey1975} from which these samples were
+        hypothetically extracted. The y-intercepts correspond to
+        \textsuperscript{207}Pb/\textsuperscript{206}Pb ratios of
+        0.87, 0.91 and 1.11, respectively. For the error ellipse shown
+        on this diagram, the mixing line at $t=1$~Ga best describes
+        the composition of the sample. Hence, the common-Pb corrected
+        age of this analysis is 1~Ga.  }
+    \label{fig:commonPbSK}
+    \end{minipage}
+    
+  \end{enumerate}
+\end{enumerate}
 
 \section{Initial disequilibrium}
 \label{sec:U-Pb-disequilibrium}

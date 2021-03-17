@@ -78,6 +78,41 @@
     \field{year}{1998}
   \endentry
 
+  \entry{stacey1975}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SJ}{%
+         family={Stacey},
+         familyi={S\bibinitperiod},
+         given={JS},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kramers},
+         familyi={K\bibinitperiod},
+         given={JD},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SJKJ1}
+    \strng{fullhash}{SJKJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{207\bibrangedash 221}
+    \field{title}{Approximation of terrestrial lead isotope evolution by a
+  two-stage model}
+    \field{volume}{26}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{1975}
+  \endentry
+
   \entry{vermeesch2020}{article}{}
     \name{author}{1}{}{%
       {{hash=VP}{%

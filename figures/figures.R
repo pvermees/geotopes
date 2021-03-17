@@ -397,3 +397,70 @@ arrows(x0=0,y0=Pb8o6-2*ydat[sn,'sY'],
 isochron(dat,type=1,xlim=c(0,600),ylim=c(0,2.5))
 isochron(dat,type=2,xlim=c(0,100),ylim=c(0,3))
 dev.off()
+
+cairo(file='~/Documents/temp/Hourigan.pdf',height=6,width=6)
+Hourigan <- read.csv('Hourigan.csv',header=TRUE)
+UPb <- read.data(Hourigan[,1:5],method='U-Pb',format=2)
+concordia(UPb,levels=Hourigan[,'ThU'],clabel='Th/U',
+          ellipse.fill=c('white','red'),show.age=2)
+dev.off()
+
+cairo(file='~/Documents/temp/commonPbisochron13.pdf',height=4,width=7)
+pars(mfrow=c(1,2),mar=c(2,2.5,4,0.5))
+dat <- read.data('BH14.csv',method='U-Pb',format=2,ierr=3)
+good <- dat$x[,'U238Pb206']>5
+gdat <- dat
+gdat$x <- dat$x[good,]
+concordia(gdat,show.age=2,type=2)
+concordia(gdat,show.age=2,type=2,common.Pb=2,xlim=c(97,108))
+dev.off()
+
+cairo(file='~/Documents/temp/commonPbisochron46.pdf',height=4,width=7)
+pars(mfrow=c(1,2),mar=c(2,2.5,4,0.5))
+fn <- system.file('UPb5.csv',package='IsoplotR')
+dat <- read.data(fn,method='U-Pb',format=5)
+concordia(dat,show.age=2,type=2)
+concordia(dat,show.age=2,type=2,common.Pb=2,xlim=c(20.8,21.4))
+dev.off()
+
+cairo(file='~/Documents/temp/commonPbisochron46nominal.pdf',height=4,width=7)
+pars(mfrow=c(1,2),mar=c(2,2.5,4,0.5))
+settings('iratio','Pb206Pb204',20)
+settings('iratio','Pb207Pb204',16)
+fn <- system.file('UPb5.csv',package='IsoplotR')
+dat <- read.data(fn,method='U-Pb',format=5)
+concordia(dat,show.age=2,type=2,anchor=1)
+concordia(dat,show.age=2,type=2,common.Pb=2,anchor=1,xlim=c(20.8,21.4))
+dev.off()
+
+cairo(file='~/Documents/temp/commonPbisochron13detrital.pdf',height=3,width=7)
+pars(mfrow=c(1,2),mar=c(2,2.5,0.5,0.5))
+settings('iratio','Pb207Pb206',0.7308)
+dat <- read.data('BH14.csv',method='U-Pb',format=2,ierr=3)
+good <- dat$x[,'U238Pb206']>5
+gdat <- dat
+gdat$x <- dat$x[good,]
+sel <- gdat
+sel$x <- gdat$x[c(27,35),]
+concordia(sel,type=2,show.numbers=FALSE,xlim=c(0,110),ylim=c(0,0.7308))
+points(x=0,y=0.7308,pch='.')
+concordia(sel,type=2,common.Pb=1,xlim=c(75,110))
+points(x=0,y=0.7308,pch='.')
+dev.off()
+
+cairo(file='~/Documents/temp/SK.pdf',height=3,width=3)
+pars()
+sk <- IsoplotR:::stacey.kramers(c(500,1000,3000))
+Pb76 <- sk[,'i74']/sk[,'i64']
+x <- c(IsoplotR:::age_to_U238Pb206_ratio(500)[1],
+       IsoplotR:::age_to_U238Pb206_ratio(1000)[1],
+       IsoplotR:::age_to_U238Pb206_ratio(3000)[1])
+y <- c(IsoplotR:::age_to_Pb207Pb206_ratio(500)[1],
+       IsoplotR:::age_to_Pb207Pb206_ratio(1000)[1],
+       IsoplotR:::age_to_Pb207Pb206_ratio(3000)[1])
+concordia(type=2,xlim=c(0,13),ylim=c(0,1.15),
+          tlim=c(100,5500),ticks=c(500,1000,2000,3000,4000))
+lines(x=c(0,x[1]),y=c(Pb76[1],y[1]))
+lines(x=c(0,x[2]),y=c(Pb76[2],y[2]))
+lines(x=c(0,x[3]),y=c(Pb76[3],y[3]))
+dev.off()
