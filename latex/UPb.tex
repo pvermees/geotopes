@@ -761,6 +761,203 @@ setting:
 \section{Initial disequilibrium}
 \label{sec:U-Pb-disequilibrium}
 
+Even though the U--Pb decay systems consist of numerous steps (14 for
+\textsuperscript{238}U and 11 for \textsuperscript{235}U), this
+complexity is ignored in conventional U--Pb geochronology and the
+method is mathematically treated as a simple parent-daughter pair.
+Section~\ref{sec:decay-series} showed that this assumption is
+justified once a state of secular equilibrium is established between
+all the intermediate daughter products in the decay chains.  Such
+secular equilibrium automatically emerges after 1 to 2 million years.
+Any disequilibrium that might exist prior to this can be used as a
+chronometer in its own right, as discussed in
+Section~\ref{ch:intro2Useries}.\\
+
+Initial disequilibrium of the uranium decay series also affects the
+accuracy of the U--Pb method. For example, ignoring any initial excess
+\textsuperscript{234}U would result in an overestimated
+\textsuperscript{206}Pb/\textsuperscript{238}U age, and any intial
+\textsuperscript{231}Pa deficit would result in an underestimated
+\textsuperscript{207}Pb/\textsuperscript{235}U age. Thus initial
+disequilibrium is one mechanism to produce discordant results. The
+effect of initial disequilibrium is relatively small in most
+studies. It can be neglected in many geological applications, and is
+is usually only a question of concern in high precision
+geochronology.\\
+
+However in U--Pb geochronology of young carbonates, the effect of
+initial disequilibrium can be very significant, and may potentially
+result in order-of-magnitude levels of bias. \texttt{IsoplotR} offers
+three different strategies to deal with this bias:
+
+\begin{enumerate}
+\item If the intermediate daughter is sufficiently long lived, and the
+  sample is sufficiently young to retain some of its disequilibrium,
+  then the activity ratios can be back-calculated to the time of
+  isotopic closure.  This strategy applies to
+  \textsuperscript{234}U/\textsuperscript{238}U disequilibrium and,
+  for very young samples, to
+  \textsuperscript{230}Th/\textsuperscript{234}U disequilibrium.
+\item For older samples and shorter lived intermediate daughters such
+  as \textsuperscript{226}Ra ($t_{1/2}=1599$~yr), secular equilibrium
+  has usually been re-established and the initial activity ratio must
+  be assumed.
+\item However in the case of
+  \textsuperscript{230}Th/\textsuperscript{238}U disequilibrium in
+  igneous rocks, the initial activity ratio can also be inferred from
+  the \textsuperscript{232}Th/\textsuperscript{238}U ratio of the bulk
+  host rocks. In this case we make the assumption that the bulk rock
+  is representative for the starting material from which the datable
+  mineral formed. Due to the chemical similarity between Th and Pa,
+  the same procedure can be applied to
+  \textsuperscript{231}Pa/\textsuperscript{238}U disequilibrium as
+  well.
+\end{enumerate}
+
+\texttt{IsoplotR} solves the complex evolution of the decay series
+using a matrix exponential approach developed by \citet{mclean2016}.
+To illustrate the principles behind this approach, describe the
+\textsuperscript{238}U--\textsuperscript{206}Pb decay chain in matrix
+form:
+\begin{equation}
+  \frac{\partial}{\partial{t}}\left[
+    \begin{array}{@{}c@{}}
+      n38\\
+      n34\\
+      n30\\
+      n26\\
+      n06
+    \end{array}
+  \right]
+  =
+  \left[
+    \begin{array}{cccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 & 0 \\
+      0 & \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & 0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & 0 & \lambda_{26} & -\lambda_{26} \\
+      0 & 0 & 0 & 0 & 0 & \lambda_{26}\\
+    \end{array}
+    \right]
+  \left[
+    \begin{array}{@{}c@{}}
+      n38\\
+      n34\\
+      n30\\
+      n26\\
+      n06
+    \end{array}
+    \right]
+  \label{eq:matrixdecay}
+\end{equation}
+
+\noindent where $n\ast\ast$ and $\lambda_{\ast\ast}$ stand for ``the
+number of atoms and decay constant of nuclide $2\ast\ast$''.
+Equation~\ref{eq:matrixdecay} is the matrix equivalent of the system
+of equations that is represented in a simplified form by
+Equations~\ref{eq:P1}--\ref{eq:D*}.  Just like the ordinary decay
+equation is solved by an exponential function (Equation~\ref{eq:P2}),
+so the matrix decay equation is solved by a matrix exponential:
+\begin{equation}
+  \left[
+    \begin{array}{@{}c@{}}
+      n38\\
+      n34\\
+      n30\\
+      n26\\
+      n06
+    \end{array}
+  \right]
+  =
+  \mbox{expm}\left(
+  \left[
+    \begin{array}{cccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 & 0 \\
+      0 & \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & 0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & 0 & \lambda_{26} & -\lambda_{26} \\
+      0 & 0 & 0 & 0 & 0 & \lambda_{26}\\
+    \end{array}
+    \right]
+  t
+  \right)
+  \left[
+    \begin{array}{@{}c@{}}
+      n38\\
+      n34\\
+      n30\\
+      n26\\
+      n06
+    \end{array}
+    \right]_\circ
+  \label{eq:matrixdecaysolution}
+\end{equation}
+
+\noindent which expresses the present day amounts as a function of the
+initial amounts. Conversely, the equation can also be turned around to
+express the initial amounts as a function of the present day amounts:
+\begin{equation}
+  \left[
+    \begin{array}{@{}c@{}}
+      n38\\
+      n34\\
+      n30\\
+      n26\\
+      n06
+    \end{array}
+  \right]_\circ
+  =
+  \mbox{expm}\left(
+      -
+  \left[
+    \begin{array}{cccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 & 0 \\
+      0 & \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & 0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & 0 & \lambda_{26} & -\lambda_{26} \\
+      0 & 0 & 0 & 0 & 0 & \lambda_{26}\\
+    \end{array}
+    \right]
+  t
+  \right)
+  \left[
+    \begin{array}{@{}c@{}}
+      n38\\
+      n34\\
+      n30\\
+      n26\\
+      n06
+    \end{array}
+    \right]
+  \label{eq:matrixdecaysolutioninverse}
+\end{equation}
+
+The matrix exponential approach provides an elegant solution for all
+three scenarios described above. Equation~\ref{eq:matrixdecaysolution}
+can be used to construct a concordia diagram in the presence of
+disequilibrium:\\
+
+\noindent\includegraphics[width=\linewidth]{../figures/diseq.pdf}
+\begingroup
+\captionof{figure}{Tera-Wasserburg concordia diagram a) assuming
+  secular equilibrium and b) accounting for secular disequilibrium with
+  initial activity ratios of
+  \textsuperscript{234}U/\textsuperscript{238}U = 0,
+  \textsuperscript{230}Th/\textsuperscript{238}U = 2,
+  \textsuperscript{226}Ra/\textsuperscript{238}U = 2 and
+  \textsuperscript{231}Pa/\textsuperscript{235}U = 2.  These initial
+  conditions cause the concordia line to curve upwards for young
+  ages. Without the disequilibrium correction, the concordia age
+  would be wrong by over 100\%.}
+\label{fig:diseq}
+\endgroup
+
 \section{Discordance filters}
 \label{sec:discfilter}
 

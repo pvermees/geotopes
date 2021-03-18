@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.8)  17 MAR 2021 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.8)  18 MAR 2021 15:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2090,12 +2090,42 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 741--757
  []
 
 [85 <../figures/commonPbisochron13detrital.pdf>]
-Package biblatex Info: Reference section=0 on input line 769.
-) [86 <../figures/SK.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 764--775
+
+ []
+
+
+Overfull \hbox (6.28352pt too wide) in paragraph at lines 776--787
+\OT1/cmr/m/n/10.95 method. For ex-am-ple, ig-nor-ing any ini-tial ex-cess $[]$U
+ would re-sult in an over-es-ti-mated $[]$Pb/$[]$U
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 776--787
+
+ []
+
+[86 <../figures/SK.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 941--945
+
+ []
+
+<../figures/diseq.pdf, id=2403, 635.20784pt x 262.90117pt>
+File: ../figures/diseq.pdf Graphic file (type pdf)
+<use ../figures/diseq.pdf>
+Package pdftex.def Info: ../figures/diseq.pdf  used on input line 946.
+(pdftex.def)             Requested size: 455.24411pt x 188.4222pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 957.
+See the caption package documentation for explanation.
+
+[87]
+Package biblatex Info: Reference section=0 on input line 966.
+) [88 <../figures/diseq.pdf>]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 108.
-
-[87
+ [89
 
 ] (./intro2IsoplotR.tex
 \blx@maxsegment@5=\count418
@@ -2131,14 +2161,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--51
 
  []
 
-[88
+[90
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 83--90
 
  []
 
-<../figures/IsoplotR.png, id=2419, 1141.26375pt x 656.4525pt>
+<../figures/IsoplotR.png, id=2471, 1141.26375pt x 656.4525pt>
 File: ../figures/IsoplotR.png Graphic file (type png)
 <use ../figures/IsoplotR.png>
 Package pdftex.def Info: ../figures/IsoplotR.png  used on input line 91.
@@ -2148,7 +2178,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<../figures/chronometerbutton.png, id=2420, 118.4425pt x 47.17625pt>
+<../figures/chronometerbutton.png, id=2472, 118.4425pt x 47.17625pt>
 File: ../figures/chronometerbutton.png Graphic file (type png)
 <use ../figures/chronometerbutton.png>
 Package pdftex.def Info: ../figures/chronometerbutton.png  used on input line 9
@@ -2164,8 +2194,8 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 93--104
 [] [] 
  []
 
-[89 <../figures/IsoplotR.png>]
-<../figures/plotdevices.png, id=2425, 159.59625pt x 46.1725pt>
+[91 <../figures/IsoplotR.png>]
+<../figures/plotdevices.png, id=2478, 159.59625pt x 46.1725pt>
 File: ../figures/plotdevices.png Graphic file (type png)
 <use ../figures/plotdevices.png>
 Package pdftex.def Info: ../figures/plotdevices.png  used on input line 107.
@@ -2180,7 +2210,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 105--114
 [] [] 
  []
 
-<../figures/Options.png, id=2426, 117.43875pt x 46.1725pt>
+<../figures/Options.png, id=2479, 117.43875pt x 46.1725pt>
 File: ../figures/Options.png Graphic file (type png)
 <use ../figures/Options.png>
 Package pdftex.def Info: ../figures/Options.png  used on input line 117.
@@ -2195,7 +2225,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 115--124
 [] [] 
  []
 
-<../figures/Help.png, id=2427, 86.3225pt x 45.16875pt>
+<../figures/Help.png, id=2480, 86.3225pt x 45.16875pt>
 File: ../figures/Help.png Graphic file (type png)
 <use ../figures/Help.png>
 Package pdftex.def Info: ../figures/Help.png  used on input line 127.
@@ -2210,12 +2240,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 125--135
 [] [] 
  []
 
-<../figures/Open.png, id=2428, 101.37875pt x 46.1725pt>
+<../figures/Open.png, id=2481, 101.37875pt x 46.1725pt>
 File: ../figures/Open.png Graphic file (type png)
 <use ../figures/Open.png>
 Package pdftex.def Info: ../figures/Open.png  used on input line 138.
 (pdftex.def)             Requested size: 37.5563pt x 17.10538pt.
-<../figures/Save.png, id=2429, 91.34125pt x 45.16875pt>
+<../figures/Save.png, id=2482, 91.34125pt x 45.16875pt>
 File: ../figures/Save.png Graphic file (type png)
 <use ../figures/Save.png>
 Package pdftex.def Info: ../figures/Save.png  used on input line 139.
@@ -2235,12 +2265,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 136--145
 [] [] 
  []
 
-<../figures/PLOT.png, id=2430, 99.37125pt x 45.16875pt>
+<../figures/PLOT.png, id=2483, 99.37125pt x 45.16875pt>
 File: ../figures/PLOT.png Graphic file (type png)
 <use ../figures/PLOT.png>
 Package pdftex.def Info: ../figures/PLOT.png  used on input line 148.
 (pdftex.def)             Requested size: 37.5563pt x 17.07124pt.
-<../figures/RUN.png, id=2431, 88.33pt x 44.165pt>
+<../figures/RUN.png, id=2484, 88.33pt x 44.165pt>
 File: ../figures/RUN.png Graphic file (type png)
 <use ../figures/RUN.png>
 Package pdftex.def Info: ../figures/RUN.png  used on input line 149.
@@ -2260,12 +2290,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 146--156
 [] [] 
  []
 
-<../figures/PDF.png, id=2432, 85.31876pt x 46.1725pt>
+<../figures/PDF.png, id=2485, 85.31876pt x 46.1725pt>
 File: ../figures/PDF.png Graphic file (type png)
 <use ../figures/PDF.png>
 Package pdftex.def Info: ../figures/PDF.png  used on input line 159.
 (pdftex.def)             Requested size: 37.5563pt x 20.3244pt.
-<../figures/CSV.png, id=2433, 88.33pt x 47.17625pt>
+<../figures/CSV.png, id=2486, 88.33pt x 47.17625pt>
 File: ../figures/CSV.png Graphic file (type png)
 <use ../figures/CSV.png>
 Package pdftex.def Info: ../figures/CSV.png  used on input line 160.
@@ -2285,7 +2315,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 157--170
 [] [] 
  []
 
-<../figures/C.png, id=2434, 68.255pt x 31.11626pt>
+<../figures/C.png, id=2487, 68.255pt x 31.11626pt>
 File: ../figures/C.png Graphic file (type png)
 <use ../figures/C.png>
 Package pdftex.def Info: ../figures/C.png  used on input line 173.
@@ -2305,7 +2335,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 171--180
 [] [] 
  []
 
-<../figures/omit.png, id=2435, 67.25125pt x 116.435pt>
+<../figures/omit.png, id=2488, 67.25125pt x 116.435pt>
 File: ../figures/omit.png Graphic file (type png)
 <use ../figures/omit.png>
 Package pdftex.def Info: ../figures/omit.png  used on input line 183.
@@ -2320,7 +2350,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 181--192
 [] [] 
  []
 
-<../figures/formats.png, id=2436, 259.97125pt x 95.35625pt>
+<../figures/formats.png, id=2489, 259.97125pt x 95.35625pt>
 File: ../figures/formats.png Graphic file (type png)
 <use ../figures/formats.png>
 Package pdftex.def Info: ../figures/formats.png  used on input line 195.
@@ -2335,7 +2365,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 193--202
 [] [] 
  []
 
-<../figures/ierr.png, id=2437, 215.80624pt x 117.43875pt>
+<../figures/ierr.png, id=2490, 215.80624pt x 117.43875pt>
 File: ../figures/ierr.png Graphic file (type png)
 <use ../figures/ierr.png>
 Package pdftex.def Info: ../figures/ierr.png  used on input line 205.
@@ -2364,7 +2394,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 214--222
 [] [] 
  []
 
-<../figures/contextualhelp.png, id=2438, 477.785pt x 260.975pt>
+<../figures/contextualhelp.png, id=2491, 477.785pt x 260.975pt>
 File: ../figures/contextualhelp.png Graphic file (type png)
 <use ../figures/contextualhelp.png>
 Package pdftex.def Info: ../figures/contextualhelp.png  used on input line 225.
@@ -2375,7 +2405,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 223--231
 [] [] 
  []
 
-[90 <../figures/chronometerbutton.png> <../figures/plotdevices.png> <../figures
+[92 <../figures/chronometerbutton.png> <../figures/plotdevices.png> <../figures
 /Options.png> <../figures/Help.png> <../figures/Open.png> <../figures/Save.png>
  <../figures/PLOT.png> <../figures/RUN.png> <../figures/PDF.png> <../figures/CS
 V.png> <../figures/C.png> <../figures/omit.png> <../figures/formats.png> <../fi
@@ -2401,7 +2431,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
 
-[91 <../figures/contextualhelp.png>]
+[93 <../figures/contextualhelp.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 308--310
 
  []
@@ -2409,7 +2439,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--310
 Package biblatex Info: Reference section=0 on input line 321.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
- [92]
+ [94]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
  (./trainingcourse.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
@@ -2429,10 +2459,10 @@ Package logreq Info: Writing requests to 'trainingcourse.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  ) 
 Here is how much of TeX's memory you used:
- 17234 strings out of 481239
- 300080 string characters out of 5920378
- 781166 words of memory out of 5000000
- 31572 multiletter control sequences out of 15000+600000
+ 17260 strings out of 481239
+ 300581 string characters out of 5920378
+ 781808 words of memory out of 5000000
+ 31587 multiletter control sequences out of 15000+600000
  548674 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,17n,76p,2075b,1995s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2472,10 +2502,10 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmb10.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sfrm1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/wasy-type1/was
 y10.pfb>
-Output written on trainingcourse.pdf (92 pages, 2396109 bytes).
+Output written on trainingcourse.pdf (94 pages, 2422573 bytes).
 PDF statistics:
- 2663 PDF objects out of 2984 (max. 8388607)
- 2142 compressed objects within 22 object streams
- 556 named destinations out of 1000 (max. 500000)
- 956 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2717 PDF objects out of 2984 (max. 8388607)
+ 2185 compressed objects within 22 object streams
+ 566 named destinations out of 1000 (max. 500000)
+ 961 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -78,6 +78,46 @@
     \field{year}{1998}
   \endentry
 
+  \entry{mclean2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MNM}{%
+         family={McLean},
+         familyi={M\bibinitperiod},
+         given={Noah\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BJF}{%
+         family={Bowring},
+         familyi={B\bibinitperiod},
+         given={James\bibnamedelima F},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gehrels},
+         familyi={G\bibinitperiod},
+         given={George},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{MNMBJFGG1}
+    \strng{fullhash}{MNMBJFGG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{7}
+    \field{pages}{2480\bibrangedash 2496}
+    \field{title}{{Algorithms and software for U-Pb geochronology by LA-ICPMS}}
+    \field{volume}{17}
+    \field{journaltitle}{Geochemistry, Geophysics, Geosystems}
+    \field{year}{2016}
+  \endentry
+
   \entry{stacey1975}{article}{}
     \name{author}{2}{}{%
       {{hash=SJ}{%

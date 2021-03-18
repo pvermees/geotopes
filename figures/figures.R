@@ -464,3 +464,19 @@ lines(x=c(0,x[1]),y=c(Pb76[1],y[1]))
 lines(x=c(0,x[2]),y=c(Pb76[2],y[2]))
 lines(x=c(0,x[3]),y=c(Pb76[3],y[3]))
 dev.off()
+
+cairo(file='~/Documents/temp/diseq.pdf',height=4,width=9)
+pars(mfrow=c(1,2),mar=c(3.2,3.2,2.8,0.5))
+fn <- system.file("diseq.csv",package="IsoplotR")
+UPb <- read.data(fn,method='U-Pb',format=2)
+concordia(UPb,type=2,show.age=1,
+          xlim=c(-500,5000),ylim=c(0.045,0.056),
+          ticks=c(2,3,5,10,50,100,200,300,400))
+d <- diseq(U48=list(x=0,option=1),ThU=list(x=2,option=1),
+           RaU=list(x=2,option=1),PaU=list(x=2,option=1))
+UPb <- read.data(fn,method='U-Pb',format=2,d=d)
+concordia(UPb,type=2,show.age=1,
+          xlim=c(-500,5000),ylim=c(0.047,0.056),
+          ticks=c(2,3,5,10,50,100,200,300,400))
+dev.off()
+

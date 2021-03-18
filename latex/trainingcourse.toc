@@ -128,14 +128,14 @@
 \defcounter {refsection}{4}\relax 
 \contentsline {section}{\numberline {15.5}Initial disequilibrium}{86}{section.15.5}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.6}Discordance filters}{86}{section.15.6}%
+\contentsline {section}{\numberline {15.6}Discordance filters}{88}{section.15.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{87}{part.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{89}{part.3}%
 \defcounter {refsection}{5}\relax 
-\contentsline {chapter}{\numberline {16}Introduction to \texttt {IsoplotR}}{88}{chapter.16}%
+\contentsline {chapter}{\numberline {16}Introduction to \texttt {IsoplotR}}{90}{chapter.16}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.1}Software architecture}{88}{section.16.1}%
+\contentsline {section}{\numberline {16.1}Software architecture}{90}{section.16.1}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.2}The Graphical User Interface (GUI)}{89}{section.16.2}%
+\contentsline {section}{\numberline {16.2}The Graphical User Interface (GUI)}{91}{section.16.2}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.3}The Command Line Interface (CLI)}{91}{section.16.3}%
+\contentsline {section}{\numberline {16.3}The Command Line Interface (CLI)}{93}{section.16.3}%
