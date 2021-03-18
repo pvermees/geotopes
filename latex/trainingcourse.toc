@@ -130,12 +130,14 @@
 \defcounter {refsection}{4}\relax 
 \contentsline {section}{\numberline {15.6}Discordance filters}{88}{section.15.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{89}{part.3}%
+\contentsline {chapter}{\numberline {16}Pb--Pb and Th--Pb}{92}{chapter.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{93}{part.3}%
 \defcounter {refsection}{5}\relax 
-\contentsline {chapter}{\numberline {16}Introduction to \texttt {IsoplotR}}{90}{chapter.16}%
+\contentsline {chapter}{\numberline {17}Introduction to \texttt {IsoplotR}}{94}{chapter.17}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.1}Software architecture}{90}{section.16.1}%
+\contentsline {section}{\numberline {17.1}Software architecture}{94}{section.17.1}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.2}The Graphical User Interface (GUI)}{91}{section.16.2}%
+\contentsline {section}{\numberline {17.2}The Graphical User Interface (GUI)}{95}{section.17.2}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.3}The Command Line Interface (CLI)}{93}{section.16.3}%
+\contentsline {section}{\numberline {17.3}The Command Line Interface (CLI)}{97}{section.17.3}%

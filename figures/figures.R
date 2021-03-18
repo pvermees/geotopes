@@ -435,17 +435,16 @@ dev.off()
 
 cairo(file='~/Documents/temp/commonPbisochron13detrital.pdf',height=3,width=7)
 pars(mfrow=c(1,2),mar=c(2,2.5,0.5,0.5))
-settings('iratio','Pb207Pb206',0.7308)
+settings('iratio','Pb207Pb206',0.8)
 dat <- read.data('BH14.csv',method='U-Pb',format=2,ierr=3)
-good <- dat$x[,'U238Pb206']>5
-gdat <- dat
-gdat$x <- dat$x[good,]
-sel <- gdat
-sel$x <- gdat$x[c(27,35),]
-concordia(sel,type=2,show.numbers=FALSE,xlim=c(0,110),ylim=c(0,0.7308))
-points(x=0,y=0.7308,pch='.')
-concordia(sel,type=2,common.Pb=1,xlim=c(75,110))
-points(x=0,y=0.7308,pch='.')
+dat$x <- dat$x[1:2,]
+dat$x[1,] <- c(50,0.75,0.1,0.01,0)
+dat$x[2,] <- c(20,0.75,0.6,0.01,0)
+concordia(dat,type=2,show.numbers=FALSE,
+          xlim=c(0,110),ylim=c(0,0.8),ticks=c(100,200,1000,4000))
+points(x=0,y=0.8,pch='.')
+concordia(dat,type=2,common.Pb=1,xlim=c(50,85),
+          ticks=c(70,80,90,100,110,120))
 dev.off()
 
 cairo(file='~/Documents/temp/SK.pdf',height=3,width=3)

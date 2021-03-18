@@ -40,11 +40,13 @@
   optimisation. Section~\ref{sec:common-Pb} shows how such isochrons
   (or `discordia') lines provides one way to correct for common Pb,
   but introduces a few other correction strategies as well.
-  Section~\ref{sec:U-Pb-disequilibrium} shows how initial enrichment or
-  depletion of short-lived nuclides such as \textsuperscript{234}U,
+  Section~\ref{sec:U-Pb-disequilibrium} shows how initial enrichment
+  or depletion of short-lived nuclides such as \textsuperscript{234}U,
   \textsuperscript{230}Th, \textsuperscript{226}Ra or
   \textsuperscript{231}Pa can bias U--Pb ages by as much as a million
-  years, and reviews some strategies to reduce this bias.
+  years, and reviews some strategies to reduce this bias. Finally,
+  Section~\ref{sec:discfilter} introduces methods to filter discordant
+  datasets for detrital geochronology.
 
 \section{Input formats}
 \label{sec:UPbFormats}
@@ -244,7 +246,7 @@ available for data formats~7 and 8, because these are the only formats
 that account for \textsuperscript{208}Pb and \textsuperscript{232}Th.
 The remainder of this Chapter will focus on the Wetherill and
 Tera-Wasserburg diagrams, except for Section~\ref{sec:common-Pb},
-which will briefly mention the U--Th-Pb diagram again.
+which will briefly mention the U--Th-Pb diagram again.\\
 
 \noindent\includegraphics[width=\textwidth]{../figures/3xconcordia.pdf}
 \begingroup \captionof{figure}{The allanite dataset of
@@ -338,6 +340,7 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
         \bar{y} - (\exp[\lambda_{238}t_c] - 1)
       \end{array}
       \right]
+    \label{eq:concordiaAgeWetherill}
     \end{equation}
 
     Or in Tera-Wasserburg space:
@@ -361,6 +364,7 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
              {\exp[\lambda_{238}t_c] - 1}
       \end{array}
       \right]
+    \label{eq:concordiaAgeTW}
     \end{equation}
 
     Again, the uncertainty of $t_c$ is obtained from the Fisher
@@ -698,13 +702,12 @@ setting:
         Common-Pb correction of two LA-ICP-MS based detrital
         measurements (formats 1--3) using the same nominal common Pb
         composition with
-        \textsuperscript{206}Pb/\textsuperscript{206}Pb = 0.7308.
-        Each aliquot forms its own mixing line, and its uncertainties
-        are magnified by the extrapolation, in proportion to its
-        distance to the concordia line. This is different from the
-        joint isochron regression of
-        Figures~\ref{fig:commonPbisochron13} and
-        \ref{fig:commonPbisochron46}, in which all aliquots are
+        \textsuperscript{206}Pb/\textsuperscript{206}Pb = 0.8.  Each
+        aliquot forms its own mixing line, and its uncertainties are
+        magnified by the extrapolation, in proportion to its distance
+        to the concordia line. This is different from the joint
+        isochron regression of Figures~\ref{fig:commonPbisochron13}
+        and \ref{fig:commonPbisochron46}, in which all aliquots are
         projected parallel to a joint regression line and the
         uncertainties are only mildly affected by the extrapolation.}
     \label{fig:commonPbisochron13detrital}
@@ -960,6 +963,196 @@ disequilibrium:\\
 
 \section{Discordance filters}
 \label{sec:discfilter}
+
+In detrital geochronology it is generally not possible to compute
+multi-grain concordia ages and isochrons. In fact, each grain in a
+detrital dataset has its own age and it is the entire distribution of
+their values that carries scientific value. The question then arises
+which method should be used to constrain the age distribution.
+\texttt{IsoplotR} offers a number of options:
+
+\begin{enumerate}
+\item use the \textsuperscript{206}Pb/\textsuperscript{238}U date
+  ($t_{68}$).
+\item use the \textsuperscript{207}Pb/\textsuperscript{235}U date
+  ($t_{75}$).  Given that the half-life of \textsuperscript{235}U is
+  more than six times shorter than that of \textsuperscript{238}U, and
+  that \textsuperscript{235}U is more than 100 times less abundant
+  than \textsuperscript{238}U, little \textsuperscript{207}Pb has been
+  produced during the last billion years of Earth history compared to
+  \textsuperscript{206}Pb. Consequently, the
+  \textsuperscript{207}Pb/\textsuperscript{235}U method is less
+  precise than the \textsuperscript{206}Pb/\textsuperscript{238}U
+  method during the Phanerozoic and Neoproterozoic, but more precise
+  prior to that.
+\item use the \textsuperscript{207}Pb/\textsuperscript{206}Pb date
+  ($t_{76}$).  Like the
+  \textsuperscript{207}Pb/\textsuperscript{235}U, also the
+  \textsuperscript{207}Pb/\textsuperscript{206}Pb method is more
+  precise than the \textsuperscript{206}Pb/\textsuperscript{238}U
+  method for old grains, and less precise for young ones.  The gradual
+  shift in sensitivity between the
+  \textsuperscript{206}Pb/\textsuperscript{238}U and
+  \textsuperscript{207}Pb/\textsuperscript{206}Pb methods is visible
+  in the slope of a Tera-Wasserburg concordia line, which is steep at
+  old ages (high \textsuperscript{207}Pb/\textsuperscript{206}Pb
+  gradient w.r.t. time) and shallow at young ages (low
+  \textsuperscript{238}U/\textsuperscript{206}Pb gradient
+  w.r.t. time).
+\item switch from \textsuperscript{206}Pb/\textsuperscript{238}U to
+  \textsuperscript{207}Pb/\textsuperscript{206}Pb at some point during
+  the Proterozoic. This ensures good precision for all grains but
+  introduces two practical issues. First, it requires the selection of
+  a discrete discordance cutoff between the two methods.  Second, the
+  sudden switch between the
+  \textsuperscript{206}Pb/\textsuperscript{238}U and
+  \textsuperscript{207}Pb/\textsuperscript{206}Pb clocks may be marked
+  by a discrete step in the age spectrum. This step is entirely
+  artificial and obscures any geologically significant events that
+  might occur around the same time.
+\item use the single grain concordia date ($t_c$), which is calculated
+  by applying Equation~\ref{eq:concordiaAgeWetherill} or
+  \ref{eq:concordiaAgeTW} separately to each grain. This approach
+  avoids the need to switch between different methods, and offers
+  superior precision to any of the other methods across the entire
+  geologic time scale.
+\end{enumerate}
+
+Once a chronometer has been chosen, it is advisable to `filter' the
+data before plotting them as a KDE or CAD, so as to remove the most
+discordant analyses. It may be so that the common Pb correction of
+Section~\ref{sec:common-Pb} removes much (or all, in the case of
+formats 1--3) discordance. But accuracy of single-grain common Pb
+corrections decreases quickly with increasing distance from the
+concordia line. For example, in
+Figure~\ref{fig:commonPbisochron13detrital}, aliquot~1 should probably
+not be used to constrain the age distribution. \texttt{IsoplotR}
+offers six different definitions of discordance that can be used to
+filter U--Pb data:
+
+\begin{enumerate}
+  \item The relative age discordance:
+    \begin{equation}
+      d_{r} = 1 - t_{68}/t_{76}
+      \label{eq:dr}
+    \end{equation}
+    This is the most widely used criterion today.  It is more likely
+    to remove young grains than old ones, and strongly skews the age
+    distribution towards old age components as a result.
+  \item The absolute age discordance:
+    \begin{equation}
+      d_{t} = t_{76} - t_{68}
+      \label{eq:dt}
+    \end{equation}
+    This definition is not very widely used. But it illustrates the
+    dramatic effect that the discordance definition can have on the
+    filtered age distibutions. Compared with the relative age filter,
+    it is more likely to reject old grains, and less likely to reject
+    young ones. It even allows physically impossible negative
+    \textsuperscript{207}Pb/\textsuperscript{206}Pb ages to pass
+    through it.
+  \item The p-value based discordance filter:
+    \begin{equation}
+      d_p = \mbox{Prob}\left(s > S_c | S_c \sim \chi^2_2\right)
+      \label{eq:dp}
+    \end{equation}
+    \noindent where $S_c$ is defined in
+    Equation~\ref{eq:concordiaAgeWetherill}/\ref{eq:concordiaAgeTW}.
+    $d_p$ may have intuitive appeal as an `objective' definition. But
+    it has an undesirable negative effect on the precision and
+    accuracy of the filtered results.  This is because the p-value
+    definition affects grains differently depending on their
+    analytical precision.\\
+
+    For example, consider a 1.5~Ga zircon that is $d_r=1\%$
+    discordant. If this grain were analysed by LA-ICP-MS with an
+    analytical precision of 2\%, say, then it would pass the
+    chi-square test and be accepted as being concordant. However, if
+    that same grain were analysed by TIMS with a precision of 0.2\%,
+    then the p-value criterion would reject it as being discordant. It
+    seems fundamentally wrong that an imprecise analytical method
+    would be favoured over a precise one. This is a pertinent problem
+    because technical innovations are increasing the precision of all
+    analytical approaches to U--Pb geochronology.  As precision
+    improves, so does the ability to detect ever small degrees of
+    discordance. Using the p-value criterion, there may come a time
+    when no zircon passes this filter.  Hence it is best not to use
+    this filter, but \texttt{IsoplotR} offers it nonetheless for the
+    sake of completeness and to allow reproducing published results.
+  \item The Stacey-Kramers discordance filter
+    \begin{equation}
+      d_{sk} = 1 - r_{86}/r_{86}^\ast
+    \end{equation}
+    \noindent where $r_{86}$ and $r_{86}^\ast$ are the
+    \textsuperscript{238}U/\textsuperscript{206}Pb ratios before and
+    after common Pb correction, assumes that discordance is solely
+    caused by common Pb contamination. If this assumption is correct,
+    then the $d_{sk}$ filter will produce the most accurate age
+    distributions, provided that a \citet{stacey1975} common Pb
+    correction is applied to the filtered data afterwards.
+  \item The perpendicular Aitchison distance
+    \begin{equation}
+      d_{a} = dx(t_{68}) \sin\!\left(\arctan\!\left[
+        \frac{dy(t_{76})}{dx(t_{68})} \right] \right)
+    \end{equation}
+    \noident represents the logarithmic distance from the measurement
+    to the concordia line in log-log space
+    \citep{vermeesch2020}. $dx(\ast)$ and $dy(\ast)$ are the
+    horizontal and vertical component of this distance. $d_a$ produces
+    a parallel acceptance zone around the (log-transformed) concordia
+    line. This filter is most likely to reject `middle aged' zircon
+    grains, between 1000 and 2000~Ma, where the age resolving power of
+    the U--Pb method is greatest. Above and below this interval, the
+    $d_a$ criterion is more forgiving. This behaviour is desirable
+    because natural samples tend to exhibit more age discordance below
+    1000~Ma and above 2000~Ma than between these dates.
+
+    \noindent\begin{minipage}[t][][b]{.45\linewidth}
+    \includegraphics[width=\textwidth]{../figures/Aitchison.pdf}
+    \end{minipage}
+    \begin{minipage}[t][][t]{.55\linewidth}
+      \captionof{figure}{Illustration of the two logratio distance
+        definitions of discordance. $d_a$ is the perpendicular
+        Aitchison distance from the measured logratio to the concordia
+        line. $d_c$ is the Aitchison distance measured along a line
+        connecting the measured value and the concordia composition.}
+    \label{fig:da}
+    \end{minipage}
+    
+  \item The concordia distance
+    \begin{equation}
+    d_c = \mbox{sgn}[t_{76}-t_{68}] \sqrt{ dx(t_c)^2 + dy(t_c)^2 }
+    \end{equation}
+    is a modified version of the $d_a$ criterion that takes into
+    account the uncertainties of the U--Pb isotopic composition. It
+    represents the distance (in log-log space) from the measurement to
+    the U--Pb composition of the concordia age.  Its effects on the
+    U--Pb age distributions are more difficult to visualise but are
+    similar to those of the $d_a$ criterion. Empirical evidence
+    suggests that this filter is optimal in the sense that it has a
+    minimal effect on the shape of the age distribution: it results in
+    a tightening of subpopulations without changing their position or
+    relative size \citep{vermeesch2020}.
+\end{enumerate}
+
+\noindent\begin{minipage}[t][][b]{.45\linewidth}
+\includegraphics[width=\textwidth]{../figures/TW-option-1234.pdf}
+\end{minipage}
+\begin{minipage}[t][][t]{.55\linewidth}
+  \captionof{figure}{ Discordance cutoffs for four of the six
+    discordance definitions. The $d_{p}$ and $d_c$ criteria are not
+    shown because they depend on the analytical uncertainty of the
+    measurements, which may vary between studies. The grey envelopes
+    mark cutoff values of $d_r=20\%$ (relative age filter),
+    $d_t=300$~Ma (absolute age filter), $d_{sk}=2\%$ (Stacey--Kramers
+    filter) and $d_{a}=15\%$ (perpendicular Aitchison distance) on a
+    Tera-Wasserburg concordia diagram, which is plotted in logarithmic
+    space to provide a more balanced view of the old and young ends of
+    the time scale. The $d_{sk}$ and $d_t$ envelopes are truncated
+    where they cross over into physically impossible negative isotope
+    ratio space.}
+  \label{fig:agediscordance}
+\end{minipage}
 
 \printbibliography[heading=subbibliography]
 
