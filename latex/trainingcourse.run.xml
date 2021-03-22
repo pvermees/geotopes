@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>trainingcourse.aux</file>
@@ -50,6 +50,7 @@
       <file>trainingcourse3-blx.aux</file>
       <file>trainingcourse4-blx.aux</file>
       <file>trainingcourse5-blx.aux</file>
+      <file>trainingcourse6-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </provides>
     <requires type="dynamic">
@@ -59,6 +60,7 @@
       <file>trainingcourse3-blx.bbl</file>
       <file>trainingcourse4-blx.bbl</file>
       <file>trainingcourse5-blx.bbl</file>
+      <file>trainingcourse6-blx.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -226,6 +228,33 @@
     </provides>
     <requires type="dynamic">
       <file>trainingcourse5-blx.aux</file>
+      <file>trainingcourse-blx.bib</file>
+    </requires>
+    <requires type="editable">
+      <file>/home/pvermees/Dropbox/biblio.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
+    </requires>
+  </external>
+  <external package="biblatex" priority="5" active="1">
+    <generic>bibtex</generic>
+    <cmdline>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
+      <infile>trainingcourse6-blx</infile>
+    </cmdline>
+    <input>
+      <file>trainingcourse6-blx.aux</file>
+    </input>
+    <output>
+      <file>trainingcourse6-blx.bbl</file>
+    </output>
+    <provides type="dynamic">
+      <file>trainingcourse6-blx.bbl</file>
+    </provides>
+    <requires type="dynamic">
+      <file>trainingcourse6-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </requires>
     <requires type="editable">

@@ -1,143 +1,153 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Basic geochronology}{4}{part.1}%
+\contentsline {part}{I\hspace {1em}Basic geochronology}{5}{part.1}%
 \defcounter {refsection}{1}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Basic Notions}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Basic Notions}{8}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Isotopes and radioactivity}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Isotopes and radioactivity}{8}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Radioactivity}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Radioactivity}{8}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}The age equation}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.3}The age equation}{10}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Decay series}{10}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Decay series}{11}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Analytical techniques}{13}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Analytical techniques}{14}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Mass spectrometry}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Mass spectrometry}{14}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Isotope dilution}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Isotope dilution}{17}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Sample-standard bracketing}{17}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Sample-standard bracketing}{18}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Simple parent-daughter pairs}{18}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Simple parent-daughter pairs}{19}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}$^{14}$C dating}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.1}$^{14}$C dating}{19}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}The Rb-Sr method}{19}{section.4.2}%
+\contentsline {section}{\numberline {4.2}The Rb-Sr method}{20}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Isochrons}{20}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Isochrons}{21}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}The Sm-Nd method}{20}{section.4.4}%
+\contentsline {section}{\numberline {4.4}The Sm-Nd method}{21}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}The U-Pb system}{22}{chapter.5}%
+\contentsline {chapter}{\numberline {5}The U-Pb system}{23}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}The U-(Th-)Pb method}{22}{section.5.1}%
+\contentsline {section}{\numberline {5.1}The U-(Th-)Pb method}{23}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}The Pb-Pb method}{23}{section.5.2}%
+\contentsline {section}{\numberline {5.2}The Pb-Pb method}{24}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Concordia}{24}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Concordia}{25}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Detrital geochronology}{24}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Detrital geochronology}{25}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}The K-Ar system}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {6}The K-Ar system}{27}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}K-Ar dating}{26}{section.6.1}%
+\contentsline {section}{\numberline {6.1}K-Ar dating}{27}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}$^{40}$Ar/$^{39}$Ar dating}{26}{section.6.2}%
+\contentsline {section}{\numberline {6.2}$^{40}$Ar/$^{39}$Ar dating}{27}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Applications}{27}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Applications}{28}{section.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Thermochronology}{29}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Thermochronology}{30}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}The U-Th-He method}{29}{section.7.1}%
+\contentsline {section}{\numberline {7.1}The U-Th-He method}{30}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Fission tracks}{30}{section.7.2}%
+\contentsline {section}{\numberline {7.2}Fission tracks}{31}{section.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}U-series dating}{34}{chapter.8}%
+\contentsline {chapter}{\numberline {8}U-series dating}{35}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}The $^{234}$U-$^{238}$U method}{34}{section.8.1}%
+\contentsline {section}{\numberline {8.1}The $^{234}$U-$^{238}$U method}{35}{section.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}The $^{230}$Th method}{35}{section.8.2}%
+\contentsline {section}{\numberline {8.2}The $^{230}$Th method}{36}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}The $^{230}$Th-$^{238}$U method}{35}{section.8.3}%
+\contentsline {section}{\numberline {8.3}The $^{230}$Th-$^{238}$U method}{36}{section.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Error propagation}{37}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Error propagation}{38}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Some basic definitions}{37}{section.9.1}%
+\contentsline {section}{\numberline {9.1}Some basic definitions}{38}{section.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Examples}{38}{section.9.2}%
+\contentsline {section}{\numberline {9.2}Examples}{39}{section.9.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.3}Accuracy vs. precision}{39}{section.9.3}%
+\contentsline {section}{\numberline {9.3}Accuracy vs. precision}{40}{section.9.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Exercises}{41}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Exercises}{42}{chapter.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Programming practicals}{43}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Programming practicals}{44}{chapter.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Introduction to \texttt {R}}{43}{section.11.1}%
+\contentsline {section}{\numberline {11.1}Introduction to \texttt {R}}{44}{section.11.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.2}U-Th-Pb data reduction}{47}{section.11.2}%
+\contentsline {section}{\numberline {11.2}U-Th-Pb data reduction}{48}{section.11.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.3}$^{40}$Ar/$^{39}$Ar data reduction}{47}{section.11.3}%
+\contentsline {section}{\numberline {11.3}$^{40}$Ar/$^{39}$Ar data reduction}{48}{section.11.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.4}Error propagation}{48}{section.11.4}%
+\contentsline {section}{\numberline {11.4}Error propagation}{49}{section.11.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.5}Fission tracks}{49}{section.11.5}%
+\contentsline {section}{\numberline {11.5}Fission tracks}{50}{section.11.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}Advanced geochronology}{50}{part.2}%
+\contentsline {part}{II\hspace {1em}Advanced geochronology}{51}{part.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Introduction}{51}{chapter.12}%
+\contentsline {chapter}{\numberline {12}Introduction}{52}{chapter.12}%
 \defcounter {refsection}{2}\relax 
-\contentsline {chapter}{\numberline {13}Statistical considerations}{53}{chapter.13}%
+\contentsline {chapter}{\numberline {13}Statistical considerations}{54}{chapter.13}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.1}The normal distribution}{53}{section.13.1}%
+\contentsline {section}{\numberline {13.1}The normal distribution}{54}{section.13.1}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.2}The method of maximum likelihood}{54}{section.13.2}%
+\contentsline {section}{\numberline {13.2}The method of maximum likelihood}{55}{section.13.2}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.3}The mean square of weighted deviates (MSWD)}{56}{section.13.3}%
+\contentsline {section}{\numberline {13.3}The mean square of weighted deviates (MSWD)}{57}{section.13.3}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.4}Dealing with overdispersion}{59}{section.13.4}%
+\contentsline {section}{\numberline {13.4}Dealing with overdispersion}{60}{section.13.4}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.5}Error correlations}{60}{section.13.5}%
+\contentsline {section}{\numberline {13.5}Error correlations}{61}{section.13.5}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.6}Linear regression}{62}{section.13.6}%
+\contentsline {section}{\numberline {13.6}Linear regression}{63}{section.13.6}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.7}Confidence intervals}{64}{section.13.7}%
+\contentsline {section}{\numberline {13.7}Confidence intervals}{65}{section.13.7}%
 \defcounter {refsection}{3}\relax 
-\contentsline {chapter}{\numberline {14}Generic functions}{68}{chapter.14}%
+\contentsline {chapter}{\numberline {14}Generic functions}{69}{chapter.14}%
 \defcounter {refsection}{3}\relax 
-\contentsline {section}{\numberline {14.1}Weighted mean and outlier detection}{68}{section.14.1}%
+\contentsline {section}{\numberline {14.1}Weighted mean and outlier detection}{69}{section.14.1}%
 \defcounter {refsection}{3}\relax 
-\contentsline {section}{\numberline {14.2}Frequency distributions}{69}{section.14.2}%
+\contentsline {section}{\numberline {14.2}Frequency distributions}{70}{section.14.2}%
 \defcounter {refsection}{3}\relax 
-\contentsline {section}{\numberline {14.3}Radial plots}{70}{section.14.3}%
+\contentsline {section}{\numberline {14.3}Radial plots}{71}{section.14.3}%
 \defcounter {refsection}{3}\relax 
-\contentsline {section}{\numberline {14.4}Mixture models}{72}{section.14.4}%
+\contentsline {section}{\numberline {14.4}Mixture models}{73}{section.14.4}%
 \defcounter {refsection}{4}\relax 
-\contentsline {chapter}{\numberline {15}U--Pb geochronology}{76}{chapter.15}%
+\contentsline {chapter}{\numberline {15}U--Pb geochronology}{77}{chapter.15}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.1}Input formats}{76}{section.15.1}%
+\contentsline {section}{\numberline {15.1}Input formats}{77}{section.15.1}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.2}Concordia diagrams and ages}{78}{section.15.2}%
+\contentsline {section}{\numberline {15.2}Concordia diagrams and ages}{79}{section.15.2}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.3}Discordia/isochron regression}{81}{section.15.3}%
+\contentsline {section}{\numberline {15.3}Discordia/isochron regression}{82}{section.15.3}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.4}Common Pb}{83}{section.15.4}%
+\contentsline {section}{\numberline {15.4}Common Pb}{84}{section.15.4}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.5}Initial disequilibrium}{86}{section.15.5}%
+\contentsline {section}{\numberline {15.5}Initial disequilibrium}{87}{section.15.5}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.6}Discordance filters}{88}{section.15.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16}Pb--Pb and Th--Pb}{92}{chapter.16}%
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{93}{part.3}%
+\contentsline {section}{\numberline {15.6}Discordance filters}{89}{section.15.6}%
 \defcounter {refsection}{5}\relax 
-\contentsline {chapter}{\numberline {17}Introduction to \texttt {IsoplotR}}{94}{chapter.17}%
+\contentsline {chapter}{\numberline {16}Pb--Pb and Th--Pb}{93}{chapter.16}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {17.1}Software architecture}{94}{section.17.1}%
+\contentsline {section}{\numberline {16.1}Pb--Pb}{93}{section.16.1}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {17.2}The Graphical User Interface (GUI)}{95}{section.17.2}%
+\contentsline {section}{\numberline {16.2}(inverse) isochrons}{93}{section.16.2}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {17.3}The Command Line Interface (CLI)}{97}{section.17.3}%
+\contentsline {section}{\numberline {16.3}The Stacey-Kramers growth curve}{94}{section.16.3}%
+\defcounter {refsection}{5}\relax 
+\contentsline {section}{\numberline {16.4}Th--Pb}{95}{section.16.4}%
+\defcounter {refsection}{5}\relax 
+\contentsline {section}{\numberline {16.5}Radial plots, KDEs and CADs}{96}{section.16.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{97}{part.3}%
+\defcounter {refsection}{6}\relax 
+\contentsline {chapter}{\numberline {17}Introduction to \texttt {IsoplotR}}{98}{chapter.17}%
+\defcounter {refsection}{6}\relax 
+\contentsline {section}{\numberline {17.1}Software architecture}{98}{section.17.1}%
+\defcounter {refsection}{6}\relax 
+\contentsline {section}{\numberline {17.2}The Graphical User Interface (GUI)}{99}{section.17.2}%
+\defcounter {refsection}{6}\relax 
+\contentsline {section}{\numberline {17.3}The Command Line Interface (CLI)}{101}{section.17.3}%

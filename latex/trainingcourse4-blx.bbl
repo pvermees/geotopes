@@ -181,5 +181,32 @@
     \field{journaltitle}{Geochronology}
     \field{year}{2020}
   \endentry
+
+  \entry{vermeesch2021}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.5194/gchron-3-1-2021
+    \endverb
+    \field{pages}{1\bibrangedash 11}
+    \field{title}{{On the treatment of discordant detrital zircon U--Pb data}}
+    \field{volume}{3}
+    \field{journaltitle}{Geochronology}
+    \field{year}{2021}
+  \endentry
 \enddatalist
 \endinput

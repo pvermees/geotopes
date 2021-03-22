@@ -479,3 +479,71 @@ concordia(UPb,type=2,show.age=1,
           ticks=c(2,3,5,10,50,100,200,300,400))
 dev.off()
 
+cairo(file='~/Documents/temp/PbPb.pdf',height=4,width=8)
+pars(mfrow=c(1,2),mar=c(2.5,2.5,3,0))
+fn <- system.file("PbPb1.csv",package="IsoplotR")
+PbPb <- read.data(fn,method='Pb-Pb',format=1,ierr=1)
+PbPb$x[,5] <- 0.95
+isochron(PbPb,inverse=FALSE,show.numbers=TRUE)
+isochron(PbPb,inverse=TRUE,show.numbers=TRUE)
+dev.off()
+
+cairo(file='~/Documents/temp/Kamber.pdf',height=4,width=7)
+pars(mfrow=c(1,2),mar=c(2.5,2.5,4,0))
+PbPb <- read.data('Kamber.csv',method='Pb-Pb',format=1,ierr=2)
+isochron(PbPb,model=2,inverse=FALSE,
+         growth=TRUE,xlim=c(10.9,15),sigdig=4)
+isochron(PbPb,model=2,inverse=TRUE,growth=TRUE,sigdig=4,
+         xlim=c(0.065,0.09),ylim=c(0.95,1.2))
+dev.off()
+
+cairo(file='~/Documents/temp/ThPb.pdf',height=4,width=7)
+pars(mfrow=c(1,2),mar=c(2.5,2.5,4,0))
+isochron(examples$ThPb,model=1,inverse=FALSE)
+isochron(examples$ThPb,model=1,inverse=TRUE)
+dev.off()
+
+cairo(file='~/Documents/temp/ThPbSingleGrain.pdf',height=4,width=5)
+pars(mfrow=c(2,2))
+set.seed(3)
+ns <- 10
+buffer <- 100
+x0 <- 1000
+x <- runif(ns,min=buffer,max=x0-buffer)
+a <- 1/settings('iratio','Pb208Pb204')[1]
+b <- -a/x0
+y <- a + b * x + rnorm(ns,0,0.003)
+plot(x,y,type='n',xlim=c(0,x0+buffer),ylim=c(0,a),
+     xlab=expression(''^232*'Th/'^208*'Pb'),
+     ylab=expression(''^204*'Pb/'^208*'Pb'),
+     bty='n')
+lines(x=c(0,x0),y=c(a,0),lwd=2)
+X <- rep(0,ns)
+for (i in 1:ns){
+    X[i] <- x[i] - y[i]/b
+    lines(x=c(x[i],X[i]),y=c(y[i],0),col='grey50')
+}
+points(x,y,pch=21,bg='white')
+legend('topright',legend='a)',bty='n')
+a <- 1/a
+b <- 1/x0
+x <- x/y
+y <- 1/y
+plot(x,y,type='n',bty='n',
+     xlim=c(0,max(x)),ylim=c(0,max(y)),
+     xlab=expression(''^208*'Pb/'^204*'Pb'),
+     ylab=expression(''^232*'Th/'^204*'Pb'))
+xmax <- max(x)
+b <- rep(0,ns)
+for (i in 1:ns){
+    b[i] <- (y[i]-a)/x[i]
+    yi <- a + b[i]*xmax
+    lines(x=c(0,xmax),y=c(a,yi),col='grey50')
+}
+points(x,y,pch=21,bg='white')
+legend('topleft',legend='b)',bty='n')
+kde(IsoplotR:::get.ThPb.age(1/X,0)[,1],log=TRUE,binwidth=0.15)
+legend('topright',legend='c)',bty='n')
+kde(IsoplotR:::get.ThPb.age(b,0)[,1],log=TRUE,binwidth=0.15)
+legend('topleft',legend='d)',bty='n')
+dev.off()
