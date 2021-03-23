@@ -42,7 +42,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Detrital geochronology}{25}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}The K-Ar system}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {6}The K--Ar system}{27}{chapter.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}K-Ar dating}{27}{section.6.1}%
 \defcounter {refsection}{0}\relax 
@@ -140,14 +140,20 @@
 \defcounter {refsection}{5}\relax 
 \contentsline {section}{\numberline {16.4}Th--Pb}{95}{section.16.4}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.5}Radial plots, KDEs and CADs}{96}{section.16.5}%
+\contentsline {section}{\numberline {16.5}Single grain ages}{96}{section.16.5}%
+\defcounter {refsection}{6}\relax 
+\contentsline {chapter}{\numberline {17}Ar--Ar and K--Ca}{97}{chapter.17}%
+\defcounter {refsection}{6}\relax 
+\contentsline {section}{\numberline {17.1}Ar--Ar}{97}{section.17.1}%
+\defcounter {refsection}{6}\relax 
+\contentsline {section}{\numberline {17.2}Age spectra}{98}{section.17.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{97}{part.3}%
-\defcounter {refsection}{6}\relax 
-\contentsline {chapter}{\numberline {17}Introduction to \texttt {IsoplotR}}{98}{chapter.17}%
-\defcounter {refsection}{6}\relax 
-\contentsline {section}{\numberline {17.1}Software architecture}{98}{section.17.1}%
-\defcounter {refsection}{6}\relax 
-\contentsline {section}{\numberline {17.2}The Graphical User Interface (GUI)}{99}{section.17.2}%
-\defcounter {refsection}{6}\relax 
-\contentsline {section}{\numberline {17.3}The Command Line Interface (CLI)}{101}{section.17.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{100}{part.3}%
+\defcounter {refsection}{7}\relax 
+\contentsline {chapter}{\numberline {18}Introduction to \texttt {IsoplotR}}{101}{chapter.18}%
+\defcounter {refsection}{7}\relax 
+\contentsline {section}{\numberline {18.1}Software architecture}{101}{section.18.1}%
+\defcounter {refsection}{7}\relax 
+\contentsline {section}{\numberline {18.2}The Graphical User Interface (GUI)}{102}{section.18.2}%
+\defcounter {refsection}{7}\relax 
+\contentsline {section}{\numberline {18.3}The Command Line Interface (CLI)}{104}{section.18.3}%

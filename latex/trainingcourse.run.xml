@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>trainingcourse.aux</file>
@@ -51,6 +51,7 @@
       <file>trainingcourse4-blx.aux</file>
       <file>trainingcourse5-blx.aux</file>
       <file>trainingcourse6-blx.aux</file>
+      <file>trainingcourse7-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </provides>
     <requires type="dynamic">
@@ -61,6 +62,7 @@
       <file>trainingcourse4-blx.bbl</file>
       <file>trainingcourse5-blx.bbl</file>
       <file>trainingcourse6-blx.bbl</file>
+      <file>trainingcourse7-blx.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -237,7 +239,7 @@
       <file>biblatex.bst</file>
     </requires>
   </external>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>bibtex</generic>
     <cmdline>
       <binary>bibtex</binary>
@@ -255,6 +257,33 @@
     </provides>
     <requires type="dynamic">
       <file>trainingcourse6-blx.aux</file>
+      <file>trainingcourse-blx.bib</file>
+    </requires>
+    <requires type="editable">
+      <file>/home/pvermees/Dropbox/biblio.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
+    </requires>
+  </external>
+  <external package="biblatex" priority="5" active="0">
+    <generic>bibtex</generic>
+    <cmdline>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
+      <infile>trainingcourse7-blx</infile>
+    </cmdline>
+    <input>
+      <file>trainingcourse7-blx.aux</file>
+    </input>
+    <output>
+      <file>trainingcourse7-blx.bbl</file>
+    </output>
+    <provides type="dynamic">
+      <file>trainingcourse7-blx.bbl</file>
+    </provides>
+    <requires type="dynamic">
+      <file>trainingcourse7-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </requires>
     <requires type="editable">

@@ -19,7 +19,7 @@
 \BOOKMARK [1][-]{section.5.2}{The Pb-Pb method}{chapter.5}% 19
 \BOOKMARK [1][-]{section.5.3}{Concordia}{chapter.5}% 20
 \BOOKMARK [1][-]{section.5.4}{Detrital geochronology}{chapter.5}% 21
-\BOOKMARK [0][-]{chapter.6}{The K-Ar system}{part.1}% 22
+\BOOKMARK [0][-]{chapter.6}{The K\205Ar system}{part.1}% 22
 \BOOKMARK [1][-]{section.6.1}{K-Ar dating}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.2}{40Ar/39Ar dating}{chapter.6}% 24
 \BOOKMARK [1][-]{section.6.3}{Applications}{chapter.6}% 25
@@ -68,9 +68,12 @@
 \BOOKMARK [1][-]{section.16.2}{\(inverse\) isochrons}{chapter.16}% 68
 \BOOKMARK [1][-]{section.16.3}{The Stacey-Kramers growth curve}{chapter.16}% 69
 \BOOKMARK [1][-]{section.16.4}{Th\205Pb}{chapter.16}% 70
-\BOOKMARK [1][-]{section.16.5}{Radial plots, KDEs and CADs}{chapter.16}% 71
-\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 72
-\BOOKMARK [0][-]{chapter.17}{Introduction to IsoplotR}{part.3}% 73
-\BOOKMARK [1][-]{section.17.1}{Software architecture}{chapter.17}% 74
-\BOOKMARK [1][-]{section.17.2}{The Graphical User Interface \(GUI\)}{chapter.17}% 75
-\BOOKMARK [1][-]{section.17.3}{The Command Line Interface \(CLI\)}{chapter.17}% 76
+\BOOKMARK [1][-]{section.16.5}{Single grain ages}{chapter.16}% 71
+\BOOKMARK [0][-]{chapter.17}{Ar\205Ar and K\205Ca}{part.2}% 72
+\BOOKMARK [1][-]{section.17.1}{Ar\205Ar}{chapter.17}% 73
+\BOOKMARK [1][-]{section.17.2}{Age spectra}{chapter.17}% 74
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 75
+\BOOKMARK [0][-]{chapter.18}{Introduction to IsoplotR}{part.3}% 76
+\BOOKMARK [1][-]{section.18.1}{Software architecture}{chapter.18}% 77
+\BOOKMARK [1][-]{section.18.2}{The Graphical User Interface \(GUI\)}{chapter.18}% 78
+\BOOKMARK [1][-]{section.18.3}{The Command Line Interface \(CLI\)}{chapter.18}% 79
