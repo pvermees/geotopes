@@ -72,8 +72,15 @@
 \BOOKMARK [0][-]{chapter.17}{Ar\205Ar and K\205Ca}{part.2}% 72
 \BOOKMARK [1][-]{section.17.1}{Ar\205Ar}{chapter.17}% 73
 \BOOKMARK [1][-]{section.17.2}{Age spectra}{chapter.17}% 74
-\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 75
-\BOOKMARK [0][-]{chapter.18}{Introduction to IsoplotR}{part.3}% 76
-\BOOKMARK [1][-]{section.18.1}{Software architecture}{chapter.18}% 77
-\BOOKMARK [1][-]{section.18.2}{The Graphical User Interface \(GUI\)}{chapter.18}% 78
-\BOOKMARK [1][-]{section.18.3}{The Command Line Interface \(CLI\)}{chapter.18}% 79
+\BOOKMARK [1][-]{section.17.3}{K\205Ca}{chapter.17}% 75
+\BOOKMARK [0][-]{chapter.18}{Rb\205Sr, Sm\205Nd, Lu\205Hf and Re\205Os}{part.2}% 76
+\BOOKMARK [0][-]{chapter.19}{U\205Th-He and fission tracks}{part.2}% 77
+\BOOKMARK [0][-]{chapter.20}{230Th\205U dating}{part.2}% 78
+\BOOKMARK [1][-]{section.20.1}{Data formats}{chapter.20}% 79
+\BOOKMARK [1][-]{section.20.2}{Isochrons}{chapter.20}% 80
+\BOOKMARK [1][-]{section.20.3}{Th\205U evolution diagrams}{chapter.20}% 81
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 82
+\BOOKMARK [0][-]{chapter.21}{Introduction to IsoplotR}{part.3}% 83
+\BOOKMARK [1][-]{section.21.1}{Software architecture}{chapter.21}% 84
+\BOOKMARK [1][-]{section.21.2}{The Graphical User Interface \(GUI\)}{chapter.21}% 85
+\BOOKMARK [1][-]{section.21.3}{The Command Line Interface \(CLI\)}{chapter.21}% 86
