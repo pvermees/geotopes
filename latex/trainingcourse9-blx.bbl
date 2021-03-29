@@ -1,0 +1,231 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{kaufman1965}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KA}{%
+         family={Kaufman},
+         familyi={K\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={Broecker},
+         familyi={B\bibinitperiod},
+         given={Wallace},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{KABW1}
+    \strng{fullhash}{KABW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1965}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{16}
+    \field{pages}{4039\bibrangedash 4054}
+    \field{title}{{Comparison of Th$^{230}$ and C$^{14}$ ages for carbonate
+  materials from Lakes Lahontan and Bonneville}}
+    \field{volume}{70}
+    \field{journaltitle}{Journal of geophysical Research}
+    \field{year}{1965}
+  \endentry
+
+  \entry{ludwig2003b}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LKR}{%
+         family={Ludwig},
+         familyi={L\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Mineral Soc America}%
+    }
+    \strng{namehash}{LKR1}
+    \strng{fullhash}{LKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{1}
+    \field{pages}{631\bibrangedash 656}
+    \field{title}{{Mathematical--statistical treatment of data and errors for
+  $^{230}$Th/U geochronology}}
+    \field{volume}{52}
+    \field{journaltitle}{Reviews in Mineralogy and Geochemistry}
+    \field{year}{2003}
+  \endentry
+
+  \entry{ludwig1994}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LKR}{%
+         family={Ludwig},
+         familyi={L\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=TD}{%
+         family={Titterington},
+         familyi={T\bibinitperiod},
+         given={DM},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LKRTD1}
+    \strng{fullhash}{LKRTD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1994}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{22}
+    \field{pages}{5031\bibrangedash 5042}
+    \field{title}{{Calculation of $^{230}$Th-U isochrons, ages, and errors}}
+    \field{volume}{58}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{1994}
+  \endentry
+
+  \entry{osmond1970}{article}{}
+    \name{author}{3}{}{%
+      {{hash=OJ}{%
+         family={Osmond},
+         familyi={O\bibinitperiod},
+         given={JK},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MJP}{%
+         family={May},
+         familyi={M\bibinitperiod},
+         given={James\bibnamedelima P},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=TW}{%
+         family={Tanner},
+         familyi={T\bibinitperiod},
+         given={WF},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{OJMJPTW1}
+    \strng{fullhash}{OJMJPTW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1970}
+    \field{labeldatesource}{}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{number}{2}
+    \field{pages}{469\bibrangedash 479}
+    \field{title}{{Age of the Cape Kennedy Barrier-and-Lagoon Complex}}
+    \field{volume}{75}
+    \field{journaltitle}{Journal of Geophysical Research}
+    \field{year}{1970}
+  \endentry
+
+  \entry{rosholt1976}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=RJ}{%
+         family={Rosholt},
+         familyi={R\bibinitperiod},
+         given={JN},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJ1}
+    \strng{fullhash}{RJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1976}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{booktitle}{Geological Society of America Abstracts with Programs}
+    \field{pages}{1076}
+    \field{title}{{$^{230}$Th/$^{234}$U dating of travertine and caliche
+  rinds}}
+    \field{volume}{8}
+    \field{year}{1976}
+  \endentry
+
+  \entry{york2004}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YD}{%
+         family={York},
+         familyi={Y\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ENM}{%
+         family={Evensen},
+         familyi={E\bibinitperiod},
+         given={Norman\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MML}{%
+         family={Mart\'{i}nez},
+         familyi={M\bibinitperiod},
+         given={Margarita\bibnamedelima L{\'o}pez},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DBDJ}{%
+         family={De\bibnamedelima Basabe\bibnamedelima Delgado},
+         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+         given={Jon{\'a}s},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {AAPT}%
+    }
+    \strng{namehash}{YD+1}
+    \strng{fullhash}{YDENMMMLDBDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{3}
+    \field{pages}{367\bibrangedash 375}
+    \field{title}{{Unified equations for the slope, intercept, and standard
+  errors of the best straight line}}
+    \field{volume}{72}
+    \field{journaltitle}{American Journal of Physics}
+    \field{year}{2004}
+  \endentry
+\enddatalist
+\endinput

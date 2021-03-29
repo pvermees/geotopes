@@ -573,3 +573,21 @@ legend('topleft','c)',bty='n',cex=1.2)
 cad(examples$RbSr,i2i=TRUE)
 legend('topleft','d)',bty='n',cex=1.2)
 dev.off()
+
+cairo(file='~/Documents/temp/UThHe.pdf',height=3,width=9)
+fn <- system.file('UThHe.csv',package='IsoplotR')
+UThHe <- read.data(fn,method='U-Th-He')
+pars(mfrow=c(1,3),mar=c(3.5,3,3,0.5))
+isochron(UThHe,model=3)
+helioplot(UThHe,logratio=FALSE)
+helioplot(UThHe,logratio=TRUE)
+dev.off()
+
+He <- c(0.21,0.18,0.69,0.38,0.77,0.50,0.72,0.99,0.38,0.780)
+U <- c(27,37,57,91,20,90,94,66,63,62)
+l38 <- settings('lambda','U238')[1]
+l35 <- settings('lambda','U235')[1]
+U85 <- settings('iratio','U238U235')[1]
+P <- (8*U85*l38 + 7*l35)*U/(U85+1)
+signif(mean(He/P),3)
+signif(1/mean(P/He),3)

@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {5.2}The Pb-Pb method}{31}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Concordia}{32}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Detrital geochronology}{33}{section.5.4}%
-\contentsline {chapter}{\numberline {6}The K-Ar system}{35}{chapter.6}%
+\contentsline {chapter}{\numberline {6}The K--Ar system}{35}{chapter.6}%
 \contentsline {section}{\numberline {6.1}K-Ar dating}{35}{section.6.1}%
 \contentsline {section}{\numberline {6.2}$^{40}$Ar/$^{39}$Ar dating}{36}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Applications}{37}{section.6.3}%

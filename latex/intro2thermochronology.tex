@@ -17,37 +17,40 @@ When U and Th decay to various isotopes of Pb (Section
 they become helium atoms. Thus, not only Pb content, but also the He
 content increases relative to U and Th through time, forming the basis
 of the U-Th-He chronometer:
-
 \begin{equation}
-\begin{array}{rl}
-^4He = & \left[8 \frac{137.818}{138.818} (e^{\lambda_{238}t} - 1) + 7 \frac{1}{138.818} (e^{\lambda_{235}t} - 1) \right] U +\\[8pt]
-~ & 6 (e^{\lambda_{232}t} - 1) Th + 0.1499 (e^{\lambda_{147}t} - 1) Sm
-\end{array}
+\begin{split}
+  \left[^4\mbox{He}\right] = &
+  \left[8 \frac{137.818}{138.818} (e^{\lambda_{238}t} - 1) +
+    7 \frac{1}{138.818} (e^{\lambda_{235}t} - 1) \right] \mbox{[U]} +\\
+  ~ & 6 (e^{\lambda_{232}t} - 1) \mbox{[Th]} +
+  0.1499 (e^{\lambda_{147}t} - 1) \mbox{[Sm]}
+\end{split}
 \label{eq:U-Th-He}
 \end{equation}
 
-Where the values `8', `7' and `6' refer to the number of
-$\alpha$-particles produced in the decay chains of $^{238}$U,
-$^{235}$U and $^{232}$Th, respectively (Figure \ref{fig:U-Th-series}),
-137.818 is the (average) ratio of naturally occurring $^{238}$U and
-$^{235}$U in accessory minerals, and the last term accounts for the
-(often negligible) accumulation of helium by Sm-decay (Section
-\ref{sec:Sm-Nd}). It was Ernest Rutherford who first proposed that the
-U-Th-He decay scheme could be used as an absolute dating technique,
-making it the oldest radiometric chronometer. Early experiments on
-uraninite (UO$_2$) by Robert John Strutt (4$^{th}$ Baron Rayleigh) at
-Imperial College London in 1905 yielded ages that were systematically
-too young. This was correctly attributed to the volatile nature of the
-helium atom, which diffuses out of most minerals at low temperatures
-and therefore yields only \emph{minimum ages}. As a result, the method
-was largely abandoned until 1987, when American geochronologist Peter
-Zeitler realised that this `leaky' behaviour provided a powerful means
-of reconstructing the thermal evolution of rocks and minerals. \\
+\noindent where [\textsuperscript{4}He], [U], [Th] and [Sm] are
+concentrations in atoms or moles per unit mass or volume.  The values
+`8', `7' and `6' refer to the number of $\alpha$-particles produced in
+the decay chains of $^{238}$U, $^{235}$U and $^{232}$Th, respectively
+(Figure \ref{fig:U-Th-series}), 137.818 is the $^{238}$U/$^{235}$U
+ratio of naturally occurring uranium in accessory minerals, and the
+last term accounts for the (often negligible) accumulation of helium
+by Sm-decay (Section \ref{sec:Sm-Nd}). It was Ernest Rutherford who
+first proposed that the U-Th-He decay scheme could be used as an
+absolute dating technique, making it the oldest radiometric
+chronometer. Early experiments on uraninite (UO$_2$) by Robert John
+Strutt (4$^{th}$ Baron Rayleigh) at Imperial College London in 1905
+yielded ages that were systematically too young. This was correctly
+attributed to the volatile nature of the helium atom, which diffuses
+out of most minerals at low temperatures and therefore yields only
+\emph{minimum ages}. As a result, the method was largely abandoned
+until 1987, when American geochronologist Peter Zeitler realised that
+this `leaky' behaviour provided a powerful means of reconstructing the
+thermal evolution of rocks and minerals. \\
 
 Let C(x,y,z) be the He-concentration as a function of the spatial
 coordinates x, y and z.  The evolution of C with time (t) is given by
 the diffusion equation (`Fick's law'):
-
 \begin{equation}
 \frac{\partial C}{\partial t} = D \left(
 \frac{\partial^2C}{\partial x^2} + \frac{\partial^2C}{\partial y^2} +
@@ -177,7 +180,6 @@ to etch (a polished surface of) the host mineral with acid. This
 enlarges the damage zones and makes it possible to count them under an
 ordinary petrographic microscope. The volume density $n_s$ (in
 cm$^{-3}$) of the fission tracks is given by:
-
 \begin{equation}
 n_{s} = \frac{\lambda_f}{\lambda} [^{238}U] \left(e^{\lambda t}-1\right)
 \label{eq:Ns}
@@ -190,7 +192,6 @@ constant of $^{238}$U ($1.55125\times{10}^{-10}$yr$^{-1}$, see Section
 \ref{sec:U-Pb}). The (unobservable) volume density of the tracks is
 related to the (observable) surface density $\rho_s$ (in cm$^{-2}$)
 by:
-
 \begin{equation}
 \rho_s = g_s L n_s
 \label{eq:rhos}
@@ -200,7 +201,6 @@ Where g\textsubscript{s} is geometry factor (g\textsubscript{s}=1 if
 determined on an internal and g\textsubscript{s}=1/2 on an external
 surface) and L is the etchable length of a fission track
 ($\sim$15$\mu$m). Rearranging Equation \ref{eq:Ns} for time:
-
 \begin{equation}
 t = \frac{1}{\lambda}
 \ln\left(\frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g_s L
@@ -221,9 +221,9 @@ unknown. A pragmatic solution to this problem is found by irradiating
 the sample along with a standard of known age, and lumping all the
 unknown parameters together into a calibration factor ($\zeta$), so
 that the age of the sample reduces to:
-
 \begin{equation}
-t = \frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{\rho_s}{\rho_i}\right)
+t =
+\frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{\rho_s}{\rho_i}\right)
 \label{eq:tzeta}
 \end{equation}
 

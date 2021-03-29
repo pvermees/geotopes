@@ -74,13 +74,21 @@
 \BOOKMARK [1][-]{section.17.2}{Age spectra}{chapter.17}% 74
 \BOOKMARK [1][-]{section.17.3}{K\205Ca}{chapter.17}% 75
 \BOOKMARK [0][-]{chapter.18}{Rb\205Sr, Sm\205Nd, Lu\205Hf and Re\205Os}{part.2}% 76
-\BOOKMARK [0][-]{chapter.19}{U\205Th-He and fission tracks}{part.2}% 77
-\BOOKMARK [0][-]{chapter.20}{230Th\205U dating}{part.2}% 78
-\BOOKMARK [1][-]{section.20.1}{Data formats}{chapter.20}% 79
-\BOOKMARK [1][-]{section.20.2}{Isochrons}{chapter.20}% 80
-\BOOKMARK [1][-]{section.20.3}{Th\205U evolution diagrams}{chapter.20}% 81
-\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 82
-\BOOKMARK [0][-]{chapter.21}{Introduction to IsoplotR}{part.3}% 83
-\BOOKMARK [1][-]{section.21.1}{Software architecture}{chapter.21}% 84
-\BOOKMARK [1][-]{section.21.2}{The Graphical User Interface \(GUI\)}{chapter.21}% 85
-\BOOKMARK [1][-]{section.21.3}{The Command Line Interface \(CLI\)}{chapter.21}% 86
+\BOOKMARK [0][-]{chapter.19}{U\205Th\205He and fission tracks}{part.2}% 77
+\BOOKMARK [1][-]{section.19.1}{U\205Th\205\(Sm\)\205He}{chapter.19}% 78
+\BOOKMARK [1][-]{section.19.2}{The -ejection correction}{chapter.19}% 79
+\BOOKMARK [1][-]{section.19.3}{isochrons}{chapter.19}% 80
+\BOOKMARK [1][-]{section.19.4}{Compositional data analysis and the `helioplot'}{chapter.19}% 81
+\BOOKMARK [1][-]{section.19.5}{Fission tracks}{chapter.19}% 82
+\BOOKMARK [1][-]{section.19.6}{The external detector method}{chapter.19}% 83
+\BOOKMARK [1][-]{section.19.7}{LA-ICP-MS based fission track dating}{chapter.19}% 84
+\BOOKMARK [1][-]{section.19.8}{Compositional zoning and zero track grains}{chapter.19}% 85
+\BOOKMARK [0][-]{chapter.20}{230Th\205U dating}{part.2}% 86
+\BOOKMARK [1][-]{section.20.1}{Data formats}{chapter.20}% 87
+\BOOKMARK [1][-]{section.20.2}{Isochrons}{chapter.20}% 88
+\BOOKMARK [1][-]{section.20.3}{Th\205U evolution diagrams}{chapter.20}% 89
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 90
+\BOOKMARK [0][-]{chapter.21}{Introduction to IsoplotR}{part.3}% 91
+\BOOKMARK [1][-]{section.21.1}{Software architecture}{chapter.21}% 92
+\BOOKMARK [1][-]{section.21.2}{The Graphical User Interface \(GUI\)}{chapter.21}% 93
+\BOOKMARK [1][-]{section.21.3}{The Command Line Interface \(CLI\)}{chapter.21}% 94
