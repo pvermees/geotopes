@@ -55,6 +55,7 @@
       <file>trainingcourse8-blx.aux</file>
       <file>trainingcourse9-blx.aux</file>
       <file>trainingcourse10-blx.aux</file>
+      <file>trainingcourse11-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </provides>
     <requires type="dynamic">
@@ -69,6 +70,7 @@
       <file>trainingcourse8-blx.bbl</file>
       <file>trainingcourse9-blx.bbl</file>
       <file>trainingcourse10-blx.bbl</file>
+      <file>trainingcourse11-blx.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -299,7 +301,7 @@
       <file>biblatex.bst</file>
     </requires>
   </external>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>bibtex</generic>
     <cmdline>
       <binary>bibtex</binary>
@@ -326,7 +328,7 @@
       <file>biblatex.bst</file>
     </requires>
   </external>
-  <external package="biblatex" priority="5" active="0">
+  <external package="biblatex" priority="5" active="1">
     <generic>bibtex</generic>
     <cmdline>
       <binary>bibtex</binary>
@@ -371,6 +373,33 @@
     </provides>
     <requires type="dynamic">
       <file>trainingcourse10-blx.aux</file>
+      <file>trainingcourse-blx.bib</file>
+    </requires>
+    <requires type="editable">
+      <file>/home/pvermees/Dropbox/biblio.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
+    </requires>
+  </external>
+  <external package="biblatex" priority="5" active="0">
+    <generic>bibtex</generic>
+    <cmdline>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
+      <infile>trainingcourse11-blx</infile>
+    </cmdline>
+    <input>
+      <file>trainingcourse11-blx.aux</file>
+    </input>
+    <output>
+      <file>trainingcourse11-blx.bbl</file>
+    </output>
+    <provides type="dynamic">
+      <file>trainingcourse11-blx.bbl</file>
+    </provides>
+    <requires type="dynamic">
+      <file>trainingcourse11-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </requires>
     <requires type="editable">

@@ -1,0 +1,350 @@
+\begin{refsection}
+
+\chapter{Fission tracks}\label{ch:fissiontracks}
+
+\texttt{IsoplotR} accepts three types of fission track data:
+
+\begin{enumerate}
+\item{`EDM':} \textzeta, err[\textzeta],
+  \textrho\textsubscript{D}, err[\textrho\textsubscript{D}], 
+  N\textsubscript{s}, N\textsubscript{i}
+\item{`ICP (\textzeta)':} \textzeta, err[\textzeta], spot size
+  (\textmu{m}), U\textsubscript{1}, err[U\textsubscript{1}],
+  U\textsubscript{2}, err[U\textsubscript{2}], $\ldots$,
+  U\textsubscript{n}, err[U\textsubscript{n}]
+\item{`ICP (absolute)':} spot size (\textmu{m}), U\textsubscript{1},
+  err[U\textsubscript{1}], U\textsubscript{2},
+  err[U\textsubscript{2}], $\ldots$, U\textsubscript{n},
+  err[U\textsubscript{n}]
+\end{enumerate}
+
+\noindent \textzeta, err[\textzeta], \textrho\textsubscript{D},
+err[\textrho\textsubscript{D}], and spot size are scalars, and
+N\textsubscript{s}, N\textsubscript{i} and U\textsubscript{i} and
+err[U\textsubscript{i}] are vectors. The three formats represent two
+different approaches to fission track dating:
+
+\begin{enumerate}
+\item The External Detector Method (EDM) implements the neutron
+  irradiation method that was previously introduced in
+  Section~\ref{sec:fission-tracks}.
+\item The `ICP' method uses LA-ICP-MS (see
+  Section~\ref{sec:mass-specs}) to determine the
+  \textsuperscript{238}U-content of fission track samples.  The main
+  reasons for this change are the increased throughput achieved by not
+  having to irradiate samples and the ease of double-dating apatite
+  and zircon with the U-Pb method.
+\end{enumerate}
+
+\section{The external detector method}
+\label{sec:EDM}
+
+Recall the fission track age equation from
+Section~\ref{sec:fission-tracks}:
+\begin{equation}
+t =
+\frac{1}{\lambda_{38}}\ln\left(1+\frac{g_i}{g_s}
+\lambda_{38}\zeta\rho_d\frac{N_s}{N_i}\right)
+\label{eq:tzeta2}
+\end{equation}
+
+The fission track method has been a test bed of statistical approaches
+that have subsequently been adopted by other chronometers. A case in
+point is the radial plot, which is uniquely suited to deal with the
+large and highly variable (`heteroscedastic') counting uncertainties
+of fission track data. Spontaneous fission is accurately described by
+a Poisson distribution. For young and/or uranium-poor samples, there
+is a finite probability that the spontaneous track count is zero for
+some grains.  To accommodate such zero values, it is customary to use
+an arcsin transformation for radial plots instead of the usual
+logarithmic transformation \citep{galbraith1990a}:
+\begin{equation}
+z_j = \arcsin\sqrt{\frac{N_{sj} + 3/8}{N_{sj}+N_{ij}+3/4}}
+\label{eq:zj}
+\end{equation}
+
+\noindent and
+\begin{equation}
+\sigma_j = \frac{1}{2\sqrt{N_{sj}+N_{ij}+1/2}}
+\label{eq:sj}
+\end{equation}
+
+The arithmetic mean is not a reliable estimator of the true age, for a
+similar reason why the arithmetic mean is not the best estimator of
+the average U--Th--He composition and age. The Poisson distribution is
+negatively skewed, and this biases the arithmetic mean. The solution
+is similar as for the U--Th--He method, namely:
+
+\begin{enumerate}
+\item Take the average logarithm of the spontaneous and induced
+  track densities.
+\item Compute the fission track age the corresponds to this average
+  ratio.
+\end{enumerate}
+
+This procedure again gives rise to a `central age'. Fission track data
+are often overdispersed with respect to the Poisson counting
+uncertainties, and this dispersion carries important thermal history
+information. It is therefore customary to compute the average track
+density ratio using a model-3 style random effects model, in which the
+true $\rho_s/\rho_i$-ratio is assumed to follow a log-normal
+distribution with location parameter $\mu$ and scale parameter
+$\sigma$ \citep{galbraith1993}:
+\begin{equation}
+\ln\left[\frac{\rho_s}{\rho_i}\right] \sim \mathcal{N}(\mu,\sigma^2)
+\label{eq:logrhosrhoi}
+\end{equation}
+
+This model gives rise to a two-parameter log-likelihood function:
+\begin{equation}
+  \mathcal{L}(\mu,\sigma^2) = \sum\limits_{j=1}^{n}
+  \ln f_j(\mu,\sigma^2)
+\label{eq:Lcentral}
+\end{equation}
+
+\noindent where the probability mass function $f_j(\mu,\sigma^2)$ is
+defined as:
+\begin{equation}
+  f_j(\mu,\sigma^2) = {{N_{sj}+N_{ij}}\choose{N_{sj}}}
+  \int\limits_{-\infty}^{\infty} \frac{e^{\beta N_{sj}} \left( 1 +
+    e^\beta \right)^{-N_{sj}-N_{ij}}} {\sigma\sqrt{2\pi}
+    e^{(\beta-\mu)^2/(2\sigma^2)}} d\beta
+  \label{eq:fjms}
+\end{equation}
+
+\noindent in which the fission track count ratios are subject to two
+sources of variation: the Poisson counting uncertainty and an
+`(over)dispersion' factor $\sigma$.  Maximising Eq. \ref{eq:Lcentral}
+results in two estimates $\hat{\mu}$ and $\hat{\sigma}$ and their
+respective standard errors.  Substituting $\exp[\hat{\mu}]$ for
+$N_s/N_i$ in Equation~\ref{eq:tzeta2} produces the desired central
+age. $\hat{\sigma}$ estimates the overdispersion, and quantifies the
+excess scatter of the single grain ages which cannot be explained by
+the Poisson counting statistics alone. This dispersion can be just as
+informative as the central age itself, as it encodes geologically
+meaningful information about the compositional heterogeneity and
+cooling history of the sample.
+
+\section{LA-ICP-MS based fission track dating}
+\label{sec:ICPFT}
+
+The EDM continues to be the most widely used analytical protocol in
+fission track dating. However, over the past decade, an increasing
+number of laboratories have abandoned it and switched to LA-ICP-MS as
+a means of determining the uranium concentration of datable minerals,
+thus reducing sample turnover time and removing the need to handle
+radioactive materials\citep{hasebe2004, chew2012, vermeesch2017}. The
+statistical analysis of ICP-MS based FT data is less straightforward
+and less well developed than that of the EDM. The latter is based on
+simple ratios of Poisson variables, and forms the basis of a large
+edifice of statistical methods which cannot be directly applied to
+ICP-MS based data. The following paragraphs summarise
+\citet{vermeesch2017}'s solution to these issues, as implemented in
+\texttt{IsoplotR}.\\
+
+Two analytical approached are being used in ICP-based fission track
+geochronology, which each correspond to a different data format:
+
+\begin{enumerate}
+\item The `absolute dating' method is based on
+  Equation~\ref{eq:tFT}:
+  \begin{equation}
+    \hat{t} = \frac{1}{\lambda_D}
+    \ln \left(1 + \frac{\lambda_D}{\lambda_f}\frac{N_s}{[\hat{U}] A_s R_e ~ q}\right)
+    \label{eq:tICP}
+  \end{equation}
+
+  where $N_s$ is the number of spontaneous tracks counted over an area
+  $A_s$, $q$ is an `efficiency factor' \citep[$\sim$0.93 for apatite and
+    $\sim$1 for
+    zircon,][]{iwano1998,enkelmann2003,jonckheere2003b,soares2013} and
+  $[\hat{U}]$ is the $^{238}$U-concentration (in atoms per unit volume)
+  measured by LA-ICP-MS. Equation \ref{eq:tICP} requires an explicit
+  value for $\lambda_f$ and assumes that the etchable range ($R_e$) is
+  accurately known \citep{soares2014}.
+
+\item The \textzeta-calibration method folds the etch efficience,
+  decay constant and etchable range into a $\zeta$-calibration factor
+  akin to that used in the EDM:
+  \begin{equation}
+    \hat{t} = \frac{1}{\lambda_D}
+    \ln \left(1+\frac{1}{2}\lambda_D\hat{\zeta_{ICP}}\frac{N_s}{A_s[\hat{U}]}\right)
+    \label{eq:tzetahatICP}
+  \end{equation}
+
+  in which $\hat{\zeta_{ICP}}$ is determined by analysing a standard of
+  known FT age \citep{hasebe2004}. Note that, in contrast with the
+  `absolute' dating method, the $\zeta$-calibration method allows
+  $[\hat{U}]$ to be expressed in any concentration units (e.g., ppm or
+  wt\% of total U) or could even be replaced with the measured U/Ca-,
+  U/Si- or U/Zr-ratios produced by the ICP-MS instrument.
+\end{enumerate}
+
+\section{Compositional zoning}\label{sec:zoning}
+
+Uranium-bearing minerals such as apatite and zircon often exhibit
+compositional zoning, which must either be removed or quantified in
+order to ensure unbiased ages. Two approaches are being used to deal
+with this issue:
+
+\begin{enumerate}
+\item The effect of compositional zoning can be \emph{removed} by
+  covering the entire counting area with one large laser spot
+  \citep{soares2014} or a raster \citep{hasebe2004}. $s[\hat{U}]$ is
+  then simply given by the analytical uncertainty of the LA-ICP-MS
+  instrument, which typically is an order of magnitude lower than
+  the standard errors of induced track counts in the EDM.
+\item Alternatively, the uranium-heterogeneity can be
+  \emph{quantified} by analysing multiple spots per analysed grain
+  \citep{hasebe2009}. This is why \texttt{IsoplotR} accommodates
+  multiple uranium measurements per aliquot (U\textsubscript{1},
+  err[U\textsubscript{1}], $\ldots$, U\textsubscript{n},
+  err[U\textsubscript{n}])\\
+
+  It is commonly found that the variance of the different
+  uranium-measurements within each grain far exceeds the formal
+  analytical uncertainty of each spot measurement. \texttt{IsoplotR}
+  assumes that this dispersion is constant across all aliquots and
+  follows a log-normal distribution:
+  \begin{equation}
+    \ln\![U_{jk}] \sim \mathcal{N}(\mu_j,\sigma^2+s[U]_{jk}^2)
+    \label{eq:lognorm}
+  \end{equation}
+
+  where $\hat{U}_{jk}$ is the $k$\textsuperscript{th} (out of $n_j$)
+  uranium concentration measurement, $s[U]_{jk}$ is its standard
+  error, and and $\mu_j$ and $\sigma^2$ are the (unknown) mean and
+  variance of a Normal distribution. Note that $\mu_j$ is allowed to
+  vary from grain to grain but $\sigma$ is not.  $\mu_j$ and $\sigma$
+  can be estimated using the method of maximum likelihood, and the
+  corresponding geometric mean uranium concentrations directly plugged
+  into Equation~\ref{eq:tICP}.
+\end{enumerate}
+
+\section{Zero track counts}
+\label{sec:zeroICP}
+
+In contrast with the EDM, ICP-MS based FT data do not offer an easy
+way to deal with zero track counts. One pragmatic solution to this
+problem is to approximate the ICP-MS based uranium concentration
+measurement with an `equivalent induced track density', using the
+following linear transformation:
+\begin{equation}
+\hat{N}_{ij} = \rho_j A_{sj} [\hat{U}_j]
+\end{equation}
+
+where $A_{sj}$ is the area over which the spontaneous tracks of the
+j$^{th}$ grain have been counted and $\rho_j$ plays a similar role as
+$\rho_d$ in Eq.~\ref{eq:tzeta}. From the requirement that the variance
+of a Poisson-distributed variable equals its mean, it follows that:
+\begin{equation}
+\hat{N}_{ij} = \rho_j^2 A_{sj}^2 s[\hat{U}_j]^2
+\end{equation}
+
+\noindent from which it is easy to determine $\rho_j$. Thus the ICP-MS
+data have effectively been converted in to EDM data, and can be
+subjected to the same treatment as EDM data.
+
+\section{TODO}
+
+To plot ICP-MS based fission track data on a radial plot, we can
+replace Eqs.~\ref{eq:zj} and \ref{eq:sj} with
+
+\begin{align}
+  z_j & = \ln (\hat{t}_j) \mbox{,}   \label{eq:zj2} \\
+  \mbox{and~} s_j & = \sqrt{ 
+    \left(\frac{s[\hat{\zeta}]}{\hat{\zeta}}\right)^2 +
+    \left(\frac{s[\hat{U}]}{\hat{U}}\right)^2 +
+    \frac{1}{N_s}
+  }   \label{eq:sj2}
+\end{align}
+
+respectively \citep{galbraith2010b}. Alternatively, a square root
+transformation may be more appropriate for young and/or U-poor samples
+(Galbraith, \textit{pers. commun.}):
+\begin{align}
+  z_j & = \sqrt{\hat{t}_j} \mbox{,}   \label{eq:zj3} \\
+  \mbox{and~} s_j & = s[\hat{t}_j]\bigg/\left(2\sqrt{\hat{t}_j}\right)
+  \label{eq:sj3}
+\end{align}
+
+
+Equation~\ref{eq:tzeta2} represents a classic case of a `matched
+pairs' experimental design \citep{galbraith2010}. By counting the
+spontaneous and induced tracks over exactly the same area, the age
+calculation reduces to a simple comparison of two Poisson-distributed
+variables ($N_s$ and $N_i$). This enables an explicit maximum
+likelihood formulation, which greatly simplifies all subsequent
+statistical analyses. As a result, it is fair to say that the fission
+track method represents the gold standard among geochronometers in
+terms of statistical rigour.\\
+
+Abandoning the EDM in favour of LA-ICP-MS sacrifices this
+methodological elegance and causes problems in dealing with uranium
+zoning and zero-track grains. \texttt{IsoplotR} solves these problems
+using methods proposed by \citet{vermeesch20017}:
+
+\begin{enumerate}
+\item{Uranium zoning}: suppose that the analyst has placed a round
+  laser spot in the top half of the strongly zoned grain. This would
+  result in a high uranium concentration (or isotopic ratio
+  measurement) and a small analytical uncertainty, but would be
+  completely unrepresentative of the average composition of the
+  grain. Blindly combining such a single spot measurement with the
+  number of spontaneous fission tracks counted over the entire crystal
+  would produce a precise but grossly inaccurate age.
+
+\end{enumerate}
+
+A first option is to only count the spontaneous fission tracks that
+are located within the laser ablation spot, and to plug the resulting
+track counts, areas and \textsuperscript{238}U-concentrations into
+Equation \ref{eq:FT}.  Matching the areas over which
+N\textsubscript{s} and \textsuperscript{238}U are measured reduces the
+detrimental effect of (lateral) U-zoning on the fission track age
+accuracy. The main limitation of matching the areas is a reduction in
+precision due to the low number of spontaneous tracks counted within
+the outline of a small ablation pit. This problem can be circumvented
+by acquiring multiple \textsuperscript{238}U-measurements per grain.\\
+
+In a second approach to LAICPMS-based fission track dating,
+\texttt{IsoplotR} then jointly considers all the grains that have been
+analysed multiple times to quantify the degree of U-zoning within the
+grains.\\
+
+The accuracy of the two `absolute dating' approaches discussed thus
+far is fundamentally limited by the accuracy of the U-concentration
+measurements, the fission track decay constant and the etching and
+counting efficiencies.  Unfortunately, all these factors are
+potentially affected by unquantifiable biases.\\
+
+The third (using a single laser spot per grain) and fourth (using
+multiple spots) approach to LAICPMS-based fission track dating remove
+these systematic errors by normalising to a standard of known fission
+track age and defining a new `zeta' calibration constant
+$\zeta_{icp}$:
+
+\begin{equation}
+  t = \frac{1}{\lambda_{238}} \ln\left( 1 +
+  \frac{\lambda_{238}\zeta_{icp}}{2} \frac{N_s}{[{}^{238}U] A_s} \right)
+  \label{eq:tICPzeta}
+\end{equation}
+
+\noindent where $[{}^{238}U]$ may either stand for the
+\textsuperscript{238}U-concentration (in ppm) \emph{or} for the U/Ca
+(for apatite) or U/Si (for zircon) ratio measurement, and $A_s$ is the
+spontaneous track counting area.  \texttt{IsoplotR} implements the
+four approaches to LAICPMS-based fission track dating by giving the
+user the choice between an `absolute' and `$\zeta$-calibration'
+option, and between one or more U-measurements per grain.\\
+
+The zero track problem is solved by converting the U-concentration
+measurements into a `virtual' induced track density ($\hat{N}_i$) by
+replacing $[{}^{238}U] A_s$ with $\hat{N}_i/\rho_{icp}$ in
+Equation~\ref{eq:tICPzeta}, so that the Poisson uncertainty of
+$\hat{N}_i$ matches the uncertainty of the U-concentration measurement
+\citep{vermeesch2017}.
+
+\printbibliography[heading=subbibliography]
+
+\end{refsection}

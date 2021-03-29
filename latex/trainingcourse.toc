@@ -152,38 +152,40 @@
 \defcounter {refsection}{7}\relax 
 \contentsline {chapter}{\numberline {18}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{100}{chapter.18}%
 \defcounter {refsection}{8}\relax 
-\contentsline {chapter}{\numberline {19}U--Th--He and fission tracks}{102}{chapter.19}%
+\contentsline {chapter}{\numberline {19}U--Th--(Sm)--He}{102}{chapter.19}%
 \defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.1}U--Th--(Sm)--He}{102}{section.19.1}%
+\contentsline {section}{\numberline {19.1}The \textalpha -ejection correction}{102}{section.19.1}%
 \defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.2}The \textalpha -ejection correction}{103}{section.19.2}%
+\contentsline {section}{\numberline {19.2}isochrons}{104}{section.19.2}%
 \defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.3}isochrons}{104}{section.19.3}%
-\defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.4}Compositional data analysis and the `helioplot'}{104}{section.19.4}%
-\defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.5}Fission tracks}{106}{section.19.5}%
-\defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.6}The external detector method}{107}{section.19.6}%
-\defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.7}LA-ICP-MS based fission track dating}{108}{section.19.7}%
-\defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.8}Compositional zoning and zero track grains}{108}{section.19.8}%
+\contentsline {section}{\numberline {19.3}Compositional data analysis and the `helioplot'}{104}{section.19.3}%
 \defcounter {refsection}{9}\relax 
-\contentsline {chapter}{\numberline {20}\textsuperscript {230}Th--U dating}{111}{chapter.20}%
+\contentsline {chapter}{\numberline {20}Fission tracks}{108}{chapter.20}%
 \defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.1}Data formats}{112}{section.20.1}%
+\contentsline {section}{\numberline {20.1}The external detector method}{108}{section.20.1}%
 \defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.2}Isochrons}{112}{section.20.2}%
+\contentsline {section}{\numberline {20.2}LA-ICP-MS based fission track dating}{109}{section.20.2}%
 \defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.3}Th--U evolution diagrams}{112}{section.20.3}%
+\contentsline {section}{\numberline {20.3}Compositional zoning}{110}{section.20.3}%
+\defcounter {refsection}{9}\relax 
+\contentsline {section}{\numberline {20.4}Zero track counts}{111}{section.20.4}%
+\defcounter {refsection}{9}\relax 
+\contentsline {section}{\numberline {20.5}TODO}{111}{section.20.5}%
+\defcounter {refsection}{10}\relax 
+\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U dating}{113}{chapter.21}%
+\defcounter {refsection}{10}\relax 
+\contentsline {section}{\numberline {21.1}Data formats}{114}{section.21.1}%
+\defcounter {refsection}{10}\relax 
+\contentsline {section}{\numberline {21.2}Isochrons}{114}{section.21.2}%
+\defcounter {refsection}{10}\relax 
+\contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{114}{section.21.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{114}{part.3}%
-\defcounter {refsection}{10}\relax 
-\contentsline {chapter}{\numberline {21}Introduction to \texttt {IsoplotR}}{115}{chapter.21}%
-\defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.1}Software architecture}{115}{section.21.1}%
-\defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.2}The Graphical User Interface (GUI)}{116}{section.21.2}%
-\defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.3}The Command Line Interface (CLI)}{118}{section.21.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{116}{part.3}%
+\defcounter {refsection}{11}\relax 
+\contentsline {chapter}{\numberline {22}Introduction to \texttt {IsoplotR}}{117}{chapter.22}%
+\defcounter {refsection}{11}\relax 
+\contentsline {section}{\numberline {22.1}Software architecture}{117}{section.22.1}%
+\defcounter {refsection}{11}\relax 
+\contentsline {section}{\numberline {22.2}The Graphical User Interface (GUI)}{118}{section.22.2}%
+\defcounter {refsection}{11}\relax 
+\contentsline {section}{\numberline {22.3}The Command Line Interface (CLI)}{120}{section.22.3}%

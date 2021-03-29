@@ -17,215 +17,114 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{kaufman1965}{article}{}
-    \name{author}{2}{}{%
-      {{hash=KA}{%
-         family={Kaufman},
-         familyi={K\bibinitperiod},
-         given={Aaron},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=BW}{%
-         family={Broecker},
-         familyi={B\bibinitperiod},
-         given={Wallace},
-         giveni={W\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Wiley Online Library}%
-    }
-    \strng{namehash}{KABW1}
-    \strng{fullhash}{KABW1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1965}
-    \field{labeldatesource}{}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{number}{16}
-    \field{pages}{4039\bibrangedash 4054}
-    \field{title}{{Comparison of Th$^{230}$ and C$^{14}$ ages for carbonate
-  materials from Lakes Lahontan and Bonneville}}
-    \field{volume}{70}
-    \field{journaltitle}{Journal of geophysical Research}
-    \field{year}{1965}
-  \endentry
-
-  \entry{ludwig2003b}{article}{}
+  \entry{galbraith1990a}{article}{}
     \name{author}{1}{}{%
-      {{hash=LKR}{%
-         family={Ludwig},
-         familyi={L\bibinitperiod},
-         given={Kenneth\bibnamedelima R},
-         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      {{hash=GRF}{%
+         family={Galbraith},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima F.},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {Mineral Soc America}%
-    }
-    \strng{namehash}{LKR1}
-    \strng{fullhash}{LKR1}
+    \strng{namehash}{GRF1}
+    \strng{fullhash}{GRF1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2003}
+    \field{labelyear}{1990}
     \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{number}{1}
-    \field{pages}{631\bibrangedash 656}
-    \field{title}{{Mathematical--statistical treatment of data and errors for
-  $^{230}$Th/U geochronology}}
-    \field{volume}{52}
-    \field{journaltitle}{Reviews in Mineralogy and Geochemistry}
-    \field{year}{2003}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{pages}{207\bibrangedash 214}
+    \field{title}{The radial plot: graphical assessment of spread in ages}
+    \field{volume}{17}
+    \field{journaltitle}{Nuclear Tracks and Radiation Measurements}
+    \field{year}{1990}
   \endentry
 
-  \entry{ludwig1994}{article}{}
-    \name{author}{2}{}{%
-      {{hash=LKR}{%
-         family={Ludwig},
-         familyi={L\bibinitperiod},
-         given={Kenneth\bibnamedelima R},
-         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+  \entry{galbraith2010}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GRF}{%
+         family={Galbraith},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima F.},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
-      {{hash=TD}{%
-         family={Titterington},
-         familyi={T\bibinitperiod},
-         given={DM},
-         giveni={D\bibinitperiod},
+    }
+    \strng{namehash}{GRF1}
+    \strng{fullhash}{GRF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{issue}{1}
+    \field{pages}{1\bibrangedash 10}
+    \field{title}{{On plotting OSL equivalent doses}}
+    \field{volume}{28}
+    \field{journaltitle}{Ancient TL}
+    \field{year}{2010}
+  \endentry
+
+  \entry{galbraith1993}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GRF}{%
+         family={Galbraith},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima F.},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=LGM}{%
+         family={Laslett},
+         familyi={L\bibinitperiod},
+         given={G.\bibnamedelima M.},
+         giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Elsevier}%
     }
-    \strng{namehash}{LKRTD1}
-    \strng{fullhash}{LKRTD1}
+    \strng{namehash}{GRFLGM1}
+    \strng{fullhash}{GRFLGM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{1994}
+    \field{labelyear}{1993}
     \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{number}{22}
-    \field{pages}{5031\bibrangedash 5042}
-    \field{title}{{Calculation of $^{230}$Th-U isochrons, ages, and errors}}
-    \field{volume}{58}
-    \field{journaltitle}{Geochimica et Cosmochimica Acta}
-    \field{year}{1994}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{4}
+    \field{pages}{459\bibrangedash 470}
+    \field{title}{Statistical models for mixed fission track ages}
+    \field{volume}{21}
+    \field{journaltitle}{Nuclear tracks and radiation measurements}
+    \field{year}{1993}
   \endentry
 
-  \entry{osmond1970}{article}{}
-    \name{author}{3}{}{%
-      {{hash=OJ}{%
-         family={Osmond},
-         familyi={O\bibinitperiod},
-         given={JK},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=MJP}{%
-         family={May},
-         familyi={M\bibinitperiod},
-         given={James\bibnamedelima P},
-         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-      {{hash=TW}{%
-         family={Tanner},
-         familyi={T\bibinitperiod},
-         given={WF},
-         giveni={W\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Wiley Online Library}%
-    }
-    \strng{namehash}{OJMJPTW1}
-    \strng{fullhash}{OJMJPTW1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1970}
-    \field{labeldatesource}{}
-    \field{sortinit}{O}
-    \field{sortinithash}{O}
-    \field{number}{2}
-    \field{pages}{469\bibrangedash 479}
-    \field{title}{{Age of the Cape Kennedy Barrier-and-Lagoon Complex}}
-    \field{volume}{75}
-    \field{journaltitle}{Journal of Geophysical Research}
-    \field{year}{1970}
-  \endentry
-
-  \entry{rosholt1976}{inproceedings}{}
+  \entry{vermeesch2017}{article}{}
     \name{author}{1}{}{%
-      {{hash=RJ}{%
-         family={Rosholt},
-         familyi={R\bibinitperiod},
-         given={JN},
-         giveni={J\bibinitperiod},
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
       }}%
     }
-    \strng{namehash}{RJ1}
-    \strng{fullhash}{RJ1}
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{1976}
+    \field{labelyear}{2017}
     \field{labeldatesource}{}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{booktitle}{Geological Society of America Abstracts with Programs}
-    \field{pages}{1076}
-    \field{title}{{$^{230}$Th/$^{234}$U dating of travertine and caliche
-  rinds}}
-    \field{volume}{8}
-    \field{year}{1976}
-  \endentry
-
-  \entry{york2004}{article}{}
-    \name{author}{4}{}{%
-      {{hash=YD}{%
-         family={York},
-         familyi={Y\bibinitperiod},
-         given={Derek},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=ENM}{%
-         family={Evensen},
-         familyi={E\bibinitperiod},
-         given={Norman\bibnamedelima M},
-         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=MML}{%
-         family={Mart\'{i}nez},
-         familyi={M\bibinitperiod},
-         given={Margarita\bibnamedelima L{\'o}pez},
-         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-      {{hash=DBDJ}{%
-         family={De\bibnamedelima Basabe\bibnamedelima Delgado},
-         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
-  D\bibinitperiod},
-         given={Jon{\'a}s},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {AAPT}%
-    }
-    \strng{namehash}{YD+1}
-    \strng{fullhash}{YDENMMMLDBDJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2004}
-    \field{labeldatesource}{}
-    \field{sortinit}{Y}
-    \field{sortinithash}{Y}
-    \field{number}{3}
-    \field{pages}{367\bibrangedash 375}
-    \field{title}{{Unified equations for the slope, intercept, and standard
-  errors of the best straight line}}
-    \field{volume}{72}
-    \field{journaltitle}{American Journal of Physics}
-    \field{year}{2004}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.chemgeo.2017.03.002
+    \endverb
+    \field{pages}{19\bibrangedash 27}
+    \field{title}{{Statistics for LA-ICP-MS based fission track dating}}
+    \field{volume}{456}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{2017}
   \endentry
 \enddatalist
 \endinput
