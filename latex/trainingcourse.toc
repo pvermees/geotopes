@@ -62,7 +62,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.2}The $^{230}$Th method}{36}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}The $^{230}$Th-$^{238}$U method}{36}{section.8.3}%
+\contentsline {section}{\numberline {8.3}The $^{230}$Th-U method}{36}{section.8.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Error propagation}{38}{chapter.9}%
 \defcounter {refsection}{0}\relax 
@@ -116,76 +116,74 @@
 \defcounter {refsection}{3}\relax 
 \contentsline {section}{\numberline {14.4}Mixture models}{73}{section.14.4}%
 \defcounter {refsection}{4}\relax 
-\contentsline {chapter}{\numberline {15}U--Pb geochronology}{77}{chapter.15}%
+\contentsline {chapter}{\numberline {15}U--Pb geochronology}{78}{chapter.15}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.1}Input formats}{77}{section.15.1}%
+\contentsline {section}{\numberline {15.1}Input formats}{78}{section.15.1}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.2}Concordia diagrams and ages}{79}{section.15.2}%
+\contentsline {section}{\numberline {15.2}Concordia diagrams and ages}{80}{section.15.2}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.3}Discordia/isochron regression}{82}{section.15.3}%
+\contentsline {section}{\numberline {15.3}Discordia/isochron regression}{83}{section.15.3}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.4}Common Pb}{84}{section.15.4}%
+\contentsline {section}{\numberline {15.4}Common Pb}{85}{section.15.4}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.5}Initial disequilibrium}{87}{section.15.5}%
+\contentsline {section}{\numberline {15.5}Initial disequilibrium}{88}{section.15.5}%
 \defcounter {refsection}{4}\relax 
-\contentsline {section}{\numberline {15.6}Discordance filters}{89}{section.15.6}%
+\contentsline {section}{\numberline {15.6}Discordance filters}{90}{section.15.6}%
 \defcounter {refsection}{5}\relax 
-\contentsline {chapter}{\numberline {16}Pb--Pb and Th--Pb}{93}{chapter.16}%
+\contentsline {chapter}{\numberline {16}Pb--Pb and Th--Pb}{94}{chapter.16}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.1}Pb--Pb}{93}{section.16.1}%
+\contentsline {section}{\numberline {16.1}Pb--Pb}{94}{section.16.1}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.2}(inverse) isochrons}{93}{section.16.2}%
+\contentsline {section}{\numberline {16.2}(inverse) isochrons}{94}{section.16.2}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.3}The Stacey-Kramers growth curve}{94}{section.16.3}%
+\contentsline {section}{\numberline {16.3}The Stacey-Kramers growth curve}{95}{section.16.3}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.4}Th--Pb}{95}{section.16.4}%
+\contentsline {section}{\numberline {16.4}Th--Pb}{96}{section.16.4}%
 \defcounter {refsection}{5}\relax 
-\contentsline {section}{\numberline {16.5}Single grain ages}{96}{section.16.5}%
+\contentsline {section}{\numberline {16.5}Single grain ages}{97}{section.16.5}%
 \defcounter {refsection}{6}\relax 
-\contentsline {chapter}{\numberline {17}Ar--Ar and K--Ca}{97}{chapter.17}%
+\contentsline {chapter}{\numberline {17}Ar--Ar and K--Ca}{98}{chapter.17}%
 \defcounter {refsection}{6}\relax 
-\contentsline {section}{\numberline {17.1}Ar--Ar}{97}{section.17.1}%
+\contentsline {section}{\numberline {17.1}Ar--Ar}{98}{section.17.1}%
 \defcounter {refsection}{6}\relax 
-\contentsline {section}{\numberline {17.2}Age spectra}{98}{section.17.2}%
+\contentsline {section}{\numberline {17.2}Age spectra}{99}{section.17.2}%
 \defcounter {refsection}{6}\relax 
-\contentsline {section}{\numberline {17.3}K--Ca}{99}{section.17.3}%
+\contentsline {section}{\numberline {17.3}K--Ca}{100}{section.17.3}%
 \defcounter {refsection}{7}\relax 
-\contentsline {chapter}{\numberline {18}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{100}{chapter.18}%
+\contentsline {chapter}{\numberline {18}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{101}{chapter.18}%
 \defcounter {refsection}{8}\relax 
-\contentsline {chapter}{\numberline {19}U--Th--(Sm)--He}{102}{chapter.19}%
+\contentsline {chapter}{\numberline {19}U--Th--(Sm)--He}{103}{chapter.19}%
 \defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.1}The \textalpha -ejection correction}{102}{section.19.1}%
+\contentsline {section}{\numberline {19.1}The \textalpha -ejection correction}{103}{section.19.1}%
 \defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.2}isochrons}{104}{section.19.2}%
+\contentsline {section}{\numberline {19.2}isochrons}{105}{section.19.2}%
 \defcounter {refsection}{8}\relax 
-\contentsline {section}{\numberline {19.3}Compositional data analysis and the `helioplot'}{104}{section.19.3}%
+\contentsline {section}{\numberline {19.3}Compositional data analysis and the `helioplot'}{105}{section.19.3}%
 \defcounter {refsection}{9}\relax 
-\contentsline {chapter}{\numberline {20}Fission tracks}{108}{chapter.20}%
+\contentsline {chapter}{\numberline {20}Fission tracks}{109}{chapter.20}%
 \defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.1}The external detector method}{108}{section.20.1}%
+\contentsline {section}{\numberline {20.1}The external detector method}{109}{section.20.1}%
 \defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.2}LA-ICP-MS based fission track dating}{109}{section.20.2}%
+\contentsline {section}{\numberline {20.2}LA-ICP-MS based fission track dating}{110}{section.20.2}%
 \defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.3}Compositional zoning}{110}{section.20.3}%
+\contentsline {section}{\numberline {20.3}Compositional zoning}{111}{section.20.3}%
 \defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.4}Zero track counts}{111}{section.20.4}%
-\defcounter {refsection}{9}\relax 
-\contentsline {section}{\numberline {20.5}TODO}{111}{section.20.5}%
+\contentsline {section}{\numberline {20.4}Zero track counts}{112}{section.20.4}%
 \defcounter {refsection}{10}\relax 
-\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U dating}{113}{chapter.21}%
+\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U dating}{114}{chapter.21}%
 \defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.1}Data formats}{114}{section.21.1}%
+\contentsline {section}{\numberline {21.1}Data formats}{115}{section.21.1}%
 \defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.2}Isochrons}{114}{section.21.2}%
+\contentsline {section}{\numberline {21.2}Isochrons}{115}{section.21.2}%
 \defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{114}{section.21.3}%
+\contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{116}{section.21.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{116}{part.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{117}{part.3}%
 \defcounter {refsection}{11}\relax 
-\contentsline {chapter}{\numberline {22}Introduction to \texttt {IsoplotR}}{117}{chapter.22}%
+\contentsline {chapter}{\numberline {22}Introduction to \texttt {IsoplotR}}{118}{chapter.22}%
 \defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.1}Software architecture}{117}{section.22.1}%
+\contentsline {section}{\numberline {22.1}Software architecture}{118}{section.22.1}%
 \defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.2}The Graphical User Interface (GUI)}{118}{section.22.2}%
+\contentsline {section}{\numberline {22.2}The Graphical User Interface (GUI)}{119}{section.22.2}%
 \defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.3}The Command Line Interface (CLI)}{120}{section.22.3}%
+\contentsline {section}{\numberline {22.3}The Command Line Interface (CLI)}{121}{section.22.3}%

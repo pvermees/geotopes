@@ -7,7 +7,7 @@ in Chapter~\ref{ch:intro2Useries}. Recall that the radioactive decay
 of \textsuperscript{238}U to \textsuperscript{206}Pb produces
 short-lived \textsuperscript{230}Th (t\textsubscript{1/2}=76~kyr) and
 \textsuperscript{234}U (t\textsubscript{1/2}=246~kyr), which may
-fractionate by one of two mechanisms:
+fractionate by one of several mechanisms:
 
 \begin{enumerate}
 \item U and Th have contrasting chemical properties and are easily
@@ -31,8 +31,8 @@ Section~\ref{sec:234238} showed that the fractionation between
 marine carbonates; Section~\ref{sec:230} showed that the fractionation
 between \textsuperscript{230}Th and \textsuperscript{234}U can be used
 to date young volcanic rocks; and Section~\ref{sec:230238} combined
-the two equations together in a single equation. Recalling
-Equation~\ref{eq:230238}
+the two equations together in a single equation. Recall
+Equation~\ref{eq:230238}:
 \begin{equation}
   \frac{A(^{230}Th)}{A(^{238}U)} = 1 - e^{-\lambda_{230}t} +
   \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} (\gamma_\circ-1)
@@ -68,9 +68,59 @@ U-series dating applications.
 
 \section{Data formats}
 
-\section{Isochrons}
+\texttt{IsoplotR} accepts U-series data in four different formats:
 
-\section{Th--U evolution diagrams}
+\begin{enumerate}
+\item $\frac{38}{32}$, $s\!\left[\frac{38}{32}\right]$,
+  $\frac{34}{32}$, $s\!\left[\frac{34}{32}\right]$,
+  $\frac{30}{32}$, $s\!\left[\frac{30}{32}\right]$,
+  $r\!\left[\frac{38}{32},\frac{34}{32}\right]$,
+  $r\!\left[\frac{38}{32},\frac{30}{32}\right]$,
+  $r\!\left[\frac{34}{32},\frac{30}{32}\right]$
+\item $\frac{32}{38}$, $s\!\left[\frac{32}{38}\right]$,
+  $\frac{34}{38}$, $s\!\left[\frac{34}{38}\right]$,
+  $\frac{30}{38}$, $s\!\left[\frac{30}{38}\right]$,
+  $r\!\left[\frac{32}{38},\frac{34}{38}\right]$,
+  $r\!\left[\frac{32}{38},\frac{30}{38}\right]$,
+  $r\!\left[\frac{34}{38},\frac{30}{38}\right]$
+\item $\frac{38}{32}$, $s\!\left[\frac{38}{32}\right]$,
+  $\frac{30}{32}$, $s\!\left[\frac{30}{32}\right]$,
+  $r\!\left[\frac{38}{32},\frac{30}{32}\right]$
+\item $\frac{32}{38}$, $s\!\left[\frac{32}{38}\right]$,
+  $\frac{30}{38}$, $s\!\left[\frac{30}{38}\right]$,
+  $r\!\left[\frac{32}{38},\frac{30}{38}\right]$
+\end{enumerate}
+
+\noindent where `30', `32', `34' and `38' stand for
+\textsuperscript{230}Th, \textsuperscript{232}Th,
+\textsuperscript{234}U and \textsuperscript{238}U, respectively.  It
+is important to emphasise that, unlike all of \texttt{IsoplotR}'s
+other data formats, the numbers in these data tables are no atomic
+ratios but activity ratios. The relationship between activity ratios
+and atomic ratios is given by:
+\begin{equation}
+  \frac{\mbox{activity}(x)}{\mbox{activity}(y)} =
+  \frac{\mbox{atoms}(x)}{\mbox{atoms}(y)}
+  \frac{\lambda_{x}}{\lambda_{y}}
+\end{equation}
+
+Formats~1 and 2 are applicable to carbonate lithologies in which both
+the \textsuperscript{230}Th/\textsuperscript{234}U and
+\textsuperscript{234}U/\textsuperscript{238}U equilibrium has been
+disturbed. Formats~3 and 4 are applicable to igneous rocks, in which
+only the \textsuperscript{230}Th/\textsuperscript{234}U activity ratio
+has been distrubed, but \textsuperscript{234}U and
+\textsuperscript{238}U are in secular equilibrium (i.e. the
+\textsuperscript{230}Th dating method of Section~\ref{sec:230}).\\
+
+The error correlations of formats~1 and 3 tend to be stronger than
+those of formats~2 and 4. This is because formats~1 and 3 normalise
+the elements of the \textsuperscript{238}U decay series to the highly
+variable amount of detrital \textsuperscript{232}Th. In contrast,
+formats~2 and 4 feature only one ratio containing
+\textsuperscript{232}Th, thus reducing a source of shared variability.
+
+\section{Isochrons}
 
 For igneous samples, in which $A[{}^{234}U]/A[{}^{238}U] = 1$, the
 second term on the right-hand side of Equation~\ref{eq:Th-U} vanishes
@@ -80,17 +130,30 @@ and we can write:
   \left(\frac{A[{}^{230}Th]}{A[{}^{232}Th]}\right)_\circ +
   \left(\frac{A[{}^{238}U]}{A[{}^{232}Th]}\right)_i
   \left(1-e^{-\lambda_{230}t}\right)
-  \label{eq:Th-U-volcanic}
+  \label{eq:rosholt}
 \end{equation}
 
 \noindent for $1 \leq i \leq n$, which can be solved for $t$ and
 $\left(A[{}^{230}Th]/A[{}^{232}Th]\right)_\circ$ using the least
-squares method of \citet{york2004}. Equation~\ref{eq:Th-U-volcanic}
-forms a `Rosholt'-type isochron, which is akin to a `normal' isochron
-in Rb-Sr or Ar-Ar geochronology \citep{rosholt1976}. Using
-$A[{}^{238}U]$ as the normalising factor instead yields an
-`Osmond'-type isochron, which is akin to an `inverse' isochron in
-Ar-Ar or Pb-Pb geochronology \citep{osmond1970, ludwig2003b}.\\
+squares method of \citet{york2004}. Equation~\ref{eq:rosholt} (which
+was previously derived as Equation~\ref{eq:230232}) forms a
+`Rosholt'-type isochron, which is akin to a `normal' isochron in Rb-Sr
+or Ar-Ar geochronology \citep{rosholt1976}. Using $A[{}^{238}U]$ as
+the normalising factor instead yields an `Osmond'-type isochron, which
+is akin to an `inverse' isochron in Ar-Ar or Pb-Pb geochronology
+\citep{osmond1970, ludwig2003b}:
+\begin{equation}
+  \left(\frac{A[{}^{230}Th]}{A[{}^{238}U]}\right)_i =
+  \left(1-e^{\lambda_{230}t}\right) +
+  \left(\frac{A[{}^{232}Th]}{A[{}^{238}U]}\right)_i
+  \left(\frac{A[{}^{230}Th]}{A[{}^{232}Th]}\right)_\circ
+  e^{\lambda_{230}t}
+  \label{eq:osmond}
+\end{equation}
+
+Note that for the Rosholt isochron, the age is a function of the
+slope, whereas for the Osmond isochorn, it is a function of the
+y-intercept (as well as the slope).\\
 
 For carbonate samples, in which \textsuperscript{234}U and
 \textsuperscript{238}U generally are not in secular equilibrium, three
@@ -102,6 +165,8 @@ of the \textsuperscript{230}Th/\textsuperscript{238}U-,
 \textsuperscript{234}U/\textsuperscript{238}U-activity
 ratios. \texttt{IsoplotR} performs this calculation with the maximum
 likelihood algorithm of \citet{ludwig1994}.\\
+
+\section{Th--U evolution diagrams}
 
 In addition to (Rosholt and Osmond) isochrons and the usual weighted
 mean, radial, CAD and KDE plots, U-series data can also be visualised

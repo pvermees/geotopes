@@ -583,11 +583,25 @@ helioplot(UThHe,logratio=FALSE)
 helioplot(UThHe,logratio=TRUE)
 dev.off()
 
-He <- c(0.21,0.18,0.69,0.38,0.77,0.50,0.72,0.99,0.38,0.780)
-U <- c(27,37,57,91,20,90,94,66,63,62)
-l38 <- settings('lambda','U238')[1]
-l35 <- settings('lambda','U235')[1]
-U85 <- settings('iratio','U238U235')[1]
-P <- (8*U85*l38 + 7*l35)*U/(U85+1)
-signif(mean(He/P),3)
-signif(1/mean(P/He),3)
+if (FALSE){
+    He <- c(0.21,0.18,0.69,0.38,0.77,0.50,0.72,0.99,0.38,0.780)
+    U <- c(27,37,57,91,20,90,94,66,63,62)
+    l38 <- settings('lambda','U238')[1]
+    l35 <- settings('lambda','U235')[1]
+    U85 <- settings('iratio','U238U235')[1]
+    P <- (8*U85*l38 + 7*l35)*U/(U85+1)
+    signif(mean(He/P),3)
+    signif(1/mean(P/He),3)
+}
+
+cairo(file='~/Documents/temp/FTradial.pdf',height=4.5,width=4.5)
+pars(mfrow=c(2,2),mar=c(2.5,2.5,3,0.5))
+radialplot(examples$FT1,transformation='log')
+legend('topleft',legend='a)',bty='n')
+radialplot(examples$FT1,transformation='arcsin')
+legend('topleft',legend='b)',bty='n')
+radialplot(examples$FT2,transformation='log')
+legend('topleft',legend='c)',bty='n')
+radialplot(examples$FT2,transformation='sqrt')
+legend('topleft',legend='d)',bty='n')
+dev.off()

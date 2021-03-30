@@ -194,7 +194,6 @@ Consider the usual set of dates $t_i$ and uncertainties $s[t_i]$ (for
 $1 \leq i \leq n$); define $z_i = z(t_i)$ to be a transformation of
 $t_i$; and let $s[z_i]$ be its propagated analytical uncertainty.
 For example,
-
 \begin{equation}
   \begin{cases}
   \phantom{s[}z_i\phantom{]}\! & \! = \ln[t_i]\\
@@ -203,9 +202,17 @@ For example,
   \label{eq:logtransform}
 \end{equation}
 
-\noindent in the case of a logarithmic transformation. Create a
-scatter plot of $(x_i,y_i)$ values, where $x_i = 1/s[z_i]$ and $y_i =
-(z_i-z_\circ)/s[z_i]$, in which $z_\circ$ is some reference value such
+\noindent in the case of a logarithmic transformation. Then the radial
+plot is a scatter plot of $(x_i,y_i)$ values, where
+\begin{equation}
+  \begin{split}
+    x_i & = 1/s[z_i] \\
+    \mbox{and~} y_i & = \frac{z_i-z_\circ}{s[z_i]}
+  \end{split}
+  \label{eq:radial}
+\end{equation}
+
+\noindent in which $z_\circ$ is some reference value such
 as the mean. The slope of a line connecting the origin of this scatter
 plot with any of the $(x_i,y_i)$s is proportional to $z_i$ and, hence,
 a function of the date $t_i$.\\

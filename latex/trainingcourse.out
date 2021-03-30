@@ -29,7 +29,7 @@
 \BOOKMARK [0][-]{chapter.8}{U-series dating}{part.1}% 29
 \BOOKMARK [1][-]{section.8.1}{The 234U-238U method}{chapter.8}% 30
 \BOOKMARK [1][-]{section.8.2}{The 230Th method}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.3}{The 230Th-238U method}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.3}{The 230Th-U method}{chapter.8}% 32
 \BOOKMARK [0][-]{chapter.9}{Error propagation}{part.1}% 33
 \BOOKMARK [1][-]{section.9.1}{Some basic definitions}{chapter.9}% 34
 \BOOKMARK [1][-]{section.9.2}{Examples}{chapter.9}% 35
@@ -83,13 +83,12 @@
 \BOOKMARK [1][-]{section.20.2}{LA-ICP-MS based fission track dating}{chapter.20}% 83
 \BOOKMARK [1][-]{section.20.3}{Compositional zoning}{chapter.20}% 84
 \BOOKMARK [1][-]{section.20.4}{Zero track counts}{chapter.20}% 85
-\BOOKMARK [1][-]{section.20.5}{TODO}{chapter.20}% 86
-\BOOKMARK [0][-]{chapter.21}{230Th\205U dating}{part.2}% 87
-\BOOKMARK [1][-]{section.21.1}{Data formats}{chapter.21}% 88
-\BOOKMARK [1][-]{section.21.2}{Isochrons}{chapter.21}% 89
-\BOOKMARK [1][-]{section.21.3}{Th\205U evolution diagrams}{chapter.21}% 90
-\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 91
-\BOOKMARK [0][-]{chapter.22}{Introduction to IsoplotR}{part.3}% 92
-\BOOKMARK [1][-]{section.22.1}{Software architecture}{chapter.22}% 93
-\BOOKMARK [1][-]{section.22.2}{The Graphical User Interface \(GUI\)}{chapter.22}% 94
-\BOOKMARK [1][-]{section.22.3}{The Command Line Interface \(CLI\)}{chapter.22}% 95
+\BOOKMARK [0][-]{chapter.21}{230Th\205U dating}{part.2}% 86
+\BOOKMARK [1][-]{section.21.1}{Data formats}{chapter.21}% 87
+\BOOKMARK [1][-]{section.21.2}{Isochrons}{chapter.21}% 88
+\BOOKMARK [1][-]{section.21.3}{Th\205U evolution diagrams}{chapter.21}% 89
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 90
+\BOOKMARK [0][-]{chapter.22}{Introduction to IsoplotR}{part.3}% 91
+\BOOKMARK [1][-]{section.22.1}{Software architecture}{chapter.22}% 92
+\BOOKMARK [1][-]{section.22.2}{The Graphical User Interface \(GUI\)}{chapter.22}% 93
+\BOOKMARK [1][-]{section.22.3}{The Command Line Interface \(CLI\)}{chapter.22}% 94
