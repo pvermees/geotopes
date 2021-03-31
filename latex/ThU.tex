@@ -47,11 +47,13 @@ A(\textsuperscript{230}Th)/A(\textsuperscript{238}U)$>1$. Both of
 these limitations can be avoided by recasting the equation in the
 following form:
 \begin{equation}
-  \frac{A[{}^{230}Th] - A[{}^{230}Th]_\circ}{A[{}^{238}U]} =
-  1 - e^{\lambda_{230}t} -
+  \begin{split}
+  & \frac{A[{}^{230}Th] - A[{}^{230}Th]_{\circ}e^{-\lambda_{230}t}}{A[{}^{238}U]} = \\
+  & 1 - e^{\lambda_{230}t} -
   \left(\frac{A[{}^{234}U]}{A[{}^{238}U]}-1\right)
   \left(\frac{\lambda_{230}}{\lambda_{234}-\lambda_{230}}\right)
   \left(1-e^{[\lambda_{234}-\lambda_{230}]t}\right)
+  \end{split}
   \label{eq:Th-U}
 \end{equation}
 
@@ -66,7 +68,7 @@ normalising factor.\\
 \texttt{IsoplotR} uses Equation~\ref{eq:Th-U} as the basis of all its
 U-series dating applications.
 
-\section{Data formats}
+\section{Data formats}\label{sec:ThUformats}
 
 \texttt{IsoplotR} accepts U-series data in four different formats:
 
@@ -127,14 +129,15 @@ second term on the right-hand side of Equation~\ref{eq:Th-U} vanishes
 and we can write:
 \begin{equation}
   \left(\frac{A[{}^{230}Th]}{A[{}^{232}Th]}\right)_i = 
-  \left(\frac{A[{}^{230}Th]}{A[{}^{232}Th]}\right)_\circ +
+  \left(\frac{A[{}^{230}Th]}{A[{}^{232}Th]}\right)_{\!\circ}
+  e^{-\lambda_{230}t} +
   \left(\frac{A[{}^{238}U]}{A[{}^{232}Th]}\right)_i
   \left(1-e^{-\lambda_{230}t}\right)
   \label{eq:rosholt}
 \end{equation}
 
 \noindent for $1 \leq i \leq n$, which can be solved for $t$ and
-$\left(A[{}^{230}Th]/A[{}^{232}Th]\right)_\circ$ using the least
+$\left(A[{}^{230}Th]/A[{}^{232}Th]\right)_{\!\circ}$ using the least
 squares method of \citet{york2004}. Equation~\ref{eq:rosholt} (which
 was previously derived as Equation~\ref{eq:230232}) forms a
 `Rosholt'-type isochron, which is akin to a `normal' isochron in Rb-Sr
@@ -147,13 +150,13 @@ is akin to an `inverse' isochron in Ar-Ar or Pb-Pb geochronology
   \left(1-e^{\lambda_{230}t}\right) +
   \left(\frac{A[{}^{232}Th]}{A[{}^{238}U]}\right)_i
   \left(\frac{A[{}^{230}Th]}{A[{}^{232}Th]}\right)_\circ
-  e^{\lambda_{230}t}
+  e^{-\lambda_{230}t}
   \label{eq:osmond}
 \end{equation}
 
 Note that for the Rosholt isochron, the age is a function of the
-slope, whereas for the Osmond isochorn, it is a function of the
-y-intercept (as well as the slope).\\
+slope, whereas for the Osmond isochron, it is a function of the
+y-intercept.\\
 
 For carbonate samples, in which \textsuperscript{234}U and
 \textsuperscript{238}U generally are not in secular equilibrium, three
@@ -164,7 +167,79 @@ of the \textsuperscript{230}Th/\textsuperscript{238}U-,
 \textsuperscript{232}Th/\textsuperscript{238}U- and
 \textsuperscript{234}U/\textsuperscript{238}U-activity
 ratios. \texttt{IsoplotR} performs this calculation with the maximum
-likelihood algorithm of \citet{ludwig1994}.\\
+likelihood algorithm of \citet{ludwig1994}. This solves the following
+system of equations:
+\begin{equation}
+  \begin{cases}
+    \left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_i =
+    a + b \left[\frac{{}^{232}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i + \delta_i \\
+    \left[\frac{{}^{230}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i =
+    A + B \left[\frac{{}^{232}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i + \epsilon_i
+  \end{cases}
+  \label{eq:titterington}
+\end{equation}
+
+\noindent where $\delta_i$ and $\epsilon_i$ are the bivariate normal
+residuals. Equation~\ref{eq:titterington} can be solved by maximising
+the following log-likelihood function for $x_i$, $a$, $b$, $A$ and
+$B$:
+\begin{equation}
+  \mathcal{LL} & = \mbox{const.} - 
+  \frac{1}{2} \sum\limits_{i=1}^{n}
+  \left[
+    \begin{array}{@{}c@{}}
+      \left[\frac{32}{38}\right]_{\!i} - x_{i} \\
+      \left[\frac{34}{38}\right]_{\!i} - a - b x_{i} \\
+      \left[\frac{30}{38}\right]_{\!i} - A - B x_{i}
+    \end{array}
+    \right]^T
+  \left[
+    \begin{array}{@{}c@{~}c@{~}c@{}}
+      s\!\left[\frac{32}{38}\right]_{\!i}^2 &
+      s\!\left[\frac{32}{38},\frac{34}{38}\right]_{\!i} &
+      s\!\left[\frac{32}{38},\frac{30}{38}\right]_{\!i} \\
+      s\!\left[\frac{34}{38},\frac{32}{38}\right]_{\!i} &
+      s\!\left[\frac{34}{38}\right]_{\!i}^2 &
+      s\!\left[\frac{34}{38},\frac{30}{38}\right]_{\!i} &
+      s\!\left[\frac{30}{38},\frac{32}{38}\right]_{\!i} &
+      s\!\left[\frac{30}{38},\frac{34}{38}\right]_{\!i} &
+      s\!\left[\frac{30}{38}\right]_{\!i}^2
+    \end{array}
+    \right]^{-1}
+  \left[
+    \begin{array}{@{}c@{}}
+      \left[\frac{32}{38}\right]_{\!i} - x_{\!i} \\
+      \left[\frac{34}{38}\right]_{\!i} - a - b x_{i} \\
+      \left[\frac{30}{38}\right]_{\!i} - A - B x_{i}
+    \end{array}
+    \right]
+\end{equation}
+
+\noindent which uses the shorthand notation introduced at the
+beginning of Section~\ref{sec:ThUformats}. The isochron age can be
+obtained by substituting the estimate of $a$ for
+$\left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_i$ and $A$ for
+$\left[\frac{{}^{230}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i$ in
+Equation~\ref{eq:Th-U}, and setting $A[{}^{230}Th]_{\circ}=0$.  The
+results of the three-dimensional isochron regression can be visualised
+in four possible ways:
+
+\noindent\begin{minipage}[t][][b]{.65\linewidth}
+\includegraphics[width=\textwidth]{../figures/ThUisochron.pdf}
+\end{minipage}
+\begin{minipage}[t][][t]{.35\linewidth}
+  \captionof{figure}{The same \textsuperscript{230}Th--U data shown on
+    a) Rosholt type-I, b) Osmond type-I, c) Rosholt type-II and d)
+    Osmond type-II isochron diagrams. Note the slight difference in
+    the isochron age. This is due to the skewness of the
+    log-likelihood function, which does not allow negative values.
+    This effect applies to all isochrons and is most prominent when
+    the analytical uncertainties are relatively large compared to the
+    activity ratios themselves. Solving this issue requires a
+    reformulation of the isochron equation in terms of log-ratios,
+    which has not yet been attempted.}
+  \label{fig:ThUisochron}
+\end{minipage}
 
 \section{Th--U evolution diagrams}
 
@@ -174,19 +249,19 @@ on Th-U evolution diagrams.  For carbonate data, these consist of a
 scatter plot that sets out the
 \textsuperscript{234}U/\textsuperscript{238}U-activity ratios against
 the \textsuperscript{230}Th/\textsuperscript{238}U-activity ratios as
-error ellipses, and displays the initial
+error ellipses, and displays the authigenic
 \textsuperscript{234}U/\textsuperscript{238}U-activity ratios and ages
-as a set of intersecting lines (Figure~\ref{fig:2}.b).\\
+as a set of intersecting lines.\\
 
 The Th-U evolution diagram has a similar purpose and appearance as the
 U-Pb concordia diagram, which also displays compositions and dates
 simultaneously. An alternative way of doing so for carbonate samples
 is by plotting the initial
 \textsuperscript{234}U/\textsuperscript{238}U-ratios against the
-\textsuperscript{230}Th-\textsuperscript{234}U-\textsuperscript{238}U-ages
-(Figure~\ref{fig:2}.c).  In both types of evolution diagrams,
-\texttt{IsoplotR} provides the option to project the raw measurements
-along the best fitting isochron line and thereby remove the detrital
+\textsuperscript{230}Th-\textsuperscript{234}U-\textsuperscript{238}U-ages.
+In both types of evolution diagrams, \texttt{IsoplotR} provides the
+option to project the raw measurements along the best fitting isochron
+line and thereby remove the detrital
 \textsuperscript{230}Th-component. This procedure allows a visual
 assessment of the degree of homogeneity within a dataset, as is
 quantified by the MSWD.\\
@@ -198,6 +273,22 @@ applicable to igneous datasets, in which \textsuperscript{234}U and
 \texttt{IsoplotR} produces an Osmond-style regression plot that is
 decorated with a fanning set of isochron lines.
 
+\noindent\begin{minipage}[t][][b]{.65\linewidth}
+\includegraphics[width=\textwidth]{../figures/evolution.pdf}
+\end{minipage}
+\begin{minipage}[t][][t]{.35\linewidth}
+  \captionof{figure}{The data of Figure~\ref{fig:ThUisochron} shown on
+    a \textsuperscript{230}Th--U evolution diagram a) showing the raw
+    data with an isochron fit and the inferred authigenic end member
+    composition shown as a white ellipse; and b) showing the data
+    projected along the isochron.  c) shows the projected data in
+    initial \textsuperscript{234}U/\textsuperscript{238}U-activity
+    vs. \textsuperscript{230}Th--U age space.  d) shows
+    \texttt{IsoplotR}'s output for an evolution diagram of data
+    formats 3 and 4. In this case the data are shown in Rosholt type-I
+    space with isochrons shown in salmon red.}
+  \label{fig:evolution}
+\end{minipage}
 
 \printbibliography[heading=subbibliography]
 

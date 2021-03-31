@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.8)  30 MAR 2021 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.8)  31 MAR 2021 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1090,9 +1090,12 @@ Package biblatex Info: ... file 'trainingcourse10-blx.bbl' found.
 Package biblatex Info: ... file 'trainingcourse11-blx.bbl' found.
 
 (./trainingcourse11-blx.bbl)
+Package biblatex Info: ... file 'trainingcourse12-blx.bbl' not found.
+
+No file trainingcourse12-blx.bbl.
 Package biblatex Info: Reference section=0 on input line 31.
 Package biblatex Info: Reference segment=0 on input line 31.
- [1
+[1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./trainingcourse.toc
@@ -1105,9 +1108,9 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 
 ] [3]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 181.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 191.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 183.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 193.
 )
 \tf@toc=\write6
 \openout6 = `trainingcourse.toc'.
@@ -1154,7 +1157,7 @@ Chapter 2.
 [8
 
 ] (./chart-of-nuclides.pdf_tex
-<../figures/chart-of-nuclides.pdf, id=579, page=1, 237.73386pt x 161.78697pt>
+<../figures/chart-of-nuclides.pdf, id=604, page=1, 237.73386pt x 161.78697pt>
 File: ../figures/chart-of-nuclides.pdf Graphic file (type pdf)
 <use ../figures/chart-of-nuclides.pdf, page 1>
 Package pdftex.def Info: ../figures/chart-of-nuclides.pdf , page1 used on input
@@ -1172,7 +1175,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 147--163
  []
 
 [9] [10 <../figures/chart-of-nuclides.pdf>] [11]
-<../figures/U-Th-series.pdf, id=641, 239.84323pt x 262.00446pt>
+<../figures/U-Th-series.pdf, id=666, 239.84323pt x 262.00446pt>
 File: ../figures/U-Th-series.pdf Graphic file (type pdf)
 <use ../figures/U-Th-series.pdf>
 Package pdftex.def Info: ../figures/U-Th-series.pdf  used on input line 383.
@@ -1193,13 +1196,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--47
 [14
 
 ] (./mass-spec.pdf_tex
-<../figures/mass-spec.pdf, id=688, page=1, 399.73857pt x 142.0883pt>
+<../figures/mass-spec.pdf, id=713, page=1, 399.73857pt x 142.0883pt>
 File: ../figures/mass-spec.pdf Graphic file (type pdf)
 <use ../figures/mass-spec.pdf, page 1>
 Package pdftex.def Info: ../figures/mass-spec.pdf , page1 used on input line 52
 .
 (pdftex.def)             Requested size: 455.24411pt x 161.82407pt.
-<../figures/mass-spec.pdf, id=689, page=2, 399.73857pt x 142.0883pt>
+<../figures/mass-spec.pdf, id=714, page=2, 399.73857pt x 142.0883pt>
 File: ../figures/mass-spec.pdf Graphic file (type pdf)
 <use ../figures/mass-spec.pdf, page 2>
 Package pdftex.def Info: ../figures/mass-spec.pdf , page2 used on input line 56
@@ -1210,12 +1213,12 @@ Package pdftex.def Info: ../figures/mass-spec.pdf , page2 used on input line 56
 pdfTeX warning: pdflatex (file ../figures/mass-spec.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >] [16] (./AMS.pdf_tex
-<../figures/AMS.pdf, id=720, page=1, 318.5979pt x 170.05751pt>
+<../figures/AMS.pdf, id=745, page=1, 318.5979pt x 170.05751pt>
 File: ../figures/AMS.pdf Graphic file (type pdf)
 <use ../figures/AMS.pdf, page 1>
 Package pdftex.def Info: ../figures/AMS.pdf , page1 used on input line 52.
 (pdftex.def)             Requested size: 455.24411pt x 242.99614pt.
-<../figures/AMS.pdf, id=721, page=2, 318.5979pt x 170.05751pt>
+<../figures/AMS.pdf, id=746, page=2, 318.5979pt x 170.05751pt>
 File: ../figures/AMS.pdf Graphic file (type pdf)
 <use ../figures/AMS.pdf, page 2>
 Package pdftex.def Info: ../figures/AMS.pdf , page2 used on input line 54.
@@ -1246,31 +1249,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--57
 [19
 
 ] [20] (./isochron.pdf_tex
-<../figures/isochron.pdf, id=777, page=1, 209.61066pt x 154.84886pt>
+<../figures/isochron.pdf, id=802, page=1, 209.61066pt x 154.84886pt>
 File: ../figures/isochron.pdf Graphic file (type pdf)
 <use ../figures/isochron.pdf, page 1>
 Package pdftex.def Info: ../figures/isochron.pdf , page1 used on input line 52.
 
 (pdftex.def)             Requested size: 273.14923pt x 201.80203pt.
-<../figures/isochron.pdf, id=778, page=2, 209.61066pt x 154.84886pt>
+<../figures/isochron.pdf, id=803, page=2, 209.61066pt x 154.84886pt>
 File: ../figures/isochron.pdf Graphic file (type pdf)
 <use ../figures/isochron.pdf, page 2>
 Package pdftex.def Info: ../figures/isochron.pdf , page2 used on input line 54.
 
 (pdftex.def)             Requested size: 273.14923pt x 201.80203pt.
-<../figures/isochron.pdf, id=779, page=3, 209.61066pt x 154.84886pt>
+<../figures/isochron.pdf, id=804, page=3, 209.61066pt x 154.84886pt>
 File: ../figures/isochron.pdf Graphic file (type pdf)
 <use ../figures/isochron.pdf, page 3>
 Package pdftex.def Info: ../figures/isochron.pdf , page3 used on input line 56.
 
 (pdftex.def)             Requested size: 273.14923pt x 201.80203pt.
-<../figures/isochron.pdf, id=780, page=4, 209.61066pt x 154.84886pt>
+<../figures/isochron.pdf, id=805, page=4, 209.61066pt x 154.84886pt>
 File: ../figures/isochron.pdf Graphic file (type pdf)
 <use ../figures/isochron.pdf, page 4>
 Package pdftex.def Info: ../figures/isochron.pdf , page4 used on input line 58.
 
 (pdftex.def)             Requested size: 273.14923pt x 201.80203pt.
-<../figures/isochron.pdf, id=781, page=5, 209.61066pt x 154.84886pt>
+<../figures/isochron.pdf, id=806, page=5, 209.61066pt x 154.84886pt>
 File: ../figures/isochron.pdf Graphic file (type pdf)
 <use ../figures/isochron.pdf, page 5>
 Package pdftex.def Info: ../figures/isochron.pdf , page5 used on input line 60.
@@ -1317,13 +1320,13 @@ Chapter 5.
 [23
 
 ] [24] (./wetherill.pdf_tex
-<../figures/wetherill.pdf, id=838, page=1, 148.9148pt x 122.25204pt>
+<../figures/wetherill.pdf, id=863, page=1, 148.9148pt x 122.25204pt>
 File: ../figures/wetherill.pdf Graphic file (type pdf)
 <use ../figures/wetherill.pdf, page 1>
 Package pdftex.def Info: ../figures/wetherill.pdf , page1 used on input line 52
 .
 (pdftex.def)             Requested size: 227.62206pt x 186.87712pt.
-<../figures/wetherill.pdf, id=839, page=2, 148.9148pt x 122.25204pt>
+<../figures/wetherill.pdf, id=864, page=2, 148.9148pt x 122.25204pt>
 File: ../figures/wetherill.pdf Graphic file (type pdf)
 <use ../figures/wetherill.pdf, page 2>
 Package pdftex.def Info: ../figures/wetherill.pdf , page2 used on input line 54
@@ -1389,52 +1392,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--126
  []
 
 (./Ar-Ar.pdf_tex
-<../figures/Ar-Ar.pdf, id=881, page=1, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=906, page=1, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 1>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page1 used on input line 55.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=882, page=2, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=907, page=2, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 2>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=883, page=3, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=908, page=3, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 3>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=884, page=4, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=909, page=4, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 4>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=885, page=5, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=910, page=5, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 5>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page5 used on input line 64.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=886, page=6, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=911, page=6, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 6>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page6 used on input line 66.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=887, page=7, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=912, page=7, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 7>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page7 used on input line 68.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=888, page=8, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=913, page=8, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 8>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page8 used on input line 70.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=889, page=9, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=914, page=9, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 9>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page9 used on input line 73.
 (pdftex.def)             Requested size: 250.38564pt x 302.48473pt.
-<../figures/Ar-Ar.pdf, id=890, page=10, 166.96739pt x 201.69394pt>
+<../figures/Ar-Ar.pdf, id=915, page=10, 166.96739pt x 201.69394pt>
 File: ../figures/Ar-Ar.pdf Graphic file (type pdf)
 <use ../figures/Ar-Ar.pdf, page 10>
 Package pdftex.def Info: ../figures/Ar-Ar.pdf , page10 used on input line 75.
@@ -1501,7 +1504,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--106
  []
 
 (./Arrhenius.pdf_tex
-<../figures/Arrhenius.pdf, id=929, page=1, 246.95279pt x 194.18416pt>
+<../figures/Arrhenius.pdf, id=954, page=1, 246.95279pt x 194.18416pt>
 File: ../figures/Arrhenius.pdf Graphic file (type pdf)
 <use ../figures/Arrhenius.pdf, page 1>
 Package pdftex.def Info: ../figures/Arrhenius.pdf , page1 used on input line 52
@@ -1518,12 +1521,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--235
  []
 
 (./EDM.pdf_tex
-<../figures/EDM.pdf, id=952, page=1, 202.17679pt x 273.38663pt>
+<../figures/EDM.pdf, id=977, page=1, 202.17679pt x 273.38663pt>
 File: ../figures/EDM.pdf Graphic file (type pdf)
 <use ../figures/EDM.pdf, page 1>
 Package pdftex.def Info: ../figures/EDM.pdf , page1 used on input line 52.
 (pdftex.def)             Requested size: 250.38564pt x 338.57875pt.
-<../figures/EDM.pdf, id=953, page=2, 202.17679pt x 273.38663pt>
+<../figures/EDM.pdf, id=978, page=2, 202.17679pt x 273.38663pt>
 File: ../figures/EDM.pdf Graphic file (type pdf)
 <use ../figures/EDM.pdf, page 2>
 Package pdftex.def Info: ../figures/EDM.pdf , page2 used on input line 62.
@@ -1543,12 +1546,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 306--315
 pdfTeX warning: pdflatex (file ../figures/EDM.pdf): PDF inclusion: multiple pdf
 s with page group included in a single page
 >] (./stockli.pdf_tex
-<../figures/stockli.pdf, id=994, page=1, 190.98752pt x 165.07506pt>
+<../figures/stockli.pdf, id=1020, page=1, 190.98752pt x 165.07506pt>
 File: ../figures/stockli.pdf Graphic file (type pdf)
 <use ../figures/stockli.pdf, page 1>
 Package pdftex.def Info: ../figures/stockli.pdf , page1 used on input line 52.
 (pdftex.def)             Requested size: 318.66948pt x 275.45773pt.
-<../figures/stockli.pdf, id=995, page=2, 190.98752pt x 165.07506pt>
+<../figures/stockli.pdf, id=1021, page=2, 190.98752pt x 165.07506pt>
 File: ../figures/stockli.pdf Graphic file (type pdf)
 <use ../figures/stockli.pdf, page 2>
 Package pdftex.def Info: ../figures/stockli.pdf , page2 used on input line 54.
@@ -1625,20 +1628,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--245
  []
 
 (./bullseye.pdf_tex
-<../figures/bullseye.pdf, id=1095, page=1, 506.53244pt x 164.14139pt>
+<../figures/bullseye.pdf, id=1121, page=1, 506.53244pt x 164.14139pt>
 File: ../figures/bullseye.pdf Graphic file (type pdf)
 <use ../figures/bullseye.pdf, page 1>
 Package pdftex.def Info: ../figures/bullseye.pdf , page1 used on input line 52.
 
 (pdftex.def)             Requested size: 455.24411pt x 147.53052pt.
 ) [40] (./covariance.pdf_tex
-<../figures/covariance.pdf, id=1113, page=1, 473.80183pt x 403.49167pt>
+<../figures/covariance.pdf, id=1138, page=1, 473.80183pt x 403.49167pt>
 File: ../figures/covariance.pdf Graphic file (type pdf)
 <use ../figures/covariance.pdf, page 1>
 Package pdftex.def Info: ../figures/covariance.pdf , page1 used on input line 5
 2.
 (pdftex.def)             Requested size: 314.11954pt x 267.51204pt.
-<../figures/covariance.pdf, id=1114, page=2, 473.80183pt x 403.49167pt>
+<../figures/covariance.pdf, id=1139, page=2, 473.80183pt x 403.49167pt>
 File: ../figures/covariance.pdf Graphic file (type pdf)
 <use ../figures/covariance.pdf, page 2>
 Package pdftex.def Info: ../figures/covariance.pdf , page2 used on input line 8
@@ -1774,7 +1777,7 @@ Package biblatex Info: Reference section=2 on input line 1.
 Package biblatex Info: Setting label 'refsection:2' on input line 1.
  [53]
 Chapter 13.
-<../figures/2sigma.pdf, id=1265, 505.89pt x 144.54pt>
+<../figures/2sigma.pdf, id=1290, 505.89pt x 144.54pt>
 File: ../figures/2sigma.pdf Graphic file (type pdf)
 <use ../figures/2sigma.pdf>
 Package pdftex.def Info: ../figures/2sigma.pdf  used on input line 35.
@@ -1802,7 +1805,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 294.
 See the caption package documentation for explanation.
 
-<../figures/wtdmean.pdf, id=1332, 361.35pt x 216.81pt>
+<../figures/wtdmean.pdf, id=1357, 361.35pt x 216.81pt>
 File: ../figures/wtdmean.pdf Graphic file (type pdf)
 <use ../figures/wtdmean.pdf>
 Package pdftex.def Info: ../figures/wtdmean.pdf  used on input line 312.
@@ -1818,7 +1821,7 @@ Overfull \hbox (2.43333pt too wide) in paragraph at lines 310--321
  []
 
 [57]
-<../figures/chi2wtdmean.pdf, id=1344, 433.62pt x 216.81pt>
+<../figures/chi2wtdmean.pdf, id=1369, 433.62pt x 216.81pt>
 File: ../figures/chi2wtdmean.pdf Graphic file (type pdf)
 <use ../figures/chi2wtdmean.pdf>
 Package pdftex.def Info: ../figures/chi2wtdmean.pdf  used on input line 346.
@@ -1844,7 +1847,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--362
 pdfTeX warning: pdflatex (file ../figures/chi2wtdmean.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<../figures/mswd.pdf, id=1377, 505.89pt x 252.945pt>
+<../figures/mswd.pdf, id=1402, 505.89pt x 252.945pt>
 File: ../figures/mswd.pdf Graphic file (type pdf)
 <use ../figures/mswd.pdf>
 Package pdftex.def Info: ../figures/mswd.pdf  used on input line 382.
@@ -1870,7 +1873,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 380--390
 [] [] 
  []
 
-<../figures/wtdmeanMSWD.pdf, id=1378, 204.10406pt x 308.30591pt>
+<../figures/wtdmeanMSWD.pdf, id=1403, 204.10406pt x 308.30591pt>
 File: ../figures/wtdmeanMSWD.pdf Graphic file (type pdf)
 <use ../figures/wtdmeanMSWD.pdf>
 Package pdftex.def Info: ../figures/wtdmeanMSWD.pdf  used on input line 410.
@@ -1894,7 +1897,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 527--542
 
  []
 
-<../figures/spurious.pdf, id=1427, 578.16pt x 144.54pt>
+<../figures/spurious.pdf, id=1452, 578.16pt x 144.54pt>
 File: ../figures/spurious.pdf Graphic file (type pdf)
 <use ../figures/spurious.pdf>
 Package pdftex.def Info: ../figures/spurious.pdf  used on input line 543.
@@ -1904,7 +1907,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
-<../figures/errorcorrelation_edited.pdf, id=1429, 500.43088pt x 145.84163pt>
+<../figures/errorcorrelation_edited.pdf, id=1454, 500.43088pt x 145.84163pt>
 File: ../figures/errorcorrelation_edited.pdf Graphic file (type pdf)
 <use ../figures/errorcorrelation_edited.pdf>
 Package pdftex.def Info: ../figures/errorcorrelation_edited.pdf  used on input 
@@ -1920,7 +1923,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 627--629
 
  []
 
-<../figures/inverrorcorrelation_edited.pdf, id=1446, 501.38976pt x 136.82838pt>
+<../figures/inverrorcorrelation_edited.pdf, id=1472, 501.38976pt x 136.82838pt>
 
 File: ../figures/inverrorcorrelation_edited.pdf Graphic file (type pdf)
 <use ../figures/inverrorcorrelation_edited.pdf>
@@ -1956,7 +1959,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 715--733
  []
 
 [63]
-<../figures/regression.pdf, id=1521, 839.63565pt x 376.60756pt>
+<../figures/regression.pdf, id=1546, 839.63565pt x 376.60756pt>
 File: ../figures/regression.pdf Graphic file (type pdf)
 <use ../figures/regression.pdf>
 Package pdftex.def Info: ../figures/regression.pdf  used on input line 806.
@@ -1968,7 +1971,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [64 <../figures/regression.pdf>]
-<../figures/isochronMSWD.pdf, id=1546, 175.03416pt x 276.80753pt>
+<../figures/isochronMSWD.pdf, id=1571, 175.03416pt x 276.80753pt>
 File: ../figures/isochronMSWD.pdf Graphic file (type pdf)
 <use ../figures/isochronMSWD.pdf>
 Package pdftex.def Info: ../figures/isochronMSWD.pdf  used on input line 862.
@@ -1985,7 +1988,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 860--886
  []
 
 [65 <../figures/isochronMSWD.pdf>]
-<../figures/tdof.pdf, id=1574, 433.62pt x 216.81pt>
+<../figures/tdof.pdf, id=1599, 433.62pt x 216.81pt>
 File: ../figures/tdof.pdf Graphic file (type pdf)
 <use ../figures/tdof.pdf>
 Package pdftex.def Info: ../figures/tdof.pdf  used on input line 975.
@@ -2006,7 +2009,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 974--987
  []
 
 [66 <../figures/tdof.pdf>]
-<../figures/model-1.pdf, id=1589, 413.17589pt x 190.93114pt>
+<../figures/model-1.pdf, id=1615, 413.17589pt x 190.93114pt>
 File: ../figures/model-1.pdf Graphic file (type pdf)
 <use ../figures/model-1.pdf>
 Package pdftex.def Info: ../figures/model-1.pdf  used on input line 1009.
@@ -2107,7 +2110,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--229
 
  []
 
-<../figures/radial.png, id=1689, 1508.63625pt x 704.6325pt>
+<../figures/radial.png, id=1714, 1508.63625pt x 704.6325pt>
 File: ../figures/radial.png Graphic file (type png)
 <use ../figures/radial.png>
 Package pdftex.def Info: ../figures/radial.png  used on input line 231.
@@ -2122,7 +2125,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--256
 
  []
 
-<../figures/frequency.pdf, id=1696, 855.09593pt x 210.002pt>
+<../figures/frequency.pdf, id=1721, 855.09593pt x 210.002pt>
 File: ../figures/frequency.pdf Graphic file (type pdf)
 <use ../figures/frequency.pdf>
 Package pdftex.def Info: ../figures/frequency.pdf  used on input line 257.
@@ -2142,7 +2145,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--281
 
  []
 
-<../figures/logtrans.pdf, id=1712, 823.35854pt x 209.62169pt>
+<../figures/logtrans.pdf, id=1738, 823.35854pt x 209.62169pt>
 File: ../figures/logtrans.pdf Graphic file (type pdf)
 <use ../figures/logtrans.pdf>
 Package pdftex.def Info: ../figures/logtrans.pdf  used on input line 282.
@@ -2157,7 +2160,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--307
 
  []
 
-<../figures/3means.pdf, id=1714, 643.57976pt x 231.17967pt>
+<../figures/3means.pdf, id=1740, 643.57976pt x 231.17967pt>
 File: ../figures/3means.pdf Graphic file (type pdf)
 <use ../figures/3means.pdf>
 Package pdftex.def Info: ../figures/3means.pdf  used on input line 308.
@@ -2182,7 +2185,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--369
  []
 
 [74 <../figures/3means.pdf>]
-<../figures/discretemixtures.pdf, id=1788, 741.57312pt x 213.86116pt>
+<../figures/discretemixtures.pdf, id=1813, 741.57312pt x 213.86116pt>
 File: ../figures/discretemixtures.pdf Graphic file (type pdf)
 <use ../figures/discretemixtures.pdf>
 Package pdftex.def Info: ../figures/discretemixtures.pdf  used on input line 37
@@ -2204,7 +2207,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 388--397
 
  []
 
-<../figures/increasingn.png, id=1791, 1913.1475pt x 586.19pt>
+<../figures/increasingn.png, id=1816, 1913.1475pt x 586.19pt>
 File: ../figures/increasingn.png Graphic file (type png)
 <use ../figures/increasingn.png>
 Package pdftex.def Info: ../figures/increasingn.png  used on input line 398.
@@ -2219,7 +2222,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--434
 
  []
 
-<../figures/minagemod.pdf, id=1811, 741.57312pt x 213.86116pt>
+<../figures/minagemod.pdf, id=1836, 741.57312pt x 213.86116pt>
 File: ../figures/minagemod.pdf Graphic file (type pdf)
 <use ../figures/minagemod.pdf>
 Package pdftex.def Info: ../figures/minagemod.pdf  used on input line 435.
@@ -2267,7 +2270,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 241--251
 
  []
 
-<../figures/3xconcordia.pdf, id=1874, 543.4582pt x 174.29907pt>
+<../figures/3xconcordia.pdf, id=1899, 543.4582pt x 174.29907pt>
 File: ../figures/3xconcordia.pdf Graphic file (type pdf)
 <use ../figures/3xconcordia.pdf>
 Package pdftex.def Info: ../figures/3xconcordia.pdf  used on input line 252.
@@ -2282,7 +2285,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 376--378
 
  []
 
-<../figures/concordia_age.pdf, id=1897, 588.36555pt x 148.23155pt>
+<../figures/concordia_age.pdf, id=1922, 588.36555pt x 148.23155pt>
 File: ../figures/concordia_age.pdf Graphic file (type pdf)
 <use ../figures/concordia_age.pdf>
 Package pdftex.def Info: ../figures/concordia_age.pdf  used on input line 379.
@@ -2292,7 +2295,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 383.
 See the caption package documentation for explanation.
 
-<../figures/concordia_MSWD.pdf, id=1898, 572.68587pt x 280.71584pt>
+<../figures/concordia_MSWD.pdf, id=1923, 572.68587pt x 280.71584pt>
 File: ../figures/concordia_MSWD.pdf Graphic file (type pdf)
 <use ../figures/concordia_MSWD.pdf>
 Package pdftex.def Info: ../figures/concordia_MSWD.pdf  used on input line 394.
@@ -2304,7 +2307,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [81 <../figures/concordia_age.pdf>]
-<../figures/concexterr.pdf, id=1941, 559.442pt x 256.27489pt>
+<../figures/concexterr.pdf, id=1966, 559.442pt x 256.27489pt>
 File: ../figures/concexterr.pdf Graphic file (type pdf)
 <use ../figures/concexterr.pdf>
 Package pdftex.def Info: ../figures/concexterr.pdf  used on input line 438.
@@ -2320,7 +2323,7 @@ See the caption package documentation for explanation.
 pdfTeX warning: pdflatex (file ../figures/concexterr.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >]
-<../figures/UPbisochron13.pdf, id=2063, 213.10837pt x 205.4051pt>
+<../figures/UPbisochron13.pdf, id=2088, 213.10837pt x 205.4051pt>
 File: ../figures/UPbisochron13.pdf Graphic file (type pdf)
 <use ../figures/UPbisochron13.pdf>
 Package pdftex.def Info: ../figures/UPbisochron13.pdf  used on input line 486.
@@ -2336,7 +2339,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 484--497
 [] [] 
  []
 
-<../figures/UPbisochron46.pdf, id=2065, 414.92062pt x 209.62105pt>
+<../figures/UPbisochron46.pdf, id=2090, 414.92062pt x 209.62105pt>
 File: ../figures/UPbisochron46.pdf Graphic file (type pdf)
 <use ../figures/UPbisochron46.pdf>
 Package pdftex.def Info: ../figures/UPbisochron46.pdf  used on input line 522.
@@ -2358,7 +2361,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 520--537
  []
 
 [83 <../figures/UPbisochron13.pdf>]
-<../figures/UPbisochron78.pdf, id=2094, 635.09941pt x 203.34769pt>
+<../figures/UPbisochron78.pdf, id=2119, 635.09941pt x 203.34769pt>
 File: ../figures/UPbisochron78.pdf Graphic file (type pdf)
 <use ../figures/UPbisochron78.pdf>
 Package pdftex.def Info: ../figures/UPbisochron78.pdf  used on input line 569.
@@ -2369,7 +2372,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 586.
 See the caption package documentation for explanation.
 
-<../figures/Hourigan.pdf, id=2103, 379.12442pt x 322.44531pt>
+<../figures/Hourigan.pdf, id=2128, 379.12442pt x 322.44531pt>
 File: ../figures/Hourigan.pdf Graphic file (type pdf)
 <use ../figures/Hourigan.pdf>
 Package pdftex.def Info: ../figures/Hourigan.pdf  used on input line 602.
@@ -2398,7 +2401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 630--633
 
  []
 
-<../figures/commonPbisochron13.pdf, id=2161, 497.46901pt x 250.70538pt>
+<../figures/commonPbisochron13.pdf, id=2186, 497.46901pt x 250.70538pt>
 File: ../figures/commonPbisochron13.pdf Graphic file (type pdf)
 <use ../figures/commonPbisochron13.pdf>
 Package pdftex.def Info: ../figures/commonPbisochron13.pdf  used on input line 
@@ -2409,7 +2412,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 646.
 See the caption package documentation for explanation.
 
-<../figures/commonPbisochron46.pdf, id=2162, 502.33865pt x 266.36543pt>
+<../figures/commonPbisochron46.pdf, id=2187, 502.33865pt x 266.36543pt>
 File: ../figures/commonPbisochron46.pdf Graphic file (type pdf)
 <use ../figures/commonPbisochron46.pdf>
 Package pdftex.def Info: ../figures/commonPbisochron46.pdf  used on input line 
@@ -2429,7 +2432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 665--669
 
  []
 
-<../figures/commonPbisochron46nominal.pdf, id=2385, 494.81052pt x 264.85982pt>
+<../figures/commonPbisochron46nominal.pdf, id=2410, 494.81052pt x 264.85982pt>
 File: ../figures/commonPbisochron46nominal.pdf Graphic file (type pdf)
 <use ../figures/commonPbisochron46nominal.pdf>
 Package pdftex.def Info: ../figures/commonPbisochron46nominal.pdf  used on inpu
@@ -2451,7 +2454,7 @@ df
 pdfTeX warning: pdflatex (file ../figures/commonPbisochron46nominal.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<../figures/commonPbisochron13detrital.pdf, id=2477, 495.39084pt x 213.48244pt>
+<../figures/commonPbisochron13detrital.pdf, id=2502, 495.39084pt x 213.48244pt>
 
 File: ../figures/commonPbisochron13detrital.pdf Graphic file (type pdf)
 <use ../figures/commonPbisochron13detrital.pdf>
@@ -2464,7 +2467,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 714.
 See the caption package documentation for explanation.
 
-<../figures/SK.pdf, id=2483, 217.63857pt x 205.28072pt>
+<../figures/SK.pdf, id=2508, 217.63857pt x 205.28072pt>
 File: ../figures/SK.pdf Graphic file (type pdf)
 <use ../figures/SK.pdf>
 Package pdftex.def Info: ../figures/SK.pdf  used on input line 747.
@@ -2500,7 +2503,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 946--950
 
  []
 
-<../figures/diseq.pdf, id=2546, 635.20784pt x 262.90117pt>
+<../figures/diseq.pdf, id=2572, 635.20784pt x 262.90117pt>
 File: ../figures/diseq.pdf Graphic file (type pdf)
 <use ../figures/diseq.pdf>
 Package pdftex.def Info: ../figures/diseq.pdf  used on input line 951.
@@ -2516,7 +2519,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1060--1068
  []
 
 [91]
-<../figures/Aitchison.pdf, id=2614, 201.80754pt x 183.16917pt>
+<../figures/Aitchison.pdf, id=2639, 201.80754pt x 183.16917pt>
 File: ../figures/Aitchison.pdf Graphic file (type pdf)
 <use ../figures/Aitchison.pdf>
 Package pdftex.def Info: ../figures/Aitchison.pdf  used on input line 1113.
@@ -2532,7 +2535,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 1112--1123
 [] [] 
  []
 
-<../figures/TW-option-1234.pdf, id=2616, 293.9084pt x 385.29254pt>
+<../figures/TW-option-1234.pdf, id=2641, 293.9084pt x 385.29254pt>
 File: ../figures/TW-option-1234.pdf Graphic file (type pdf)
 <use ../figures/TW-option-1234.pdf>
 Package pdftex.def Info: ../figures/TW-option-1234.pdf  used on input line 1141
@@ -2559,7 +2562,7 @@ Package biblatex Info: Reference section=5 on input line 1.
 Package biblatex Info: Setting label 'refsection:5' on input line 1.
  [93 <../figures/TW-option-1234.pdf>]
 Chapter 16.
-<../figures/PbPb.pdf, id=2675, 579.69534pt x 261.4736pt>
+<../figures/PbPb.pdf, id=2701, 579.69534pt x 261.4736pt>
 File: ../figures/PbPb.pdf Graphic file (type pdf)
 <use ../figures/PbPb.pdf>
 Package pdftex.def Info: ../figures/PbPb.pdf  used on input line 81.
@@ -2572,7 +2575,7 @@ See the caption package documentation for explanation.
 [94
 
 ]
-<../figures/Kamber.pdf, id=2692, 509.85602pt x 233.70013pt>
+<../figures/Kamber.pdf, id=2717, 509.85602pt x 233.70013pt>
 File: ../figures/Kamber.pdf Graphic file (type pdf)
 <use ../figures/Kamber.pdf>
 Package pdftex.def Info: ../figures/Kamber.pdf  used on input line 122.
@@ -2588,7 +2591,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--172
 
  []
 
-<../figures/ThPb.pdf, id=2726, 504.41406pt x 241.19862pt>
+<../figures/ThPb.pdf, id=2751, 504.41406pt x 241.19862pt>
 File: ../figures/ThPb.pdf Graphic file (type pdf)
 <use ../figures/ThPb.pdf>
 Package pdftex.def Info: ../figures/ThPb.pdf  used on input line 174.
@@ -2618,7 +2621,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 173--184
 pdfTeX warning: pdflatex (file ../figures/ThPb.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
 >]
-<../figures/ThPbSingleGrain.pdf, id=2789, 362.17783pt x 281.71077pt>
+<../figures/ThPbSingleGrain.pdf, id=2815, 362.17783pt x 281.71077pt>
 File: ../figures/ThPbSingleGrain.pdf Graphic file (type pdf)
 <use ../figures/ThPbSingleGrain.pdf>
 Package pdftex.def Info: ../figures/ThPbSingleGrain.pdf  used on input line 219
@@ -2655,7 +2658,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--66
 
  []
 
-<../figures/ArAr.pdf, id=2831, 450.32144pt x 426.26323pt>
+<../figures/ArAr.pdf, id=2856, 450.32144pt x 426.26323pt>
 File: ../figures/ArAr.pdf Graphic file (type pdf)
 <use ../figures/ArAr.pdf>
 Package pdftex.def Info: ../figures/ArAr.pdf  used on input line 68.
@@ -2707,7 +2710,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--93
 
  []
 
-<../figures/agespectrum.pdf, id=2846, 489.84927pt x 208.21814pt>
+<../figures/agespectrum.pdf, id=2871, 489.84927pt x 208.21814pt>
 File: ../figures/agespectrum.pdf Graphic file (type pdf)
 <use ../figures/agespectrum.pdf>
 Package pdftex.def Info: ../figures/agespectrum.pdf  used on input line 104.
@@ -2754,7 +2757,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--89
 [101
 
 ]
-<../figures/RbSr.pdf, id=2916, 596.87677pt x 145.08495pt>
+<../figures/RbSr.pdf, id=2942, 596.87677pt x 145.08495pt>
 File: ../figures/RbSr.pdf Graphic file (type pdf)
 <use ../figures/RbSr.pdf>
 Package pdftex.def Info: ../figures/RbSr.pdf  used on input line 90.
@@ -2805,7 +2808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
 
-<../figures/UThHeisochron.pdf, id=2995, 198.15219pt x 190.54388pt>
+<../figures/UThHeisochron.pdf, id=3020, 198.15219pt x 190.54388pt>
 File: ../figures/UThHeisochron.pdf Graphic file (type pdf)
 <use ../figures/UThHeisochron.pdf>
 Package pdftex.def Info: ../figures/UThHeisochron.pdf  used on input line 181.
@@ -2830,7 +2833,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--217
 
  []
 
-<../figures/ternaryhelium.pdf, id=2999, 222.11679pt x 197.02408pt>
+<../figures/ternaryhelium.pdf, id=3024, 222.11679pt x 197.02408pt>
 File: ../figures/ternaryhelium.pdf Graphic file (type pdf)
 <use ../figures/ternaryhelium.pdf>
 Package pdftex.def Info: ../figures/ternaryhelium.pdf  used on input line 220.
@@ -2855,7 +2858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-<../figures/alr.pdf, id=3029, 681.59447pt x 222.61972pt>
+<../figures/alr.pdf, id=3054, 681.59447pt x 222.61972pt>
 File: ../figures/alr.pdf Graphic file (type pdf)
 <use ../figures/alr.pdf>
 Package pdftex.def Info: ../figures/alr.pdf  used on input line 257.
@@ -2875,7 +2878,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--277
 pdfTeX warning: pdflatex (file ../figures/alr.pdf): PDF inclusion: multiple pdf
 s with page group included in a single page
 >]
-<../figures/helioplot.pdf, id=3059, 349.12979pt x 183.59518pt>
+<../figures/helioplot.pdf, id=3085, 349.12979pt x 183.59518pt>
 File: ../figures/helioplot.pdf Graphic file (type pdf)
 <use ../figures/helioplot.pdf>
 Package pdftex.def Info: ../figures/helioplot.pdf  used on input line 280.
@@ -2934,7 +2937,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--203
  []
 
 [111]
-<../figures/FTradial.pdf, id=3174, 654.0099pt x 163.08228pt>
+<../figures/FTradial.pdf, id=3200, 654.0099pt x 163.08228pt>
 File: ../figures/FTradial.pdf Graphic file (type pdf)
 <use ../figures/FTradial.pdf>
 Package pdftex.def Info: ../figures/FTradial.pdf  used on input line 245.
@@ -2969,59 +2972,148 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `superscript' on input line 3.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--65
+Underfull \hbox (badness 10000) in paragraph at lines 60--67
 
  []
 
 [114
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 107--115
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--157
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--168
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
 
  []
 
 [115]
+! Misplaced alignment tab character &.
+l.187   \mathcal{LL} &
+                       = \mbox{const.} -
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-LaTeX Warning: Reference `fig:2' on page 116 undefined on input line 179.
+! Extra alignment tab has been changed to \cr.
+<template> $\hfil $$\endtemplate 
+                                 
+l.203 ...frac{34}{38},\frac{30}{38}\right]_{\!i} &
+                                                  
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+<../figures/ThUisochron.pdf, id=3291, 428.84155pt x 391.74637pt>
+File: ../figures/ThUisochron.pdf Graphic file (type pdf)
+<use ../figures/ThUisochron.pdf>
+Package pdftex.def Info: ../figures/ThUisochron.pdf  used on input line 228.
+(pdftex.def)             Requested size: 295.90588pt x 270.32321pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 240.
+See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--180
+Underfull \hbox (badness 1635) in paragraph at lines 240--240
+\OT1/cmr/m/n/10.95 isochron di-a-grams. Note the
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 240--240
+\OT1/cmr/m/n/10.95 a-tive val-ues. This ef-fect ap-
+ []
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 240--240
+\OT1/cmr/m/n/10.95 promi-nent when the an-a-lyt-i-cal
+ []
+
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 227--243
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--255
 
  []
 
 
-LaTeX Warning: Reference `fig:2' on page 116 undefined on input line 187.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--193
+Underfull \hbox (badness 10000) in paragraph at lines 256--268
 
  []
 
-Package biblatex Info: Reference section=0 on input line 204.
-) [116]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 120.
- [117
+[116 <../figures/ThUisochron.pdf>]
+<../figures/evolution.pdf, id=3338, 430.59808pt x 400.8479pt>
+File: ../figures/evolution.pdf Graphic file (type pdf)
+<use ../figures/evolution.pdf>
+Package pdftex.def Info: ../figures/evolution.pdf  used on input line 277.
+(pdftex.def)             Requested size: 295.90588pt x 275.45993pt.
 
-] (./intro2IsoplotR.tex
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 289.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 289--289
+\OT1/cmr/m/n/10.95 mem-ber com-po-si-tion shown as
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 289--289
+\OT1/cmr/m/n/10.95 a white el-lipse; and b) show-
+ []
+
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 276--292
+[] [] 
+ []
+
+Package biblatex Info: Reference section=0 on input line 295.
+) (./detrital.tex
 \blx@maxsegment@11=\count430
 \blx@sectionciteorder@11=\count431
 Package biblatex Info: Reference section=11 on input line 1.
 \openout3 = `trainingcourse11-blx.aux'.
 
 Package biblatex Info: Setting label 'refsection:11' on input line 1.
-
+ [117 <../figures/evolution.pdf>]
 Chapter 22.
+Package biblatex Info: Reference section=0 on input line 15.
+) [118
+
+]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 122.
+ [119
+
+] (./intro2IsoplotR.tex
+\blx@maxsegment@12=\count432
+\blx@sectionciteorder@12=\count433
+Package biblatex Info: Reference section=12 on input line 1.
+\openout3 = `trainingcourse12-blx.aux'.
+
+Package biblatex Info: Setting label 'refsection:12' on input line 1.
+
+Chapter 23.
+
+LaTeX Warning: Citation 'ludwig1988' on page 120 undefined on input line 11.
+
+
+LaTeX Warning: Citation 'ludwig1999' on page 120 undefined on input line 11.
+
+
+LaTeX Warning: Citation 'ludwig2003' on page 120 undefined on input line 11.
+
+
+LaTeX Warning: Citation 'ludwig2012' on page 120 undefined on input line 11.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--15
 
@@ -3031,6 +3123,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--15
 Underfull \hbox (badness 10000) in paragraph at lines 16--22
 
  []
+
+
+LaTeX Warning: Citation 'vermeesch2018c' on page 120 undefined on input line 24
+.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
@@ -3047,14 +3143,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--51
 
  []
 
-[118
+[120
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 83--90
 
  []
 
-<../figures/IsoplotR.png, id=3296, 1141.26375pt x 656.4525pt>
+<../figures/IsoplotR.png, id=3434, 1141.26375pt x 656.4525pt>
 File: ../figures/IsoplotR.png Graphic file (type png)
 <use ../figures/IsoplotR.png>
 Package pdftex.def Info: ../figures/IsoplotR.png  used on input line 91.
@@ -3064,7 +3160,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<../figures/chronometerbutton.png, id=3297, 118.4425pt x 47.17625pt>
+<../figures/chronometerbutton.png, id=3435, 118.4425pt x 47.17625pt>
 File: ../figures/chronometerbutton.png Graphic file (type png)
 <use ../figures/chronometerbutton.png>
 Package pdftex.def Info: ../figures/chronometerbutton.png  used on input line 9
@@ -3080,8 +3176,8 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 93--104
 [] [] 
  []
 
-[119 <../figures/IsoplotR.png>]
-<../figures/plotdevices.png, id=3302, 159.59625pt x 46.1725pt>
+[121 <../figures/IsoplotR.png>]
+<../figures/plotdevices.png, id=3441, 159.59625pt x 46.1725pt>
 File: ../figures/plotdevices.png Graphic file (type png)
 <use ../figures/plotdevices.png>
 Package pdftex.def Info: ../figures/plotdevices.png  used on input line 107.
@@ -3096,7 +3192,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 105--114
 [] [] 
  []
 
-<../figures/Options.png, id=3303, 117.43875pt x 46.1725pt>
+<../figures/Options.png, id=3442, 117.43875pt x 46.1725pt>
 File: ../figures/Options.png Graphic file (type png)
 <use ../figures/Options.png>
 Package pdftex.def Info: ../figures/Options.png  used on input line 117.
@@ -3111,7 +3207,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 115--124
 [] [] 
  []
 
-<../figures/Help.png, id=3304, 86.3225pt x 45.16875pt>
+<../figures/Help.png, id=3443, 86.3225pt x 45.16875pt>
 File: ../figures/Help.png Graphic file (type png)
 <use ../figures/Help.png>
 Package pdftex.def Info: ../figures/Help.png  used on input line 127.
@@ -3126,12 +3222,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 125--135
 [] [] 
  []
 
-<../figures/Open.png, id=3305, 101.37875pt x 46.1725pt>
+<../figures/Open.png, id=3444, 101.37875pt x 46.1725pt>
 File: ../figures/Open.png Graphic file (type png)
 <use ../figures/Open.png>
 Package pdftex.def Info: ../figures/Open.png  used on input line 138.
 (pdftex.def)             Requested size: 37.5563pt x 17.10538pt.
-<../figures/Save.png, id=3306, 91.34125pt x 45.16875pt>
+<../figures/Save.png, id=3445, 91.34125pt x 45.16875pt>
 File: ../figures/Save.png Graphic file (type png)
 <use ../figures/Save.png>
 Package pdftex.def Info: ../figures/Save.png  used on input line 139.
@@ -3151,12 +3247,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 136--145
 [] [] 
  []
 
-<../figures/PLOT.png, id=3307, 99.37125pt x 45.16875pt>
+<../figures/PLOT.png, id=3446, 99.37125pt x 45.16875pt>
 File: ../figures/PLOT.png Graphic file (type png)
 <use ../figures/PLOT.png>
 Package pdftex.def Info: ../figures/PLOT.png  used on input line 148.
 (pdftex.def)             Requested size: 37.5563pt x 17.07124pt.
-<../figures/RUN.png, id=3308, 88.33pt x 44.165pt>
+<../figures/RUN.png, id=3447, 88.33pt x 44.165pt>
 File: ../figures/RUN.png Graphic file (type png)
 <use ../figures/RUN.png>
 Package pdftex.def Info: ../figures/RUN.png  used on input line 149.
@@ -3176,12 +3272,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 146--156
 [] [] 
  []
 
-<../figures/PDF.png, id=3309, 85.31876pt x 46.1725pt>
+<../figures/PDF.png, id=3448, 85.31876pt x 46.1725pt>
 File: ../figures/PDF.png Graphic file (type png)
 <use ../figures/PDF.png>
 Package pdftex.def Info: ../figures/PDF.png  used on input line 159.
 (pdftex.def)             Requested size: 37.5563pt x 20.3244pt.
-<../figures/CSV.png, id=3310, 88.33pt x 47.17625pt>
+<../figures/CSV.png, id=3449, 88.33pt x 47.17625pt>
 File: ../figures/CSV.png Graphic file (type png)
 <use ../figures/CSV.png>
 Package pdftex.def Info: ../figures/CSV.png  used on input line 160.
@@ -3201,7 +3297,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 157--170
 [] [] 
  []
 
-<../figures/C.png, id=3311, 68.255pt x 31.11626pt>
+<../figures/C.png, id=3450, 68.255pt x 31.11626pt>
 File: ../figures/C.png Graphic file (type png)
 <use ../figures/C.png>
 Package pdftex.def Info: ../figures/C.png  used on input line 173.
@@ -3221,7 +3317,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 171--180
 [] [] 
  []
 
-<../figures/omit.png, id=3312, 67.25125pt x 116.435pt>
+<../figures/omit.png, id=3451, 67.25125pt x 116.435pt>
 File: ../figures/omit.png Graphic file (type png)
 <use ../figures/omit.png>
 Package pdftex.def Info: ../figures/omit.png  used on input line 183.
@@ -3236,7 +3332,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 181--192
 [] [] 
  []
 
-<../figures/formats.png, id=3313, 259.97125pt x 95.35625pt>
+<../figures/formats.png, id=3452, 259.97125pt x 95.35625pt>
 File: ../figures/formats.png Graphic file (type png)
 <use ../figures/formats.png>
 Package pdftex.def Info: ../figures/formats.png  used on input line 195.
@@ -3251,7 +3347,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 193--202
 [] [] 
  []
 
-<../figures/ierr.png, id=3314, 215.80624pt x 117.43875pt>
+<../figures/ierr.png, id=3453, 215.80624pt x 117.43875pt>
 File: ../figures/ierr.png Graphic file (type png)
 <use ../figures/ierr.png>
 Package pdftex.def Info: ../figures/ierr.png  used on input line 205.
@@ -3280,7 +3376,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 214--222
 [] [] 
  []
 
-<../figures/contextualhelp.png, id=3315, 477.785pt x 260.975pt>
+<../figures/contextualhelp.png, id=3454, 477.785pt x 260.975pt>
 File: ../figures/contextualhelp.png Graphic file (type png)
 <use ../figures/contextualhelp.png>
 Package pdftex.def Info: ../figures/contextualhelp.png  used on input line 225.
@@ -3291,7 +3387,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 223--231
 [] [] 
  []
 
-[120 <../figures/chronometerbutton.png> <../figures/plotdevices.png> <../figure
+[122 <../figures/chronometerbutton.png> <../figures/plotdevices.png> <../figure
 s/Options.png> <../figures/Help.png> <../figures/Open.png> <../figures/Save.png
 > <../figures/PLOT.png> <../figures/RUN.png> <../figures/PDF.png> <../figures/C
 SV.png> <../figures/C.png> <../figures/omit.png> <../figures/formats.png> <../f
@@ -3317,21 +3413,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
 
-[121 <../figures/contextualhelp.png>]
+[123 <../figures/contextualhelp.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 308--310
 
  []
 
+
+LaTeX Warning: Citation 'wilkinson2016' on page 124 undefined on input line 318
+.
+
+
+LaTeX Warning: Empty bibliography on input line 320.
+
 Package biblatex Info: Reference section=0 on input line 321.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
- [122]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
+ [124]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
  (./trainingcourse.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
 Package rerunfilecheck Info: File `trainingcourse.out' has not changed.
-(rerunfilecheck)             Checksum: 3CC7AC46FE5D13ADF6F553AE94BB84A5;6178.
+(rerunfilecheck)             Checksum: CFAC17F94B67E4F843CB5F10104FB853;6535.
 
 
 LaTeX Warning: There were undefined references.
@@ -3340,19 +3443,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                trainingcourse12-blx
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'trainingcourse.run.xml'.
 \openout1 = `trainingcourse.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 19156 strings out of 481239
- 334856 string characters out of 5920378
- 819854 words of memory out of 5000000
- 33207 multiletter control sequences out of 15000+600000
+ 19199 strings out of 481239
+ 335706 string characters out of 5920378
+ 823545 words of memory out of 5000000
+ 33233 multiletter control sequences out of 15000+600000
  554908 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,17n,76p,2075b,1995s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3408,10 +3512,10 @@ type1/public/cbfonts/grxn1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/cbfonts/grxn1440.pfb></usr/share/texmf/fonts/type1/public/lm/lmb10.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on trainingcourse.pdf (122 pages, 2781449 bytes).
+Output written on trainingcourse.pdf (124 pages, 2840565 bytes).
 PDF statistics:
- 3600 PDF objects out of 4296 (max. 8388607)
- 2923 compressed objects within 30 object streams
- 770 named destinations out of 1000 (max. 500000)
- 1223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3737 PDF objects out of 4296 (max. 8388607)
+ 3024 compressed objects within 31 object streams
+ 781 named destinations out of 1000 (max. 500000)
+ 1273 words of extra memory for PDF output out of 10000 (max. 10000000)
 

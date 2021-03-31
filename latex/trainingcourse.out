@@ -87,8 +87,13 @@
 \BOOKMARK [1][-]{section.21.1}{Data formats}{chapter.21}% 87
 \BOOKMARK [1][-]{section.21.2}{Isochrons}{chapter.21}% 88
 \BOOKMARK [1][-]{section.21.3}{Th\205U evolution diagrams}{chapter.21}% 89
-\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 90
-\BOOKMARK [0][-]{chapter.22}{Introduction to IsoplotR}{part.3}% 91
-\BOOKMARK [1][-]{section.22.1}{Software architecture}{chapter.22}% 92
-\BOOKMARK [1][-]{section.22.2}{The Graphical User Interface \(GUI\)}{chapter.22}% 93
-\BOOKMARK [1][-]{section.22.3}{The Command Line Interface \(CLI\)}{chapter.22}% 94
+\BOOKMARK [0][-]{chapter.22}{Detrital geochronology}{part.2}% 90
+\BOOKMARK [1][-]{section.22.1}{Maximum depositional age estimation}{chapter.22}% 91
+\BOOKMARK [1][-]{section.22.2}{Multi-sample plots}{chapter.22}% 92
+\BOOKMARK [1][-]{section.22.3}{Multidimensional scaling}{chapter.22}% 93
+\BOOKMARK [1][-]{section.22.4}{Provenance analysis}{chapter.22}% 94
+\BOOKMARK [-1][-]{part.3}{III IsoplotR manual}{}% 95
+\BOOKMARK [0][-]{chapter.23}{Introduction to IsoplotR}{part.3}% 96
+\BOOKMARK [1][-]{section.23.1}{Software architecture}{chapter.23}% 97
+\BOOKMARK [1][-]{section.23.2}{The Graphical User Interface \(GUI\)}{chapter.23}% 98
+\BOOKMARK [1][-]{section.23.3}{The Command Line Interface \(CLI\)}{chapter.23}% 99

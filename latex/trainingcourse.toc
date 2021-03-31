@@ -177,13 +177,23 @@
 \contentsline {section}{\numberline {21.2}Isochrons}{115}{section.21.2}%
 \defcounter {refsection}{10}\relax 
 \contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{116}{section.21.3}%
+\defcounter {refsection}{11}\relax 
+\contentsline {chapter}{\numberline {22}Detrital geochronology}{118}{chapter.22}%
+\defcounter {refsection}{11}\relax 
+\contentsline {section}{\numberline {22.1}Maximum depositional age estimation}{118}{section.22.1}%
+\defcounter {refsection}{11}\relax 
+\contentsline {section}{\numberline {22.2}Multi-sample plots}{118}{section.22.2}%
+\defcounter {refsection}{11}\relax 
+\contentsline {section}{\numberline {22.3}Multidimensional scaling}{118}{section.22.3}%
+\defcounter {refsection}{11}\relax 
+\contentsline {section}{\numberline {22.4}Provenance analysis}{118}{section.22.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{117}{part.3}%
-\defcounter {refsection}{11}\relax 
-\contentsline {chapter}{\numberline {22}Introduction to \texttt {IsoplotR}}{118}{chapter.22}%
-\defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.1}Software architecture}{118}{section.22.1}%
-\defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.2}The Graphical User Interface (GUI)}{119}{section.22.2}%
-\defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.3}The Command Line Interface (CLI)}{121}{section.22.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{119}{part.3}%
+\defcounter {refsection}{12}\relax 
+\contentsline {chapter}{\numberline {23}Introduction to \texttt {IsoplotR}}{120}{chapter.23}%
+\defcounter {refsection}{12}\relax 
+\contentsline {section}{\numberline {23.1}Software architecture}{120}{section.23.1}%
+\defcounter {refsection}{12}\relax 
+\contentsline {section}{\numberline {23.2}The Graphical User Interface (GUI)}{121}{section.23.2}%
+\defcounter {refsection}{12}\relax 
+\contentsline {section}{\numberline {23.3}The Command Line Interface (CLI)}{123}{section.23.3}%
