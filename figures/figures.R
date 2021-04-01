@@ -631,3 +631,32 @@ ThU <- read.data(fn,method='Th-U',format=3)
 evolution(ThU)
 legend('topleft',legend='d)',bty='n',adj=c(1.5,0),cex=1.2)
 dev.off()
+
+DZ <- read.data('DZages.csv',method='detritals',check.names=FALSE)
+
+cairo(file='~/Documents/temp/multicad.pdf',height=4,width=6)
+pars()
+cad(DZ,col=hcl.colors)
+dev.off()
+
+cairo(file='~/Documents/temp/multikdediff.pdf',height=5,width=5)
+kde(DZ,show.hist=FALSE,normalise=FALSE,samebandwidth=FALSE)
+dev.off()
+
+cairo(file='~/Documents/temp/multikdesame.pdf',height=5,width=5)
+kde(DZ,show.hist=FALSE)
+dev.off()
+
+cairo(file='~/Documents/temp/KS.pdf',height=3,width=4)
+pars()
+dat <- examples$DZ[c('N1','N12')]
+class(dat) <- 'detritals'
+cad(dat)
+D <- ks.test(examples$DZ$N1,examples$DZ$N12)$statistic
+lines(x=c(1000,1000),y=c(0,D))
+dev.off()
+
+cairo(file='~/Documents/temp/DZmds.pdf',height=5,width=5)
+pars()
+mds(examples$DZ)
+dev.off()
