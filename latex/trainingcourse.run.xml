@@ -57,6 +57,7 @@
       <file>trainingcourse10-blx.aux</file>
       <file>trainingcourse11-blx.aux</file>
       <file>trainingcourse12-blx.aux</file>
+      <file>trainingcourse13-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </provides>
     <requires type="dynamic">
@@ -73,6 +74,7 @@
       <file>trainingcourse10-blx.bbl</file>
       <file>trainingcourse11-blx.bbl</file>
       <file>trainingcourse12-blx.bbl</file>
+      <file>trainingcourse13-blx.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -429,6 +431,33 @@
     </provides>
     <requires type="dynamic">
       <file>trainingcourse12-blx.aux</file>
+      <file>trainingcourse-blx.bib</file>
+    </requires>
+    <requires type="editable">
+      <file>/home/pvermees/Dropbox/biblio.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
+    </requires>
+  </external>
+  <external package="biblatex" priority="5" active="0">
+    <generic>bibtex</generic>
+    <cmdline>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
+      <infile>trainingcourse13-blx</infile>
+    </cmdline>
+    <input>
+      <file>trainingcourse13-blx.aux</file>
+    </input>
+    <output>
+      <file>trainingcourse13-blx.bbl</file>
+    </output>
+    <provides type="dynamic">
+      <file>trainingcourse13-blx.bbl</file>
+    </provides>
+    <requires type="dynamic">
+      <file>trainingcourse13-blx.aux</file>
       <file>trainingcourse-blx.bib</file>
     </requires>
     <requires type="editable">

@@ -627,9 +627,9 @@ setting:
   assume that all the aliquots are cogenetic and share the same common
   Pb composition, isochron regression is the most reliable method.
   \begin{enumerate}
-  \item The common Pb composition as well as the concordia intercept
-    age can be obtained using the methods reviewed in
-    Section~\ref{sec:discordia}.\\
+  \item\label{it:isochroncommonpb} The common Pb composition as well
+    as the concordia intercept age can be obtained using the methods
+    reviewed in Section~\ref{sec:discordia}.\\
     
     \noindent\begin{minipage}[t]{\linewidth}
     \centering
@@ -686,14 +686,15 @@ setting:
     \end{minipage}
     
   \end{enumerate}
-\item In sedimentary and para-metamorphic rocks, in which the grains
-  cannot safely be assumed to be cogenetic, each aliquot must be
-  treated separately.
+\item\label{it:separatecommonpb} In sedimentary and para-metamorphic
+  rocks, in which the grains cannot safely be assumed to be cogenetic,
+  each aliquot must be treated separately.
   \begin{enumerate}
-  \item If there is some independent evidence to support a shared
-    common-Pb composition for all the aliquots, then the radiogenic
-    composition can be obtained by two-point isochron regression
-    between that common-Pb composition and each aliquot.\\
+  \item\label{it:nominalcommonpb} If there is some independent
+    evidence to support a shared common-Pb composition for all the
+    aliquots, then the radiogenic composition can be obtained by
+    two-point isochron regression between that common-Pb composition
+    and each aliquot.\\
 
     \noindent\begin{minipage}[t]{\linewidth}
     \centering
@@ -715,9 +716,10 @@ setting:
     \label{fig:commonPbisochron13detrital}
     \end{minipage}
     
-  \item In the absence of external evidence about the common Pb
-    composition, one can infer the composition from the age using a
-    mantle evolution model \citep[e.g.,][]{stacey1975}. If $t<3.7$~Ga:
+  \item\label{it:separate-stacey-kramers} In the absence of external
+    evidence about the common Pb composition, one can infer the
+    composition from the age using a mantle evolution model
+    \citep[e.g.,][]{stacey1975}. If $t<3.7$~Ga:
     \begin{align}
       \left[\frac{{}^{206}Pb}{{}^{204}Pb}\right]_\circ = &
       11.152 + 9.74
