@@ -78,7 +78,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11.1}Introduction to \texttt {R}}{44}{section.11.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.2}U-Th-Pb data reduction}{48}{section.11.2}%
+\contentsline {section}{\numberline {11.2}U-Th-Pb data reduction}{47}{section.11.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11.3}$^{40}$Ar/$^{39}$Ar data reduction}{48}{section.11.3}%
 \defcounter {refsection}{0}\relax 
@@ -200,6 +200,8 @@
 \defcounter {refsection}{13}\relax 
 \contentsline {section}{\numberline {24.1}General options}{131}{section.24.1}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.2}concordia}{134}{section.24.2}%
+\contentsline {section}{\numberline {24.2}Concordia}{134}{section.24.2}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.3}isochrons}{137}{section.24.3}%
+\contentsline {section}{\numberline {24.3}Isochrons}{137}{section.24.3}%
+\defcounter {refsection}{13}\relax 
+\contentsline {section}{\numberline {24.4}Radial plots}{139}{section.24.4}%
