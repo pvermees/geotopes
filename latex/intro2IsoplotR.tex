@@ -249,20 +249,21 @@ UPb_dat <- read.data('file.csv',method='U-Pb',format=1,ierr=3)
 \noindent where\\
 
 \noindent\begin{tabular}{@{}p{.2\textwidth}@{}p{.04\textwidth}@{}p{.76\textwidth}@{}}
-\verb|'file.csv'| && is the name of the data file\\
-\verb|method='U-Pb'| && specifies the chronometer\\
-\verb|format=1| && tells \texttt{IsoplotR} that \verb|file.csv|
-contains the following columns: \textsuperscript{207}Pb/\textsuperscript{235}U,
+\verb|'file.csv'| && is the name of the data
+file\\ \verb|method='U-Pb'| && specifies the
+chronometer\\ \verb|format=1| && tells \texttt{IsoplotR} that
+\verb|file.csv| contains the following columns:
+\textsuperscript{207}Pb/\textsuperscript{235}U,
 err[\textsuperscript{207}Pb/\textsuperscript{235}U],
 \textsuperscript{206}Pb/\textsuperscript{238}U,
-err[\textsuperscript{206}Pb/\textsuperscript{238}U], and
-$r$, where `err[*]' marks the uncertainties of `*', and $r$ is
-the correlation coefficient between
-err[\textsuperscript{207}Pb/\textsuperscript{235}U]
-and err[\textsuperscript{206}Pb/\textsuperscript{238}U]
-(see Chapter~\ref{ch:formats}).\\
-\verb|ierr=3| && indicates that these uncertainties (`err[*]') are specified
-as relative values at two standard errors.
+err[\textsuperscript{206}Pb/\textsuperscript{238}U], and $r$, where
+`err[*]' marks the uncertainties of `*', and $r$ is the correlation
+coefficient between
+err[\textsuperscript{207}Pb/\textsuperscript{235}U] and
+err[\textsuperscript{206}Pb/\textsuperscript{238}U] (see
+Chapter~\ref{ch:statistics}).\\ \verb|ierr=3| && indicates that these
+uncertainties (`err[*]') are specified as relative values at two
+standard errors.
 \end{tabular}\\
 
 \noindent Further details about these arguments can be viewed by

@@ -205,3 +205,9 @@
 \contentsline {section}{\numberline {24.3}Isochrons}{137}{section.24.3}%
 \defcounter {refsection}{13}\relax 
 \contentsline {section}{\numberline {24.4}Radial plots}{139}{section.24.4}%
+\defcounter {refsection}{13}\relax 
+\contentsline {section}{\numberline {24.5}Weighted mean}{141}{section.24.5}%
+\defcounter {refsection}{13}\relax 
+\contentsline {section}{\numberline {24.6}Kernel density estimates}{143}{section.24.6}%
+\defcounter {refsection}{13}\relax 
+\contentsline {section}{\numberline {24.7}Cumulative age distributions}{144}{section.24.7}%
