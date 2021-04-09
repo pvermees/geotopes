@@ -211,3 +211,5 @@
 \contentsline {section}{\numberline {24.6}Kernel density estimates}{143}{section.24.6}%
 \defcounter {refsection}{13}\relax 
 \contentsline {section}{\numberline {24.7}Cumulative age distributions}{144}{section.24.7}%
+\defcounter {refsection}{13}\relax 
+\contentsline {section}{\numberline {24.8}Ages}{144}{section.24.8}%

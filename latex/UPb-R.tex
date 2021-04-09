@@ -1158,6 +1158,115 @@ kde(UPb1,rug=FALSE)
 cad(UPb1,type=2,common.Pb=3)
 \end{console}
 
+\item The different steps in the CAD are connected by vertical lines.
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbCADverticals.png}
+\end{minipage}
+\begin{minipage}[t]{.7\linewidth}
+  These lines can be removed by unticking the box.
+\end{minipage}
+
+\begin{console}
+cad(UPb1,verticals=FALSE)
+\end{console}
+
+\item Each aliquot can be marked by an optional plot character.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbCADpch.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  \texttt{pch=16} produces a filled circle.
+\end{minipage}
+
+\begin{console}
+cad(UPb1,verticals=FALSE,pch=16)
+\end{console}
+
+\end{enumerate}
+
+\section{Ages}\label{sec:UPbAges}
+
+Besides plotting diagrams, \texttt{IsoplotR} can also generate data
+tables, which can be downloaded as \texttt{.csv} files. For U--Pb data
+formats 1--6, these tables contain the
+\textsuperscript{207}Pb/\textsuperscript{235}U,
+\textsuperscript{206}Pb/\textsuperscript{238}U,
+\textsuperscript{207}Pb/\textsuperscript{206}Pb and single grain
+concordia ages. For formats 7 and 8, the
+\textsuperscript{208}Pb/\textsuperscript{232}Th age is also reported.
+In addition to this, there is also the option to add a column with the
+estimate discordance of each aliquot.
+
+\begin{enumerate}
+
+\item Each aliquot can be corrected for initial disequilibrium or
+  common Pb.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbAgesPb0diseq.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  Note that, for formats 1--3, the common Pb correction always
+  produces perfectly concordant ages. Which may not be the most
+  informative result.
+\end{minipage}
+
+\begin{console}
+age(UPb2,common.Pb=3)
+\end{console}
+
+\item The decay constant uncertainties can be added to each age.
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbAgesExterr.png}
+\end{minipage}
+\begin{minipage}[t]{.7\linewidth}
+  Note that the uncertainties of the resulting ages may be strongly
+  correlated.
+\end{minipage}
+  
+\begin{console}
+age(UPb1,exterr=TRUE)
+\end{console}
+
+\item An additional column can be added to the output table listing
+  the estimated discordance for each aliquot, which can either be
+  calculated before or after the common Pb correction.
+  \begin{center}
+  \includegraphics[width=.8\linewidth]{../figures/UPbAgesDiscordance.png}
+  \end{center}
+  In addition to the six discordance filter options that were
+  available to the radial, weighted mean, KDE and CAD plots, the ages
+  function also adds the option to list the p-value for concordance of
+  each aliquot. Although this value should not be used as a basis to
+  filter data, it may be useful for other purposes.
+  
+\begin{console}
+age(UPb3,common.Pb=3,discordance=discfilter(before=TRUE,option=6))
+\end{console}
+
+\item The numerical results can be reported to any number of
+  significant digits.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbAgesSigdig.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  This may be useful if the results are to be used for subsequent
+  calculations.
+\end{minipage}
+
+\begin{console}
+tt <- age(UPb1,sigdig=4)
+\end{console}
+
 \end{enumerate}
 
 \printbibliography[heading=subbibliography]
