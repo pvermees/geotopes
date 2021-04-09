@@ -44,37 +44,37 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>trainingcourse.aux</file>
-      <file>trainingcourse1-blx.aux</file>
-      <file>trainingcourse2-blx.aux</file>
-      <file>trainingcourse3-blx.aux</file>
-      <file>trainingcourse4-blx.aux</file>
-      <file>trainingcourse5-blx.aux</file>
-      <file>trainingcourse6-blx.aux</file>
-      <file>trainingcourse7-blx.aux</file>
-      <file>trainingcourse8-blx.aux</file>
-      <file>trainingcourse9-blx.aux</file>
-      <file>trainingcourse10-blx.aux</file>
-      <file>trainingcourse11-blx.aux</file>
-      <file>trainingcourse12-blx.aux</file>
-      <file>trainingcourse13-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual.aux</file>
+      <file>manual1-blx.aux</file>
+      <file>manual2-blx.aux</file>
+      <file>manual3-blx.aux</file>
+      <file>manual4-blx.aux</file>
+      <file>manual5-blx.aux</file>
+      <file>manual6-blx.aux</file>
+      <file>manual7-blx.aux</file>
+      <file>manual8-blx.aux</file>
+      <file>manual9-blx.aux</file>
+      <file>manual10-blx.aux</file>
+      <file>manual11-blx.aux</file>
+      <file>manual12-blx.aux</file>
+      <file>manual13-blx.aux</file>
+      <file>manual-blx.bib</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse.bbl</file>
-      <file>trainingcourse1-blx.bbl</file>
-      <file>trainingcourse2-blx.bbl</file>
-      <file>trainingcourse3-blx.bbl</file>
-      <file>trainingcourse4-blx.bbl</file>
-      <file>trainingcourse5-blx.bbl</file>
-      <file>trainingcourse6-blx.bbl</file>
-      <file>trainingcourse7-blx.bbl</file>
-      <file>trainingcourse8-blx.bbl</file>
-      <file>trainingcourse9-blx.bbl</file>
-      <file>trainingcourse10-blx.bbl</file>
-      <file>trainingcourse11-blx.bbl</file>
-      <file>trainingcourse12-blx.bbl</file>
-      <file>trainingcourse13-blx.bbl</file>
+      <file>manual.bbl</file>
+      <file>manual1-blx.bbl</file>
+      <file>manual2-blx.bbl</file>
+      <file>manual3-blx.bbl</file>
+      <file>manual4-blx.bbl</file>
+      <file>manual5-blx.bbl</file>
+      <file>manual6-blx.bbl</file>
+      <file>manual7-blx.bbl</file>
+      <file>manual8-blx.bbl</file>
+      <file>manual9-blx.bbl</file>
+      <file>manual10-blx.bbl</file>
+      <file>manual11-blx.bbl</file>
+      <file>manual12-blx.bbl</file>
+      <file>manual13-blx.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -94,20 +94,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse</infile>
+      <infile>manual</infile>
     </cmdline>
     <input>
-      <file>trainingcourse.aux</file>
+      <file>manual.aux</file>
     </input>
     <output>
-      <file>trainingcourse.bbl</file>
+      <file>manual.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse.bbl</file>
+      <file>manual.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -121,20 +121,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse1-blx</infile>
+      <infile>manual1-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse1-blx.aux</file>
+      <file>manual1-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse1-blx.bbl</file>
+      <file>manual1-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse1-blx.bbl</file>
+      <file>manual1-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse1-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual1-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -148,20 +148,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse2-blx</infile>
+      <infile>manual2-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse2-blx.aux</file>
+      <file>manual2-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse2-blx.bbl</file>
+      <file>manual2-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse2-blx.bbl</file>
+      <file>manual2-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse2-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual2-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -175,20 +175,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse3-blx</infile>
+      <infile>manual3-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse3-blx.aux</file>
+      <file>manual3-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse3-blx.bbl</file>
+      <file>manual3-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse3-blx.bbl</file>
+      <file>manual3-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse3-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual3-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -202,20 +202,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse4-blx</infile>
+      <infile>manual4-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse4-blx.aux</file>
+      <file>manual4-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse4-blx.bbl</file>
+      <file>manual4-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse4-blx.bbl</file>
+      <file>manual4-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse4-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual4-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -229,20 +229,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse5-blx</infile>
+      <infile>manual5-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse5-blx.aux</file>
+      <file>manual5-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse5-blx.bbl</file>
+      <file>manual5-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse5-blx.bbl</file>
+      <file>manual5-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse5-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual5-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -256,20 +256,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse6-blx</infile>
+      <infile>manual6-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse6-blx.aux</file>
+      <file>manual6-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse6-blx.bbl</file>
+      <file>manual6-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse6-blx.bbl</file>
+      <file>manual6-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse6-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual6-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -283,20 +283,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse7-blx</infile>
+      <infile>manual7-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse7-blx.aux</file>
+      <file>manual7-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse7-blx.bbl</file>
+      <file>manual7-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse7-blx.bbl</file>
+      <file>manual7-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse7-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual7-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -310,20 +310,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse8-blx</infile>
+      <infile>manual8-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse8-blx.aux</file>
+      <file>manual8-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse8-blx.bbl</file>
+      <file>manual8-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse8-blx.bbl</file>
+      <file>manual8-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse8-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual8-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -337,20 +337,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse9-blx</infile>
+      <infile>manual9-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse9-blx.aux</file>
+      <file>manual9-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse9-blx.bbl</file>
+      <file>manual9-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse9-blx.bbl</file>
+      <file>manual9-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse9-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual9-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -364,20 +364,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse10-blx</infile>
+      <infile>manual10-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse10-blx.aux</file>
+      <file>manual10-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse10-blx.bbl</file>
+      <file>manual10-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse10-blx.bbl</file>
+      <file>manual10-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse10-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual10-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -391,20 +391,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse11-blx</infile>
+      <infile>manual11-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse11-blx.aux</file>
+      <file>manual11-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse11-blx.bbl</file>
+      <file>manual11-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse11-blx.bbl</file>
+      <file>manual11-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse11-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual11-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -418,20 +418,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse12-blx</infile>
+      <infile>manual12-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse12-blx.aux</file>
+      <file>manual12-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse12-blx.bbl</file>
+      <file>manual12-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse12-blx.bbl</file>
+      <file>manual12-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse12-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual12-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
@@ -445,20 +445,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>trainingcourse13-blx</infile>
+      <infile>manual13-blx</infile>
     </cmdline>
     <input>
-      <file>trainingcourse13-blx.aux</file>
+      <file>manual13-blx.aux</file>
     </input>
     <output>
-      <file>trainingcourse13-blx.bbl</file>
+      <file>manual13-blx.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>trainingcourse13-blx.bbl</file>
+      <file>manual13-blx.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>trainingcourse13-blx.aux</file>
-      <file>trainingcourse-blx.bib</file>
+      <file>manual13-blx.aux</file>
+      <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>/home/pvermees/Dropbox/biblio.bib</file>
