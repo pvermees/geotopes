@@ -213,3 +213,13 @@
 \contentsline {section}{\numberline {24.7}Cumulative age distributions}{144}{section.24.7}%
 \defcounter {refsection}{13}\relax 
 \contentsline {section}{\numberline {24.8}Ages}{144}{section.24.8}%
+\defcounter {refsection}{14}\relax 
+\contentsline {chapter}{\numberline {25}Pb--Pb}{146}{chapter.25}%
+\defcounter {refsection}{14}\relax 
+\contentsline {section}{\numberline {25.1}Isochrons}{146}{section.25.1}%
+\defcounter {refsection}{14}\relax 
+\contentsline {section}{\numberline {25.2}Radial plots}{147}{section.25.2}%
+\defcounter {refsection}{14}\relax 
+\contentsline {section}{\numberline {25.3}Weighted mean}{149}{section.25.3}%
+\defcounter {refsection}{14}\relax 
+\contentsline {section}{\numberline {25.4}Ages}{149}{section.25.4}%

@@ -1,0 +1,798 @@
+isochron               package:IsoplotR                R Documentation
+
+_C_a_l_c_u_l_a_t_e _a_n_d _p_l_o_t _i_s_o_c_h_r_o_n_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Plots cogenetic Ar-Ar, K-Ca, Pb-Pb, Th-Pb, Rb-Sr, Sm-Nd, Re-Os,
+     Lu-Hf, U-Th-He or Th-U data as X-Y scatterplots, fits an isochron
+     curve through them using the ‘york’ function, and computes the
+     corresponding isochron age, including decay constant
+     uncertainties.
+
+_U_s_a_g_e:
+
+     isochron(x, ...)
+     
+     ## Default S3 method:
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       xlab = "x",
+       ylab = "y",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       title = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'UPb'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       type = 1,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = FALSE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       anchor = 0,
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'PbPb'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       inverse = TRUE,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       growth = FALSE,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'ArAr'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       inverse = TRUE,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'ThPb'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       inverse = FALSE,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'KCa'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       inverse = FALSE,
+       ci.col = "gray80",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'RbSr'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       inverse = FALSE,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'ReOs'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       inverse = FALSE,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'SmNd'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       inverse = FALSE,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'LuHf'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       inverse = FALSE,
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'ThU'
+     isochron(
+       x,
+       type = 2,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       exterr = TRUE,
+       model = 1,
+       show.ellipses = 1 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+     ## S3 method for class 'UThHe'
+     isochron(
+       x,
+       alpha = 0.05,
+       sigdig = 2,
+       show.numbers = FALSE,
+       levels = NA,
+       clabel = "",
+       ellipse.fill = c("#00FF0080", "#FF000080"),
+       ellipse.stroke = "black",
+       ci.col = "gray80",
+       line.col = "black",
+       lwd = 1,
+       plot = TRUE,
+       model = 1,
+       show.ellipses = 2 * (model != 2),
+       hide = NULL,
+       omit = NULL,
+       omit.fill = NA,
+       omit.stroke = "grey",
+       ...
+     )
+     
+_A_r_g_u_m_e_n_t_s:
+
+       x: EITHER a matrix with the following five columns:
+
+          ‘X’: the x-variable
+
+          ‘sX’: the standard error of ‘X’
+
+          ‘Y’: the y-variable
+
+          ‘sY’: the standard error of ‘Y’
+
+          ‘rXY’: the correlation coefficient of ‘X’ and ‘Y’
+
+          OR
+
+          an object of class ‘ArAr’, ‘KCa’, ‘PbPb’, ‘UPb’, ‘ThPb’,
+          ‘ReOs’, ‘RbSr’, ‘SmNd’, ‘LuHf’, ‘UThHe’ or ‘ThU’.
+
+     ...: optional arguments to be passed on to the generic plot
+          function if ‘model=2’
+
+   alpha: confidence cutoff for the error ellipses and confidence
+          intervals
+
+  sigdig: the number of significant digits of the numerical values
+          reported in the title of the graphical output
+
+show.numbers: logical flag (‘TRUE’ to show grain numbers)
+
+  levels: a vector with additional values to be displayed as different
+          background colours within the error ellipses.
+
+  clabel: label for the colour scale
+
+    xlab: text label for the horizontal plot axis
+
+    ylab: text label for the vertical plot axis
+
+ellipse.fill: Fill colour for the error ellipses. This can either be a
+          single colour or multiple colours to form a colour ramp.
+          Examples:
+
+          a single colour: ‘rgb(0,1,0,0.5)’, ‘'#FF000080'’, ‘'white'’,
+          etc.;
+
+          multiple colours: ‘c(rbg(1,0,0,0.5)’, ‘rgb(0,1,0,0.5))’,
+          ‘c('#FF000080','#00FF0080')’, ‘c('blue','red')’,
+          ‘c('blue','yellow','red')’, etc.;
+
+          a colour palette: ‘rainbow(n=100)’,
+          ‘topo.colors(n=100,alpha=0.5)’, etc.; or
+
+          a reversed palette: ‘rev(topo.colors(n=100,alpha=0.5))’, etc.
+
+          For empty ellipses, set ‘ellipse.col=NA’
+
+ellipse.stroke: the stroke colour for the error ellipses. Follows the
+          same formatting guidelines as ‘ellipse.fill’
+
+  ci.col: the fill colour for the confidence interval of the intercept
+          and slope.
+
+line.col: colour of the isochron line
+
+     lwd: line width
+
+    plot: if ‘FALSE’, suppresses the graphical output
+
+   title: add a title to the plot?
+
+   model: construct the isochron using either:
+
+          ‘1’: Error-weighted least squares regression
+
+          ‘2’: Ordinary least squares regression
+
+          ‘3’: Error-weighted least squares with overdispersion term
+
+show.ellipses: show the data as:
+
+          ‘1’: points
+
+          ‘2’: error ellipses
+
+          ‘3’: error crosses
+
+    hide: vector with indices of aliquots that should be removed from
+          the plot.
+
+    omit: vector with indices of aliquots that should be plotted but
+          omitted from the isochron age calculation.
+
+omit.fill: fill colour that should be used for the omitted aliquots.
+
+omit.stroke: stroke colour that should be used for the omitted
+          aliquots.
+
+    type: if ‘x’ has class ‘UPb’ and ‘x$format=4’, ‘5’ or ‘6’:
+
+          ‘1’: ^{204}Pb/^{206}Pb vs. ^{238}U/^{206}Pb
+
+          ‘2’: ^{204}Pb/^{207}Pb vs. ^{235}U/^{207}Pb
+
+          if ‘x’ has class ‘UPb’ and ‘x$format=7’ or ‘8’:
+
+          ‘1’: ^{208}Pb{}_\circ/^{206}Pb vs. ^{238}U/^{206}Pb
+
+          ‘2’: ^{208}Pb{}_\circ/^{207}Pb vs. ^{235}U/^{207}Pb
+
+          ‘3’: ^{206}Pb{}_\circ/^{208}Pb vs. ^{232}Th/^{208}Pb
+
+          ‘4’: ^{207}Pb{}_\circ/^{208}Pb vs. ^{232}Th/^{208}Pb
+
+          if ‘x’ has class ‘ThU’, and following the classification of
+          Ludwig and Titterington (1994), one of either:
+
+          ‘1’: `Rosholt type-II' isochron, setting out
+          ^{230}Th/^{232}Th vs. ^{238}U/^{232}Th
+
+          ‘2’: `Osmond type-II' isochron, setting out ^{230}Th/^{238}U
+          vs. ^{232}Th/^{238}U
+
+          ‘3’: `Rosholt type-II' isochron, setting out ^{234}U/^{232}Th
+          vs. ^{238}U/^{232}Th
+
+          ‘4’: `Osmond type-II' isochron, setting out ^{234}U/^{238}U
+          vs. ^{232}Th/^{238}U
+
+  exterr: propagate external sources of uncertainty (J, decay
+          constant)?
+
+  anchor: control parameters to fix the intercept age or common Pb
+          composition of the isochron fit. This can be a scalar or a
+          vector.
+
+          If ‘anchor[1]=0’: do not anchor the isochron.
+
+          If ‘anchor[1]=1’: fix the common Pb composition at the values
+          stored in ‘settings('iratio',...)’.
+
+          If ‘anchor[1]=2’: force the isochron line to intersect the
+          concordia line at an age equal to ‘anchor[2]’.
+
+ inverse: toggles between normal and inverse isochrons. If the isochron
+          plots ‘Y’ against ‘X’, and
+
+          If ‘inverse=TRUE’, then ‘X’ = {}^{204}Pb/{}^{206}Pb and ‘Y’ =
+          {}^{207}Pb/{}^{206}Pb (if ‘x’ has class ‘PbPb’), or ‘X’ =
+          {}^{232}Th/{}^{208}Pb and ‘Y’ = {}^{204}Pb/{}^{208}Pb (if ‘x’
+          has class ‘ThPb’), or ‘X’ = {}^{39}Ar/{}^{40}Ar and ‘Y’ =
+          {}^{36}Ar/{}^{40}Ar (if ‘x’ has class ‘ArAr’), or ‘X’ =
+          {}^{40}K/{}^{40}Ca and ‘Y’ = {}^{44}Ca/{}^{40}Ca (if ‘x’ has
+          class ‘KCa’), or ‘X’ = {}^{87}Rb/{}^{87}Sr and ‘Y’ =
+          {}^{86}Sr/{}^{87}Sr (if ‘x’ has class ‘RbSr’), or ‘X’ =
+          {}^{147}Sm/{}^{143}Nd and ‘Y’ = {}^{144}Nd/{}^{143}Nd (if ‘x’
+          has class ‘SmNd’), or ‘X’ = {}^{187}Re/{}^{187}Os and ‘Y’ =
+          {}^{188}Os/{}^{187}Os (if ‘x’ has class ‘ReOs’), or ‘X’ =
+          {}^{176}Lu/{}^{176}Hf and ‘Y’ = {}^{177}Hf/{}^{176}Hf (if ‘x’
+          has class ‘LuHf’).
+
+          If ‘inverse=FALSE’, then ‘X’ = {}^{206}Pb/{}^{204}Pb and ‘Y’
+          = {}^{207}Pb/{}^{204}Pb (if ‘x’ has class ‘PbPb’), or ‘X’ =
+          {}^{232}Th/{}^{204}Pb and ‘Y’ = {}^{208}Pb/{}^{204}Pb (if ‘x’
+          has class ‘ThPb’), or ‘X’ = {}^{39}Ar/{}^{36}Ar and ‘Y’ =
+          {}^{40}Ar/{}^{36}Ar (if ‘x’ has class ‘ArAr’), or ‘X’ =
+          {}^{40}K/{}^{44}Ca and ‘Y’ = {}^{40}Ca/{}^{44}Ca (if ‘x’ has
+          class ‘KCa’), or ‘X’ = {}^{87}Rb/{}^{86}Sr and ‘Y’ =
+          {}^{87}Sr/{}^{86}Sr (if ‘x’ has class ‘RbSr’), or ‘X’ =
+          {}^{147}Sm/{}^{144}Nd and ‘Y’ = {}^{143}Nd/{}^{144}Nd (if ‘x’
+          has class ‘SmNd’), or ‘X’ = {}^{187}Re/{}^{188}Os and ‘Y’ =
+          {}^{187}Os/{}^{188}Os (if ‘x’ has class ‘ReOs’), or ‘X’ =
+          {}^{176}Lu/{}^{177}Hf and ‘Y’ = {}^{176}Hf/{}^{177}Hf (if ‘x’
+          has class ‘LuHf’).
+
+  growth: add Stacey-Kramers Pb-evolution curve to the plot?
+
+_D_e_t_a_i_l_s:
+
+     Given several aliquots from a single sample, isochrons allow the
+     non-radiogenic component of the daughter nuclide to be quantified
+     and separated from the radiogenic component. In its simplest form,
+     an isochron is obtained by setting out the amount of radiogenic
+     daughter against the amount of radioactive parent, both normalised
+     to a non-radiogenic isotope of the daughter element, and fitting a
+     straight line through these points by least squares regression
+     (Nicolaysen, 1961). The slope and intercept then yield the
+     radiogenic daughter-parent ratio and the non-radiogenic daughter
+     composition, respectively. There are several ways to fit an
+     isochron.  The easiest of these is ordinary least squares
+     regression, which weighs all data points equally. In the presence
+     of quantifiable analytical uncertainty, it is equally
+     straightforward to use the inverse of the y-errors as weights.  It
+     is significantly more difficult to take into account uncertainties
+     in both the x- and the y-variable (York, 1966). ‘IsoplotR’ does so
+     for its U-Th-He isochron calculations. The York (1966) method
+     assumes that the analytical uncertainties of the x- and
+     y-variables are independent from each other. This assumption is
+     rarely met in geochronology.  York (1968) addresses this issue
+     with a bivariate error weighted linear least squares algorithm
+     that accounts for covariant errors in both variables. This
+     algorithm was further improved by York et al. (2004) to ensure
+     consistency with the maximum likelihood approach of Titterington
+     and Halliday (1979).
+
+     ‘IsoplotR’ uses the York et al. (2004) algorithm for its Ar-Ar,
+     K-Ca, Pb-Pb, Th-Pb, Rb-Sr, Sm-Nd, Re-Os and Lu-Hf isochrons. The
+     maximum likelihood algorithm of Titterington and Halliday (1979)
+     was generalised from two to three dimensions by Ludwig and
+     Titterington (1994) for U-series disequilibrium dating. Also this
+     algorithm is implemented in ‘IsoplotR’. Finally, the constrained
+     maximum likelihood algorithm of Ludwig (1998) is used for isochron
+     regression of U-Pb data. The extent to which the observed scatter
+     in the data can be explained by the analytical uncertainties can
+     be assessed using the Mean Square of the Weighted Deviates (MSWD,
+     McIntyre et al., 1966), which is defined as:
+
+     MSWD = ([X - \hat{X}] Sigma_{X}^{-1} [X - \hat{X}]^T)/df
+
+     where X are the data, \hat{X} are the fitted values, and Sigma_X
+     is the covariance matrix of X, and df = k(n-1) are the degrees of
+     freedom, where k is the dimensionality of the linear fit. MSWD
+     values that are far smaller or greater than 1 indicate under- or
+     overdispersed measurements, respectively. Underdispersion can be
+     attributed to overestimated analytical uncertainties. ‘IsoplotR’
+     provides three alternative strategies to deal with overdispersed
+     data:
+
+       1. Attribute the overdispersion to an underestimation of the
+          analytical uncertainties. In this case, the excess scatter
+          can be accounted for by inflating those uncertainties by a
+          _factor_ sqrt{MSWD}.
+
+       2. Ignore the analytical uncertainties and perform an ordinary
+          least squares regression.
+
+       3. Attribute the overdispersion to the presence of `geological
+          scatter'.  In this case, the excess scatter can be accounted
+          for by adding an overdispersion _term_ that lowers the MSWD
+          to unity.
+
+_V_a_l_u_e:
+
+     If ‘x’ has class ‘PbPb’, ‘ThPb’, ‘ArAr’, ‘KCa’, ‘RbSr’, ‘SmNd’,
+     ‘ReOs’ or ‘LuHf’, or ‘UThHe’, returns a list with the following
+     items:
+
+     a the intercept of the straight line fit and its standard error.
+
+     b the slope of the fit and its standard error.
+
+     cov.ab the covariance of the slope and intercept
+
+     df the degrees of freedom of the linear fit (df=n-2)
+
+     y0 a four-element list containing:
+
+          ‘y’: the atmospheric ^{40}Ar/^{36}Ar or initial
+          ^{40}Ca/^{44}Ca, ^{187}Os/^{188}Os, ^{87}Sr/^{87}Rb,
+          ^{143}Nd/^{144}Nd, ^{176}Hf/^{177}Hf or ^{208}Pb/^{204}Pb
+          ratio.
+
+          ‘s[y]’: the propagated uncertainty of ‘y’
+
+          ‘ci[y]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘y’.
+
+          ‘disp[y]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘y’ enhanced by sqrt{mswd} (only applicable if ‘
+          model=1’).
+
+     age a four-element list containing:
+
+          ‘t’: the ^{207}Pb/^{206}Pb, ^{208}Pb/^{232}Th,
+          ^{40}Ar/^{39}Ar, ^{40}K/^{40}Ca, ^{187}Os/^{187}Re,
+          ^{87}Sr/^{87}Rb, ^{143}Nd/^{144}Nd or ^{176}Hf/^{177}Hf age.
+
+          ‘s[t]’: the propagated uncertainty of ‘t’
+
+          ‘ci[t]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘t’.
+
+          ‘disp[t]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘t’ enhanced by sqrt{mswd} (only applicable if ‘
+          model=1’).
+
+     mswd the mean square of the residuals (a.k.a `reduced Chi-square')
+          statistic (omitted if ‘model=2’).
+
+     p.value the p-value of a Chi-square test for linearity (omitted if
+          ‘model=2’)
+
+     w the overdispersion term, i.e. a three-element vector with the
+          standard deviation of the (assumedly) Normally distributed
+          geological scatter that underlies the measurements, and the
+          lower and upper half-widths of its 100(1-alpha)\% confidence
+          interval (only returned if ‘model=3’).
+
+     OR, if ‘x’ has class ‘ThU’:
+
+     par if ‘x$type=1’ or ‘x$type=3’: the best fitting
+          ^{230}Th/^{232}Th intercept, ^{230}Th/^{238}U slope,
+          ^{234}U/^{232}Th intercept and ^{234}U/^{238}U slope, OR, if
+          ‘x$type=2’ or ‘x$type=4’: the best fitting ^{234}U/^{238}U
+          intercept, ^{230}Th/^{232}Th slope, ^{234}U/^{238}U intercept
+          and ^{234}U/^{232}Th slope.
+
+     cov the covariance matrix of ‘par’.
+
+     df the degrees of freedom for the linear fit, i.e. (3n-3) if
+          ‘x$format=1’ or ‘x$format=2’, and (2n-2) if ‘x$format=3’ or
+          ‘x$format=4’
+
+     a if ‘type=1’: the ^{230}Th/^{232}Th intercept; if ‘type=2’: the
+          ^{230}Th/^{238}U intercept; if ‘type=3’: the
+          ^{234}Th/^{232}Th intercept; if ‘type=4’: the
+          ^{234}Th/^{238}U intercept and its propagated uncertainty.
+
+     b if ‘type=1’: the ^{230}Th/^{238}U slope; if ‘type=2’: the
+          ^{230}Th/^{232}Th slope; if ‘type=3’: the ^{234}U/^{238}U
+          slope; if ‘type=4’: the ^{234}U/^{232}Th slope and its
+          propagated uncertainty.
+
+     cov.ab the covariance between ‘a’ and ‘b’.
+
+     mswd the mean square of the residuals (a.k.a `reduced Chi-square')
+          statistic.
+
+     p.value the p-value of a Chi-square test for linearity.
+
+     fact the 100(1-alpha/2)\% multiplier for the confidence intervals.
+
+     y0 a four-element vector containing:
+
+          ‘y’: the initial ^{234}U/^{238}U-ratio
+
+          ‘s[y]’: the propagated uncertainty of ‘y’
+
+          ‘ci[y]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘y’.
+
+          ‘disp[y]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘y’ enhanced by sqrt{mswd}.
+
+     age a three (or four) element vector containing:
+
+          ‘t’: the initial ^{234}U/^{238}U-ratio
+
+          ‘s[t]’: the propagated uncertainty of ‘t’
+
+          ‘ci[t]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘t’
+
+          ‘disp[t]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘t’ enhanced by sqrt{mswd} (only reported if ‘model=1’).
+
+     w the overdispersion term, i.e. a three-element vector with the
+          standard deviation of the (assumedly) Normally distributed
+          geological scatter that underlies the measurements, and the
+          lower and upper half-width of its 100(1-alpha)\% confidence
+          interval (only returned if ‘model=3’).
+
+     d a matrix with the following columns: the X-variable for the
+          isochron plot, the analytical uncertainty of X, the
+          Y-variable for the isochron plot, the analytical uncertainty
+          of Y, and the correlation coefficient between X and Y.
+
+     xlab the x-label of the isochron plot
+
+     ylab the y-label of the isochron plot
+
+     OR if ‘x’ has class ‘UPb’:
+
+     par if ‘model=1’ or ‘2’, a three element vector containing the
+          isochron age and the common Pb isotope ratios. If ‘model=3’,
+          adds a fourth element with the overdispersion parameter w.
+
+     cov the covariance matrix of ‘par’
+
+     logpar the logarithm of ‘par’
+
+     logcov the logarithm of ‘cov’
+
+     n the number of analyses in the dataset
+
+     df the degrees of freedom for the linear fit, i.e. 2n-3
+
+     a the y-intercept and its standard error
+
+     b the isochron slope and its standard error
+
+     cov.ab the covariance between ‘a’ and ‘b’.
+
+     mswd the mean square of the residuals (a.k.a `reduced Chi-square')
+          statistic.
+
+     p.value the p-value of a Chi-square test for linearity.
+
+     fact the 100(1-alpha/2)\% multiplier for the confidence intervals.
+
+     y0 a three or four-element vector containing:
+
+          ‘y’: the initial ^{206}Pb/^{204}Pb-ratio (if ‘type=1’ and
+          ‘x$format=4,5’ or ‘6’); ^{207}Pb/^{204}Pb-ratio (if ‘type=2’
+          and ‘x$format=4,5’ or ‘6’); ^{208}Pb/^{206}Pb-ratio (if
+          ‘type=1’ and ‘x$format=7’ or ‘8’); ^{208}Pb/^{207}Pb-ratio
+          (if ‘type=2’ and ‘x$format=7’ or ‘8’);
+          ^{206}Pb/^{208}Pb-ratio (if ‘type=3’ and ‘x$format=7’ or
+          ‘8’); or ^{207}Pb/^{208}Pb-ratio (if ‘type=4’ and
+          ‘x$format=7’ or ‘8’).
+
+          ‘s[y]’: the propagated uncertainty of ‘y’
+
+          ‘ci[y]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘y’.
+
+          ‘disp[y]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘y’ enhanced by sqrt{mswd} (only returned if ‘model=1’)
+
+     y0label the y-axis label of the isochron plot
+
+     age a three (or four) element vector containing:
+
+          ‘t’: the isochron age
+
+          ‘s[t]’: the propagated uncertainty of ‘t’
+
+          ‘ci[t]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘t’
+
+          ‘disp[t]’: the studentised 100(1-alpha)\% confidence interval
+          for ‘t’ enhanced by sqrt{mswd} (only reported if ‘model=1’).
+
+     xlab the x-label of the isochron plot
+
+     ylab the y-label of the isochron plot
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Ludwig, K.R. and Titterington, D.M., 1994. Calculation of
+     ^{230}Th/U isochrons, ages, and errors. Geochimica et Cosmochimica
+     Acta, 58(22), pp.5031-5042.
+
+     Ludwig, K.R., 1998. On the treatment of concordant uranium-lead
+     ages. Geochimica et Cosmochimica Acta, 62(4), pp.665-676.
+
+     Nicolaysen, L.O., 1961. Graphic interpretation of discordant age
+     measurements on metamorphic rocks. Annals of the New York Academy
+     of Sciences, 91(1), pp.198-206.
+
+     Titterington, D.M. and Halliday, A.N., 1979. On the fitting of
+     parallel isochrons and the method of maximum likelihood. Chemical
+     Geology, 26(3), pp.183-195.
+
+     York, D., 1966. Least-squares fitting of a straight line. Canadian
+     Journal of Physics, 44(5), pp.1079-1086.
+
+     York, D., 1968. Least squares fitting of a straight line with
+     correlated errors. Earth and Planetary Science Letters, 5,
+     pp.320-324.
+
+     York, D., Evensen, N.M., Martinez, M.L. and De Basebe Delgado, J.,
+     2004. Unified equations for the slope, intercept, and standard
+     errors of the best straight line. American Journal of Physics,
+     72(3), pp.367-375.
+
+_S_e_e _A_l_s_o:
+
+     ‘york’, ‘titterington’, ‘ludwig’
+
+_E_x_a_m_p_l_e_s:
+
+     data(examples)
+     isochron(examples$RbSr)
+     
+     fit <- isochron(examples$ArAr,inverse=FALSE,plot=FALSE)
+     
+     dev.new()
+     isochron(examples$ThU,type=4)
+     
+

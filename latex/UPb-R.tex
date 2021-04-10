@@ -49,15 +49,14 @@ fn <- system.file('UPb1.csv',package='IsoplotR')
 
   \item\label{it:UPbLambdairatio} Isotopic ratios and decay constants:
 
-\noindent\begin{minipage}[t]{.55\linewidth}
+\noindent\begin{minipage}[t]{.6\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/UPbLambda.png}
 \end{minipage}
-\begin{minipage}[t]{.45\linewidth}
+\begin{minipage}[t]{.4\linewidth}
   The default \textsuperscript{238}U/\textsuperscript{235}U ratio is
   given by \citet{hiess2012}, and the U and Th decay constants by
-  \citet{jaffey1971} and \citet{leroux1963}, respectively. These
-  values and their uncertainties can be changed here.
+  \citet{jaffey1971} and \citet{leroux1963}, respectively.
 \end{minipage}
 
 \begin{script}
@@ -876,7 +875,7 @@ radialplot(UPb3,common.Pb=3,k='min')
   by default, but this can be changed to a range of other shape. These
   can be specified as numbers (\texttt{1-25}, see \texttt{?pch} for
   further details) or a single character such as \verb|'o'|,
-  \verb|'*'|, \verb|'+'|, or \verb|'.'|}. Plot characters that have a
+  \verb|'*'|, \verb|'+'|, or \verb|'.'|. Plot characters that have a
     fill colour (e.g., \texttt{21-25}), an additional variable can be
     used to construct a colour scale. Both the plot symbols and any
     text labels in the plot of legend can be magnified or reduced via
@@ -900,11 +899,11 @@ par(oldpar)
 \item The weighted mean plot serves a similar purpose as the radial
   plot and shares several options with it.
 
-\noindent\begin{minipage}[t]{.45\linewidth}
+\noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/UPbWtdMeanAgeType.png}
 \end{minipage}
-\begin{minipage}[t]{.55\linewidth}
+\begin{minipage}[t]{.5\linewidth}
   Like the radial plot, also the weighted mean function can be
   applied to five or six different types of U--(Th)--Pb dates. These
   may or may not be corrected for common Pb and initial
@@ -1239,7 +1238,7 @@ age(UPb1,exterr=TRUE)
   the estimated discordance for each aliquot, which can either be
   calculated before or after the common Pb correction.
   \begin{center}
-  \includegraphics[width=.8\linewidth]{../figures/UPbAgesDiscordance.png}
+  \includegraphics[width=.85\linewidth]{../figures/UPbAgesDiscordance.png}
   \end{center}
   In addition to the six discordance filter options that were
   available to the radial, weighted mean, KDE and CAD plots, the ages
