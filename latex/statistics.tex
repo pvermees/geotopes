@@ -428,8 +428,10 @@ the analytical uncertainties. Three scenarios are possible:
     propagation. A high p-value or low MSWD may happen once but red
     flags should go up if all samples in a study show this type of
     behaviour. Finally the case where MSWD$>{1}$ is not good or bad
-    but `interesting'. The dashed lines mark the overdispersion
-    ($\omega=10 +7/-4$~Ma) as discussed in
+    but `interesting'. The dashed lines mark the 95\% confidence
+    limits of a normal distribution whose mean equals the weighted
+    mean age, and whose standard deviation is given by the
+    overdispersion parameter ($\omega=10$~Ma) as discussed in
     Section~\ref{sec:overdispersion}.}
   \label{fig:wtdmeanMSWD}
 \end{minipage}
@@ -1045,6 +1047,28 @@ would require the addition of new input formats that can trace error
 correlations between samples (Chapter~\ref{sec:future}). It would also
 require the development of a new generation of low-level
 data-processing software \citep{vermeesch2015b,mclean2016}.
+
+\noindent\begin{minipage}[t]{.33\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/WtdMeanModel1vsRandomEffects.pdf}
+\end{minipage}
+\begin{minipage}[t]{.2\linewidth}
+\end{minipage}
+\begin{minipage}[t]{.65\linewidth}
+  \captionof{figure}{ a) ordinary weighted mean (model-1) and b)
+    random effects model (model-3) of the same dataset. The dark and
+    light grey bands show the 95\% confidence intervals the weighted
+    mean without and with external uncertainties, respectively. The
+    dashed lines have a different meaning for the two plots. For panel
+    a), they mark the 95\% confidence interval with overdispersion
+    (i.e., the dark grey band augmented with a factor
+    $\sqrt{\mbox{MSWD}}$). For panel b), they mark the 95\% confidence
+    limits of a normal distribution whose mean equals the weighted
+    mean from the random effects model, and whose standard deviation
+    equals the dispersion parameter ($\omega$).}
+  \label{fig:WtdMeanModel1vsRandomEffects}
+\end{minipage}
+
 
 \printbibliography[heading=subbibliography]
 

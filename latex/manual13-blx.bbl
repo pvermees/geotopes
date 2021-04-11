@@ -17,197 +17,52 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{abramson1982}{article}{}
-    \name{author}{1}{}{%
-      {{hash=AIS}{%
-         family={Abramson},
-         familyi={A\bibinitperiod},
-         given={Ian\bibnamedelima S},
-         giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {JSTOR}%
-    }
-    \strng{namehash}{AIS1}
-    \strng{fullhash}{AIS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1982}
-    \field{labeldatesource}{}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{pages}{1217\bibrangedash 1223}
-    \field{title}{On bandwidth variation in kernel estimates -- a square root
-  law}
-    \field{journaltitle}{The Annals of Statistics}
-    \field{year}{1982}
-  \endentry
-
-  \entry{botev2010}{article}{}
-    \name{author}{3}{}{%
-      {{hash=BZI}{%
-         family={{Botev}},
-         familyi={B\bibinitperiod},
-         given={Z.\bibnamedelima I.},
-         giveni={Z\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-      {{hash=GJF}{%
-         family={{Grotowski}},
-         familyi={G\bibinitperiod},
-         given={J.\bibnamedelima F.},
-         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-      {{hash=KDP}{%
-         family={{Kroese}},
-         familyi={K\bibinitperiod},
-         given={D.\bibnamedelima P.},
-         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{BZIGJFKDP1}
-    \strng{fullhash}{BZIGJFKDP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2010}
-    \field{labeldatesource}{}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \field{issue}{5}
-    \field{pages}{2916\bibrangedash 2957}
-    \field{title}{{Kernel density estimation via diffusion}}
-    \field{volume}{38}
-    \field{journaltitle}{Annals of Statistics}
-    \field{year}{2010}
-  \endentry
-
-  \entry{hiess2012}{article}{}
+  \entry{york2004}{article}{}
     \name{author}{4}{}{%
-      {{hash=HJ}{%
-         family={Hiess},
-         familyi={H\bibinitperiod},
-         given={Joe},
+      {{hash=YD}{%
+         family={York},
+         familyi={Y\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ENM}{%
+         family={Evensen},
+         familyi={E\bibinitperiod},
+         given={Norman\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MML}{%
+         family={Mart\'{i}nez},
+         familyi={M\bibinitperiod},
+         given={Margarita\bibnamedelima L{\'o}pez},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DBDJ}{%
+         family={De\bibnamedelima Basabe\bibnamedelima Delgado},
+         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+         given={Jon{\'a}s},
          giveni={J\bibinitperiod},
       }}%
-      {{hash=CDJ}{%
-         family={Condon},
-         familyi={C\bibinitperiod},
-         given={Daniel\bibnamedelima J},
-         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=MN}{%
-         family={McLean},
-         familyi={M\bibinitperiod},
-         given={Noah},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=NSR}{%
-         family={Noble},
-         familyi={N\bibinitperiod},
-         given={Stephen\bibnamedelima R},
-         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
     }
     \list{publisher}{1}{%
-      {American Association for the Advancement of Science}%
+      {AAPT}%
     }
-    \strng{namehash}{HJ+1}
-    \strng{fullhash}{HJCDJMNNSR1}
+    \strng{namehash}{YD+1}
+    \strng{fullhash}{YDENMMMLDBDJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2012}
+    \field{labelyear}{2004}
     \field{labeldatesource}{}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{number}{6076}
-    \field{pages}{1610\bibrangedash 1614}
-    \field{title}{{$^{238}$U/$^{235}$U systematics in terrestrial
-  uranium-bearing minerals}}
-    \field{volume}{335}
-    \field{journaltitle}{Science}
-    \field{year}{2012}
-  \endentry
-
-  \entry{jaffey1971}{article}{}
-    \name{author}{5}{}{%
-      {{hash=JA}{%
-         family={Jaffey},
-         familyi={J\bibinitperiod},
-         given={AH},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=FK}{%
-         family={Flynn},
-         familyi={F\bibinitperiod},
-         given={KF},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=GL}{%
-         family={Glendenin},
-         familyi={G\bibinitperiod},
-         given={LE},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=BW}{%
-         family={Bentley},
-         familyi={B\bibinitperiod},
-         given={WC},
-         giveni={W\bibinitperiod},
-      }}%
-      {{hash=EA}{%
-         family={Essling},
-         familyi={E\bibinitperiod},
-         given={AM},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {APS}%
-    }
-    \strng{namehash}{JA+1}
-    \strng{fullhash}{JAFKGLBWEA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1971}
-    \field{labeldatesource}{}
-    \field{sortinit}{J}
-    \field{sortinithash}{J}
-    \field{number}{5}
-    \field{pages}{1889}
-    \field{title}{{Precision measurement of half-lives and specific activities
-  of U-235 and U-238}}
-    \field{volume}{4}
-    \field{journaltitle}{Physical Review C}
-    \field{year}{1971}
-  \endentry
-
-  \entry{leroux1963}{article}{}
-    \name{author}{2}{}{%
-      {{hash=LRLJ}{%
-         family={Le\bibnamedelima Roux},
-         familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
-         given={L.\bibnamedelima J.},
-         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=GLE}{%
-         family={Glendenin},
-         familyi={G\bibinitperiod},
-         given={L.\bibnamedelima E.},
-         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LRLJGLE1}
-    \strng{fullhash}{LRLJGLE1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1963}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{title}{{Half-life of $^{232}$Th.}}
-    \field{journaltitle}{Proceedings of the National Meeting on Nuclear Energy,
-  Pretoria, South Africa}
-    \field{year}{1963}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{3}
+    \field{pages}{367\bibrangedash 375}
+    \field{title}{{Unified equations for the slope, intercept, and standard
+  errors of the best straight line}}
+    \field{volume}{72}
+    \field{journaltitle}{American Journal of Physics}
+    \field{year}{2004}
   \endentry
 \enddatalist
 \endinput

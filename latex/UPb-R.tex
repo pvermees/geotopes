@@ -442,27 +442,6 @@ concordia(UPb1,ticks=10)
 concordia(UPb1,show.numbers=TRUE)
 \end{console}
 
-\item The font size of the sample numbers, axis labels, and any legend
-  can be adjusted with a multiplier.
-
-\noindent\begin{minipage}[t]{.4\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/concordiacex.png}
-\end{minipage}
-\begin{minipage}[t]{.6\linewidth}
-Values greater than 1 increase the font size, values less than 1
-reduce it.  
-\end{minipage}
-
-At the CLI, the font size is controlled by the environment variable
-\texttt{cex}, which can be changed with the \texttt{par()} function:
-
-\begin{script}
-oldpar <- par(cex=1.2)
-concordia(UPb1,show.numbers=TRUE)
-par(oldpar) # restore the old cex value
-\end{script}
-
 \item Besides a data visualisation device, the concordia diagram can
   also be used as a vehicle for various numerical calculations:
 
@@ -717,26 +696,6 @@ fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),ylim=c(0,0.5),
 
 \begin{enumerate}
 
-\item \texttt{IsoplotR} offers three types of transformations for the
-  radial scale.
-  
-\noindent\begin{minipage}[t]{.3\linewidth}
-  \strut\vspace*{-\baselineskip}\newline
-  \includegraphics[width=\linewidth]{../figures/UPbRadialTransformation.png}
-\end{minipage}
-\begin{minipage}[t]{.7\linewidth}
-The logarithmic transformation works well for geochronological data,
-which are constrained to strictly positive numbers. The square root
-transformation is advisable for datasets that contain very small
-numbers compared to the analytical uncertainty.  The linear scale is
-appropriate for quantities that are free to range from $-\infty$ to
-$+\infty$.
-\end{minipage}
-
-\begin{console}
-radialplot(UPb1,transformation='sqrt')
-\end{console}
-
 \item The radial plot is a graphical device to display single grain
   ages. \texttt{IsoplotR} offers five ways to computer single grain
   U--Pb ages, as discussed in
@@ -838,29 +797,6 @@ dscf <- cutoff.disc=discfilter(option=4,before=TRUE,cutoff=c(-1,5))
 radialplot(UPb3,common.Pb=3,cutoff.disc=dscf)
 \end{script}
 
-\item All of \texttt{IsoplotR}'s mixture models functionality is
-  covered under its radial plot function, including the discrete
-  mixture and minimum age models:
-
-\noindent\begin{minipage}[t]{.3\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbRadialMinagemod.png}
-\end{minipage}
-\begin{minipage}[t]{.7\linewidth}
-  Selecting the numbers \texttt{1} through \texttt{5} applies the
-  discrete mixture models of Equation~\ref{eq:mixture}. Selecting
-  \texttt{auto} applies the Bayes Information Criterion to choose the
-  `optimal' number of components, with the caveat of
-  Figure~\ref{fig:increasingn}. Finally, selecting \texttt{minimum}
-  applies the minimum age model of Equation~\ref{eq:Lminagemod}.
-\end{minipage}
-
-\noindent Computing the minimum age after applying a Stacey-Kramers
-based common Pb correction:
-\begin{console}
-radialplot(UPb3,common.Pb=3,k='min')
-\end{console}
-
 \item Just like concordia diagrams and isochron plots, also radial
   plots can be modified using various optional formatting arguments:
 
@@ -875,16 +811,16 @@ radialplot(UPb3,common.Pb=3,k='min')
   by default, but this can be changed to a range of other shape. These
   can be specified as numbers (\texttt{1-25}, see \texttt{?pch} for
   further details) or a single character such as \verb|'o'|,
-  \verb|'*'|, \verb|'+'|, or \verb|'.'|. Plot characters that have a
-    fill colour (e.g., \texttt{21-25}), an additional variable can be
-    used to construct a colour scale. Both the plot symbols and any
-    text labels in the plot of legend can be magnified or reduced via
-    a scaling factor.
+  \verb|'*'|, \verb|'+'|, or \verb|'.'|. For plot characters that have
+  a fill colour (e.g., \texttt{21-25}), an additional variable can be
+  used to construct a colour scale. Both the plot symbols and any text
+  labels in the plot of legend can be magnified or reduced via a
+  scaling factor.
 \end{minipage}
 
 \begin{script}
 oldpar <- par(pch=0.9) # font magnification
-radialplot(UPb3,show.numbers=TRUE,exterr=TRUE,from=5,t0=30,to=150,
+radialplot(UPb3,show.numbers=TRUE,exterr=TRUE,from=5,z0=30,to=150,
            pch=21,alpha=0.05,bg=c('white','red'),cex=2,
            levels=UPb3$x$Th232U238,clabel='Th/U')
 par(oldpar)

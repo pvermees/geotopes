@@ -17,70 +17,6 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{abramson1982}{article}{}
-    \name{author}{1}{}{%
-      {{hash=AIS}{%
-         family={Abramson},
-         familyi={A\bibinitperiod},
-         given={Ian\bibnamedelima S},
-         giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {JSTOR}%
-    }
-    \strng{namehash}{AIS1}
-    \strng{fullhash}{AIS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1982}
-    \field{labeldatesource}{}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{pages}{1217\bibrangedash 1223}
-    \field{title}{On bandwidth variation in kernel estimates -- a square root
-  law}
-    \field{journaltitle}{The Annals of Statistics}
-    \field{year}{1982}
-  \endentry
-
-  \entry{botev2010}{article}{}
-    \name{author}{3}{}{%
-      {{hash=BZI}{%
-         family={{Botev}},
-         familyi={B\bibinitperiod},
-         given={Z.\bibnamedelima I.},
-         giveni={Z\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-      {{hash=GJF}{%
-         family={{Grotowski}},
-         familyi={G\bibinitperiod},
-         given={J.\bibnamedelima F.},
-         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-      {{hash=KDP}{%
-         family={{Kroese}},
-         familyi={K\bibinitperiod},
-         given={D.\bibnamedelima P.},
-         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{BZIGJFKDP1}
-    \strng{fullhash}{BZIGJFKDP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2010}
-    \field{labeldatesource}{}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \field{issue}{5}
-    \field{pages}{2916\bibrangedash 2957}
-    \field{title}{{Kernel density estimation via diffusion}}
-    \field{volume}{38}
-    \field{journaltitle}{Annals of Statistics}
-    \field{year}{2010}
-  \endentry
-
   \entry{hiess2012}{article}{}
     \name{author}{4}{}{%
       {{hash=HJ}{%
@@ -181,33 +117,39 @@
     \field{year}{1971}
   \endentry
 
-  \entry{leroux1963}{article}{}
+  \entry{stacey1975}{article}{}
     \name{author}{2}{}{%
-      {{hash=LRLJ}{%
-         family={Le\bibnamedelima Roux},
-         familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
-         given={L.\bibnamedelima J.},
-         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      {{hash=SJ}{%
+         family={Stacey},
+         familyi={S\bibinitperiod},
+         given={JS},
+         giveni={J\bibinitperiod},
       }}%
-      {{hash=GLE}{%
-         family={Glendenin},
-         familyi={G\bibinitperiod},
-         given={L.\bibnamedelima E.},
-         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      {{hash=KJ}{%
+         family={Kramers},
+         familyi={K\bibinitperiod},
+         given={JD},
+         giveni={J\bibinitperiod},
       }}%
     }
-    \strng{namehash}{LRLJGLE1}
-    \strng{fullhash}{LRLJGLE1}
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SJKJ1}
+    \strng{fullhash}{SJKJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{1963}
+    \field{labelyear}{1975}
     \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{title}{{Half-life of $^{232}$Th.}}
-    \field{journaltitle}{Proceedings of the National Meeting on Nuclear Energy,
-  Pretoria, South Africa}
-    \field{year}{1963}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{207\bibrangedash 221}
+    \field{title}{Approximation of terrestrial lead isotope evolution by a
+  two-stage model}
+    \field{volume}{26}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{1975}
   \endentry
 \enddatalist
 \endinput

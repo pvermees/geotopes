@@ -96,17 +96,24 @@
 \BOOKMARK [1][-]{section.23.1}{Software architecture}{chapter.23}% 96
 \BOOKMARK [1][-]{section.23.2}{The Graphical User Interface \(GUI\)}{chapter.23}% 97
 \BOOKMARK [1][-]{section.23.3}{The Command Line Interface \(CLI\)}{chapter.23}% 98
-\BOOKMARK [0][-]{chapter.24}{U\205Pb}{part.3}% 99
-\BOOKMARK [1][-]{section.24.1}{General options}{chapter.24}% 100
-\BOOKMARK [1][-]{section.24.2}{Concordia}{chapter.24}% 101
-\BOOKMARK [1][-]{section.24.3}{Isochrons}{chapter.24}% 102
-\BOOKMARK [1][-]{section.24.4}{Radial plots}{chapter.24}% 103
-\BOOKMARK [1][-]{section.24.5}{Weighted mean}{chapter.24}% 104
-\BOOKMARK [1][-]{section.24.6}{Kernel density estimates}{chapter.24}% 105
-\BOOKMARK [1][-]{section.24.7}{Cumulative age distributions}{chapter.24}% 106
-\BOOKMARK [1][-]{section.24.8}{Ages}{chapter.24}% 107
-\BOOKMARK [0][-]{chapter.25}{Pb\205Pb}{part.3}% 108
-\BOOKMARK [1][-]{section.25.1}{Isochrons}{chapter.25}% 109
-\BOOKMARK [1][-]{section.25.2}{Radial plots}{chapter.25}% 110
-\BOOKMARK [1][-]{section.25.3}{Weighted mean}{chapter.25}% 111
-\BOOKMARK [1][-]{section.25.4}{Ages}{chapter.25}% 112
+\BOOKMARK [0][-]{chapter.24}{Generic functions}{part.3}% 99
+\BOOKMARK [1][-]{section.24.1}{Radial plots}{chapter.24}% 100
+\BOOKMARK [1][-]{section.24.2}{Regression}{chapter.24}% 101
+\BOOKMARK [1][-]{section.24.3}{Weighted means}{chapter.24}% 102
+\BOOKMARK [1][-]{section.24.4}{Age spectra}{chapter.24}% 103
+\BOOKMARK [1][-]{section.24.5}{Kernel density estimates}{chapter.24}% 104
+\BOOKMARK [1][-]{section.24.6}{Cumulative age distributions}{chapter.24}% 105
+\BOOKMARK [0][-]{chapter.25}{U\205Pb}{part.3}% 106
+\BOOKMARK [1][-]{section.25.1}{General options}{chapter.25}% 107
+\BOOKMARK [1][-]{section.25.2}{Concordia}{chapter.25}% 108
+\BOOKMARK [1][-]{section.25.3}{Isochrons}{chapter.25}% 109
+\BOOKMARK [1][-]{section.25.4}{Radial plots}{chapter.25}% 110
+\BOOKMARK [1][-]{section.25.5}{Weighted mean}{chapter.25}% 111
+\BOOKMARK [1][-]{section.25.6}{Kernel density estimates}{chapter.25}% 112
+\BOOKMARK [1][-]{section.25.7}{Cumulative age distributions}{chapter.25}% 113
+\BOOKMARK [1][-]{section.25.8}{Ages}{chapter.25}% 114
+\BOOKMARK [0][-]{chapter.26}{Pb\205Pb}{part.3}% 115
+\BOOKMARK [1][-]{section.26.1}{Isochrons}{chapter.26}% 116
+\BOOKMARK [1][-]{section.26.2}{Radial plots}{chapter.26}% 117
+\BOOKMARK [1][-]{section.26.3}{Weighted mean}{chapter.26}% 118
+\BOOKMARK [1][-]{section.26.4}{Ages}{chapter.26}% 119

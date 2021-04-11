@@ -1,0 +1,447 @@
+\begin{refsection}
+
+\chapter{Generic functions}
+\label{ch:generic-R}
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherMethodsPlotdevices.png}\\
+\end{minipage}
+\begin{minipage}[t]{.7\textwidth}
+  \texttt{IsoplotR} implements a number of plotting devices for 13
+  different geochronometric methods. Some of these plotting devices
+  are shared by multiple chronometers, and can also be used for
+  datasets of non geochronological origin. This tutorial will start
+  with an overview of these `generic' plots, whose user interface is
+  shared by all the specific geochronological implementations that
+  will be introduced subsequently.
+\end{minipage}
+
+In this Chapter, we will use a number of \texttt{IsoplotR}'s built-in
+datasets, which can be downloaded from the \texttt{IsoplotR} GitHub
+page, at
+\url{https://github.com/pvermees/IsoplotR/tree/master/inst}. For the
+tutorial in this Chapter, we will use the following datasets:
+
+\begin{script}
+data1 <- read.data('LudwigMixture.csv',method='other')
+data2 <- read.data('RbSr1.csv',method='other')
+data3 <- read.data('LudwigSpectrum.csv',method='other')
+data4 <- read.data('LudwigMean.csv',method='other')
+data5 <- read.data('LudwigKDE.csv',method='other')
+\end{script}
+
+Alternatively, the same files can also be found in the
+\texttt{IsoplotR} installation folder on your computer, using
+\texttt{R}'s built-in \texttt{system.file()} function. For example:
+
+\begin{script}
+fn <- system.file('LudwigMixture.csv',package='IsoplotR')
+data1 <- read.data(fn,method='other')
+\end{script}
+
+\section{Radial plots}\label{sec:OtherRadial}
+
+\noindent\begin{minipage}[t]{.27\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherRadialInput.png}
+\end{minipage}
+\begin{minipage}[t]{.73\linewidth}
+  Radial plots require a table of measurements and their
+  uncertainties, plus an optional vector with data that can be used to
+  form a colour scale, and an optional list of data points to omit
+  from the calculations or hide from the plot (see
+  Sections~\ref{sec:GUI} and \ref{sec:CLI}).
+\end{minipage}
+
+\begin{console}
+radialplot(data1)
+\end{console}
+
+The standard radial plot can be modified using a range of optional
+arguments, which can be accessed from the GUI and CLI.
+
+\begin{enumerate}
+
+\item Labelling the error ellipses can be useful to identify outliers
+  or otherwise noteworthy aliquots.
+
+  \noindent\begin{minipage}[t]{.28\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/concordiashownumbers.png}
+\end{minipage}
+\begin{minipage}[t]{.72\linewidth}
+  Ticking the box replaces the plot symbols with the row numbers of
+  the input data.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,show.numbers=TRUE)
+\end{console}
+  
+\item \texttt{IsoplotR} offers three types of transformations for the
+  radial scale.
+  
+\noindent\begin{minipage}[t]{.3\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/UPbRadialTransformation.png}
+\end{minipage}
+\begin{minipage}[t]{.7\linewidth}
+The logarithmic transformation works well for geochronological data,
+which are constrained to strictly positive numbers. The square root
+transformation is advisable for datasets that contain very small
+numbers compared to the analytical uncertainty.  The linear scale is
+appropriate for quantities that are free to range from $-\infty$ to
+$+\infty$.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,transformation='sqrt')
+\end{console}
+
+\item All of \texttt{IsoplotR}'s mixture models functionality is
+  covered under its radial plot function, including the discrete
+  mixture and minimum age models:
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbRadialMinagemod.png}
+\end{minipage}
+\begin{minipage}[t]{.7\linewidth}
+  Selecting the numbers \texttt{1} through \texttt{5} applies the
+  discrete mixture models of Equation~\ref{eq:mixture}. Selecting
+  \texttt{auto} applies the Bayes Information Criterion to choose the
+  `optimal' number of components, with the caveat of
+  Figure~\ref{fig:increasingn}. Finally, selecting \texttt{minimum}
+  applies the minimum age model of Equation~\ref{eq:Lminagemod}.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,k='min')
+\end{console}
+
+\item By default the minimum and maximum extent of the radial plot
+  correspond to the minimum and maximum value in the dataset.
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialLimits.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  These values can be overruled by entering the preferred values in
+  the corresponding textboxes. A third box is available to specify the
+  central value of the radial scale ($z_\circ$ in
+  Equation~\ref{eq:radial}).
+\end{minipage}
+
+\begin{console}
+radialplot(data1,from=10,to=200,z0=50)
+\end{console}
+
+\item Samples are represented by filled circles by default, but this
+  can be changed to a range of other shape. These can be specified as
+  numbers (\texttt{1-25}, see \texttt{?pch} for further details) or a
+  single character such as \verb|'o'|, \verb|'*'|, \verb|'+'|, or
+  \verb|'.'|. 
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialPCH.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+Using character~23 replaces the filled circles with filled diamonds.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,pch=23)
+\end{console}
+  
+\item By default, \texttt{IsoplotR} reports confidence intervals (for
+  the central age) on a 95\% confidence level.
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialAlpha.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+The significance level can be adjusted here, for example to a 99\%
+confidence level.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,alpha=0.01)
+\end{console}
+
+\item The number of significant digits can be specified relative to
+  the analytical uncertainty. For example, if \texttt{sigdig}=2, then
+  $123.45678 \pm 0.12345$ is rounded to $123.46 \pm 0.12$.
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialSigdig.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  The significant digits affect all numerical output that is reported
+  in the figure legend.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,sigdig=3)
+\end{console}
+
+\item For plot characters \texttt{21-25}, the fill colour can be
+  modified.
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialBG.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+One can either assign a fixed colour to all aliquots.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,bg='blue')
+\end{console}
+
+Alternatively, the fill colour can be used to visualise an additional
+variable, by pasting a vector of values into the optional \texttt{(C)}
+column of the input table (Section~\ref{sec:GUI}).
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialBGC.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+  The corresponding fill and stroke colours can be specified by
+  supplying a vector of colours in the text box of the GUI.\\
+\end{minipage}
+
+For the sake of illustration, let us demonstrate this feature by
+constructing a colour scale based on the relative measurement
+uncertainties (uncertainty divided by age) of the test data:
+
+\begin{script}
+relerr <- data1[,2]/data1[,2]
+radialplot(data1,levels=relerr,bg=c('white','red'))
+\end{script}
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialClabel.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+  The colour scale can be labelled for clarity.
+\end{minipage}
+
+\begin{script}[firstnumber=2]
+radialplot(data1,levels=relerr,bg=c('white','red'),clabel='s[t]/t')
+\end{script}
+
+\item The font size of the sample numbers, axis labels, and any legend
+  can be adjusted with a multiplier.
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialCEX.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+Values greater than 1 increase the font size, values less than 1
+reduce it.  
+\end{minipage}
+
+At the CLI, the font size is controlled by the environment variable
+\texttt{cex}, which can be changed with the \texttt{par()} function:
+
+\begin{script}
+oldpar <- par(cex=0.9)
+radialplot(data1)
+par(oldpar) # restore the old cex value
+\end{script}
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRadialPCHcex.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+The plot symbols are sized independently.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,cex=1.5)
+\end{console}
+
+\end{enumerate}
+
+\section{Regression}\label{sec:OtherRegression}
+
+\citet{york2004} regression requires a table of measurements for the
+independent variable (\texttt{X}), the dependent variable
+(\texttt{Y}), their respective uncertainties (\texttt{err[X]} and
+\texttt{err[Y]}), and their correlation coefficient
+(\texttt{err[rXY]}).\\
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherRegressionInput.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  Alternatively, the data can also be supplied as redundant ratios,
+  which allow the error correlation to be computed from the
+  uncertainties using Equation~\ref{eq:redundantratios}.
+\end{minipage}
+
+\begin{console}
+isochron(data2)
+\end{console}
+
+An example using the second input option:
+
+\begin{script}
+d <- read.data('PbPb3.csv',method='other')
+y <- data2york(d,format=3)
+york(y)
+\end{script}
+
+\begin{enumerate}
+
+\item \texttt{IsoplotR} offers three options to deal with the scatter of the
+  data around the best-fit isochron line.
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRegressionModels.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  These three models represent three different ways to capture any
+  excess dispersion of the data relative to the nominal uncertainties
+  (Figure~\ref{fig:isochronMSWD}).
+\end{minipage}
+
+\begin{console}
+isochron(data2,model=3)
+\end{console}
+  
+\item Just like the row numbers of the input data could be shown on a
+  radial plots, so can they be added in a regression context.
+
+  \noindent\begin{minipage}[t]{.28\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/concordiashownumbers.png}
+\end{minipage}
+\begin{minipage}[t]{.72\linewidth}
+Ticking the box adds numbers to the error ellipses.
+\end{minipage}
+
+\begin{console}
+isochron(data2,show.numbers=TRUE)
+\end{console}
+
+\item The limits of the horizontal and vertical axis can be adjusted
+  to any value.
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherRegressionXYlims.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+Showing the full extent of the regression line, including the data and
+the origin.
+\end{minipage}
+
+Adjusting the x and y-limits of a model-2 regression plot:
+
+\begin{console}
+isochron(data2,model=2,xlim=c(0,300),ylim=c(0,1500))
+\end{console}
+
+\item Other options are similar to the radial plot
+  (Section~\ref{sec:OtherRadial}).
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherRegressionAlpha.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  The default values for the significance level (\texttt{alpha}=0.05),
+  number of significant digits (\texttt{sigdig}=2), and font
+  magnification (\texttt{cex}=1) can be changed by entering the
+  appropriate value in these text boxes.
+\end{minipage}
+
+\begin{script}
+oldpar <- par(cex=1.1)
+isochron(data2,alpha=0.01,sigdig=4)
+par(oldpar)
+\end{script}
+
+\item Finally, the fill and stroke colour of the error ellipses can be
+  modified and an optional colour scale added to the plot
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherRegressionFillStroke.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+For the sake of illustration we here use a colour ramp to fill the
+ellipses according to the error correlation, and paint the outline of
+the ellipses a uniform red.
+\end{minipage}
+
+\begin{script}
+isochron(data2,levels=data2[,'rXY'],clabel='rho',
+         ellipse.fill=topo.colors(n=100),ellipse.stroke='red')
+\end{script}
+  
+\end{enumerate}
+
+\section{Weighted means}\label{sec:OtherWeightedMean}
+
+\noindent\begin{minipage}[t]{.35\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherWtdMeanData.png}
+\end{minipage}
+\begin{minipage}[t]{.65\linewidth}
+\end{minipage}
+
+\begin{enumerate}
+
+\item \noindent\begin{minipage}[t]{.3\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherWtdMeanRandomEffects.png}
+\end{minipage}
+\begin{minipage}[t]{.7\linewidth}
+\end{minipage}
+
+\item \noindent\begin{minipage}[t]{.21\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherWtdMeanOutliers.png}
+\end{minipage}
+\begin{minipage}[t]{.79\linewidth}
+\end{minipage}
+
+\item \noindent\begin{minipage}[t]{.21\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherWtdMeanRank.png}
+\end{minipage}
+\begin{minipage}[t]{.79\linewidth}
+\end{minipage}
+
+\item \noindent\begin{minipage}[t]{.45\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherWtdMeanRemainingOptions.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+\end{minipage}
+
+\end{enumerate}
+  
+\section{Age spectra}\label{sec:OtherAgeSpectra}
+
+\section{Kernel density estimates}\label{sec:OtherKDE}
+
+\section{Cumulative age distributions}\label{sec:OtherCAD}
+
+\printbibliography[heading=subbibliography]
+
+\end{refsection}
