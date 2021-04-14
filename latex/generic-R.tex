@@ -26,8 +26,8 @@ tutorial in this Chapter, we will use the following datasets:
 \begin{script}
 data1 <- read.data('LudwigMixture.csv',method='other')
 data2 <- read.data('RbSr1.csv',method='other')
-data3 <- read.data('LudwigSpectrum.csv',method='other')
-data4 <- read.data('LudwigMean.csv',method='other')
+data3 <- read.data('LudwigMean.csv',method='other')
+data4 <- read.data('LudwigSpectrum.csv',method='other')
 data5 <- read.data('LudwigKDE.csv',method='other')
 \end{script}
 
@@ -281,11 +281,11 @@ independent variable (\texttt{X}), the dependent variable
 \texttt{err[Y]}), and their correlation coefficient
 (\texttt{err[rXY]}).\\
 
-\noindent\begin{minipage}[t]{.4\linewidth}
+\noindent\begin{minipage}[t]{.45\linewidth}
   \strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/OtherRegressionInput.png}
 \end{minipage}
-\begin{minipage}[t]{.6\linewidth}
+\begin{minipage}[t]{.55\linewidth}
   Alternatively, the data can also be supplied as redundant ratios,
   which allow the error correlation to be computed from the
   uncertainties using Equation~\ref{eq:redundantratios}.
@@ -300,7 +300,7 @@ An example using the second input option:
 \begin{script}
 d <- read.data('PbPb3.csv',method='other')
 y <- data2york(d,format=3)
-york(y)
+isochron(y)
 \end{script}
 
 \begin{enumerate}
@@ -397,50 +397,351 @@ isochron(data2,levels=data2[,'rXY'],clabel='rho',
 
 \section{Weighted means}\label{sec:OtherWeightedMean}
 
-\noindent\begin{minipage}[t]{.35\linewidth}
+\noindent\begin{minipage}[t]{.32\linewidth}
   \strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/OtherWtdMeanData.png}
 \end{minipage}
-\begin{minipage}[t]{.65\linewidth}
+\begin{minipage}[t]{.68\linewidth}
+The weighted mean plot serves a similar purpose as the radial plot and
+shares several options with it. Its input format is identical to that
+of the radial plot, requiring the values and their uncertainties, plus
+any optional colour data and flags to mark omitted or hidden aliquots.
 \end{minipage}
 
 \begin{enumerate}
 
-\item \noindent\begin{minipage}[t]{.3\linewidth}
-  \strut\vspace*{-\baselineskip}\newline
+\item \texttt{IsoplotR} provides functionality for both the ordinary
+  weighted mean of Equation~\ref{eq:wtdmean} and the random effects
+  model of Equation~\ref{eq:wtdmean-model-3}.
+
+\noindent\begin{minipage}[t]{.27\linewidth}
+\strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/OtherWtdMeanRandomEffects.png}
 \end{minipage}
-\begin{minipage}[t]{.7\linewidth}
+\begin{minipage}[t]{.73\linewidth}
+  Ticking the box estimates the overdispersion in a similar way to the
+  radial plot, the only difference being that the weighted mean plot
+  computes the arithmetic mean and the radial plot the geometric mean.
 \end{minipage}
 
-\item \noindent\begin{minipage}[t]{.21\linewidth}
-  \strut\vspace*{-\baselineskip}\newline
+For tightly clustered datasets, the difference between the random
+effects models of the weighted mean and radial plot is small.  But
+when the individual age estimates exhibit significant scatter
+($>10$\%, say), then the central age is preferred over the arithmetic
+weighted mean.
+
+\begin{console}
+weightedmean(data3,random.effects=TRUE)
+\end{console}
+  
+\item Outliers are detected using the modified Chauvenet criterion of
+  Section~\ref{sec:weightedmean}.
+
+\noindent\begin{minipage}[t]{.2\linewidth}
+\strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/OtherWtdMeanOutliers.png}
 \end{minipage}
-\begin{minipage}[t]{.79\linewidth}
+\begin{minipage}[t]{.8\linewidth}
+  The Chauvenet criterion may select different outliers for the
+  ordinary weighted mean and random effects model.
 \end{minipage}
 
-\item \noindent\begin{minipage}[t]{.21\linewidth}
-  \strut\vspace*{-\baselineskip}\newline
+Detecting outliers from the CLI and colouring them red on the plot:
+\begin{console}
+weightedmean(UPb1,detect.outliers=TRUE,outlier.col='red')
+\end{console}
+
+\item By default the aliquots are plotted in the order of the input
+  table.
+
+\noindent\begin{minipage}[t]{.2\linewidth}
+\strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/OtherWtdMeanRank.png}
 \end{minipage}
-\begin{minipage}[t]{.79\linewidth}
+\begin{minipage}[t]{.8\linewidth}
+However they can also be shuffled in order of increasing age.
 \end{minipage}
 
-\item \noindent\begin{minipage}[t]{.45\linewidth}
-  \strut\vspace*{-\baselineskip}\newline
+\begin{console}
+weightedmean(data3,ranked=TRUE)
+\end{console}
+
+\item Additional formatting options can be used to modify the
+  appearance of the weighted mean plot. These options are similar to
+  those of the radial plot:
+
+\noindent\begin{minipage}[t]{.42\linewidth}
+\strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/OtherWtdMeanRemainingOptions.png}
 \end{minipage}
-\begin{minipage}[t]{.55\linewidth}
+\begin{minipage}[t]{.58\linewidth}
+  The minimum and maximum extent of the age scale can be specified;
+  the fill colour of the rectangular segments can be modified based on
+  an additional variable, with a designated separate colour for
+  outliers (\texttt{NA} produces empty rectangles); the confidence
+  level and significant digits can be specified as in the radial plots
+  and isochron regression plots.
 \end{minipage}
 
+\begin{script}
+weightedmean(data3,from=220,to=280,alpha=0.1,sigdig=1,
+             rect.col='#FF000080',outlier.col=NA)
+\end{script}
+
 \end{enumerate}
-  
+ 
 \section{Age spectra}\label{sec:OtherAgeSpectra}
+
+The age spectrum is normally used for
+\textsuperscript{40}Ar/\textsuperscript{39}Ar data but can be used to
+visualise other step heating experiments as well, for helium, xenon or
+other noble gases.\\
+
+\noindent\begin{minipage}[t]{.28\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherAgeSpectrumData.png}\\
+\end{minipage}
+\begin{minipage}[t]{.72\linewidth}
+  As discussed in Section~\ref{sec:agespectra}, a release spectrum is
+  very similar to a weighted mean plot, and the input formats of the
+  two plots are similar as well. The only difference is that the
+  spectrum adds a column with the relative contributions of the
+  various aliquots. These contributions are normalised to unity and
+  control the width of the rectangular confidence boxes.\\
+\end{minipage}
+
+\begin{console}
+agespectrum(data4)
+\end{console}
+
+\begin{enumerate}
+
+\item The `plateau' is a weighted mean of contiguous steps that pass
+  the modified Chauvenet outlier detection criterion of
+  Section~\ref{sec:weightedmean}.
+
+\noindent\begin{minipage}[t]{.2\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherAgeSpectrumPlateau.png}
+\end{minipage}
+\begin{minipage}[t]{.8\linewidth}
+If checked, \texttt{IsoplotR} computes the plateau and marks the steps
+belonging to it in a different colour. Otherwise the program simply
+returns the weighted mean.
+\end{minipage}
+
+\begin{console}
+agespectrum(data4,plateau=FALSE)
+\end{console}
+
+\item The plateau age can be computed either using the ordinary
+  weighted mean algorithm of Equation~\ref{eq:wtdmean}, or the random
+  effects model of Equation~\ref{eq:wtdmean-model-3}.
+
+\noindent\begin{minipage}[t]{.28\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherAgeSpectrumRandomEffects.png}
+\end{minipage}
+\begin{minipage}[t]{.68\linewidth}
+  The two algorithms may result in different plateaus including
+  different steps. This again reflects the heuristic nature of plateau
+  age calculations.
+\end{minipage}
+
+\begin{console}
+agespectrum(data4,random.effects=TRUE)
+\end{console}
+
+\item The other options are exactly the same as for the weighted mean
+  plot of Section~\ref{sec:OtherWeightedMean}.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherAgeSpectrumExtraOptions.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  The minimum and maximum extent of the age scale can be specified;
+  the fill colour of the rectangular segments can be modified based on
+  an additional variable, with a designated separate colour for
+  outliers; the confidence level and significant digits can be
+  specified.
+\end{minipage}
+
+\begin{console}
+agespectrum(data4,plateau.col='blue',non.plateau.col='yellow')
+\end{console}
+  
+\end{enumerate}
 
 \section{Kernel density estimates}\label{sec:OtherKDE}
 
+\noindent\begin{minipage}[t]{.2\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherKDEdata.png}
+\end{minipage}
+\begin{minipage}[t]{.8\linewidth}
+  Unlike the radial plot and the weighted mean diagram, kernel density
+  estimates and histograms do not require analytical uncertainties to
+  be specified. They therefore only require a single column worth of
+  data.
+\end{minipage}
+
+\begin{console}
+kde(data5)
+\end{console}
+
+\begin{enumerate}
+
+\item The lateral extent of the KDE plot can be modified in exactly
+  the same way as the radial plot and weighted mean plot.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherKDEfromto.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  Note that the KDE is allowed to extend into negative values as well.
+\end{minipage}
+
+\begin{console}
+kde(data5,from=230,to=280)
+\end{console}
+
+\item The default kernel bandwidth is given by the algorithm of
+  \citet{botev2010}, and the default histogram binwidth by Sturges'
+  Rule.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherKDEbandbin.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  These default values can be replaced by any positive value.  Be
+  careful not to over-interpret the resulting plots!
+\end{minipage}
+
+\begin{console}
+kde(data5,bw=3,binwidth=2)
+\end{console}
+
+\item It is advisable to apply a logarithmic transformation to
+  datasets that are close to zero.
+
+\noindent\begin{minipage}[t]{.2\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbKDElogarithm.png}
+\end{minipage}
+\begin{minipage}[t]{.8\linewidth}
+Otherwise the resulting KDE may spill over into physically impossible
+negative values.
+\end{minipage}
+
+When applying a custom bandwidth and/or binwidth to a logarithmically
+transformed KDE, one should use relative values rather than absolute
+ones. For example, instead of a 3~Myr bandwidth, a value of
+$3/250=0.012$ would be more appropriate:
+
+\begin{console}
+kde(data5,log=TRUE,bw=0.012,binwidth=0.008,from=230,to=280)
+\end{console}
+
+\item The histograms can also be removed to reduce visual clutter.
+
+\noindent\begin{minipage}[t]{.2\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbKDEhistogram.png}
+\end{minipage}
+\begin{minipage}[t]{.8\linewidth}
+  Removing the histogram also removes the vertical axis of the KDE
+  plot.  The probability density values of the KDE curve itself do not
+  have a meaningful purpose.
+\end{minipage}
+
+\begin{console}
+kde(data5,show.hist=FALSE)
+\end{console}
+
+\item The KDE estimate is adjusted by \citet{abramson1982}'s adaptive
+  square root modifier.
+
+\noindent\begin{minipage}[t]{.19\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbKDEadaptive.png}
+\end{minipage}
+\begin{minipage}[t]{.81\linewidth}
+  Unticking the box reverts to the standard \citet{botev2010}
+  algorithm, which uses a constant bandwidth for all data points.
+\end{minipage}
+
+\begin{console}
+kde(data5,adaptive=FALSE)
+\end{console}
+
+\item The actual data values can be visualised by a `rug plot'.
+
+\noindent\begin{minipage}[t]{.18\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbKDErug.png}
+\end{minipage}
+\begin{minipage}[t]{.82\linewidth}
+  This is a sequence of vertical ticks between the time axis and the
+  KDE curve, which can be removed by unticking the box.
+\end{minipage}
+
+\begin{console}
+kde(data5,rug=FALSE)
+\end{console}
+  
+\end{enumerate}
+  
 \section{Cumulative age distributions}\label{sec:OtherCAD}
+
+\noindent\begin{minipage}[t]{.2\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/OtherKDEdata.png}
+\end{minipage}
+\begin{minipage}[t]{.8\linewidth}
+The input format for the CAD is identical to that of the KDE. This is
+because these two plots convey exactly the same kind of information,
+the only difference being that the KDE requires smoothing whereas the
+CAD does not (Section~\ref{sec:KDE+CAD}).
+\end{minipage}
+
+\begin{console}
+cad(data5)
+\end{console}
+
+\begin{enumerate}
+
+\item The different steps in the CAD are connected by vertical lines.
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbCADverticals.png}
+\end{minipage}
+\begin{minipage}[t]{.7\linewidth}
+  These lines can be removed by unticking the box.
+\end{minipage}
+
+\begin{console}
+cad(data5,verticals=FALSE)
+\end{console}
+
+\item Each aliquot can be marked by an optional plot character.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbCADpch.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  \texttt{pch=16} produces a filled circle.
+\end{minipage}
+
+\begin{console}
+cad(data5,verticals=FALSE,pch=16)
+\end{console}
+
+\end{enumerate}
 
 \printbibliography[heading=subbibliography]
 

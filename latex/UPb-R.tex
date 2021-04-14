@@ -24,12 +24,9 @@ UPb3 <- read.data('UPb8.csv',method='U-Pb',format=8,ierr=4)
 \end{script}
 
 \noindent where \texttt{UPb1.csv}, \texttt{UPb6.csv} and
-\texttt{UPb8.csv} are files that are included in \texttt{IsoplotR} and
-whose file path can be found as follows:
-
-\begin{console}
-fn <- system.file('UPb1.csv',package='IsoplotR')
-\end{console}
+\texttt{UPb8.csv} are files that, like the example files of
+Section~\ref{ch:generic-R}, are included in \texttt{IsoplotR} and
+whose file path can be found with the \texttt{system.file()} function.\\
 
 \noindent\begin{minipage}[t]{.15\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -38,8 +35,8 @@ fn <- system.file('UPb1.csv',package='IsoplotR')
 \begin{minipage}[t]{.85\textwidth}
   U--Pb data can be visualised on five or six different plot devices
   and output tables. The \texttt{isochron} option is only available
-  for formats 4--8 and is invisible otherwise. See the remaining
-  sections of this chapter for examples of these output options.
+  for formats 4--8 and is hidden otherwise. See the remaining sections
+  of this chapter for examples of these output options.
 \end{minipage}
 
 \section{General options}
@@ -75,7 +72,7 @@ settings('lambda','U238',0.000154993,0.00000013)
   is given by the isochron through the uncorrected data, which can be
   visualised on a concordia diagram (Section~\ref{sec:concordia-R}) or
   (for formats 4--8) as a separate isochron plot
-  (Section~\ref{sec:UPb-isochron-R}).
+  (Section~\ref{sec:UPb-isochron-R}).\\
 
 \noindent\begin{minipage}[t]{.4\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -95,18 +92,18 @@ settings('lambda','U238',0.000154993,0.00000013)
   \begin{minipage}[t]{.6\linewidth}
     Selecting the \texttt{nominal} option implements the common Pb
     correction algorithm of
-    Section~\ref{sec:common-Pb}.\ref{it:nominalcommonpb}.
+    Section~\ref{sec:common-Pb}.\ref{it:nominalcommonpb}.\\
   \end{minipage}
 
-  \noindent\begin{minipage}[t]{.4\linewidth}
+  \noindent\begin{minipage}[t]{.43\linewidth}
   \strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/initialPb76.png}
   \end{minipage}
-  \begin{minipage}[t]{.6\linewidth}
+  \begin{minipage}[t]{.57\linewidth}
     If \texttt{nominal} has been selected, and the data are of formats
     1--3, a new text box appears with the
     \textsuperscript{207}Pb/\textsuperscript{206}Pb ratio of the
-    common Pb.
+    common Pb.\\
   \end{minipage}
 
 \begin{script}
@@ -121,7 +118,7 @@ radialplot(UPb1,common.Pb=1)
   \begin{minipage}[t]{.6\linewidth}
     For U--Pb data formats 4--6, the nominal common Pb composition is specified
     as a pair of \textsuperscript{206}Pb/\textsuperscript{204}Pb and 
-    \textsuperscript{207}Pb/\textsuperscript{204}Pb ratios.
+    \textsuperscript{207}Pb/\textsuperscript{204}Pb ratios.\\
   \end{minipage}
 
 \begin{script}
@@ -130,15 +127,15 @@ settings('iratio','Pb207Pb204',10.294)
 weightedmean(UPb2,common.Pb=1)
 \end{script}
 
-  \noindent\begin{minipage}[t]{.4\linewidth}
+  \noindent\begin{minipage}[t]{.42\linewidth}
   \strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/initialPb876.png}
   \end{minipage}
-  \begin{minipage}[t]{.6\linewidth}
+  \begin{minipage}[t]{.58\linewidth}
     Finally, for U--Pb data formats 7 and 8, the nominal common Pb
     composition is specified as a pair of
     \textsuperscript{208}Pb/\textsuperscript{206}Pb and
-    \textsuperscript{208}Pb/\textsuperscript{207}Pb ratios.
+    \textsuperscript{208}Pb/\textsuperscript{207}Pb ratios.\\
   \end{minipage}
 
 \begin{script}
@@ -717,22 +714,22 @@ fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),ylim=c(0,0.5),
 radialplot(UPb1,type=2)
 \end{console}
 
-\noindent\begin{minipage}[t]{.4\linewidth}
+\noindent\begin{minipage}[t]{.35\linewidth}
   \strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/UPbRadial678age.png}
 \end{minipage}
-\begin{minipage}[t]{.6\linewidth}
+\begin{minipage}[t]{.65\linewidth}
   The \texttt{6/7/8 age} option applies the
   \textsuperscript{206}Pb/\textsuperscript{238}U method to young ages
   and the \textsuperscript{207}Pb/\textsuperscript{206}Pb method to
   old ages.
 \end{minipage}
 
-\noindent\begin{minipage}[t]{.45\linewidth}
+\noindent\begin{minipage}[t]{.4\linewidth}
   \strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/UPbRadial678switch.png}
 \end{minipage}
-\begin{minipage}[t]{.55\linewidth}
+\begin{minipage}[t]{.6\linewidth}
   When the \texttt{6/7/8 age} option is selected, a new text box
   appears in which the user can specify when to switch between the two
   methods.
@@ -798,7 +795,8 @@ radialplot(UPb3,common.Pb=3,cutoff.disc=dscf)
 \end{script}
 
 \item Just like concordia diagrams and isochron plots, also radial
-  plots can be modified using various optional formatting arguments:
+  plots can be modified using various optional formatting arguments
+  (Section~\ref{sec:OtherRadial}).
 
 \noindent\begin{minipage}[t]{.45\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -831,9 +829,8 @@ par(oldpar)
 \section{Weighted mean}
 \label{sec:UPbWtdMean}
 
-\begin{enumerate}
-\item The weighted mean plot serves a similar purpose as the radial
-  plot and shares several options with it.
+The weighted mean plot serves a similar purpose as the radial plot and
+shares several options with it.
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -864,95 +861,42 @@ UPb4 <- read.data('diseq.csv',method='U-Pb',format=2,d=d)
 weightedmean(UPb4,type=2,common.Pb=3,cutoff.disc=discfilter(option=5))
 \end{script}
 
-\item \texttt{IsoplotR} provides functionality for both the ordinary
-  weighted mean of Equation~\ref{eq:wtdmean} and the random effects
-  model of Equation~\ref{eq:wtdmean-model-3}:
+The remaining options of the weighted mean function are the same as
+for the generic version discussed in
+Section~\ref{sec:OtherWeightedMean}.\\
 
-\noindent\begin{minipage}[t]{.3\linewidth}
+\noindent\begin{minipage}[t]{.4\linewidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbWtdMeanRandomEffects.png}
+\includegraphics[width=\linewidth]{../figures/UPbWeightedMeanOtherOptions.png}
 \end{minipage}
-\begin{minipage}[t]{.7\linewidth}
-  Ticking the box estimates the overdispersion in a similar way to the
-  radial plot, the only difference being that the weighted mean plot
-  computes the arithmetic mean and the radial plot the geometric mean.
-\end{minipage}
-
-For tightly clustered datasets, the difference between the random
-effects models of the weighted mean and radial plot is small.  But
-when the individual age estimates exhibit significant scatter
-($>10$\%, say), then the central age is preferred over the arithmetic
-weighted mean.
-
-\begin{console}
-weightedmean(UPb1,random.effects=TRUE)
-\end{console}
-  
-\item Outliers are detected using the modified Chauvenet criterion of
-  Section~\ref{sec:weightedmean}.
-
-\noindent\begin{minipage}[t]{.22\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbWtdMeanOutliers.png}
-\end{minipage}
-\begin{minipage}[t]{.78\linewidth}
-  The Chauvenet criterion may select different outliers for the
-  ordinary weighted mean and random effects model.
-\end{minipage}
-
-Detecting outliers from the CLI and colouring them red on the plot:
-\begin{console}
-weightedmean(UPb1,detect.outliers=TRUE,outlier.col='red')
-\end{console}
-
-\item By default the aliquots are plotted in the order of the input
-  table.
-
-\noindent\begin{minipage}[t]{.22\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbWtdMeanRank.png}
-\end{minipage}
-\begin{minipage}[t]{.78\linewidth}
-However they can also be shuffled in order of increasing age.
-\end{minipage}
-
-\begin{console}
-weightedmean(UPb1,ranked=TRUE)
-\end{console}
-
-\item Additional formatting options can be used to modify the
-  appearance of the weighted mean plot. These options are similar to
-  those of the radial plot:
-
-\noindent\begin{minipage}[t]{.45\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbWtdMeanExtraOptions.png}
-\end{minipage}
-\begin{minipage}[t]{.55\linewidth}
-  The minimum and maximum extent of the age scale can be specified;
+\begin{minipage}[t]{.6\linewidth}
+  The ages can be averaged either using the one-parameter ordinary
+  weighted mean algorithm, or the two-parameter random effects
+  algorithm.  Outliers are detected using the modified Chauvenet
+  criterion, which may select different outliers for the ordinary
+  weighted mean and random effects model.  By default the aliquots are
+  plotted in the order of the input table. However they can also be
+  shuffled in order of increasing age.  The minimum and maximum extent
+  of the age scale can be specified and may extend to negative values;
   the fill colour of the rectangular segments can be modified based on
   an additional variable, with a designated separate colour for
-  outliers (\texttt{NA} produces empty rectangles); the confidence
-  level and significant digits can be specified as in the concordia,
-  isochron and radial plots.
+  outliers; the confidence level and significant digits can be
+  specified as in the concordia, isochron and radial plots.
 \end{minipage}
 
 \begin{script}
-weightedmean(UPb3,from=-10,to=100,alpha=0.02,sigdig=1,
-             levels=UPb3$x$Th232U238,rect.col=rev(topo.colors(n=100)),
-             outlier.col=NA,clabel='Th/U')
+weightedmean(UPb3,random.effects=TRUE,detect.outliers=TRUE,
+             outlier.col='red',ranked=TRUE,from=-10,to=100,
+             alpha=0.02,sigdig=1,levels=UPb3$x$Th232U238,
+             rect.col=rev(topo.colors(n=100)),clabel='Th/U')
 \end{script}
-
-\end{enumerate}
 
 \section{Kernel density estimates}
 \label{sec:UPbKDE}
 
-\begin{enumerate}
-
-\item Like the radial plot and weighted mean plot, also the kernel
-  density estimation function can be applied to five or six different
-  types of U--(Th)--Pb dates.
+Like the radial plot and weighted mean plot, also the kernel density
+estimation function can be applied to five or six different types of
+U--(Th)--Pb dates.
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -964,120 +908,19 @@ weightedmean(UPb3,from=-10,to=100,alpha=0.02,sigdig=1,
  filter.
 \end{minipage}
 
-\begin{console}
-kde(UPb1)
-\end{console}
+\begin{script}
+d <- discfilter(option=4,before=FALSE,cutoff=c(-1,5))
+kde(UPb2,common.Pb=2,type=2,cutoff.disc=d)
+\end{script}
 
-\item The lateral extent of the KDE plot can be modified in exactly
-  the same way as the radial plot and weighted mean plot.
-
-\noindent\begin{minipage}[t]{.4\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbKDEfromto.png}
-\end{minipage}
-\begin{minipage}[t]{.6\linewidth}
-  Note that the KDE is allowed to extend into negative values as well
-\end{minipage}
-
-\begin{console}
-kde(UPb1,from=220,to=280)
-\end{console}
-
-\item The default kernel bandwidth is given by the algorithm of
-  \citet{botev2010}, and the default histogram binwidth by Sturges'
-  Rule.
-
-\noindent\begin{minipage}[t]{.4\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbKDEbandbin.png}
-\end{minipage}
-\begin{minipage}[t]{.6\linewidth}
-  These default values can be replaced by any positive value.  Be
-  careful not to overinterpret the resulting plots!
-\end{minipage}
-
-\begin{console}
-kde(UPb1,bw=5,binwidth=4)
-\end{console}
-
-\item It is advisable to apply a logarithmic transformation to
-  datasets that are close to zero.
-
-\noindent\begin{minipage}[t]{.2\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbKDElogarithm.png}
-\end{minipage}
-\begin{minipage}[t]{.8\linewidth}
-Otherwise the resulting KDE may spill over into physically impossible
-negative values.
-\end{minipage}
-
-When applying a custom bandwidth and/or binwidth to a logarithmically
-transformed KDE, one should use relative values rather than absolute
-ones. For example, instead of a 5~Myr bandwidth, a value of
-$5/250=0.02$ would be more appropriate:
-
-\begin{console}
-kde(UPb1,log=TRUE,bw=0.02,binwidth=0.016,from=220,to=280)
-\end{console}
-
-\item The histograms can also be removed to reduce visual clutter.
-
-\noindent\begin{minipage}[t]{.2\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbKDEhistogram.png}
-\end{minipage}
-\begin{minipage}[t]{.8\linewidth}
-  Removing the histogram also removes the vertical axis of the KDE
-  plot.  The probability density values of the KDE curve itself do not
-  have a meaningful purpose.
-\end{minipage}
-
-\begin{console}
-kde(UPb1,show.hist=FALSE)
-\end{console}
-
-\item The KDE estimate is adjusted by \citet{abramson1982}'s adaptive
-  square root modifier.
-
-\noindent\begin{minipage}[t]{.19\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbKDEadaptive.png}
-\end{minipage}
-\begin{minipage}[t]{.81\linewidth}
-  Unticking the box reverts to the standard \citet{botev2010}
-  algorithm, which uses a constant bandwidth for all data points.
-\end{minipage}
-
-\begin{console}
-kde(UPb1,adaptive=FALSE)
-\end{console}
-
-\item The actual data values can be visualised by a `rug plot'.
-
-\noindent\begin{minipage}[t]{.18\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbKDErug.png}
-\end{minipage}
-\begin{minipage}[t]{.82\linewidth}
-  This is a sequence of vertical ticks between the time axis and the
-  KDE curve, which can be removed by unticking the box.
-\end{minipage}
-
-\begin{console}
-kde(UPb1,rug=FALSE)
-\end{console}
-
-\end{enumerate}
+All other options are as in Section~\ref{sec:OtherKDE}.
 
 \section{Cumulative age distributions}
 \label{sec:UPbCAD}
 
-\begin{enumerate}
-
-\item Like the radial, weighted mean and KDE plots, also the CAD can
-  be used to visualise five or six (depending on the U--Pb data
-  format) different U--Pb ages.
+Like the radial, weighted mean and KDE plots, also the CAD can be used
+to visualise five or six (depending on the U--Pb data format)
+different U--Pb ages.\\
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -1090,38 +933,10 @@ kde(UPb1,rug=FALSE)
 \end{minipage}
 
 \begin{console}
-cad(UPb1,type=2,common.Pb=3)
+cad(UPb1,common.Pb=3,type=4,cutoff.76=1100)
 \end{console}
 
-\item The different steps in the CAD are connected by vertical lines.
-
-\noindent\begin{minipage}[t]{.3\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbCADverticals.png}
-\end{minipage}
-\begin{minipage}[t]{.7\linewidth}
-  These lines can be removed by unticking the box.
-\end{minipage}
-
-\begin{console}
-cad(UPb1,verticals=FALSE)
-\end{console}
-
-\item Each aliquot can be marked by an optional plot character.
-
-\noindent\begin{minipage}[t]{.4\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbCADpch.png}
-\end{minipage}
-\begin{minipage}[t]{.6\linewidth}
-  \texttt{pch=16} produces a filled circle.
-\end{minipage}
-
-\begin{console}
-cad(UPb1,verticals=FALSE,pch=16)
-\end{console}
-
-\end{enumerate}
+All other options are as in Section~\ref{sec:OtherCAD}.
 
 \section{Ages}\label{sec:UPbAges}
 
@@ -1157,11 +972,11 @@ age(UPb2,common.Pb=3)
 
 \item The decay constant uncertainties can be added to each age.
 
-\noindent\begin{minipage}[t]{.3\linewidth}
+\noindent\begin{minipage}[t]{.35\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/UPbAgesExterr.png}
 \end{minipage}
-\begin{minipage}[t]{.7\linewidth}
+\begin{minipage}[t]{.65\linewidth}
   Note that the uncertainties of the resulting ages may be strongly
   correlated.
 \end{minipage}
