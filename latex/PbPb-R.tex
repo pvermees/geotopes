@@ -1,7 +1,9 @@
 \begin{refsection}
 
-\chapter{Pb--Pb}
-\label{ch:PbPb-R}
+\chapter{Pb--Pb and Th--Pb}
+\label{ch:ThPbPb-R}
+
+\section{Pb--Pb}\label{sec:PbPb-R}
 
 \noindent\begin{minipage}[t]{.3\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -13,7 +15,7 @@
 \end{minipage}
 
 \begin{console}
-PbPb <- read.data('PbPb.csv',method='Pb-Pb',format=3)
+PbPb <- read.data('PbPb3.csv',method='Pb-Pb',format=3)
 \end{console}
 
 \noindent\begin{minipage}[t]{.15\linewidth}
@@ -186,10 +188,125 @@ age(PbPb,common.Pb=1)
 
 \end{enumerate}
 
+\section{Th--Pb}\label{sec:ThPb-R}
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbFormats.png}
+\end{minipage}
+\noindent\begin{minipage}[t]{.15\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbPlotdevices.png}\\
+\end{minipage}
+\begin{minipage}[t]{.55\textwidth}
+  \texttt{IsoplotR} accommodates three Th--Pb formats (see
+  Section~\ref{sec:ThPb} for details), which can be analysed by the
+  same six functions as the Pb--Pb data that were discussed
+  previously.
+\end{minipage}
+
+\noindent\includegraphics[width=.7\linewidth]{../figures/ThPbLambda.png}\\
+\noindent The default Th decay constant is given by \citet{leroux1963}.
+
+\begin{script}
+# round the 232Th decay constant to 0.00005 +/- 0.000003
+settings('lambda','Th232',0.00005,0.000003) 
+\end{script}
+
+Isochron regression proceeds in exactly the same fashion as the
+generic regression function of Section~\ref{sec:OtherRegression},
+apart from just two small geochronology-specific differences:
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ThPbInverseExterr.png}
+\end{minipage}
+\begin{minipage}[t]{.7\
+Both conventional and inverse isochrons are available, and the
+analytical uncertainty of the resulting ages may be augmented by the
+decay constant uncertainties.
+\end{minipage}
+
+Example of Th--Pb inverse isochron regression with error ellipses
+marked by aliquot number, and empty colour ellipses with transparent
+blue stroke colour:
+
+\begin{script}
+isochron(ThPb,inverse=TRUE,show.numbers=TRUE,
+         ellipse.fill=NA,ellipse.stroke=rgb(0,0,1,0.5))
+\end{script}
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ThPbAgePb0.png}
+\end{minipage}
+\begin{minipage}[t]{.7\linewidth}
+\end{minipage}
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ThPbAgei2i.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+\end{minipage}
+
 \section{Radial, weighted mean, KDE and CAD plots}\label{sec:PbPbOtherPlots}
 
-These functions work exactly as the generic versions of
-Chapter~\ref{ch:generic-R}.
+\noindent\begin{minipage}[t]{.45\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbRadialOptions.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  Apart from a possible common Pb-correction, the radial plot options
+  for Pb--Pb data are exactly the same as for the generic radial plot
+  function of Section~\ref{sec:OtherRadial}. Thus, the aliquots can be
+  numbered; decay constant uncertainties may or may not be added to
+  the standard error of the central age; the user can choose between
+  the logarithmic, linear and square root transformations; the extent
+  of the radial scale can be modified; etc.
+\end{minipage}
+
+\begin{console}
+radialplot(PbPb,show.numbers=TRUE,exterr=TRUE,transformation='linear',
+           k=1,from=4555,to=4575,z0=4565)
+\end{console}
+
+Similarly, the weighted mean, KDE and CAD functions work exactly as
+the generic versions of Chapter~\ref{ch:generic-R}, with the only
+difference being the common Pb correction, and the ability to
+propagate external uncertainties.\\
+
+\noindent CLI examples:
+
+\begin{enumerate}
+
+\item The weighted mean using a nominal common Pb correction with
+  \textsuperscript{206}Pb/\textsuperscript{204}Pb = 9.15 and
+  \textsuperscript{207}Pb/\textsuperscript{204}Pb = 10.23; applying
+  the random effects model and plotting the ranked ages:
+  
+\begin{script}
+settings('iratio','Pb206Pb204',9.15)
+settings('iratio','Pb206Pb204',10.23)
+weightedmean(PbPb,common.Pb=1,random.effects=TRUE,ranked=TRUE)
+\end{script}
+
+\item An orange KDE without histogram or rug plot, using an isochron
+  based common Pb correction, with a 20~Myr bandwidth and axis limits
+  from 4500 to 4600~Ga:
+
+\begin{console}
+kde(PbPb,kde.col='orange',rug=FALSE,show.hist=FALSE,
+    common.Pb=2,bw=20,from=4500,to=4600)
+\end{console}
+
+\item a CAD with without vertical lines and steps marked by `x':
+
+\begin{console}
+cad(PbPb,verticals=TRUE,pch='x')
+\end{console}
+  
+\end{enumerate}
 
 \printbibliography[heading=subbibliography]
 

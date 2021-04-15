@@ -117,6 +117,35 @@
     \field{year}{1971}
   \endentry
 
+  \entry{leroux1963}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LRLJ}{%
+         family={Le\bibnamedelima Roux},
+         familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={L.\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GLE}{%
+         family={Glendenin},
+         familyi={G\bibinitperiod},
+         given={L.\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRLJGLE1}
+    \strng{fullhash}{LRLJGLE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1963}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{Half-life of $^{232}$Th.}}
+    \field{journaltitle}{Proceedings of the National Meeting on Nuclear Energy,
+  Pretoria, South Africa}
+    \field{year}{1963}
+  \endentry
+
   \entry{stacey1975}{article}{}
     \name{author}{2}{}{%
       {{hash=SJ}{%
