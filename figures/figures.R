@@ -668,3 +668,7 @@ legend('topleft',legend='a)',bty='n')
 weightedmean(examples$ArAr,hide=1,random.effects=TRUE,exterr=TRUE)
 legend('topleft',legend='b)',bty='n')
 dev.off()
+
+agespectrum(examples$ArAr,levels=1/examples$ArAr$x[,'Ar36Ar40'],
+            plateau.col=topo.colors(n=100,alpha=0.5),
+            random.effects=FALSE,clabel=expression(''^40*'Ar/'^36*'Ar'))

@@ -1,0 +1,359 @@
+\begin{refsection}
+
+\chapter{Ar--Ar and K--Ca}
+\label{ch:ArArKCa-R}
+
+\section{Ar--Ar}\label{sec:ArAr-R}
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbFormats.png}
+\end{minipage}
+\begin{minipage}[t]{.7\textwidth}
+  \texttt{IsoplotR} accommodates three Ar--Ar formats. See
+  Section~\ref{sec:ArAr} for details.
+\end{minipage}
+
+\begin{console}
+ArAr <- read.data('ArAr3.csv',method='Ar-Ar',format=3)
+\end{console}
+
+\noindent\begin{minipage}[t]{.15\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ArArPlotdevices.png}\\
+\end{minipage}
+\begin{minipage}[t]{.85\textwidth}
+  Ar--Ar data can be visualised on six different plot devices.
+  Additionally, the single aliquot age estimates can also be reported
+  in a downloadable data table.
+\end{minipage}
+
+The default atmospheric \textsuperscript{40}Ar/\textsuperscript{36}Ar
+ratio is given by \citet{lee2006}, and the \textsuperscript{40}K decay
+constant by \citet{renne2011}. These values can be changed here:\\
+
+\noindent\includegraphics[width=.7\linewidth]{../figures/ArArLambda.png}
+
+\begin{script}
+# use the atmospheric ratio from Nier (1950):
+settings('iratio','40Ar36Ar',295.5,0.5)
+\end{script}
+
+\section{K--Ca}\label{sec:KCa-R}
+
+\noindent\begin{minipage}[t]{.3\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbFormats.png}
+\end{minipage}
+\noindent\begin{minipage}[t]{.15\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbPlotdevices.png}\\
+\end{minipage}
+\begin{minipage}[t]{.55\textwidth}
+  \texttt{IsoplotR} accommodates three K--Ca formats (see
+  Section~\ref{sec:K-Ca} for details), which can be analysed by the
+  same methods as the Ar--Ar method minus the age spectra function.
+\end{minipage}
+
+\begin{script}
+KCa <- read.data('KCa3.csv',method='K-Ca',format=3)
+\end{script}
+
+\noindent\includegraphics[width=.7\linewidth]{../figures/KCaLambda.png}\\
+
+\noindent The default value for the inherited Ca component is given by
+\citet{moore1972}. This option is hidden from the \texttt{isochron}
+function. The default K decay constant is the same as for the Ar--Ar
+method \citep{renne2011}.
+
+\begin{script}
+# use the Steiger and Jaeger (1977) values with zero uncertainty
+settings('lambda','K40',5.543e-4,0)
+\end{script}
+
+\section{Isochrons}\label{sec:ArAr-isochrons-R}
+
+\begin{enumerate}
+
+\item \texttt{IsoplotR} offers the same three options to deal with the
+  scatter of the data around the best-fit isochron line as the generic
+  regression function of Section~\ref{sec:OtherRegression} and the
+  Pb--Pb isochron function (Section~\ref{sec:PbPb-isochrons-R}).
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ArArIsochronModels.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  These three models represent three different ways to capture any
+  excess dispersion of the data relative to the nominal uncertainties
+  (Figure~\ref{fig:isochronMSWD}).
+\end{minipage}
+
+\begin{console}
+isochron(ArAr,model=3)
+\end{console}
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/KCaIsochronModels.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  The same three models are available for K--Ca data as well.
+\end{minipage}
+
+\begin{console}
+isochron(KCa,model=2)
+\end{console}
+
+\item \noindent\begin{minipage}[t]{.22\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ArArisochronInverse.png}
+\end{minipage}
+\begin{minipage}[t]{.78\linewidth}
+Data can be fitted using conventional
+(\textsuperscript{40}Ar/\textsuperscript{36}Ar
+vs. \textsuperscript{39}Ar/\textsuperscript{36}Ar) or inverse
+(\textsuperscript{36}Ar/\textsuperscript{40}Ar
+vs. \textsuperscript{39}Ar/\textsuperscript{40}Ar) isochrons
+(Section~\ref{sec:inverseIsochrons}).
+\end{minipage}
+
+\begin{console}
+isochron(ArAr,inverse=FALSE)
+\end{console}
+
+\noindent\begin{minipage}[t]{.22\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbisochronInverse.png}
+\end{minipage}
+\begin{minipage}[t]{.78\linewidth}
+For the K--Ca method, conventional isochrons plot
+\textsuperscript{40}Ca/\textsuperscript{44}Ca
+vs. \textsuperscript{40}K/\textsuperscript{44}Ca, and inverse plot
+\textsuperscript{44}Ca/\textsuperscript{40}Ca
+vs. \textsuperscript{40}K/\textsuperscript{40}Ca.
+\end{minipage}
+
+\begin{console}
+isochron(KCa,inverse=TRUE)
+\end{console}
+
+\item The appearance and numerical behaviour of Ar--Ar and K--Ca
+  isochrons can be modified using the same options as the Pb--Pb
+  isochrons of Section~\ref{sec:PbPb-isochron-R}, and the general
+  regression of Section~\ref{sec:OtherRegression}.
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbIsochronOtherOptions.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  Tick the checkbox to propagate decay constant uncertainties
+  (\texttt{exterr}) and label the error ellipses with the row numbers
+  of the input data (\texttt{show.numbers}), use the textboxes to set
+  the axis limits (\texttt{xlim} and \texttt{ylim}), significance
+  level (\texttt{alpha}), significant digits (\texttt{sigdig}), the
+  fill and stroke colour of the error ellipses (\texttt{ellipse.fill}
+  and \texttt{ellipse.stroke}), font size (\texttt{cex}) and colour
+  legend (\texttt{levels} and \texttt{clabel}).  
+\end{minipage}
+
+\begin{script}
+isochron(PbPb,exterr=TRUE,show.numbers=TRUE,xlim=c(0,0.03),ylim=c(0,0.75),
+         alpha=0.01,sigdig=3,ellipse.fill=NA,ellipse.stroke="red")
+\end{script}
+  
+\end{enumerate}
+
+\section{Age spectra}\label{sec:ArArAges}
+
+\section{Ar--Ar ages}\label{sec:ArArAges}
+
+Although, as discussed in Section~\ref{sec:ThPbPbradial}, Pb--Pb ages
+are usually calculated by isochron regression, it is also possible to
+calculate the ages of each individual aliquots. Once these have been
+calculated, it is then straightforward to turn them into the radial,
+weighted mean, KDE and CAD plots. Thus, it is useful to introduce
+\texttt{IsoplotR}'s age calculation function before discussing the
+aforementioned plots.
+
+\begin{enumerate}
+
+\item In contrast with the U--Pb method, in which common-Pb correction
+  often does not affect the age much, this correction is crucial for
+  single grain Pb--Pb dating.
+  
+\noindent\begin{minipage}[t]{.35\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbRadialPb0.png}
+\end{minipage}
+\begin{minipage}[t]{.65\linewidth}
+  In contrast with the U--Pb data of Section~\ref{sec:UPbRadial}, the
+  common Pb correction of Pb--Pb data is limited to two options:
+  nominal and isochron. These implement the two procedures shown in
+  Figure~\ref{fig:ThPbSingleGrain}.
+\end{minipage}
+
+\begin{console}
+age(PbPb,common.Pb=2)
+\end{console}
+
+\item Nominal common Pb correction proceeds like the nominal common Pb
+  correction of U--Pb data formats 4--6 (Section~\ref{sec:general}).
+
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbnominalPb0.png}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  The nominal \textsuperscript{207}Pb/\textsuperscript{204}Pb and
+  \textsuperscript{206}Pb/\textsuperscript{204}Pb ratios in this
+  example correspond to a
+  \textsuperscript{207}Pb/\textsuperscript{206}Pb ratio of 0.625,
+  which equals the y-intercept of the inverse isochron.
+\end{minipage}
+
+\begin{console}
+settings('iratio','Pb207Pb204',6.25)
+settings('iratio','Pb206Pb204',10)
+age(PbPb,common.Pb=1)
+\end{console}
+
+\item After possible common Pb correction, the resulting Pb--Pb ages
+  are treated in exactly the same way as the U--Pb data of
+  Section~\ref{sec:UPbRadial} and the generic data of
+  Section~\ref{sec:OtherRadial}.
+
+\end{enumerate}
+
+\section{K--Ca isochrons}\label{sec:KCa-isochrons-R}
+
+Isochron regression proceeds in exactly the same fashion as the
+generic regression function of Section~\ref{sec:OtherRegression},
+apart from just two small geochronology-specific differences:\\
+
+\noindent\begin{minipage}[t]{.35\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ThPbInverseExterr.png}
+\end{minipage}
+\begin{minipage}[t]{.65\linewidth}
+Both conventional and inverse isochrons are available, and the
+analytical uncertainty of the resulting ages may be augmented by the
+decay constant uncertainties.\\
+\end{minipage}
+
+\begin{console}
+isochron(ThPb,inverse=TRUE,exterr=FALSE)
+\end{console}
+
+The remaining isochron settings are identical to the those of the
+generic regression function of Section~\ref{sec:OtherRegression}. For
+example, the following code snippet crates and inverse Th--Pb isochron
+with empty blue error ellipses marked by aliquot number:
+
+\begin{script}
+isochron(ThPb,inverse=TRUE,show.numbers=TRUE,
+         ellipse.fill=NA,ellipse.stroke=rgb(0,0,1,0.5))
+\end{script}
+
+\section{K--Ca ages}\label{sec:KCaAges}
+
+Th--Pb age calculation can either be done
+
+\begin{enumerate}
+
+\item without common Pb correction:
+
+\begin{console}
+age(ThPb,common.Pb=1)
+\end{console}
+
+\item using a nominal common Pb correction:
+
+\noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgePb0.png}
+
+\noindent which, at the CLI, is specified via the \texttt{settings()} function:
+
+\begin{script}
+settings('iratio','Pb208Pb204',38.82)
+age(ThPb,common.Pb=1)
+\end{script}
+
+\item or inferred from the isochron intercept:
+
+\noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgei2i.png}
+
+\begin{console}
+age(ThPb,common.Pb=2)
+\end{console}
+
+\end{enumerate}
+
+\section{Radial, weighted mean, KDE and CAD plots}
+\label{sec:ArArKCaOtherPlots}
+
+The settings for the radial, weighted mean, KDE and CAD plots combine
+the generic settings for those graphical devices
+(Sections~\ref{sec:OtherRadial}--\ref{sec:OtherCAD}) with the settings
+for the age calculator.\\
+
+\noindent\begin{minipage}[t]{.45\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/PbPbRadialOptions.png}
+\end{minipage}
+\begin{minipage}[t]{.55\linewidth}
+  For example, here are shown the GUI settings for a radial plot of
+  numbered Pb--Pb data, which is plotted on a linear scale that
+  stretches from 4555 to 4575~Ma and is centred around 4565~Ma. Single
+  grain ages are corrected using the isochron based common Pb
+  composition, and a single age component is fitted to them. The
+  standard errors of the central age and the single component age
+  include decay constant uncertainties.
+\end{minipage}
+
+\begin{console}
+radialplot(PbPb,show.numbers=TRUE,exterr=TRUE,transformation='linear',
+           k=1,from=4555,to=4575,z0=4565)
+\end{console}
+
+Similarly, the weighted mean, KDE and CAD functions work exactly as
+the generic versions of Chapter~\ref{ch:generic-R}, with the only
+difference being the common Pb correction, and the ability to
+propagate external uncertainties.\\
+
+\noindent CLI examples:
+
+\begin{enumerate}
+
+\item The weighted mean using a nominal common Pb correction with
+  \textsuperscript{206}Pb/\textsuperscript{204}Pb = 9.15 and
+  \textsuperscript{207}Pb/\textsuperscript{204}Pb = 10.23; applying
+  the random effects model and plotting the ranked ages:
+  
+\begin{script}
+settings('iratio','Pb206Pb204',9.15)
+settings('iratio','Pb206Pb204',10.23)
+weightedmean(PbPb,common.Pb=1,random.effects=TRUE,ranked=TRUE)
+\end{script}
+
+\item An orange KDE without histogram or rug plot, using an isochron
+  based common Pb correction, with a 20~Myr bandwidth and axis limits
+  from 4500 to 4600~Ga:
+
+\begin{console}
+kde(PbPb,kde.col='orange',rug=FALSE,show.hist=FALSE,
+    common.Pb=2,bw=20,from=4500,to=4600)
+\end{console}
+
+\item A CAD with without vertical lines and steps marked by `x':
+
+\begin{console}
+cad(PbPb,verticals=TRUE,pch='x')
+\end{console}
+  
+\end{enumerate}
+
+\printbibliography[heading=subbibliography]
+
+\end{refsection}

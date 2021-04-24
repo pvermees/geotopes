@@ -45,7 +45,7 @@ settings('iratio','U238U235',137.88,0)
 settings('lambda','U238',0.000154993,0.00000013) 
 \end{script}
 
-\section{Isochrons}
+\section{Pb--Pb isochrons}\label{sec:PbPb-isochrons-R}
 
 \begin{enumerate}
 
@@ -129,7 +129,7 @@ isochron(PbPb,exterr=TRUE,show.numbers=TRUE,xlim=c(0,0.03),ylim=c(0,0.75),
   
 \end{enumerate}
 
-\section{Ages}\label{sec:PbPbAges}
+\section{Pb--Pb ages}\label{sec:PbPbAges}
 
 Although, as discussed in Section~\ref{sec:ThPbPbradial}, Pb--Pb ages
 are usually calculated by isochron regression, it is also possible to
@@ -205,6 +205,10 @@ age(PbPb,common.Pb=1)
   previously.
 \end{minipage}
 
+\begin{script}
+ThPb <- read.data('ThPb2.csv',method='Th-Pb',format=2)
+\end{script}
+
 \noindent\includegraphics[width=.7\linewidth]{../figures/ThPbLambda.png}\\
 \noindent The default Th decay constant is given by \citet{leroux1963}.
 
@@ -213,57 +217,89 @@ age(PbPb,common.Pb=1)
 settings('lambda','Th232',0.00005,0.000003) 
 \end{script}
 
+\section{Th--Pb isochrons}\label{sec:ThPb-isochrons-R}
+
 Isochron regression proceeds in exactly the same fashion as the
 generic regression function of Section~\ref{sec:OtherRegression},
-apart from just two small geochronology-specific differences:
+apart from just two small geochronology-specific differences:\\
 
-\noindent\begin{minipage}[t]{.3\linewidth}
+\noindent\begin{minipage}[t]{.35\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/ThPbInverseExterr.png}
 \end{minipage}
-\begin{minipage}[t]{.7\
+\begin{minipage}[t]{.65\linewidth}
 Both conventional and inverse isochrons are available, and the
 analytical uncertainty of the resulting ages may be augmented by the
-decay constant uncertainties.
+decay constant uncertainties.\\
 \end{minipage}
 
-Example of Th--Pb inverse isochron regression with error ellipses
-marked by aliquot number, and empty colour ellipses with transparent
-blue stroke colour:
+\begin{console}
+isochron(ThPb,inverse=TRUE,exterr=FALSE)
+\end{console}
+
+The remaining isochron settings are identical to the those of the
+generic regression function of Section~\ref{sec:OtherRegression}. For
+example, the following code snippet crates and inverse Th--Pb isochron
+with empty blue error ellipses marked by aliquot number:
 
 \begin{script}
 isochron(ThPb,inverse=TRUE,show.numbers=TRUE,
          ellipse.fill=NA,ellipse.stroke=rgb(0,0,1,0.5))
 \end{script}
 
-\noindent\begin{minipage}[t]{.3\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/ThPbAgePb0.png}
-\end{minipage}
-\begin{minipage}[t]{.7\linewidth}
-\end{minipage}
+\section{Th--Pb ages}\label{sec:ThPbAges}
 
-\noindent\begin{minipage}[t]{.5\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/ThPbAgei2i.png}
-\end{minipage}
-\begin{minipage}[t]{.5\linewidth}
-\end{minipage}
+Th--Pb age calculation can either be done
 
-\section{Radial, weighted mean, KDE and CAD plots}\label{sec:PbPbOtherPlots}
+\begin{enumerate}
+
+\item without common Pb correction:
+
+\begin{console}
+age(ThPb,common.Pb=1)
+\end{console}
+
+\item using a nominal common Pb correction:
+
+\noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgePb0.png}
+
+\noindent which, at the CLI, is specified via the \texttt{settings()} function:
+
+\begin{script}
+settings('iratio','Pb208Pb204',38.82)
+age(ThPb,common.Pb=1)
+\end{script}
+
+\item or inferred from the isochron intercept:
+
+\noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgei2i.png}
+
+\begin{console}
+age(ThPb,common.Pb=2)
+\end{console}
+
+\end{enumerate}
+
+\section{Radial, weighted mean, KDE and CAD plots}
+\label{sec:ThPbPbOtherPlots}
+
+The settings for the radial, weighted mean, KDE and CAD plots combine
+the generic settings for those graphical devices
+(Sections~\ref{sec:OtherRadial}--\ref{sec:OtherCAD}) with the settings
+for the age calculator.\\
 
 \noindent\begin{minipage}[t]{.45\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/PbPbRadialOptions.png}
 \end{minipage}
 \begin{minipage}[t]{.55\linewidth}
-  Apart from a possible common Pb-correction, the radial plot options
-  for Pb--Pb data are exactly the same as for the generic radial plot
-  function of Section~\ref{sec:OtherRadial}. Thus, the aliquots can be
-  numbered; decay constant uncertainties may or may not be added to
-  the standard error of the central age; the user can choose between
-  the logarithmic, linear and square root transformations; the extent
-  of the radial scale can be modified; etc.
+  For example, here are shown the GUI settings for a radial plot of
+  numbered Pb--Pb data, which is plotted on a linear scale that
+  stretches from 4555 to 4575~Ma and is centred around 4565~Ma. Single
+  grain ages are corrected using the isochron based common Pb
+  composition, and a single age component is fitted to them. The
+  standard errors of the central age and the single component age
+  include decay constant uncertainties.
 \end{minipage}
 
 \begin{console}
@@ -300,7 +336,7 @@ kde(PbPb,kde.col='orange',rug=FALSE,show.hist=FALSE,
     common.Pb=2,bw=20,from=4500,to=4600)
 \end{console}
 
-\item a CAD with without vertical lines and steps marked by `x':
+\item A CAD with without vertical lines and steps marked by `x':
 
 \begin{console}
 cad(PbPb,verticals=TRUE,pch='x')

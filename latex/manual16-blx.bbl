@@ -1,0 +1,210 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{lee2006}{article}{}
+    \name{author}{7}{}{%
+      {{hash=LJY}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Jee-Yon},
+         giveni={J\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Marti},
+         familyi={M\bibinitperiod},
+         given={Kurt},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SJP}{%
+         family={Severinghaus},
+         familyi={S\bibinitperiod},
+         given={Jeffrey\bibnamedelima P},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kawamura},
+         familyi={K\bibinitperiod},
+         given={Kenji},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=YHS}{%
+         family={Yoo},
+         familyi={Y\bibinitperiod},
+         given={Hee-Soo},
+         giveni={H\bibinithyphendelim S\bibinitperiod},
+      }}%
+      {{hash=LJB}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Jin\bibnamedelima Bok},
+         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=KJS}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Jin\bibnamedelima Seog},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LJY+1}
+    \strng{fullhash}{LJYMKSJPKKYHSLJBKJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{17}
+    \field{pages}{4507\bibrangedash 4512}
+    \field{title}{{A redetermination of the isotopic abundances of atmospheric
+  Ar}}
+    \field{volume}{70}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{2006}
+  \endentry
+
+  \entry{moore1972}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MLJ}{%
+         family={Moore},
+         familyi={M\bibinitperiod},
+         given={L\bibnamedelima Jf},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=ML}{%
+         family={Machlan},
+         familyi={M\bibinitperiod},
+         given={LA},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{MLJML1}
+    \strng{fullhash}{MLJML1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1972}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{14}
+    \field{pages}{2291\bibrangedash 2296}
+    \field{title}{High-accuracy determination of calcium in blood serum by
+  isotope dilution mass spectrometry}
+    \field{volume}{44}
+    \field{journaltitle}{Analytical chemistry}
+    \field{year}{1972}
+  \endentry
+
+  \entry{renne2011}{article}{}
+    \name{author}{5}{}{%
+      {{hash=RPR}{%
+         family={Renne},
+         familyi={R\bibinitperiod},
+         given={Paul\bibnamedelima R},
+         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Balco},
+         familyi={B\bibinitperiod},
+         given={Greg},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LKR}{%
+         family={Ludwig},
+         familyi={L\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Mundil},
+         familyi={M\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Min},
+         familyi={M\bibinitperiod},
+         given={Kyoungwon},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pergamon}%
+    }
+    \strng{namehash}{RPR+1}
+    \strng{fullhash}{RPRBGLKRMRMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{17}
+    \field{pages}{5097\bibrangedash 5100}
+    \field{title}{Response to the comment by WH Schwarz et al. on ``Joint
+  determination of 40K decay constants and $^{40}$Ar$^*$/$^{40}$K for the Fish
+  Canyon sanidine standard, and improved accuracy for $^{40}$Ar/$^{39}$Ar
+  geochronology'' by P.R. Renne et al.(2010)}
+    \field{volume}{75}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{2011}
+  \endentry
+
+  \entry{stacey1975}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SJ}{%
+         family={Stacey},
+         familyi={S\bibinitperiod},
+         given={JS},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kramers},
+         familyi={K\bibinitperiod},
+         given={JD},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SJKJ1}
+    \strng{fullhash}{SJKJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{207\bibrangedash 221}
+    \field{title}{Approximation of terrestrial lead isotope evolution by a
+  two-stage model}
+    \field{volume}{26}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{1975}
+  \endentry
+\enddatalist
+\endinput
