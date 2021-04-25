@@ -1,0 +1,597 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{catanzaro1969}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CE}{%
+         family={Catanzaro},
+         familyi={C\bibinitperiod},
+         given={EJ},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Murphy},
+         familyi={M\bibinitperiod},
+         given={TJ},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=GE}{%
+         family={Garner},
+         familyi={G\bibinitperiod},
+         given={EL},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SW}{%
+         family={Shields},
+         familyi={S\bibinitperiod},
+         given={WR},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CE+1}
+    \strng{fullhash}{CEMTGESW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1969}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{511\bibrangedash 516}
+    \field{title}{Absolute isotopic abundance ratio and atomic weight of
+  terrestrial rubidium}
+    \field{volume}{73}
+    \field{journaltitle}{J. Res. Natl. Bur. Stand. A}
+    \field{year}{1969}
+  \endentry
+
+  \entry{chang2002}{article}{}
+    \name{author}{5}{}{%
+      {{hash=CTL}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Tsing-Lien},
+         giveni={T\bibinithyphendelim L\bibinitperiod},
+      }}%
+      {{hash=ZMT}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Mo-Tian},
+         giveni={M\bibinithyphendelim T\bibinitperiod},
+      }}%
+      {{hash=LWJ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Wen-Jun},
+         giveni={W\bibinithyphendelim J\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=QQY}{%
+         family={Qian},
+         familyi={Q\bibinitperiod},
+         given={Qiu-Yu},
+         giveni={Q\bibinithyphendelim Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{CTL+1}
+    \strng{fullhash}{CTLZMTLWJWJQQY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{2}
+    \field{pages}{167\bibrangedash 172}
+    \field{title}{Absolute isotopic composition and atomic weight of samarium}
+    \field{volume}{218}
+    \field{journaltitle}{International Journal of Mass Spectrometry}
+    \field{year}{2002}
+  \endentry
+
+  \entry{compston1971}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=CW}{%
+         family={Compston},
+         familyi={C\bibinitperiod},
+         given={W},
+         giveni={W},
+      }}%
+      {{hash=BH}{%
+         family={Berry},
+         familyi={B\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+      {{hash=VM}{%
+         family={Vernon},
+         familyi={V\bibinitperiod},
+         given={MJ},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Chappell},
+         familyi={C\bibinitperiod},
+         given={BW},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kaye},
+         familyi={K\bibinitperiod},
+         given={MJ},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CW+1}
+    \strng{fullhash}{CWBHVMCBKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1971}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Lunar and Planetary Science Conference Proceedings}
+    \field{pages}{1471}
+    \field{title}{{Rubidium-strontium chronology and chemistry of lunar
+  material from the Ocean of Storms}}
+    \field{volume}{2}
+    \field{year}{1971}
+  \endentry
+
+  \entry{delaeter2006}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DLJ}{%
+         family={De\bibnamedelima Laeter},
+         familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+         given={JR},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BN}{%
+         family={Bukilic},
+         familyi={B\bibinitperiod},
+         given={N},
+         giveni={N},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {APS}%
+    }
+    \strng{namehash}{DLJBN1}
+    \strng{fullhash}{DLJBN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{4}
+    \field{pages}{045806}
+    \field{title}{Solar abundance of $^{176}$Lu and s-process nucleosynthesis}
+    \field{volume}{73}
+    \field{journaltitle}{Physical Review C}
+    \field{year}{2006}
+  \endentry
+
+  \entry{gramlich1973}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GJW}{%
+         family={Gramlich},
+         familyi={G\bibinitperiod},
+         given={John\bibnamedelima W},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=MTJ}{%
+         family={Murphy},
+         familyi={M\bibinitperiod},
+         given={Thomas\bibnamedelima J},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GEL}{%
+         family={Garner},
+         familyi={G\bibinitperiod},
+         given={Ernest\bibnamedelima L},
+         giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SWR}{%
+         family={Shields},
+         familyi={S\bibinitperiod},
+         given={William\bibnamedelima R},
+         giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {National Institute of Standards}%
+      {Technology}%
+    }
+    \strng{namehash}{GJW+1}
+    \strng{fullhash}{GJWMTJGELSWR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1973}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{6}
+    \field{pages}{691}
+    \field{title}{Absolute isotopic abundance ratio and atomic weight of a
+  reference sample of rhenium}
+    \field{volume}{77}
+    \field{journaltitle}{Journal of research of the National Bureau of
+  Standards. Section A, Physics and Chemistry}
+    \field{year}{1973}
+  \endentry
+
+  \entry{lugmair1978}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LG}{%
+         family={Lugmair},
+         familyi={L\bibinitperiod},
+         given={GW},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Marti},
+         familyi={M\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LGMK1}
+    \strng{fullhash}{LGMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1978}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{3}
+    \field{pages}{349\bibrangedash 357}
+    \field{title}{{Lunar initial $^{143}$Nd/$^{144}$Nd: differential evolution
+  of the lunar crust and mantle}}
+    \field{volume}{39}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{1978}
+  \endentry
+
+  \entry{moore1982}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ML}{%
+         family={Moore},
+         familyi={M\bibinitperiod},
+         given={LJ},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Murphy},
+         familyi={M\bibinitperiod},
+         given={TJ},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BI}{%
+         family={Barnes},
+         familyi={B\bibinitperiod},
+         given={IL},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Paulsen},
+         familyi={P\bibinitperiod},
+         given={PJ},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ML+1}
+    \strng{fullhash}{MLMTBIPP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1982}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 8}
+    \field{title}{Absolute isotopic abundance ratios and atomic weight of a
+  reference sample of strontium}
+    \field{volume}{87}
+    \field{journaltitle}{Journal of Research of the National Bureau of
+  Standards}
+    \field{year}{1982}
+  \endentry
+
+  \entry{patchett1983}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PPJ}{%
+         family={Patchett},
+         familyi={P\bibinitperiod},
+         given={P\bibnamedelima Jonathan},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{PPJ1}
+    \strng{fullhash}{PPJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1983}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{1}
+    \field{pages}{81\bibrangedash 91}
+    \field{title}{{Importance of the Lu-Hf isotopic system in studies of
+  planetary chronology and chemical evolution}}
+    \field{volume}{47}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{1983}
+  \endentry
+
+  \entry{selby2007}{article}{}
+    \name{author}{5}{}{%
+      {{hash=SD}{%
+         family={Selby},
+         familyi={S\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CRA}{%
+         family={Creaser},
+         familyi={C\bibinitperiod},
+         given={Robert\bibnamedelima A},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=SHJ}{%
+         family={Stein},
+         familyi={S\bibinitperiod},
+         given={Holly\bibnamedelima J},
+         giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MRJ}{%
+         family={Markey},
+         familyi={M\bibinitperiod},
+         given={Richard\bibnamedelima J},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HJL}{%
+         family={Hannah},
+         familyi={H\bibinitperiod},
+         given={Judith\bibnamedelima L},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SD+1}
+    \strng{fullhash}{SDCRASHJMRJHJL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{8}
+    \field{pages}{1999\bibrangedash 2013}
+    \field{title}{{Assessment of the $^{187}$Re decay constant by cross
+  calibration of Re--Os molybdenite and U--Pb zircon chronometers in magmatic
+  ore systems}}
+    \field{volume}{71}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{2007}
+  \endentry
+
+  \entry{soderlund2004}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SU}{%
+         family={S{\"o}derlund},
+         familyi={S\bibinitperiod},
+         given={Ulf},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=PPJ}{%
+         family={Patchett},
+         familyi={P\bibinitperiod},
+         given={P\bibnamedelima Jonathan},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=VJD}{%
+         family={Vervoort},
+         familyi={V\bibinitperiod},
+         given={Jeffrey\bibnamedelima D},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=ICE}{%
+         family={Isachsen},
+         familyi={I\bibinitperiod},
+         given={Clark\bibnamedelima E},
+         giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SU+1}
+    \strng{fullhash}{SUPPJVJDICE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{3}
+    \field{pages}{311\bibrangedash 324}
+    \field{title}{{The $^{176}$Lu decay constant determined by Lu--Hf and U--Pb
+  isotope systematics of Precambrian mafic intrusions}}
+    \field{volume}{219}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{2004}
+  \endentry
+
+  \entry{villa2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=VIM}{%
+         family={Villa},
+         familyi={V\bibinitperiod},
+         given={Igor\bibnamedelima Maria},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=DBP}{%
+         family={De\bibnamedelima Bi{\`e}vre},
+         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=HN}{%
+         family={Holden},
+         familyi={H\bibinitperiod},
+         given={NE},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Renne},
+         familyi={R\bibinitperiod},
+         given={PR},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{VIM+1}
+    \strng{fullhash}{VIMDBPHNRP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{pages}{382\bibrangedash 385}
+    \field{title}{{IUPAC-IUGS recommendation on the half life of $^{87}$Rb}}
+    \field{volume}{164}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{2015}
+  \endentry
+
+  \entry{volkening1991}{article}{}
+    \name{author}{3}{}{%
+      {{hash=VJ}{%
+         family={V{\"o}lkening},
+         familyi={V\bibinitperiod},
+         given={Joachim},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WT}{%
+         family={Walczyk},
+         familyi={W\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HKG}{%
+         family={Heumann},
+         familyi={H\bibinitperiod},
+         given={Klaus\bibnamedelima G},
+         giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{VJWTHKG1}
+    \strng{fullhash}{VJWTHKG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1991}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{2}
+    \field{pages}{147\bibrangedash 159}
+    \field{title}{Osmium isotope ratio determinations by negative thermal
+  ionization mass spectrometry}
+    \field{volume}{105}
+    \field{journaltitle}{International Journal of Mass Spectrometry and Ion
+  Processes}
+    \field{year}{1991}
+  \endentry
+
+  \entry{zhao2005}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZM}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Motian},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ZT}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Tao},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jun},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Hai},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=XF}{%
+         family={Xiang},
+         familyi={X\bibinitperiod},
+         given={Fang},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{ZM+1}
+    \strng{fullhash}{ZMZTWJLHXF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{labeldatesource}{}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{number}{1-3}
+    \field{pages}{36\bibrangedash 40}
+    \field{title}{{Absolute measurements of neodymium isotopic abundances and
+  atomic weight by MC-ICPMS}}
+    \field{volume}{245}
+    \field{journaltitle}{International Journal of Mass Spectrometry}
+    \field{year}{2005}
+  \endentry
+\enddatalist
+\endinput

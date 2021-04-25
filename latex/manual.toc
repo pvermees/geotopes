@@ -212,7 +212,7 @@
 \defcounter {refsection}{14}\relax 
 \contentsline {chapter}{\numberline {25}U--Pb}{141}{chapter.25}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.1}General options}{141}{section.25.1}%
+\contentsline {section}{\numberline {25.1}General options}{142}{section.25.1}%
 \defcounter {refsection}{14}\relax 
 \contentsline {section}{\numberline {25.2}Concordia}{144}{section.25.2}%
 \defcounter {refsection}{14}\relax 
@@ -220,40 +220,48 @@
 \defcounter {refsection}{14}\relax 
 \contentsline {section}{\numberline {25.4}Radial plots}{149}{section.25.4}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.5}Weighted mean}{150}{section.25.5}%
+\contentsline {section}{\numberline {25.5}Weighted mean}{151}{section.25.5}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.6}Kernel density estimates}{151}{section.25.6}%
+\contentsline {section}{\numberline {25.6}Kernel density estimates}{152}{section.25.6}%
 \defcounter {refsection}{14}\relax 
 \contentsline {section}{\numberline {25.7}Cumulative age distributions}{152}{section.25.7}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.8}Ages}{152}{section.25.8}%
+\contentsline {section}{\numberline {25.8}Ages}{153}{section.25.8}%
 \defcounter {refsection}{15}\relax 
-\contentsline {chapter}{\numberline {26}Pb--Pb and Th--Pb}{154}{chapter.26}%
+\contentsline {chapter}{\numberline {26}Pb--Pb and Th--Pb}{155}{chapter.26}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.1}Pb--Pb}{154}{section.26.1}%
+\contentsline {section}{\numberline {26.1}Pb--Pb}{155}{section.26.1}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.2}Pb--Pb isochrons}{154}{section.26.2}%
+\contentsline {section}{\numberline {26.2}Pb--Pb isochrons}{155}{section.26.2}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.3}Pb--Pb ages}{155}{section.26.3}%
+\contentsline {section}{\numberline {26.3}Pb--Pb ages}{156}{section.26.3}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.4}Th--Pb}{156}{section.26.4}%
+\contentsline {section}{\numberline {26.4}Th--Pb}{157}{section.26.4}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.5}Th--Pb isochrons}{156}{section.26.5}%
+\contentsline {section}{\numberline {26.5}Th--Pb isochrons}{157}{section.26.5}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.6}Th--Pb ages}{157}{section.26.6}%
+\contentsline {section}{\numberline {26.6}Th--Pb ages}{158}{section.26.6}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.7}Radial, weighted mean, KDE and CAD plots}{157}{section.26.7}%
+\contentsline {section}{\numberline {26.7}Radial, weighted mean, KDE and CAD plots}{158}{section.26.7}%
 \defcounter {refsection}{16}\relax 
-\contentsline {chapter}{\numberline {27}Ar--Ar and K--Ca}{159}{chapter.27}%
+\contentsline {chapter}{\numberline {27}Ar--Ar and K--Ca}{160}{chapter.27}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.1}Ar--Ar}{159}{section.27.1}%
+\contentsline {section}{\numberline {27.1}Ar--Ar}{160}{section.27.1}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.2}K--Ca}{159}{section.27.2}%
+\contentsline {section}{\numberline {27.2}K--Ca}{161}{section.27.2}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.3}Isochrons}{160}{section.27.3}%
+\contentsline {section}{\numberline {27.3}Isochrons}{161}{section.27.3}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.4}Ages}{161}{section.27.4}%
+\contentsline {section}{\numberline {27.4}Ages}{162}{section.27.4}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.5}Ar--Ar age spectra}{162}{section.27.5}%
+\contentsline {section}{\numberline {27.5}Ar--Ar age spectra}{163}{section.27.5}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.6}Radial, weighted mean, KDE and CAD plots}{162}{section.27.6}%
+\contentsline {section}{\numberline {27.6}Radial, weighted mean, KDE and CAD plots}{164}{section.27.6}%
+\defcounter {refsection}{17}\relax 
+\contentsline {chapter}{\numberline {28}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{166}{chapter.28}%
+\defcounter {refsection}{17}\relax 
+\contentsline {section}{\numberline {28.1}Stable isotope ratios and decay constants}{166}{section.28.1}%
+\defcounter {refsection}{17}\relax 
+\contentsline {section}{\numberline {28.2}Isochrons}{167}{section.28.2}%
+\defcounter {refsection}{17}\relax 
+\contentsline {section}{\numberline {28.3}Ages, weighted means, radial, KDE and CAD plots}{168}{section.28.3}%

@@ -26,7 +26,17 @@ UPb3 <- read.data('UPb8.csv',method='U-Pb',format=8,ierr=4)
 \noindent where \texttt{UPb1.csv}, \texttt{UPb6.csv} and
 \texttt{UPb8.csv} are files that, like the example files of
 Section~\ref{ch:generic-R}, are included in \texttt{IsoplotR} and
-whose file path can be found with the \texttt{system.file()} function.\\
+whose file path can be found with the \texttt{system.file()}
+function. \texttt{read.data()} produces a list with three items:
+
+\begin{enumerate}
+\item\texttt{format} stores the value of the eponymous argument
+\item\texttt{x} is the actual data table
+\item\texttt{d} is another list with information about any initial
+  disequilibrium of the \textsuperscript{238}U and
+  \textsuperscript{235}U decay chains (see
+  Section~\ref{sec:general}\ref{it:diseq} for details).
+\end{enumerate}
 
 \noindent\begin{minipage}[t]{.15\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -177,10 +187,10 @@ cad(UPb1,common.Pb=3)
 
 \end{enumerate}
 
-\item Initial disequilibrium can be activated by ticking the
-  corresponding box in the GUI, or by calling the \texttt{diseq()}
-  function from the CLI. The output of the latter function must be
-  called from the \texttt{read.data()} function.
+\item\label{it:diseq} Initial disequilibrium can be activated by
+  ticking the corresponding box in the GUI, or by calling the
+  \texttt{diseq()} function from the CLI. The output of the latter
+  function must be called from the \texttt{read.data()} function.
 
 \noindent\begin{minipage}[t]{.6\linewidth}
   \strut\vspace*{-\baselineskip}\newline
@@ -361,7 +371,7 @@ concordia(UPb1,alpha=0.14)
 U--Pb dataset of format~7 or 8 and use the Th/U ratios to build a
 colour scale:
 \begin{console}
-ThU <- UPb3$x$Th232U238
+ThU <- UPb3$x[,'Th232U238']
 \end{console}
 
 \noindent Specify the fill colours by name:
@@ -679,7 +689,7 @@ par(oldpar)
 From the CLI, we can also store the results of the isochron regression
 in a variable for further processing. For example:
 \begin{script}
-ThU <- UPb3$x$Th232U238
+ThU <- UPb3$x[,'Th232U238']
 fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),ylim=c(0,0.5),
                 alpha=0.1,sigdig=3,show.numbers=TRUE,levels=ThU,
                 ellipse.fill=c('white','red'),ellipse.stroke='blue',
@@ -820,7 +830,7 @@ radialplot(UPb3,common.Pb=3,cutoff.disc=dscf)
 oldpar <- par(pch=0.9) # font magnification
 radialplot(UPb3,show.numbers=TRUE,exterr=TRUE,from=5,z0=30,to=150,
            pch=21,alpha=0.05,bg=c('white','red'),cex=2,
-           levels=UPb3$x$Th232U238,clabel='Th/U')
+           levels=UPb3$x[,'Th232U238'],clabel='Th/U')
 par(oldpar)
 \end{script}
 
@@ -834,7 +844,7 @@ shares several options with it.
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbWtdMeanAgeType.png}
+\includegraphics[width=\linewidth]{../figures/UPbWtdMeanAgeType.png}\\
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
   Like the radial plot, also the weighted mean function can be
@@ -887,7 +897,7 @@ Section~\ref{sec:OtherWeightedMean}.\\
 \begin{script}
 weightedmean(UPb3,random.effects=TRUE,detect.outliers=TRUE,
              outlier.col='red',ranked=TRUE,from=-10,to=100,
-             alpha=0.02,sigdig=1,levels=UPb3$x$Th232U238,
+             alpha=0.02,sigdig=1,levels=UPb3$x[,'Th232U238'],
              rect.col=rev(topo.colors(n=100)),clabel='Th/U')
 \end{script}
 
@@ -896,7 +906,7 @@ weightedmean(UPb3,random.effects=TRUE,detect.outliers=TRUE,
 
 Like the radial plot and weighted mean plot, also the kernel density
 estimation function can be applied to five or six different types of
-U--(Th)--Pb dates.
+U--(Th)--Pb dates.\\
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline

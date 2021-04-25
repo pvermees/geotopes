@@ -18,6 +18,10 @@
 PbPb <- read.data('PbPb3.csv',method='Pb-Pb',format=3)
 \end{console}
 
+\noindent which returns a list with items \texttt{format} and
+\texttt{x} containing the input format and isotopic ratio data,
+respectively.\\
+
 \noindent\begin{minipage}[t]{.15\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/PbPbPlotdevices.png}\\
@@ -208,6 +212,10 @@ age(PbPb,common.Pb=1)
 \begin{script}
 ThPb <- read.data('ThPb2.csv',method='Th-Pb',format=2)
 \end{script}
+
+\noindent which returns a list with items \texttt{format} and
+\texttt{x} containing the input format and isotopic ratio data,
+respectively.\\
 
 \noindent\includegraphics[width=.7\linewidth]{../figures/ThPbLambda.png}\\
 \noindent The default values for the initial

@@ -5,19 +5,29 @@
 
 \section{Ar--Ar}\label{sec:ArAr-R}
 
-\noindent\begin{minipage}[t]{.3\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/PbPbFormats.png}
-\end{minipage}
-\begin{minipage}[t]{.7\textwidth}
-  \texttt{IsoplotR} accommodates three Ar--Ar formats. See
-  Section~\ref{sec:ArAr} for details.
-\end{minipage}
+\texttt{IsoplotR} accommodates three Ar--Ar formats. See
+Section~\ref{sec:ArAr} for details. The left hand side of the GUI
+contains the usual input table, as well as two text boxes for the
+J-factor and its standard error:
+
+\noindent\includegraphics[width=\linewidth]{../figures/ArArInputTableFormats.png}\\
+
+The input files for the CLI represent the same structure: they contain
+both the J factor and the isotopic ratio data.
 
 \begin{console}
-ArAr <- read.data('ArAr3.csv',method='Ar-Ar',format=3)
+ArAr <- read.data('ArAr1.csv',method='Ar-Ar',format=1)
 \end{console}
 
+The output of the \texttt{read.data()} function reflects the contents
+of the input file. It returns a list with three items:
+
+\begin{enumerate}
+\item\texttt{format} stores the value of the eponymous argument,
+\item\texttt{J} is a two-element vector with the J-factor and its standard error,
+\item\texttt{x} contains the isotopic ratio data.
+\end{enumerate}
+  
 \noindent\begin{minipage}[t]{.15\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/ArArPlotdevices.png}\\
@@ -47,7 +57,7 @@ settings('iratio','40Ar36Ar',295.5,0.5)
 \end{minipage}
 \noindent\begin{minipage}[t]{.15\linewidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/PbPbPlotdevices.png}\\
+\includegraphics[width=\linewidth]{../figures/PbPbPlotdevices.png}
 \end{minipage}
 \begin{minipage}[t]{.55\textwidth}
   \texttt{IsoplotR} accommodates three K--Ca formats (see
@@ -58,6 +68,10 @@ settings('iratio','40Ar36Ar',295.5,0.5)
 \begin{script}
 KCa <- read.data('KCa3.csv',method='K-Ca',format=3)
 \end{script}
+
+\noindent which returns a list with items \texttt{format} and
+\texttt{x} containing the input format and isotopic ratio data,
+respectively.\\
 
 \noindent\includegraphics[width=.7\linewidth]{../figures/KCaLambda.png}\\
 
@@ -220,18 +234,19 @@ Or alternatively, the
 retrieved from \verb|settings('iratio','Ca40Ca44')|.
 \end{minipage}
 
-\begin{console}
+\begin{script}
 settings('iratio','Ca40Ca44',50,0)
 age(KCa)
-\end{console}
+\end{script}
 
 \section{Ar--Ar age spectra}\label{sec:ArArAgeSpectra}
 
-There are just two minor differences between Ar--Ar age spectra and
-the generic age spectrum function of
+There are just two minor differences between Ar--Ar age spectrum
+function and the generic age spectrum function of
 Section~\ref{sec:OtherAgeSpectra}. First, an atmospheric argon
 correction can be made to each aliquot in exactly the same way as
-described in Section~\ref{sec:ArArKCaAges}.
+described in Section~\ref{sec:ArArKCaAges}: either by using a nominal
+value or the isochron intercept:
 
 \begin{console}
 agespectrum(ArAr,plateau=TRUE,i2i=TRUE)
@@ -288,58 +303,55 @@ the generic settings for those graphical devices
 (Sections~\ref{sec:OtherRadial}--\ref{sec:OtherCAD}) with the settings
 for the age calculator.\\
 
-\noindent\begin{minipage}[t]{.45\linewidth}
+\noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/PbPbRadialOptions.png}
+\includegraphics[width=\linewidth]{../figures/KCaKDE.png}
 \end{minipage}
-\begin{minipage}[t]{.55\linewidth}
-  For example, here are shown the GUI settings for a radial plot of
-  numbered Pb--Pb data, which is plotted on a linear scale that
-  stretches from 4555 to 4575~Ma and is centred around 4565~Ma. Single
-  grain ages are corrected using the isochron based common Pb
-  composition, and a single age component is fitted to them. The
-  standard errors of the central age and the single component age
-  include decay constant uncertainties.
+\begin{minipage}[t]{.5\linewidth}
+  For example, here are shown the GUI settings for a KDE plot of the
+  \texttt{KCa} dataset, which is plotted on a logarithmic scale that
+  stretches from 700 to 1000~Ma and uses a fixed kernel bandwidth and
+  binwidth of 2\%.
 \end{minipage}
 
-\begin{console}
-radialplot(PbPb,show.numbers=TRUE,exterr=TRUE,transformation='linear',
-           k=1,from=4555,to=4575,z0=4565)
-\end{console}
+\begin{script}
+kde(examples$KCa,log=TRUE,from=700,to=1000,bw=0.02,
+    binwidth=0.02,adaptive=FALSE,i2i=TRUE)
+\end{script}
 
-Similarly, the weighted mean, KDE and CAD functions work exactly as
-the generic versions of Chapter~\ref{ch:generic-R}, with the only
-difference being the common Pb correction, and the ability to
-propagate external uncertainties.\\
+Similarly, the weighted mean, radial plot and CAD functions work
+exactly as the generic versions of Chapter~\ref{ch:generic-R}, with
+the only difference being the inherited daughter correction, and the
+ability to propagate external uncertainties.\\
 
 \noindent CLI examples:
 
 \begin{enumerate}
 
-\item The weighted mean using a nominal common Pb correction with
-  \textsuperscript{206}Pb/\textsuperscript{204}Pb = 9.15 and
-  \textsuperscript{207}Pb/\textsuperscript{204}Pb = 10.23; applying
-  the random effects model and plotting the ranked ages:
-  
+\item A radial plot on a logarithmic scale that ranges 60 to 64~Ma and
+  is centred at 61~Ma, with samples coloured according to their
+  measured \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio:
+
 \begin{script}
-settings('iratio','Pb206Pb204',9.15)
-settings('iratio','Pb206Pb204',10.23)
-weightedmean(PbPb,common.Pb=1,random.effects=TRUE,ranked=TRUE)
+lev <- 1/ArAr$x[,'Ar36Ar40'] # compute 40/36 ratios
+radialplot(ArAr,from=60,to=64,z0=61,levels=lev,
+           clabel=expression(''^40*'Ar/'^36*'Ar'))
 \end{script}
 
-\item An orange KDE without histogram or rug plot, using an isochron
-  based common Pb correction, with a 20~Myr bandwidth and axis limits
-  from 4500 to 4600~Ga:
+\item The weighted mean using a nominal atmospheric argon correction
+  using the \citep{nier1950}
+  \textsuperscript{40}Ar/\textsuperscript{36}Ar value; applying the
+  random effects model and plotting the ranked ages:
+  
+\begin{script}
+settings('iratio','Ar40Ar39',295.5,0.5)
+weightedmean(ArAr,i2i=FALSE,random.effects=TRUE,ranked=TRUE)
+\end{script}
+
+\item A CAD without vertical lines:
 
 \begin{console}
-kde(PbPb,kde.col='orange',rug=FALSE,show.hist=FALSE,
-    common.Pb=2,bw=20,from=4500,to=4600)
-\end{console}
-
-\item A CAD with without vertical lines and steps marked by `x':
-
-\begin{console}
-cad(PbPb,verticals=TRUE,pch='x')
+cad(KCa,verticals=FALSE)
 \end{console}
   
 \end{enumerate}
