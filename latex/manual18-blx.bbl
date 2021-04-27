@@ -1,0 +1,160 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{jaffey1971}{article}{}
+    \name{author}{5}{}{%
+      {{hash=JA}{%
+         family={Jaffey},
+         familyi={J\bibinitperiod},
+         given={AH},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FK}{%
+         family={Flynn},
+         familyi={F\bibinitperiod},
+         given={KF},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Glendenin},
+         familyi={G\bibinitperiod},
+         given={LE},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={Bentley},
+         familyi={B\bibinitperiod},
+         given={WC},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=EA}{%
+         family={Essling},
+         familyi={E\bibinitperiod},
+         given={AM},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {APS}%
+    }
+    \strng{namehash}{JA+1}
+    \strng{fullhash}{JAFKGLBWEA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1971}
+    \field{labeldatesource}{}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{number}{5}
+    \field{pages}{1889}
+    \field{title}{{Precision measurement of half-lives and specific activities
+  of U-235 and U-238}}
+    \field{volume}{4}
+    \field{journaltitle}{Physical Review C}
+    \field{year}{1971}
+  \endentry
+
+  \entry{leroux1963}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LRLJ}{%
+         family={Le\bibnamedelima Roux},
+         familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={L.\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GLE}{%
+         family={Glendenin},
+         familyi={G\bibinitperiod},
+         given={L.\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRLJGLE1}
+    \strng{fullhash}{LRLJGLE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1963}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{Half-life of $^{232}$Th.}}
+    \field{journaltitle}{Proceedings of the National Meeting on Nuclear Energy,
+  Pretoria, South Africa}
+    \field{year}{1963}
+  \endentry
+
+  \entry{villa2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=VIM}{%
+         family={Villa},
+         familyi={V\bibinitperiod},
+         given={Igor\bibnamedelima Maria},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HNE}{%
+         family={Holden},
+         familyi={H\bibinitperiod},
+         given={Norman\bibnamedelima E},
+         giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Possolo},
+         familyi={P\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=IR}{%
+         family={Ickert},
+         familyi={I\bibinitperiod},
+         given={RB},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Hibbert},
+         familyi={H\bibinitperiod},
+         given={DB},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Renne},
+         familyi={R\bibinitperiod},
+         given={PR},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{VIM+1}
+    \strng{fullhash}{VIMHNEPAIRHDRP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{pages}{70\bibrangedash 77}
+    \field{title}{{IUPAC-IUGS recommendation on the half-lives of $^{147}$Sm
+  and $^{146}$Sm}}
+    \field{volume}{285}
+    \field{journaltitle}{Geochimica et cosmochimica acta}
+    \field{year}{2020}
+  \endentry
+\enddatalist
+\endinput

@@ -265,3 +265,7 @@
 \contentsline {section}{\numberline {28.2}Isochrons}{167}{section.28.2}%
 \defcounter {refsection}{17}\relax 
 \contentsline {section}{\numberline {28.3}Ages, weighted means, radial, KDE and CAD plots}{168}{section.28.3}%
+\defcounter {refsection}{18}\relax 
+\contentsline {chapter}{\numberline {29}U--Th--(Sm)--He}{171}{chapter.29}%
+\defcounter {refsection}{18}\relax 
+\contentsline {section}{\numberline {29.1}Helioplots}{171}{section.29.1}%

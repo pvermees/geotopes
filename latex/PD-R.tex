@@ -196,6 +196,56 @@ radialplot(LuHf,show.numbers=TRUE,transformation='linear',cex=1.5,
            levels=LuHf$x[,'Lu'],bg=rev(topo.colors(n=100)),i2i=TRUE)
 \end{script}
 
+\item\noindent\begin{minipage}[t]{.55\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ReOsWtdMean.png}
+\end{minipage}
+\begin{minipage}[t]{.45\linewidth}
+  The settings shown here implement the ordinary weighted mean of
+  Re--Os data whose non-radiogenic Os-composition is obtained from an
+  isochron fit. Decay constants have been omitted from the weighted
+  mean age, and the aliquots are not filtered by the modified
+  Chauvenet outlier detection algorithm. Aliquots are ranked according
+  to age. The plot uses the default y-axis limits, significance
+  criterion, precision and font size. Aliquots are plotted as empty
+  rectangles.
+\end{minipage}
+
+\begin{console}
+weightedmean(ReOs,detect.outliers=FALSE,ranked=TRUE,rect.col=NA,i2i=TRUE)
+\end{console}
+
+\item\noindent\begin{minipage}[t]{.55\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/RbSrKDE.png}
+\end{minipage}
+\begin{minipage}[t]{.45\linewidth}
+  The settings here create a KDE of Rb--Sr data that ranges from 4495
+  to 4505~Ma, uses a fixed but default \citet{botev2010} histogram
+  bandwidth and a 1~Myr histogram bin width. The non-radiogenic
+  Sr-composition is derived from the best fitting isochron intercept.
+  All other settings follow the default values.
+\end{minipage}
+
+\begin{console}
+cad(RbSr,from=4495,to=4505,binwidth=1,adaptive=FALSE,i2i=TRUE)
+\end{console}
+
+\item\noindent\begin{minipage}[t]{.65\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/SmNdCAD.png}
+\end{minipage}
+\begin{minipage}[t]{.35\linewidth}
+  Settings for a CAD plot of Sm--Nd data with a nominal inherited
+  \textsuperscript{142}Nd/\textsuperscript{144}Nd-ratio of 0.508
+  and default values for all other settings.
+\end{minipage}
+
+\begin{console}
+settings('iratio','Nd143Nd144',0.508)
+cad(SmNd,i2i=FALSE)
+\end{console}
+
 \end{enumerate}
 
 \printbibliography[heading=subbibliography]
