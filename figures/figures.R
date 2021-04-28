@@ -676,7 +676,7 @@ agespectrum(examples$ArAr,levels=1/examples$ArAr$x[,'Ar36Ar40'],
 kde(examples$KCa,log=TRUE,from=700,to=1000,bw=0.02,
     binwidth=0.02,adaptive=FALSE,i2i=TRUE)
 
-lev <- 1/examples$ArAr$x[,'Ar40Ar36']
+lev <- 1/examples$ArAr$x[,'Ar36Ar40']
 radialplot(examples$ArAr,from=60,to=64,z0=61,levels=lev,
            clabel=expression(''^40*'Ar/'^36*'Ar'))
 

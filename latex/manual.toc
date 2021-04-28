@@ -170,102 +170,112 @@
 \defcounter {refsection}{9}\relax 
 \contentsline {section}{\numberline {20.4}Zero track counts}{113}{section.20.4}%
 \defcounter {refsection}{10}\relax 
-\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U dating}{115}{chapter.21}%
+\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U dating}{116}{chapter.21}%
 \defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.1}Data formats}{116}{section.21.1}%
+\contentsline {section}{\numberline {21.1}Data formats}{117}{section.21.1}%
 \defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.2}Isochrons}{116}{section.21.2}%
+\contentsline {section}{\numberline {21.2}Isochrons}{117}{section.21.2}%
 \defcounter {refsection}{10}\relax 
-\contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{117}{section.21.3}%
+\contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{118}{section.21.3}%
 \defcounter {refsection}{11}\relax 
-\contentsline {chapter}{\numberline {22}Detrital geochronology}{119}{chapter.22}%
+\contentsline {chapter}{\numberline {22}Detrital geochronology}{120}{chapter.22}%
 \defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.1}Maximum depositional age estimation}{119}{section.22.1}%
+\contentsline {section}{\numberline {22.1}Maximum depositional age estimation}{120}{section.22.1}%
 \defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.2}Multi-sample plots}{120}{section.22.2}%
+\contentsline {section}{\numberline {22.2}Multi-sample plots}{121}{section.22.2}%
 \defcounter {refsection}{11}\relax 
-\contentsline {section}{\numberline {22.3}Multidimensional scaling}{122}{section.22.3}%
+\contentsline {section}{\numberline {22.3}Multidimensional scaling}{123}{section.22.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{126}{part.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{127}{part.3}%
 \defcounter {refsection}{12}\relax 
-\contentsline {chapter}{\numberline {23}Introduction to \texttt {IsoplotR}}{127}{chapter.23}%
+\contentsline {chapter}{\numberline {23}Introduction to \texttt {IsoplotR}}{128}{chapter.23}%
 \defcounter {refsection}{12}\relax 
-\contentsline {section}{\numberline {23.1}Software architecture}{127}{section.23.1}%
+\contentsline {section}{\numberline {23.1}Software architecture}{128}{section.23.1}%
 \defcounter {refsection}{12}\relax 
-\contentsline {section}{\numberline {23.2}The Graphical User Interface (GUI)}{128}{section.23.2}%
+\contentsline {section}{\numberline {23.2}The Graphical User Interface (GUI)}{129}{section.23.2}%
 \defcounter {refsection}{12}\relax 
-\contentsline {section}{\numberline {23.3}The Command Line Interface (CLI)}{130}{section.23.3}%
+\contentsline {section}{\numberline {23.3}The Command Line Interface (CLI)}{131}{section.23.3}%
 \defcounter {refsection}{13}\relax 
-\contentsline {chapter}{\numberline {24}Generic functions}{132}{chapter.24}%
+\contentsline {chapter}{\numberline {24}Generic functions}{133}{chapter.24}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.1}Radial plots}{133}{section.24.1}%
+\contentsline {section}{\numberline {24.1}Radial plots}{134}{section.24.1}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.2}Regression}{135}{section.24.2}%
+\contentsline {section}{\numberline {24.2}Regression}{136}{section.24.2}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.3}Weighted means}{136}{section.24.3}%
+\contentsline {section}{\numberline {24.3}Weighted means}{137}{section.24.3}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.4}Age spectra}{137}{section.24.4}%
+\contentsline {section}{\numberline {24.4}Age spectra}{138}{section.24.4}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.5}Kernel density estimates}{138}{section.24.5}%
+\contentsline {section}{\numberline {24.5}Kernel density estimates}{139}{section.24.5}%
 \defcounter {refsection}{13}\relax 
-\contentsline {section}{\numberline {24.6}Cumulative age distributions}{140}{section.24.6}%
+\contentsline {section}{\numberline {24.6}Cumulative age distributions}{141}{section.24.6}%
 \defcounter {refsection}{14}\relax 
-\contentsline {chapter}{\numberline {25}U--Pb}{141}{chapter.25}%
+\contentsline {chapter}{\numberline {25}U--Pb}{142}{chapter.25}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.1}General options}{142}{section.25.1}%
+\contentsline {section}{\numberline {25.1}General options}{143}{section.25.1}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.2}Concordia}{144}{section.25.2}%
+\contentsline {section}{\numberline {25.2}Concordia}{145}{section.25.2}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.3}Isochrons}{147}{section.25.3}%
+\contentsline {section}{\numberline {25.3}Isochrons}{148}{section.25.3}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.4}Radial plots}{149}{section.25.4}%
+\contentsline {section}{\numberline {25.4}Radial plots}{150}{section.25.4}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.5}Weighted mean}{151}{section.25.5}%
+\contentsline {section}{\numberline {25.5}Weighted mean}{152}{section.25.5}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.6}Kernel density estimates}{152}{section.25.6}%
+\contentsline {section}{\numberline {25.6}Kernel density estimates}{153}{section.25.6}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.7}Cumulative age distributions}{152}{section.25.7}%
+\contentsline {section}{\numberline {25.7}Cumulative age distributions}{153}{section.25.7}%
 \defcounter {refsection}{14}\relax 
-\contentsline {section}{\numberline {25.8}Ages}{153}{section.25.8}%
+\contentsline {section}{\numberline {25.8}Ages}{154}{section.25.8}%
 \defcounter {refsection}{15}\relax 
-\contentsline {chapter}{\numberline {26}Pb--Pb and Th--Pb}{155}{chapter.26}%
+\contentsline {chapter}{\numberline {26}Pb--Pb and Th--Pb}{156}{chapter.26}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.1}Pb--Pb}{155}{section.26.1}%
+\contentsline {section}{\numberline {26.1}Pb--Pb}{156}{section.26.1}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.2}Pb--Pb isochrons}{155}{section.26.2}%
+\contentsline {section}{\numberline {26.2}Pb--Pb isochrons}{156}{section.26.2}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.3}Pb--Pb ages}{156}{section.26.3}%
+\contentsline {section}{\numberline {26.3}Pb--Pb ages}{157}{section.26.3}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.4}Th--Pb}{157}{section.26.4}%
+\contentsline {section}{\numberline {26.4}Th--Pb}{158}{section.26.4}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.5}Th--Pb isochrons}{157}{section.26.5}%
+\contentsline {section}{\numberline {26.5}Th--Pb isochrons}{158}{section.26.5}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.6}Th--Pb ages}{158}{section.26.6}%
+\contentsline {section}{\numberline {26.6}Th--Pb ages}{159}{section.26.6}%
 \defcounter {refsection}{15}\relax 
-\contentsline {section}{\numberline {26.7}Radial, weighted mean, KDE and CAD plots}{158}{section.26.7}%
+\contentsline {section}{\numberline {26.7}Radial, weighted mean, KDE and CAD plots}{159}{section.26.7}%
 \defcounter {refsection}{16}\relax 
-\contentsline {chapter}{\numberline {27}Ar--Ar and K--Ca}{160}{chapter.27}%
+\contentsline {chapter}{\numberline {27}Ar--Ar and K--Ca}{161}{chapter.27}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.1}Ar--Ar}{160}{section.27.1}%
+\contentsline {section}{\numberline {27.1}Ar--Ar}{161}{section.27.1}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.2}K--Ca}{161}{section.27.2}%
+\contentsline {section}{\numberline {27.2}K--Ca}{162}{section.27.2}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.3}Isochrons}{161}{section.27.3}%
+\contentsline {section}{\numberline {27.3}Isochrons}{162}{section.27.3}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.4}Ages}{162}{section.27.4}%
+\contentsline {section}{\numberline {27.4}Ages}{163}{section.27.4}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.5}Ar--Ar age spectra}{163}{section.27.5}%
+\contentsline {section}{\numberline {27.5}Ar--Ar age spectra}{164}{section.27.5}%
 \defcounter {refsection}{16}\relax 
-\contentsline {section}{\numberline {27.6}Radial, weighted mean, KDE and CAD plots}{164}{section.27.6}%
+\contentsline {section}{\numberline {27.6}Radial, weighted mean, KDE and CAD plots}{165}{section.27.6}%
 \defcounter {refsection}{17}\relax 
-\contentsline {chapter}{\numberline {28}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{166}{chapter.28}%
+\contentsline {chapter}{\numberline {28}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{167}{chapter.28}%
 \defcounter {refsection}{17}\relax 
-\contentsline {section}{\numberline {28.1}Stable isotope ratios and decay constants}{166}{section.28.1}%
+\contentsline {section}{\numberline {28.1}Stable isotope ratios and decay constants}{167}{section.28.1}%
 \defcounter {refsection}{17}\relax 
-\contentsline {section}{\numberline {28.2}Isochrons}{167}{section.28.2}%
+\contentsline {section}{\numberline {28.2}Isochrons}{168}{section.28.2}%
 \defcounter {refsection}{17}\relax 
-\contentsline {section}{\numberline {28.3}Ages, weighted means, radial, KDE and CAD plots}{168}{section.28.3}%
+\contentsline {section}{\numberline {28.3}Ages, weighted means, radial, KDE and CAD plots}{169}{section.28.3}%
 \defcounter {refsection}{18}\relax 
-\contentsline {chapter}{\numberline {29}U--Th--(Sm)--He}{171}{chapter.29}%
+\contentsline {chapter}{\numberline {29}U--Th--(Sm)--He}{172}{chapter.29}%
 \defcounter {refsection}{18}\relax 
-\contentsline {section}{\numberline {29.1}Helioplots}{171}{section.29.1}%
+\contentsline {section}{\numberline {29.1}Helioplots}{173}{section.29.1}%
+\defcounter {refsection}{18}\relax 
+\contentsline {section}{\numberline {29.2}Ages and other plots}{174}{section.29.2}%
+\defcounter {refsection}{19}\relax 
+\contentsline {chapter}{\numberline {30}Fission tracks}{176}{chapter.30}%
+\defcounter {refsection}{19}\relax 
+\contentsline {section}{\numberline {30.1}Radial plots}{178}{section.30.1}%
+\defcounter {refsection}{19}\relax 
+\contentsline {section}{\numberline {30.2}\textzeta -calibration}{179}{section.30.2}%
+\defcounter {refsection}{19}\relax 
+\contentsline {section}{\numberline {30.3}Age, weighted mean, KDE and CAD functions}{179}{section.30.3}%
