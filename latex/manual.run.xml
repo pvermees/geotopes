@@ -64,6 +64,8 @@
       <file>manual17-blx.aux</file>
       <file>manual18-blx.aux</file>
       <file>manual19-blx.aux</file>
+      <file>manual20-blx.aux</file>
+      <file>manual21-blx.aux</file>
       <file>manual-blx.bib</file>
     </provides>
     <requires type="dynamic">
@@ -87,6 +89,8 @@
       <file>manual17-blx.bbl</file>
       <file>manual18-blx.bbl</file>
       <file>manual19-blx.bbl</file>
+      <file>manual20-blx.bbl</file>
+      <file>manual21-blx.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -632,6 +636,60 @@
     </provides>
     <requires type="dynamic">
       <file>manual19-blx.aux</file>
+      <file>manual-blx.bib</file>
+    </requires>
+    <requires type="editable">
+      <file>/home/pvermees/Dropbox/biblio.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
+    </requires>
+  </external>
+  <external package="biblatex" priority="5" active="0">
+    <generic>bibtex</generic>
+    <cmdline>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
+      <infile>manual20-blx</infile>
+    </cmdline>
+    <input>
+      <file>manual20-blx.aux</file>
+    </input>
+    <output>
+      <file>manual20-blx.bbl</file>
+    </output>
+    <provides type="dynamic">
+      <file>manual20-blx.bbl</file>
+    </provides>
+    <requires type="dynamic">
+      <file>manual20-blx.aux</file>
+      <file>manual-blx.bib</file>
+    </requires>
+    <requires type="editable">
+      <file>/home/pvermees/Dropbox/biblio.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
+    </requires>
+  </external>
+  <external package="biblatex" priority="5" active="0">
+    <generic>bibtex</generic>
+    <cmdline>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
+      <infile>manual21-blx</infile>
+    </cmdline>
+    <input>
+      <file>manual21-blx.aux</file>
+    </input>
+    <output>
+      <file>manual21-blx.bbl</file>
+    </output>
+    <provides type="dynamic">
+      <file>manual21-blx.bbl</file>
+    </provides>
+    <requires type="dynamic">
+      <file>manual21-blx.aux</file>
       <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">

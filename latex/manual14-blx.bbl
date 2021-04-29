@@ -17,68 +17,135 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{abramson1982}{article}{}
-    \name{author}{1}{}{%
-      {{hash=AIS}{%
-         family={Abramson},
+  \entry{audi2003}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AG}{%
+         family={Audi},
          familyi={A\bibinitperiod},
-         given={Ian\bibnamedelima S},
-         giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={Georges},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BO}{%
+         family={Bersillon},
+         familyi={B\bibinitperiod},
+         given={Olivier},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Blachot},
+         familyi={B\bibinitperiod},
+         given={Jean},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WAH}{%
+         family={Wapstra},
+         familyi={W\bibinitperiod},
+         given={Aaldert\bibnamedelima Hendrik},
+         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {JSTOR}%
+      {Elsevier}%
     }
-    \strng{namehash}{AIS1}
-    \strng{fullhash}{AIS1}
+    \strng{namehash}{AG+1}
+    \strng{fullhash}{AGBOBJWAH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{1982}
+    \field{labelyear}{2003}
     \field{labeldatesource}{}
     \field{sortinit}{A}
     \field{sortinithash}{A}
-    \field{pages}{1217\bibrangedash 1223}
-    \field{title}{On bandwidth variation in kernel estimates -- a square root
-  law}
-    \field{journaltitle}{The Annals of Statistics}
-    \field{year}{1982}
+    \field{number}{1}
+    \field{pages}{3\bibrangedash 128}
+    \field{title}{{The NUBASE evaluation of nuclear and decay properties}}
+    \field{volume}{729}
+    \field{journaltitle}{Nuclear Physics A}
+    \field{year}{2003}
   \endentry
 
-  \entry{botev2010}{article}{}
-    \name{author}{3}{}{%
-      {{hash=BZI}{%
-         family={{Botev}},
-         familyi={B\bibinitperiod},
-         given={Z.\bibnamedelima I.},
-         giveni={Z\bibinitperiod\bibinitdelim I\bibinitperiod},
+  \entry{cheng2013}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=CH}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Hai},
+         giveni={H\bibinitperiod},
       }}%
-      {{hash=GJF}{%
-         family={{Grotowski}},
-         familyi={G\bibinitperiod},
-         given={J.\bibnamedelima F.},
-         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      {{hash=ERL}{%
+         family={Edwards},
+         familyi={E\bibinitperiod},
+         given={R\bibnamedelima Lawrence},
+         giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
       }}%
-      {{hash=KDP}{%
-         family={{Kroese}},
+      {{hash=SCC}{%
+         family={Shen},
+         familyi={S\bibinitperiod},
+         given={Chuan-Chou},
+         giveni={C\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=PVJ}{%
+         family={Polyak},
+         familyi={P\bibinitperiod},
+         given={Victor\bibnamedelima J},
+         giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=AY}{%
+         family={Asmerom},
+         familyi={A\bibinitperiod},
+         given={Yemane},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Woodhead},
+         familyi={W\bibinitperiod},
+         given={Jon},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Hellstrom},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yongjin},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=KX}{%
+         family={Kong},
          familyi={K\bibinitperiod},
-         given={D.\bibnamedelima P.},
-         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+         given={Xinggong},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Sp{\"o}tl},
+         familyi={S\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
       }}%
     }
-    \strng{namehash}{BZIGJFKDP1}
-    \strng{fullhash}{BZIGJFKDP1}
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{CH+1}
+    \strng{fullhash}{CHERLSCCPVJAYWJHJWYKXSC+1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2010}
+    \field{labelyear}{2013}
     \field{labeldatesource}{}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \field{issue}{5}
-    \field{pages}{2916\bibrangedash 2957}
-    \field{title}{{Kernel density estimation via diffusion}}
-    \field{volume}{38}
-    \field{journaltitle}{Annals of Statistics}
-    \field{year}{2010}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{82\bibrangedash 91}
+    \field{title}{{Improvements in $^{230}$Th dating, $^{230}$Th and $^{234}$U
+  half-life values, and U--Th isotopic measurements by multi-collector
+  inductively coupled plasma mass spectrometry}}
+    \field{volume}{371}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{2013}
   \endentry
 
   \entry{hiess2012}{article}{}

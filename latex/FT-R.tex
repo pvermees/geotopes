@@ -276,28 +276,61 @@ The output of the function is not reported as a plot but as a small table.
 
 \section{Age, weighted mean, KDE and CAD functions}
 
-Like U--Th--He ages, also fission track data can be reliably (if
-imprecisely) determined on single crystals, without concerns about
-inherited daughter components.
+\begin{enumerate}
+
+\item Like U--Th--He ages, also fission track data can be reliably (if
+  imprecisely) determined on single crystals, without concerns about
+  inherited daughter components.\\
 
 \noindent\begin{minipage}[t]{.4\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/FTageSettings.png}
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
-  It is normally best not to propagate the \textzeta-calibration
-  uncertainty into the single grain age uncertainty if the resulting
-  ages are to be jointly considered in subsequent data processing
-  steps.
+It is normally best not to propagate the \textzeta-calibration
+uncertainty into the single grain age uncertainty if the resulting
+ages are to be jointly considered in subsequent data processing steps.
 \end{minipage}
 
 \begin{console}
 age(FT1,exterr=FALSE)
 \end{console}
 
-The weighted mean age is less useful than the central age due to the
-heteroscedasticity of fission track data, but is provided nonetheless
-for the sake of completeness.
+\item The weighted mean age is less useful than the central age due to
+  the heteroscedasticity of fission track data, but is provided
+  nonetheless for the sake of completeness.
+
+\begin{console}
+weightedmean(FT3)
+\end{console}
+
+\item Similarly, KDEs are less informative for fission track data than the
+  radial plot due to the large and variable measurement uncertainties.
+
+\noindent\begin{minipage}[t]{.2\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/UPbKDElogarithm.png}
+\end{minipage}
+\begin{minipage}[t]{.8\linewidth}
+  However, when a KDE is used, then it is advisable to use a
+  logarithmic transformation to account for the skewness of the
+  counting uncertainties.
+\end{minipage}
+
+\begin{console}
+kde(FT2,log=TRUE)
+\end{console}
+
+\item Like KDEs, also CADs do not explicitly account for the
+  heteroscedasticity of fission track data. They tend to have a steep
+  slope at the young end of the spectrum and gently level off towards
+  old ages.
+
+\begin{console}
+cad(FT1)
+\end{console}
+  
+\end{enumerate}
 
 \printbibliography[heading=subbibliography]
 

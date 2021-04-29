@@ -170,7 +170,7 @@
 \defcounter {refsection}{9}\relax 
 \contentsline {section}{\numberline {20.4}Zero track counts}{113}{section.20.4}%
 \defcounter {refsection}{10}\relax 
-\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U dating}{116}{chapter.21}%
+\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U}{116}{chapter.21}%
 \defcounter {refsection}{10}\relax 
 \contentsline {section}{\numberline {21.1}Data formats}{117}{section.21.1}%
 \defcounter {refsection}{10}\relax 
@@ -279,3 +279,17 @@
 \contentsline {section}{\numberline {30.2}\textzeta -calibration}{179}{section.30.2}%
 \defcounter {refsection}{19}\relax 
 \contentsline {section}{\numberline {30.3}Age, weighted mean, KDE and CAD functions}{179}{section.30.3}%
+\defcounter {refsection}{20}\relax 
+\contentsline {chapter}{\numberline {31}\textsuperscript {230}Th--U}{181}{chapter.31}%
+\defcounter {refsection}{20}\relax 
+\contentsline {section}{\numberline {31.1}Isochrons}{182}{section.31.1}%
+\defcounter {refsection}{20}\relax 
+\contentsline {section}{\numberline {31.2}Evolution diagrams}{182}{section.31.2}%
+\defcounter {refsection}{20}\relax 
+\contentsline {section}{\numberline {31.3}Ages}{184}{section.31.3}%
+\defcounter {refsection}{20}\relax 
+\contentsline {section}{\numberline {31.4}Radial, weighted mean, KDE and CAD plots}{186}{section.31.4}%
+\defcounter {refsection}{21}\relax 
+\contentsline {chapter}{\numberline {32}Detrital geochronology}{187}{chapter.32}%
+\defcounter {refsection}{21}\relax 
+\contentsline {section}{\numberline {32.1}Kernel density estimates}{187}{section.32.1}%
