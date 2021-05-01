@@ -234,6 +234,94 @@ results that are consistent with maximum likelihood estimates of
 
 \section{\texttt{json} schema}\label{sec:schema}
 
+All the data and settings that are used by the GUI can be saved in a
+human-readable text file, using the \texttt{.json} database format.
+This format provides a useful method to archive \texttt{IsoplotR} data
+for those users who do not want to use the CLI. The \texttt{.json}
+format can also be used as a data exchange mechanism between
+\texttt{IsoplotR} and other data processing software. If this software
+produces a file that follows the following schema, then its output can
+be used as input to \texttt{IsoplotR} for further processing.  The
+\texttt{.json} format has a nested structure, which is summerised
+below from the top downwards. At the highest level, the \texttt{.json}
+data structure consists of four branches:
+
+\begin{enumerate}
+\item{\verb|"constants"|:} Lists the decay constants, isotopic ratios,
+  molar masses, and various fission track properties.
+\item{\verb|"settings"|:} Contains \texttt{IsoplotR}'s language
+  settings and parameters controlling the behaviour of the various
+  geochronometers and plot devices.
+\item{\verb|"data"|:} Stores the contents of the GUI's input window,
+  i.e. all the isotopic ratio data and calibration constants.
+\item{\verb|"optionschanged"|:} This is a logical flag that is used
+  internally to check whether \texttt{IsoplotR} should update the
+  settings when the \texttt{PLOT}, \texttt{RUN}, \texttt{PDF} or
+  \texttt{CSV} button is clicked.
+\end{enumerate}
+
+\begin{enumerate}[label*=1.\arabic*.]
+\item{\verb|"lambda"|:}
+\item{\verb|"iratio"|:}
+\item{\verb|"imass"|:}
+\item{\verb|"etchfact"|:}
+\item{\verb|"tracklength"|:}
+\item{\verb|"mindens"|:}
+\end{enumerate}
+
+\begin{enumerate}[label*=2.\arabic*.]
+\item{\verb|"language"|:}
+\item{\verb|"languages_supported"|:}
+\item{\verb|"translation_link"|:}
+\item{\verb|"geochronometer"|:}
+\item{\verb|"plotdevice"|:}
+\item{\verb|"ierr"|:}
+\item{\verb|"par"|:}
+\item{\verb|"fissiontracks"|:}
+\item{\verb|"detritals"|:}
+\item{\verb|"U-Pb"|:}
+\item{\verb|"Th-U"|:}
+\item{\verb|"Pb-Pb"|:}
+\item{\verb|"Ar-Ar"|:}
+\item{\verb|"Th-Pb"|:}
+\item{\verb|"Rb-Sr"|:}
+\item{\verb|"Sm-Nd"|:}
+\item{\verb|"Re-Os"|:}
+\item{\verb|"Lu-Hf"|:}
+\item{\verb|"U-Th-He"|:}
+\item{\verb|"other"|:}
+\item{\verb|"concordia"|:}
+\item{\verb|"evolution"|:}
+\item{\verb|"isochron"|:}
+\item{\verb|"regression"|:}
+\item{\verb|"radial"|:}
+\item{\verb|"average"|:}
+\item{\verb|"spectrum"|:}
+\item{\verb|"KDE"|:}
+\item{\verb|"CAD"|:}
+\item{\verb|"set-zeta"|:}
+\item{\verb|"MDS"|:}
+\item{\verb|"helioplot"|:}
+\item{\verb|"ages"|:}
+\end{enumerate}
+
+\begin{enumerate}[label*=3.\arabic*.]
+\item{\verb|"fissiontracks"|:}
+\item{\verb|"detritals"|:}
+\item{\verb|"U-Pb"|:}
+\item{\verb|"Th-U"|:}
+\item{\verb|"Pb-Pb"|:}
+\item{\verb|"Ar-Ar"|:}
+\item{\verb|"Th-Pb"|:}
+\item{\verb|"Rb-Sr"|:}
+\item{\verb|"Sm-Nd"|:}
+\item{\verb|"Re-Os"|:}
+\item{\verb|"Lu-Hf"|:}
+\item{\verb|"U-Th-He"|:}
+\item{\verb|"other"|:}
+\end{enumerate}
+
+
 \printbibliography[heading=subbibliography]
 
 \end{refsection}
