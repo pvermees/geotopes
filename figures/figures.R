@@ -657,8 +657,12 @@ lines(x=c(1000,1000),y=c(0,D))
 dev.off()
 
 cairo(file='~/Documents/temp/DZmds.pdf',height=5,width=5)
-pars()
-mds(examples$DZ)
+DZ <- read.data('DZages.csv',method='detritals',check.names=FALSE)
+mds(DZ)
+dev.off()
+
+cairo(file='~/Documents/temp/DZmds_nnlines.pdf',height=5,width=5)
+mds(DZ,nnlines=TRUE)
 dev.off()
 
 cairo(file='~/Documents/temp/WtdMeanModel1vsRandomEffects.pdf',height=3.5,width=7)

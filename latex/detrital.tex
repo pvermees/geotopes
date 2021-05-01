@@ -143,7 +143,7 @@ geologically significant differences whilst removing the less
 informative similarities. Multi-dimensional scaling (MDS) is one way
 to achieve this goal.
 
-\section{Multidimensional scaling}
+\section{Multidimensional scaling}\label{sec:MDS}
 
 Multidimensional Scaling (MDS) is a multivariate \textbf{ordination}
 technique that is similar in many ways to PCA. MDS aims to extract two
@@ -327,6 +327,27 @@ the requirements for MDS analysis:
     characterised by high K-S statistics (e.g., $d[Y,5]=0.62$) and
     plot far apart on the MDS map.\\}
   \label{fig:DZmds}
+\end{minipage}
+
+One simple but effective way to aid in the interpretation of MDS maps
+is to draw a solid line from each point in the configuration to its
+`closest' neighbour in dissimilarity-space, and a dotted line to the
+second closest neighbour:
+
+\noindent\begin{minipage}[t][][b]{.45\textwidth}
+  \includegraphics[width=\textwidth]{../figures/DZmds_nnlines.pdf}\\
+\end{minipage}
+\begin{minipage}[t][][t]{.55\textwidth}
+  \captionof{figure}{ For example, sample~8 is the closest (or `least
+    dissimilar') to sample~7 (D=0.16), and the second closest to
+    sample~1 (D=0.22), while sample~7 is the closest to sample~6
+    (D=0.14) and second closest to sample~2 (D=0.15). These connecting
+    lines define two distinct groups dividing the field area into a
+    southwestern area containing sediments of `Yellow River affinity'
+    (samples~3, 4, 9, 10, L, T and Y) and a northeastern area
+    containing sediments of a different origin (samples 1, 2, 5, 6, 7
+    and 8).}
+  \label{fig:DZmds_nnlines}
 \end{minipage}
 
 \printbibliography[heading=subbibliography]

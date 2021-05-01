@@ -293,3 +293,13 @@
 \contentsline {chapter}{\numberline {32}Detrital geochronology}{187}{chapter.32}%
 \defcounter {refsection}{21}\relax 
 \contentsline {section}{\numberline {32.1}Kernel density estimates}{187}{section.32.1}%
+\defcounter {refsection}{21}\relax 
+\contentsline {section}{\numberline {32.2}Cumulative age distributions}{189}{section.32.2}%
+\defcounter {refsection}{21}\relax 
+\contentsline {section}{\numberline {32.3}Multidimensional scaling}{189}{section.32.3}%
+\defcounter {refsection}{22}\relax 
+\contentsline {chapter}{\numberline {33}Extending \texttt {IsoplotR}}{191}{chapter.33}%
+\defcounter {refsection}{22}\relax 
+\contentsline {section}{\numberline {33.1}List of functions}{191}{section.33.1}%
+\defcounter {refsection}{22}\relax 
+\contentsline {section}{\numberline {33.2}\texttt {json} schema}{192}{section.33.2}%

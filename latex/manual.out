@@ -145,3 +145,8 @@
 \BOOKMARK [1][-]{section.31.4}{Radial, weighted mean, KDE and CAD plots}{chapter.31}% 145
 \BOOKMARK [0][-]{chapter.32}{Detrital geochronology}{part.3}% 146
 \BOOKMARK [1][-]{section.32.1}{Kernel density estimates}{chapter.32}% 147
+\BOOKMARK [1][-]{section.32.2}{Cumulative age distributions}{chapter.32}% 148
+\BOOKMARK [1][-]{section.32.3}{Multidimensional scaling}{chapter.32}% 149
+\BOOKMARK [0][-]{chapter.33}{Extending IsoplotR}{part.3}% 150
+\BOOKMARK [1][-]{section.33.1}{List of functions}{chapter.33}% 151
+\BOOKMARK [1][-]{section.33.2}{json schema}{chapter.33}% 152

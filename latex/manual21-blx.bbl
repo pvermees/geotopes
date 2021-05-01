@@ -1,0 +1,84 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{abramson1982}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AIS}{%
+         family={Abramson},
+         familyi={A\bibinitperiod},
+         given={Ian\bibnamedelima S},
+         giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{AIS1}
+    \strng{fullhash}{AIS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1982}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{1217\bibrangedash 1223}
+    \field{title}{On bandwidth variation in kernel estimates -- a square root
+  law}
+    \field{journaltitle}{The Annals of Statistics}
+    \field{year}{1982}
+  \endentry
+
+  \entry{botev2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BZI}{%
+         family={{Botev}},
+         familyi={B\bibinitperiod},
+         given={Z.\bibnamedelima I.},
+         giveni={Z\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=GJF}{%
+         family={{Grotowski}},
+         familyi={G\bibinitperiod},
+         given={J.\bibnamedelima F.},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=KDP}{%
+         family={{Kroese}},
+         familyi={K\bibinitperiod},
+         given={D.\bibnamedelima P.},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BZIGJFKDP1}
+    \strng{fullhash}{BZIGJFKDP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{issue}{5}
+    \field{pages}{2916\bibrangedash 2957}
+    \field{title}{{Kernel density estimation via diffusion}}
+    \field{volume}{38}
+    \field{journaltitle}{Annals of Statistics}
+    \field{year}{2010}
+  \endentry
+\enddatalist
+\endinput
