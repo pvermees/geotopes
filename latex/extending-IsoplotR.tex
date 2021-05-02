@@ -247,80 +247,172 @@ below from the top downwards. At the highest level, the \texttt{.json}
 data structure consists of four branches:
 
 \begin{enumerate}
-\item{\verb|"constants"|:} Lists the decay constants, isotopic ratios,
+\item{\tt "constants"}: Lists the decay constants, isotopic ratios,
   molar masses, and various fission track properties.
-\item{\verb|"settings"|:} Contains \texttt{IsoplotR}'s language
+\item{\tt "settings"}: Contains \texttt{IsoplotR}'s language
   settings and parameters controlling the behaviour of the various
   geochronometers and plot devices.
-\item{\verb|"data"|:} Stores the contents of the GUI's input window,
+\item{\tt "data"}: Stores the contents of the GUI's input window,
   i.e. all the isotopic ratio data and calibration constants.
-\item{\verb|"optionschanged"|:} This is a logical flag that is used
+\item{\tt "optionschanged"}: This is a logical flag that is used
   internally to check whether \texttt{IsoplotR} should update the
   settings when the \texttt{PLOT}, \texttt{RUN}, \texttt{PDF} or
   \texttt{CSV} button is clicked.
 \end{enumerate}
 
-\begin{enumerate}[label*=1.\arabic*.]
-\item{\verb|"lambda"|:}
-\item{\verb|"iratio"|:}
-\item{\verb|"imass"|:}
-\item{\verb|"etchfact"|:}
-\item{\verb|"tracklength"|:}
-\item{\verb|"mindens"|:}
+\noindent\texttt{"constants"} contains of the following items:
+
+\begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=1.\arabic*.]
+\item{\tt "lambda"}: A comma-separated lists of two-element vectors
+  containing the decay constants and their standard errors of
+  \sloppy{\texttt{"U238"}, \texttt{"U235"}, \texttt{"U234"},
+    \texttt{"Th232"}, \texttt{"Th230"}, \texttt{"Pa231"},
+    \texttt{"Ra226"}, \texttt{"Rb87"}, \texttt{"Re187"},
+    \texttt{"Sm147"}, \texttt{"K40"}, \texttt{"Lu176"} and spontaneous
+    \textsuperscript{238}U \texttt{"fission"}}.
+\item{\tt "iratio"}: A comma-separated lists of two-element vectors
+  containing the natural isotopic ratios and their standard errors of
+  \sloppy{\texttt{"Ar40Ar36"}, \texttt{"Ar38Ar36"},
+    \texttt{"Ca40Ca44"}, \texttt{"Rb85Rb87"}, \texttt{""Sr84Sr86"},
+    \texttt{"Sr87Sr86"}, \texttt{"Sr88Sr86"}, \texttt{"Re185Re187"},
+    \texttt{"Os184Os192"}, \texttt{"Os186Os192"},
+    \texttt{"Os187Os192"}, \texttt{"Os188Os192"},
+    \texttt{"Os189Os192"}, \texttt{"Os190Os192"},
+    \texttt{"Th230Th232"}, \texttt{"U234U238"}, \texttt{"U238U235"},
+    \texttt{"Pb206Pb204"}, \texttt{"Pb207Pb204"},
+    \texttt{"Pb207Pb206"}, \texttt{"Pb208Pb204"},
+    \texttt{"Pb208Pb206"}, \texttt{"Pb208Pb207"},
+    \texttt{"Sm144Sm152"}, \texttt{"Sm147Sm152"},
+    \texttt{"Sm148Sm152"}, \texttt{"Sm149Sm152"},
+    \texttt{"Sm150Sm152"}, \texttt{"Sm154Sm152"},
+    \texttt{"Nd142Nd144"}, \texttt{"Nd143Nd144"},
+    \texttt{"Nd145Nd144"}, \texttt{"Nd146Nd144"},
+    \texttt{"Nd148Nd144"}, \texttt{"Nd150Nd144"},
+    \texttt{"Lu176Lu175"}, \texttt{"Hf174Hf177"},
+    \texttt{"Hf176Hf177"}, \texttt{"Hf178Hf177"},
+    \texttt{"Hf179Hf177"} and \texttt{"Hf180Hf177"}.}
+\item{\tt "imass"}: A comma-separated lists of two-element vectors
+  containing the molar masses and their standard errors of \sloppy{
+    \texttt{"U"}, \texttt{"Rb"}, \texttt{"Rb85"}, \texttt{"Rb87"},
+    \texttt{"Sr"}, \texttt{"Sr84"}, \texttt{"Sr86"}, \texttt{"Sr87"},
+    \texttt{"Sr88"}, \texttt{"Re"}, \texttt{"Re185"},
+    \texttt{"Re187"}, \texttt{"Os"}, \texttt{"Os184"},
+    \texttt{"Os186"},\texttt{"Os187"}, \texttt{"Os188"},
+    \texttt{"Os189"}, \texttt{"Os190"}, \texttt{"Os192"},
+    \texttt{"Sm"}, \texttt{"Nd"}, \texttt{"Lu"} and \texttt{"Hf"}.}
+\item{\tt "etchfact"}: a two-element comma-separated list of fission
+  track etch efficiency factors for \texttt{"apatite"} and
+  \texttt{"zircon"}.
+\item{\tt "tracklength"}: a two-element comma-separated list with the
+  etchable range (in \textmu{m}) of fission tracks in
+  \texttt{"apatite"} and \texttt{"zircon"}.
+\item{\tt "mindens"}: a two-element comma-separated list with the
+  density (in g/cm\textsuperscript{3}) of \texttt{"apatite"} and
+  \texttt{"zircon"}.
 \end{enumerate}
 
-\begin{enumerate}[label*=2.\arabic*.]
-\item{\verb|"language"|:}
-\item{\verb|"languages_supported"|:}
-\item{\verb|"translation_link"|:}
-\item{\verb|"geochronometer"|:}
-\item{\verb|"plotdevice"|:}
-\item{\verb|"ierr"|:}
-\item{\verb|"par"|:}
-\item{\verb|"fissiontracks"|:}
-\item{\verb|"detritals"|:}
-\item{\verb|"U-Pb"|:}
-\item{\verb|"Th-U"|:}
-\item{\verb|"Pb-Pb"|:}
-\item{\verb|"Ar-Ar"|:}
-\item{\verb|"Th-Pb"|:}
-\item{\verb|"Rb-Sr"|:}
-\item{\verb|"Sm-Nd"|:}
-\item{\verb|"Re-Os"|:}
-\item{\verb|"Lu-Hf"|:}
-\item{\verb|"U-Th-He"|:}
-\item{\verb|"other"|:}
-\item{\verb|"concordia"|:}
-\item{\verb|"evolution"|:}
-\item{\verb|"isochron"|:}
-\item{\verb|"regression"|:}
-\item{\verb|"radial"|:}
-\item{\verb|"average"|:}
-\item{\verb|"spectrum"|:}
-\item{\verb|"KDE"|:}
-\item{\verb|"CAD"|:}
-\item{\verb|"set-zeta"|:}
-\item{\verb|"MDS"|:}
-\item{\verb|"helioplot"|:}
-\item{\verb|"ages"|:}
+\noindent The \texttt{"settings"} branch of the top level
+\texttt{json} object contains the following attributes:
+
+\begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=2.\arabic*.]
+\item{\tt "language"}: one of \texttt{"en"} (English), \texttt{"es"}
+  (Spanish) or \texttt{"zh"} (Mandarin Chinese). TODO
+\item{\tt "geochronometer"}: one of \sloppy{\texttt{"fissiontracks"},
+  \texttt{"detritals"}, \texttt{"U-Pb"}, \texttt{"Th-U"},
+  \texttt{"Pb-Pb"}, \texttt{"Ar-Ar"}, \texttt{"Th-Pb"},
+  \texttt{"Rb-Sr"}, \texttt{"Sm-Nd"}, \texttt{"Re-Os"},
+  \texttt{"Lu-Hf"}, \texttt{"U-Th-He"} or \texttt{"other"}}.
+\item{\tt "plotdevice"}: one of \sloppy{\texttt{"concordia"},
+  \texttt{"evolution"}, \texttt{"isochron"}, \texttt{"regression"},
+  \texttt{"radial"}, \texttt{"average"}, \texttt{"spectrum"},
+  \texttt{"KDE"}, \texttt{"CAD"}, \texttt{"set-zeta"}, \texttt{"MDS"},
+  \texttt{"helioplot"} or \texttt{"ages"}}.
+\item{\tt "ierr"}: a number from 1 to 4, corresponding to the
+  eponymous input argument of the \texttt{read.data()} function.
+\item{\tt "par"}: \texttt{json} object with global settings to be
+  passed on to \texttt{R}'s \texttt{par()} function. May, for example,
+  contain \texttt{\{"cex": 1\}}.
+\item{\tt "fissiontracks"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=0,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt format}: a number from 1 to 3.
+  \item{\tt mineral}: either \texttt{"apatite"} or \texttt{"zircon"}.
+  \end{enumerate}
+\item{\tt "detritals"}: a \texttt{json} object with the following
+  attributes:
+\item{\tt "U-Pb"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=0,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt format}: a number from 1 to 8, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt type}: a number from 1 to 6, corresponding to the
+    eponymous argument of the \texttt{age()}, \texttt{radialplot()},
+    \texttt{weightedmean()}, \texttt{kde()} and \texttt{cad()}
+    functions.
+  \item{\tt cutoff76}: stores the value for the eponymous argument of
+    the \texttt{age()}, \texttt{radialplot()},
+    \texttt{weightedmean()}, \texttt{kde()} and \texttt{cad()}
+    functions.
+  \item{\tt cutoffdisc}: either 0 (no discordance filter), 1
+    (discordance filter to be used before common Pb correction), or 2
+    (discordance filter to be used after common Pb correction).
+  \item{\tt discoption}: a number from 0 to 5, storing the value to be
+    passed on to the \texttt{option} argument of the
+    \texttt{discfilter} function.
+  \item{\tt mindisc}: a 5-element vector of minimum discordance cutoff
+    values (one for each of \texttt{discoption}'s values 1 through 5),
+    to be used in \texttt{discfilter()}'s \texttt{cutoff} argument.
+  \item{\tt maxdisc}: a 5-element vector of maximum discordance cutoff
+    values (one for each of \texttt{discoption}'s values 1 through 5),
+    to be used in \texttt{discfilter()}'s \texttt{cutoff} argument.
+  \end{enumerate}
+\item{\tt "Th-U"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}
+    \item{\tt} 
+  \end{enumerate}
+\item{\tt "Pb-Pb"}:
+\item{\tt "Ar-Ar"}:
+\item{\tt "Th-Pb"}:
+\item{\tt "Rb-Sr"}:
+\item{\tt "Sm-Nd"}:
+\item{\tt "Re-Os"}:
+\item{\tt "Lu-Hf"}:
+\item{\tt "U-Th-He"}:
+\item{\tt "other"}:
+\item{\tt "concordia"}:
+\item{\tt "evolution"}:
+\item{\tt "isochron"}:
+\item{\tt "regression"}:
+\item{\tt "radial"}:
+\item{\tt "average"}:
+\item{\tt "spectrum"}:
+\item{\tt "KDE"}:
+\item{\tt "CAD"}:
+\item{\tt "set-zeta"}:
+\item{\tt "MDS"}:
+\item{\tt "helioplot"}:
+\item{\tt "ages"}:
 \end{enumerate}
 
-\begin{enumerate}[label*=3.\arabic*.]
-\item{\verb|"fissiontracks"|:}
-\item{\verb|"detritals"|:}
-\item{\verb|"U-Pb"|:}
-\item{\verb|"Th-U"|:}
-\item{\verb|"Pb-Pb"|:}
-\item{\verb|"Ar-Ar"|:}
-\item{\verb|"Th-Pb"|:}
-\item{\verb|"Rb-Sr"|:}
-\item{\verb|"Sm-Nd"|:}
-\item{\verb|"Re-Os"|:}
-\item{\verb|"Lu-Hf"|:}
-\item{\verb|"U-Th-He"|:}
-\item{\verb|"other"|:}
+\begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=3.\arabic*.]
+\item{\tt "fissiontracks"}:
+\item{\tt "detritals"}:
+\item{\tt "U-Pb"}:
+\item{\tt "Th-U"}:
+\item{\tt "Pb-Pb"}:
+\item{\tt "Ar-Ar"}:
+\item{\tt "Th-Pb"}:
+\item{\tt "Rb-Sr"}:
+\item{\tt "Sm-Nd"}:
+\item{\tt "Re-Os"}:
+\item{\tt "Lu-Hf"}:
+\item{\tt "U-Th-He"}:
+\item{\tt "other"}:
 \end{enumerate}
-
 
 \printbibliography[heading=subbibliography]
 
