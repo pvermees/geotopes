@@ -1,0 +1,234 @@
+\begin{refsection}
+
+\chapter{Application Programming Interface}\label{ch:API}
+  
+\texttt{IsoplotR} aims to cover the most commonly used functions in
+geochronology. However geochronology is such a diverse and rapidly
+evolving field of science, that it is impossible for one piece of
+software to achieve everything. This is why, from its inception,
+\texttt{IsoplotR} was designed with extendability in mind. This
+Chapter gives an overview of the code base for the CLI, which can be
+used as building blocks for automation scripts, alternative
+visualisations and new applications. The next Chapter summarises the
+\texttt{.json} schema that is used to import and export data to the
+GUI. Using this schema, it is possible to connect lower level data
+reduction software (written in any programming language) to
+\texttt{IsoplotRgui}.\\
+
+The complete list of all \texttt{IsoplotR}'s public functions can be
+viewed within \texttt{R} by entering
+
+\begin{console}
+help(package='IsoplotR')
+\end{console}
+
+\noindent at the CLI. The number of public functions was intentionally
+kept small, so as to shorten the learning curve. However despite this
+apparent simplicity, \texttt{IsoplotR}'s API offers a lot of
+flexibility, because:
+
+\begin{enumerate}
+\item several functions serve multiple purposes. For example, the
+  \texttt{settings()} function can be used to get or set decay
+  constants, isotopic ratios and other global parameters, and the
+  \texttt{peakfit()} function groups methods to compute finite
+  mixtures as well as minimum age models.
+\item \texttt{IsoplotR} is built around 13 so-called S3 classes,
+  which are used to store different types of chronometric data. For
+  example, a single function called \texttt{age()} can be used to
+  calculate U--Pb, Th--Pb, Pb--Pb, Ar--Ar, Rb--Sr, Sm--Nd, Lu--Hf,
+  Re--Os, fission track, U--Th--He or Th--U data, both from datasets
+  of multiple aliquots, or for individual measurements.
+\item some functions can be used to both compute and plot data.  For
+  example, the \texttt{kde()} function generates kernel density plots,
+  whilst returning the plot coordinates and optimal bandwidth to the
+  user. It is possible to suppress the graphical output but retain the
+  numerical output. Thus, the \texttt{kde()} function can be used to
+  write one's own visualisation. The same is true for the
+  \texttt{isochron()} and \texttt{weightedmean()} functions.
+\item \texttt{IsoplotR} is entirely written in \texttt{R} and does not
+  depend on any non-standard packages. This makes the package small
+  and easy to install. Which means that, if your \texttt{R} code
+  requires uses one of \texttt{IsoplotR}'s functions, then this won't
+  bloat your program. It also means that it is relatively
+  straightforward to lift functions out of \texttt{IsoplotR} and copy
+  them into another program. You have the permission to do so as long
+  as the origin of the code is documented in the new program, and your
+  program is released under the GPL-3 license, like \texttt{IsoplotR}
+  itself.
+\end{enumerate}
+
+Detailed documentation can be obtained from within \texttt{R}, using
+the \texttt{help} or \texttt{?} functions. For example, to view
+the documentation of the \texttt{isochron()} function, type
+
+\begin{console}
+?isochron
+\end{console}
+
+\noindent at the command prompt. The detailed documentation covers
+well over 100 pages and will not be reproduced here. Instead we
+suffice with a simple list of the functions accompanied by a brief
+summary of their input and output:
+
+\begin{longtable}{@{}p{.2\linewidth}@{}p{.8\linewidth}@{}}
+function & description \\ \hline
+
+\texttt{age} & Calculates U--Pb, Pb--Pb, Th--Pb, Ar--Ar, K--Ca,
+Re--Os, Sm--Nd, Rb--Sr, Lu--Hf, U--Th--He, Th--U and fission track
+ages their analytical uncertainties, either from a data object
+returned by the \texttt{read.data} function, or from a simple vector
+of isotopic ratios. \\
+
+\texttt{age2ratio} & Predict
+\textsuperscript{207}Pb/\textsuperscript{235}U,
+\textsuperscript{238}U/\textsuperscript{206}Pb,
+\textsuperscript{207}Pb/\textsuperscript{206}Pb,
+\textsuperscript{208}Pb/\textsuperscript{232}Th,
+\textsuperscript{40}Ar/\textsuperscript{39}Ar,
+\textsuperscript{40}Ca/\textsuperscript{40}K,
+\textsuperscript{176}Hf/\textsuperscript{176}Lu,
+\textsuperscript{87}Sr/\textsuperscript{87}Rb,
+\textsuperscript{187}Os/\textsuperscript{187}Re,
+\textsuperscript{143}Nd/\textsuperscript{147}Sm ratios and
+uncertainties for one or more ages and their uncertainties; or the
+Wetherill, Tera-Wasserburg or U--Th--Pb concordia ratios and
+covariance matrix of a single age and its uncertainty; or the
+Stacey-Kramers composition of a given age.\\
+
+\texttt{agespectrum} & Plot a
+(\textsuperscript{40}Ar/\textsuperscript{39}Ar) release spectrum and
+returns the plateau age if so requested.\\
+
+\texttt{cad} & Plot geochronological data as cumulative age
+distributions.\\
+
+\texttt{central} & Calculate fission track and U--Th--He central ages
+and compositions using the methods discussed in
+Sections~\ref{sec:mixtures} and Equation~\ref{eq:central} or
+\ref{sec:UThHeCompositional}, respectively.\\
+
+\texttt{classes} & Description of the S3 classes \texttt{UPb},
+\texttt{PbPb}, \texttt{ThPb}, \texttt{KCa}, \texttt{UThHe},
+\texttt{fissiontracks}, \texttt{detritals} and \texttt{PD}, where the
+latter is the parent class of the simple parent-daughter chronometers
+\texttt{RbSr}, \texttt{SmNd}, \texttt{LuHf} and \texttt{ReOs}. All
+these classes have overloaded versions of the generic
+\texttt{length()} function and square bracket subsetting method.\\
+
+\texttt{concordia} & Plots U--Pb data on Wetherill, Tera-Wasserburg or
+U--Th--Pb concordia diagrams, calculates concordia ages and
+compositions or discordia ages if so requested.\\
+
+\texttt{data2york} & Helper function for the \texttt{york}
+function. Takes geochronological data as input and produces a
+five-column table with the variables, their uncertainties and error
+correlations as output. These can subsequently be used for
+\citet{york2004} regression.\\
+
+\texttt{discfilter} & Set up one of the six U--Pb discordance filters
+defined by \citet{vermeesch2021} and specify the cutoff limits.\\
+
+\texttt{diseq} & Specify any (initial or measured) disequilibrium
+between $^{238}$U, $^{234}$U, $^{230}$Th, and $^{226}$Ra; or between
+$^{235}$U and $^{231}$Pa. This function returns and object of class
+\texttt{diseq}, which can be used as optional input to any function
+that accepts U--Pb data as input.\\
+
+\texttt{ellipse} & Helper function for the \texttt{scatterplot}
+function. Constructs an error ellipse at a given confidence level from
+its centre and covariance matrix. \\
+
+\texttt{evolution} & Plots Th--U data on a
+$^{234}$U/$^{238}$U--$^{230}$Th/$^{238}$U evolution diagram, a
+$^{234}$U/$^{238}$U-age diagram, or (if $^{234}$U/$^{238}$U is assumed
+to be in secular equilibrium), a
+$^{230}$Th/$^{232}$Th-$^{238}$U/$^{232}$Th diagram; calculates
+isochron ages.\\
+
+\texttt{examples} & An 18-item list containing U--Pb, Pb--Pb, Ar--Ar,
+K--Ca, Re--Os, Sm--Nd, Rb--Sr, Lu--Hf, U--Th--He, Th--U, fission track
+and detrital datasets that are used to test and illustrate
+\texttt{IsoplotR}'s functions in the built-in documentation.\\
+
+\texttt{helioplot} & Plot U--Th(--Sm)--He data on a (log[He/Th]
+vs. log[U/He]) logratio plot or U--Th--He ternary diagram.\\
+
+\texttt{isochron} & Plots cogenetic Ar--Ar, K--Ca, Pb--Pb, Th--Pb,
+Rb--Sr, Sm--Nd, Re--Os, Lu--Hf, U--Th--He or Th--U data as X--Y
+scatterplots, fits an isochron curve through them using the
+\texttt{york}, \texttt{titterington} or \texttt{ludwig} function, and
+computes the corresponding isochron age, including decay constant
+uncertainties.\\
+
+\texttt{kde} & Creates one or more kernel density estimates using a
+combination of the \citet{botev2010} bandwidth selector and the
+\citet{abramson1982} adaptive kernel bandwidth modifier.\\
+
+\texttt{ludwig} & Implements the maximum likelihood algorithm for
+Total-Pb/U isochron regression of \citet{ludwig1998} and extends the
+underlying methodology to accommodate U--Th--Pb data
+\citep{vermeesch2021} and initial U-series disequilibrium
+\citep{mclean2016b}.\\
+
+\texttt{mclean} & Returns the predicted ${206}$Pb/$^{238}$U and
+$^{207}$Pb/$^{235}$U ratios for any given time with or without initial
+U-series disequilibrium, using the matrix exponential approach of
+\citet{mclean2016b}, which is summarised in
+Section~\ref{sec:U-Pb-disequilibrium}. \\
+
+\texttt{mds} & Performs classical or nonmetric Multidimensional
+scaling analysis of detrital datasets using the Kolmogorov-Smirnov
+statistic as a dissimilarity measure \citep{vermeesch2013}.\\
+
+\texttt{Pb0corr} & Applies a common-Pb correction to U--Pb datasets
+using either the Stacey-Kramers mantle evolution model, isochron
+regression, or any nominal inital Pb isotope composition.\\
+
+\texttt{peakfit} & Implements the discrete mixture modelling
+algorithms of \citet{galbraith1993} and applies them to fission track
+and other geochronological datasets.\\
+
+\texttt{radialplot} & Visualise heteroscedastic datasets on
+\citet{galbraith1988}'s radial plot, using one of the transformations
+introduced in Sections~\ref{sec:radial} and \ref{sec:EDM}.\\
+
+\texttt{read.data} & Cast a \texttt{.csv} file or a matrix into one of
+the data classes that are documented under \texttt{classes}.\\
+
+\texttt{scatterplot} & Takes bivariate data with (correlated)
+uncertainties as input and produces a scatter plot with error ellipses
+or crosses as output.  (optionally) displays the linear fit on this
+diagram, and can show a third variable as a colour scale.\\
+
+\texttt{set.zeta} & Determines the \textzeta-calibration constant of a
+fission track dataset (EDM or LA-ICP-MS) given its true age and
+analytical uncertainty.\\
+
+\texttt{settings} & Get and set preferred values for decay constants,
+isotopic abundances, molar masses, fission track etch efficiences, and
+etchable lengths, and mineral densities, either individually or via a
+\texttt{.json} file format.\\
+
+\texttt{titterington} & Implements the maximum likelihood algorithm of
+\citet{ludwig1994} for linear regression of three dimensional data
+with correlated uncertainties.\\
+
+\texttt{weightedmean} & Models the data as a normal distribution with
+two sources of variance.  Estimates the mean and `overdispersion'
+using the method of maximum likelihood. Computes the MSWD of a normal
+fit without overdispersion. Implements a modified Chauvenet criterion
+to detect and reject outliers. Only propagates the analytical
+uncertainty associated with decay constants and \textzeta- and
+J-factors after computing the weighted mean isotopic composition. \\
+
+\texttt{york} & Implements the unified regression algorithm of
+\citet{york2004} which, although based on least squares, yields
+results that are consistent with maximum likelihood estimates of
+\citet{titterington1979}.
+
+\end{longtable}
+
+\printbibliography[heading=subbibliography]
+
+\end{refsection}

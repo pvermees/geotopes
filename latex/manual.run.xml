@@ -67,6 +67,7 @@
       <file>manual20-blx.aux</file>
       <file>manual21-blx.aux</file>
       <file>manual22-blx.aux</file>
+      <file>manual23-blx.aux</file>
       <file>manual-blx.bib</file>
     </provides>
     <requires type="dynamic">
@@ -93,6 +94,7 @@
       <file>manual20-blx.bbl</file>
       <file>manual21-blx.bbl</file>
       <file>manual22-blx.bbl</file>
+      <file>manual23-blx.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -719,6 +721,33 @@
     </provides>
     <requires type="dynamic">
       <file>manual22-blx.aux</file>
+      <file>manual-blx.bib</file>
+    </requires>
+    <requires type="editable">
+      <file>/home/pvermees/Dropbox/biblio.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
+    </requires>
+  </external>
+  <external package="biblatex" priority="5" active="0">
+    <generic>bibtex</generic>
+    <cmdline>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
+      <infile>manual23-blx</infile>
+    </cmdline>
+    <input>
+      <file>manual23-blx.aux</file>
+    </input>
+    <output>
+      <file>manual23-blx.bbl</file>
+    </output>
+    <provides type="dynamic">
+      <file>manual23-blx.bbl</file>
+    </provides>
+    <requires type="dynamic">
+      <file>manual23-blx.aux</file>
       <file>manual-blx.bib</file>
     </requires>
     <requires type="editable">

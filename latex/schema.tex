@@ -1,0 +1,715 @@
+\begin{refsection}
+
+\chapter{\texttt{json} schema}\label{sec:schema}
+
+All the data and settings that are used by the GUI can be saved in a
+human-readable text file, using the \texttt{.json} database format.
+This format provides a useful method to archive \texttt{IsoplotR} data
+for those users who do not want to use the CLI. The \texttt{.json}
+format can also be used as a data exchange mechanism between
+\texttt{IsoplotR} and other data processing software. If this software
+produces a file that follows the following schema, then its output can
+be used as input to \texttt{IsoplotR} for further processing.  The
+\texttt{.json} format has a nested structure, which is summerised
+below from the top downwards. At the highest level, the \texttt{.json}
+data structure consists of four branches:
+
+\begin{enumerate}
+\item{\tt "constants"}: Lists the decay constants, isotopic ratios,
+  molar masses, and various fission track properties.
+\item{\tt "settings"}: Contains \texttt{IsoplotR}'s language
+  settings and parameters controlling the behaviour of the various
+  geochronometers and plot devices.
+\item{\tt "data"}: Stores the contents of the GUI's input window,
+  i.e. all the isotopic ratio data and calibration constants.
+\end{enumerate}
+
+\noindent\texttt{"constants"} contains of the following items:
+
+\begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=1.\arabic*.]
+\item{\tt "lambda"}: A comma-separated lists of two-element vectors
+  containing the decay constants and their standard errors of
+  \sloppy{\texttt{"U238"}, \texttt{"U235"}, \texttt{"U234"},
+    \texttt{"Th232"}, \texttt{"Th230"}, \texttt{"Pa231"},
+    \texttt{"Ra226"}, \texttt{"Rb87"}, \texttt{"Re187"},
+    \texttt{"Sm147"}, \texttt{"K40"}, \texttt{"Lu176"} and spontaneous
+    \textsuperscript{238}U \texttt{"fission"}}.
+\item{\tt "iratio"}: A comma-separated lists of two-element vectors
+  containing the natural isotopic ratios and their standard errors of
+  \sloppy{\texttt{"Ar40Ar36"}, \texttt{"Ar38Ar36"},
+    \texttt{"Ca40Ca44"}, \texttt{"Rb85Rb87"}, \texttt{""Sr84Sr86"},
+    \texttt{"Sr87Sr86"}, \texttt{"Sr88Sr86"}, \texttt{"Re185Re187"},
+    \texttt{"Os184Os192"}, \texttt{"Os186Os192"},
+    \texttt{"Os187Os192"}, \texttt{"Os188Os192"},
+    \texttt{"Os189Os192"}, \texttt{"Os190Os192"},
+    \texttt{"Th230Th232"}, \texttt{"U234U238"}, \texttt{"U238U235"},
+    \texttt{"Pb206Pb204"}, \texttt{"Pb207Pb204"},
+    \texttt{"Pb207Pb206"}, \texttt{"Pb208Pb204"},
+    \texttt{"Pb208Pb206"}, \texttt{"Pb208Pb207"},
+    \texttt{"Sm144Sm152"}, \texttt{"Sm147Sm152"},
+    \texttt{"Sm148Sm152"}, \texttt{"Sm149Sm152"},
+    \texttt{"Sm150Sm152"}, \texttt{"Sm154Sm152"},
+    \texttt{"Nd142Nd144"}, \texttt{"Nd143Nd144"},
+    \texttt{"Nd145Nd144"}, \texttt{"Nd146Nd144"},
+    \texttt{"Nd148Nd144"}, \texttt{"Nd150Nd144"},
+    \texttt{"Lu176Lu175"}, \texttt{"Hf174Hf177"},
+    \texttt{"Hf176Hf177"}, \texttt{"Hf178Hf177"},
+    \texttt{"Hf179Hf177"} and \texttt{"Hf180Hf177"}.}
+\item{\tt "imass"}: A comma-separated lists of two-element vectors
+  containing the molar masses and their standard errors of \sloppy{
+    \texttt{"U"}, \texttt{"Rb"}, \texttt{"Rb85"}, \texttt{"Rb87"},
+    \texttt{"Sr"}, \texttt{"Sr84"}, \texttt{"Sr86"}, \texttt{"Sr87"},
+    \texttt{"Sr88"}, \texttt{"Re"}, \texttt{"Re185"},
+    \texttt{"Re187"}, \texttt{"Os"}, \texttt{"Os184"},
+    \texttt{"Os186"},\texttt{"Os187"}, \texttt{"Os188"},
+    \texttt{"Os189"}, \texttt{"Os190"}, \texttt{"Os192"},
+    \texttt{"Sm"}, \texttt{"Nd"}, \texttt{"Lu"} and \texttt{"Hf"}.}
+\item{\tt "etchfact"}: a two-element comma-separated list of fission
+  track etch efficiency factors for \texttt{"apatite"} and
+  \texttt{"zircon"}.
+\item{\tt "tracklength"}: a two-element comma-separated list with the
+  etchable range (in \textmu{m}) of fission tracks in
+  \texttt{"apatite"} and \texttt{"zircon"}.
+\item{\tt "mindens"}: a two-element comma-separated list with the
+  density (in g/cm\textsuperscript{3}) of \texttt{"apatite"} and
+  \texttt{"zircon"}.
+\end{enumerate}
+
+\noindent The \texttt{"settings"} branch of the top level
+\texttt{json} object contains the following attributes:
+
+\begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=2.\arabic*.]
+\item{\tt "language"}: one of \texttt{"en"} (English), \texttt{"es"}
+  (Spanish) or \texttt{"zh"} (Mandarin Chinese).
+\item{\tt "geochronometer"}: one of \sloppy{\texttt{"fissiontracks"},
+  \texttt{"detritals"}, \texttt{"U-Pb"}, \texttt{"Th-U"},
+  \texttt{"Pb-Pb"}, \texttt{"Ar-Ar"}, \texttt{"Th-Pb"},
+  \texttt{"Rb-Sr"}, \texttt{"Sm-Nd"}, \texttt{"Re-Os"},
+  \texttt{"Lu-Hf"}, \texttt{"U-Th-He"} or \texttt{"other"}}.
+\item{\tt "plotdevice"}: one of \sloppy{\texttt{"concordia"},
+  \texttt{"evolution"}, \texttt{"isochron"}, \texttt{"regression"},
+  \texttt{"radial"}, \texttt{"average"}, \texttt{"spectrum"},
+  \texttt{"KDE"}, \texttt{"CAD"}, \texttt{"set-zeta"}, \texttt{"MDS"},
+  \texttt{"helioplot"} or \texttt{"ages"}}.
+\item{\tt "ierr"}: \sloppy{an integer from 1 to 4, corresponding to
+  the eponymous input argument of the \texttt{read.data()} function.}
+\item{\tt "par"}: \texttt{json} object with global settings to be
+  passed on to \texttt{R}'s \texttt{par()} function. May, for example,
+  contain \texttt{\{"cex": 1\}}.
+\item{\tt "fissiontracks"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3.
+  \item{\tt "mineral"}: either \texttt{"apatite"} or \texttt{"zircon"}.
+  \end{enumerate}
+\item{\tt "detritals"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: either 1 (if the first row of the input
+    contains the sample names) or 2 (if the samples are to be named
+    \texttt{"A"}, \texttt{"B"}, etc.)
+  \item{\tt "hide"}: a vector with the sample names or numbers of the
+    samples to be omitted from the plots.
+  \end{enumerate}
+\item{\tt "U-Pb"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt format}: an integer from 1 to 8, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt type}: an integer from 1 to 6, corresponding to the
+    eponymous argument of the \texttt{age()}, \texttt{radialplot()},
+    \texttt{weightedmean()}, \texttt{kde()} and \texttt{cad()}
+    functions.
+  \item{\tt cutoff76}: stores the value for the eponymous argument of
+    the \texttt{age()}, \texttt{radialplot()},
+    \texttt{weightedmean()}, and other functions.
+  \item{\tt cutoffdisc}: either 0 (no discordance filter), 1
+    (discordance filter to be used before common Pb correction), or 2
+    (discordance filter to be used after common Pb correction).
+  \item{\tt discoption}: an integer from 0 to 5, storing the value to be
+    passed on to the \texttt{option} argument of the
+    \texttt{discfilter} function.
+  \item{\tt mindisc}: a 5-element vector of minimum discordance cutoff
+    values (one for each of \texttt{discoption}'s values 1 through 5),
+    to be used in \texttt{discfilter()}'s \texttt{cutoff} argument.
+  \item{\tt maxdisc}: a 5-element vector of maximum discordance cutoff
+    values (one for each of \texttt{discoption}'s values 1 through 5),
+    to be used in \texttt{discfilter()}'s \texttt{cutoff} argument.
+  \item{\tt "commonPb"}: an integer between 0 and 3, to be supplied to
+    the \texttt{option} argument of the \texttt{Pb0corr()} function.
+  \item{\tt "diseq"}: logical. If \texttt{"TRUE"}, applies an initial
+    disequilibrium correction using the \textttt{diseq()} function.
+  \item{\tt "U48"}: two-element vector containing the arguments
+    \texttt{x} and \texttt{option} of the eponymous argument to the
+    \texttt{diseq()} function.
+  \item{\tt "ThU"}: two-element vector containing the arguments
+    \texttt{x} and \texttt{option} of the eponymous argument to the
+    \texttt{diseq()} function.
+  \item{\tt "RaU"}: two-element vector containing the arguments
+    \texttt{x} and \texttt{option} of the eponymous argument to the
+    \texttt{diseq()} function.
+  \item{\tt "PaU"}: two-element vector containing the arguments
+    \texttt{x} and \texttt{option} of the eponymous argument to the
+    \texttt{diseq()} function.
+  \end{enumerate}
+\item{\tt "Th-U"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 4, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "detritus"}: an integer from 0 to 3, representing different
+    approaches to detrital \textsuperscript{230}Th-correction, as
+    implemented by the eponymous argument to the \texttt{age()},
+    \texttt{radialplot()}, \texttt{weightedmean()}, and other
+    functions.
+  \item{\tt "Th02"}: a 2-element vector to be passed on to the
+    eponymous argument of \texttt{read.data()}.
+  \item{\tt "Th02U48"}: a 9-element vector to be passed on to the
+    eponymous argument of \texttt{read.data()}.
+  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
+    on to the eponymous argument of \texttt{age()},
+    \texttt{radialplot()} and other functions.
+  \end{enumerate}
+\item{\tt "Pb-Pb"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "commonPb"}: an integer between 0 and 3, to be supplied to
+    the \texttt{option} argument of the \texttt{Pb0corr()} function.
+  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the eponymous argument of the \texttt{isochron()}
+    function,
+  \end{enumerate}
+\item{\tt "Ar-Ar"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
+    on to the eponymous argument of \texttt{age()},
+  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the eponymous argument of the \texttt{isochron()}
+    function,
+  \end{enumerate}
+\item{\tt "Th-Pb"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
+    on to the eponymous argument of \texttt{age()},
+  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the eponymous argument of the \texttt{isochron()}
+    function,
+  \end{enumerate}
+\item{\tt "Rb-Sr"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
+    on to the eponymous argument of \texttt{age()},
+  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the eponymous argument of the \texttt{isochron()}
+    function,
+  \end{enumerate}
+\item{\tt "Sm-Nd"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
+    on to the eponymous argument of \texttt{age()},
+  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the eponymous argument of the \texttt{isochron()}
+    function,
+  \end{enumerate}
+\item{\tt "Re-Os"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
+    on to the eponymous argument of \texttt{age()},
+  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the eponymous argument of the \texttt{isochron()}
+    function,
+  \end{enumerate}
+\item{\tt "Lu-Hf"}: a \texttt{json} object with the following
+  attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "format"}: an integer from 1 to 3, corresponding to the
+    eponymous argument of the \texttt{read.data()} function.
+  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
+    on to the eponymous argument of \texttt{age()},
+  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the eponymous argument of the \texttt{isochron()}
+    function,
+  \end{enumerate}
+\item{\tt "U-Th-He"}: this attribute is just an empty placeholder.
+\item{\tt "other"}: a \texttt{json} object with a single attribute,
+  \texttt{"format"}, which corresponds to the eponymous argument of
+    the \texttt{read.data()} function.
+  \item{\tt "concordia"}: a \texttt{json} object whose attributes
+    correspond to eponymous arguments of the \texttt{concordia()}
+    function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "mint"}: either \texttt{"auto"} or a number marking the
+      first value of the \texttt{tlim} argument in the
+      \texttt{concordia()} function.
+    \item{\tt "maxt"}: either \texttt{"auto"} or a number marking the
+      second value of the \texttt{tlim} argument in the
+      \texttt{concordia()} function.
+    \item{\tt "minx"}: either \texttt{"auto"} or a number marking the
+      first value of the \texttt{xlim} argument in the
+      \texttt{concordia()} function.
+    \item{\tt "maxx"}: either \texttt{"auto"} or a number marking the
+      second value of the \texttt{xlim} argument in the
+      \texttt{concordia()} function.
+    \item{\tt "miny"}: either \texttt{"auto"} or a number marking the
+      first value of the \texttt{ylim} argument in the
+      \texttt{concordia()} function.
+    \item{\tt "maxy"}: either \texttt{"auto"} or a number marking the
+      second value of the \texttt{ylim} argument in the
+      \texttt{concordia()} function.
+    \item{\tt "alpha"}: an integer between 0 and 1.
+    \item{\tt "type"}: an integer from 1 and 3.
+    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To
+      be passed on to the argument \texttt{show.numbers} argument of
+      the \texttt{concordia()} function.
+    \item{\tt "showage"}: an integer from 0 to 4, to be passed on to the
+      argument \texttt{show.age} argument of the \texttt{concordia()}
+      function.
+    \item{\tt "anchor"}: an integer from 0 to 2, marking the first value
+      of the eponymous argument to the \texttt{concordia()} function.
+    \item{\tt "tanchor"}: a number, marking the second value of the
+      \texttt{anchor} argument to the \texttt{concordia()} function,
+      to be used if the first value is 2.
+    \item{\tt "sigdig"}: a positive number.
+    \item{\tt "ellipsefill"}: a valid entry for the
+      \texttt{ellipse.fill} argument of the \texttt{concordia()}
+      function.
+    \item{\tt "ellipsestroke"}: a valid entry for the
+      \texttt{ellipse.stroke} argument of the \texttt{concordia()}
+      function.
+    \item{\tt "clabel"}: a text string.
+    \item{\tt "ticks"}: either \texttt{"auto"} or a vector of numbers.
+\end{enumerate}
+\item{\tt "evolution"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{evolution()}
+  function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "min08"}: either \texttt{"auto"} or a number marking the
+    first value of the \texttt{xlim} argument in the
+    \texttt{evolution()} function if \texttt{transform="FALSE"}.
+  \item{\tt "max08"}: either \texttt{"auto"} or a number marking the
+    second value of the \texttt{xlim} argument in the
+    \texttt{evolution()} function if \texttt{transform="FALSE"}.
+  \item{\tt "min48"}: either \texttt{"auto"} or a number marking the
+    first value of the \texttt{ylim} argument in the
+    \texttt{evolution()} function.
+  \item{\tt "max48"}: either \texttt{"auto"} or a number marking the
+    second value of the \texttt{ylim} argument in the
+    \texttt{evolution()} function.
+  \item{\tt "mint"}: either \texttt{"auto"} or a number marking the
+    first value of the \texttt{xlim} argument in the
+    \texttt{evolution()} function if \texttt{transform="TRUE"}.
+  \item{\tt "maxt"}: either \texttt{"auto"} or a number marking the
+    second value of the \texttt{xlim} argument in the
+    \texttt{evolution()} function if \texttt{transform="TRUE"}.
+  \item{\tt "alpha"}: an integer between 0 and 1.
+  \item{\tt "transform"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \item{\tt "isochron"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the argument \texttt{show.numbers} argument of the
+    \texttt{evolution()} function.
+  \item{\tt "sigdig"}: a positive number.
+  \item{\tt "ellipsefill"}: a valid entry for the
+    \texttt{ellipse.fill} argument of the \texttt{concordia()}
+    function.
+  \item{\tt "ellipsestroke"}: a valid entry for the
+    \texttt{ellipse.stroke} argument of the \texttt{concordia()}
+    function.
+  \item{\tt "clabel"}: a text string.
+  \item{\tt "model"}: an integer from 1 to 3.
+  \end{enumerate}
+\item{\tt "isochron"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{isochron()}
+  function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+      \item{\tt UPbtype"}: an integer from 1 and 4, to be passed on to
+        \texttt{type} if \texttt{"geochronometer"} equals
+        \texttt{"U-Pb"}.
+      \item{\tt ThUtype"}: an integer from 1 and 4, to be passed on to
+        \texttt{type} if \texttt{"geochronometer"} equals
+        \texttt{"Th-U"}.
+      \item{\tt model"}: an integer from 1 to 3.
+      \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+      \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+        passed on to the argument \texttt{show.numbers} argument of the
+        \texttt{isochron()} function.
+      \item{\tt "ellipsefill"}: a valid entry for the
+        \texttt{ellipse.fill} argument of the \texttt{isochron()}
+        function.
+      \item{\tt "ellipsestroke"}: a valid entry for the
+        \texttt{ellipse.stroke} argument of the \texttt{isochron()}
+        function.
+      \item{\tt "clabel"}: a text string.
+      \item{\tt "sigdig"}: a positive number.
+      \item{\tt "alpha"}: an integer between 0 and 1.
+      \item{\tt "minx"}: either \texttt{"auto"} or a number marking the
+        first value of the \texttt{xlim} argument in the
+        \texttt{isochron()} function.
+      \item{\tt "maxx"}: either \texttt{"auto"} or a number marking the
+        second value of the \texttt{xlim} argument in the
+        \texttt{isochron()} function.
+      \item{\tt "miny"}: either \texttt{"auto"} or a number marking the
+        first value of the \texttt{ylim} argument in the
+        \texttt{isochron()} function.
+      \item{\tt "maxy"}: either \texttt{"auto"} or a number marking the
+        second value of the \texttt{ylim} argument in the
+        \texttt{isochron()} function.
+      \item{\tt growth"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \end{enumerate}
+\item{\tt "regression"}: a \texttt{.json} object containing a sumbset
+  of the arguments to \texttt{"isochron"}, to be used with
+  \texttt{"geochronometer"} is \texttt{"other"}:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt model"}: see \texttt{"isochron"}.
+  \item{\tt "shownumbers"}: see \texttt{"isochron"}.
+  \item{\tt "minx"}: see \texttt{"isochron"}.
+  \item{\tt "maxx"}: see \texttt{"isochron"}.
+  \item{\tt "miny"}: see \texttt{"isochron"}.
+  \item{\tt "maxy"}: see \texttt{"isochron"}.
+  \item{\tt "alpha"}: see \texttt{"isochron"}.
+  \item{\tt "sigdig"}: see \texttt{"isochron"}.
+  \item{\tt "alpha"}: see \texttt{"isochron"}.
+  \item{\tt "sigdig"}: see \texttt{"isochron"}.
+  \item{\tt "ellipsefill"}: see \texttt{"isochron"}.
+  \item{\tt "ellipsestroke"}: see \texttt{"isochron"}.
+  \item{\tt "clabel"}: see \texttt{"isochron"}.
+  \end{enumerate}
+\item{\tt "radial"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{radialplot()}
+  function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "transformation"}: one of \texttt{"log"},
+    \texttt{"linear"}, \texttt{"sqrt"} or \texttt{"arcsin"}.
+  \item{\tt "mint"}: either \texttt{"auto"} or a number to be passed
+    on to the \texttt{from} argument of the \texttt{radialplot()}
+    function.
+  \item{\tt "z0"}: either \texttt{"auto"} or a number.
+  \item{\tt "maxt"}: either \texttt{"auto"} or a number to be passed
+    on to the \texttt{to} argument of the \texttt{radialplot()}
+    function.
+  \item{\tt "pch"}: a valid plot character according to \texttt{?par}
+    in \texttt{R}.
+  \item{\tt "cex"}: a positive number.
+  \item{\tt "bg"}: a valid colour code or name.
+  \item{\tt "sigdig"}: a positive number.
+  \item{\tt "alpha"}: a number between 0 and 1.
+  \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    passed on to the argument \texttt{show.numbers} argument of the
+    \texttt{isochron()} function.
+  \item{\tt "numpeaks"}: \texttt{"auto"}, \texttt{"min"}, or an
+    integer from 0 to 5.
+  \item{\tt "clabel"}: a text string.
+  \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \end{enumerate}  
+\item{\tt "average"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{weightedmean()}
+  function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "outliers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+      passed on to the \texttt{detect.outliers} argument of the
+      \texttt{weightedmean()} function.
+    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "alpha"}: a number between 0 and 1.
+    \item{\tt "sigdig"}: a positive number.
+    \item{\tt "randomeffects"}: \texttt{"TRUE"} or
+      \texttt{"FALSE"}. To be passed on to the \texttt{random.effects}
+      argument of \texttt{weightedmean}.
+    \item{\tt "mint"}: either \texttt{"auto"} or a number to be passed
+      on to the \texttt{from} argument of the \texttt{weightedmean()}
+      function.
+    \item{\tt "maxt"}: either \texttt{"auto"} or a number to be passed
+      on to the \texttt{to} argument of the \texttt{weightedmean()}
+      function.
+    \item{\tt "ranked"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "rectcol"}: a valid entry for the \texttt{rect.col}
+      argument of the \texttt{weightedmean()} function.
+    \item{\tt "outliercol"}: a valid entry for the
+      \texttt{outlier.col} argument of the \texttt{weightedmean()}
+      function.
+    \item{\tt "clabel"}: a text string.
+  \end{enumerate}  
+\item{\tt "spectrum"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{agespectrum()}
+  function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "plateau"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "alpha"}: a number between 0 and 1.
+    \item{\tt "sigdig"}: a positive number.
+    \item{\tt "randomeffects"}: \texttt{"TRUE"} or
+      \texttt{"FALSE"}. To be passed on to the \texttt{random.effects}
+      argument of the \texttt{agespectrum()} function.
+    \item{\tt "plateaucol"}: a valid entry for the
+      \texttt{plateau.col} argument of the \texttt{agespectrum()}
+      function.
+    \item{\tt "nonplateaucol"}: a valid entry for the
+      \texttt{non.plateau.col} argument of the \texttt{agespectrum()}
+      function.
+    \item{\tt "clabel"}: a text string.
+  \end{enumerate}  
+\item{\tt "KDE"}: a \texttt{json} object whose attributes correspond
+  to eponymous arguments of the \texttt{kde()} function, unless stated
+  otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "ncol"}: either \texttt{"auto"} or an integer.
+    \item{\tt "xlab"}: a text string.
+    \item{\tt "showhist"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+      passed on to the \texttt{show.hist} argument of the
+      \texttt{kde()} function.
+    \item{\tt "binwidth"}: either \texttt{"auto"} or a positive
+      number.
+    \item{\tt "bw"}: either \texttt{"auto"} or a positive number.
+    \item{\tt "samebandwidth"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "normalise"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "log"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "adaptive"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "minx"}: either \texttt{"auto"} or a number to be passed
+      on to the \texttt{from} argument of the \texttt{kde()} function.
+    \item{\tt "maxx"}: either \texttt{"auto"} or a number to be passed
+      on to the \texttt{to} argument of the \texttt{kde()} function.
+    \item{\tt "bandwidth"}: either \texttt{"auto"} or a number to be
+      passed on to the \texttt{bw} argument of the \texttt{kde()}
+      function.
+    \item{\tt "rugdetritals"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+      To be passed on to the \texttt{rug} argument of the
+      \texttt{kde()} function if \texttt{"geochronometer"} is
+      \texttt{"detritals"}.
+    \item{\tt "rug"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \end{enumerate}  
+\item{\tt "CAD"}: a \texttt{json} object whose attributes correspond
+  to eponymous arguments of the \texttt{cad()} function, unless stated
+  otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+  \item{\tt "pch"}: either \texttt{"none"} or a valid plot character
+    according to \texttt{?par} in \texttt{R}.
+  \item{\tt "verticals"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \item{\tt "colmap"}: the name of a valid colour palette to be passed
+    on to the \texttt{col} argument of the \texttt{cad()} function.
+  \end{enumerate}  
+\item{\tt "set-zeta"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{set.zeta()}
+  function:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "sigdig"}: a positive number.
+    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \end{enumerate}  
+\item{\tt "MDS"}: a \texttt{json} object whose attributes correspond
+  to eponymous arguments of the \texttt{mds()} function, unless stated
+  otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "classical"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "shepard"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "nnlines"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "pch"}: a valid plot character according to
+      \texttt{?par} in \texttt{R}.
+    \item{\tt "pos"}: an integer from 0 to 4.
+    \item{\tt "cex"}: a postive number.
+    \item{\tt "col"}: a valid colour code or name.
+    \item{\tt "bg"}: a valid colour code or name.
+  \end{enumerate}
+\item{\tt "helioplot"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{helioplot()}
+  function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "logratio"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}.  To
+      be passed on to the \texttt{show.numbers} argument of the
+      \texttt{helioplot()} function.
+    \item{\tt "showcentralcomp"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+      To be passed on to the \texttt{show.central.comp} argument of
+      the \texttt{helioplot()} function.
+    \item{\tt "alpha"}: a number between 0 and 1.
+    \item{\tt "sigdig"}: a positive number.
+    \item{\tt "minx"}: either \texttt{"auto"} or a number marking the
+      first value of the \texttt{xlim} argument in the
+      \texttt{helioplot()} function.
+    \item{\tt "maxx"}: either \texttt{"auto"} or a number marking the
+      second value of the \texttt{xlim} argument in the
+      \texttt{helioplot()} function.
+    \item{\tt "miny"}: either \texttt{"auto"} or a number marking the
+      first value of the \texttt{ylim} argument in the
+      \texttt{helioplot()} function.
+    \item{\tt "maxy"}: either \texttt{"auto"} or a number marking the
+      second value of the \texttt{ylim} argument in the
+      \texttt{helioplot()} function.
+    \item{\tt "fact"}: either \texttt{"auto"} or a three-element
+      vector of positive numbers.
+      \item{\tt "ellipsefill"}: a valid entry for the
+        \texttt{ellipse.fill} argument of the \texttt{helioplot()}
+        function.
+      \item{\tt "ellipsestroke"}: a valid entry for the
+        \texttt{ellipse.stroke} argument of the \texttt{helioplot()}
+        function.
+    \item{\tt "model"}: an integer between 1 and 3.
+    \item{\tt "clabel"}: a text string.
+  \end{enumerate}
+\item{\tt "ages"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{helioplot()}
+  function, unless stated otherwise:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "showdisc"}: either 0 (do not report the discordance), 1
+      (calculate the discordance before common Pb correction), or 2
+      (calculate the discordance after common Pb correction).
+    \item{\tt "discoption"}: an integer from 0 to 5, storing the value
+      to be passed on to the \texttt{option} argument of the
+      \texttt{discfilter} function.
+    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "sigdig"}: a positive number
+  \end{enumerate}
+\end{enumerate}
+
+Finally, the \texttt{"data"} branch of the \texttt{json} schema
+contains the isotopic data for all the methods. Only datasets that
+have changed from their default values are recorded here. Thus, if
+only the U--Pb data have been manipulated, then all the other entries
+will remain empty. However if both the U--Pb and Ar--Ar data have
+changed, say, then both of these attributes will be filled.
+
+\begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=3.\arabic*.]
+\item{\tt "U-Pb"}: a \texttt{json} object with two attributes
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "ierr"}: \sloppy{an integer from 1 to 4, representing
+      the eponymous argument of the \texttt{read.data()} function.}
+    \item{\tt "data"}: a \texttt{json} object consisting of 7 to 16
+      named vectors (depending on the value of
+      \texttt{settings.format}), corresponding to the columns of the
+      input table. The last two vectors must be named \texttt{"(C)"}
+      and \texttt{"(omit)"}. Missing values are represented by
+      \texttt{null}.
+  \end{enumerate}  
+\item{\tt "Ar-Ar"}: a \texttt{json} object with three attributes
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "ierr"}: \sloppy{an integer from 1 to 4, representing
+      the eponymous argument of the \texttt{read.data()} function.}
+    \item{\tt "J"}: a two element vector containing the J-factor and
+      its standard error.
+    \item{\tt "data"}: a \texttt{json} object consisting of 8 or 9
+      named vectors (depending on the value of
+      \texttt{settings.format}), corresponding to the columns of the
+      input table. The last two vectors must be named \texttt{"(C)"}
+      and \texttt{"(omit)"}. Missing values are represented by
+      \texttt{null}.
+  \end{enumerate} 
+\item{\tt "Pb-Pb"}: a \texttt{json} object with two attributes
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "ierr"}: \sloppy{an integer from 1 to 4, representing
+      the eponymous argument of the \texttt{read.data()} function.}
+    \item{\tt "data"}: a \texttt{json} object consisting of 7 or 8
+      named vectors (depending on the value of
+      \texttt{settings.format}), corresponding to the columns of the
+      input table. The last two vectors must be named \texttt{"(C)"}
+      and \texttt{"(omit)"}. Missing values are represented by
+      \texttt{null}.
+  \end{enumerate} 
+\item{\tt "Th-Pb"}: similar to \texttt{data.Pb-Pb}, but with columns
+  named for the Th--Pb method.
+\item{\tt "K-Ca"}: similar to \texttt{data.Pb-Pb}, but with columns
+  named for the K--Ca method.
+\item{\tt "Rb-Sr"}: similar to \texttt{data.Pb-Pb}, but with columns
+  named for the Rb--Sr method.
+\item{\tt "Sm-Nd"}: similar to \texttt{data.Pb-Pb}, but with columns
+  named for the Sm--Nd method.
+\item{\tt "Re-Os"}: similar to \texttt{data.Pb-Pb}, but with columns
+  named for the Re--Os method.
+\item{\tt "Lu-Hf"}: similar to \texttt{data.Pb-Pb}, but with columns
+  named for the Lu--Hf method.
+\item{\tt "U-Th-He"}: a \texttt{json} object containing a single
+  attribute, \texttt{"data"}, which is a \texttt{json} object
+  consisting of 10 named vectors, corresponding to the columns of the
+  input table. The last two vectors must be named \texttt{"(C)"} and
+  \texttt{"(omit)"}. Missing values are represented by
+      \texttt{null}.
+\item{\tt "fissiontracks"}: a \texttt{json} object with a combination
+  of the following attributes:
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "ierr"}: \sloppy{an integer from 1 to 4, representing
+      the eponymous argument of the \texttt{read.data()} function (not
+      necessary if \texttt{settings.format=1}.}
+    \item{\tt "age"}: a two-element vector with the age and standard
+      error of the \textzeta-calibration constant (only needed when
+      running the `get \textzeta' function).
+    \item{\tt "zeta"}: a two-element vector with the
+      \textzeta-calibration constant and its standard error (only
+      needed when \texttt{settings.format=1} or \texttt{2}).
+    \item{\tt "rhoD"}: a two-element vector with the dosimeter track
+      density and its standard error (only needed when
+      \texttt{settings.format=1}).
+    \item{\tt "spotSize"}: a number representing the laser ablation
+      spot size (only needed when \texttt{settings.format=2} or
+      \texttt{3}).
+    \item{\tt "data"}: a \texttt{json} object consisting of 4 to 14
+      named vectors (depending on the value of
+      \texttt{settings.format}), corresponding to the columns of the
+      input table. The last two vectors must be named \texttt{"(C)"}
+      and \texttt{"(omit)"}. For formats \texttt{settings.format=2}
+      and \texttt{3}, in which different rows may have different
+      lengths, missing values can be represented by \texttt{null}.
+  \end{enumerate} 
+\item{\tt "Th-U"}: a \texttt{json} object with two attributes
+  \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+    \item{\tt "ierr"}: \sloppy{an integer from 1 to 4, representing
+      the eponymous argument of the \texttt{read.data()} function.}
+    \item{\tt "data"}: a \texttt{json} object consisting of 7 or 11
+      named vectors (depending on the value of
+      \texttt{settings.format}), corresponding to the columns of the
+      input table. The last two vectors must be named \texttt{"(C)"}
+      and \texttt{"(omit)"} Missing values are represented by
+      \texttt{null}.
+  \end{enumerate}  
+\item{\tt "detritals"}: a \texttt{json} object with a single
+  attribute, \texttt{"data"}, which is a \texttt{json} object
+  consisting of a number of vectors, named \texttt{"A"}, \texttt{"B"}
+  etc., corresponding to the columns of the input table. If
+  \texttt{settings.detritals.format=1}, then the first item of each
+  vector must be a text string with its sample name. Otherwise the
+  vector names will be used to label the samples in the graphical
+  output. Missing values are represented by \texttt{null}.
+\item{\tt "other"}: a \texttt{json} object with a single attribute,
+  \texttt{"data"}, which is a \texttt{json} object consisting of 2 to
+  8 vectors (depending on the value of
+  \texttt{settings.other.format}). The final column must be named
+  \texttt{"(omit)"}. Missing values are represented by \texttt{null}.
+\end{enumerate}
+
+\printbibliography[heading=subbibliography]
+
+\end{refsection}

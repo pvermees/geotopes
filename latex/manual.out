@@ -147,6 +147,6 @@
 \BOOKMARK [1][-]{section.32.1}{Kernel density estimates}{chapter.32}% 147
 \BOOKMARK [1][-]{section.32.2}{Cumulative age distributions}{chapter.32}% 148
 \BOOKMARK [1][-]{section.32.3}{Multidimensional scaling}{chapter.32}% 149
-\BOOKMARK [0][-]{chapter.33}{Extending IsoplotR}{part.3}% 150
-\BOOKMARK [1][-]{section.33.1}{List of functions}{chapter.33}% 151
-\BOOKMARK [1][-]{section.33.2}{json schema}{chapter.33}% 152
+\BOOKMARK [-1][-]{part.4}{IV Extending IsoplotR}{}% 150
+\BOOKMARK [0][-]{chapter.33}{Application Programming Interface}{part.4}% 151
+\BOOKMARK [0][-]{chapter.34}{json schema}{part.4}% 152
