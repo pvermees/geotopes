@@ -72,7 +72,7 @@ X <- c(1005, 995, 1000, 1125)
 sX <- c(10, 10, 10, 100)
 avg <- mean(X)
 wtdavg <- sum(X/sX^2)/sum(1/sX^2)
-mswd <- sum(((X-wtdavg)^2)/(sX^2))
+chi2stat <- sum(((X-wtdavg)^2)/(sX^2))
 ns <- length(X)
 plot(1:ns,X,xlim=c(1/2,ns+1/2),ylim=c(900,1335),
      xlab='i',ylab='t (Ma)',bty='n',xaxt='n',pch=16)
@@ -85,8 +85,8 @@ dev.off()
 cairo(file='chi2wtdmean.pdf',width=6,height=3)
 pars(mar=c(3,3,1,1))
 df <- length(X)-1
-chi2stat <- mswd*df
-x <- seq(from=0,to=20,length.out=100)
+mswd <- chi2stat/df
+x <- seq(from=0,to=20,length.out=200)
 y <- dchisq(x,df=df)
 plot(x,y,type='l',xlab=expression(chi^2),
      ylab=expression('f('*chi^2*')'),
@@ -685,3 +685,4 @@ radialplot(examples$ArAr,from=60,to=64,z0=61,levels=lev,
            clabel=expression(''^40*'Ar/'^36*'Ar'))
 
 cad(examples$KCa,i2i=TRUE,col='blue')
+

@@ -332,7 +332,9 @@ For the data of Table~\ref{tab:wtdmean}:
 \[
 \chi^2_{stat} = \frac{(1005-1000.4)^2}{10^2}
 + \frac{(1000-1000.4)^2}{10^2}
-+ \frac{(995-1000.4)^2}{10^2} = 6.17
++ \frac{(995-1000.4)^2}{10^2} +
+\frac{(1125-1000.4)^2}{100^2}
+= 2.06
 \]
   
 We can compare this value with a chi-square distribution with $df = n
@@ -347,7 +349,7 @@ distribution:
 \end{minipage}
 \begin{minipage}[t]{.3\textwidth}
   \captionof{figure}{Chi-square distribution with 3 degrees of
-    freedom.  The p-value for an outcome of $\chi_{stat}^2=6.17$ is
+    freedom.  The p-value for an outcome of $\chi_{stat}^2=2.06$ is
     the integral of the black area.}
   \label{fig:chi2}
 \end{minipage}
@@ -355,7 +357,7 @@ distribution:
 A cutoff of $\alpha=0.05$ is often used to assess whether the observed
 scatter of the data around the weighted mean can be accounted for by
 the analytical uncertainty alone.  For the example dataset, the
-p-value is 0.10, which is greater than this \textbf{significance
+p-value is 0.561, which is greater than this \textbf{significance
   level}. Therefore, we have no reason to suspect that there are any
 other sources of dispersion in the data besides analytical
 uncertainty.\\
@@ -454,13 +456,6 @@ overdispersed datasets:
   \sum\limits_{i=1}^{n}\frac{(t_i-\bar{t}_w)^2}{(n-1) (f~s[t_i])^2} = 1
   \Rightarrow f = \sqrt{MSWD}
   \]
-
-  Thus, we can account for any overdispersion by replacing
-  Equation~\ref{eq:tci} with:
-  \begin{equation}
-    \mu \in \left\{\bar{x} \pm t_{df,\alpha/2} s[\bar{x}] \sqrt{MSWD} \right\}
-    \label{eq:tci2}
-  \end{equation}
 
 \item\textbf{Model-2: ignore the analytical uncertainties}
   
@@ -837,8 +832,9 @@ case of linear regression, the chi-square statistic is defined as:
 \noindent in which we recognise the second term of
 Equation~\ref{eq:Ly}, which is the matrix formulation of the sum of
 squares. We can compare this value with a chi-square distribution with
-$df = (k-1) n - k$ degrees of freedom, where $k$ is the dimensionality
-of the linear fit. The MSWD is again defined as
+$df = (k-1)(n-2)$ degrees of freedom, where $k$ is the dimensionality
+of the linear fit. Thus, for bivariate regression, $df=n-2$ and for
+trivariate linear regression, $df=2n-4$. The MSWD is again defined as
 \[
 MSWD = \chi^2_{stat}/df
 \]

@@ -100,9 +100,9 @@
 \defcounter {refsection}{2}\relax 
 \contentsline {section}{\numberline {13.4}Dealing with overdispersion}{61}{section.13.4}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.5}Error correlations}{62}{section.13.5}%
+\contentsline {section}{\numberline {13.5}Error correlations}{61}{section.13.5}%
 \defcounter {refsection}{2}\relax 
-\contentsline {section}{\numberline {13.6}Linear regression}{64}{section.13.6}%
+\contentsline {section}{\numberline {13.6}Linear regression}{63}{section.13.6}%
 \defcounter {refsection}{2}\relax 
 \contentsline {section}{\numberline {13.7}Confidence intervals}{66}{section.13.7}%
 \defcounter {refsection}{3}\relax 
