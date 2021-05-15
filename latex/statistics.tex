@@ -28,9 +28,9 @@ following probability density function (pdf):
 \end{enumerate}
 
 The interval from $\mu-\sigma$ to $\mu+\sigma$ covers 68.27\% of the
-area under the PDF, and the interval from $\mu-2\sigma$ to
+area under the pdf, and the interval from $\mu-2\sigma$ to
 $\mu+2\sigma$ covers 95.45\%. Conversely 95\% of the area under the
-normal PDF is contained within an interval of $\mu\pm{1.96}\sigma$.
+normal pdf is contained within an interval of $\mu\pm{1.96}\sigma$.
 
 \noindent\includegraphics[width=\textwidth]{../figures/2sigma.pdf}
 \begingroup \captionof{figure}{a) pdf and b) cumulative distribution
@@ -86,21 +86,39 @@ y-\mu_y
 \left[\begin{array}{@{}c@{}c@{}}
 \sigma^2_x & \sigma_{x,y}\\
 \sigma_{x,y} & \sigma^2_y
-\end{array}\right]
+\end{array}\right].
 \]
 
 Finally, we can define the \textbf{correlation coefficient} as:
 \begin{equation}
-  \rho[x,y] \equiv \frac{s[x,y]}{\sqrt{s[x]s[y]}} 
-  \approx 
-  \frac{\sigma[x,y]}{\sqrt{\sigma[x]\sigma[y]}}
-  \equiv \rho
+  \rho[x,y] \equiv \frac{\sigma[x,y]}{\sqrt{\sigma[x]\sigma[y]}}
   \label{eq:rho}
 \end{equation}
 
 \noindent $\rho[x,y]$ is akin to a normalised covariance, whose values
 range from $-1$ (perfect negative correlation) to $+1$ (perfect
 positive correlation).
+
+\noindent\begin{minipage}[t][][b]{.55\textwidth}
+  \includegraphics[width=\textwidth]{../figures/norm2dmarginal.pdf}\\
+\end{minipage}
+\begin{minipage}[t][][t]{.45\textwidth}
+  \captionof{figure}{The main panel shows a bivariate normal
+    distribution of data (grey circles), and the best fitting
+    bivariate Gaussian distribution as 1 and 2-$\sigma$ contours. The
+    side panels show the marginal distributions of the $X$- and
+    $Y$-variable, which are both univariate Gaussian. The means and
+    standard deviations of the marginal distributions equal the means
+    and the standard deviations of the bivariate distribution. The
+    bivariate distribution has a fifth parameter, the covariance
+    $\sigma_{x,y}$, which controls the angle at which the elliptical
+    contours are rotated relative to the axes of the diagram. Note
+    that, whereas the 1 and 2-$\sigma$ intervals contain 68\% and 95\%
+    of the univariate normal marginals, the 1 and 2-$\sigma$ ellipses
+    contain only 39\% and 86\% of the bivariate normal distribution.}
+  \label{fig:norm2dmarginal}
+\end{minipage}
+
 
 \section{The method of maximum likelihood}
 \label{sec:maximum-likelihood}
@@ -171,7 +189,7 @@ Equation~\ref{eq:stdevgivenmu}:
   Equation~\ref{eq:stdev} divides it by ($n-1$).
 \end{enumerate}
 
-The two differences are related to each other. The subtraction of 1
+These two differences are related to each other. The subtraction of 1
 from $n$ is called the \textbf{Bessel correction} and accounts for the
 fact that by using an estimate of the mean ($\bar{x}$), rather than
 the true value of the mean ($\mu$), we introduce an additional source
@@ -179,7 +197,7 @@ of uncertainty in the estimate of the standard deviation. This
 additional uncertainty is accounted for by subtracting one
 \textbf{degree of freedom} from the model fit.\\
 
-Again using the method of maximum likelihood, it is possible to
+Using the method of maximum likelihood, it is also possible to
 estimate the covariance for bivariate normal distributions as (proof
 omitted):
 \begin{equation}
@@ -187,13 +205,13 @@ omitted):
 \end{equation}
 
 \noindent or, if $\mu_x$ and $\mu_y$ are unknown and must be estimated
-from the data as well:
+from the data:
 \begin{equation}
   s[x,y] = \sum\limits_{i=1}^{n}\frac{1}{n-1}(x_i-\bar{x})(y_i-\bar{y})
   \label{eq:sxy}
 \end{equation}
 
-Thus we can estimate the \textbf{covariance matrix}
+Thus we can estimate the covariance matrix
 (Equation~\ref{eq:s2tmatrix}) of the bivariate normal distribution as:
 \begin{equation}
   \Sigma_{x,y} =
@@ -205,7 +223,7 @@ Thus we can estimate the \textbf{covariance matrix}
     \right]
 \end{equation}
 
-Finally, we can define the \textbf{correlation coefficient} as:
+Finally, we can define the correlation coefficient as:
 \begin{equation}
   r \equiv \frac{s[x,y]}{\sqrt{s[x]s[y]}} 
   \approx 
@@ -217,7 +235,7 @@ Finally, we can define the \textbf{correlation coefficient} as:
 Besides providing a powerful tool to estimate parameters from data,
 the method of maximum likelihood can also be used to estimate the
 standard errors of those parameters. Let $\hat{z}$ be the maximum
-likelihood estimate of some parameter $z$. We can approximate the
+likelihood estimate of some parameter $z$. Then we can approximate the
 log-likelihood with a second order Taylor series in the vicinity of
 $\hat{z}$:
 \[
@@ -277,10 +295,10 @@ parameters.
 Let $t = \{t_1, \ldots, t_n\}$ be a set of $n$ age estimates
 determined on different aliquots of the same sample with a true age
 $\mu[t]$, and let $\sigma[t] = \sigma[t_1] = \ldots = \sigma[t_n]$ be
-their normally distributed analytical uncertainty. Then we can
-estimate $\mu[t]$ and $\sigma[t]$ with
+their identical normally distributed analytical uncertainties. Then we
+can estimate $\mu[t]$ and $\sigma[t]$ with
 Equations~\ref{eq:arithmeticmean} and \ref{eq:stdev}, respectively.
-However, if each of the $n$ age estimates has its own analytical
+However, if each of the $n$ age estimates has a different analytical
 uncertainty ($\sigma[t_1] \neq \ldots \neq, \sigma[t_n]$), then it is
 important to account for this \textit{heteroscedasticity}. Consider,
 for example, the following dataset of four samples:
@@ -289,17 +307,17 @@ for example, the following dataset of four samples:
 \begin{tabular}{c|ccccc}
   $i$ & 1 & 2 & 3 & 4 \\
 $t_i$ & 1005 & 1000 & 995 & 1125 \\
-$s[t_i]$ & 10 & 10 & 10 & 100
+$\sigma[t_i]$ & 10 & 10 & 10 & 100
 \end{tabular}
 \captionof{table}{Heteroscedastic dataset of four age estimates (in Ma).}
 \label{tab:wtdmean}
 \end{center}
 
-Then the arithmetic mean is 1031~Ma, which plots outside the 95\%
-confidence intervals of all three of the four aliquots. The
+Then the arithmetic mean is 1031~Ma, which plots outside the
+2-$\sigma$ uncertainty limits of all three of the four aliquots. The
 \textbf{error weighted mean} addresses this issue:
 \begin{equation}
-  \bar{t}_w = \frac{\sum_{i=1}^n (t_i/s[t_i]^2) }{\sum_{i=1}^n (1/s[t_i]^2) }
+  \bar{t}_w = \frac{\sum_{i=1}^n (t_i/\sigma[t_i]^2) }{\sum_{i=1}^n (1/\sigma[t_i]^2) }
   \label{eq:wtdmean}
 \end{equation}
 
@@ -312,10 +330,9 @@ $\bar{t}_w$ value of 1000.4~Ma:
 \includegraphics[width=\textwidth]{../figures/wtdmean.pdf}
 \end{minipage}
 \begin{minipage}[t]{.5\textwidth}
-  \captionof{figure}{ The data of Table~\ref{tab:wtdmean} with 95\%
-    confidence intervals shown as error bars, the weighted mean as a
-    dashed horizontal line and the error weighted mean as a solid
-    line.}
+  \captionof{figure}{ The data of Table~\ref{tab:wtdmean} with
+    2-$\sigma$ error bars, the weighted mean as a dashed horizontal
+    line and the error weighted mean as a solid line.}
   \label{fig:wtdmean}
 \end{minipage}
 
@@ -324,7 +341,7 @@ weighted mean can be explained by the analytical uncertainties can be
 assessed using a chi-square test.  To this end, we define the
 chi-square statistic as:
 \begin{equation}
-  \chi^2_{stat} = \sum\limits_{i=1}^{n}\frac{(t_i-\bar{t}_w)^2}{s[t_i]^2}
+  \chi^2_{stat} = \sum\limits_{i=1}^{n}\frac{(t_i-\bar{t}_w)^2}{\sigma[t_i]^2}
   \label{eq:chi2wtdmean}
 \end{equation}
 
@@ -354,13 +371,13 @@ distribution:
   \label{fig:chi2}
 \end{minipage}
 
-A cutoff of $\alpha=0.05$ is often used to assess whether the observed
-scatter of the data around the weighted mean can be accounted for by
-the analytical uncertainty alone.  For the example dataset, the
-p-value is 0.561, which is greater than this \textbf{significance
-  level}. Therefore, we have no reason to suspect that there are any
-other sources of dispersion in the data besides analytical
-uncertainty.\\
+A cutoff of $\alpha=0.05$ (the \textbf{significance level}) is often
+used to assess whether the observed scatter of the data around the
+weighted mean can be accounted for by the analytical uncertainty
+alone.  For the example dataset, the p-value is 0.561, which is
+greater than $\alpha$. Therefore, we have no reason to suspect that
+there are any other sources of dispersion in the data besides
+analytical uncertainty.\\
 
 An alternative way to assess the data scatter is by dividing the
 chi-square statistic $\chi^2_{stat}$ by the number of degrees of
@@ -369,7 +386,7 @@ Square of the Weighted Deviates' \citep[MSWD,][]{mcintyre1966} by
 geochronologists, but is known as the `reduced chi-square statistic'
 elsewhere.
 \begin{equation}
-  MSWD = \frac{\chi^2_{stat}}{n-1}
+  MSWD = \frac{\chi^2_{stat}}{df}
   \label{eq:mswd}
 \end{equation}
 
@@ -401,10 +418,11 @@ the analytical uncertainties. Three scenarios are possible:
 \item Data sets that exhibit MSWD values close to zero are said to be
   ``underdispersed'' with respect to the analytical
   uncertainties. This indicates some problem with the error
-  propagation, which is often due to undetected systematic effects.
+  propagation, which may be due to inappropriately handled systematic
+  effects.
 \item Finally, MSWD values $>1$ can often be attributed to some form
-  of geological dispersion. This overdispersion carries geological
-  significance.
+  of geological dispersion. This overdispersion may therefore be
+  scientifically significant.
 \end{enumerate}
 
 \noindent\begin{minipage}[t]{.4\textwidth}
@@ -416,23 +434,22 @@ the analytical uncertainties. Three scenarios are possible:
 \end{minipage}
 \begin{minipage}[t]{.58\textwidth}
   \captionof{figure}{Three different synthetic data sets shown as
-    weighted mean plots. The analytical uncertainties are shown as
-    95\% error bars. Each of the data sets consists of 10 aliquots
+    weighted mean plots. Each of the data sets consists of 10 aliquots
     that are affected by a combination of analytical and geological
     dispersion. The relative importance of these two sources of
     scatter can be assessed using the mean square of weighted deviates
     (MSWD) and the p-value of the chi-square test. The case where
-    MSWD$\approx{1}$ is the easiest to interpret: it means that the
-    scatter of the data around the best fit line can be completely
+    $\mbox{MSWD}\approx{1}$ is the easiest to interpret: it means that
+    the scatter of the data around the best fit line can be completely
     explained by the analytical uncertainty. The case where MSWD$<{1}$
     may seem like a good outcome but it is in fact a bad one because
     it indicates that there may be a problem with the error
-    propagation. A high p-value or low MSWD may happen once but red
-    flags should go up if all samples in a study show this type of
-    behaviour. Finally the case where MSWD$>{1}$ is not good or bad
-    but `interesting'. The dashed lines mark the 95\% confidence
-    limits of a normal distribution whose mean equals the weighted
-    mean age, and whose standard deviation is given by the
+    propagation. A high p-value or low MSWD may happen occasionally
+    but red flags should go up if all samples in a study show this
+    type of behaviour. Finally the case where MSWD$>{1}$ is not good
+    or bad but `interesting'. The dashed lines mark the 95\%
+    confidence limits of a normal distribution whose mean equals the
+    weighted mean age, and whose standard deviation is given by the
     overdispersion parameter ($\omega=10$~Ma) as discussed in
     Section~\ref{sec:overdispersion}.}
   \label{fig:wtdmeanMSWD}
@@ -476,9 +493,9 @@ overdispersed datasets:
   effects. A `model-3' weighted mean assumes that the data were drawn
   from a normal distribution with two sources of variance:
   \begin{equation}
-    \mathcal{N}(x|\mu,\sigma^2+\omega^2) =
-    \frac{1}{\sqrt{2\pi\left(\sigma^2+\omega^2\right)}}
-    \exp\!\left[-\frac{(x-\mu)^2}{2\left(\sigma^2 + \omega^2 \right)}\right]
+    \mathcal{N}(x_i|\mu,s[t_i]^2+\omega^2) =
+    \frac{1}{\sqrt{2\pi\left(s[t_i]^2+\omega^2\right)}}
+    \exp\!\left[-\frac{(x_i-\mu)^2}{2\left(s[t_i]^2 + \omega^2 \right)}\right]
     \label{eq:overdispersion}
   \end{equation}
 
@@ -488,7 +505,7 @@ function:
   \begin{equation}
     \mathcal{LL}_w \propto \sum\limits_{i=1}^{n}
     - \frac{1}{2}\ln\!\left(s[t_i]^2+\omega^2\right)
-    + \left[-\frac{(x-\mu)^2}{2\left(s[t_i]^2 + \omega^2 \right)}\right]
+    + \left[-\frac{(x_i-\mu)^2}{2\left(s[t_i]^2 + \omega^2 \right)}\right]
     \label{eq:wtdmean-model-3}
   \end{equation}
 
@@ -498,13 +515,13 @@ as useful as the mean age itself. Consider, for example, a batholith
 whose emplacement age is determined by TIMS U--Pb geochronology of
 igneous zircon. The analytical precision of TIMS measurements is on
 the order of a few \textperthousand. So if the batholith was intruded
-at 20~Ma, then the zircon ages can be determined to within 20ka. Large
-intrusions often take much longer than 20kyr to crystallise. Therefore
-it is unlikely that all the zircons have exactly the same age.  The
-resulting geological dispersion will cause high MSWD values.  The
-$\omega$ parameter of a model-3 weighted mean would quantify this
-dispersion and thereby estimate the residence time of zircon in the
-magma chamber.
+at 20~Ma, then the zircon ages can be determined to within
+20~ka. However, large intrusions often take much longer than 20~kyr to
+crystallise. Therefore it is unlikely that all the zircons have
+exactly the same age.  The resulting geological dispersion will cause
+high MSWD values.  The $\omega$ parameter of a model-3 weighted mean
+would quantify this dispersion and thereby estimate the residence time
+of zircon in the magma chamber.
 
 \end{enumerate}
 
@@ -532,24 +549,23 @@ values, their standard errors and their covariances or error
 correlations. This covariance structure is estimated from the raw mass
 spectrometer data using the low level data processing software
 mentioned in Chapter~\ref{ch:intro2}.  The error propagation of
-isotopic ratio data could be greatly simplified if the covariances
-were negligible. Unfortunately this is generally not the case.  To
+isotopic ratio data is greatly simplified if the covariances can
+safely be neglected. Unfortunately this is generally not the case.  To
 prove this point, consider the following set of synthetic mass
 spectrometer data:\\
 
 \noindent\includegraphics[width=\textwidth]{../figures/spurious}\\
 
-\noindent where $x$, $y$ and $z$ are uncorrelated (normally
-distributed) random numbers, but the ratios $y/z$ and $x/z$ are
-strongly correlated. The \emph{spurious correlation} between ratios
-like this was first described by \citet{pearson1896}. It is strongest
-when the common nuclide $z$ is measured less precisely than the
-remaining two nuclides $x$ and $y$. If the summary statistics of $x$,
-$y$ and $z$ are known, then it is possible to predict the correlation
-coefficient:
+$x$, $y$ and $z$ are uncorrelated (normally distributed) random
+numbers, but the ratios $y/z$ and $x/z$ are strongly correlated. The
+\emph{spurious correlation} between ratios like this was first
+described by \citet{pearson1896}. It is strongest when the common
+nuclide $z$ is measured less precisely than the remaining two nuclides
+$x$ and $y$. If the summary statistics of $x$, $y$ and $z$ are known,
+then it is possible to predict the correlation coefficient:
 
 \begin{equation}
-  \noindent r\left[\frac{y}{z},\frac{x}{z}\right] \approx
+  \noindent r\left[\frac{x}{z},\frac{y}{z}\right] \approx
   \frac{
     \left({s[z]}/{z}\right)^2
   }{
@@ -564,8 +580,8 @@ coefficient:
 For example, consider the following hypothetical Re--Os abundance
 estimates:
 \[
-y = {}^{187}\mbox{Os} = 2,000 \pm 10 \mbox{~fmol;~}
-x = {}^{187}\mbox{Re} = 30,000 \pm 100 \mbox{~fmol}
+x = {}^{187}\mbox{Re} = 30,000 \pm 100 \mbox{~fmol;~}
+y = {}^{187}\mbox{Os} = 2,000 \pm 10 \mbox{~fmol}
 \mbox{~and~}
 z = {}^{188}\mbox{Os} = 200 \pm 2 \mbox{~fmol}
 \]
@@ -574,8 +590,8 @@ z = {}^{188}\mbox{Os} = 200 \pm 2 \mbox{~fmol}
 and (\textsuperscript{187}Re/\textsuperscript{188}Os) isotope ratio
 estimates exhibit a correlation coefficient of
 \[
-  \noindent r\left[\frac{{}^{187}\mbox{Os}}{{}^{188}\mbox{Os}},
-                   \frac{{}^{187}\mbox{Re}}{{}^{188}\mbox{Os}}\right]
+  \noindent r\left[\frac{{}^{187}\mbox{Re}}{{}^{188}\mbox{Os}},
+                   \frac{{}^{187}\mbox{Os}}{{}^{188}\mbox{Os}}\right]
   =
   \frac{
     \left(\frac{2}{200}\right)^2
@@ -596,7 +612,7 @@ data to a lesser or greater degree:
 \noindent\includegraphics[width=\textwidth]{../figures/errorcorrelation_edited.pdf}
 \begingroup
 \captionof{figure}{ Examples of correlated uncertainties shown as
-  confidence ellipses in a) Re--Os and b) K--Ca isochron and c)
+  error ellipses in a) Re--Os and b) K--Ca isochron and c)
   Wetherill U--Pb concordia space.\\}
 \label{fig:errorcorrelation}
 \endgroup
@@ -607,8 +623,8 @@ measured more precisely than $x$ and $z$, then this reduces the
 spurious correlation coefficient. For example, revisiting the earlier
 Re--Os example:
 \[
-  \noindent r\left[\frac{{}^{188}\mbox{Os}}{{}^{187}\mbox{Os}},
-                   \frac{{}^{187}\mbox{Re}}{{}^{187}\mbox{Os}}\right]
+  \noindent r\left[\frac{{}^{187}\mbox{Re}}{{}^{187}\mbox{Os}},
+                   \frac{{}^{188}\mbox{Os}}{{}^{187}\mbox{Os}}\right]
   =
   \frac{
     \left(\frac{10}{2000}\right)^2
@@ -635,7 +651,7 @@ as well:\\
 Given a data table of conventional ratios ($X=x/z$ and $Y=y/z$), it is
 possible to calculate the inverse ratios ($X'=x/y$ and $Y'=z/y$),
 their uncertainties ($s[X']$ and $s[Y']$) and error correlations
-($r[X',Y']$) using the following equations:
+($r[X',Y']$) using the following equations \citep{li2021}:
 
 \begin{equation}
   \begin{cases}
@@ -659,17 +675,14 @@ their uncertainties ($s[X']$ and $s[Y']$) and error correlations
 This transformation is perfectly symmetric in the sense that it can
 also be used to convert inverse isochron ratios to conventional
 ones. To do this, it suffices to swap $X'$ and $Y'$ for $X$ and $Y$
-and vice versa. \texttt{IsoplotR} carries out these conversions on the
-fly. So if a data file provides the isotopic composition as
-conventional ratios, then it is possible to plot the data as inverse
-ratios without worrying about the details of the conversion.
+and vice versa.
 
 \section{Linear regression}
 \label{sec:regression}
 
 As briefly discussed in Chapter~\ref{ch:intro2PD}, isochrons are an
 important instrument of high precision, high accuracy geochronology.
-Given several aliquots from a single sample, they allow the
+Given several aliquots from the same sample, they allow the
 non-radiogenic component of the daughter nuclide to be quantified and
 separated from the radiogenic component. A conventional isochron is
 obtained by fitting a straight line through the conventional isochron
@@ -712,21 +725,38 @@ obtained by maximising the log-likelihood:
 To illustrate the usefulness of the weighted regression algorithm,
 consider a simple three-point example. Let $\boldsymbol{x} = \{10, 20,
 40\}$ and $\boldsymbol{y} = \{20,30,50\}$ be the \emph{true} x- and
-y-coordinates of the three points\footnote{In the remainder of this
-  paper, bold face will be used to mark the true values, whereas
-  normal face will be used to mark the actual measurements (i.e. the
-  true value plus some random analytical uncertainty).}. It is easy to
-see that these fall on a perfect line with intercept $\boldsymbol{a} =
-10$ and slope $\boldsymbol{b} = 1$. Let $s[\boldsymbol{y}] =
-\{1,1,10\}$ be the analytical uncertainties of \textbf{y}, so that the
-third point is ten times less precise than the first two. Further let
-$y = \{20,30,60\}$ be a random realisation of \textbf{y}.  Then the
-best ordinary least squares fit through $x = \boldsymbol{x}$ and $y$
-has an intercept of $a = 5.0$ and a slope of $b = 1.36$. This poor
-result is strongly influenced by the third, least precise data
-point. Subjecting the same dataset to weighted linear regression
-yields $a = 9.4$ and $b = 1.04$. This is a far more accurate result
-(Figure~\ref{fig:regression}.a).\\
+y-coordinates of the three points. It is easy to see that these fall
+on a perfect line with intercept $\boldsymbol{a} = 10$ and slope
+$\boldsymbol{b} = 1$. Let $s[\boldsymbol{y}] = \{1,1,10\}$ be the
+analytical uncertainties of \textbf{y}, so that the third point is ten
+times less precise than the first two. Further let $y = \{20,30,60\}$
+be a random realisation of \textbf{y}.  Then the best ordinary least
+squares fit through $x = \boldsymbol{x}$ and $y$ has an intercept of
+$a = 5.0$ and a slope of $b = 1.36$. This poor result is strongly
+influenced by the third, least precise data point. Subjecting the same
+dataset to weighted linear regression yields $a = 9.4$ and $b =
+1.04$:
+
+\noindent\begin{minipage}[t]{.4\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/regression1.pdf}
+\end{minipage}
+\begin{minipage}[t]{.02\textwidth}
+~
+\end{minipage}
+\begin{minipage}[t]{.58\textwidth}
+  \captionof{figure}{Illustration of the benefits of error-weighted
+    linear regression.  The black squares mark the true
+    (x,y)-coordinates of three samples drawn from a (dashed) line with
+    intercept $\boldsymbol{a} = 10$ and slope $\boldsymbol{b} =
+    1$. The black dots mark random realisations of these samples,
+    given Gaussian uncertainties with uncertainties shown as 95\%
+    confidence bars or ellipses. The three samples have analytical
+    uncertainty in the y-variable only. The ordinary least squares fit
+    ignoring these uncertainties is shown in red ($a = 5.0, b =
+    1.36$), the weighted least squares fit in blue ($a = 9.4, b =
+    1.04$).}
+\end{minipage}
 
 In isochron regression, it is typical for not only $y$ but also $x$ to
 be affected by analytical uncertainty. In this case, the best fit line
@@ -734,12 +764,9 @@ can be found by modifying the likelihood function
 \citep{titterington1979, york1969, york2004}:
 
 \begin{equation}
-  \mathcal{LL}_y = 
-  -\frac{1}{2} \sum\limits_{i=1}^{n}
-  \ln\left(2 \pi |\Sigma_i| \right)
-  -\frac{1}{2} \sum\limits_{i=1}^{n}
-  \left[X_i-\hat{X}_i\right]^T
-  \Sigma_i^{-1}
+  \mathcal{LL} = -\frac{1}{2} \sum\limits_{i=1}^{n} \ln\left(2 \pi
+  |\Sigma_i| \right) -\frac{1}{2} \sum\limits_{i=1}^{n}
+  \left[X_i-\hat{X}_i\right]^T \Sigma_i^{-1}
   \left[X_i-\hat{X}_i\right]
   \label{eq:Ly}
 \end{equation}
@@ -770,7 +797,7 @@ can be found by modifying the likelihood function
 \end{equation}
 
 \noindent where $\hat{x}_i$ are the \emph{estimated} values of
-$\mathbf{x}_i$ for any value of $a$ or $b$. $s[x_i,y_i]$ is the
+$\mathbf{x}_i$ for any value of $a$ or $b$, and $s[x_i,y_i]$ is the
 covariance of the $i$\textsuperscript{th} measurement's x- and
 y-uncertainties. To illustrate the importance of these covariance
 terms, consider a second three-point example:
@@ -796,27 +823,28 @@ outcome because all the samples have the same standard errors ($s[x_i]
 then be $a = 7.2$ and $b = 1.21$. However, if we do take into account
 the covariances, then the maximum likelihood algorithm yields $a =
 9.3$ and $b = 1.05$, which is much closer to the true values of
-$\boldsymbol{a} = 10$ and $\boldsymbol{b} = 1$
-(Figure~\ref{fig:regression}.b).
+$\boldsymbol{a} = 10$ and $\boldsymbol{b} = 1$:
 
-\begin{center}
-\noindent\includegraphics[width=.85\textwidth]{../figures/regression.pdf}
-\captionof{figure}{Illustration of the benefits of error-weighted
-  linear regression.  The black squares mark the true
-  (x,y)-coordinates of three samples drawn from a (dashed) line with
-  intercept $\boldsymbol{a} = 10$ and slope $\boldsymbol{b} = 1$. The
-  black dots mark random realisations of these samples, given Gaussian
-  uncertainties with uncertainties shown as 95\% confidence bars or
-  ellipses. a) three samples with analytical uncertainty in the
-  y-variable only. The ordinary least squares fit ignoring these
-  uncertainties is shown in red ($a = 5.0, b = 1.36$), the weighted
-  least squares fit in blue ($a = 9.4, b = 1.04$). b) three samples
-  with correlated uncertainties in both the x- and y-variable.
-  Ignoring the error correlations yields the red fit ($a = 7.2, b =
-  1.21$). Accounting for the error correlations produces the blue fit
-  ($a = 9.3, b = 1.05$).}
-\label{fig:regression}
-\end{center}
+\noindent\begin{minipage}[t]{.4\textwidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\textwidth]{../figures/regression2.pdf}
+\end{minipage}
+\begin{minipage}[t]{.02\textwidth}
+~
+\end{minipage}
+\begin{minipage}[t]{.58\textwidth}
+  \captionof{figure}{ Illustration of the benefits of error-weighted
+    linear regression.  The black squares mark the true
+    (x,y)-coordinates of three samples drawn from a (dashed) line with
+    intercept $\boldsymbol{a} = 10$ and slope $\boldsymbol{b} =
+    1$. The black dots mark random realisations of these samples,
+    given Gaussian uncertainties with uncertainties shown as 95\%
+    confidence bars or ellipses. The three samples have correlated
+    uncertainties in both the x- and y-variable.  Ignoring the error
+    correlations yields the red fit ($a = 7.2, b = 1.21$). Accounting
+    for the error correlations produces the blue fit ($a = 9.3, b =
+    1.05$).}
+\end{minipage}
 
 The extent to which the observed scatter in the data around the best
 fit isochron line can be explained by the analytical uncertainties can
@@ -829,22 +857,19 @@ case of linear regression, the chi-square statistic is defined as:
   \label{eq:Chi2}
 \end{equation}
 
-\noindent in which we recognise the second term of
-Equation~\ref{eq:Ly}, which is the matrix formulation of the sum of
-squares. We can compare this value with a chi-square distribution with
-$df = (k-1)(n-2)$ degrees of freedom, where $k$ is the dimensionality
-of the linear fit. Thus, for bivariate regression, $df=n-2$ and for
-trivariate linear regression, $df=2n-4$. The MSWD is again defined as
-\[
-MSWD = \chi^2_{stat}/df
-\]
+\noindent where we recognise the second term of Equation~\ref{eq:Ly},
+which is the matrix formulation of the sum of squares. We can compare
+this value with a chi-square distribution with $df = (k-1)(n-2)$
+degrees of freedom, where $k$ is the dimensionality of the linear
+fit. Thus, for bivariate regression, $df=n-2$ and for trivariate
+linear regression, $df=2n-4$. The MSWD is again defined by
+Equation~\ref{eq:mswd}.\\
 
-In complete analogy to the weighted mean of Section~\ref{sec:mswd},
-the MSWD can be used to assess whether the scatter of the data falls
-within the range expected from the analytical uncertainties, or
-whether the data if over- or underdispersed. An in the case of
-overdispersion, there are three ways (`models') to deal with this
-overdispersion:
+In complete analogy with Section~\ref{sec:mswd}, the MSWD can be used
+to assess whether the scatter of the data falls within the range
+expected from the analytical uncertainties, or whether the data are
+over- or underdispersed. In the case of overdispersion, there are
+again three ways (`models') to deal with this overdispersion:
 
 \begin{enumerate}
 \item model-1: inflate the analytical uncertainties by a factor
@@ -885,32 +910,33 @@ overdispersion:
 \section{Confidence intervals}
 \label{sec:CI}
 
-Figure~\ref{fig:2sigma} showed that approximately 95\% of the normal
-distribution falls within two standard deviations of the mean. Thus,
-if we know that $x$ was drawn from a normal distribution with standard
-deviation $\sigma$ and an unknown mean $\mu$, then 95\% of all $x$-values
-are expected to fall in the interval
+Figure~\ref{fig:2sigma} showed that approximately 95\% of the
+univariate normal distribution falls within two standard deviations of
+the mean. Thus, if we know that $x$ was drawn from a normal
+distribution with standard deviation $\sigma$ and an unknown mean
+$\mu$, then 95\% of all $x$-values are expected to fall in the
+interval
 \[
 \mu - 2\sigma \leq x \leq \mu + 2\sigma
 \]
 
-Subtracting $x$ and $\mu$ from all terms:
+Subtracting $x$ and $\mu$ from both terms:
 \[
 -x - 2\sigma \leq -\mu \leq -x + 2\sigma
 \]
 
-Multiplying with $-1$:
+\noindent and multiplying with $-1$:
 \[
 x + 2\sigma \geq \mu \geq x - 2\sigma
 \]
 
-\noindent which gives rise to the following 95\% confidence interval
-for $\mu$:
+\noindent gives rise to the following 95\% confidence interval for
+$\mu$:
 \[
 \mu \in \{ x \pm 2\sigma \}
 \]
 
-\noindent which gives rise to the popular `2-sigma' confidence
+\noindent which corresponds to the popular `2-sigma' confidence
 interval.  Chapter~\ref{ch:error-propagation} showed that the standard
 error of the mean is given by
 \[
@@ -1011,7 +1037,7 @@ t = \hat{t} \pm x \mid y (\mid z)
     and b) Rb--Sr isochron (Figure~\ref{fig:isochronMSWD}c) regression
     using a model-1 fit. The legend reports the best fit age and
     uncertainties reported as standard errors, and 95\% confidence
-    intervals with and without overdispersion.  }
+    intervals without and with overdispersion.  }
   \label{fig:model-1}
 \end{minipage}
 
@@ -1027,22 +1053,20 @@ involved. Similarly, for dating methods such as
 sample date can be more precise than the $J$ and $\zeta$ calibration
 factors, respectively.\\
 
-When solving Equation~\ref{eq:wtdmean}, \texttt{IsoplotR} only
-incorporates the random sources of uncertainty into $s[t_i]$.  If the
-user wishes to include the systematic uncertainties as well, then this
-is done by first computing the isotopic composition corresponding to
-the weighted mean age (and its uncertainty), and then re-propagating
-the analytical uncertainty of the weighted mean age, this time
-including the decay or calibration constant uncertainties.\\
-
-Note that this procedure is unable to handle the systematic
-uncertainties associated with stable isotope ratios, molar masses
-etc. Those comparably small uncertainties demand a different approach
-in which not the ages but the isotopic data are averaged.  Doing so
-would require the addition of new input formats that can trace error
-correlations between samples (Chapter~\ref{sec:future}). It would also
-require the development of a new generation of low-level
-data-processing software \citep{vermeesch2015b,mclean2016}.
+When solving Equation~\ref{eq:wtdmean}, only the random sources of
+uncertainty should be incorporated into $s[t_i]$.  To include the
+systematic uncertainties as well, one should first compute the
+isotopic composition corresponding to the weighted mean age (and its
+uncertainty), and then re-propagate the analytical uncertainty of the
+weighted mean age, this time including the decay or calibration
+constant uncertainties. Note that this procedure is unable to handle
+the systematic uncertainties associated with stable isotope ratios,
+molar masses etc. Those comparably small uncertainties demand a
+different approach in which not the ages but the isotopic data are
+averaged.  Doing so would require the error correlations between
+samples. A new generation of low-level data-processing software is
+being developed to make this possible
+\citep{vermeesch2015b,mclean2016}.
 
 \noindent\begin{minipage}[t]{.33\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -1051,7 +1075,7 @@ data-processing software \citep{vermeesch2015b,mclean2016}.
 \begin{minipage}[t]{.2\linewidth}
 \end{minipage}
 \begin{minipage}[t]{.65\linewidth}
-  \captionof{figure}{ a) ordinary weighted mean (model-1) and b)
+  \captionof{figure}{ a) an ordinary weighted mean (model-1) and b)
     random effects model (model-3) of the same dataset. The dark and
     light grey bands show the 95\% confidence intervals the weighted
     mean without and with external uncertainties, respectively. The

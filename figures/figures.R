@@ -215,9 +215,14 @@ kde(UPb,type=5,from=-50,to=200,bw=20)
 kde(UPb,log=TRUE,type=5,from=1,to=500,bw=0.5)
 dev.off()
 
-cairo(file='~/Documents/temp/logtrans2.pdf',height=3,width=4)
-pars()
+cairo(file='~/Documents/temp/logtrans2.pdf',height=3.5,width=4)
+pars(mar=c(3,3,3.5,1))
 radialplot(UPb,type=5)
+dev.off()
+
+cairo(file='~/Documents/temp/wtdmeanUPb8.pdf',height=3,width=4)
+pars(mar=c(2.5,2,2.5,0.5))
+weightedmean(UPb,type=5)
 dev.off()
 
 cairo(file='~/Documents/temp/3means.pdf',height=3,width=9)
@@ -402,6 +407,13 @@ cairo(file='~/Documents/temp/Hourigan.pdf',height=6,width=6)
 Hourigan <- read.csv('Hourigan.csv',header=TRUE)
 UPb <- read.data(Hourigan[,1:5],method='U-Pb',format=2)
 concordia(UPb,levels=Hourigan[,'ThU'],clabel='Th/U',
+          ellipse.fill=c('white','red'),show.age=2)
+dev.off()
+
+cairo(file='~/Documents/temp/HouriganTW.pdf',height=6,width=6)
+Hourigan <- read.csv('Hourigan.csv',header=TRUE)
+UPb <- read.data(Hourigan[,1:5],method='U-Pb',format=2)
+concordia(UPb,type=2,levels=Hourigan[,'ThU'],clabel='Th/U',
           ellipse.fill=c('white','red'),show.age=2)
 dev.off()
 
@@ -686,3 +698,23 @@ radialplot(examples$ArAr,from=60,to=64,z0=61,levels=lev,
 
 cad(examples$KCa,i2i=TRUE,col='blue')
 
+cairo(file='~/Documents/temp/UPb8commonPb.pdf',height=3.5,width=4)
+pars(mar=c(3,3,1,1))
+fn <- system.file('UPb8.csv',package='IsoplotR')
+UPb8 <- read.data(fn,method='U-Pb',format=8)
+concordia(UPb8,type=3,common.Pb=2,xlim=c(0,0.004))
+dev.off()
+
+cairo(file='~/Documents/temp/RosholtOsmond.pdf',height=3.5,width=7)
+pars(mfrow=c(1,2),mar=c(3,3,3.5,1))
+fn <- system.file('ThU4.csv',package='IsoplotR')
+ThU <- read.data(fn,method='Th-U',format=4)
+isochron(ThU,type=1)
+isochron(ThU,type=2)
+dev.off()
+
+cairo(file='~/Documents/temp/transformedevolution.pdf',height=3.5,width=7)
+pars(mfrow=c(1,2),mar=c(3,3,3.5,1))
+evolution(examples$ThU,transform=TRUE,detritus=0,isochron=TRUE)
+evolution(examples$ThU,transform=TRUE,detritus=1,isochron=TRUE)
+dev.off()

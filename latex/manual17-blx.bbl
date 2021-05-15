@@ -390,58 +390,45 @@
     \field{year}{1983}
   \endentry
 
-  \entry{selby2007}{article}{}
-    \name{author}{5}{}{%
-      {{hash=SD}{%
-         family={Selby},
+  \entry{smoliar1996}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SMI}{%
+         family={Smoliar},
          familyi={S\bibinitperiod},
-         given={David},
-         giveni={D\bibinitperiod},
+         given={Michael\bibnamedelima I},
+         giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
       }}%
-      {{hash=CRA}{%
-         family={Creaser},
-         familyi={C\bibinitperiod},
-         given={Robert\bibnamedelima A},
-         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=SHJ}{%
-         family={Stein},
-         familyi={S\bibinitperiod},
-         given={Holly\bibnamedelima J},
-         giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=MRJ}{%
-         family={Markey},
-         familyi={M\bibinitperiod},
+      {{hash=WRJ}{%
+         family={Walker},
+         familyi={W\bibinitperiod},
          given={Richard\bibnamedelima J},
          giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
-      {{hash=HJL}{%
-         family={Hannah},
-         familyi={H\bibinitperiod},
-         given={Judith\bibnamedelima L},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      {{hash=MJW}{%
+         family={Morgan},
+         familyi={M\bibinitperiod},
+         given={John\bibnamedelima W},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Elsevier}%
+      {American Association for the Advancement of Science}%
     }
-    \strng{namehash}{SD+1}
-    \strng{fullhash}{SDCRASHJMRJHJL1}
+    \strng{namehash}{SMIWRJMJW1}
+    \strng{fullhash}{SMIWRJMJW1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2007}
+    \field{labelyear}{1996}
     \field{labeldatesource}{}
     \field{sortinit}{S}
     \field{sortinithash}{S}
-    \field{number}{8}
-    \field{pages}{1999\bibrangedash 2013}
-    \field{title}{{Assessment of the $^{187}$Re decay constant by cross
-  calibration of Re--Os molybdenite and U--Pb zircon chronometers in magmatic
-  ore systems}}
-    \field{volume}{71}
-    \field{journaltitle}{Geochimica et Cosmochimica Acta}
-    \field{year}{2007}
+    \field{number}{5252}
+    \field{pages}{1099\bibrangedash 1102}
+    \field{title}{{Re-Os ages of group IIA, IIIA, IVA, and IVB iron
+  meteorites}}
+    \field{volume}{271}
+    \field{journaltitle}{Science}
+    \field{year}{1996}
   \endentry
 
   \entry{soderlund2004}{article}{}

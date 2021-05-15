@@ -88,7 +88,7 @@ better alternative is discussed in Section~\ref{sec:radial}.
 \section{Frequency distributions}
 \label{sec:KDE+CAD}
 
-Empirical cumulative distribution functions or 'Cumulative Age
+Empirical cumulative distribution functions or `Cumulative Age
 Distributions' (CADs) are the most straightforward way to visualise
 the frequency distribution of multiple dates. A CAD is a step function
 that sets out the rank order of the dates against their numerical
@@ -122,8 +122,8 @@ Histograms smooth data by binning. \texttt{IsoplotR} uses Sturges'
 Rule ($\log_2[n]+1$, where $n$ is the number of data points) to
 determine the default number of histogram bins, but this can be
 changed to any other positive integer by the user. Alternatively,
-kernel density estimates \citep[KDEs][]{vermeesch2012b} smooth data by
-applying a (Gaussian) kernel:
+`Kernel Density Estimates' \citep[KDEs][]{vermeesch2012b} smooth data
+by applying a (Gaussian) kernel:
 \begin{equation}
   \mathrm{KDE}(t) = \sum_{i=1}^{n}\mathcal{N}\left(t | \mu=t_i,
   \sigma^2=h_i^2\right)/n

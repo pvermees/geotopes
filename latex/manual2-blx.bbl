@@ -17,6 +17,39 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
+  \entry{li2021}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Copernicus GmbH}%
+    }
+    \strng{namehash}{LYVP1}
+    \strng{fullhash}{LYVP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{1\bibrangedash 8}
+    \field{title}{{Inverse isochron regression for Re--Os, K--Ca and other
+  chronometers}}
+    \field{journaltitle}{Geochronology Discussions}
+    \field{year}{2021}
+  \endentry
+
   \entry{mcintyre1966}{article}{}
     \name{author}{4}{}{%
       {{hash=MGA}{%

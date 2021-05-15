@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: trainingcourse2-blx.aux
+The top-level auxiliary file: manual2-blx.aux
 The style file: biblatex.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -17,49 +17,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: trainingcourse-blx.bib
+Database file #1: manual-blx.bib
 Database file #2: /home/pvermees/Dropbox/biblio.bib
 Biblatex version: 3.13
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 9 entries,
+You've used 10 entries,
             6365 wiz_defined-function locations,
-            1254 strings with 10426 characters,
-and the built_in function-call counts, 53064 in all, are:
-= -- 3779
-> -- 918
-< -- 277
-+ -- 1084
-- -- 307
-* -- 4022
-:= -- 5470
+            1261 strings with 10556 characters,
+and the built_in function-call counts, 58622 in all, are:
+= -- 4136
+> -- 1043
+< -- 322
++ -- 1216
+- -- 350
+* -- 4411
+:= -- 5989
 add.period$ -- 0
-call.type$ -- 9
-change.case$ -- 171
+call.type$ -- 10
+change.case$ -- 197
 chr.to.int$ -- 42
-cite$ -- 16
-duplicate$ -- 5072
-empty$ -- 5035
-format.name$ -- 508
-if$ -- 11231
+cite$ -- 18
+duplicate$ -- 5706
+empty$ -- 5534
+format.name$ -- 576
+if$ -- 12414
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 25
 missing$ -- 0
-newline$ -- 288
-num.names$ -- 423
-pop$ -- 2810
+newline$ -- 320
+num.names$ -- 482
+pop$ -- 3156
 preamble$ -- 1
-purify$ -- 208
+purify$ -- 239
 quote$ -- 0
-skip$ -- 1654
+skip$ -- 1878
 stack$ -- 0
-substring$ -- 6865
-swap$ -- 1351
-text.length$ -- 228
-text.prefix$ -- 8
+substring$ -- 7363
+swap$ -- 1521
+text.length$ -- 259
+text.prefix$ -- 9
 top$ -- 1
-type$ -- 294
+type$ -- 328
 warning$ -- 0
-while$ -- 690
+while$ -- 765
 width$ -- 0
-write$ -- 280
+write$ -- 311

@@ -276,7 +276,7 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
       \end{array}
       \right]^T
     \left[
-      \begin{array}{@{}cc@{}}
+      \begin{array}{@{}c@{~}c@{}}
         s\!\left[\frac{07}{35}\right]_i^2 &
         s\!\left[\frac{07}{35},\frac{06}{38}\right]_i\\
         s\!\left[\frac{07}{35},\frac{06}{38}\right]_i &
@@ -302,7 +302,7 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
       \end{array}
       \right]^T
     \left[
-      \begin{array}{@{}cc@{}}
+      \begin{array}{@{}c@{~}c@{}}
         s\!\left[\frac{38}{06}\right]_i^2 &
         s\!\left[\frac{38}{06},\frac{07}{06}\right]_i\\
         s\!\left[\frac{38}{06},\frac{07}{06}\right]_i &
@@ -413,7 +413,7 @@ composition:
     \end{array}
     \right]^T
   \left[
-    \begin{array}{@{}cc@{}}
+    \begin{array}{@{}c@{~}c@{}}
       \sigma[\lambda_{235}]^2 & \sigma[\lambda_{235},\lambda_{238}] \\
       \sigma[\lambda_{235},\lambda_{238}] & \sigma[\lambda_{238}]^2
     \end{array}
@@ -1083,7 +1083,7 @@ filter U--Pb data:
     when no zircon passes this filter.  Hence it is best not to use
     this filter, but \texttt{IsoplotR} offers it nonetheless for the
     sake of completeness and to allow reproducing published results.
-  \item The Stacey-Kramers discordance filter
+  \item The Stacey-Kramers discordance filter:
     \begin{equation}
       d_{sk} = 1 - r_{86}/r_{86}^\ast
     \end{equation}
@@ -1094,7 +1094,7 @@ filter U--Pb data:
     then the $d_{sk}$ filter will produce the most accurate age
     distributions, provided that a \citet{stacey1975} common Pb
     correction is applied to the filtered data afterwards.
-  \item The perpendicular Aitchison distance
+  \item The perpendicular Aitchison distance:
     \begin{equation}
       d_{a} = dx(t_{68}) \sin\!\left(\arctan\!\left[
         \frac{dy(t_{76})}{dx(t_{68})} \right] \right)
@@ -1123,7 +1123,7 @@ filter U--Pb data:
     \label{fig:da}
     \end{minipage}
     
-  \item The concordia distance
+  \item The concordia distance:
     \begin{equation}
     d_c = \mbox{sgn}[t_{76}-t_{68}] \sqrt{ dx(t_c)^2 + dy(t_c)^2 }
     \end{equation}
