@@ -718,3 +718,11 @@ pars(mfrow=c(1,2),mar=c(3,3,3.5,1))
 evolution(examples$ThU,transform=TRUE,detritus=0,isochron=TRUE)
 evolution(examples$ThU,transform=TRUE,detritus=1,isochron=TRUE)
 dev.off()
+
+cairo(file='~/Documents/temp/Chauvenet.pdf',height=3.5,width=4)
+pars()
+x <- rnorm(50,50,5)
+x[20]<- 100
+plot((1:50)[-20],x[-20],xlab='n',ylab='t',ylim=c(0,100),bty='n',pch=21,bg='black')
+points(20,x[20],pch=21,bg='white')
+dev.off()

@@ -32,7 +32,7 @@ conventional version of this criterion proceeds as follows:
 
 Although this procedure is effective at removing outliers in
 \emph{homoscedastic} datasets, in which all datapoints are derived
-from a single Normal distribution, it is unable to account for
+from a single normal distribution, it is unable to account for
 \emph{heteroscedasticity}, in which different samples are
 characterised by different analytical uncertainties ($s[t_i]$ in
 Equation~\ref{eq:wtdmean}). \texttt{IsoplotR} introduces a heuristic
@@ -46,10 +46,8 @@ heteroscedastic data. For model-1 fits:
 \item Let $\hat{\mu}$ be the maximum likelihood estimate for $\mu$ and
   let $\sigma[\hat{\mu}]$ be its standard error. For each $t_i$,
   compute the probability $p_i$ that $|\tau|>|t_i-\hat{\mu}|$ under a
-  normal distribution with mean $\mu=0$ and variance
-  $\sigma^2=s[t_i]^2$ (if the data are not overdispersed), or
-  $\sigma^2 = MSWD \times s[t_i]^2$ (if the data are significantly
-  overdispersed).
+  normal distribution with mean $\mu=0$ and variance $\sigma^2 = MSWD
+  \times s[t_i]^2$.
 \item Proceed as before.
 \end{enumerate}
 
@@ -68,9 +66,8 @@ For a model-3 fit, the algorithm becomes:
 \end{enumerate}
 
 If the analytical uncertainties are small compared to the scatter
-between the dates (i.e., if the p-value of the chi-square test is less
-than $\alpha$ in a model-1 fit, or if $\omega \gg s[t_i]$ for all $i$
-in a model-2 fit), then this generalised algorithm reduces to the
+between the dates (i.e., if $\omega \gg s[t_i]$ for all $i$ in a
+model-3 fit), then this generalised algorithm reduces to the
 conventional Chauvenet criterion. If, on the other hand, the
 analytical uncertainties are large and the data do not exhibit any
 overdispersion, then the heuristic outlier detection method is similar
@@ -101,10 +98,10 @@ value:
 \noindent where $1(\ast) = 1$ if $\ast$ is true and $1(\ast) = 0$ if
 $\ast$ is false. CADs have two desirable properties
 \citep{vermeesch2007a}.  First, they do not require any pre-treatment
-or smoothing of the data.  This Section will show that this is not the
-case for all data visualisation methods. Second, it is easy to
-superimpose several CADs on the same plot. This facilitates the
-intercomparison of multiple samples.\\
+or smoothing of the data.  We will see that this is not the case for
+all data visualisation methods. Second, it is easy to superimpose
+several CADs on the same plot. This facilitates the intercomparison of
+multiple samples.\\
 
 The interpretation of CADs is straightforward but not very
 intuitive. The prominence of individual age components is proportional
@@ -159,9 +156,9 @@ Kernel density estimates are not to be confused with
 \texttt{Isoplot}'s `probability density plots' (PDPs). The
 mathematical definition of a PDP closely resembles that of the KDE,
 the only difference being the substitution of the bandwidth $h_i$ by
-the analytical uncertainty $s[t_i]$ in Equation~\ref{eq:KDE}. This
-similarity in appearance and definition is the source of much
-confusion.\\
+the analytical uncertainty $s[t_i]$ in Equation~\ref{eq:KDE}. The
+similarity in appearance and definition between PDPs and KDEs is the
+source of much confusion.\\
 
 The rationale behind PDPs is to emphasise the `good' data (the most
 precise measurements stand out as peaks), and to reduce the prominence
@@ -218,14 +215,14 @@ plot with any of the $(x_i,y_i)$s is proportional to $z_i$ and, hence,
 a function of the date $t_i$.\\
 
 It is helpful to draw a radial scale at some convenient distance from
-the origin and annotating it with labelled ticks at the appropriate
+the origin and annotate it with labelled ticks at the appropriate
 angles. While the angular position of each data point represents the
 date, its horizontal distance from the origin is proportional to the
 precision. Imprecise measurements plot on the left-hand side of the
 radial plot, whereas precise age determinations are found further
 towards the right. Thus, radial plots allow the observer to assess
 both the magnitude and the precision of quantitative data in one
-glance (Figure~\ref{fig:radial}).
+glance:
 
 \begin{center}
 \includegraphics[width=.9\textwidth]{../figures/radial.pdf}
@@ -300,10 +297,11 @@ before, yielding two estimates $\hat{\mu}$ and $\hat{\omega}$. The
 \textbf{central age} is defined as $\exp(\hat{\mu})$, and
 $\hat{\omega}$ represents the (over)dispersion of the data.  This is a
 relative quantity (due to the log-transform) that estimates the
-coefficient of variation of the true ages. The difference between the
-central age and the weighted mean age is usually small unless the data
-are imprecise and/or strongly overdispersed. In those cases, the
-central age yields the geologically most meaningful value.\\
+\texttt{coefficient of variation} ($=\sigma/mu$) of the true ages. The
+difference between the central age and the weighted mean age is
+usually small unless the data are imprecise and/or strongly
+overdispersed. In those cases, the central age yields the geologically
+most meaningful value.\\
 
 \noindent\includegraphics[width=\textwidth]{../figures/3means.pdf}
 \begingroup \captionof{figure}{Three different age models implemented
@@ -324,14 +322,14 @@ central age yields the geologically most meaningful value.\\
   appropriate estimator of the mean \emph{and} the standard deviation
   of the true ages. The latter parameter is reported as the dispersion
   in the legend. 3a) If the true ages are drawn from a lognormal
-  distribution with location parameter 10~Ma and a dispersion
-  parameter of 50\% (blue line), and the analytical uncertainties are
-  $\sim$50\%, then the distribution of the measured dates (red line)
-  is a lognormal distribution with $10/\sqrt{2}$\% dispersion
-  parameter. 3b) In this case the random effects model of
-  Equation~\ref{eq:central} is the best way to average the data, and
-  the radial plot with logarithmic scale is the best way to visualise
-  the results.\\} \endgroup
+  distribution with location parameter $\exp[\mu]=10$~Ma and
+  dispersion parameter $\sigma/\mu=50$\% (blue line), and the
+  analytical uncertainties are $\sim$50\%, then the distribution of
+  the measured dates (red line) is a lognormal distribution with
+  $10/\sqrt{2}$\% dispersion parameter. 3b) In this case the random
+  effects model of Equation~\ref{eq:central} is the best way to
+  average the data, and the radial plot with logarithmic scale is the
+  best way to visualise the results.\\} \endgroup
 
 The random effects model represented by Equation~\ref{eq:central} is
 referred to as a \textbf{continuous mixture} model. It assumes that
@@ -385,8 +383,8 @@ the number of components always increases with sample size. This
 happens because the power of Equation~\ref{eq:mixture} to resolve even
 the smallest degree of overdispersion increases with sample size.\\
 
-Suppose that one uses the youngest component produced by the BIC
-algorithm to estimate the maximum depositional age of a sedimentary
+Suppose that one uses the youngest component in a discrete mixture
+model to estimate the maximum depositional age of a sedimentary
 sequence. Then the resulting value would never converge to a specific
 value.  Instead, one would find this minimum age to drift to ever
 younger values until a point where the youngest age component in a
@@ -411,9 +409,9 @@ If one is mainly interested in the youngest age component, then it is
 more productive to use an alternative parameterisation, in which all
 grains are assumed to come from one of two components, whereby the
 first component is a single discrete age peak ($\exp[\gamma]$, say)
-and the second component ($\mathcal{N}'(\ldots)$) is a continuous
-distribution such as Equation~\ref{eq:central}, but truncated at this
-discrete value.
+and the second component ($\exp[\mathcal{N}'(z|\mu,\omega^2)]$ where
+$\mu<\gamma$) is a continuous distribution such as
+Equation~\ref{eq:central}, but truncated at this discrete value:
 \begin{equation}
   \mathcal{LL}(\pi,\gamma,\mu,\omega|\mathbf{z},\mathbf{s[z]}) =
   \sum\limits_{j=1}^{n} \ln\!\left[

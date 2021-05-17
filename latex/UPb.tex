@@ -8,7 +8,7 @@
   U--Pb data acquisition may focus on high throughput (using
   LA-ICP-MS), on high spatial resolution (SIMS) or on high precision
   (TIMS), and each of these analytical approaches comes with its own
-  tradeofs. To accommodate this diversity in equipment and
+  tradeoffs. To accommodate this diversity in equipment and
   applications, \texttt{IsoplotR}'s U--Pb functions are more extensive
   than those of any other geochronometer. This Chapter provides an
   in-depth overview of these functions.\\
@@ -25,21 +25,20 @@
   range of mechanisms, such as:
 
   \begin{enumerate}
-    \item non-radiogenic (`common') Pb.
+    \item non-radiogenic (`common') Pb;
     \item mixing of different growth zones in a texturally complex
-      mineral grain.
-    \item Pb-loss (or U-gain).
+      mineral grain;
+    \item Pb-loss (or U-gain);
     \item initial disequilibrium of the \textsuperscript{235}U and
       \textsuperscript{238}U decay chains.
   \end{enumerate}
 
-  The first three mechanisms give rise to linear (or planar) trends in
-  Wetherill or Tera-Wasserburg concordia
-  space. Section~\ref{sec:discordia} shows how to fit a line (or
-  plane) through such data by constrained
+  The first three mechanisms give rise to linear trends in Wetherill
+  or Tera-Wasserburg concordia space. Section~\ref{sec:discordia}
+  shows how to fit a line through such data by constrained
   optimisation. Section~\ref{sec:common-Pb} shows how such isochrons
-  (or `discordia') lines provides one way to correct for common Pb,
-  but introduces a few other correction strategies as well.
+  (or `discordia') provide one way to correct for common Pb, but
+  introduces a few other correction strategies as well.
   Section~\ref{sec:U-Pb-disequilibrium} shows how initial enrichment
   or depletion of short-lived nuclides such as \textsuperscript{234}U,
   \textsuperscript{230}Th, \textsuperscript{226}Ra or
@@ -143,43 +142,43 @@
 \textsuperscript{204}Pb, \textsuperscript{206}Pb,
 \textsuperscript{207}Pb, \textsuperscript{208}Pb,
 \textsuperscript{232}Th, \textsuperscript{235}U and
-\textsuperscript{238}U, respectively. `err[$\ast$]' stands for the
+\textsuperscript{238}U, respectively; `err[$\ast$]' stands for the
 analytical uncertainty of $\ast$, which can be specified as a standard
 error or as two times the standard error, either in absolute or
-relative units. And `r[$x$,$y$]' stands for the error correlation
+relative units; and `r[$x$,$y$]' stands for the error correlation
 between $x$ and $y$.\\
 
 Formats~1--3 are meant for mass spectrometers that are unable to
 accurately measure \textsuperscript{204}Pb. This is the case for
-single collector ICP-MS instruments that are unable to resolve the
-isobaric interference on \textsuperscript{204}Hg, which is often
-present in the plasma gas. Formats~4--6 include
-\textsuperscript{204}Pb, as measured by SIMS, TIMS or multi-collector
-ICP-MS. Finally, formats~7 and 8 include \textsuperscript{208}Pb and
-\textsuperscript{232}Th. These nuclides can be used for hybrid
-U--Th--Pb dating, as discussed in Section~\ref{sec:U-Th-Pb}.\\
+ICP-MS instruments that are unable to resolve the isobaric
+interference on \textsuperscript{204}Hg, which is often present in the
+plasma gas. Formats~4--6 include \textsuperscript{204}Pb, as measured
+by SIMS or TIMS. Finally, formats~7 and 8 include
+\textsuperscript{208}Pb and \textsuperscript{232}Th. These nuclides
+can be used for hybrid U--Th--Pb dating, as discussed in
+Section~\ref{sec:discordia}.\ref{it:UPbIsochron78}.\\
 
 Formats~1, 4 and 7 are `Wetherill style' input formats, in which the
 radioactive parent appears in the denominator of the isotopic ratio
 data. As explained in Section~\ref{sec:errorcorrelations} and shown in
 Figure~\ref{fig:errorcorrelation}, these formats are associated with
 strong error correlations
-($r\left[\frac{07}{35},\frac{06}{38}\right]$), which must be specified
+(r$\left[\frac{07}{35},\frac{06}{38}\right]$), which must be specified
 so as to avoid inaccurate inferences.  Formats~2, 5 and 8 are
 `Tera-Wasserburg style' input formats, in which the most abundant
 radiogenic daughter (i.e., \textsuperscript{206}Pb) appears in the
 denominator of the isotopic ratio data.  As shown in
 Figure~\ref{fig:inverrorcorrelation}, this greatly reduces the error
 correlations which, consequently, are optional (hence the brackets
-around $r\left[\frac{38}{06},\frac{07}{06}\right]$).\\
+around r$\left[\frac{38}{06},\frac{07}{06}\right]$).\\
 
 Finally, formats~3 and 6 provide an alternative input format designed
 for users whose low level data processing software does not provide
 error correlation data. It uses redundant ratios to infer the
 correlation coefficients. Let $X \equiv \frac{07}{35}$, $Y \equiv
-\frac{07}{35}$, $Z \equiv \frac{07}{06}$ and $U \equiv \frac{38}{35}$,
+\frac{07}{35}$, $Z \equiv \frac{07}{06}$ and $U \equiv \frac{38}{35}$;
 let $s[X]$, $s[Y]$ and $s[Z]$ be the standard errors of $X$, $Y$ and
-$Z$, and assume that $s[U]=0$ for the sake of simplicity. Then it is
+$Z$; and assume that $s[U]=0$ for the sake of simplicity. Then it is
 easy to see that $Z = X/(U Y)$, and
 \begin{equation}
   \left(\frac{s[Z]}{Z}\right)^2 = \left(\frac{s[X/Y]}{X/Y}\right)^2
@@ -202,7 +201,8 @@ coefficient) between $X$ and $Y$ can be inferred as
 It is important to note that this approach makes the crucial
 assumption that all three standard errors ($s[X]$, $s[Y]$ and $s[Z]$)
 are based on the same number of data points. This means that formats~3
-and 6 are not applicable to TIMS data.
+and 6 are not applicable to TIMS data, which measure U and Pb
+asynchronously.
 
 \section{Concordia diagrams and ages}
 \label{sec:concordia}
@@ -218,18 +218,17 @@ and 6 are not applicable to TIMS data.
   pulls samples away from concordia along a line whose slope is
   proportional to the common Pb composition. Isotopic compositions
   above the concordia line are `forbidden'. They could, in principle,
-  be caused by U-loss. But in practice this mechanism is implausible.
+  be caused by U-loss. But this mechanism is uncommon in practice.
 \item The \textbf{Tera-Wasserburg} concordia diagram uses the inverse
-  isochron ratios \textsuperscript{207}Pb/\textsuperscript{206}Pb vs.
-  and \textsuperscript{238}U/\textsuperscript{206}Pb. This format
-  exhibits weaker error correlations. The addition of common Pb
-  creates a binary mixing line between radiogenic and common Pb
-  compositions (see Section~\ref{sec:discordia}). The area below the
-  concordia line is `forbidden' and the only reason why samples may
-  plot there is due to random chance and analytical imprecision.
-\item The \textbf{U--Th--Pb concordia} diagram sets out the
-  conventional isochron ratios of
-  \textsuperscript{208}Pb/\textsuperscript{232}Th vs.
+  isochron ratios \textsuperscript{207}Pb/\textsuperscript{206}Pb and
+  \textsuperscript{238}U/\textsuperscript{206}Pb. This format exhibits
+  weaker error correlations. The addition of common Pb creates a
+  binary mixing line between radiogenic and common Pb compositions
+  (see Section~\ref{sec:discordia}). The area below the concordia line
+  is `forbidden' and the only reason why samples may plot there is due
+  to random chance and analytical imprecision.
+\item The \textbf{U--Th--Pb concordia} diagram sets out
+  \textsuperscript{208}Pb/\textsuperscript{232}Th against
   \textsuperscript{206}Pb/\textsuperscript{238}U. Like the Wetherill
   diagram, the U--Th--Pb diagram also exhibits strong error
   correlations.  But in contrast with the Wetherill diagram, the
@@ -244,8 +243,8 @@ irrespective of whether the ratios are stored in a Wetherill or
 Tera-Wasserburg format. \texttt{IsoplotR} automatically handles the
 data conversions internally. The U--Th--Pb concordia plot is only
 available for data formats~7 and 8, because these are the only formats
-that account for \textsuperscript{208}Pb and \textsuperscript{232}Th.
-The remainder of this Chapter will focus on the Wetherill and
+that contain \textsuperscript{208}Pb and \textsuperscript{232}Th.  The
+remainder of this Chapter will focus on the Wetherill and
 Tera-Wasserburg diagrams, except for Section~\ref{sec:common-Pb},
 which will briefly mention the U--Th-Pb diagram again.\\
 
@@ -263,10 +262,9 @@ likely' age (in a statistical sense) is known as the \textbf{concordia
 
 \begin{enumerate}
   \item Calculate the two-dimensional error-weighted average
-    ($\{\bar{x},\bar{y}\}$) of the U--Pb ratios, by minimising the sum
+    $\{\bar{x},\bar{y}\}$ of the U--Pb ratios, by minimising the sum
     of squares $S$ or, equivalently, by maximising the likelihood for
-    equivalence 
-    $\mathcal{LL}_e$. In Wetherill space:
+    equivalence $\mathcal{LL}_e$. In Wetherill space:
     \begin{equation}
       \mathcal{LL}_e \propto - \frac{S_e}{2} =
       -\frac{1}{2}\sum\limits_{i=1}^{n} \left[
@@ -379,8 +377,8 @@ calculations are carried out in Wetherill or Tera-Wasserburg space.\\
 \noindent\includegraphics[width=\textwidth]{../figures/concordia_age.pdf}
 \begingroup \captionof{figure}{1) Wetherill and 2) Tera-Wasserburg
   concordia diagram with a) the weighted mean composition shown as
-  white error ellipse, and b) the concordia age (251.3~Ma) is shown as
-  a red circle.\\}\endgroup
+  white error ellipse, and b) the concordia age (251.3~Ma) shown as a
+  red circle.\\}\endgroup
 
 The goodness-of-fit can be quantified either using a chi-square test,
 or with the MSWD. We can define three p-values and three MSWD values:
@@ -598,13 +596,13 @@ concordia line. These intercepts can be visualised using
 \texttt{IsoplotR}'s Wetherill concordia function:
 
 \noindent\begin{minipage}[t]{.5\linewidth}
-\strut\vspace*{-\baselineskip}\newline
+\strut\newline
 \includegraphics[width=\textwidth]{../figures/Hourigan.pdf}
 \end{minipage}
 \noindent\begin{minipage}[t]{.5\linewidth}
 \captionof{figure}{Wetherill concordia diagram of a depth-drilling
   experiments for a cycle-by-cycle LA-ICP-MS depth drilling experiment
-  by Jeremy Hourigan (UC Santa Cruz). As the laser drills through the
+  by J. Hourigan (UC Santa Cruz). As the laser drills through the
   grain, it exposes different mixtures between two compositional end
   members with distinct Th/U ratios as shown by the colour scale.
   \texttt{IsoplotR} fits the mixing line by semitotal-U/Pb regression
@@ -629,63 +627,60 @@ setting:
   \begin{enumerate}
   \item\label{it:isochroncommonpb} The common Pb composition as well
     as the concordia intercept age can be obtained using the methods
-    reviewed in Section~\ref{sec:discordia}.\\
-    
-    \noindent\begin{minipage}[t]{\linewidth}
-    \centering
-    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron13.pdf}
-    \end{minipage}
-    \begin{minipage}[t]{\linewidth}
-      \centering
-      \captionsetup{width=.8\textwidth}
-      \captionof{figure}{
-      For LA-ICP-MS data stored in formats 1--3, the isochron
-      regression is done by semitotal-U/Pb regression (a). Projecting
-      the data onto the concordia line (b) produces common-Pb
-      corrected U--Pb compositions that are perfectly concordant by
-      definition. The legend applies to both panels.}
-    \label{fig:commonPbisochron13}
-    \end{minipage}
+    reviewed in Section~\ref{sec:discordia}.
 
-    \noindent\begin{minipage}[t]{\linewidth}
-    \centering
-    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron46.pdf}
-    \end{minipage}
-    \begin{minipage}[t]{\linewidth}
-      \centering \captionsetup{width=.8\textwidth} \captionof{figure}{
-        For SIMS or TIMS data (note the small error ellipses) stored
-        in formats 4--6, the isochron regression is done by total-U/Pb
-        regression (a). Projecting the data along this 3-dimensional
-        isochron line produces common-Pb corrected compositions that
-        do not plot exactly on the concordia line. The legend applies
-        to both panels.  }
-    \label{fig:commonPbisochron46}
-    \end{minipage}
+\noindent\begin{minipage}[t]{.7\linewidth}
+\strut\newline
+\includegraphics[width=\textwidth]{../figures/commonPbisochron13.pdf}
+\end{minipage}
+\noindent\begin{minipage}[t]{.3\linewidth} \captionof{figure}{ For
+  LA-ICP-MS data stored in formats 1--3, the isochron regression is
+  done by semitotal-U/Pb regression (a).  Projecting the data onto the
+  concordia line (b) produces common-Pb corrected U--Pb compositions
+  that are perfectly concordant by definition.  The title applies to
+  both panels.}
+    \label{fig:commonPbisochron13}
+\end{minipage}
+
+\noindent\begin{minipage}[t]{.7\linewidth}
+\strut\newline
+\includegraphics[width=\textwidth]{../figures/commonPbisochron46.pdf}
+\end{minipage}
+\begin{minipage}[t]{.3\linewidth}
+  \centering \captionsetup{width=\textwidth} \captionof{figure}{ For
+    SIMS or TIMS data (note the small error ellipses) stored in
+    formats 4--6, the isochron regression is done by total-U/Pb
+    regression (a). Projecting the data along this 3-dimensional
+    isochron line produces common-Pb corrected compositions that do
+    not plot exactly on the concordia line. The title applies to both
+    panels.  }
+  \label{fig:commonPbisochron46}
+\end{minipage}
 
   \item Alternatively, a nominal common Pb correction can be made by
     analysing a cogenetic mineral (such as feldspar) that is poor in
     U, and using its Pb composition as an `anchor' for a constrained
-    discordia regression.\\
+    discordia regression. The following example is less accurate
+    (intentionally, for the sake of illustration) than the
+    unconstrained regression of Figure~\ref{fig:commonPbisochron13}:
 
-    \noindent\begin{minipage}[t]{\linewidth}
-    \centering
-    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron46nominal.pdf}
-    \end{minipage}
-    \begin{minipage}[t]{\linewidth}
-      \centering \captionsetup{width=.8\textwidth} \captionof{figure}{
-        Common-Pb correction of the same data as
-        Figure~\ref{fig:commonPbisochron13}, but using an isochron
-        that is anchored at a nominal common Pb composition of
-        \textsuperscript{206}Pb/\textsuperscript{204}Pb = 20 and
-        \textsuperscript{207}Pb/\textsuperscript{204}Pb = 16 (note the
-        zero uncertainties in the legend). In this example, this
-        procedure is less accurate (intentionally, for the sake of
-        illustration) than the unconstrained regression of
-        Figure~\ref{fig:commonPbisochron13}.}
+\noindent\begin{minipage}[t]{.7\linewidth}
+\strut\newline
+\includegraphics[width=\textwidth]{../figures/commonPbisochron46nominal.pdf}
+\end{minipage}
+\begin{minipage}[t]{.3\linewidth}
+  \centering \captionsetup{width=\textwidth} \captionof{figure}{
+    Common-Pb correction of the same data as
+    Figure~\ref{fig:commonPbisochron13}, but using an isochron that is
+    anchored at a nominal common Pb composition of
+    \textsuperscript{206}Pb/\textsuperscript{204}Pb = 20 and
+    \textsuperscript{207}Pb/\textsuperscript{204}Pb = 16 (note the
+    zero uncertainties in the title).}
     \label{fig:commonPbisochron46nominal}
-    \end{minipage}
+\end{minipage}
     
-  \end{enumerate}
+\end{enumerate}
+
 \item\label{it:separatecommonpb} In sedimentary and para-metamorphic
   rocks, in which the grains cannot safely be assumed to be cogenetic,
   each aliquot must be treated separately.
@@ -694,14 +689,10 @@ setting:
     evidence to support a shared common-Pb composition for all the
     aliquots, then the radiogenic composition can be obtained by
     two-point isochron regression between that common-Pb composition
-    and each aliquot.\\
+    and each aliquot.
 
-    \noindent\begin{minipage}[t]{\linewidth}
-    \centering
-    \includegraphics[width=.8\textwidth]{../figures/commonPbisochron13detrital.pdf}
-    \end{minipage}
-    \begin{minipage}[t]{\linewidth}
-      \centering \captionsetup{width=.8\textwidth} \captionof{figure}{
+    \includegraphics[width=.9\linewidth]{../figures/commonPbisochron13detrital.pdf}
+    \captionsetup{width=.9\linewidth} \captionof{figure}{
         Common-Pb correction of two LA-ICP-MS based detrital
         measurements (formats 1--3) using the same nominal common Pb
         composition with
@@ -712,9 +703,8 @@ setting:
         isochron regression of Figures~\ref{fig:commonPbisochron13}
         and \ref{fig:commonPbisochron46}, in which all aliquots are
         projected parallel to a joint regression line and the
-        uncertainties are only mildly affected by the extrapolation.}
+        uncertainties are only mildly affected by the extrapolation.\\}
     \label{fig:commonPbisochron13detrital}
-    \end{minipage}
     
   \item\label{it:separate-stacey-kramers} In the absence of external
     evidence about the common Pb composition, one can infer the
@@ -745,22 +735,24 @@ setting:
     For formats 4--7, the problem is overconstrained and the fit is
     generally not perfect.
 
-    \noindent\begin{minipage}[t][][b]{.4\linewidth}
-    \includegraphics[width=\textwidth]{../figures/SK.pdf}
-    \end{minipage}
-    \begin{minipage}[t][][t]{.6\linewidth}
-      \captionof{figure}{Three mixing lines between the radiogenic
-        composition of 0.5, 1 and 3~Ga samples and the inferred
-        Pb-composition of the mantle reservoir \citep[according
-          to][]{stacey1975} from which these samples were
-        hypothetically extracted. The y-intercepts correspond to
-        \textsuperscript{207}Pb/\textsuperscript{206}Pb ratios of
-        0.87, 0.91 and 1.11, respectively. For the error ellipse shown
-        on this diagram, the mixing line at $t=1$~Ga best describes
-        the composition of the sample. Hence, the common-Pb corrected
-        age of this analysis is 1~Ga.  }
-    \label{fig:commonPbSK}
-    \end{minipage}
+\noindent\begin{minipage}[t]{.4\linewidth}
+\strut\newline
+\includegraphics[width=\textwidth]{../figures/SK.pdf}
+\end{minipage}
+\begin{minipage}[t]{.6\linewidth}
+  \captionsetup{width=\textwidth}
+  \captionof{figure}{Three mixing lines between the radiogenic
+    composition of 0.5, 1 and 3~Ga samples and the inferred
+    Pb-composition of the mantle reservoir \citep[according
+      to][]{stacey1975} from which these samples were
+    hypothetically extracted. The y-intercepts correspond to
+    \textsuperscript{207}Pb/\textsuperscript{206}Pb ratios of
+    0.87, 0.91 and 1.11, respectively. For the error ellipse shown
+    on this diagram, the mixing line at $t=1$~Ga best describes
+    the composition of the sample. Hence, the common-Pb corrected
+    age of this analysis is 1~Ga.  }
+  \label{fig:commonPbSK}
+\end{minipage}
     
   \end{enumerate}
 \end{enumerate}
@@ -789,8 +781,7 @@ accuracy of the U--Pb method. For example, ignoring any initial excess
 disequilibrium is one mechanism to produce discordant results. The
 effect of initial disequilibrium is relatively small in most
 studies. It can be neglected in many geological applications, and is
-is usually only a question of concern in high precision
-geochronology.\\
+usually only a matter of concern in high precision geochronology.\\
 
 However in U--Pb geochronology of young carbonates, the effect of
 initial disequilibrium can be very significant, and may potentially
@@ -822,10 +813,10 @@ three different strategies to deal with this bias:
 \end{enumerate}
 
 \texttt{IsoplotR} solves the complex evolution of the decay series
-using a matrix exponential approach developed by \citet{mclean2016}.
-To illustrate the principles behind this approach, describe the
-\textsuperscript{238}U--\textsuperscript{206}Pb decay chain in matrix
-form:
+using a matrix exponential approach developed by \citet{mclean2016b}.
+To illustrate the principles behind this approach, consider the
+\textsuperscript{238}U--\textsuperscript{206}Pb decay chain expressed
+in matrix form:
 \begin{equation}
   \frac{\partial}{\partial{t}}\left[
     \begin{array}{@{}c@{}}
@@ -838,14 +829,12 @@ form:
   \right]
   =
   \left[
-    \begin{array}{cccccc}
-      -\lambda_{38} & 0 & 0 & 0 & 0 & 0 \\
-      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 & 0 \\
-      0 & \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
-      0 & 0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
-      0 & 0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
-      0 & 0 & 0 & 0 & \lambda_{26} & -\lambda_{26} \\
-      0 & 0 & 0 & 0 & 0 & \lambda_{26}\\
+    \begin{array}{ccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & \lambda_{26} & 0\\
     \end{array}
     \right]
   \left[
@@ -880,14 +869,12 @@ so the matrix decay equation is solved by a matrix exponential:
   =
   \mbox{expm}\left(
   \left[
-    \begin{array}{cccccc}
-      -\lambda_{38} & 0 & 0 & 0 & 0 & 0 \\
-      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 & 0 \\
-      0 & \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
-      0 & 0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
-      0 & 0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
-      0 & 0 & 0 & 0 & \lambda_{26} & -\lambda_{26} \\
-      0 & 0 & 0 & 0 & 0 & \lambda_{26}\\
+    \begin{array}{ccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & \lambda_{26} & 0\\
     \end{array}
     \right]
   t
@@ -921,14 +908,12 @@ express the initial amounts as a function of the present day amounts:
   \mbox{expm}\left(
       -
   \left[
-    \begin{array}{cccccc}
-      -\lambda_{38} & 0 & 0 & 0 & 0 & 0 \\
-      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 & 0 \\
-      0 & \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
-      0 & 0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
-      0 & 0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
-      0 & 0 & 0 & 0 & \lambda_{26} & -\lambda_{26} \\
-      0 & 0 & 0 & 0 & 0 & \lambda_{26}\\
+    \begin{array}{ccccc}
+      -\lambda_{38} & 0 & 0 & 0 & 0 \\
+      \lambda_{38} & -\lambda_{34} & 0 & 0 & 0 \\
+      0 & \lambda_{34} & -\lambda_{30} & 0 & 0 \\
+      0 & 0 & \lambda_{30} & -\lambda_{26} & 0 \\
+      0 & 0 & 0 & \lambda_{26} & 0\\
     \end{array}
     \right]
   t
@@ -1014,25 +999,44 @@ which method should be used to constrain the age distribution.
   by a discrete step in the age spectrum. This step is entirely
   artificial and obscures any geologically significant events that
   might occur around the same time.
-\item use the single grain concordia date ($t_c$), which is calculated
+\item use the single grain concordia age ($t_c$), which is calculated
   by applying Equation~\ref{eq:concordiaAgeWetherill} or
-  \ref{eq:concordiaAgeTW} separately to each grain. This approach
+  \ref{eq:concordiaAgeTW} separately to each aliquot. This approach
   avoids the need to switch between different methods, and offers
   superior precision to any of the other methods across the entire
   geologic time scale.
 \end{enumerate}
 
+\noindent\begin{minipage}[t]{.6\linewidth}
+\strut\newline
+\includegraphics[width=\textwidth]{../figures/agerr.pdf}\\
+\end{minipage}
+\begin{minipage}[t]{.4\linewidth}
+  \captionsetup{width=\textwidth} \captionof{figure}{Predicted
+    uncertainties of the
+    \textsuperscript{206}Pb/\textsuperscript{238}U ($t_{68}$),
+    \textsuperscript{207}Pb/\textsuperscript{235}U ($t_{75}$),
+    \textsuperscript{207}Pb/\textsuperscript{206}Pb ($t_{76}$) and
+    concordia ($t_c$) ages for a synthetic dataset with a constant
+    uranium concentration. Dwell times and detector sensitivities were
+    chosen so as to yield results that are similar to those obtained
+    from real data. The concordia age (solid line) always offers the
+    best precision. See \citet{vermeesch2021} for further details
+    about the calculations behind this figure.\\}
+  \label{fig:precision}
+\end{minipage}
+
 Once a chronometer has been chosen, it is advisable to `filter' the
 data before plotting them as a KDE or CAD, so as to remove the most
 discordant analyses. It may be so that the common Pb correction of
 Section~\ref{sec:common-Pb} removes much (or all, in the case of
-formats 1--3) discordance. But accuracy of single-grain common Pb
+formats 1--3) discordance. But the accuracy of single-grain common Pb
 corrections decreases quickly with increasing distance from the
 concordia line. For example, in
 Figure~\ref{fig:commonPbisochron13detrital}, aliquot~1 should probably
 not be used to constrain the age distribution. \texttt{IsoplotR}
 offers six different definitions of discordance that can be used to
-filter U--Pb data:
+filter U--Pb data \citep{vermeesch2021}:
 
 \begin{enumerate}
   \item The relative age discordance:
@@ -1066,7 +1070,7 @@ filter U--Pb data:
     it has an undesirable negative effect on the precision and
     accuracy of the filtered results.  This is because the p-value
     definition affects grains differently depending on their
-    analytical precision.\\
+    analytical precision.
 
     For example, consider a 1.5~Ga zircon that is $d_r=1\%$
     discordant. If this grain were analysed by LA-ICP-MS with an
@@ -1097,7 +1101,7 @@ filter U--Pb data:
   \item The perpendicular Aitchison distance:
     \begin{equation}
       d_{a} = dx(t_{68}) \sin\!\left(\arctan\!\left[
-        \frac{dy(t_{76})}{dx(t_{68})} \right] \right)
+        \frac{dy(t_{68})}{dx(t_{76})} \right] \right)
     \end{equation}
     \noindent represents the logarithmic distance from the measurement
     to the concordia line in log-log space
