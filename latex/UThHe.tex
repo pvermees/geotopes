@@ -3,7 +3,7 @@
 \chapter{U--Th--(Sm)--He}\label{ch:UThHe}
 
 \texttt{IsoplotR} offers a single input format for U--Th--(Sm)--He
-data, which constitutes a simple table with the following columns:
+data that can be captured by the following columns:
 
 \begin{center}
 He, err[He], U, err[U], Th, err[Th], Sm, err[Sm]
@@ -44,13 +44,13 @@ next section.
 
 \section{The \textalpha-ejection correction}\label{sec:alpha-ejection}
 
-Like argon, helium is a noble gas that is lost to the environment (and
-eventually to space) at high temperatures by volume diffusion.
+Helium, like argon, is a noble gas that is lost to the environment
+(and eventually to space) at high temperatures by volume diffusion.
 Additional complication is added by the physical separation of the
 parent and daughter nuclides in the U-Th-(Sm)-He system. This
 separation results from the energy released during \textalpha-decay,
-which displaces the \textalpha-particles by up to 16~\textmu{m} and may
-result in the ejection of helium produced by parent atoms that are
+which displaces the \textalpha-particles by up to 16~\textmu{m} and
+may result in the ejection of helium produced by parent atoms that are
 sited near the edges of the host mineral. That lost helium must be
 taken into account when interpreting the thermal history of a
 sample. For rapidly cooled samples, this can be done by applying a
@@ -92,21 +92,21 @@ can be applied in one of three ways:
 
 \begin{enumerate}
 \item For relatively young ($<100$~Ma) samples, the ejected helium can
-  be mathematically replaced to a good approximation by dividing the
+  be mathematically restored to a good approximation by dividing the
   uncorrected U--Th--He age by $F_T$ \citet{farley2002}:
   \begin{equation}
     t^* \approx \frac{t}{
-      \frac{a(t^*)[U]}{a(t^*)[U]+b(t^*)[Th]}
+      \frac{a(t)[U]}{a(t)[U]+b(t)[Th]}
       \left(
       \frac{137.818}{138.818} F_T^{238} +
       \frac{1}{138.818} F_T^{235}
       \right) + 
-      \frac{b(t^*)[Th]}{a(t^*)[U]+b(t^*)[Th]} F_T^{232}
+      \frac{b(t)[Th]}{a(t)[U]+b(t)[Th]} F_T^{232}
     }
     \label{eq:alphacorr1}
   \end{equation}
 
-  \noindent where $t^*$ is the corrected age; $a(t^*)$ and $b(t^*)$ are
+  \noindent where $t^*$ is the corrected age; $a(t)$ and $b(t)$ are
   defined in Equation~\ref{eq:UThHe2}; and $F_T^{238}$, $F_T^{235}$
   and $F_T^{232}$ are the \textalpha-retention factors of
   \textsuperscript{238}U, \textsuperscript{235}U and
@@ -116,12 +116,12 @@ can be applied in one of three ways:
   \citep{min2003, vermeesch2008a}:
   \begin{equation}
     [\mbox{He}^*] = \frac{[\mbox{He}]}{
-      \frac{a(t^*)[\mbox{U}]}{a(t^*)[\mbox{U}]+b(t^*)[\mbox{Th}]}
+      \frac{a(t)[\mbox{U}]}{a(t)[\mbox{U}]+b(t)[\mbox{Th}]}
       \left(
       \frac{137.818}{138.818} F_T^{238} +
       \frac{1}{138.818} F_T^{235}
       \right) + 
-      \frac{b(t^*)[\mbox{Th}]}{a(t^*)[\mbox{U}]+b(t^*)[\mbox{Th}]} F_T^{232}
+      \frac{b(t)[\mbox{Th}]}{a(t)[\mbox{U}]+b(t)[\mbox{Th}]} F_T^{232}
     }
     \label{eq:alphacorr2}
   \end{equation}
@@ -210,11 +210,10 @@ expands to a three-dimensional tetrahedral space
 \citep{vermeesch2008a}. The \textbf{central age} is obtained by first
 computing the average U--Th--He composition of a multi-sample dataset,
 and then calculating the U--Th--He corresponding to that composition.
-This is a similar procedure in a sense to the two-step process that
-was used to compute concordia ages in Section~\ref{sec:concordia}.
-Unfortunately, averaging compositional data is not as straightforward
-as one may think. Consider, for example, the following ternary
-dataset:\\
+This is a similar procedure to the two-step process that was used to
+compute concordia ages in Section~\ref{sec:concordia}.  Unfortunately,
+averaging compositional data is not as straightforward as one may
+think. Consider, for example, the following ternary dataset:\\
 
 \noindent\begin{minipage}[t]{.4\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -284,20 +283,20 @@ weighted mean U-Pb composition for the concordia age calculation
   \captionof{figure}{a) ternary diagram and b) logratio diagram or
     `helioplot' of the U--Th--He data from
     Figure~\ref{fig:UThHeisochron}. The white ellipse marks the
-    (geometric) mean U--Th--He composition.\\}
+    average U--Th--He composition.\\}
   \label{fig:UThHeIsochronHelioplot}
 \end{minipage}
 
 Overdispersion is treated similarly as in a regression context
 (Section~\ref{sec:regression}).  Thus, there are options to augment
 the uncertainties with a factor $\sqrt{\mbox{MSWD}}$ (model-1); to
-ignore the analytical uncertainties altogether (model-2); or to add a
-constant overdispersion term to the analytical uncertainties
-(model-3).  The helioplot diagram provides a convenient way to
-simultaneously display the isotopic composition of samples and their
-chronological meaning. In this respect, they fulfil the same purpose
-as the U--Pb concordia diagram (Section~\ref{sec:concordia}) and the
-U--series evolution plot (Section~\ref{sec:ThUevolution}).
+ignore the analytical uncertainties altogether (model-2); or to add an
+overdispersion term to the analytical uncertainties (model-3).  The
+helioplot diagram provides a convenient way to simultaneously display
+the isotopic composition of samples and their chronological
+meaning. In this respect, they fulfil the same purpose as the U--Pb
+concordia diagram (Section~\ref{sec:concordia}) and the U--series
+evolution plot (Section~\ref{sec:ThUevolution}).
 
 \printbibliography[heading=subbibliography]
 

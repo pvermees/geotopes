@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: trainingcourse11-blx.aux
+The top-level auxiliary file: manual11-blx.aux
 The style file: biblatex.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -17,49 +17,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: trainingcourse-blx.bib
+Database file #1: manual-blx.bib
 Database file #2: /home/pvermees/Dropbox/biblio.bib
 Biblatex version: 3.13
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 13 entries,
+You've used 9 entries,
             6365 wiz_defined-function locations,
-            1266 strings with 11236 characters,
-and the built_in function-call counts, 86807 in all, are:
-= -- 6327
-> -- 1451
-< -- 402
-+ -- 2101
-- -- 554
-* -- 6512
-:= -- 9552
+            1239 strings with 10584 characters,
+and the built_in function-call counts, 60399 in all, are:
+= -- 4477
+> -- 929
+< -- 226
++ -- 1509
+- -- 364
+* -- 4504
+:= -- 6978
 add.period$ -- 0
-call.type$ -- 13
-change.case$ -- 228
+call.type$ -- 9
+change.case$ -- 119
 chr.to.int$ -- 42
-cite$ -- 24
-duplicate$ -- 8916
-empty$ -- 7875
-format.name$ -- 895
-if$ -- 17850
+cite$ -- 16
+duplicate$ -- 6237
+empty$ -- 5473
+format.name$ -- 609
+if$ -- 12234
 int.to.chr$ -- 0
-int.to.str$ -- 33
+int.to.str$ -- 23
 missing$ -- 0
-newline$ -- 474
-num.names$ -- 612
-pop$ -- 4391
+newline$ -- 336
+num.names$ -- 380
+pop$ -- 2999
 preamble$ -- 1
-purify$ -- 306
+purify$ -- 174
 quote$ -- 0
-skip$ -- 2426
+skip$ -- 1516
 stack$ -- 0
-substring$ -- 11187
-swap$ -- 2089
-text.length$ -- 353
-text.prefix$ -- 13
+substring$ -- 8035
+swap$ -- 1379
+text.length$ -- 234
+text.prefix$ -- 9
 top$ -- 1
-type$ -- 430
+type$ -- 294
 warning$ -- 0
-while$ -- 1287
+while$ -- 964
 width$ -- 0
-write$ -- 462
+write$ -- 328

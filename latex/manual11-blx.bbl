@@ -123,41 +123,6 @@
     \field{year}{2020}
   \endentry
 
-  \entry{kruskal1978}{book}{}
-    \name{author}{2}{}{%
-      {{hash=KJB}{%
-         family={Kruskal},
-         familyi={K\bibinitperiod},
-         given={J.\bibnamedelima B.},
-         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-      {{hash=WM}{%
-         family={Wish},
-         familyi={W\bibinitperiod},
-         given={M.},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{2}{%
-      {Sage Publications, Beverly Hills}%
-      {London}%
-    }
-    \strng{namehash}{KJBWM1}
-    \strng{fullhash}{KJBWM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1978}
-    \field{labeldatesource}{}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{pages}{93}
-    \field{series}{Sage University Paper series on Quantitative Application in
-  the Social Sciences}
-    \field{title}{Multidimensional scaling}
-    \field{volume}{07-011}
-    \field{year}{1978}
-  \endentry
-
   \entry{ludwig2003}{article}{}
     \name{author}{1}{}{%
       {{hash=LKR}{%
@@ -294,34 +259,6 @@
     \field{year}{2020}
   \endentry
 
-  \entry{torgerson1952}{article}{}
-    \name{author}{1}{}{%
-      {{hash=TWS}{%
-         family={Torgerson},
-         familyi={T\bibinitperiod},
-         given={Warren\bibnamedelima S},
-         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{TWS1}
-    \strng{fullhash}{TWS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1952}
-    \field{labeldatesource}{}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{number}{4}
-    \field{pages}{401\bibrangedash 419}
-    \field{title}{{Multidimensional scaling: I. Theory and method}}
-    \field{volume}{17}
-    \field{journaltitle}{Psychometrika}
-    \field{year}{1952}
-  \endentry
-
   \entry{vermeesch2013}{article}{}
     \name{author}{1}{}{%
       {{hash=VP}{%
@@ -376,110 +313,32 @@
     \field{year}{2018}
   \endentry
 
-  \entry{vermeesch2015}{article}{}
-    \name{author}{2}{}{%
+  \entry{vermeesch2021b}{article}{}
+    \name{author}{1}{}{%
       {{hash=VP}{%
          family={Vermeesch},
          familyi={V\bibinitperiod},
          given={Pieter},
          giveni={P\bibinitperiod},
       }}%
-      {{hash=GE}{%
-         family={Garzanti},
-         familyi={G\bibinitperiod},
-         given={Eduardo},
-         giveni={E\bibinitperiod},
-      }}%
     }
     \list{publisher}{1}{%
       {Elsevier}%
     }
-    \strng{namehash}{VPGE1}
-    \strng{fullhash}{VPGE1}
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2015}
+    \field{labelyear}{2021}
     \field{labeldatesource}{}
     \field{sortinit}{V}
     \field{sortinithash}{V}
-    \field{pages}{20\bibrangedash 27}
-    \field{title}{{Making geological sense of `Big Data' in sedimentary
-  provenance analysis}}
-    \field{volume}{409}
-    \field{journaltitle}{Chemical Geology}
-    \field{year}{2015}
-  \endentry
-
-  \entry{vermeesch2016a}{article}{}
-    \name{author}{3}{}{%
-      {{hash=VP}{%
-         family={Vermeesch},
-         familyi={V\bibinitperiod},
-         given={Pieter},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=RA}{%
-         family={Resentini},
-         familyi={R\bibinitperiod},
-         given={Alberto},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=GE}{%
-         family={Garzanti},
-         familyi={G\bibinitperiod},
-         given={Eduardo},
-         giveni={E\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{VPRAGE1}
-    \strng{fullhash}{VPRAGE1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2016}
-    \field{labeldatesource}{}
-    \field{sortinit}{V}
-    \field{sortinithash}{V}
-    \field{title}{{An R package for statistical provenance analysis}}
-    \field{journaltitle}{Sedimentary Geology}
-    \field{year}{2016}
-  \endentry
-
-  \entry{young1938}{article}{}
-    \name{author}{2}{}{%
-      {{hash=YG}{%
-         family={Young},
-         familyi={Y\bibinitperiod},
-         given={Gale},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=HAS}{%
-         family={Householder},
-         familyi={H\bibinitperiod},
-         given={Alston\bibnamedelima S},
-         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{YGHAS1}
-    \strng{fullhash}{YGHAS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1938}
-    \field{labeldatesource}{}
-    \field{sortinit}{Y}
-    \field{sortinithash}{Y}
-    \field{number}{1}
-    \field{pages}{19\bibrangedash 22}
-    \field{title}{Discussion of a set of points in terms of their mutual
-  distances}
-    \field{volume}{3}
-    \field{journaltitle}{Psychometrika}
-    \field{year}{1938}
+    \field{number}{2}
+    \field{pages}{843\bibrangedash 850}
+    \field{title}{Maximum depositional age estimation revisited}
+    \field{volume}{12}
+    \field{journaltitle}{Geoscience Frontiers}
+    \field{year}{2021}
   \endentry
 \enddatalist
 \endinput

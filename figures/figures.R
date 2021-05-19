@@ -726,3 +726,13 @@ x[20]<- 100
 plot((1:50)[-20],x[-20],xlab='n',ylab='t',ylim=c(0,100),bty='n',pch=21,bg='black')
 points(20,x[20],pch=21,bg='white')
 dev.off()
+
+cairo(file='~/Documents/temp/McLean.pdf',height=4,width=4.5)
+pars(mar=c(2.4,2.7,3,1))
+d <- diseq(U48=list(x=1.1634,sx=0.00105,option=2),
+           ThU=list(x=1.0734,sx=0.0026,option=2),
+           PaU=list(x=0,sx=0,option=1),
+           RaU=list(x=0,sx=0,option=1))
+UPb <- read.data('McLean.csv',method='U-Pb',format=2,ierr=3,d=d)
+concordia(UPb,type=2,show.age=2,ticks=c(0.10,0.12,0.15,0.24))
+dev.off()

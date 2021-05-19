@@ -6,11 +6,12 @@ The Ar--Ar and K--Ca chronometers are based on the branched decay of
 \textsuperscript{40}K to \textsuperscript{40}Ar and
 \textsuperscript{40}Ca. The Ar--Ar is a widely used method that has
 replaced the K--Ar method in all but a few applications
-(Section~\ref{sec:K-Ar}). The K--Ca method is a more recent
-development that has become feasible due to analytical advances in
-SIMS, which have resolved the isobaric interference between
-\textsuperscript{40}K and \textsuperscript{40}Ca. The original K--Ar
-method is not implemented in \texttt{IsoplotR} but may be added later.
+(Section~\ref{sec:K-Ar}). The K--Ca method is a less common method
+that is becoming more feasible due to analytical advances in SIMS,
+which have resolved the isobaric interference between
+\textsuperscript{40}K and \textsuperscript{40}Ca
+\citep{harrison2010}. The original K--Ar method is not implemented in
+\texttt{IsoplotR} but may be added later.
 
 \section{Ar--Ar}\label{sec:ArAr}
 
@@ -44,24 +45,26 @@ isotopic ratio data:
 \end{enumerate}
 
 \noindent where $(39)$ stands for the amount of \textsuperscript{39}Ar
-in each heating step, which is normalised to form the X-axis of an age
-spectrum (Section~\ref{sec:agespectra}). Error correlations are much
-stronger for format~1 than for format~2 and are therefore compulsory
-for the former and optional for the latter. As for the Pb--Pb and
-Th--Pb methods, the names of the formats refer to the normal and
-inverse isochrons that they form. However, both normal and inverse
-isochrons are available for all three methods, because
-\texttt{IsoplotR} converts them in the background. It does so using
-Equation~\ref{eq:redundantratios} for the conversion from format~3 to
-format~2; and using Equation~\ref{eq:format12transformation} to
-convert format~2 to format~1 and vice versa.\\
+in each heating step, which is normalised by \texttt{IsoplotR} to form
+the X-axis of an age spectrum (Section~\ref{sec:agespectra}). Error
+correlations are much stronger for format~1 than for format~2 and are
+therefore compulsory for the former and optional for the latter. Just
+like the Pb--Pb and Th--Pb methods, the names of the formats refer to
+the normal and inverse isochrons that they form. Despite this
+nomenclature, both normal and inverse isochrons are available for all
+three methods, with \texttt{IsoplotR} converting them in the
+background using Equation~\ref{eq:redundantratios} for the conversion
+from format~3 to format~2; and using
+Equation~\ref{eq:format12transformation} to convert format~2 to
+format~1 and vice versa.
 
-Single grain ages can be calculated by projecting cogenetic aliquots
-along an isochron, or by applying a nominal `excess argon' correction
-to each aliquot separately. The latter approach typically uses the
-atmospheric argon composition, which is characterised by a
+In complete analogy with Figure~\ref{fig:ThPbSingleGrain}, single
+grain ages can be calculated by projecting cogenetic aliquots along an
+isochron, or by applying a nominal `excess argon' correction to each
+aliquot separately. The latter approach typically uses the atmospheric
+argon composition, which is characterised by a
 \textsuperscript{40}Ar/\textsuperscript{39}Ar ratio of
-$298.56\pm{0.31}$ \citet{lee2006}. The resulting ages can then be
+$298.56\pm{0.31}$ \citep{lee2006}. The resulting ages can then be
 visualised as radial plots, KDEs, or CADs:\\
 
 \noindent\begin{minipage}[t][][b]{.7\linewidth}
@@ -119,7 +122,7 @@ be used for quantitative inference.
 \begin{enumerate}
 \item{`Normal':}
   $\frac{{}^{40}\mbox{K}}{{}^{44}\mbox{Ca}}$,  
-  $\mbox{err}\!\left[\frac{{}^{40}\mbox{Ca}}{{}^{44}\mbox{Ca}}\right]$, 
+  $\mbox{err}\!\left[\frac{{}^{40}\mbox{K}}{{}^{44}\mbox{Ca}}\right]$, 
   $\frac{{}^{40}\mbox{Ca}}{{}^{44}\mbox{Ca}}$,
   $\mbox{err}\!\left[\frac{{}^{40}\mbox{Ca}}{{}^{44}\mbox{Ca}}\right]$,  
   $\mbox{r}\!\left[\frac{{}^{40}\mbox{K}}{{}^{44}\mbox{Ca}},
@@ -128,16 +131,14 @@ be used for quantitative inference.
   $\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}}$,  
   $\mbox{err}\!\left[\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}}\right]$, 
   $\frac{{}^{44}\mbox{Ca}}{{}^{40}\mbox{Ca}}$,  
-  $\mbox{err}\!\left[\frac{{}^{40}\mbox{Ca}}{{}^{40}\mbox{Ca}}\right]$,  
+  $\mbox{err}\!\left[\frac{{}^{44}\mbox{Ca}}{{}^{40}\mbox{Ca}}\right]$,  
   $\mbox{r}\!\left[\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}},
     \frac{{}^{44}\mbox{Ca}}{{}^{40}\mbox{Ca}}\right]$
 \item{`Three ratios':}
-  $\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}}$,  
-  $\mbox{err}\!\left[\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}}\right]$, 
-  $\frac{{}^{44}\mbox{Ca}}{{}^{40}\mbox{Ca}}$,  
-  $\mbox{err}\!\left[\frac{{}^{40}\mbox{Ca}}{{}^{40}\mbox{Ca}}\right]$,  
-  $\mbox{r}\!\left[\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}},
-    \frac{{}^{44}\mbox{Ca}}{{}^{40}\mbox{Ca}}\right]$,
+  $\frac{{}^{40}\mbox{K}}{{}^{44}\mbox{Ca}}$,  
+  $\mbox{err}\!\left[\frac{{}^{40}\mbox{K}}{{}^{44}\mbox{Ca}}\right]$, 
+  $\frac{{}^{40}\mbox{Ca}}{{}^{44}\mbox{Ca}}$,
+  $\mbox{err}\!\left[\frac{{}^{40}\mbox{Ca}}{{}^{44}\mbox{Ca}}\right]$,  
   $\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}}$,  
   $\mbox{err}\!\left[\frac{{}^{40}\mbox{K}}{{}^{40}\mbox{Ca}}\right]$
 \end{enumerate}
@@ -145,8 +146,9 @@ be used for quantitative inference.
 \noindent where, in contrast with previous formatting summaries, the
 full names of the nuclides are given because of the isobaric parent
 and daughter. It is precisely this isobary that prevented the K--Ca
-from being widely applied until recently. Formats~1, 2 and 3 can be
-converted to each other using Equations~\ref{eq:redundantratios} and
+from being applicable by in-situ methods until recently. Formats~1, 2
+and 3 can be converted to each other using
+Equations~\ref{eq:redundantratios} and
 \ref{eq:format12transformation}.\\
 
 \texttt{IsoplotR} uses \textsuperscript{44}Ca as a normalising isotope

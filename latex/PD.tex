@@ -3,7 +3,7 @@
 \chapter{Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}\label{ch:PD}
 
 Rb--Sr, Sm--Nd, Lu--Hf and Re--Os all fall in the category of simple
-parent daughter chronometers, which are based on a single parent that
+parent-daughter chronometers, which are based on a single parent that
 decays to a single daughter without additional complications such as
 branched decay or secular equilibrium. These chronometers usually
 involve liquid chromatography and mass spectrometry by TIMS or
@@ -71,17 +71,18 @@ non-radiogenic isotope ratios, and M(Rb) and M(Sr) are the molar
 masses of Rb and Sr, respectively. Because the measured
 (\textsuperscript{87}Sr/\textsuperscript{86}Sr)-ratio appears in
 Equation~\ref{eq:ppm2ratios}, the covariance between
-$({}^{87}Rb/{}^{86}Sr)$ and $({}^{87}Sr/{}^{86}Sr)$ is nonzero and can
-be estimated using Equation~\ref{eq:s2t} or \ref{eq:s2tmatrix}.\\
+\textsuperscript{87}Rb/\textsuperscript{86}Sr and
+\textsuperscript{87}Sr/\textsuperscript{86}Sr is nonzero and can be
+estimated using Equation~\ref{eq:s2t} or \ref{eq:s2tmatrix}.\\
 
-The parent daughter pairs method are generally used by multi-aliquot
-isochrons that can either be plotted in conventional or inverse
-isochron space. In contrast with the U--Pb, Ar--Ar, Pb--Pb and K-Ca
-method, in which the nonradiogenic daughter isotope is less abundant
-than the radiogenic isotope, this is not the case for the Rb--Sr,
+The parent-daughter pair methods are generally used to form
+multi-aliquot isochrons that can either be plotted in conventional or
+inverse isochron space. For the U--Pb, Ar--Ar, Pb--Pb and K-Ca
+methods, the nonradiogenic daughter isotope is less abundant than the
+radiogenic isotope. However this is not the case for the Rb--Sr,
 Sm--Nd, Re--Os and Lu--Hf methods. Their non-radiogenic isotopes
 (marked as `d' above) tend to be more abundant than the radiogenic
-isotope and therefore they exhibit weaker error correlations in
+isotope and they therefore exhibit weaker error correlations in
 conventional isotope space. Nevertheless, \texttt{IsoplotR} does offer
 the inverse isochron as an option because it is may still be useful to
 visualise the data as a simple mixing line between non-radiogenic and
@@ -91,16 +92,18 @@ radiogenic components.\\
 \begingroup\captionof{figure}{a) conventional and b) inverse Rb--Sr
   isochron, c) KDE and d) CAD of the single aliquot age estimates
   using the isochron intercept as a non-radiogenic
-  \textsuperscript{87}Sr/\textsuperscript{86}Sr ratio.\\}
+  \textsuperscript{87}Sr/\textsuperscript{86}Sr-ratio.\\}
 \label{fig:RbSrabcd}\endgroup
 
 The distribution of the data around the best fit isochron can be
 visually assessed on radial plots, KDEs and CADs. This is achieved by
 projecting the data along parallel lines to the best fit in inverse
-isochron space. Alternatively, the assumption of cogenetic origin may
-be relaxed by fixing the non-radiogenic composition and computing
-two-point isochrons between this composition and the measured ratios
-for each aliquot.
+isochron space as in
+Figure~\ref{fig:ThPbSingleGrain}.a. Alternatively, the assumption of
+cogenetic origin may be relaxed by fixing the non-radiogenic
+composition and computing two-point isochrons between this composition
+and the measured ratios for each aliquot
+(Figure~\ref{fig:ThPbSingleGrain}.b).
 
 \printbibliography[heading=subbibliography]
 

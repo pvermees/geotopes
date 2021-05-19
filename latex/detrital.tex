@@ -1,6 +1,5 @@
 \begin{refsection}
 
-
 \chapter{Detrital geochronology}\label{ch:detrital}
 
 \section{Maximum depositional age estimation}
@@ -11,8 +10,9 @@ volcanic ash layers. Detrital zircon U--Pb geochronology in particular
 has become a popular technique to obtain maximum depositional ages
 (MDAs). However other chronometers such as
 \textsuperscript{40}Ar/\textsuperscript{39}Ar can be used for this
-purpose as well, and can in fact be more useful than U--Pb. Numerous
-MDA estimation algorithms have been proposed over the years, such as:
+purpose as well, and are in fact often more useful than
+U--Pb. Numerous MDA estimation algorithms have been proposed over the
+years, such as:
 
 \begin{enumerate}
 \item the youngest single grain (YSG);
@@ -26,18 +26,18 @@ MDA estimation algorithms have been proposed over the years, such as:
 \item the minimum age of grains selected by \citet{gehrels2003}'s
   AgePick algorithm.
 \item the mode of the youngest graphical peak on a probability density
-  plot (YPP);
+  plot (YPP); and
 \item the weighted mean of the grains in the youngest peak of a
-  probability density plot ($\tau$)
+  probability density plot ($\tau$).
 \end{enumerate}
 
 The first six groups of methods gradually drift to younger ages with
 increasing sample size, for reasons that are essentially captured by
 Figure~\ref{fig:increasingn}: increasing sample size increases the
-`power' of statistical tests to subdivide a population of values in to
+`power' of statistical tests to subdivide a population of values into
 smaller subpopulations. The youngest of these subpopulations
 inevitably gets younger as the number of subpopulations increases.  In
-contrast, the last two methods converged to ages that are
+contrast, the last two methods converge to ages that are
 systematically too old. The failure of YPP and $\tau$ to retrieve the
 correct depositional age reflects the underlying flaws of the
 probability density plots (PDPs) on which they are based. The
@@ -51,20 +51,20 @@ following assumptions are met:
 
 \begin{enumerate}
 \item the true age distribution approximately follows the functional
-  form shown in Figure~\ref{fig:minagemod}; and
+  form shown in red in Figure~\ref{fig:minagemod}; and
 \item the analytical uncertainties are well characterised.
 \end{enumerate}
 
 The first assumption is generally easy to verify. If the young end of
-the age spectrum is marked by a cluster of nearly concordant ages,
-then the minimum age model will appropriately average these. And it
-will do so even if the old end of the spectrum does not look like a
-(log)normal distribution. It is not uncommon for detrital zircon U--Pb
-age distributions to be fat tailed at both ends of the
-spectrum. However, similar results are obtained by the full model
+the age spectrum is marked by a distinct cluster of ages, then the
+minimum age model will appropriately average these. And it will do so
+even if the old end of the spectrum does not look like a (log)normal
+distribution. It is not uncommon for detrital zircon U--Pb age
+distributions to be fat tailed at both ends of the spectrum. However,
+similar results are obtained by the full model
 (Equation~\ref{eq:Lminagemod}) and a 3-parameter simplification in
-which $\gamma=\mu$. This suggests that even quite strong violations of
-the parametric assumptions do not have a major effect on the
+which $\gamma=\mu$, which suggests that even quite strong violations
+of the parametric assumptions do not have a major effect on the
 outcomes.\\
 
 If the age difference between the youngest and the second youngest
@@ -74,21 +74,21 @@ return the youngest age as a result. In other words, for fat tailed
 age spectra, the minimum age model reduces to the YSG model. This is
 the most sensible solution from a statistical point of view. In the
 absence of a discrete youngest age peak, the objections to the YSG
-model raised before do not apply. However whether age of the youngest
-grain is also the most sensible solution from a geological point of
-view is a different matter.
+model raised before do not apply. However whether the age of the
+youngest grain is also the most sensible solution from a geological
+point of view is a different matter.
 
 \begin{center}
 \noindent\includegraphics[width=\linewidth]{../figures/297.pdf}
 \captionof{figure}{Radial plots and MDA estimates for sample 297 of
   \citet[][LA-ICPMS data, left]{gehrels2020} and \citet[][CA-TIMS
-    data, right]{rasmussen2020}, calculated with \texttt{IsoplotR}
-  \citep{vermeesch2018b}.  The MDA estimates agree to within 0.6\%
-  despite the great differences in sample size and analytical
-  precision between the two datasets. The ad hoc MDA estimation
-  algorithms listed at the start of this Section do not fare so well,
-  resulting in differences of 2 -- 17\% between the LA-ICPMS and
-  CA-TIMS data.}
+    data, right]{rasmussen2020}, calculated with \texttt{IsoplotR}.
+  The MDA estimates agree to within 0.6\% despite the great
+  differences in sample size and analytical precision between the two
+  datasets. The ad hoc MDA estimation algorithms listed at the start
+  of this Section do not fare so well, resulting in differences of 2
+  -- 17\% between the LA-ICPMS and CA-TIMS data
+  \citep{vermeesch2021b}.}
   \label{fig:297}
 \end{center}
 
@@ -146,13 +146,12 @@ to achieve this goal.
 \section{Multidimensional scaling}\label{sec:MDS}
 
 Multidimensional Scaling (MDS) is a multivariate \textbf{ordination}
-technique that is similar in many ways to PCA. MDS aims to extract two
-(or higher) dimensional `maps' from tables of pairwise distances
-between objects. Let us illustrate the method with a simple
-geographical example. Consider the following table of pairwise
-distances between European cities:
+technique that is similar in many ways to Principal Component Analysis
+(PCA). MDS aims to extract two (or higher) dimensional `maps' from
+tables of pairwise distances between objects. Let us illustrate the
+method with a simple geographical example. Consider the following
+table of pairwise distances between European cities:
 
-\begin{center}
   \begin{tabular}{c|ccccccc}
   &  Athens & Barcelona & Brussels & $\ldots$ & Rome & Stockholm & Vienna \\ \hline
 Athens & 0 & 3313 & 2963 & $\ldots$ & 817 & 3927 & 1991 \\
@@ -162,12 +161,11 @@ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ &
 $\vdots$  & $\vdots$ & $\vdots$ \\
 Rome & 817 & 1460 & 1511 & $\ldots$ & 0 & 2707 & 1209 \\
 Stockholm & 3927 & 2868 & 1616 & $\ldots$ & 2707 & 0 & 2105 \\
-Vienna & 1991 & 1802 & 1175 & $\ldots$ & 1209 & 2105 & 0 
+Vienna & 1991 & 1802 & 1175 & $\ldots$ & 1209 & 2105 & 0 \\
   \end{tabular}
   \captionof{figure}{Table of road distances (in km) between European
     cities. The full dataset comprises 21 cities.}
   \label{tab:eurodist}
-\end{center}
 
 Given a table of this form, MDS reconstructs the map of Europe:
 
@@ -218,13 +216,14 @@ quantified as the \textbf{Stress}:
   \label{eq:stress}
 \end{equation}
 
-\noindent where $d[i,j]$ is the input distance between objects $i$ and
-$j$ (for example the Euclidean distance of Table~\ref{fig:eurodist}),
-$\delta[i,j]$ is the fitted distance measured on the MDS
-configuration, and $f$ is a monotonic transformation that essentially
-maps $d[i,j]$ to the same scale as $\delta[i,j]$.  The European city
-distance dataset is characterised by a Stress values of 7.5\%, which
-corresponds to a `good' fit:
+\noindent where $d[i,j]$ is the input distance (for example the
+Euclidean distances of Table~\ref{fig:eurodist}) between objects $i$
+and $j$; $\delta[i,j]$ is the fitted distance between the same objects
+measured on the MDS configuration; and $f$ is a monotonic
+transformation that increases the flexibility of the mapping between
+$d[i,j]$ and $\delta[i,j]$ whilst preserving the rank order of the
+samples.  The European city distance dataset is characterised by a
+Stress values of 7.5\%, which corresponds to a `good' fit:
 \begin{center}
   \begin{tabular}{c|ccccc}
     fit & poor & fair & good & excellent & perfect \\
@@ -268,8 +267,9 @@ distance between the CADs of the two samples:
 respectively.  $D$ takes on values from 0 (two identical
 distributions) and 1 (no overlap between the two distributions). To
 illustrate the Kolmogorov-Smirnov method, consider two sand samples
-from China: one sample from the Yellow River, and one sample from a
-sand dune in the Mu Us desert:
+from a 13-sample dataset from China, which includes one sample from
+the Yellow River, and one sample from a sand dune in the Mu Us desert
+\citep{vermeesch2013}:
 
 \noindent\begin{minipage}[t][][b]{.4\textwidth}
   \includegraphics[width=\textwidth]{../figures/KS.pdf}\\
@@ -313,7 +313,7 @@ $13\times{13}$ matrix:
 the decimal points. Square boxes mark the two samples shown in
 Figure~\ref{fig:KS}. Equation~\ref{eq:DZd} is a symmetric matrix
 containing positive values and a zero diagonal. Thus it fulfils all
-the requirements for MDS analysis:
+the requirements for MDS analysis.
 
 \noindent\begin{minipage}[t][][b]{.45\textwidth}
   \includegraphics[width=\textwidth]{../figures/DZmds.pdf}\\
@@ -329,24 +329,24 @@ the requirements for MDS analysis:
   \label{fig:DZmds}
 \end{minipage}
 
-One simple but effective way to aid in the interpretation of MDS maps
-is to draw a solid line from each point in the configuration to its
-`closest' neighbour in dissimilarity-space, and a dotted line to the
+One simple but effective way to aid the interpretation of MDS maps is
+to draw a solid line from each point in the configuration to its
+`closest' neighbour in dissimilarity-space, and a dotted line to its
 second closest neighbour:
 
 \noindent\begin{minipage}[t][][b]{.45\textwidth}
   \includegraphics[width=\textwidth]{../figures/DZmds_nnlines.pdf}\\
 \end{minipage}
 \begin{minipage}[t][][t]{.55\textwidth}
-  \captionof{figure}{ For example, sample~8 is the closest (or `least
-    dissimilar') to sample~7 (D=0.16), and the second closest to
-    sample~1 (D=0.22), while sample~7 is the closest to sample~6
-    (D=0.14) and second closest to sample~2 (D=0.15). These connecting
-    lines define two distinct groups dividing the field area into a
-    southwestern area containing sediments of `Yellow River affinity'
-    (samples~3, 4, 9, 10, L, T and Y) and a northeastern area
-    containing sediments of a different origin (samples 1, 2, 5, 6, 7
-    and 8).}
+  \captionof{figure}{The nearest neighbour lines show that sample~8 is
+    the closest (or `least dissimilar') to sample~7 (D=0.16), and the
+    second closest to sample~1 (D=0.22), while sample~7 is the closest
+    to sample~6 (D=0.14) and second closest to sample~2
+    (D=0.15). These connecting lines define two distinct groups
+    dividing the field area into a southwestern area containing
+    sediments of `Yellow River affinity' (samples~3, 4, 9, 10, L, T
+    and Y) and a northeastern area containing sediments of a different
+    origin (samples 1, 2, 5, 6, 7 and 8).}
   \label{fig:DZmds_nnlines}
 \end{minipage}
 

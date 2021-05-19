@@ -17,6 +17,53 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
+  \entry{harrison2010}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HTM}{%
+         family={Harrison},
+         familyi={H\bibinitperiod},
+         given={T\bibnamedelima Mark},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HMT}{%
+         family={Heizler},
+         familyi={H\bibinitperiod},
+         given={Matthew\bibnamedelima T},
+         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=MKD}{%
+         family={McKeegan},
+         familyi={M\bibinitperiod},
+         given={Kevin\bibnamedelima D},
+         giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=SAK}{%
+         family={Schmitt},
+         familyi={S\bibinitperiod},
+         given={Axel\bibnamedelima K},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{HTM+1}
+    \strng{fullhash}{HTMHMTMKDSAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{3-4}
+    \field{pages}{426\bibrangedash 433}
+    \field{title}{{In situ $^{40}$K--$^{40}$Ca `double-plus' SIMS dating
+  resolves Klokken feldspar $^{40}$K--$^{40}$Ar paradox}}
+    \field{volume}{299}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{2010}
+  \endentry
+
   \entry{lee2006}{article}{}
     \name{author}{7}{}{%
       {{hash=LJY}{%

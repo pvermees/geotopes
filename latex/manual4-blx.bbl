@@ -78,43 +78,47 @@
     \field{year}{1998}
   \endentry
 
-  \entry{mclean2016}{article}{}
-    \name{author}{3}{}{%
+  \entry{mclean2016b}{article}{}
+    \name{author}{4}{}{%
       {{hash=MNM}{%
-         family={McLean},
+         family={{McLean}},
          familyi={M\bibinitperiod},
-         given={Noah\bibnamedelima M},
+         given={N.\bibnamedelima M.},
          giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
-      {{hash=BJF}{%
-         family={Bowring},
-         familyi={B\bibinitperiod},
-         given={James\bibnamedelima F},
-         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      {{hash=SCJM}{%
+         family={{Smith}},
+         familyi={S\bibinitperiod},
+         given={C.\bibnamedelima J.\bibnamedelima M.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
       }}%
-      {{hash=GG}{%
-         family={Gehrels},
-         familyi={G\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
+      {{hash=RNMW}{%
+         family={{Roberts}},
+         familyi={R\bibinitperiod},
+         given={N.\bibnamedelima M.\bibnamedelima W.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=RDA}{%
+         family={{Richards}},
+         familyi={R\bibinitperiod},
+         given={D.\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {Wiley Online Library}%
-    }
-    \strng{namehash}{MNMBJFGG1}
-    \strng{fullhash}{MNMBJFGG1}
+    \strng{namehash}{MNM+1}
+    \strng{fullhash}{MNMSCJMRNMWRDA1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2016}
     \field{labeldatesource}{}
     \field{sortinit}{M}
     \field{sortinithash}{M}
-    \field{number}{7}
-    \field{pages}{2480\bibrangedash 2496}
-    \field{title}{{Algorithms and software for U-Pb geochronology by LA-ICPMS}}
-    \field{volume}{17}
-    \field{journaltitle}{Geochemistry, Geophysics, Geosystems}
+    \field{title}{{Connecting the U-Th and U-Pb Chronometers: New Algorithms
+  and Applications}}
+    \field{journaltitle}{AGU Fall Meeting Abstracts}
+    \field{month}{12}
     \field{year}{2016}
   \endentry
 
@@ -200,9 +204,9 @@
     \field{sortinit}{V}
     \field{sortinithash}{V}
     \verb{doi}
-    \verb 10.5194/gchron-3-1-2021
+    \verb 10.5194/gchron-3-247-2021
     \endverb
-    \field{pages}{1\bibrangedash 11}
+    \field{pages}{247\bibrangedash 257}
     \field{title}{{On the treatment of discordant detrital zircon U--Pb data}}
     \field{volume}{3}
     \field{journaltitle}{Geochronology}

@@ -33,18 +33,18 @@ between \textsuperscript{230}Th and \textsuperscript{234}U can be used
 to date young volcanic rocks; and Section~\ref{sec:230238} combined
 the two equations together in a single equation. Recall
 Equation~\ref{eq:230238}:
-\begin{equation}
+\begin{equation*}
   \frac{A(^{230}Th)}{A(^{238}U)} = 1 - e^{-\lambda_{230}t} +
   \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} (\gamma_\circ-1)
 \left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right)
-\end{equation}
+\end{equation*}
 
-\noindent where $\gamma_\circ$ is the oceanic
-\textsuperscript{234}U/\textsuperscript{238}U activity ratio.
-Equation~\ref{eq:230238} requires that $\gamma_\circ$ is known and
+\noindent where $A[\ast]$ is the activity of $\ast$ and $\gamma_\circ$
+is the oceanic \textsuperscript{234}U/\textsuperscript{238}U activity
+ratio. This equation requires that $\gamma_\circ$ is known and
 produces non-unique age solutions when
 A(\textsuperscript{230}Th)/A(\textsuperscript{238}U)$>1$. Both of
-these limitations can be avoided by recasting the equation in the
+these limitations can be avoided by recasting the equation into the
 following form:
 \begin{equation}
   \begin{split}
@@ -57,8 +57,7 @@ following form:
   \label{eq:Th-U}
 \end{equation}
 
-\noindent where $A[\ast]$ is the activity of $\ast$ and
-$A[{}^{230}Th]_\circ$ is the `detrital' \textsuperscript{230}Th
+\noindent where $A[{}^{230}Th]_\circ$ is the `detrital' \textsuperscript{230}Th
 component, i.e. the \textsuperscript{230}Th that was already present
 in the sample at the time of its formation \citep{kaufman1965,
   ludwig2003b}. This component is unknown but can be estimated by
@@ -101,6 +100,7 @@ other data formats, the numbers in these data tables are no atomic
 ratios but activity ratios. The relationship between activity ratios
 and atomic ratios is given by:
 \begin{equation}
+  \frac{A(x)}{A(y)} \equiv 
   \frac{\mbox{activity}(x)}{\mbox{activity}(y)} =
   \frac{\mbox{atoms}(x)}{\mbox{atoms}(y)}
   \frac{\lambda_{x}}{\lambda_{y}}
@@ -108,12 +108,12 @@ and atomic ratios is given by:
 
 Formats~1 and 2 are applicable to carbonate lithologies in which both
 the \textsuperscript{230}Th/\textsuperscript{234}U and
-\textsuperscript{234}U/\textsuperscript{238}U equilibrium has been
+\textsuperscript{234}U/\textsuperscript{238}U equilibrium have been
 disturbed. Formats~3 and 4 are applicable to igneous rocks, in which
 only the \textsuperscript{230}Th/\textsuperscript{234}U activity ratio
 has been distrubed, but \textsuperscript{234}U and
-\textsuperscript{238}U are in secular equilibrium (i.e. the
-\textsuperscript{230}Th dating method of Section~\ref{sec:230}).\\
+\textsuperscript{238}U are in secular equilibrium (see
+Section~\ref{sec:230}).
 
 The error correlations of formats~1 and 3 tend to be stronger than
 those of formats~2 and 4. This is because formats~1 and 3 normalise
@@ -140,11 +140,11 @@ and we can write:
 $\left(A[{}^{230}Th]/A[{}^{232}Th]\right)_{\!\circ}$ using the least
 squares method of \citet{york2004}. Equation~\ref{eq:rosholt} (which
 was previously derived as Equation~\ref{eq:230232}) forms a
-`Rosholt'-type isochron, which is akin to a `normal' isochron in Rb-Sr
-or Ar-Ar geochronology \citep{rosholt1976}. Using $A[{}^{238}U]$ as
-the normalising factor instead yields an `Osmond'-type isochron, which
-is akin to an `inverse' isochron in Ar-Ar or Pb-Pb geochronology
-\citep{osmond1970, ludwig2003b}:
+`Rosholt'-type isochron, which is akin to a conventional isochron in
+Rb--Sr or Ar--Ar geochronology \citep{rosholt1976}. Using
+$A[{}^{238}U]$ as the normalising factor instead yields an
+`Osmond'-type isochron, which is akin to an inverse isochron in Ar--Ar
+or Pb--Pb geochronology \citep{osmond1970, ludwig2003b}:
 \begin{equation}
   \left(\frac{A[{}^{230}Th]}{A[{}^{238}U]}\right)_i =
   \left(1-e^{\lambda_{230}t}\right) +
@@ -166,23 +166,25 @@ component. This in turn requires three dimensional isochron regression
 of the \textsuperscript{230}Th/\textsuperscript{238}U-,
 \textsuperscript{232}Th/\textsuperscript{238}U- and
 \textsuperscript{234}U/\textsuperscript{238}U-activity
-ratios. \texttt{IsoplotR} performs this calculation with the maximum
+ratios. \texttt{IsoplotR} performs this calculation using the maximum
 likelihood algorithm of \citet{ludwig1994}. This solves the following
 system of equations:
 \begin{equation}
   \begin{cases}
     \left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_i =
-    a + b \left[\frac{{}^{232}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i + \delta_i \\
+    a + b \left[\frac{{}^{232}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i +
+    \delta_i \\
     \left[\frac{{}^{230}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i =
-    A + B \left[\frac{{}^{232}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i + \epsilon_i
+    \alpha + \beta \left[\frac{{}^{232}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i +
+    \epsilon_i
   \end{cases}
   \label{eq:titterington}
 \end{equation}
 
 \noindent where $\delta_i$ and $\epsilon_i$ are the bivariate normal
 residuals. Equation~\ref{eq:titterington} can be solved by maximising
-the following log-likelihood function for $x_i$, $a$, $b$, $A$ and
-$B$:
+the following log-likelihood function for $x_i$, $a$, $b$, $\alpha$
+and $\beta$:
 \begin{equation}
   \mathcal{LL} = \mbox{const.} - 
   \frac{1}{2} \sum\limits_{i=1}^{n}
@@ -190,7 +192,7 @@ $B$:
     \begin{array}{@{}c@{}}
       \left[\frac{32}{38}\right]_{\!i} - x_{i} \\
       \left[\frac{34}{38}\right]_{\!i} - a - b x_{i} \\
-      \left[\frac{30}{38}\right]_{\!i} - A - B x_{i}
+      \left[\frac{30}{38}\right]_{\!i} - \alpha - \beta x_{i}
     \end{array}
     \right]^T
   \left[
@@ -218,7 +220,8 @@ $B$:
 \noindent which uses the shorthand notation introduced at the
 beginning of Section~\ref{sec:ThUformats}. The isochron age can be
 obtained by substituting the estimate of $a$ for
-$\left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_i$ and $A$ for
+$\left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_i$ and
+$\alpha$ for
 $\left[\frac{{}^{230}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i$ in
 Equation~\ref{eq:Th-U}, and setting $A[{}^{230}Th]_{\circ}=0$.  The
 results of the three-dimensional isochron regression can be visualised
@@ -231,13 +234,13 @@ in four possible ways:
   \captionof{figure}{The same \textsuperscript{230}Th--U data shown on
     a) Rosholt type-I, b) Osmond type-I, c) Rosholt type-II and d)
     Osmond type-II isochron diagrams. Note the slight difference in
-    the isochron age. This is due to the skewness of the
-    log-likelihood function, which does not allow negative values.
-    This effect applies to all isochrons and is most prominent when
-    the analytical uncertainties are relatively large compared to the
-    activity ratios themselves. Solving this issue requires a
-    reformulation of the isochron equation in terms of log-ratios,
-    which has not yet been attempted.}
+    the isochron age. This is due to the skewness of the uncertainty
+    distribution, which does not allow negative values.  This effect
+    applies to all isochrons and is most prominent when the analytical
+    uncertainties are relatively large compared to the activity ratios
+    themselves. Solving this issue requires a reformulation of the
+    isochron equation in terms of log-ratios, which has not yet been
+    attempted.}
   \label{fig:ThUisochron}
 \end{minipage}
 
@@ -254,11 +257,11 @@ error ellipses, and displays the authigenic
 as a set of intersecting lines.\\
 
 The Th-U evolution diagram has a similar purpose and appearance as the
-U-Pb concordia diagram, which also displays compositions and dates
-simultaneously. An alternative way of doing so for carbonate samples
-is by plotting the initial
+U-Pb concordia diagram (Section~\ref{sec:concordia}), which also
+displays compositions and dates simultaneously. An alternative way of
+doing so for carbonate samples is by plotting the initial
 \textsuperscript{234}U/\textsuperscript{238}U-ratios against the
-\textsuperscript{230}Th-\textsuperscript{234}U-\textsuperscript{238}U-ages.
+\textsuperscript{230}Th--\textsuperscript{234}U--\textsuperscript{238}U-ages.
 In both types of evolution diagrams, \texttt{IsoplotR} provides the
 option to project the raw measurements along the best fitting isochron
 line and thereby remove the detrital
@@ -270,19 +273,20 @@ Neither the U-series evolution diagram nor the
 \textsuperscript{234}U/\textsuperscript{238}U vs. age plot is
 applicable to igneous datasets, in which \textsuperscript{234}U and
 \textsuperscript{238}U are in secular equilibrium.  For such datasets,
-\texttt{IsoplotR} produces an Osmond-style regression plot that is
-decorated with a fanning set of isochron lines.
+\texttt{IsoplotR} produces an Rosholt type-I style regression plot
+that is decorated with a fanning set of isochron lines.
 
 \noindent\begin{minipage}[t][][b]{.65\linewidth}
 \includegraphics[width=\textwidth]{../figures/evolution.pdf}
 \end{minipage}
 \begin{minipage}[t][][t]{.35\linewidth}
-  \captionof{figure}{The data of Figure~\ref{fig:ThUisochron} shown on
-    a \textsuperscript{230}Th--U evolution diagram a) showing the raw
-    data with an isochron fit and the inferred authigenic end member
-    composition shown as a white ellipse; and b) showing the data
-    projected along the isochron.  c) shows the projected data in
-    initial \textsuperscript{234}U/\textsuperscript{238}U-activity
+  \captionof{figure}{The data of Figure~\ref{fig:ThUisochron}
+    visualised on a \textsuperscript{230}Th--U evolution diagram a)
+    showing the raw data with an isochron fit and the inferred
+    authigenic end member composition shown as a white ellipse; and b)
+    showing the data projected along the isochron.  c) shows the
+    projected data in initial
+    \textsuperscript{234}U/\textsuperscript{238}U-activity
     vs. \textsuperscript{230}Th--U age space.  d) shows
     \texttt{IsoplotR}'s output for an evolution diagram of data
     formats 3 and 4. In this case the data are shown in Rosholt type-I

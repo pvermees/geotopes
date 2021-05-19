@@ -57,7 +57,7 @@
   $\mbox{err}\!\left[\frac{07}{35}\right]$, 
   $\frac{06}{38}$,  
   $\mbox{err}\!\left[\frac{06}{38}\right]$,  
-  $\mbox{r}\!\left[\frac{06}{38},\frac{06}{38}\right]$
+  $\mbox{r}\!\left[\frac{07}{35},\frac{06}{38}\right]$
   \item $\frac{38}{06}$,  
   $\mbox{err}\!\left[\frac{38}{06}\right]$, 
   $\frac{07}{06}$,  
@@ -933,7 +933,7 @@ express the initial amounts as a function of the present day amounts:
 The matrix exponential approach provides an elegant solution for all
 three scenarios described above. Equation~\ref{eq:matrixdecaysolution}
 can be used to construct a concordia diagram in the presence of
-disequilibrium:\\
+disequilibrium:
 
 \noindent\includegraphics[width=\linewidth]{../figures/diseq.pdf}
 \begingroup
@@ -946,9 +946,33 @@ disequilibrium:\\
   \textsuperscript{231}Pa/\textsuperscript{235}U = 2.  These initial
   conditions cause the concordia line to curve upwards for young
   ages. Without the disequilibrium correction, the concordia age
-  would be wrong by over 100\%.}
+  would be wrong by over 100\%.\\}
 \label{fig:diseq}
 \endgroup
+
+If the measured activity ratios are used to infer the initial
+conditions, then the concordia line terminates where those inferred
+activity ratios reach unrealistic values (e.g.,
+\textsuperscript{234}U/\textsuperscript{238}U=500 and
+\textsuperscript{230}Th/\textsuperscript{238}U=0):
+
+\noindent\begin{minipage}[t][][b]{.5\linewidth}
+\includegraphics[width=\textwidth]{../figures/McLean.pdf}
+\end{minipage}
+\begin{minipage}[t][][t]{.5\linewidth}
+  \captionof{figure}{Discordia regression of carbonate sample WHC1 of
+    \citet{mclean2016b}, using measured activity ratios of
+    \textsuperscript{234}U/\textsuperscript{238}U=1.1634,
+    \textsuperscript{230}Th/\textsuperscript{238}U=1.0734, and initial
+    activity ratios of \textsuperscript{226}Ra/\textsuperscript{238}U
+    = \textsuperscript{231}Pa/\textsuperscript{235}U = 0. The measured
+    \textsuperscript{234}U/\textsuperscript{238}U and
+    \textsuperscript{230}Th/\textsuperscript{238}U activity ratios are
+    incompatible with U--Pb ages of more than 240~ka, i.e. at 240~ka
+    the initial \textsuperscript{230}Th/\textsuperscript{238}U
+    activity ratio would have been 0.}
+  \label{fig:McLean}
+\end{minipage}
 
 \section{Discordance filters}
 \label{sec:discfilter}

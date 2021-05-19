@@ -26,9 +26,9 @@ either equals \texttt{apatite} or \texttt{zircon}.  The three formats
 represent two different approaches to fission track dating:
 
 \begin{enumerate}
-\item The External Detector Method (EDM) implements the neutron
-  irradiation method that was previously introduced in
-  Section~\ref{sec:fission-tracks}.
+\item The External Detector Method \citep[EDM,][]{hurford1983}
+  implements the neutron irradiation method that was previously
+  introduced in Section~\ref{sec:fission-tracks}.
 \item The `ICP' method uses LA-ICP-MS (see
   Section~\ref{sec:mass-specs}) to determine the
   \textsuperscript{238}U-content of fission track samples.  The main
@@ -73,7 +73,7 @@ z_j = \arcsin\sqrt{\frac{N_{sj} + 3/8}{N_{sj}+N_{ij}+3/4}}
 The arithmetic mean is not a reliable estimator of the true age, for a
 similar reason why the arithmetic mean is not the best estimator of
 the average U--Th--He composition and age. The Poisson distribution is
-negatively skewed, and this biases the arithmetic mean. The solution
+positively skewed, and this biases the arithmetic mean. The solution
 is similar as for the U--Th--He method, namely:
 
 \begin{enumerate}
@@ -150,8 +150,8 @@ geochronology, which each correspond to a different data format:
 \item The `absolute dating' method is based on
   Equation~\ref{eq:tFT}:
   \begin{equation}
-    {t} = \frac{1}{\lambda_D}
-    \ln \left(1 + \frac{\lambda_D}{\lambda_f}\frac{N_s}{[{U}] A_s R_e ~ q}\right)
+    {t} = \frac{1}{\lambda_{38}}
+    \ln \left(1 + \frac{\lambda_{38}}{\lambda_f}\frac{N_s}{[{U}] A_s R_e ~ q}\right)
     \label{eq:tICP}
   \end{equation}
 
@@ -168,8 +168,8 @@ geochronology, which each correspond to a different data format:
   decay constant and etchable range into a $\zeta$-calibration factor
   akin to that used in the EDM:
   \begin{equation}
-    {t} = \frac{1}{\lambda_D}
-    \ln \left(1+\frac{1}{2}\lambda_D{\zeta}_{ICP}\frac{N_s}{A_s[{U}]}\right)
+    {t} = \frac{1}{\lambda_{38}}
+    \ln \left(1+\frac{1}{2}\lambda_{38}{\zeta}_{ICP}\frac{N_s}{A_s[{U}]}\right)
     \label{eq:tzetahatICP}
   \end{equation}
 
@@ -177,24 +177,24 @@ geochronology, which each correspond to a different data format:
   known FT age \citep{hasebe2004}. Note that, in contrast with the
   `absolute' dating method, the $\zeta$-calibration method allows
   $[{U}]$ to be expressed in any concentration units (e.g., ppm or
-  wt\% of total U) or could even be replaced with the measured U/Ca-,
-  U/Si- or U/Zr-ratios produced by the ICP-MS instrument.
+  wt\% of total U) or even be replaced with the measured U/Ca-, U/Si-
+  or U/Zr-ratios produced by the ICP-MS instrument.
 \end{enumerate}
 
 \section{Compositional zoning}\label{sec:zoning}
 
 Uranium-bearing minerals such as apatite and zircon often exhibit
-compositional zoning, which must either be removed or quantified in
-order to ensure unbiased ages. Two approaches are being used to deal
-with this issue:
+compositional zoning, whose effects must either be removed or
+quantified in order to ensure unbiased ages. Two approaches are used
+to deal with this issue:
 
 \begin{enumerate}
 \item The effect of compositional zoning can be \emph{removed} by
   covering the entire counting area with one large laser spot
   \citep{soares2014} or a raster \citep{hasebe2004}. The uncertainty
   of $[{U}]$ is then simply given by the analytical uncertainty of the
-  LA-ICP-MS instrument, which typically is an order of magnitude lower
-  than the standard errors of induced track counts in the EDM.
+  LA-ICP-MS measurements, which typically is an order of magnitude
+  lower than the standard errors of induced track counts in the EDM.
 \item Alternatively, the uranium-heterogeneity can be
   \emph{quantified} by analysing multiple spots per analysed grain
   \citep{hasebe2009}. This is why \texttt{IsoplotR} accommodates
@@ -202,7 +202,7 @@ with this issue:
   err[U\textsubscript{1}], $\ldots$, U\textsubscript{n},
   err[U\textsubscript{n}])\\
 
-  It is commonly found that the variance of the different
+  It is commonly found that the scatter of the different
   uranium-measurements within each grain far exceeds the formal
   analytical uncertainty of each spot measurement. \texttt{IsoplotR}
   assumes that this dispersion is constant across all aliquots and
@@ -214,7 +214,7 @@ with this issue:
 
   where ${U}_{jk}$ is the $k$\textsuperscript{th} (out of $n_j$)
   uranium concentration measurement, $s[U]_{jk}$ is its standard
-  error, and and $\mu_j$ and $\sigma^2$ are the (unknown) mean and
+  error, and $\mu_j$ and $\sigma^2$ are the (unknown) mean and
   variance of a Normal distribution. Note that $\mu_j$ is allowed to
   vary from grain to grain but $\sigma$ is not.  $\mu_j$ and $\sigma$
   can be estimated using the method of maximum likelihood, and the
@@ -223,7 +223,7 @@ with this issue:
 \end{enumerate}
 
 To plot ICP-MS based fission track data on a radial plot, we can
-replace Eqs.~\ref{eq:zj} and \ref{eq:sj} with
+replace Equations~\ref{eq:zj} and \ref{eq:sj} with
 \begin{align}
   z_j & = \ln ({t}_j) \mbox{,}   \label{eq:zj2} \\
   \mbox{and~} s_j & = \sqrt{ 
@@ -257,7 +257,7 @@ derived by standard error propagation.  For the EDM, this yields:
 s[{t}] \approx {t} \sqrt{ 
   \left(\frac{s[{\zeta}]}{{\zeta}}\right)^2 +
   \left(\frac{s[{\rho_D}]}{{\rho_D}}\right)^2 +
-  \frac{1}{N_s} + \frac{1}{Ni}
+  \frac{1}{N_s} + \frac{1}{N_i}
 }
 \label{eq:stEDM}
 \end{equation}
@@ -287,11 +287,11 @@ s[{t}] \approx {t} \sqrt{
 \label{eq:shatt4}
 \end{equation}
 
-Adding half a count to the spontaneous fission track count would
-introduce more or less bias depending on whether the grain is poor or
-rich in uranium. One pragmatic solution to this problem is to
-approximate the ICP-MS based uranium concentration measurement with an
-`equivalent induced track density', using the following linear
+Adding half a count to the spontaneous fission track count would bias
+the data to a greater or lesser degree depending on whether the grain
+is poor or rich in uranium. One pragmatic solution to this problem is
+to approximate the ICP-MS based uranium concentration measurement with
+an `equivalent induced track density', using the following linear
 transformation:
 \begin{equation}
 \hat{N}_{ij} = \rho_j A_{sj} [{U}_j]

@@ -266,6 +266,40 @@
     \field{year}{2009}
   \endentry
 
+  \entry{hurford1983}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HAJ}{%
+         family={Hurford},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GPF}{%
+         family={Green},
+         familyi={G\bibinitperiod},
+         given={P.\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HAJGPF1}
+    \strng{fullhash}{HAJGPF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1983}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1016/S0009-2541(83)80026-6
+    \endverb
+    \field{issn}{0009-2541}
+    \field{pages}{285 \bibrangedash  317}
+    \field{title}{The zeta age calibration of fission-track dating}
+    \field{volume}{41}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{1983}
+  \endentry
+
   \entry{iwano1998}{incollection}{}
     \name{author}{2}{}{%
       {{hash=IH}{%
@@ -472,9 +506,6 @@
     \field{labeldatesource}{}
     \field{sortinit}{V}
     \field{sortinithash}{V}
-    \verb{doi}
-    \verb https://doi.org/10.1016/j.chemgeo.2017.03.002
-    \endverb
     \field{pages}{19\bibrangedash 27}
     \field{title}{{Statistics for LA-ICP-MS based fission track dating}}
     \field{volume}{456}
