@@ -24,8 +24,8 @@ page, at
 tutorial in this Chapter, we will use the following datasets:
 
 \begin{script}
-data1 <- read.data('LudwigMixture.csv',method='other')
-data2 <- read.data('RbSr1.csv',method='other')
+data1 <- read.data('MountTom.csv',method='other')
+data2 <- read.data('regression.csv',method='other')
 data3 <- read.data('LudwigMean.csv',method='other')
 data4 <- read.data('LudwigSpectrum.csv',method='other')
 data5 <- read.data('LudwigKDE.csv',method='other')
@@ -36,7 +36,7 @@ Alternatively, the same files can also be found in the
 \texttt{R}'s built-in \texttt{system.file()} function. For example:
 
 \begin{script}
-fn <- system.file('LudwigMixture.csv',package='IsoplotR')
+fn <- system.file('MountTom.csv',package='IsoplotR')
 data1 <- read.data(fn,method='other')
 \end{script}
 
@@ -89,8 +89,8 @@ radialplot(data1,show.numbers=TRUE)
 \begin{minipage}[t]{.7\linewidth}
 The logarithmic transformation works well for geochronological data,
 which are constrained to strictly positive numbers. The square root
-transformation is advisable for datasets that contain very small
-numbers compared to the analytical uncertainty.  The linear scale is
+transformation is advisable for datasets that contain small numbers
+compared to the analytical uncertainty.  The linear scale is
 appropriate for quantities that are free to range from $-\infty$ to
 $+\infty$.
 \end{minipage}
@@ -140,9 +140,9 @@ radialplot(data1,from=10,to=200,z0=50)
 
 \item Samples are represented by filled circles by default, but this
   can be changed to a range of other shape. These can be specified as
-  numbers (\texttt{1-25}, see \texttt{?pch} for further details) or a
-  single character such as \verb|'o'|, \verb|'*'|, \verb|'+'|, or
-  \verb|'.'|. 
+  numbers (\texttt{1-25}, see \texttt{?points} for further details) or
+  a single character such as \verb|'o'|, \verb|'*'|, \verb|'+'|, or
+  \verb|'.'|.
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -222,7 +222,7 @@ constructing a colour scale based on the relative measurement
 uncertainties (uncertainty divided by age) of the test data:
 
 \begin{script}
-relerr <- data1[,2]/data1[,2]
+relerr <- data1[,2]/data1[,1]
 radialplot(data1,levels=relerr,bg=c('white','red'))
 \end{script}
 
@@ -389,7 +389,7 @@ the ellipses a uniform red.
 \end{minipage}
 
 \begin{script}
-isochron(data2,levels=data2[,'rXY'],clabel='rho',
+isochron(data2,levels=data2[,5],clabel='rho',
          ellipse.fill=topo.colors(n=100),ellipse.stroke='red')
 \end{script}
   
@@ -425,7 +425,7 @@ any optional colour data and flags to mark omitted or hidden aliquots.
 \end{minipage}
 
 For tightly clustered datasets, the difference between the random
-effects models of the weighted mean and radial plot is small.  But
+effects models of the weighted mean and radial plots is small.  But
 when the individual age estimates exhibit significant scatter
 ($>10$\%, say), then the central age is preferred over the arithmetic
 weighted mean.
@@ -448,7 +448,7 @@ weightedmean(data3,random.effects=TRUE)
 
 Detecting outliers from the CLI and colouring them red on the plot:
 \begin{console}
-weightedmean(UPb1,detect.outliers=TRUE,outlier.col='red')
+weightedmean(data3,detect.outliers=TRUE,outlier.col='red')
 \end{console}
 
 \item By default the aliquots are plotted in the order of the input
@@ -459,7 +459,7 @@ weightedmean(UPb1,detect.outliers=TRUE,outlier.col='red')
   \includegraphics[width=\linewidth]{../figures/OtherWtdMeanRank.png}
 \end{minipage}
 \begin{minipage}[t]{.8\linewidth}
-However they can also be shuffled in order of increasing age.
+However they can also be ranked in order of increasing age.
 \end{minipage}
 
 \begin{console}
@@ -478,7 +478,7 @@ weightedmean(data3,ranked=TRUE)
   The minimum and maximum extent of the age scale can be specified;
   the fill colour of the rectangular segments can be modified based on
   an additional variable, with a designated separate colour for
-  outliers (\texttt{NA} produces empty rectangles); the confidence
+  outliers (\texttt{NA} produces empty rectangles); and the confidence
   level and significant digits can be specified as in the radial plots
   and isochron regression plots.
 \end{minipage}
@@ -563,7 +563,7 @@ agespectrum(data4,random.effects=TRUE)
   The minimum and maximum extent of the age scale can be specified;
   the fill colour of the rectangular segments can be modified based on
   an additional variable, with a designated separate colour for
-  outliers; the confidence level and significant digits can be
+  outliers; and the confidence level and significant digits can be
   specified.
 \end{minipage}
 
@@ -653,8 +653,8 @@ kde(data5,log=TRUE,bw=0.012,binwidth=0.008,from=230,to=280)
 \end{minipage}
 \begin{minipage}[t]{.8\linewidth}
   Removing the histogram also removes the vertical axis of the KDE
-  plot.  The probability density values of the KDE curve itself do not
-  have a meaningful purpose.
+  plot.  The y-values of the KDE curve itself do not have a meaningful
+  purpose.
 \end{minipage}
 
 \begin{console}

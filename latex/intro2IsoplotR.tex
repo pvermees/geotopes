@@ -18,12 +18,10 @@ Unfortunately, recent versions of \texttt{Excel} are incompatible with
 the code. These software issues are a major problem for the field of
 radiometric geochronology, to the point where some laboratories kept
 an old \texttt{Windows~XP} computer with \texttt{Excel~2003} around
-for the sole purpose of running \texttt{Isoplot}.\\
-
-\texttt{IsoplotR} is a free, open and more future proof alternative
-for \texttt{Isoplot} \citep{vermeesch2018c}.  \texttt{IsoplotR}'s
-software architecture uses a modular design with future proofness and
-extendability in mind.
+for the sole purpose of running \texttt{Isoplot}.  \texttt{IsoplotR}
+is a free, open and more future proof alternative for \texttt{Isoplot}
+\citep{vermeesch2018c}.  \texttt{IsoplotR}'s software architecture
+uses a modular design with future proofness and extendability in mind.
 
 \section{Software architecture}
 \label{sec:architecture}
@@ -58,9 +56,9 @@ automate, modify and extend \texttt{IsoplotR}'s functionality.
 \label{sec:GUI}
 
 The code base for the GUI and the core data processing algorithms are
-surgically separated. The command-line functionality is grouped in a
-lightweight package called \texttt{IsoplotR} that may be installed
-from CRAN as instructed in
+surgically separated from each other. The command-line functionality
+is grouped in a lightweight package called \texttt{IsoplotR} that may
+be installed from CRAN as instructed in
 Section~\ref{sec:R}.\ref{it:installingIsoplotR}. The \texttt{IsoplotR}
 package has minimal dependencies and should work on a basic \texttt{R}
 installation. In contrast, the GUI is written in \texttt{HTML} and
@@ -140,7 +138,8 @@ settings that are listed under the \texttt{Options} menu.\\
 \end{minipage}
 \begin{minipage}[t]{.85\textwidth}
 The data and settings can be stored in a \texttt{.json} format for
-further processing in the future.\\
+further processing in the future. See Chapter~\ref{ch:schema} for
+further details about this format.\\
 \end{minipage}
 
 \noindent\begin{minipage}[t]{.15\textwidth}
@@ -163,9 +162,9 @@ settings and produces the graphical and/or numerical output.\\
 Clicking the \texttt{PDF} button repeats the calculations but saves
 the output as a \texttt{.pdf} file, which can be further processed by
 vector editing software such as \texttt{Adobe Illustrator},
-\texttt{CorelDraw} or \texttt{Inkscape}. If \texttt{ages} is chosen as
-output saves the results to a comma separated value (\texttt{.csv})
-file.\\
+\texttt{CorelDraw} or \texttt{Inkscape}. Choosing \texttt{ages} as
+output type saves the results to a comma separated value
+(\texttt{.csv}) file.\\
 \end{minipage}
 
 \noindent\begin{minipage}[t]{.15\textwidth}
@@ -211,22 +210,16 @@ errors. Selecting any item from this menu automatically changes the
 input data accordingly.\\
 \end{minipage}
 
-\noindent\begin{minipage}[t]{.25\textwidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=.85\textwidth]{../figures/ierr.png}\\
-\end{minipage}
-\begin{minipage}[t]{.75\textwidth}
-Contextual help can be obtained by clicking any text string within the
-\texttt{Options} menu.
-\end{minipage}
-
 \noindent\begin{minipage}[t]{.45\textwidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\textwidth]{../figures/contextualhelp.png}
 \end{minipage}
 \begin{minipage}[t]{.55\textwidth}
 Contextual help can be obtained by clicking any text string within the
-\texttt{Options} menu.
+\texttt{Options} menu. For example, clicking on \textsuperscript{\tt
+  238}\texttt{U/}\textsuperscript{\tt 235}\texttt{U} in the
+\texttt{U/Pb} settings provides details about the origin of the
+default value, and suggestions for alternative values.
 \end{minipage}
 
 \section{The Command Line Interface (CLI)}\label{sec:CLI}
@@ -248,7 +241,7 @@ UPb_dat <- read.data('file.csv',method='U-Pb',format=1,ierr=3)
 
 \noindent where\\
 
-\noindent\begin{tabular}{@{}p{.2\textwidth}@{}p{.04\textwidth}@{}p{.76\textwidth}@{}}
+\noindent\begin{tabular}{@{}p{.15\textwidth}@{}p{.04\textwidth}@{}p{.81\textwidth}@{}}
 \verb|'file.csv'| && is the name of the data
 file\\ \verb|method='U-Pb'| && specifies the
 chronometer\\ \verb|format=1| && tells \texttt{IsoplotR} that
@@ -271,17 +264,18 @@ typing \texttt{?read.data} at the console. The various plot devices
 are implemented in a collection of designated functions such as
 \texttt{concordia()}, \texttt{isochron()}, \texttt{weightedmean()},
 \texttt{isochron()}, \texttt{agespectrum()}, \texttt{KDE()},
-\texttt{CAD()} and \texttt{radialplot()} that will be discussed in
-further details in later chapters. A table of age estimates can be
-obtained using the \texttt{ages()} function. Many of
-\texttt{IsoplotR}'s functions are \emph{overloaded}, which means that
-the same function can be applied to multiple data types with
-potentially different results. For example, using the output of
+\texttt{CAD()} and \texttt{radialplot()} that are listed in
+Chapter~\ref{ch:API} and will be discussed in more detail in later
+chapters. A table of age estimates can be obtained using the
+\texttt{ages()} function. Many of \texttt{IsoplotR}'s functions are
+\emph{overloaded}, which means that the same function can be applied
+to multiple data types with potentially different results. For
+example, using the output of
 \verb|read.data('data.csv',method='Rb-Sr')| as input to the
 \texttt{isochron()} function automatically produces a Rb--Sr isochron,
 with the correct decay constants and axis labels.\\
 
-A colour scale can be added to most plots using the options
+A colour scale can be added to most plots using the optional
 \texttt{levels} argument. For example:
 
 \begin{script}[firstnumber=2]
@@ -299,24 +293,24 @@ aliquots to the functions of interest. For example:
 weightedmean(UPb_dat,omit=10)
 \end{script}
 
-\noindent omits the 10\textsuperscript{th} from the weighted mean
-calculation, whereas
+\noindent omits the 10\textsuperscript{th} aliquot from the weighted
+mean calculation, whereas
 
 \begin{script}[firstnumber=2]
 weightedmean(UPb_dat,hide=10)
 \end{script}
 
-\noindent removes the aliquot from the weighted mean diagram
+\noindent removes the same aliquot from the weighted mean diagram
 altogether.\\
 
 The GUI may be the easiest way to interact with \texttt{IsoplotR} and
 explore various data processing strategies with individual
 samples. But the CLI is more useful than the GUI when processing large
 datasets comprising multiple samples, and provides a powerful
-mechanism to produce \emph{reproducible} science. The \texttt{.csv}
+mechanism to produce \emph{reproducible} science: the \texttt{.csv}
 data files and \texttt{.R} data processing scripts can easily be
-archived and shared with others. They provide a parsimonious way to
-produce FAIR science \citep{wilkinson2016}.
+archived and shared with others and thereby provide a parsimonious way
+to produce FAIR science \citep{wilkinson2016}.
 
 \printbibliography[heading=subbibliography]
 \end{refsection}

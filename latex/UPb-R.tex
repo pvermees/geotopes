@@ -12,7 +12,7 @@
   Section~\ref{sec:UPbFormats} for details.
 \end{minipage}
 
-\noindent Examples using the CLI:
+\noindent Loading data files into memory using the CLI:
 
 \begin{script}
 # U-Pb format 1, 1se absolute input errors:
@@ -25,9 +25,9 @@ UPb3 <- read.data('UPb8.csv',method='U-Pb',format=8,ierr=4)
 
 \noindent where \texttt{UPb1.csv}, \texttt{UPb6.csv} and
 \texttt{UPb8.csv} are files that, like the example files of
-Section~\ref{ch:generic-R}, are included in \texttt{IsoplotR} and
+Chapter~\ref{ch:generic-R}, are included in \texttt{IsoplotR} and
 whose file path can be found with the \texttt{system.file()}
-function. \texttt{read.data()} produces a list with three items:
+function. \texttt{read.data()} returns a list with three items:
 
 \begin{enumerate}
 \item\texttt{format} stores the value of the eponymous argument
@@ -65,6 +65,9 @@ function. \texttt{read.data()} produces a list with three items:
   given by \citet{hiess2012}, and the U and Th decay constants by
   \citet{jaffey1971} and \citet{leroux1963}, respectively.
 \end{minipage}
+
+The \texttt{settings()} function can be used to get and change global
+settings, which affect all subsequent calculations:
 
 \begin{script}
 # use the Steiger and Jaeger (1977) value with zero uncertainty
@@ -249,8 +252,8 @@ concordia(UPb4,type=2)
 \end{script}
 
 \item Finally, for U--Pb data of formats 7 and 8 (which include the
-  \texttt{232}Th/\textsuperscript{238}U ratio of the mineral), there
-  is a fourth way to specify the initial
+  \textsuperscript{232}Th/\textsuperscript{238}U ratio of the
+  mineral), there is a fourth way to specify the initial
   \textsuperscript{230}Th/\textsuperscript{238}U activity ratio, by
   supplying the measured Th/U-ratio of the magma, determined by
   geochemical analysis of the whole rock or volcanic glass:
@@ -267,7 +270,7 @@ concordia(UPb4,type=2)
 
 \noindent CLI example:
 \begin{script}
-d <- diseq(ThU=list(x=3,option=3))
+d <- diseq(ThU=list(x=4,option=3))
 UPb4 <- read.data('diseq.csv',method='U-Pb',format=8,d=d)
 radialplot(UPb4)
 \end{script}
@@ -313,8 +316,8 @@ concordia(UPb3,type=3) # U-Th-Pb
   \includegraphics[width=\linewidth]{../figures/Concordiatlim.png}
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
-  The first option is to specify the minimum and maximum age of the
-  concordia line.
+  The first option is to specify the minimum and maximum age limits of
+  the concordia line.
 \end{minipage}
 
 \begin{script}
@@ -348,15 +351,15 @@ concordia(UPb1,type=2,xlim=c(10,30),ylim=c(0.05,0.06))
 \begin{minipage}[t]{.6\linewidth}
 To plot the data as `2 sigma' ellipses, this can be changed to
 $\alpha=0.14$ here, which covers 86\% of the area under a bivariate
-normal distribution:
+normal distribution (Figure~\ref{fig:norm2dmarginal}):
 \end{minipage}
 
 \begin{console}
 concordia(UPb1,alpha=0.14)
 \end{console}
 
-\item When an extra variable is entered in the optional \texttt{(C)}
-  column of the input table, this can be used as a colour scale (see
+\item An extra variable can be entered in the optional \texttt{(C)}
+  column of the input table to create a colour scale (see
   Section~\ref{sec:GUI}).
 
   \noindent\begin{minipage}[t]{.4\linewidth}
@@ -683,18 +686,18 @@ par(oldpar)
     level (\texttt{alpha}) of the numerical results and error
     ellipses, label the error ellipses with the sample numbers
     (\texttt{show.numbers}), propagate the decay constant
-    uncertainties \texttt{exterr}, and label the and colour those
+    uncertainties (\texttt{exterr}), and label and colour those
     ellipses (\texttt{ellipse.fill} and \texttt{ellipse.stroke})
-    according to some additional variable \texttt{levels}.
+    according to some additional variable (\texttt{levels}).
 \end{minipage}
 From the CLI, we can also store the results of the isochron regression
 in a variable for further processing. For example:
 \begin{script}
 ThU <- UPb3$x[,'Th232U238']
-fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),ylim=c(0,0.5),
-                alpha=0.1,sigdig=3,show.numbers=TRUE,levels=ThU,
-                ellipse.fill=c('white','red'),ellipse.stroke='blue',
-                clabel='Th/U')
+fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),ylim=c(0,0.6),
+                alpha=0.05,exterr=TRUE,sigdig=3,show.numbers=TRUE,
+                levels=ThU,ellipse.fill=c('white','red'),
+                ellipse.stroke='blue',clabel='Th/U')
 \end{script}
 
 \end{enumerate}
@@ -817,18 +820,18 @@ radialplot(UPb3,common.Pb=3,cutoff.disc=dscf)
   The minimum and maximum extent of the radial scale can be specified,
   as well as the central value ($z_\circ$ in
   Equation~\ref{eq:radial}). Samples are represented by filled circles
-  by default, but this can be changed to a range of other shape. These
-  can be specified as numbers (\texttt{1-25}, see \texttt{?pch} for
-  further details) or a single character such as \verb|'o'|,
-  \verb|'*'|, \verb|'+'|, or \verb|'.'|. For plot characters that have
-  a fill colour (e.g., \texttt{21-25}), an additional variable can be
-  used to construct a colour scale. Both the plot symbols and any text
-  labels in the plot of legend can be magnified or reduced via a
-  scaling factor.
+  by default, but this can be changed to a range of other
+  shapes. These can be specified as numbers (\texttt{1-25}, see
+  \texttt{?points} for further details) or a single character such as
+  \verb|'o'|, \verb|'*'|, \verb|'+'|, or \verb|'.'|. For plot
+  characters that have a fill colour (e.g., \texttt{21-25}), an
+  additional variable can be used to construct a colour scale. Both
+  the plot symbols and any text labels in the plot of legend can be
+  magnified or reduced via a scaling factor.
 \end{minipage}
 
 \begin{script}
-oldpar <- par(pch=0.9) # font magnification
+oldpar <- par(cex=0.9) # font magnification
 radialplot(UPb3,show.numbers=TRUE,exterr=TRUE,from=5,z0=30,to=150,
            pch=21,alpha=0.05,bg=c('white','red'),cex=2,
            levels=UPb3$x[,'Th232U238'],clabel='Th/U')
@@ -848,11 +851,11 @@ shares several options with it.
 \includegraphics[width=\linewidth]{../figures/UPbWtdMeanAgeType.png}\\
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
-  Like the radial plot, also the weighted mean function can be
-  applied to five or six different types of U--(Th)--Pb dates. These
-  may or may not be corrected for common Pb and initial
-  disequilibrium, and may or may not have passed through a discordance
-  filter.
+  Like the radial plot, also the weighted mean function can be applied
+  to five (for formats 1--3) or six (for formats 4--8) different types
+  of U--(Th)--Pb dates. These may or may not be corrected for common
+  Pb and initial disequilibrium, and may or may not have passed
+  through a discordance filter.
 \end{minipage}
 
 Using the default settings:
@@ -887,7 +890,7 @@ Section~\ref{sec:OtherWeightedMean}.\\
   criterion, which may select different outliers for the ordinary
   weighted mean and random effects model.  By default the aliquots are
   plotted in the order of the input table. However they can also be
-  shuffled in order of increasing age.  The minimum and maximum extent
+  ranked in order of increasing age.  The minimum and maximum extent
   of the age scale can be specified and may extend to negative values;
   the fill colour of the rectangular segments can be modified based on
   an additional variable, with a designated separate colour for
@@ -989,7 +992,7 @@ age(UPb2,common.Pb=3)
 \end{minipage}
 \begin{minipage}[t]{.65\linewidth}
   Note that the uncertainties of the resulting ages may be strongly
-  correlated.
+  correlated with each other when ticking this box.
 \end{minipage}
   
 \begin{console}

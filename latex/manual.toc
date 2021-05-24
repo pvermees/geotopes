@@ -194,7 +194,7 @@
 \defcounter {refsection}{12}\relax 
 \contentsline {section}{\numberline {23.2}The Graphical User Interface (GUI)}{128}{section.23.2}%
 \defcounter {refsection}{12}\relax 
-\contentsline {section}{\numberline {23.3}The Command Line Interface (CLI)}{130}{section.23.3}%
+\contentsline {section}{\numberline {23.3}The Command Line Interface (CLI)}{129}{section.23.3}%
 \defcounter {refsection}{13}\relax 
 \contentsline {chapter}{\numberline {24}Generic functions}{132}{chapter.24}%
 \defcounter {refsection}{13}\relax 
