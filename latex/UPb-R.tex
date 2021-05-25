@@ -18,9 +18,9 @@
 # U-Pb format 1, 1se absolute input errors:
 UPb1 <- read.data('UPb1.csv',method='U-Pb',format=1)
 # U-Pb format 6, 1se relative input errors:
-UPb2 <- read.data('UPb6.csv',method='U-Pb',format=6,ierr=3)
+UPb2 <- read.data('UPb6c.csv',method='U-Pb',format=6,ierr=3)
 # U-Pb format 8, 2se relative input errors:
-UPb3 <- read.data('UPb8.csv',method='U-Pb',format=8,ierr=4)
+UPb3 <- read.data('UPb8d.csv',method='U-Pb',format=8,ierr=4)
 \end{script}
 
 \noindent where \texttt{UPb1.csv}, \texttt{UPb6.csv} and
@@ -70,9 +70,9 @@ The \texttt{settings()} function can be used to get and change global
 settings, which affect all subsequent calculations:
 
 \begin{script}
-# use the Steiger and Jaeger (1977) value with zero uncertainty
+# use the Steiger and Jaeger (1977) ratio with zero uncertainty
 settings('iratio','U238U235',137.88,0)
-# use the Schoene et al. (2006) value and uncertainty
+# use the Schoene et al. (2006) decay constant and uncertainty
 settings('lambda','U238',0.000154993,0.00000013) 
 \end{script}
 
@@ -385,7 +385,7 @@ concordia(UPb3,levels=ThU,ellipse.fill=c('blue','red'))
 
 \noindent Using red-green-blue-transparency (rgb-alpha) specifiers:
 \begin{console}
-concordia(UPb3,levels=ThU,ellipse.fill=c(rbg(1,0,0,0.5),rgb(0,1,0,0.5)))
+concordia(UPb3,levels=ThU,ellipse.fill=c(rgb(1,0,0,0.5),rgb(0,1,0,0.5)))
 \end{console}
 
 \noindent Specifying the stroke colours as a colour palette with 80\% opacity
