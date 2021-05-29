@@ -63,7 +63,7 @@ settings('lambda','U238',0.000154993,0.00000013)
 \end{minipage}
 \begin{minipage}[t]{.55\linewidth}
   These three models represent three different ways to capture any
-  excess dispersion of the data relative to the nominal uncertainties
+  excess dispersion of the data w.r.t. the analytical uncertainties
   (Figure~\ref{fig:isochronMSWD}).
 \end{minipage}
 
@@ -94,8 +94,8 @@ isochron(PbPb,inverse=TRUE)
 
 \item As discussed in Section~\ref{sec:SKgrowth}, the mantle evolution
   model of \citet{stacey1975} can be included with the isochron plot.
-  Any intersection(s) of the isochron with the mantle evolution curve
-  is/are reported in the plot legend.
+  Any intersections of the isochron with the mantle evolution curve
+  are reported in the plot legend.
 
 \noindent\begin{minipage}[t]{.45\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -108,7 +108,7 @@ isochron(PbPb,inverse=TRUE)
 
 \item The appearance and numerical behaviour of Pb--Pb isochrons can
   be modified using similar options as the U--Pb isochrons of
-  Section~\ref{sec:UPb-isochron-R}, and the general regression of
+  Section~\ref{sec:UPb-isochron-R}, and as the general regression of
   Section~\ref{sec:OtherRegression}.
 
 \noindent\begin{minipage}[t]{.4\linewidth}
@@ -118,12 +118,12 @@ isochron(PbPb,inverse=TRUE)
 \begin{minipage}[t]{.6\linewidth}
   Tick the checkbox to propagate decay constant uncertainties
   (\texttt{exterr}) and label the error ellipses with the row numbers
-  of the input data (\texttt{show.numbers}), use the textboxes to set
+  of the input data (\texttt{show.numbers}). Use the textboxes to set
   the axis limits (\texttt{xlim} and \texttt{ylim}), significance
   level (\texttt{alpha}), significant digits (\texttt{sigdig}), the
   fill and stroke colour of the error ellipses (\texttt{ellipse.fill}
   and \texttt{ellipse.stroke}), font size (\texttt{cex}) and colour
-  legend (\texttt{levels} and \texttt{clabel}).  
+  legend (\texttt{levels} and \texttt{clabel}).
 \end{minipage}
 
 \begin{script}
@@ -137,7 +137,7 @@ isochron(PbPb,exterr=TRUE,show.numbers=TRUE,xlim=c(0,0.03),ylim=c(0,0.75),
 
 Although, as discussed in Section~\ref{sec:ThPbPbradial}, Pb--Pb ages
 are usually calculated by isochron regression, it is also possible to
-calculate the ages of each individual aliquots. Once these have been
+obtain the ages of the individual aliquots. Once these have been
 calculated, it is then straightforward to turn them into the radial,
 weighted mean, KDE and CAD plots. Thus, it is useful to introduce
 \texttt{IsoplotR}'s age calculation function before discussing the
@@ -164,8 +164,9 @@ aforementioned plots.
 age(PbPb,common.Pb=2)
 \end{console}
 
-\item Nominal common Pb correction proceeds like the nominal common Pb
-  correction of U--Pb data formats 4--6 (Section~\ref{sec:general}).
+\item Nominal common Pb correction of the Pb--Pb data proceeds like
+  the nominal common Pb correction of U--Pb data formats 4--6
+  (Section~\ref{sec:general}).
 
 \noindent\begin{minipage}[t]{.4\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -185,10 +186,38 @@ settings('iratio','Pb206Pb204',10)
 age(PbPb,common.Pb=1)
 \end{console}
 
-\item After possible common Pb correction, the resulting Pb--Pb ages
-  are treated in exactly the same way as the U--Pb data of
-  Section~\ref{sec:UPbRadial} and the generic data of
-  Section~\ref{sec:OtherRadial}.
+\item The systematic uncertainty of the decay constants can be added
+  to the single grain age estimates by ticking the corresponding box.
+
+\noindent\begin{minipage}[t]{.38\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/exterr.png}
+\end{minipage}
+\begin{minipage}[t]{.62\linewidth}
+Be aware that this will introduce error correlations between the
+different aliquots, which are not reported in the data table!
+\end{minipage}
+
+\begin{script}
+age(PbPb,common.Pb=2,exterr=TRUE)
+\end{script}
+  
+\item The uncertainty associated with the common Pb correction is
+  neither a purely systematic nor a purely random uncertainty.
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/projerr.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+  Including the common-Pb uncertainty may significantly increase the
+  single grain age errors whilst causing strong error correlations,
+  which are not reported in the output table.
+\end{minipage}
+
+\begin{script}
+age(PbPb,common.Pb=2,projerr=TRUE)
+\end{script}
 
 \end{enumerate}
 
@@ -205,8 +234,7 @@ age(PbPb,common.Pb=1)
 \begin{minipage}[t]{.55\textwidth}
   \texttt{IsoplotR} accommodates three Th--Pb formats (see
   Section~\ref{sec:ThPb} for details), which can be analysed by the
-  same six functions as the Pb--Pb data that were discussed
-  previously.
+  same six functions as the Pb--Pb data (Section~\ref{sec:PbPb-R}).
 \end{minipage}
 
 \begin{script}
@@ -253,8 +281,8 @@ isochron(ThPb,inverse=TRUE,exterr=FALSE)
 
 The remaining isochron settings are identical to the those of the
 generic regression function of Section~\ref{sec:OtherRegression}. For
-example, the following code snippet crates and inverse Th--Pb isochron
-with empty blue error ellipses marked by aliquot number:
+example, the following code snippet creates an inverse Th--Pb isochron
+with empty blue error ellipses numbered by aliquot:
 
 \begin{script}
 isochron(ThPb,inverse=TRUE,show.numbers=TRUE,
@@ -270,7 +298,7 @@ Th--Pb age calculation can either be done
 \item without common Pb correction:
 
 \begin{console}
-age(ThPb,common.Pb=1)
+age(ThPb,common.Pb=0)
 \end{console}
 
 \item using a nominal common Pb correction:
@@ -284,7 +312,8 @@ settings('iratio','Pb208Pb204',38.82)
 age(ThPb,common.Pb=1)
 \end{script}
 
-\item or inferred from the isochron intercept:
+\item or by projection along the inverse isochron
+  (Figure~\ref{fig:ThPbSingleGrain}):
 
 \noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgei2i.png}
 
@@ -292,6 +321,20 @@ age(ThPb,common.Pb=1)
 age(ThPb,common.Pb=2)
 \end{console}
 
+\item The systematic uncertainties associated with the decay constant
+  errors and common Pb correction can be added to the single grain age
+  estimates.
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/projexterr.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+  This will expand the uncertainties and produce error correlations
+  between the different aliquots, which are \emph{not} reported in the
+  data table.
+\end{minipage}
+  
 \end{enumerate}
 
 \section{Radial, weighted mean, KDE and CAD plots}
@@ -300,7 +343,8 @@ age(ThPb,common.Pb=2)
 The settings for the radial, weighted mean, KDE and CAD plots combine
 the generic settings for those graphical devices
 (Sections~\ref{sec:OtherRadial}--\ref{sec:OtherCAD}) with the settings
-for the age calculator.\\
+for the age calculator (Sections~\ref{sec:PbPbAges} and
+\ref{sec:ThPbAges}).\\
 
 \noindent\begin{minipage}[t]{.45\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -310,7 +354,7 @@ for the age calculator.\\
   For example, here are shown the GUI settings for a radial plot of
   numbered Pb--Pb data, which is plotted on a linear scale that
   stretches from 4555 to 4575~Ma and is centred around 4565~Ma. Single
-  grain ages are corrected using the isochron based common Pb
+  grain ages are corrected using the isochron-based common Pb
   composition, and a single age component is fitted to them. The
   standard errors of the central age and the single component age
   include decay constant uncertainties.
@@ -321,10 +365,25 @@ radialplot(PbPb,show.numbers=TRUE,exterr=TRUE,transformation='linear',
            k=1,from=4555,to=4575,z0=4565)
 \end{console}
 
-Similarly, the weighted mean, KDE and CAD functions work exactly as
-the generic versions of Chapter~\ref{ch:generic-R}, with the only
-difference being the common Pb correction, and the ability to
-propagate external uncertainties.\\
+Note that whilst it is possible to propagate the systematic error
+associated with the decay constant uncertainties, \texttt{IsoplotR}
+currently \textbf{does not provide a means to propagate the
+  uncertainty of the common Pb correction} (i.e., the \texttt{projerr}
+argument in the \texttt{age()} function). This uncertainty is neither
+a purely systematic nor a purely random uncertainty and cannot easily
+be propagated with conventional geochronological data processing
+algorithms. This caveat is especially pertinent when the common Pb
+correction has been determined by isochron regression. You may note
+that the uncertainties of the central age are usually much smaller
+than those of the isochron. In this case the isochron errors are more
+meaningful, and the radial plot should just be used to inspect the
+residuals of the data around the isochron.\\
+
+The same caveat applies to the weighted mean plot. The KDE and CAD
+functions are, of course, immune to this problem because they are not
+associated with any numerical output. These functions therefore work
+exactly as the generic versions of Chapter~\ref{ch:generic-R}, with
+the only difference being the common Pb correction.\\
 
 \noindent CLI examples:
 
@@ -341,9 +400,9 @@ settings('iratio','Pb206Pb204',10.23)
 weightedmean(PbPb,common.Pb=1,random.effects=TRUE,ranked=TRUE)
 \end{script}
 
-\item An orange KDE without histogram or rug plot, using an isochron
-  based common Pb correction, with a 20~Myr bandwidth and axis limits
-  from 4500 to 4600~Ga:
+\item An orange KDE without histogram or rug plot, using an
+  isochron-based common Pb correction, with a 20~Myr bandwidth and
+  axis limits from 4500 to 4600~Ma:
 
 \begin{console}
 kde(PbPb,kde.col='orange',rug=FALSE,show.hist=FALSE,

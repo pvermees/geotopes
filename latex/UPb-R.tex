@@ -23,11 +23,11 @@ UPb2 <- read.data('UPb6c.csv',method='U-Pb',format=6,ierr=3)
 UPb3 <- read.data('UPb8d.csv',method='U-Pb',format=8,ierr=4)
 \end{script}
 
-\noindent where \texttt{UPb1.csv}, \texttt{UPb6.csv} and
-\texttt{UPb8.csv} are files that, like the example files of
-Chapter~\ref{ch:generic-R}, are included in \texttt{IsoplotR} and
-whose file path can be found with the \texttt{system.file()}
-function. \texttt{read.data()} returns a list with three items:
+\noindent where \texttt{UPb1.csv}, \texttt{UPb6c.csv} and
+\texttt{UPb8d.csv} are files that, like the example files of
+Chapter~\ref{ch:generic-R}, can be downloaded from
+\url{https://tinyurl.com/IsoplotRdata}. \texttt{read.data()} returns a
+list with three items:
 
 \begin{enumerate}
 \item\texttt{format} stores the value of the eponymous argument
@@ -152,9 +152,9 @@ weightedmean(UPb2,common.Pb=1)
   \end{minipage}
 
 \begin{script}
-settings('iratio','Pb208Pb206',3.1671)
-settings('iratio','Pb208Pb207',2.8634)
-weightedmean(UPb3,common.Pb=1)
+settings('iratio','Pb208Pb206',2.0)
+settings('iratio','Pb208Pb207',2.5)
+radialplot(UPb3,common.Pb=1)
 \end{script}
 
 \item\noindent\begin{minipage}[t]{.4\linewidth}
@@ -170,9 +170,9 @@ weightedmean(UPb3,common.Pb=1)
     selecting this option does \textbf{not} return the isochron age!
   \end{minipage}
   
-\begin{script}
+\begin{console}
 kde(UPb2,common.Pb=2)
-\end{script}
+\end{console}
   
 \item\noindent\begin{minipage}[t]{.4\linewidth}
   \strut\vspace*{-\baselineskip}\newline
@@ -184,9 +184,9 @@ kde(UPb2,common.Pb=2)
     Section~\ref{sec:common-Pb}.\ref{it:separate-stacey-kramers}.
   \end{minipage}
 
-\begin{script}
+\begin{console}
 cad(UPb1,common.Pb=3)
-\end{script}
+\end{console}
 
 \end{enumerate}
 
@@ -271,7 +271,7 @@ concordia(UPb4,type=2)
 \noindent CLI example:
 \begin{script}
 d <- diseq(ThU=list(x=4,option=3))
-UPb4 <- read.data('diseq.csv',method='U-Pb',format=8,d=d)
+UPb4 <- read.data('UPb7.csv',method='U-Pb',format=7,d=d)
 radialplot(UPb4)
 \end{script}
 
@@ -380,26 +380,27 @@ ThU <- UPb3$x[,'Th232U238']
 
 \noindent Specify the fill colours by name:
 \begin{console}
-concordia(UPb3,levels=ThU,ellipse.fill=c('blue','red'))
+concordia(UPb3,type=2,levels=ThU,ellipse.fill=c('blue','red'))
 \end{console}
 
 \noindent Using red-green-blue-transparency (rgb-alpha) specifiers:
 \begin{console}
-concordia(UPb3,levels=ThU,ellipse.fill=c(rgb(1,0,0,0.5),rgb(0,1,0,0.5)))
+concordia(UPb3,type=2,levels=ThU,ellipse.fill=c(rgb(1,0,0,0.5),rgb(0,1,0,0.5)))
 \end{console}
 
 \noindent Specifying the stroke colours as a colour palette with 80\% opacity
 and using a uniform white colour for the fill colour:
 \begin{script}
-concordia(UPb3,levels=ThU,ellipse.fill='white',
+concordia(UPb3,type=2,levels=ThU,ellipse.fill='white',
           ellipse.stroke=heat.colors(n=10,alpha=0.8))
 \end{script}
 
 \noindent Leaving the error ellipses empty but using a reversed colour palette
 for the stroke colour:
-\begin{console}
-concordia(UPb3,levels=ThU,ellipse.fill=NA,ellipse.stroke=rev(rainbow(n=10)))
-\end{console}
+\begin{script}
+concordia(UPb3,type=2,levels=ThU,ellipse.fill=NA,
+          ellipse.stroke=rev(rainbow(n=10)))
+\end{script}
 
 \noindent\begin{minipage}[t]{.4\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -411,7 +412,7 @@ concordia(UPb3,levels=ThU,ellipse.fill=NA,ellipse.stroke=rev(rainbow(n=10)))
 \end{minipage}
 
 \begin{console}
-concordia(UPb3,levels=ThU,clabel='Th/U')
+concordia(UPb3,type=2,levels=ThU,clabel='Th/U')
 \end{console}
 
 \item \texttt{IsoplotR} automatically chooses a `pretty' sequence of
@@ -519,7 +520,7 @@ concordia(UPb2,type=2,show.age=2)
 Wetherill concordia diagram, which reports the upper and lower age
 intercept:
 \begin{console}
-concordia(UPb2,type=1,show.age=3)
+concordia(UPb1,type=1,show.age=3)
 \end{console}
 
 \item The discordia line can also be anchored to a particular common
@@ -547,7 +548,7 @@ Section~\ref{sec:general}.\ref{it:common-Pb-concordia}. For example:
 \begin{script}
 settings('iratio','Pb206Pb204',9.307)
 settings('iratio','Pb207Pb204',10.294)
-concordia(UPb2,type=2,show.age=3,anchor=1)
+concordia(UPb2,type=2,show.age=2,anchor=1)
 \end{script}
 
 \item Alternatively, the discordia line can also be anchored to a
@@ -564,7 +565,7 @@ concordia(UPb2,type=2,show.age=3,anchor=1)
 
 From the CLI:
 \begin{console}
-concordia(UPb2,type=2,show.age=3,anchor=c(2,300))
+concordia(UPb2,type=2,show.age=2,anchor=c(2,300))
 \end{console}
 
 \item The number of significant digits can be specified relative to
@@ -583,7 +584,7 @@ concordia(UPb2,type=2,show.age=3,anchor=c(2,300))
 Reporting model-3 discordia regression results to 3 significant
 digits:
 \begin{console}
-concordia(UPb2,show.age=4,sigdig=3)
+concordia(UPb2,type=2,show.age=4,sigdig=3)
 \end{console}
 
 \end{enumerate}
@@ -785,27 +786,11 @@ Section~\ref{sec:discfilter}:
 radialplot(UPb1,cutoff.disc=discfilter(option=5,cutoff=c(-2,7)))
 \end{console}
 
-\noindent Apply a $-5$ to $+15$\% relative age filter after a
-  isochron-based common Pb correction:
+\noindent Apply a $-5$ to $+15$\% relative age filter after an
+isochron-based common Pb correction:
 \begin{script}
-dscf <- cutoff.disc=discfilter(option=2,before=FALSE,cutoff=c(-5,15))
+dscf <- discfilter(option=2,before=FALSE,cutoff=c(-5,15))
 radialplot(UPb2,common.Pb=2,cutoff.disc=dscf)
-\end{script}
-
-\noindent Apply a $0$ to $+1$\% Stacey-Kramers filter after a nominal
-  common Pb correction:
-\begin{script}
-settings('iratio','Pb208Pb206',2.089)
-settings('iratio','Pb208Pb207',2.519)
-dscf <- cutoff.disc=discfilter(option=3,before=FALSE,cutoff=c(0,1))
-radialplot(UPb3,common.Pb=1,cutoff.disc=dscf)
-\end{script}
-
-\noindent Apply a $-1$ to $+5$\% perpendicular Aitchison filter before a
-  Stacey-Kramers based common Pb correction:
-\begin{script}
-dscf <- cutoff.disc=discfilter(option=4,before=TRUE,cutoff=c(-1,5))
-radialplot(UPb3,common.Pb=3,cutoff.disc=dscf)
 \end{script}
 
 \item Just like concordia diagrams and isochron plots, also radial
@@ -863,16 +848,13 @@ Using the default settings:
 weightedmean(UPb1)
 \end{console}
 
-A more sophisticated example showing the disequilibrium corrected
-\textsuperscript{206}Pb/\textsuperscript{238}U dates with a concordia
-distance age filter (with default limits from $-2$\% to $+7$\%) that
-is applied before a Stacey--Kramer common Pb correction:
+A more sophisticated example showing the weighted mean of the
+\textsuperscript{206}Pb/\textsuperscript{238}U dates, after an
+isochron-based common-Pb correction:
 
 \begin{script}
-d <- diseq(U48=list(x=0,option=1),ThU=list(x=2,option=1),
-           RaU=list(x=2,option=1),PaU=list(x=2,option=1))
-UPb4 <- read.data('diseq.csv',method='U-Pb',format=2,d=d)
-weightedmean(UPb4,type=2,common.Pb=3,cutoff.disc=discfilter(option=5))
+dscf <- discfilter(option=5,before=FALSE,cutoff=c(-2,7))
+weightedmean(UPb2,type=2,common.Pb=2,cutoff.disc=dscf)
 \end{script}
 
 The remaining options of the weighted mean function are the same as
@@ -900,7 +882,7 @@ Section~\ref{sec:OtherWeightedMean}.\\
 
 \begin{script}
 weightedmean(UPb3,random.effects=TRUE,detect.outliers=TRUE,
-             outlier.col='red',ranked=TRUE,from=-10,to=100,
+             outlier.col='red',ranked=TRUE,from=-10,to=110,
              alpha=0.02,sigdig=1,levels=UPb3$x[,'Th232U238'],
              rect.col=rev(topo.colors(n=100)),clabel='Th/U')
 \end{script}
@@ -914,7 +896,7 @@ U--(Th)--Pb dates.\\
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbWtdMeanAgeType.png}
+\includegraphics[width=\linewidth]{../figures/UPbKDEsettings.png}
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
  The U--Pb data may or may not be corrected for common Pb and initial
@@ -922,12 +904,27 @@ U--(Th)--Pb dates.\\
  filter.
 \end{minipage}
 
+CLI examples:
+
 \begin{script}
-d <- discfilter(option=4,before=FALSE,cutoff=c(-1,5))
-kde(UPb2,common.Pb=2,type=2,cutoff.disc=d)
+dscf <- discfilter(option=4,before=FALSE,cutoff=c(-1,5))
+kde(UPb2,common.Pb=2,type=2,cutoff.disc=dscf)
 \end{script}
 
-All other options are as in Section~\ref{sec:OtherKDE}.
+\noindent Apply a $0$ to $+1$\% Stacey-Kramers filter to a detrital
+zircon U--Pb dataset before a Stacey-Kramers common Pb correction:
+\begin{script}
+Luozi <- read.data('Luozi.csv',method='U-Pb',format=3)
+dscf <- discfilter(option=3,before=TRUE,cutoff=c(0,1))
+kde(Luozi,common.Pb=3,cutoff.disc=dscf)
+\end{script}
+
+\noindent Apply a $-1$ to $+5$\% perpendicular Aitchison filter before
+a Stacey-Kramers based common Pb correction:
+\begin{script}
+dscf <- discfilter(option=4,before=TRUE,cutoff=c(-1,5))
+kde(Luozi,common.Pb=3,cutoff.disc=dscf)
+\end{script}
 
 \section{Cumulative age distributions}
 \label{sec:UPbCAD}
@@ -947,7 +944,7 @@ different U--Pb ages.\\
 \end{minipage}
 
 \begin{console}
-cad(UPb1,common.Pb=3,type=4,cutoff.76=1100)
+cad(UPb1,common.Pb=3,type=4,cutoff.76=1000)
 \end{console}
 
 All other options are as in Section~\ref{sec:OtherCAD}.
@@ -1012,7 +1009,7 @@ age(UPb1,exterr=TRUE)
   filter data, it may be useful for other purposes.
   
 \begin{console}
-age(UPb3,common.Pb=3,discordance=discfilter(before=TRUE,option=6))
+age(UPb1,discordance=discfilter(before=TRUE,option=6))
 \end{console}
 
 \item The numerical results can be reported to any number of
