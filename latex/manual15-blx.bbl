@@ -117,6 +117,41 @@
     \field{year}{1971}
   \endentry
 
+  \entry{kamber1998}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KBS}{%
+         family={Kamber},
+         familyi={K\bibinitperiod},
+         given={Balz\bibnamedelima Samuel},
+         giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Moorbath},
+         familyi={M\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KBSMS1}
+    \strng{fullhash}{KBSMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{1-2}
+    \field{pages}{19\bibrangedash 41}
+    \field{title}{{Initial Pb of the Am{\i}tsoq gneiss revisited: implication
+  for the timing of early Archaean crustal evolution in West Greenland}}
+    \field{volume}{150}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{1998}
+  \endentry
+
   \entry{leroux1963}{article}{}
     \name{author}{2}{}{%
       {{hash=LRLJ}{%

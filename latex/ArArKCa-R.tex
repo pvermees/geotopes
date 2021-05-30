@@ -23,7 +23,7 @@ The output of the \texttt{read.data()} function reflects the contents
 of the input file. It returns a list with three items:
 
 \begin{enumerate}
-\item\texttt{format} stores the value of the eponymous argument,
+\item\texttt{format} stores the value of the eponymous input argument,
 \item\texttt{J} is a two-element vector with the J-factor and its standard error,
 \item\texttt{x} contains the isotopic ratio data.
 \end{enumerate}
@@ -62,16 +62,16 @@ settings('iratio','40Ar36Ar',295.5,0.5)
 \begin{minipage}[t]{.55\textwidth}
   \texttt{IsoplotR} accommodates three K--Ca formats (see
   Section~\ref{sec:K-Ca} for details), which can be analysed by the
-  same methods as the Ar--Ar method minus the age spectra function.
+  same methods as the Ar--Ar method with the exception of the age
+  spectra function.
 \end{minipage}
 
 \begin{script}
 KCa <- read.data('KCa3.csv',method='K-Ca',format=3)
 \end{script}
 
-\noindent which returns a list with items \texttt{format} and
-\texttt{x} containing the input format and isotopic ratio data,
-respectively.\\
+\noindent returns a list with items \texttt{format} and \texttt{x}
+containing the input format and isotopic ratio data, respectively.\\
 
 \noindent\includegraphics[width=.7\linewidth]{../figures/KCaLambda.png}\\
 
@@ -81,7 +81,7 @@ function. The default K decay constant is the same as for the Ar--Ar
 method \citep{renne2011}.
 
 \begin{script}
-# use the Steiger and Jaeger (1977) values with zero uncertainty
+# use the Steiger and Jaeger (1977) decay constant with zero uncertainty
 settings('lambda','K40',5.543e-4,0)
 \end{script}
 
@@ -143,10 +143,10 @@ isochron(ArAr,inverse=FALSE)
 \end{minipage}
 \begin{minipage}[t]{.78\linewidth}
 For the K--Ca method, conventional isochrons plot
-\textsuperscript{40}Ca/\textsuperscript{44}Ca
-vs. \textsuperscript{40}K/\textsuperscript{44}Ca, and inverse plot
-\textsuperscript{44}Ca/\textsuperscript{40}Ca
-vs. \textsuperscript{40}K/\textsuperscript{40}Ca.
+\textsuperscript{40}Ca/\textsuperscript{44}Ca against
+\textsuperscript{40}K/\textsuperscript{44}Ca, and inverse isochrons
+plot \textsuperscript{44}Ca/\textsuperscript{40}Ca against
+\textsuperscript{40}K/\textsuperscript{40}Ca.
 \end{minipage}
 
 \begin{console}
@@ -167,10 +167,11 @@ Tick the checkbox to propagate decay constant uncertainties
 (\texttt{exterr}) and label the error ellipses with the row numbers of
 the input data (\texttt{show.numbers}), use the textboxes to set the
 axis limits (\texttt{xlim} and \texttt{ylim}), significance level
-(\texttt{alpha}), significant digits (\texttt{sigdig}), the fill and
-stroke colour of the error ellipses (\texttt{ellipse.fill} and
-\texttt{ellipse.stroke}), font size (\texttt{cex}) and colour legend
-(\texttt{levels} and \texttt{clabel}).
+(\texttt{alpha}) and significant digits (\texttt{sigdig}), as well as
+the fill and stroke colour of the error ellipses
+(\texttt{ellipse.fill} and \texttt{ellipse.stroke}), font size
+(\texttt{cex}) and colour legend (\texttt{levels} and
+\texttt{clabel}).
 \end{minipage}
 
 \begin{script}
@@ -186,8 +187,8 @@ Like the Pb--Pb and Th--Pb methods of Chapter~\ref{ch:ThPbPb-R}, also
 the K--Ca method is usually applied to cogenetic aliquots for isochron
 regression. However the Ar--Ar method is also commonly applied to
 detrital grains, which may exhibit a wide range of true ages.  For
-both both the Ar--Ar and K--Ca methods, \texttt{IsoplotR} produces
-data tables of the single aliquot age estimates, which can be further
+both the Ar--Ar and K--Ca methods, \texttt{IsoplotR} produces data
+tables of the single aliquot age estimates, which can be further
 analysed and displayed as age spectra, and radial, weighted mean, KDE
 and CAD plots.
 
@@ -202,7 +203,8 @@ in one of two ways:\\
 Ticking this box uses the y-intercept of an isochron fit through all
 the Ar data as an initial
 \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio for the age
-calculations. Unticking it uses the atmospheric ratio specified above.
+calculations. Unticking it uses nominal atmospheric ratio of
+Section~\ref{sec:ArAr-R}.
 \end{minipage}
 
 \begin{script}
@@ -215,9 +217,9 @@ age(ArAr,i2i=TRUE)
 \includegraphics[width=\linewidth]{../figures/KCai2i.png}
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
-Similarly, for the K--Ca method, the
-\textsuperscript{40}Ca/\textsuperscript{44}Ca-ratio of the inherited
-Ca can also be determined from a common isochron.
+Similarly, for the K--Ca method, the inherited
+\textsuperscript{40}Ca-component can be removed by projection along
+the inverse isochron.
 \end{minipage}
 
 \begin{console}
@@ -229,9 +231,9 @@ age(KCa,i2i=TRUE)
 \includegraphics[width=\linewidth]{../figures/KCaNominalInitials.png}
 \end{minipage}
 \begin{minipage}[t]{.45\linewidth}
-Or alternatively, the
-\textsuperscript{40}Ca/\textsuperscript{44}Ca-ratio can also be
-retrieved from \verb|settings('iratio','Ca40Ca44')|.
+Alternatively, the initial \textsuperscript{40}Ca can be removed by
+means of a nominal
+\textsuperscript{40}Ca/\textsuperscript{44}Ca-correction.
 \end{minipage}
 
 \begin{script}
@@ -241,11 +243,11 @@ age(KCa)
 
 \section{Ar--Ar age spectra}\label{sec:ArArAgeSpectra}
 
-There are just two minor differences between Ar--Ar age spectrum
+There are just two minor differences between the Ar--Ar age spectrum
 function and the generic age spectrum function of
 Section~\ref{sec:OtherAgeSpectra}. First, an atmospheric argon
 correction can be made to each aliquot in exactly the same way as
-described in Section~\ref{sec:ArArKCaAges}: either by using a nominal
+described in Section~\ref{sec:ArArKCaAges}, either using a nominal
 value or the isochron intercept:
 
 \begin{console}
@@ -257,7 +259,7 @@ agespectrum(ArAr,plateau=TRUE,i2i=TRUE)
 \includegraphics[width=\linewidth]{../figures/ArArExterr.png}
 \end{minipage}
 \begin{minipage}[t]{.65\linewidth}
-Second, the \textsuperscript{40}Ar decay constant uncertainty can be
+Second, the \textsuperscript{40}K decay constant uncertainty can be
 propagated into the plateau age.
 \end{minipage}
 
@@ -280,13 +282,14 @@ function:\\
   any additional parameter. Here a topographic colour ramp is used for
   aliquots that belong to the age plateau, whereas segments that do
   not belong to the plateau are left empty. The colour label uses an
-  \texttt{R}-expression to generate superscripts to typeset the
-  \textsuperscript{40}Ar/\textsuperscript{36}Ar ratio.
+  \texttt{R}-expression to typeset the
+  \textsuperscript{40}Ar/\textsuperscript{36}Ar ratio, including
+  superscripts.
 \end{minipage}
 
-The \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio that forms the
-basis of the colour scale can be extracted from the \texttt{ArAr} data
-object in this example:
+At the CLI, the \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio
+that forms the basis of the colour scale can be extracted from the
+\texttt{ArAr} data object:
 
 \begin{script}
 agespectrum(ArAr,levels=1/ArAr$x[,'Ar36Ar40'],plateau=TRUE,
@@ -320,7 +323,7 @@ kde(examples$KCa,log=TRUE,from=700,to=1000,bw=0.02,
 \end{script}
 
 Similarly, the weighted mean, radial plot and CAD functions work
-exactly as the generic versions of Chapter~\ref{ch:generic-R}, with
+exactly like the generic versions of Chapter~\ref{ch:generic-R}, with
 the only difference being the inherited daughter correction, and the
 ability to propagate external uncertainties.\\
 
@@ -333,13 +336,13 @@ ability to propagate external uncertainties.\\
   measured \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio:
 
 \begin{script}
-lev <- 1/ArAr$x[,'Ar36Ar40'] # compute 40/36 ratios
-radialplot(ArAr,from=60,to=64,z0=61,levels=lev,
+Ar06 <- 1/ArAr$x[,'Ar36Ar40'] # compute the 40/36 ratios
+radialplot(ArAr,from=60,to=64,z0=61,levels=Ar06,
            clabel=expression(''^40*'Ar/'^36*'Ar'))
 \end{script}
 
 \item The weighted mean using a nominal atmospheric argon correction
-  using the \citep{nier1950}
+  with \citet{nier1950}'s
   \textsuperscript{40}Ar/\textsuperscript{36}Ar value; applying the
   random effects model and plotting the ranked ages:
   

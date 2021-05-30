@@ -94,17 +94,24 @@ isochron(PbPb,inverse=TRUE)
 
 \item As discussed in Section~\ref{sec:SKgrowth}, the mantle evolution
   model of \citet{stacey1975} can be included with the isochron plot.
-  Any intersections of the isochron with the mantle evolution curve
-  are reported in the plot legend.
 
 \noindent\begin{minipage}[t]{.45\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/PbPbIsochronSKcurve.png}
 \end{minipage}
 \begin{minipage}[t]{.55\linewidth}
-  The Stacey-Kramers curve may not be easy to spot for very radiogenic
-  samples.
+  Any intersections of the isochron with the mantle evolution curve
+  are reported in the plot legend.
 \end{minipage}
+
+The Stacey-Kramers curve may not be easy to spot for very radiogenic
+samples. So here is an example of some whole rock Pb--Pb analyses that
+are relatively poor in uranium \citep{kamber1998}:
+
+\begin{script}
+PbPb2 <- read.data('Kamber.csv',method='Pb-Pb',format=1)
+isochron(PbPb2,growth=TRUE)
+\end{script}
 
 \item The appearance and numerical behaviour of Pb--Pb isochrons can
   be modified using similar options as the U--Pb isochrons of
@@ -160,8 +167,12 @@ aforementioned plots.
   Figure~\ref{fig:ThPbSingleGrain}.
 \end{minipage}
 
+By default the CLI version of the \texttt{age()} function returns the
+isochron age. To produce a table of single-aliquot ages, the optional
+\texttt{isochron} argument must be set to \texttt{FALSE}:
+
 \begin{console}
-age(PbPb,common.Pb=2)
+age(PbPb,isochron=FALSE,common.Pb=2)
 \end{console}
 
 \item Nominal common Pb correction of the Pb--Pb data proceeds like
@@ -183,7 +194,7 @@ age(PbPb,common.Pb=2)
 \begin{console}
 settings('iratio','Pb207Pb204',6.25)
 settings('iratio','Pb206Pb204',10)
-age(PbPb,common.Pb=1)
+age(PbPb,isochron=FALSE,common.Pb=1)
 \end{console}
 
 \item The systematic uncertainty of the decay constants can be added
@@ -198,9 +209,9 @@ Be aware that this will introduce error correlations between the
 different aliquots, which are not reported in the data table!
 \end{minipage}
 
-\begin{script}
-age(PbPb,common.Pb=2,exterr=TRUE)
-\end{script}
+\begin{console}
+age(PbPb,isochron=FALSE,common.Pb=2,exterr=TRUE)
+\end{console}
   
 \item The uncertainty associated with the common Pb correction is
   neither a purely systematic nor a purely random uncertainty.
@@ -215,9 +226,9 @@ age(PbPb,common.Pb=2,exterr=TRUE)
   which are not reported in the output table.
 \end{minipage}
 
-\begin{script}
-age(PbPb,common.Pb=2,projerr=TRUE)
-\end{script}
+\begin{console}
+age(PbPb,isochron=FALSE,common.Pb=2,exterr=TRUE,projerr=TRUE)
+\end{console}
 
 \end{enumerate}
 
@@ -237,9 +248,9 @@ age(PbPb,common.Pb=2,projerr=TRUE)
   same six functions as the Pb--Pb data (Section~\ref{sec:PbPb-R}).
 \end{minipage}
 
-\begin{script}
+\begin{console}
 ThPb <- read.data('ThPb2.csv',method='Th-Pb',format=2)
-\end{script}
+\end{console}
 
 \noindent which returns a list with items \texttt{format} and
 \texttt{x} containing the input format and isotopic ratio data,
@@ -253,8 +264,8 @@ the \texttt{isochron} function. The default Th decay constant is given
 by \citet{leroux1963}.
 
 \begin{script}
-# round the inherited 208Pb/206Pb ratio to 30 +/- 0
-settings('iratio','Pb208Pb206',30,0) 
+# round the inherited 208Pb/204Pb ratio to 30 +/- 0
+settings('iratio','Pb208Pb204',30,0) 
 # round the 232Th decay constant to 0.00005 +/- 0.000003
 settings('lambda','Th232',0.00005,0.000003) 
 \end{script}
@@ -295,13 +306,19 @@ Th--Pb age calculation can either be done
 
 \begin{enumerate}
 
-\item without common Pb correction:
+\item by projection along the inverse isochron
+  (Figure~\ref{fig:ThPbSingleGrain}):
+
+\noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgei2i.png}
 
 \begin{console}
-age(ThPb,common.Pb=0)
+age(ThPb,isochron=FALSE,i2i=TRUE)
 \end{console}
 
-\item using a nominal common Pb correction:
+\noindent where the \texttt{i2i} argument stands for
+`intercept-to-initial ratio';
+
+\item or using a nominal common Pb correction:
 
 \noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgePb0.png}
 
@@ -309,17 +326,8 @@ age(ThPb,common.Pb=0)
 
 \begin{script}
 settings('iratio','Pb208Pb204',38.82)
-age(ThPb,common.Pb=1)
+age(ThPb,isochron=FALSE,i2i=FALSE)
 \end{script}
-
-\item or by projection along the inverse isochron
-  (Figure~\ref{fig:ThPbSingleGrain}):
-
-\noindent\includegraphics[width=.75\linewidth]{../figures/ThPbAgei2i.png}
-
-\begin{console}
-age(ThPb,common.Pb=2)
-\end{console}
 
 \item The systematic uncertainties associated with the decay constant
   errors and common Pb correction can be added to the single grain age
@@ -360,10 +368,10 @@ for the age calculator (Sections~\ref{sec:PbPbAges} and
   include decay constant uncertainties.
 \end{minipage}
 
-\begin{console}
+\begin{script}
 radialplot(PbPb,show.numbers=TRUE,exterr=TRUE,transformation='linear',
            k=1,from=4555,to=4575,z0=4565)
-\end{console}
+\end{script}
 
 Note that whilst it is possible to propagate the systematic error
 associated with the decay constant uncertainties, \texttt{IsoplotR}
@@ -396,25 +404,35 @@ the only difference being the common Pb correction.\\
   
 \begin{script}
 settings('iratio','Pb206Pb204',9.15)
-settings('iratio','Pb206Pb204',10.23)
+settings('iratio','Pb207Pb204',10.23)
 weightedmean(PbPb,common.Pb=1,random.effects=TRUE,ranked=TRUE)
 \end{script}
 
 \item An orange KDE without histogram or rug plot, using an
   isochron-based common Pb correction, with a 20~Myr bandwidth and
-  axis limits from 4500 to 4600~Ma:
+  axis limits from 4500 to 4650~Ma:
 
-\begin{console}
+\begin{script}
 kde(PbPb,kde.col='orange',rug=FALSE,show.hist=FALSE,
-    common.Pb=2,bw=20,from=4500,to=4600)
-\end{console}
+    common.Pb=2,bw=20,from=4500,to=4650)
+\end{script}
 
 \item A CAD with without vertical lines and steps marked by `x':
 
 \begin{console}
 cad(PbPb,verticals=TRUE,pch='x')
 \end{console}
-  
+
+\item A radial plot of Th--Pb isochron residuals:
+
+\begin{console}
+radialplot(ThPb,i2i=TRUE)
+\end{console}
+
+\noindent where the central age is marked by an asterisk in the title
+of the radial plot to indicate the circularity of using an
+isochron-based common Pb correction to compute a central age.
+
 \end{enumerate}
 
 \printbibliography[heading=subbibliography]
