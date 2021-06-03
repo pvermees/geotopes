@@ -18,9 +18,8 @@ LuHf <- read.data('LuHf3.csv',method='Lu-Hf',format=3)
 ReOs <- read.data('ReOs2.csv',method='Re-Os',format=2)
 \end{script}
 
-\noindent which returns lists with items \texttt{format} and
-\texttt{x} containing the input format and isotopic ratio data,
-respectively.\\
+\noindent returns lists with items \texttt{format} and \texttt{x}
+containing the input format and isotopic ratio data, respectively.\\
 
 \noindent\begin{minipage}[t]{.15\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -64,7 +63,7 @@ settings('lambda','Rb87',0.0000142,0)
   The default isotopic compositions of Sm and Nd were taken from
   \citet{chang2002} and \citet{zhao2005}, respectively. The
   \textsuperscript{147}Sm decay constant is given by
-  \citet{lugmair1978}.
+  \citet{villa2020}.
 \end{minipage}
 
 \begin{script}
@@ -78,7 +77,7 @@ settings('lambda','Sm147',0.000006540,0.000000049)
 \end{minipage}
 \begin{minipage}[t]{.4\linewidth}
 The default \textsuperscript{185}Re/\textsuperscript{187}Re ratio is
-given by \citet{gramlich1973}, and the Os isotopic composition from
+given by \citet{gramlich1973}, and the Os isotopic composition by
 \citet{volkening1991}. The \textsuperscript{187}Re decay constant is
 given by \citet{smoliar1996}.\\
 \end{minipage}
@@ -103,6 +102,12 @@ given by \citet{soderlund2004}.
 # change the decay constant to the Scherer et al. (2001) value:
 settings('lambda','Lu176',0.00001865,0.00000015)
 \end{script}
+
+Reset all the decay constants back to their default values:
+
+\begin{console}
+settings(reset=TRUE)
+\end{console}
 
 \section{Isochrons}\label{sec:PDisochrons}
 
@@ -172,7 +177,7 @@ isochron(ReOs,inverse=TRUE)  # 188Os/187Os vs. 187Re/187Os
 \end{minipage}
 
 \begin{console}
-age(RbSr,exterr=FALSE,i2i=TRUE,sigdig=3)
+age(RbSr,isochron=FALSE,exterr=FALSE,i2i=TRUE)
 \end{console}
 
 \item\noindent\begin{minipage}[t]{.55\linewidth}
@@ -186,14 +191,15 @@ age(RbSr,exterr=FALSE,i2i=TRUE,sigdig=3)
   \ref{sec:ArArKCaOtherPlots}. In this example, six numbered Lu--Hf
   aliquots are plotted on a linear scale and colour-coded according to
   the Lu concentration, which is specified in the optional
-  \texttt{(C)} column in the input table (not shown), an using an
+  \texttt{(C)} column in the input table (not shown), and using an
   inverted topographic colour ramp.  Plot symbols are magnified by a
-  factor of 1.5. All other settings follow the default settings.
+  factor of 1.5. All other settings use the default values.
 \end{minipage}
 
 \begin{script}
-radialplot(LuHf,show.numbers=TRUE,transformation='linear',cex=1.5,
-           levels=LuHf$x[,'Lu'],bg=rev(topo.colors(n=100)),i2i=TRUE)
+  radialplot(LuHf,show.numbers=TRUE,transformation='linear',
+             cex=1.5,levels=LuHf$x[,'Luppm'],clabel='Lu [ppm]',
+             bg=rev(topo.colors(n=100)),i2i=TRUE)
 \end{script}
 
 \item\noindent\begin{minipage}[t]{.55\linewidth}
@@ -221,14 +227,14 @@ weightedmean(ReOs,detect.outliers=FALSE,ranked=TRUE,rect.col=NA,i2i=TRUE)
 \end{minipage}
 \begin{minipage}[t]{.45\linewidth}
   The settings here create a KDE of Rb--Sr data that ranges from 4495
-  to 4505~Ma, uses a fixed but default \citet{botev2010} histogram
-  bandwidth and a 1~Myr histogram bin width. The non-radiogenic
-  Sr-composition is derived from the best fitting isochron intercept.
-  All other settings follow the default values.
+  to 4505~Ma, uses a fixed \citet{botev2010} kernel bandwidth and a
+  1~Myr histogram bin width. The non-radiogenic Sr-composition is
+  derived from the best fitting isochron intercept.  All other
+  settings follow the default values.
 \end{minipage}
 
 \begin{console}
-cad(RbSr,from=4495,to=4505,binwidth=1,adaptive=FALSE,i2i=TRUE)
+kde(RbSr,from=4495,to=4505,binwidth=1,adaptive=FALSE,i2i=TRUE)
 \end{console}
 
 \item\noindent\begin{minipage}[t]{.65\linewidth}

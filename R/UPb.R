@@ -1,4 +1,3 @@
-setwd('~/Documents/geotopes/R/')
 library(IsoplotR)
 
 UPb1 <- read.data('UPb1.csv',method='U-Pb',format=1)

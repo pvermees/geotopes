@@ -281,41 +281,6 @@
     \field{year}{1973}
   \endentry
 
-  \entry{lugmair1978}{article}{}
-    \name{author}{2}{}{%
-      {{hash=LG}{%
-         family={Lugmair},
-         familyi={L\bibinitperiod},
-         given={GW},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=MK}{%
-         family={Marti},
-         familyi={M\bibinitperiod},
-         given={K},
-         giveni={K},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{LGMK1}
-    \strng{fullhash}{LGMK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1978}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{number}{3}
-    \field{pages}{349\bibrangedash 357}
-    \field{title}{{Lunar initial $^{143}$Nd/$^{144}$Nd: differential evolution
-  of the lunar crust and mantle}}
-    \field{volume}{39}
-    \field{journaltitle}{Earth and Planetary Science Letters}
-    \field{year}{1978}
-  \endentry
-
   \entry{moore1982}{article}{}
     \name{author}{4}{}{%
       {{hash=ML}{%
@@ -521,6 +486,64 @@
     \field{volume}{164}
     \field{journaltitle}{Geochimica et Cosmochimica Acta}
     \field{year}{2015}
+  \endentry
+
+  \entry{villa2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=VIM}{%
+         family={Villa},
+         familyi={V\bibinitperiod},
+         given={Igor\bibnamedelima Maria},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HNE}{%
+         family={Holden},
+         familyi={H\bibinitperiod},
+         given={Norman\bibnamedelima E},
+         giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Possolo},
+         familyi={P\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=IR}{%
+         family={Ickert},
+         familyi={I\bibinitperiod},
+         given={RB},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Hibbert},
+         familyi={H\bibinitperiod},
+         given={DB},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Renne},
+         familyi={R\bibinitperiod},
+         given={PR},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{VIM+1}
+    \strng{fullhash}{VIMHNEPAIRHDRP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{pages}{70\bibrangedash 77}
+    \field{title}{{IUPAC-IUGS recommendation on the half-lives of $^{147}$Sm
+  and $^{146}$Sm}}
+    \field{volume}{285}
+    \field{journaltitle}{Geochimica et cosmochimica acta}
+    \field{year}{2020}
   \endentry
 
   \entry{volkening1991}{article}{}

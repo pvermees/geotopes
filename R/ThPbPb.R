@@ -1,4 +1,3 @@
-setwd('~/Documents/geotopes/R/')
 library(IsoplotR)
 
 PbPb <- read.data('PbPb3.csv',method='Pb-Pb',format=3)

@@ -46,7 +46,7 @@ constant by \citet{renne2011}. These values can be changed here:\\
 
 \begin{script}
 # use the atmospheric ratio from Nier (1950):
-settings('iratio','40Ar36Ar',295.5,0.5)
+settings('iratio','Ar40Ar36',295.5,0.5)
 \end{script}
 
 \section{K--Ca}\label{sec:KCa-R}
@@ -66,9 +66,9 @@ settings('iratio','40Ar36Ar',295.5,0.5)
   spectra function.
 \end{minipage}
 
-\begin{script}
+\begin{console}
 KCa <- read.data('KCa3.csv',method='K-Ca',format=3)
-\end{script}
+\end{console}
 
 \noindent returns a list with items \texttt{format} and \texttt{x}
 containing the input format and isotopic ratio data, respectively.\\
@@ -238,7 +238,29 @@ means of a nominal
 
 \begin{script}
 settings('iratio','Ca40Ca44',50,0)
-age(KCa)
+age(KCa,i2i=FALSE)
+\end{script}
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ArArProjerr.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+  The analytical error of the initial \textsuperscript{40}Ar- or
+  \textsuperscript{40}Ca-correction can be added to the age
+  uncertainty.
+\end{minipage}
+
+This part-systematic, part-random uncertainty may cause strong error
+correlations between the different aliquots of a single sample. But
+when considering each aliquot in isolation (for example, the
+\texttt{i=2}\textsuperscript{th} aliquot), the full error propagation
+with decay constant uncertainties (\texttt{exterr}) and initial
+daughter correction uncertainty (\texttt{projerr}) does provide the
+most faithful estimate of the true age uncertainty:
+
+\begin{script}
+age(ArAr,i2i=TRUE,projerr=TRUE,i=2)
 \end{script}
 
 \section{Ar--Ar age spectra}\label{sec:ArArAgeSpectra}
@@ -251,7 +273,7 @@ described in Section~\ref{sec:ArArKCaAges}, either using a nominal
 value or the isochron intercept:
 
 \begin{console}
-agespectrum(ArAr,plateau=TRUE,i2i=TRUE)
+agespectrum(ArAr,plateau=TRUE,i2i=FALSE)
 \end{console}
 
 \noindent\begin{minipage}[t]{.35\linewidth}
@@ -281,18 +303,18 @@ function:\\
   rectangular segments of the age spectrum can be coloured based on
   any additional parameter. Here a topographic colour ramp is used for
   aliquots that belong to the age plateau, whereas segments that do
-  not belong to the plateau are left empty. The colour label uses an
-  \texttt{R}-expression to typeset the
-  \textsuperscript{40}Ar/\textsuperscript{36}Ar ratio, including
-  superscripts.
+  not belong to the plateau are left empty.
 \end{minipage}
 
 At the CLI, the \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio
 that forms the basis of the colour scale can be extracted from the
-\texttt{ArAr} data object:
+\texttt{ArAr} data object, and the colour label can be typeset using
+an \texttt{R}-expression for the
+\textsuperscript{40}Ar/\textsuperscript{36}Ar ratio that includes
+superscripts:
 
 \begin{script}
-agespectrum(ArAr,levels=1/ArAr$x[,'Ar36Ar40'],plateau=TRUE,
+agespectrum(ArAr,levels=ArAr$x[,'Ar40Ar36'],plateau=TRUE,
             plateau.col=topo.colors(n=100,alpha=0.5),
             exterr=TRUE,i2i=FALSE,random.effects=FALSE,
             clabel=expression(''^40*'Ar/'^36*'Ar'))
@@ -318,7 +340,7 @@ for the age calculator.\\
 \end{minipage}
 
 \begin{script}
-kde(examples$KCa,log=TRUE,from=700,to=1000,bw=0.02,
+kde(KCa,log=TRUE,from=700,to=1000,bw=0.02,
     binwidth=0.02,adaptive=FALSE,i2i=TRUE)
 \end{script}
 
@@ -336,8 +358,7 @@ ability to propagate external uncertainties.\\
   measured \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio:
 
 \begin{script}
-Ar06 <- 1/ArAr$x[,'Ar36Ar40'] # compute the 40/36 ratios
-radialplot(ArAr,from=60,to=64,z0=61,levels=Ar06,
+radialplot(ArAr,from=60,to=64,z0=61,levels=ArAr$x[,'Ar40Ar36'],
            clabel=expression(''^40*'Ar/'^36*'Ar'))
 \end{script}
 
@@ -347,7 +368,7 @@ radialplot(ArAr,from=60,to=64,z0=61,levels=Ar06,
   random effects model and plotting the ranked ages:
   
 \begin{script}
-settings('iratio','Ar40Ar39',295.5,0.5)
+settings('iratio','Ar40Ar36',295.5,0.5)
 weightedmean(ArAr,i2i=FALSE,random.effects=TRUE,ranked=TRUE)
 \end{script}
 

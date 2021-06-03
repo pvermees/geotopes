@@ -6,9 +6,9 @@ Detrital data are arranged in columns that may have unequal lengths:\\
 
 \noindent\includegraphics[width=\linewidth]{../figures/detritalInputTable.png}\\
 
-Untick the `Sample names on first row?' box in the Options menu to
-omit them, in which case the samples will be referred to by their
-column label (`A', `B', ...):\\
+If the `Sample names on first row?' box in the Options menu is
+unticked, then the samples will be referred to by their column label
+(`A', `B', ...):\\
 
 \noindent\includegraphics[width=\linewidth]{../figures/detritalInputTableWithoutNames.png}\\
 
@@ -51,17 +51,17 @@ kde(DZ,omit=c('T8','T13'))
 \includegraphics[width=\linewidth]{../figures/detritalKDElimits.png}
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
-These values can be changed to any other values.
+However, these values can be changed to any other values.
 \end{minipage}
 
 \begin{console}
 kde(DZ,from=0,to=3000)
 \end{console}
 
-\item The inherent skewness of geochronological age uncertainties
-  often produces skewed error distributions, which are incompatible
-  with the symmetric Gaussian kernel. This skewness can be removed by
-  plotting the KDE on a logarithmic scale.
+\item The inherent positivity of geologic time often results in skewed
+  error distributions, which are incompatible with the symmetric
+  Gaussian kernel. This skewness can be removed by plotting the KDE on
+  a logarithmic scale.
 
   \noindent\begin{minipage}[t]{.4\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -77,10 +77,10 @@ kde(DZ,log=TRUE,from=200,to=3000)
 \end{console}
 
 \item The default kernel bandwidth is computed using the
-  \citet{botev2010} algorithm, and generally varies slightly between
-  the different samples in the detrital dataset. To facilitate the
-  graphical comporison of the distribution, it is useful to change
-  this default value to a common value.
+  \citet{botev2010} algorithm, and generally varies between the
+  different samples in the detrital dataset. To facilitate the
+  graphical comporison of the distributions, it is useful to apply a
+  common kernel bandwidth to all the samples.
 
 \noindent\begin{minipage}[t]{.35\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -105,7 +105,7 @@ kde(DZ,samebandwidth=TRUE)
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
   When the KDE is plotted on a logarithmic scale, the kernel bandwidth
-  and histogram bin width are not expressed in Myr but in fractions.
+  and histogram bin width are not expressed in Myr but as fractions.
 \end{minipage}
 
 Assigning a 5\% bandwidth and 10\% bin width to all the samples:
@@ -128,8 +128,8 @@ kde(DZ.rug=TRUE)
 \end{console}
 
 \item To facilitate the comparison of the different samples in a
-  detrital dataset, it is useful to change the y-axis of the KDEs so
-  as to normalise the area under them to the same value.
+  detrital dataset, it is useful to scale the y-axis of the KDEs so as
+  to normalise the area under them to the same value.
 
 \noindent\begin{minipage}[t]{.38\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -196,8 +196,9 @@ cad(DZ,col='rainbow')
 \includegraphics[width=\linewidth]{../figures/detritalMDSclassical.png}
 \end{minipage}
 \begin{minipage}[t]{.82\linewidth}
-This is necessary when the nonmetric MDS configuration collapses into
-a point, which can happen for small datasets ($< 10$~samples, say).
+Classical MDS is useful when the nonmetric MDS configuration collapses
+into a point, which can happen for small datasets ($< 10$~samples,
+say).
 \end{minipage}
 
 \begin{console}
@@ -228,7 +229,7 @@ mds(DZ,classical=FALSE,shepard=TRUE)
 \end{minipage}
 \begin{minipage}[t]{.68\linewidth}
   However, the nearest neighbour lines may also clutter the
-  configuration to the point where it is better to remove them.
+  configuration to a point where it is better to remove them.
 \end{minipage}
 
 \begin{console}

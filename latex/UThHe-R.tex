@@ -31,7 +31,7 @@ UThSmHe <- read.data('UThSmHe.csv',method='U-Th-He')
 \includegraphics[width=\linewidth]{../figures/UThSmHeLambda.png}
 \end{minipage}
 \begin{minipage}[t]{.35\linewidth}
-  The default U, Th and Sm decay constants are those proposed by
+  The default U, Th and Sm decay constants are those of
   \citet{jaffey1971}, \citet{leroux1963} and \citet{villa2020}
   respectively.
 \end{minipage}
@@ -61,8 +61,8 @@ data system (Section~\ref{sec:UThHeCompositional}).
 
 \begin{script}
 oldpar <- par(mfrow=c(1,2)) # set up a two-panel plot
-helioplot(UThHe,logratio=TRUE)  # ternary diagram
-helioplot(UThHe,logratio=FALSE) # logratio plot
+helioplot(UThHe,logratio=TRUE)  # logratio plot
+helioplot(UThHe,logratio=FALSE) # ternary diagram
 par(oldpar)
 \end{script}
 
@@ -120,8 +120,8 @@ helioplot(UThHe,model=1)
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
   Changing the significance level to $\alpha=0.61$ produces the
-  equivalent of `1-sigma' confidence ellipses (and `1/2-sigma'
-  confidence intervals).
+  equivalent of `1-sigma' confidence ellipses (and 39\% confidence
+  intervals).
 \end{minipage}
 
 \begin{console}
@@ -176,7 +176,8 @@ helioplot(UThHe,logratio=FALSE,fact=c(150,2,3))
 
 \begin{script}
 helioplot(UThSmHe,levels=UThSmHe[,'Sm'],clabel='Sm',
-          ellipse.fill=c('#00005080','#00FF0080'),ellipses.stroke='grey30')
+          ellipse.fill=c('#00005080','#00FF0080'),
+          ellipse.stroke='grey30')
 \end{script}
 
 \end{enumerate}
@@ -185,12 +186,12 @@ helioplot(UThSmHe,levels=UThSmHe[,'Sm'],clabel='Sm',
 
 \begin{enumerate}
   
-\item \texttt{IsoplotR}'s \texttt{isochron()} function uses the linear age
-approximation (Equation~\ref{eq:t=HeP}) to create a
-\textit{pseudo-isochron} through multiple aliquots of the same sample.
-Recall that this approximation sets out the helium concentration
-against the present-day \textalpha-production rate, which a function
-of the U, Th and Sm concentrations.
+\item \texttt{IsoplotR}'s \texttt{isochron()} function uses the linear
+  age approximation (Equation~\ref{eq:t=HeP}) to create a
+  \textit{pseudo-isochron} through multiple aliquots of the same
+  sample.  Recall that this approximation sets out the helium
+  concentration against the present-day \textalpha-production rate,
+  which is a function of the U, Th and Sm concentrations.
 
 Because U, Th and Sm are measured separately from He (and on a
 different mass spectrometer), the analytical uncertainties of the two
@@ -230,7 +231,7 @@ generic \texttt{radialplot()} (Section~\ref{sec:OtherRadial}),
 shows a radial plot using a square root transformation, with grains
 coloured by Sm-content, using a three-colour scale, and applying the
 minimum age model of Section~\ref{sec:mixtures}. All other settings
-follow the default values.
+use the default values.
 \end{minipage}
   
 \begin{script}
@@ -239,15 +240,15 @@ radialplot(UThSmHe,transformation='sqrt',k='min',clabel='Sm',
 \end{script}
 
 Plotting the same data on a weighted mean diagram, using the random
-effects model of and ranking the aliquots by age:
+effects model and ranking the aliquots by age:
 
 \begin{script}
 weightedmean(UThSmHe,random.effects=TRUE,ranked=TRUE,clabel='Sm',
              levels=UThSmHe[,'Sm'],rect.col=c('blue','white','red'))
 \end{script}
 
-Plotting \texttt{UThSmHe} as KDE from 5 to 12~Ma, using a log scale
-because of the high coefficient of variation:
+Plotting \texttt{UThSmHe} as a KDE from 5 to 12~Ma, and using a log
+scale because of the high coefficient of variation:
 
 \begin{console}
 kde(UThSmHe,log=TRUE,from=5,to=12)

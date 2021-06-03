@@ -228,14 +228,14 @@ radialplot(FT2,exterr=TRUE)
 \end{minipage}
 
 \begin{console}
-radialplot(FT1,k=2)
+radialplot(FT2,k=2)
 \end{console}
 
 \section{\textzeta-calibration}
 
 \texttt{IsoplotR} does not only use the \textzeta-calibration factor
 to compute EDM or ICP-MS based fission track ages, but also provides
-functionality to estimate the calibration factor.\\
+functionality to estimate said calibration factor.\\
 
 \noindent\begin{minipage}[t]{.1\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -259,20 +259,32 @@ replaced by the age of the standard.\\
 Enter the age of the standard and its standard error, both in Ma.\\
 \end{minipage}
 
-Suppose that we use \texttt{FT1} to compute a zeta calibration factor
-and its standard error:
-
-\begin{console}
-z <- set.zeta(x=FT1,tst=c(100,1))
-\end{console}
+Using this standard age to compute the zeta calibration factor of
+\texttt{FT1}:\\
 
 \noindent\begin{minipage}[t]{.2\linewidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/zetaoutput.png}
+\includegraphics[width=\linewidth]{../figures/zetaoutput.png}\\
 \end{minipage}
 \begin{minipage}[t]{.8\linewidth}
 The output of the function is not reported as a plot but as a small table.
 \end{minipage}
+
+Storing \textzeta~and its standard error in a variable at the CLI:
+
+\begin{console}
+set.zeta(x=FT1,tst=c(100,1),update=FALSE)
+\end{console}
+
+Overwriting the \texttt{zeta} member of the \texttt{FT1} object with
+new \textzeta-value:
+
+\begin{console}
+z <- set.zeta(x=FT1,tst=c(100,1),update=TRUE)
+\end{console}
+
+\noindent produces an object of class \texttt{fissiontracks} that is
+identical to \texttt{FT1} except for \texttt{zeta}.
 
 \section{Age, weighted mean, KDE and CAD functions}
 
@@ -297,8 +309,8 @@ age(FT1,exterr=FALSE)
 \end{console}
 
 \item The weighted mean age is less useful than the central age due to
-  the heteroscedasticity of fission track data, but is provided
-  nonetheless for the sake of completeness.
+  the strongly skewed error distributions of fission track data, but
+  is provided nonetheless for the sake of completeness.
 
 \begin{console}
 weightedmean(FT3)
