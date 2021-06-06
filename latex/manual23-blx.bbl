@@ -1,0 +1,385 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{abramson1982}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AIS}{%
+         family={Abramson},
+         familyi={A\bibinitperiod},
+         given={Ian\bibnamedelima S},
+         giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{AIS1}
+    \strng{fullhash}{AIS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1982}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{1217\bibrangedash 1223}
+    \field{title}{On bandwidth variation in kernel estimates -- a square root
+  law}
+    \field{journaltitle}{The Annals of Statistics}
+    \field{year}{1982}
+  \endentry
+
+  \entry{botev2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BZI}{%
+         family={{Botev}},
+         familyi={B\bibinitperiod},
+         given={Z.\bibnamedelima I.},
+         giveni={Z\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=GJF}{%
+         family={{Grotowski}},
+         familyi={G\bibinitperiod},
+         given={J.\bibnamedelima F.},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=KDP}{%
+         family={{Kroese}},
+         familyi={K\bibinitperiod},
+         given={D.\bibnamedelima P.},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BZIGJFKDP1}
+    \strng{fullhash}{BZIGJFKDP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{issue}{5}
+    \field{pages}{2916\bibrangedash 2957}
+    \field{title}{{Kernel density estimation via diffusion}}
+    \field{volume}{38}
+    \field{journaltitle}{Annals of Statistics}
+    \field{year}{2010}
+  \endentry
+
+  \entry{galbraith1988}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GRF}{%
+         family={Galbraith},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima F.},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis Group}%
+    }
+    \strng{namehash}{GRF1}
+    \strng{fullhash}{GRF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1988}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{3}
+    \field{pages}{271\bibrangedash 281}
+    \field{title}{Graphical display of estimates having differing standard
+  errors}
+    \field{volume}{30}
+    \field{journaltitle}{Technometrics}
+    \field{year}{1988}
+  \endentry
+
+  \entry{galbraith1993}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GRF}{%
+         family={Galbraith},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima F.},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=LGM}{%
+         family={Laslett},
+         familyi={L\bibinitperiod},
+         given={G.\bibnamedelima M.},
+         giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GRFLGM1}
+    \strng{fullhash}{GRFLGM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1993}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{4}
+    \field{pages}{459\bibrangedash 470}
+    \field{title}{Statistical models for mixed fission track ages}
+    \field{volume}{21}
+    \field{journaltitle}{Nuclear tracks and radiation measurements}
+    \field{year}{1993}
+  \endentry
+
+  \entry{ludwig1998}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LKR}{%
+         family={{Ludwig}},
+         familyi={L\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LKR1}
+    \strng{fullhash}{LKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1016/S0016-7037(98)00059-3
+    \endverb
+    \field{pages}{665\bibrangedash 676}
+    \field{title}{{On the treatment of concordant uranium-lead ages}}
+    \field{volume}{62}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{1998}
+  \endentry
+
+  \entry{ludwig1994}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LKR}{%
+         family={Ludwig},
+         familyi={L\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=TD}{%
+         family={Titterington},
+         familyi={T\bibinitperiod},
+         given={DM},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LKRTD1}
+    \strng{fullhash}{LKRTD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1994}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{22}
+    \field{pages}{5031\bibrangedash 5042}
+    \field{title}{{Calculation of $^{230}$Th-U isochrons, ages, and errors}}
+    \field{volume}{58}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{1994}
+  \endentry
+
+  \entry{mclean2016b}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MNM}{%
+         family={{McLean}},
+         familyi={M\bibinitperiod},
+         given={N.\bibnamedelima M.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=SCJM}{%
+         family={{Smith}},
+         familyi={S\bibinitperiod},
+         given={C.\bibnamedelima J.\bibnamedelima M.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=RNMW}{%
+         family={{Roberts}},
+         familyi={R\bibinitperiod},
+         given={N.\bibnamedelima M.\bibnamedelima W.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=RDA}{%
+         family={{Richards}},
+         familyi={R\bibinitperiod},
+         given={D.\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MNM+1}
+    \strng{fullhash}{MNMSCJMRNMWRDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{{Connecting the U-Th and U-Pb Chronometers: New Algorithms
+  and Applications}}
+    \field{journaltitle}{AGU Fall Meeting Abstracts}
+    \field{month}{12}
+    \field{year}{2016}
+  \endentry
+
+  \entry{titterington1979}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TDM}{%
+         family={Titterington},
+         familyi={T\bibinitperiod},
+         given={D.\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HAN}{%
+         family={Halliday},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima N.},
+         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TDMHAN1}
+    \strng{fullhash}{TDMHAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1979}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{pages}{183\bibrangedash 195}
+    \field{title}{On the fitting of parallel isochrons and the method of
+  maximum likelihood}
+    \field{volume}{26}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{1979}
+  \endentry
+
+  \entry{vermeesch2013}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{pages}{140\bibrangedash 146}
+    \field{title}{Multi-sample comparison of detrital age distributions}
+    \field{volume}{341}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{2013}
+  \endentry
+
+  \entry{vermeesch2021}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.5194/gchron-3-247-2021
+    \endverb
+    \field{pages}{247\bibrangedash 257}
+    \field{title}{{On the treatment of discordant detrital zircon U--Pb data}}
+    \field{volume}{3}
+    \field{journaltitle}{Geochronology}
+    \field{year}{2021}
+  \endentry
+
+  \entry{york2004}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YD}{%
+         family={York},
+         familyi={Y\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ENM}{%
+         family={Evensen},
+         familyi={E\bibinitperiod},
+         given={Norman\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MML}{%
+         family={Mart\'{i}nez},
+         familyi={M\bibinitperiod},
+         given={Margarita\bibnamedelima L{\'o}pez},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DBDJ}{%
+         family={De\bibnamedelima Basabe\bibnamedelima Delgado},
+         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+         given={Jon{\'a}s},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {AAPT}%
+    }
+    \strng{namehash}{YD+1}
+    \strng{fullhash}{YDENMMMLDBDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{3}
+    \field{pages}{367\bibrangedash 375}
+    \field{title}{{Unified equations for the slope, intercept, and standard
+  errors of the best straight line}}
+    \field{volume}{72}
+    \field{journaltitle}{American Journal of Physics}
+    \field{year}{2004}
+  \endentry
+\enddatalist
+\endinput

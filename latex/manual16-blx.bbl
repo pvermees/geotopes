@@ -17,188 +17,203 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{lee2006}{article}{}
-    \name{author}{7}{}{%
-      {{hash=LJY}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={Jee-Yon},
-         giveni={J\bibinithyphendelim Y\bibinitperiod},
+  \entry{hiess2012}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HJ}{%
+         family={Hiess},
+         familyi={H\bibinitperiod},
+         given={Joe},
+         giveni={J\bibinitperiod},
       }}%
-      {{hash=MK}{%
-         family={Marti},
+      {{hash=CDJ}{%
+         family={Condon},
+         familyi={C\bibinitperiod},
+         given={Daniel\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={McLean},
          familyi={M\bibinitperiod},
-         given={Kurt},
-         giveni={K\bibinitperiod},
+         given={Noah},
+         giveni={N\bibinitperiod},
       }}%
-      {{hash=SJP}{%
-         family={Severinghaus},
-         familyi={S\bibinitperiod},
-         given={Jeffrey\bibnamedelima P},
-         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-      {{hash=KK}{%
-         family={Kawamura},
-         familyi={K\bibinitperiod},
-         given={Kenji},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=YHS}{%
-         family={Yoo},
-         familyi={Y\bibinitperiod},
-         given={Hee-Soo},
-         giveni={H\bibinithyphendelim S\bibinitperiod},
-      }}%
-      {{hash=LJB}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={Jin\bibnamedelima Bok},
-         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-      {{hash=KJS}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Jin\bibnamedelima Seog},
-         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      {{hash=NSR}{%
+         family={Noble},
+         familyi={N\bibinitperiod},
+         given={Stephen\bibnamedelima R},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Elsevier}%
+      {American Association for the Advancement of Science}%
     }
-    \strng{namehash}{LJY+1}
-    \strng{fullhash}{LJYMKSJPKKYHSLJBKJS1}
+    \strng{namehash}{HJ+1}
+    \strng{fullhash}{HJCDJMNNSR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2006}
+    \field{labelyear}{2012}
     \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{number}{17}
-    \field{pages}{4507\bibrangedash 4512}
-    \field{title}{{A redetermination of the isotopic abundances of atmospheric
-  Ar}}
-    \field{volume}{70}
-    \field{journaltitle}{Geochimica et Cosmochimica Acta}
-    \field{year}{2006}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{6076}
+    \field{pages}{1610\bibrangedash 1614}
+    \field{title}{{$^{238}$U/$^{235}$U systematics in terrestrial
+  uranium-bearing minerals}}
+    \field{volume}{335}
+    \field{journaltitle}{Science}
+    \field{year}{2012}
   \endentry
 
-  \entry{moore1972}{article}{}
-    \name{author}{2}{}{%
-      {{hash=MLJ}{%
-         family={Moore},
-         familyi={M\bibinitperiod},
-         given={L\bibnamedelima Jf},
-         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+  \entry{jaffey1971}{article}{}
+    \name{author}{5}{}{%
+      {{hash=JA}{%
+         family={Jaffey},
+         familyi={J\bibinitperiod},
+         given={AH},
+         giveni={A\bibinitperiod},
       }}%
-      {{hash=ML}{%
-         family={Machlan},
-         familyi={M\bibinitperiod},
-         given={LA},
+      {{hash=FK}{%
+         family={Flynn},
+         familyi={F\bibinitperiod},
+         given={KF},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Glendenin},
+         familyi={G\bibinitperiod},
+         given={LE},
          giveni={L\bibinitperiod},
       }}%
-    }
-    \list{publisher}{1}{%
-      {ACS Publications}%
-    }
-    \strng{namehash}{MLJML1}
-    \strng{fullhash}{MLJML1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1972}
-    \field{labeldatesource}{}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-    \field{number}{14}
-    \field{pages}{2291\bibrangedash 2296}
-    \field{title}{High-accuracy determination of calcium in blood serum by
-  isotope dilution mass spectrometry}
-    \field{volume}{44}
-    \field{journaltitle}{Analytical chemistry}
-    \field{year}{1972}
-  \endentry
-
-  \entry{nier1950}{article}{}
-    \name{author}{1}{}{%
-      {{hash=NAO}{%
-         family={Nier},
-         familyi={N\bibinitperiod},
-         given={Alfred\bibnamedelima O},
-         giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod},
+      {{hash=BW}{%
+         family={Bentley},
+         familyi={B\bibinitperiod},
+         given={WC},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=EA}{%
+         family={Essling},
+         familyi={E\bibinitperiod},
+         given={AM},
+         giveni={A\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {APS}%
     }
-    \strng{namehash}{NAO1}
-    \strng{fullhash}{NAO1}
+    \strng{namehash}{JA+1}
+    \strng{fullhash}{JAFKGLBWEA1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{1950}
+    \field{labelyear}{1971}
     \field{labeldatesource}{}
-    \field{sortinit}{N}
-    \field{sortinithash}{N}
-    \field{number}{6}
-    \field{pages}{789}
-    \field{title}{A redetermination of the relative abundances of the isotopes
-  of carbon, nitrogen, oxygen, argon, and potassium}
-    \field{volume}{77}
-    \field{journaltitle}{Physical Review}
-    \field{year}{1950}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{number}{5}
+    \field{pages}{1889}
+    \field{title}{{Precision measurement of half-lives and specific activities
+  of U-235 and U-238}}
+    \field{volume}{4}
+    \field{journaltitle}{Physical Review C}
+    \field{year}{1971}
   \endentry
 
-  \entry{renne2011}{article}{}
-    \name{author}{5}{}{%
-      {{hash=RPR}{%
-         family={Renne},
-         familyi={R\bibinitperiod},
-         given={Paul\bibnamedelima R},
-         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+  \entry{kamber1998}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KBS}{%
+         family={Kamber},
+         familyi={K\bibinitperiod},
+         given={Balz\bibnamedelima Samuel},
+         giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
       }}%
-      {{hash=BG}{%
-         family={Balco},
-         familyi={B\bibinitperiod},
-         given={Greg},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=LKR}{%
-         family={Ludwig},
-         familyi={L\bibinitperiod},
-         given={Kenneth\bibnamedelima R},
-         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=MR}{%
-         family={Mundil},
+      {{hash=MS}{%
+         family={Moorbath},
          familyi={M\bibinitperiod},
-         given={Roland},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=MK}{%
-         family={Min},
-         familyi={M\bibinitperiod},
-         given={Kyoungwon},
-         giveni={K\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Pergamon}%
+      {Elsevier}%
     }
-    \strng{namehash}{RPR+1}
-    \strng{fullhash}{RPRBGLKRMRMK1}
+    \strng{namehash}{KBSMS1}
+    \strng{fullhash}{KBSMS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2011}
+    \field{labelyear}{1998}
     \field{labeldatesource}{}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{number}{17}
-    \field{pages}{5097\bibrangedash 5100}
-    \field{title}{Response to the comment by WH Schwarz et al. on ``Joint
-  determination of 40K decay constants and $^{40}$Ar$^*$/$^{40}$K for the Fish
-  Canyon sanidine standard, and improved accuracy for $^{40}$Ar/$^{39}$Ar
-  geochronology'' by P.R. Renne et al.(2010)}
-    \field{volume}{75}
-    \field{journaltitle}{Geochimica et Cosmochimica Acta}
-    \field{year}{2011}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{1-2}
+    \field{pages}{19\bibrangedash 41}
+    \field{title}{{Initial Pb of the Am{\i}tsoq gneiss revisited: implication
+  for the timing of early Archaean crustal evolution in West Greenland}}
+    \field{volume}{150}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{1998}
+  \endentry
+
+  \entry{leroux1963}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LRLJ}{%
+         family={Le\bibnamedelima Roux},
+         familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={L.\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GLE}{%
+         family={Glendenin},
+         familyi={G\bibinitperiod},
+         given={L.\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRLJGLE1}
+    \strng{fullhash}{LRLJGLE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1963}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{Half-life of $^{232}$Th.}}
+    \field{journaltitle}{Proceedings of the National Meeting on Nuclear Energy,
+  Pretoria, South Africa}
+    \field{year}{1963}
+  \endentry
+
+  \entry{stacey1975}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SJ}{%
+         family={Stacey},
+         familyi={S\bibinitperiod},
+         given={JS},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kramers},
+         familyi={K\bibinitperiod},
+         given={JD},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SJKJ1}
+    \strng{fullhash}{SJKJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{207\bibrangedash 221}
+    \field{title}{Approximation of terrestrial lead isotope evolution by a
+  two-stage model}
+    \field{volume}{26}
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{year}{1975}
   \endentry
 \enddatalist
 \endinput

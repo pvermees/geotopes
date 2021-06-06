@@ -17,140 +17,108 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{harrison2010}{article}{}
-    \name{author}{4}{}{%
-      {{hash=HTM}{%
-         family={Harrison},
-         familyi={H\bibinitperiod},
-         given={T\bibnamedelima Mark},
-         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+  \entry{janots2014}{article}{}
+    \name{author}{2}{}{%
+      {{hash=JE}{%
+         family={Janots},
+         familyi={J\bibinitperiod},
+         given={Emilie},
+         giveni={E\bibinitperiod},
       }}%
-      {{hash=HMT}{%
-         family={Heizler},
-         familyi={H\bibinitperiod},
-         given={Matthew\bibnamedelima T},
-         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-      {{hash=MKD}{%
-         family={McKeegan},
-         familyi={M\bibinitperiod},
-         given={Kevin\bibnamedelima D},
-         giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-      {{hash=SAK}{%
-         family={Schmitt},
-         familyi={S\bibinitperiod},
-         given={Axel\bibnamedelima K},
-         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      {{hash=RD}{%
+         family={Rubatto},
+         familyi={R\bibinitperiod},
+         given={Daniela},
+         giveni={D\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Elsevier}%
     }
-    \strng{namehash}{HTM+1}
-    \strng{fullhash}{HTMHMTMKDSAK1}
+    \strng{namehash}{JERD1}
+    \strng{fullhash}{JERD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2010}
+    \field{labelyear}{2014}
     \field{labeldatesource}{}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{number}{3-4}
-    \field{pages}{426\bibrangedash 433}
-    \field{title}{{In situ $^{40}$K--$^{40}$Ca `double-plus' SIMS dating
-  resolves Klokken feldspar $^{40}$K--$^{40}$Ar paradox}}
-    \field{volume}{299}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{pages}{155\bibrangedash 166}
+    \field{title}{{U--Th--Pb dating of collision in the external Alpine domains
+  (Urseren zone, Switzerland) using low temperature allanite and monazite}}
+    \field{volume}{184}
+    \field{journaltitle}{Lithos}
+    \field{year}{2014}
+  \endentry
+
+  \entry{kamber1998}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KBS}{%
+         family={Kamber},
+         familyi={K\bibinitperiod},
+         given={Balz\bibnamedelima Samuel},
+         giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Moorbath},
+         familyi={M\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KBSMS1}
+    \strng{fullhash}{KBSMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{1-2}
+    \field{pages}{19\bibrangedash 41}
+    \field{title}{{Initial Pb of the Am{\i}tsoq gneiss revisited: implication
+  for the timing of early Archaean crustal evolution in West Greenland}}
+    \field{volume}{150}
+    \field{journaltitle}{Chemical Geology}
+    \field{year}{1998}
+  \endentry
+
+  \entry{stacey1975}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SJ}{%
+         family={Stacey},
+         familyi={S\bibinitperiod},
+         given={JS},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kramers},
+         familyi={K\bibinitperiod},
+         given={JD},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SJKJ1}
+    \strng{fullhash}{SJKJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{207\bibrangedash 221}
+    \field{title}{Approximation of terrestrial lead isotope evolution by a
+  two-stage model}
+    \field{volume}{26}
     \field{journaltitle}{Earth and Planetary Science Letters}
-    \field{year}{2010}
-  \endentry
-
-  \entry{lee2006}{article}{}
-    \name{author}{7}{}{%
-      {{hash=LJY}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={Jee-Yon},
-         giveni={J\bibinithyphendelim Y\bibinitperiod},
-      }}%
-      {{hash=MK}{%
-         family={Marti},
-         familyi={M\bibinitperiod},
-         given={Kurt},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=SJP}{%
-         family={Severinghaus},
-         familyi={S\bibinitperiod},
-         given={Jeffrey\bibnamedelima P},
-         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-      {{hash=KK}{%
-         family={Kawamura},
-         familyi={K\bibinitperiod},
-         given={Kenji},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=YHS}{%
-         family={Yoo},
-         familyi={Y\bibinitperiod},
-         given={Hee-Soo},
-         giveni={H\bibinithyphendelim S\bibinitperiod},
-      }}%
-      {{hash=LJB}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={Jin\bibnamedelima Bok},
-         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-      {{hash=KJS}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Jin\bibnamedelima Seog},
-         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{LJY+1}
-    \strng{fullhash}{LJYMKSJPKKYHSLJBKJS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2006}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{number}{17}
-    \field{pages}{4507\bibrangedash 4512}
-    \field{title}{{A redetermination of the isotopic abundances of atmospheric
-  Ar}}
-    \field{volume}{70}
-    \field{journaltitle}{Geochimica et Cosmochimica Acta}
-    \field{year}{2006}
-  \endentry
-
-  \entry{ludwig2003}{article}{}
-    \name{author}{1}{}{%
-      {{hash=LKR}{%
-         family={Ludwig},
-         familyi={L\bibinitperiod},
-         given={Kenneth\bibnamedelima R},
-         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LKR1}
-    \strng{fullhash}{LKR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2003}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{title}{{User's manual for Isoplot 3.00: a geochronological toolkit
-  for Microsoft Excel}}
-    \field{volume}{4}
-    \field{journaltitle}{Berkeley Geochronology Center Special Publication 4}
-    \field{year}{2003}
+    \field{year}{1975}
   \endentry
 \enddatalist
 \endinput

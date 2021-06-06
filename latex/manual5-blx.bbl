@@ -51,39 +51,75 @@
     \field{year}{2014}
   \endentry
 
-  \entry{kamber1998}{article}{}
-    \name{author}{2}{}{%
-      {{hash=KBS}{%
-         family={Kamber},
-         familyi={K\bibinitperiod},
-         given={Balz\bibnamedelima Samuel},
-         giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=MS}{%
-         family={Moorbath},
-         familyi={M\bibinitperiod},
-         given={Stephen},
-         giveni={S\bibinitperiod},
+  \entry{ludwig1998}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LKR}{%
+         family={{Ludwig}},
+         familyi={L\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{KBSMS1}
-    \strng{fullhash}{KBSMS1}
+    \strng{namehash}{LKR1}
+    \strng{fullhash}{LKR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1998}
     \field{labeldatesource}{}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{number}{1-2}
-    \field{pages}{19\bibrangedash 41}
-    \field{title}{{Initial Pb of the Am{\i}tsoq gneiss revisited: implication
-  for the timing of early Archaean crustal evolution in West Greenland}}
-    \field{volume}{150}
-    \field{journaltitle}{Chemical Geology}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1016/S0016-7037(98)00059-3
+    \endverb
+    \field{pages}{665\bibrangedash 676}
+    \field{title}{{On the treatment of concordant uranium-lead ages}}
+    \field{volume}{62}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
     \field{year}{1998}
+  \endentry
+
+  \entry{mclean2016b}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MNM}{%
+         family={{McLean}},
+         familyi={M\bibinitperiod},
+         given={N.\bibnamedelima M.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=SCJM}{%
+         family={{Smith}},
+         familyi={S\bibinitperiod},
+         given={C.\bibnamedelima J.\bibnamedelima M.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=RNMW}{%
+         family={{Roberts}},
+         familyi={R\bibinitperiod},
+         given={N.\bibnamedelima M.\bibnamedelima W.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=RDA}{%
+         family={{Richards}},
+         familyi={R\bibinitperiod},
+         given={D.\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MNM+1}
+    \strng{fullhash}{MNMSCJMRNMWRDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{{Connecting the U-Th and U-Pb Chronometers: New Algorithms
+  and Applications}}
+    \field{journaltitle}{AGU Fall Meeting Abstracts}
+    \field{month}{12}
+    \field{year}{2016}
   \endentry
 
   \entry{stacey1975}{article}{}
@@ -119,6 +155,62 @@
     \field{volume}{26}
     \field{journaltitle}{Earth and Planetary Science Letters}
     \field{year}{1975}
+  \endentry
+
+  \entry{vermeesch2020}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Copernicus GmbH}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{1}
+    \field{pages}{119\bibrangedash 131}
+    \field{title}{{Unifying the U--Pb and Th--Pb methods: joint isochron
+  regression and common Pb correction}}
+    \field{volume}{2}
+    \field{journaltitle}{Geochronology}
+    \field{year}{2020}
+  \endentry
+
+  \entry{vermeesch2021}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VP}{%
+         family={Vermeesch},
+         familyi={V\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VP1}
+    \strng{fullhash}{VP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.5194/gchron-3-247-2021
+    \endverb
+    \field{pages}{247\bibrangedash 257}
+    \field{title}{{On the treatment of discordant detrital zircon U--Pb data}}
+    \field{volume}{3}
+    \field{journaltitle}{Geochronology}
+    \field{year}{2021}
   \endentry
 \enddatalist
 \endinput

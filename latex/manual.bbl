@@ -80,30 +80,6 @@
     \field{year}{2006}
   \endentry
 
-  \entry{galbraith1990a}{article}{}
-    \name{author}{1}{}{%
-      {{hash=GRF}{%
-         family={Galbraith},
-         familyi={G\bibinitperiod},
-         given={R.\bibnamedelima F.},
-         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GRF1}
-    \strng{fullhash}{GRF1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1990}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \field{pages}{207\bibrangedash 214}
-    \field{title}{The radial plot: graphical assessment of spread in ages}
-    \field{volume}{17}
-    \field{journaltitle}{Nuclear Tracks and Radiation Measurements}
-    \field{year}{1990}
-  \endentry
-
   \entry{galbraith2005}{book}{}
     \name{author}{1}{}{%
       {{hash=GRF}{%
@@ -127,89 +103,6 @@
     \field{pages}{219}
     \field{title}{Statistics for fission track analysis}
     \field{year}{2005}
-  \endentry
-
-  \entry{galbraith1990b}{article}{}
-    \name{author}{2}{}{%
-      {{hash=GRF}{%
-         family={Galbraith},
-         familyi={G\bibinitperiod},
-         given={R.\bibnamedelima F.},
-         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-      {{hash=GPF}{%
-         family={Green},
-         familyi={G\bibinitperiod},
-         given={P.\bibnamedelima F.},
-         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GRFGPF1}
-    \strng{fullhash}{GRFGPF1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1990}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \field{pages}{197\bibrangedash 206}
-    \field{title}{Estimating the component ages in a finite mixture}
-    \field{volume}{17}
-    \field{journaltitle}{Nuclear Tracks and Radiation Measurements}
-    \field{year}{1990}
-  \endentry
-
-  \entry{ludwig2003}{article}{}
-    \name{author}{1}{}{%
-      {{hash=LKR}{%
-         family={Ludwig},
-         familyi={L\bibinitperiod},
-         given={Kenneth\bibnamedelima R},
-         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LKR1}
-    \strng{fullhash}{LKR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2003}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{title}{{User's manual for Isoplot 3.00: a geochronological toolkit
-  for Microsoft Excel}}
-    \field{volume}{4}
-    \field{journaltitle}{Berkeley Geochronology Center Special Publication 4}
-    \field{year}{2003}
-  \endentry
-
-  \entry{vermeesch2010a}{article}{}
-    \name{author}{1}{}{%
-      {{hash=VP}{%
-         family={Vermeesch},
-         familyi={V\bibinitperiod},
-         given={P.},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{VP1}
-    \strng{fullhash}{VP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2010}
-    \field{labeldatesource}{}
-    \field{sortinit}{V}
-    \field{sortinithash}{V}
-    \verb{doi}
-    \verb DOI: 10.1016/j.chemgeo.2010.01.002
-    \endverb
-    \field{number}{3-4}
-    \field{pages}{108 \bibrangedash  111}
-    \field{title}{{HelioPlot, and the treatment of overdispersed (U-Th-Sm)/He
-  data}}
-    \field{volume}{271}
-    \field{journaltitle}{Chemical Geology}
-    \field{year}{2010}
   \endentry
 \enddatalist
 \endinput

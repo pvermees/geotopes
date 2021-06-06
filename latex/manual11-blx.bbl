@@ -17,113 +17,42 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{gehrels2003}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=GG}{%
-         family={Gehrels},
-         familyi={G\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GG1}
-    \strng{fullhash}{GG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2003}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-  \field{note}{\url{https://sites.google.com/a/laserchron.org/laserchron/home/}
-  Last accessed: 2020-06-05}
-    \field{title}{{AgePick}}
-    \field{year}{2003}
-  \endentry
-
-  \entry{gehrels2020}{article}{}
-    \true{moreauthor}
-    \true{morelabelname}
-    \name{author}{10}{}{%
-      {{hash=GG}{%
-         family={Gehrels},
-         familyi={G\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=GD}{%
-         family={Giesler},
-         familyi={G\bibinitperiod},
-         given={Dominique},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=OP}{%
-         family={Olsen},
-         familyi={O\bibinitperiod},
-         given={Paul},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=KD}{%
-         family={Kent},
+  \entry{kaufman1965}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KA}{%
+         family={Kaufman},
          familyi={K\bibinitperiod},
-         given={Dennis},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=MA}{%
-         family={Marsh},
-         familyi={M\bibinitperiod},
-         given={Adam},
+         given={Aaron},
          giveni={A\bibinitperiod},
       }}%
-      {{hash=PW}{%
-         family={Parker},
-         familyi={P\bibinitperiod},
-         given={William},
+      {{hash=BW}{%
+         family={Broecker},
+         familyi={B\bibinitperiod},
+         given={Wallace},
          giveni={W\bibinitperiod},
-      }}%
-      {{hash=RC}{%
-         family={Rasmussen},
-         familyi={R\bibinitperiod},
-         given={Cornelia},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=MR}{%
-         family={Mundil},
-         familyi={M\bibinitperiod},
-         given={Roland},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=IR}{%
-         family={Irmis},
-         familyi={I\bibinitperiod},
-         given={Randy},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=GJ}{%
-         family={Geissman},
-         familyi={G\bibinitperiod},
-         given={John},
-         giveni={J\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Copernicus GmbH}%
+      {Wiley Online Library}%
     }
-    \strng{namehash}{GG+1}
-    \strng{fullhash}{GGGDOPKDMAPWRCMRIRGJ+1}
+    \strng{namehash}{KABW1}
+    \strng{fullhash}{KABW1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2020}
+    \field{labelyear}{1965}
     \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \field{title}{{LA-ICPMS U--Pb geochronology of detrital zircon grains from
-  the Coconino, Moenkopi, and Chinle Formations in the Petrified Forest
-  National Park (Arizona)}}
-    \field{journaltitle}{Geochronology}
-    \field{year}{2020}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{16}
+    \field{pages}{4039\bibrangedash 4054}
+    \field{title}{{Comparison of Th$^{230}$ and C$^{14}$ ages for carbonate
+  materials from Lakes Lahontan and Bonneville}}
+    \field{volume}{70}
+    \field{journaltitle}{Journal of geophysical Research}
+    \field{year}{1965}
   \endentry
 
-  \entry{ludwig2003}{article}{}
+  \entry{ludwig2003b}{article}{}
     \name{author}{1}{}{%
       {{hash=LKR}{%
          family={Ludwig},
@@ -131,6 +60,9 @@
          given={Kenneth\bibnamedelima R},
          giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
+    }
+    \list{publisher}{1}{%
+      {Mineral Soc America}%
     }
     \strng{namehash}{LKR1}
     \strng{fullhash}{LKR1}
@@ -140,205 +72,160 @@
     \field{labeldatesource}{}
     \field{sortinit}{L}
     \field{sortinithash}{L}
-    \field{title}{{User's manual for Isoplot 3.00: a geochronological toolkit
-  for Microsoft Excel}}
-    \field{volume}{4}
-    \field{journaltitle}{Berkeley Geochronology Center Special Publication}
+    \field{number}{1}
+    \field{pages}{631\bibrangedash 656}
+    \field{title}{{Mathematical--statistical treatment of data and errors for
+  $^{230}$Th/U geochronology}}
+    \field{volume}{52}
+    \field{journaltitle}{Reviews in Mineralogy and Geochemistry}
     \field{year}{2003}
   \endentry
 
-  \entry{ludwig2002}{inproceedings}{}
+  \entry{ludwig1994}{article}{}
     \name{author}{2}{}{%
-      {{hash=LK}{%
+      {{hash=LKR}{%
          family={Ludwig},
          familyi={L\bibinitperiod},
-         given={KR},
-         giveni={K\bibinitperiod},
+         given={Kenneth\bibnamedelima R},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
-      {{hash=MR}{%
-         family={Mundil},
-         familyi={M\bibinitperiod},
-         given={R},
-         giveni={R},
+      {{hash=TD}{%
+         family={Titterington},
+         familyi={T\bibinitperiod},
+         given={DM},
+         giveni={D\bibinitperiod},
       }}%
     }
-    \strng{namehash}{LKMR1}
-    \strng{fullhash}{LKMR1}
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LKRTD1}
+    \strng{fullhash}{LKRTD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2002}
+    \field{labelyear}{1994}
     \field{labeldatesource}{}
     \field{sortinit}{L}
     \field{sortinithash}{L}
-    \field{booktitle}{Geochimica et Cosmochimica Acta}
-    \field{pages}{A463\bibrangedash A463}
-    \field{title}{{Extracting reliable U-Pb ages and errors from complex
-  populations of zircons from Phanerozoic tuffs}}
-    \field{volume}{66}
-    \field{year}{2002}
+    \field{number}{22}
+    \field{pages}{5031\bibrangedash 5042}
+    \field{title}{{Calculation of $^{230}$Th-U isochrons, ages, and errors}}
+    \field{volume}{58}
+    \field{journaltitle}{Geochimica et Cosmochimica Acta}
+    \field{year}{1994}
   \endentry
 
-  \entry{rasmussen2020}{article}{}
-    \true{moreauthor}
-    \true{morelabelname}
-    \name{author}{10}{}{%
-      {{hash=RC}{%
-         family={Rasmussen},
-         familyi={R\bibinitperiod},
-         given={Cornelia},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=MR}{%
-         family={Mundil},
-         familyi={M\bibinitperiod},
-         given={Roland},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=IRB}{%
-         family={Irmis},
-         familyi={I\bibinitperiod},
-         given={Randall\bibnamedelima B},
-         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-      {{hash=GD}{%
-         family={Geisler},
-         familyi={G\bibinitperiod},
-         given={Dominique},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=GGE}{%
-         family={Gehrels},
-         familyi={G\bibinitperiod},
-         given={George\bibnamedelima E},
-         giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-      {{hash=OPE}{%
-         family={Olsen},
+  \entry{osmond1970}{article}{}
+    \name{author}{3}{}{%
+      {{hash=OJ}{%
+         family={Osmond},
          familyi={O\bibinitperiod},
-         given={Paul\bibnamedelima E},
-         giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod},
+         given={JK},
+         giveni={J\bibinitperiod},
       }}%
-      {{hash=KDV}{%
-         family={Kent},
-         familyi={K\bibinitperiod},
-         given={Dennis\bibnamedelima V},
-         giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+      {{hash=MJP}{%
+         family={May},
+         familyi={M\bibinitperiod},
+         given={James\bibnamedelima P},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
       }}%
-      {{hash=LC}{%
-         family={Lepre},
-         familyi={L\bibinitperiod},
-         given={Christopher},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=KST}{%
-         family={Kinney},
-         familyi={K\bibinitperiod},
-         given={Sean\bibnamedelima T},
-         giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-      {{hash=GJW}{%
-         family={Geissman},
-         familyi={G\bibinitperiod},
-         given={John\bibnamedelima W},
-         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+      {{hash=TW}{%
+         family={Tanner},
+         familyi={T\bibinitperiod},
+         given={WF},
+         giveni={W\bibinitperiod},
       }}%
     }
-    \strng{namehash}{RC+1}
-    \strng{fullhash}{RCMRIRBGDGGEOPEKDVLCKSTGJW+1}
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{OJMJPTW1}
+    \strng{fullhash}{OJMJPTW1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2020}
+    \field{labelyear}{1970}
+    \field{labeldatesource}{}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{number}{2}
+    \field{pages}{469\bibrangedash 479}
+    \field{title}{{Age of the Cape Kennedy Barrier-and-Lagoon Complex}}
+    \field{volume}{75}
+    \field{journaltitle}{Journal of Geophysical Research}
+    \field{year}{1970}
+  \endentry
+
+  \entry{rosholt1976}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=RJ}{%
+         family={Rosholt},
+         familyi={R\bibinitperiod},
+         given={JN},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJ1}
+    \strng{fullhash}{RJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1976}
     \field{labeldatesource}{}
     \field{sortinit}{R}
     \field{sortinithash}{R}
-    \field{title}{{U-Pb zircon geochronology and depositional age models for
-  the Upper Triassic Chinle Formation (Petrified Forest National Park, Arizona,
-  USA): Implications for Late Triassic paleoecological and paleoenvironmental
-  change}}
-    \field{journaltitle}{GSA Bulletin}
-    \field{year}{2020}
+    \field{booktitle}{Geological Society of America Abstracts with Programs}
+    \field{pages}{1076}
+    \field{title}{{$^{230}$Th/$^{234}$U dating of travertine and caliche
+  rinds}}
+    \field{volume}{8}
+    \field{year}{1976}
   \endentry
 
-  \entry{vermeesch2013}{article}{}
-    \name{author}{1}{}{%
-      {{hash=VP}{%
-         family={Vermeesch},
-         familyi={V\bibinitperiod},
-         given={Pieter},
-         giveni={P\bibinitperiod},
+  \entry{york2004}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YD}{%
+         family={York},
+         familyi={Y\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ENM}{%
+         family={Evensen},
+         familyi={E\bibinitperiod},
+         given={Norman\bibnamedelima M},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MML}{%
+         family={Mart\'{i}nez},
+         familyi={M\bibinitperiod},
+         given={Margarita\bibnamedelima L{\'o}pez},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DBDJ}{%
+         family={De\bibnamedelima Basabe\bibnamedelima Delgado},
+         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+         given={Jon{\'a}s},
+         giveni={J\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Elsevier}%
+      {AAPT}%
     }
-    \strng{namehash}{VP1}
-    \strng{fullhash}{VP1}
+    \strng{namehash}{YD+1}
+    \strng{fullhash}{YDENMMMLDBDJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2013}
+    \field{labelyear}{2004}
     \field{labeldatesource}{}
-    \field{sortinit}{V}
-    \field{sortinithash}{V}
-    \field{pages}{140\bibrangedash 146}
-    \field{title}{Multi-sample comparison of detrital age distributions}
-    \field{volume}{341}
-    \field{journaltitle}{Chemical Geology}
-    \field{year}{2013}
-  \endentry
-
-  \entry{vermeesch2018b}{article}{}
-    \name{author}{1}{}{%
-      {{hash=VP}{%
-         family={Vermeesch},
-         familyi={V\bibinitperiod},
-         given={Pieter},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{VP1}
-    \strng{fullhash}{VP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{}
-    \field{sortinit}{V}
-    \field{sortinithash}{V}
-    \verb{doi}
-    \verb 10.1016/j.earscirev.2017.11.027
-    \endverb
-    \field{pages}{310\bibrangedash 321}
-    \field{title}{{Dissimilarity measures in detrital geochronology}}
-    \field{volume}{178}
-    \field{journaltitle}{Earth-Science Reviews}
-    \field{year}{2018}
-  \endentry
-
-  \entry{vermeesch2021b}{article}{}
-    \name{author}{1}{}{%
-      {{hash=VP}{%
-         family={Vermeesch},
-         familyi={V\bibinitperiod},
-         given={Pieter},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{VP1}
-    \strng{fullhash}{VP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2021}
-    \field{labeldatesource}{}
-    \field{sortinit}{V}
-    \field{sortinithash}{V}
-    \field{number}{2}
-    \field{pages}{843\bibrangedash 850}
-    \field{title}{Maximum depositional age estimation revisited}
-    \field{volume}{12}
-    \field{journaltitle}{Geoscience Frontiers}
-    \field{year}{2021}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{3}
+    \field{pages}{367\bibrangedash 375}
+    \field{title}{{Unified equations for the slope, intercept, and standard
+  errors of the best straight line}}
+    \field{volume}{72}
+    \field{journaltitle}{American Journal of Physics}
+    \field{year}{2004}
   \endentry
 \enddatalist
 \endinput

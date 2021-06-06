@@ -17,118 +17,6 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{hiess2012}{article}{}
-    \name{author}{4}{}{%
-      {{hash=HJ}{%
-         family={Hiess},
-         familyi={H\bibinitperiod},
-         given={Joe},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=CDJ}{%
-         family={Condon},
-         familyi={C\bibinitperiod},
-         given={Daniel\bibnamedelima J},
-         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=MN}{%
-         family={McLean},
-         familyi={M\bibinitperiod},
-         given={Noah},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=NSR}{%
-         family={Noble},
-         familyi={N\bibinitperiod},
-         given={Stephen\bibnamedelima R},
-         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Association for the Advancement of Science}%
-    }
-    \strng{namehash}{HJ+1}
-    \strng{fullhash}{HJCDJMNNSR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2012}
-    \field{labeldatesource}{}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{number}{6076}
-    \field{pages}{1610\bibrangedash 1614}
-    \field{title}{{$^{238}$U/$^{235}$U systematics in terrestrial
-  uranium-bearing minerals}}
-    \field{volume}{335}
-    \field{journaltitle}{Science}
-    \field{year}{2012}
-  \endentry
-
-  \entry{holden2000}{article}{}
-    \name{author}{2}{}{%
-      {{hash=HNE}{%
-         family={Holden},
-         familyi={H\bibinitperiod},
-         given={Norman\bibnamedelima E},
-         giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-      {{hash=HDC}{%
-         family={Hoffman},
-         familyi={H\bibinitperiod},
-         given={Darleane\bibnamedelima C},
-         giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{HNEHDC1}
-    \strng{fullhash}{HNEHDC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2000}
-    \field{labeldatesource}{}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{number}{8}
-    \field{pages}{1525\bibrangedash 1562}
-    \field{title}{{Spontaneous fission half-lives for ground-state nuclide
-  (Technical report)}}
-    \field{volume}{72}
-    \field{journaltitle}{Pure and applied chemistry}
-    \field{year}{2000}
-  \endentry
-
-  \entry{iwano1998}{incollection}{}
-    \name{author}{2}{}{%
-      {{hash=IH}{%
-         family={Iwano},
-         familyi={I\bibinitperiod},
-         given={H},
-         giveni={H},
-      }}%
-      {{hash=DT}{%
-         family={Danhara},
-         familyi={D\bibinitperiod},
-         given={T},
-         giveni={T},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{IHDT1}
-    \strng{fullhash}{IHDT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1998}
-    \field{labeldatesource}{}
-    \field{sortinit}{I}
-    \field{sortinithash}{I}
-    \field{booktitle}{Advances in Fission-Track Geochronology}
-    \field{pages}{47\bibrangedash 66}
-    \field{title}{A re-investigation of the geometry factors for fission-track
-  dating of apatite, sphene and zircon}
-    \field{year}{1998}
-  \endentry
-
   \entry{jaffey1971}{article}{}
     \name{author}{5}{}{%
       {{hash=JA}{%
@@ -182,34 +70,91 @@
     \field{year}{1971}
   \endentry
 
-  \entry{jonckheere2003b}{article}{}
-    \name{author}{1}{}{%
-      {{hash=JR}{%
-         family={Jonckheere},
-         familyi={J\bibinitperiod},
-         given={Raymond},
+  \entry{leroux1963}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LRLJ}{%
+         family={Le\bibnamedelima Roux},
+         familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={L.\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GLE}{%
+         family={Glendenin},
+         familyi={G\bibinitperiod},
+         given={L.\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRLJGLE1}
+    \strng{fullhash}{LRLJGLE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1963}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{Half-life of $^{232}$Th.}}
+    \field{journaltitle}{Proceedings of the National Meeting on Nuclear Energy,
+  Pretoria, South Africa}
+    \field{year}{1963}
+  \endentry
+
+  \entry{villa2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=VIM}{%
+         family={Villa},
+         familyi={V\bibinitperiod},
+         given={Igor\bibnamedelima Maria},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HNE}{%
+         family={Holden},
+         familyi={H\bibinitperiod},
+         given={Norman\bibnamedelima E},
+         giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Possolo},
+         familyi={P\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=IR}{%
+         family={Ickert},
+         familyi={I\bibinitperiod},
+         given={RB},
          giveni={R\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Hibbert},
+         familyi={H\bibinitperiod},
+         given={DB},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Renne},
+         familyi={R\bibinitperiod},
+         given={PR},
+         giveni={P\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Elsevier}%
     }
-    \strng{namehash}{JR1}
-    \strng{fullhash}{JR1}
+    \strng{namehash}{VIM+1}
+    \strng{fullhash}{VIMHNEPAIRHDRP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2003}
+    \field{labelyear}{2020}
     \field{labeldatesource}{}
-    \field{sortinit}{J}
-    \field{sortinithash}{J}
-    \field{number}{1}
-    \field{pages}{41\bibrangedash 58}
-    \field{title}{On the densities of etchable fission tracks in a mineral and
-  co-irradiated external detector with reference to fission-track dating of
-  minerals}
-    \field{volume}{200}
-    \field{journaltitle}{Chemical Geology}
-    \field{year}{2003}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{pages}{70\bibrangedash 77}
+    \field{title}{{IUPAC-IUGS recommendation on the half-lives of $^{147}$Sm
+  and $^{146}$Sm}}
+    \field{volume}{285}
+    \field{journaltitle}{Geochimica et cosmochimica acta}
+    \field{year}{2020}
   \endentry
 \enddatalist
 \endinput
