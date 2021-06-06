@@ -143,7 +143,7 @@ for formats~3 and 4.
   ratios:
 
 \begin{console}
-evolution(Th2)
+evolution(ThU2)
 \end{console}
 
   \noindent\begin{minipage}[t]{.4\linewidth}
@@ -157,7 +157,7 @@ evolution(Th2)
   \end{minipage}
 
 \begin{console}
-evolution(Th2,xlim=c(0.2,1.2),ylim=c(0.5,1.5))
+evolution(ThU2,xlim=c(0.2,1.2),ylim=c(0.5,1.5))
 \end{console}
 
   \noindent\begin{minipage}[t]{.3\linewidth}
@@ -171,7 +171,7 @@ evolution(Th2,xlim=c(0.2,1.2),ylim=c(0.5,1.5))
   \end{minipage}
 
 \begin{console}
-evolution(Th2,transform=TRUE)
+evolution(ThU2,transform=TRUE)
 \end{console}
 
   \noindent\begin{minipage}[t]{.4\linewidth}
@@ -184,7 +184,7 @@ evolution(Th2,transform=TRUE)
   \end{minipage}
 
 \begin{console}
-evolution(Th2,transform=TRUE,xlim=c(100,250),ylim=c(1,1.2))
+evolution(ThU2,transform=TRUE,xlim=c(100,250),ylim=c(1,1.2))
 \end{console}
 
   In either case, the detrital \textsuperscript{230}Th component can
@@ -293,7 +293,7 @@ evolution(ThU1,isochron=TRUE,model=1,exterr=TRUE)
   colouring them according to their U/Th ratio:
 
 \begin{script}
-evolution(ThU1,alpha=0.14,levels=ThU1$x['U238Th232'],clabel='U/Th'
+evolution(ThU1,alpha=0.14,levels=ThU1$x[,'U238Th232'],clabel='U/Th',
           ellipse.fill=cm.colors(n=10,alpha=0.5),ellipse.stroke='orange')
 \end{script}
 
@@ -401,10 +401,10 @@ age(ThU3b,i2i=FALSE)
       can also be inferred by isochron regression.\\
     \end{minipage}    
 
-\begin{script}
+\begin{console}
 age(ThU3,i2i=TRUE)
-\end{script}
-    
+\end{console}
+
   \end{enumerate}
   
 \end{enumerate}

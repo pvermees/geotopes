@@ -14,7 +14,7 @@ helioplot(UThHe,show.numbers=TRUE)
 
 helioplot(UThHe,show.central.comp=TRUE)
 
-helioplot(UThHe,model=1)
+helioplot(UThHe,model=3)
 
 helioplot(UThHe,alpha=0.61,sigdig=3)
 
@@ -26,12 +26,13 @@ helioplot(UThSmHe,levels=UThSmHe[,'Sm'],clabel='Sm',
           ellipse.fill=c('#00005080','#00FF0080'),
           ellipse.stroke='grey30')
 
-isochron(UThHe)
+isochron(UThHe,show.ellipses = 1)
 
 age(UThHe)
 
-radialplot(UThSmHe,transformation='sqrt',k='min',clabel='Sm',
-           levels=UThSmHe[,'Sm'],bg=c('blue','white','red'))
+radialplot(UThSmHe,transformation='sqrt',k='min',
+           clabel='Sm',levels=UThSmHe[,'Sm'],
+           bg=c('blue','white','red'))
 
 weightedmean(UThSmHe,random.effects=TRUE,ranked=TRUE,
              clabel='Sm',levels=UThSmHe[,'Sm'],
