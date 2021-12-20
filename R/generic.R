@@ -1,3 +1,4 @@
+setwd('~/Documents/geotopes/R/')
 library(IsoplotR)
 
 data1 <- read.data('MountTom.csv',method='other')

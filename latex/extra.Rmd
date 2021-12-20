@@ -1,0 +1,328 @@
+---
+title: "Additional exercises"
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+solution <- FALSE
+knitr::opts_chunk$set(include=TRUE, echo=TRUE)
+set.seed(1)
+# rmarkdown::render('~/Documents/geotopes/latex/extra.Rmd')
+```
+
+\newif\ifsol
+\sol`r ifelse(solution, 'true', 'false')`
+
+1. A mass spectrometer has a radius of 0.3 m and an acceleration
+voltage of 10 000 V. The magnetic field is adjusted to the various
+masses to be measured. Calculate the atomic mass corresponding to a
+field of 0.5 T.
+
+    \ifsol
+    Rearrange Equation 3.4 of the notes:
+    \[
+    m = \frac{e(rH)^2}{2V}
+    \]
+    \fi
+
+    ```{r include=solution}
+    e <- 1.60219e-19 # C
+    r <- 0.3 # m
+    H <- 0.5 # T
+    V <- 1e4 # V
+    M <- 1.660538e-27 # kg/nucleon
+    m <- (e*(r*H)^2)/(2*V)
+    m/M
+    ```
+
+1. What types of radioactivity are involved in the following
+reactions: ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd,
+${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{23}$Cr, ${}^{230}_{~90}$Th
+$\rightarrow$ ${}^{226}_{88}$Ra?
+
+    \ifsol
+    ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd: $\alpha$
+    
+    ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{23}$Cr: e.c.
+    
+    ${}^{230}_{~90}$Th $\rightarrow$ ${}^{226}_{88}$Ra: $\alpha$
+    \fi
+
+1. Rb has two isotopes, ^85^Rb and ^87^Rb, which exist in a constant
+ratio in our Solar System: ^85^Rb/^87^Rb = 2.5933. The molar mass of
+Rb is 85.4678. A rock contains 10pm of Rb. How many mol/g of ^87^Rb
+does that correspond to?
+
+    \ifsol
+    Compute the abundance of ^87^Rb:
+    \[
+    f87 + f85 = 1
+    \Rightarrow
+    1 + \frac{f85}{f87} = \frac{1}{f87}
+    \Rightarrow
+    f87 = \frac{1}{1 + \frac{f85}{f87}}
+    \]
+    \fi
+
+    ```{r include=solution}
+    r57 <- 2.5933
+    f87 <- 1/(1+r57) # mol/mol
+    ppmRb <- 10      # ug/g
+    MRb <- 85.4678   # ug/umol
+    umolgRb87 <- f87*ppmRb/MRb
+    message(signif(umolgRb87,5),' micromol/g 87Rb')
+    ```
+
+1. Following up from the previous question: ^87^Rb is radioactive with
+a half-life $t_{1/2}=48.8$ Gyr. What was the ^85^Rb/^87^Rb-ratio 2
+billion years ago?
+
+    \ifsol
+    Compute initial ^87^Rb from present amount:
+    \[
+    P_\circ = P\exp[\lambda{t}]
+    \]
+    \fi
+
+    ```{r include=solution}
+    # 1. compute the decay constant:
+    t12 = 48.8
+    l87 = log(2)/t12
+    # 2. restore 87Rb to 2 Ga:
+    f85 <- 1-f87
+    umolgRb <- ppmRb/MRb
+    umolgRb85 <- f85*umolgRb
+    umolgRb87 <- f87*umolgRb
+    age <- 2
+    umolgRb85_o <- umolgRb85
+    umolgRb87_o <- umolgRb87*exp(l87*age)
+    r57_o <- umolgRb85_o/umolgRb87_o
+    message('87Rb/85Rb ratio at 2 Ga: ',signif(r57_o,5))
+    ```
+
+1. The half-life of ^14^C is 5730 years. The ^14^C content of the
+atmosphere is 13.2 disintegrations per minute and per gram (dpm
+g${}^{-1}$) of carbon (initial activity $A_0$). We wish to date an
+Egyptian artefact dating from approximately 2000 BC. What is the
+approximate activity (A) of this artefact? If our method can measure 1
+dpm, what mass of the (probably precious) sample will have to be
+destroyed?
+
+    ```{r include=solution}
+    # decay constant:
+    t12 <- 5730
+    l14 <- log(2)/t12
+    BC <- 2000
+    now <- 2022
+    age <- now + BC
+    A0 <- 13.2
+    A <- A0*exp(-l14*age) # dpm/g
+    mass <- 1000/A
+    message('The expected activity ratio is ',signif(A,2),
+    ', which requires ',signif(mass,2),' mg of material.')
+    ```
+
+1. Consider the Rb-Sr composition of three aliquots from the same
+sample:
+    ```{r include=FALSE}
+    t12Rb87 <- 48.8
+    l87 <- log(2)/t12Rb87
+    tRbSr <- 1.5
+    Rb87Sr86 <- c(0.05,0.1,0.2)
+    Sr87Sr86_0 <- 0.7
+    Sr87Sr86 <- Sr87Sr86_0 + Rb87Sr86*(exp(l87*tRbSr)-1)
+    tabRbSr <- cbind(Rb87Sr86,signif(Sr87Sr86,5))
+    colnames(tabRbSr) <- c("^87^Rb/^86^Sr","^87^Rb/^86^Rb")
+    rownames(tabRbSr) <- c("mineral A","mineral B","mineral C")
+    ```
+    ```{r include=TRUE, echo=FALSE, results='asis'}
+    knitr::kable(tabRbSr)
+    ```
+    How old is the sample?
+
+    ```{r include=solution, fig.width=4, fig.height=4}
+    RbSr <- tabRbSr[,1]
+    SrSr <- tabRbSr[,2]
+    plot(x=RbSr,y=SrSr,type='b')
+    fit <- lm(SrSr ~ RbSr)
+    tRbSr <- log(fit$coefficients[2]+1)/l87
+    message('Rb/Sr-age = ',signif(tRbSr*1000,2),' Ma')
+    ```
+
+1. What is the expected ^207^Pb/^206^Pb-ratio of a 4.57 billion year
+old meteorite? Assume that the meteorite contained no initial Pb.  The
+half-lives of ^238^U and ^235^U are 4.468 and 0.704 Gyr, respectively.
+The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
+^207^Pb/^206^Pb-ratio for modern uranium-ores?
+
+    ```{r include=solution}
+    # meteorite:
+    tPbPb <- 4.57
+    l38 <- log(2)/4.468
+    l35 <- log(2)/0.704
+    r58 <- 1/137.818
+    rPbPb_meteorite <- r58*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)
+    message('Expected 207Pb/206Pb-ratio for a 4.57 Ga meteorite = ',
+    	     signif(rPbPb_meteorite,3))
+    ```
+    \ifsol
+    For modern U-ores, assuming secular equilibrium:
+    \[
+    \frac{{}^{207}Pb}{{}^{206}Pb} =
+    \frac{\partial{N_{207}}/\partial{t}}{\partial{N_{206}}/\partial{t}}
+    \]
+    with
+    \[
+    \partial{N_{206}}/\partial{t} = \lambda_{238}N_{238},
+    \partial{N_{207}}/\partial{t} = \lambda_{235}N_{235}
+    \]
+    and
+    \[
+    N_{238}/N_{235} = 137.818
+    \]
+    $\Rightarrow$
+    \[
+    \frac{N_{207}}{N_{206}} = \frac{\lambda_{235}N_{235}}{\lambda_{238}N_{238}}
+    \]
+    \fi
+    ```{r include=solution}
+    message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l38/l35,3))
+    ```
+
+1. ^210^Pb is a short lived (t~1/2~=22.3 yr) intermediate daughter of
+the ^238^U decay chain. This natural radioactive lead is incorporated
+into ice deposited in Greenland by forming successive layers of ice
+which can be studied like sedimentary strata.  The activity of ^210^Pb
+is measured at four levels in disintegrations per hour per kilogram of
+ice.
+
+    ```{r include=FALSE}
+    depth <- c(0,1,1.5,2.5)
+    Pb210 <- c(75,32,24,10)
+    tabPb210 <- rbind(depth,Pb210)
+    rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/k)")
+    colnames(tabPb210) <- 1:length(depth)
+    ```
+    ```{r include=TRUE, echo=FALSE, results='asis'}
+    knitr::kable(tabPb210)
+    ```
+    
+    Calculate the sedimentation rate of the ice. Assuming a constant
+    rate and a compaction factor of 5, how thick will the glacier be
+    in 5000 years?  Calculate the ^210^Pb-content of fresh ice (in
+    mol/kg or atoms/kg).
+
+    \ifsol
+    \[
+    {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}t]
+    \]
+    If the rate of deposition is $R$ and thickness $T$, we have $t = T/R$.
+    The equation then becomes:
+    \[
+    {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}T/R]
+    \]
+    Taking logarithms:
+    \[
+    \ln[{}^{210}Pb] = \ln[{}^{210}Pb_\circ] -\lambda_{210}T/R
+    \]
+    If the \textsuperscript{210}Pb content has remained constant over time,
+    the data points must be aligned in a ($\ln[{}^{210}Pb]$ -- T plot.
+    The slope is therefore $-\lambda_{210}$/R.
+    A modern activity of $\lambda_{210}N_{210} \times 75$ dph/kg corresponds to
+    $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
+    out to be a mere 21 million atoms per kg!
+    \fi
+    ```{r include=solution, fig.width=4, fig.height=4}
+    depth <- tabPb210[1,]
+    Pb210 <- tabPb210[2,]
+    fit <- lm(log(Pb210) ~ depth)
+    l210 <- log(2)/22.3
+    R <- -l210/fit$coefficients[2]
+    message("The accumulation rate is ",signif(100*R,3),'cm/yr')
+    message("In 5000 years, there will be ",signif(5000*R/5,3),'m of ice accumulation')
+    Pb210atoms <- Pb210[1]*24*365.25/l210 
+    message("1 kg of modern ice contains ", round(Pb210atoms/1e6),' million atoms of 210Pb')
+    plot(depth,Pb210,type='p',log='y')
+    lines(depth,exp(fit$fitted.values))
+    ```
+
+1. ^129^I is an extinct nuclide of Iodine with a half-life of 15.7
+million years. It decays (or rather: decayed!) to the noble gas
+^129^Xe. Although there is no (natural) ^129^I in the Solar System
+today, the nuclide did exist during its earliest stages. Iodine-rich
+meteorites that within the first few 10s of millions of years of
+Solary System history contain measurable amounts of excess of ^129^Xe.
+
+    Consider two meteorites with ^129^Xe/^127^I ratios of
+    13$\times{10}^{-5}$ and 8$\times{10}^{-5}$, respectively. What is
+    the age difference between the two meteorites? Assume that all the
+    ^129^Xe is radiogenic, and that the early Solar System had a
+    homogeneous ^129^I/^127^I-composition.
+
+    \ifsol
+    Let $[{}^{129}I/{}^{127}I]_\circ$ be the (unknown) ^129^I/^127^I-composition
+    of the early Solar System, and let $t_A$ and $t_B$ be the ages of the
+    two meteorites (counting from the start of the Solar System). Then
+    \[
+    \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
+    \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_A]
+    \]
+    and
+    \[
+    \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
+    \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_B]
+    \]
+    The ratio of the two ratios is:
+    \[
+    \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B}
+         {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A} =
+	 \exp[\lambda_{129}(t_B-t_A)]
+    \]
+    Hence
+    \[
+    t_B-t_A = \frac{1}{\lambda_{129}}
+    \left(
+    \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B -
+    \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
+    \right)
+    \]
+    \fi
+    ```{r include=solution}
+    l129 <- log(2)/15.7
+    XeIA <- 13e-5
+    XeIB <- 8e-5
+    dt <- (log(XeIB)-log(XeIA))/l129
+    message('The age difference between the two meteorites is ',
+    signif(dt,3),' million years.')
+    ```
+
+1. The silicate Earth weighs approximately $4\times{10}^{24}$ kg and
+contains 250 ppm potassium. How much ^40^Ar is created in 4.5 billion
+years?  Given that ^40^Ar cannot escape from the Earth and the
+quantity of ^40^Ar in the atmosphere is 66000 Gt, what is the ``K--Ar
+age of the Earth's atmosphere''?  K has three isotopes with
+^39^K/^40^K = 7771 and ^41^K/^40^K = 561. ^40^K is radioactive and
+undergoes branched decay to ^40^Ar (10.72%) and ^40^Ca (89.28%) with a
+half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
+
+    ```{r include=solution}
+    GtEarth <- 4e24/1e12  # convert kg to Gt
+    GtK <- GtEarth*250e-6 # Gt of K in the silicate Earth
+    MK <- 39.1e-6 # Gt/Gmol
+    GmolK <- GtK/MK # Gmol
+    f40K <- 1/(7771 + 561 + 1) # 40K/K
+    GmolK40 <- GmolK*f40K # Gmol of 40K in the silicate Earth
+    GtAr40 <- 66e3
+    M40K <- 40e-6 # Gt/Gmol
+    GmolAr40 <- GtAr40/M40K
+    Ar40K40 <- GmolAr40/GmolK40
+    l40 <- log(2)/1.248
+    fec <- 0.1072 # fraction of 40K decaying to 40Ar
+    atmage <- log(Ar40K40/fec+1)/l40
+    message("The 40Ar/40K-age of the Earth's atmosphere is ",
+             signif(atmage,3),' Ga.')
+    ```
