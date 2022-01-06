@@ -17,181 +17,142 @@ set.seed(1)
 \newif\ifsol
 \sol`r ifelse(solution, 'true', 'false')`
 
+# Theory
+
 1. A mass spectrometer has a radius of 0.3 m and an acceleration
 voltage of 10 000 V. The magnetic field is adjusted to the various
 masses to be measured. Calculate the atomic mass corresponding to a
 field of 0.5 T.
 
-    \ifsol
-    Rearrange Equation 3.4 of the notes:
-    \[
-    m = \frac{e(rH)^2}{2V}
-    \]
-    \fi
+   \ifsol
+   Rearrange Equation 3.4 of the notes:
+   \[
+   m = \frac{e(rH)^2}{2V}
+   \]
+   \fi
 
-    ```{r include=solution}
-    e <- 1.60219e-19 # C
-    r <- 0.3 # m
-    H <- 0.5 # T
-    V <- 1e4 # V
-    M <- 1.660538e-27 # kg/nucleon
-    m <- (e*(r*H)^2)/(2*V)
-    m/M
-    ```
+   ```{r include=solution}
+   e <- 1.60219e-19 # C
+   r <- 0.3 # m
+   H <- 0.5 # T
+   V <- 1e4 # V
+   M <- 1.660538e-27 # kg/nucleon
+   m <- (e*(r*H)^2)/(2*V)
+   m/M
+   ```
 
 1. What types of radioactivity are involved in the following
 reactions: ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd,
 ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{23}$Cr, ${}^{230}_{~90}$Th
 $\rightarrow$ ${}^{226}_{88}$Ra?
 
-    \ifsol
-    ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd: $\alpha$
-    
-    ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{23}$Cr: e.c.
-    
-    ${}^{230}_{~90}$Th $\rightarrow$ ${}^{226}_{88}$Ra: $\alpha$
-    \fi
+   \ifsol
+   ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd: $\alpha$
+   
+   ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{23}$Cr: e.c.
+   
+   ${}^{230}_{~90}$Th $\rightarrow$ ${}^{226}_{88}$Ra: $\alpha$
+   \fi
 
 1. Rb has two isotopes, ^85^Rb and ^87^Rb, which exist in a constant
 ratio in our Solar System: ^85^Rb/^87^Rb = 2.5933. The molar mass of
 Rb is 85.4678. A rock contains 10pm of Rb. How many mol/g of ^87^Rb
 does that correspond to?
 
-    \ifsol
-    Compute the abundance of ^87^Rb:
-    \[
-    f87 + f85 = 1
-    \Rightarrow
-    1 + \frac{f85}{f87} = \frac{1}{f87}
-    \Rightarrow
-    f87 = \frac{1}{1 + \frac{f85}{f87}}
-    \]
-    \fi
+   \ifsol
+   Compute the abundance of ^87^Rb:
+   \[
+   f87 + f85 = 1
+   \Rightarrow
+   1 + \frac{f85}{f87} = \frac{1}{f87}
+   \Rightarrow
+   f87 = \frac{1}{1 + \frac{f85}{f87}}
+   \]
+   \fi
 
-    ```{r include=solution}
-    r57 <- 2.5933
-    f87 <- 1/(1+r57) # mol/mol
-    ppmRb <- 10      # ug/g
-    MRb <- 85.4678   # ug/umol
-    umolgRb87 <- f87*ppmRb/MRb
-    message(signif(umolgRb87,5),' micromol/g 87Rb')
-    ```
+   ```{r include=solution}
+   r57 <- 2.5933
+   f87 <- 1/(1+r57) # mol/mol
+   ppmRb <- 10     # ug/g
+   MRb <- 85.4678   # ug/umol
+   umolgRb87 <- f87*ppmRb/MRb
+   message(signif(umolgRb87,5),' micromol/g 87Rb')
+   ```
 
 1. Following up from the previous question: ^87^Rb is radioactive with
 a half-life $t_{1/2}=48.8$ Gyr. What was the ^85^Rb/^87^Rb-ratio 2
 billion years ago?
 
-    \ifsol
-    Compute initial ^87^Rb from present amount:
-    \[
-    P_\circ = P\exp[\lambda{t}]
-    \]
-    \fi
+   \ifsol
+   Compute initial ^87^Rb from present amount:
+   \[
+   P_\circ = P\exp[\lambda{t}]
+   \]
+   \fi
 
-    ```{r include=solution}
-    # 1. compute the decay constant:
-    t12 = 48.8
-    l87 = log(2)/t12
-    # 2. restore 87Rb to 2 Ga:
-    f85 <- 1-f87
-    umolgRb <- ppmRb/MRb
-    umolgRb85 <- f85*umolgRb
-    umolgRb87 <- f87*umolgRb
-    age <- 2
-    umolgRb85_o <- umolgRb85
-    umolgRb87_o <- umolgRb87*exp(l87*age)
-    r57_o <- umolgRb85_o/umolgRb87_o
-    message('87Rb/85Rb ratio at 2 Ga: ',signif(r57_o,5))
-    ```
+   ```{r include=solution}
+   # 1. compute the decay constant:
+   t12 = 48.8
+   l87 = log(2)/t12
+   # 2. restore 87Rb to 2 Ga:
+   f85 <- 1-f87
+   umolgRb <- ppmRb/MRb
+   umolgRb85 <- f85*umolgRb
+   umolgRb87 <- f87*umolgRb
+   age <- 2
+   umolgRb85_o <- umolgRb85
+   umolgRb87_o <- umolgRb87*exp(l87*age)
+   r57_o <- umolgRb85_o/umolgRb87_o
+   message('87Rb/85Rb ratio at 2 Ga: ',signif(r57_o,5))
+   ```
 
 1. The half-life of ^14^C is 5730 years. The ^14^C content of the
 atmosphere is 13.2 disintegrations per minute and per gram (dpm
 g${}^{-1}$) of carbon (initial activity $A_0$). We wish to date an
-Egyptian artefact dating from approximately 2000 BC. What is the
-approximate activity (A) of this artefact? If our method can measure 1
-dpm, what mass of the (probably precious) sample will have to be
-destroyed?
+Egyptian artefact from approximately 2000 BC. What is the approximate
+activity (A) of this artefact? If our method can measure 1 dpm, what
+mass of the (probably precious) sample will have to be destroyed?
 
-    ```{r include=solution}
-    # decay constant:
-    t12 <- 5730
-    l14 <- log(2)/t12
-    BC <- 2000
-    now <- 2022
-    age <- now + BC
-    A0 <- 13.2
-    A <- A0*exp(-l14*age) # dpm/g
-    mass <- 1000/A
-    message('The expected activity ratio is ',signif(A,2),
-    ', which requires ',signif(mass,2),' mg of material.')
-    ```
+   ```{r include=solution}
+   # decay constant:
+   t12 <- 5730
+   l14 <- log(2)/t12
+   BC <- 2000
+   now <- 2022
+   age <- now + BC
+   A0 <- 13.2
+   A <- A0*exp(-l14*age) # dpm/g
+   mass <- 1000/A
+   message('The expected activity ratio is ',signif(A,2),
+   ', which requires ',signif(mass,2),' mg of material.')
+   ```
 
 1. Consider the Rb-Sr composition of three aliquots from the same
 sample:
-    ```{r include=FALSE}
-    t12Rb87 <- 48.8
-    l87 <- log(2)/t12Rb87
-    tRbSr <- 1.5
-    Rb87Sr86 <- c(0.05,0.1,0.2)
-    Sr87Sr86_0 <- 0.7
-    Sr87Sr86 <- Sr87Sr86_0 + Rb87Sr86*(exp(l87*tRbSr)-1)
-    tabRbSr <- cbind(Rb87Sr86,signif(Sr87Sr86,5))
-    colnames(tabRbSr) <- c("^87^Rb/^86^Sr","^87^Rb/^86^Rb")
-    rownames(tabRbSr) <- c("mineral A","mineral B","mineral C")
-    ```
-    ```{r include=TRUE, echo=FALSE, results='asis'}
-    knitr::kable(tabRbSr)
-    ```
-    How old is the sample?
+   ```{r include=FALSE}
+   t12Rb87 <- 48.8
+   l87 <- log(2)/t12Rb87
+   tRbSr <- 1.5
+   Rb87Sr86 <- c(0.05,0.1,0.2)
+   Sr87Sr86_0 <- 0.7
+   Sr87Sr86 <- Sr87Sr86_0 + Rb87Sr86*(exp(l87*tRbSr)-1)
+   tabRbSr <- cbind(Rb87Sr86,signif(Sr87Sr86,5))
+   colnames(tabRbSr) <- c("^87^Rb/^86^Sr","^87^Rb/^86^Rb")
+   rownames(tabRbSr) <- c("mineral A","mineral B","mineral C")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabRbSr)
+   ```
+   How old is the sample?
 
-    ```{r include=solution, fig.width=4, fig.height=4}
-    RbSr <- tabRbSr[,1]
-    SrSr <- tabRbSr[,2]
-    plot(x=RbSr,y=SrSr,type='b')
-    fit <- lm(SrSr ~ RbSr)
-    tRbSr <- log(fit$coefficients[2]+1)/l87
-    message('Rb/Sr-age = ',signif(tRbSr*1000,2),' Ma')
-    ```
-
-1. What is the expected ^207^Pb/^206^Pb-ratio of a 4.57 billion year
-old meteorite? Assume that the meteorite contained no initial Pb.  The
-half-lives of ^238^U and ^235^U are 4.468 and 0.704 Gyr, respectively.
-The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
-^207^Pb/^206^Pb-ratio for modern uranium-ores?
-
-    ```{r include=solution}
-    # meteorite:
-    tPbPb <- 4.57
-    l38 <- log(2)/4.468
-    l35 <- log(2)/0.704
-    r58 <- 1/137.818
-    rPbPb_meteorite <- r58*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)
-    message('Expected 207Pb/206Pb-ratio for a 4.57 Ga meteorite = ',
-    	     signif(rPbPb_meteorite,3))
-    ```
-    \ifsol
-    For modern U-ores, assuming secular equilibrium:
-    \[
-    \frac{{}^{207}Pb}{{}^{206}Pb} =
-    \frac{\partial{N_{207}}/\partial{t}}{\partial{N_{206}}/\partial{t}}
-    \]
-    with
-    \[
-    \partial{N_{206}}/\partial{t} = \lambda_{238}N_{238},
-    \partial{N_{207}}/\partial{t} = \lambda_{235}N_{235}
-    \]
-    and
-    \[
-    N_{238}/N_{235} = 137.818
-    \]
-    $\Rightarrow$
-    \[
-    \frac{N_{207}}{N_{206}} = \frac{\lambda_{235}N_{235}}{\lambda_{238}N_{238}}
-    \]
-    \fi
-    ```{r include=solution}
-    message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l38/l35,3))
-    ```
+   ```{r include=solution, fig.width=4, fig.height=4}
+   RbSr <- tabRbSr[,1]
+   SrSr <- tabRbSr[,2]
+   plot(x=RbSr,y=SrSr,type='b')
+   fit <- lm(SrSr ~ RbSr)
+   tRbSr <- log(fit$coefficients[2]+1)/l87
+   message('Rb/Sr-age = ',signif(tRbSr*1000,2),' Ma')
+   ```
 
 1. ^210^Pb is a short lived (t~1/2~=22.3 yr) intermediate daughter of
 the ^238^U decay chain. This natural radioactive lead is incorporated
@@ -200,56 +161,231 @@ which can be studied like sedimentary strata.  The activity of ^210^Pb
 is measured at four levels in disintegrations per hour per kilogram of
 ice.
 
-    ```{r include=FALSE}
-    depth <- c(0,1,1.5,2.5)
-    Pb210 <- c(75,32,24,10)
-    tabPb210 <- rbind(depth,Pb210)
-    rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/k)")
-    colnames(tabPb210) <- 1:length(depth)
-    ```
-    ```{r include=TRUE, echo=FALSE, results='asis'}
-    knitr::kable(tabPb210)
-    ```
-    
-    Calculate the sedimentation rate of the ice. Assuming a constant
-    rate and a compaction factor of 5, how thick will the glacier be
-    in 5000 years?  Calculate the ^210^Pb-content of fresh ice (in
-    mol/kg or atoms/kg).
+   ```{r include=FALSE}
+   depth <- c(0,1,1.5,2.5)
+   Pb210 <- c(75,32,24,10)
+   tabPb210 <- rbind(depth,Pb210)
+   rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/k)")
+   colnames(tabPb210) <- 1:length(depth)
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabPb210)
+   ```
+   
+   Calculate the sedimentation rate of the ice. Assuming a constant
+   rate and a compaction factor of 5, how thick will the glacier be
+   in 5000 years?  Calculate the ^210^Pb-content of fresh ice (in
+   mol/kg or atoms/kg).
 
-    \ifsol
-    \[
-    {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}t]
-    \]
-    If the rate of deposition is $R$ and thickness $T$, we have $t = T/R$.
-    The equation then becomes:
-    \[
-    {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}T/R]
-    \]
-    Taking logarithms:
-    \[
-    \ln[{}^{210}Pb] = \ln[{}^{210}Pb_\circ] -\lambda_{210}T/R
-    \]
-    If the \textsuperscript{210}Pb content has remained constant over time,
-    the data points must be aligned in a ($\ln[{}^{210}Pb]$ -- T plot.
-    The slope is therefore $-\lambda_{210}$/R.
-    A modern activity of $\lambda_{210}N_{210} \times 75$ dph/kg corresponds to
-    $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
-    out to be a mere 21 million atoms per kg!
-    \fi
-    ```{r include=solution, fig.width=4, fig.height=4}
-    depth <- tabPb210[1,]
-    Pb210 <- tabPb210[2,]
-    fit <- lm(log(Pb210) ~ depth)
-    l210 <- log(2)/22.3
-    R <- -l210/fit$coefficients[2]
-    message("The accumulation rate is ",signif(100*R,3),'cm/yr')
-    message("In 5000 years, there will be ",signif(5000*R/5,3),'m of ice accumulation')
-    Pb210atoms <- Pb210[1]*24*365.25/l210 
-    message("1 kg of modern ice contains ", round(Pb210atoms/1e6),' million atoms of 210Pb')
-    plot(depth,Pb210,type='p',log='y')
-    lines(depth,exp(fit$fitted.values))
-    ```
+   \ifsol
+   \[
+   {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}t]
+   \]
+   If the rate of deposition is $R$ and thickness $T$, we have $t = T/R$.
+   The equation then becomes:
+   \[
+   {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}T/R]
+   \]
+   Taking logarithms:
+   \[
+   \ln[{}^{210}Pb] = \ln[{}^{210}Pb_\circ] -\lambda_{210}T/R
+   \]
+   If the \textsuperscript{210}Pb content has remained constant over time,
+   the data points must be aligned in a ($\ln[{}^{210}Pb]$ -- T plot.
+   The slope is therefore $-\lambda_{210}$/R.
+   A modern activity of $\lambda_{210}N_{210} \times 75$ dph/kg corresponds to
+   $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
+   out to be a mere 21 million atoms per kg!
+   \fi
+   ```{r include=solution, fig.width=4, fig.height=4}
+   depth <- tabPb210[1,]
+   Pb210 <- tabPb210[2,]
+   fit <- lm(log(Pb210) ~ depth)
+   l210 <- log(2)/22.3
+   R <- -l210/fit$coefficients[2]
+   message("The accumulation rate is ",signif(100*R,3),'cm/yr')
+   message("In 5000 years, there will be ",signif(5000*R/5,3),'m of ice accumulation')
+   Pb210atoms <- Pb210[1]*24*365.25/l210 
+   message("1 kg of modern ice contains ", round(Pb210atoms/1e6),' million atoms of 210Pb')
+   plot(depth,Pb210,type='p',log='y')
+   lines(depth,exp(fit$fitted.values))
+   ```
 
+1. What is the expected ^207^Pb/^206^Pb-ratio of a 4.57 billion year
+old meteorite? Assume that the meteorite contained no initial Pb.  The
+half-lives of ^238^U and ^235^U are 4.468 and 0.704 Gyr, respectively.
+The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
+^207^Pb/^206^Pb-ratio for modern uranium-ores?
+
+   ```{r include=solution}
+   # meteorite:
+   tPbPb <- 4.57
+   l38 <- log(2)/4.468
+   l35 <- log(2)/0.704
+   r58 <- 1/137.818
+   rPbPb_meteorite <- r58*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)
+   message('Expected 207Pb/206Pb-ratio for a 4.57 Ga meteorite = ',
+   	    signif(rPbPb_meteorite,3))
+   ```
+   \ifsol
+   For modern U-ores, assuming secular equilibrium:
+   \[
+   \frac{{}^{207}Pb}{{}^{206}Pb} =
+   \frac{\partial{N_{207}}/\partial{t}}{\partial{N_{206}}/\partial{t}}
+   \]
+   with
+   \[
+   \partial{N_{206}}/\partial{t} = \lambda_{238}N_{238},
+   \partial{N_{207}}/\partial{t} = \lambda_{235}N_{235}
+   \]
+   and
+   \[
+   N_{238}/N_{235} = 137.818
+   \]
+   $\Rightarrow$
+   \[
+   \frac{N_{207}}{N_{206}} = \frac{\lambda_{235}N_{235}}{\lambda_{238}N_{238}}
+   \]
+   \fi
+   ```{r include=solution}
+   message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l38/l35,3))
+   ```
+
+1. Consider the following three aliquots from the same sample:
+   ```{r include=FALSE}
+   l38 <- log(2)/4468
+   l35 <- log(2)/704
+   t1 <- 2000
+   t2 <- 1000
+   U8Pb4 <- c(0,100,180,200)
+   U85 <- 137.818
+   U5Pb4 <- U8Pb4/U85
+   floss <- c(0,0,0.5,1)
+   Pb64i <- 9
+   Pb74i <- 10
+   Pb64_1 <- U8Pb4*(exp(l38*t1)-1)
+   Pb74_1 <- U5Pb4*(exp(l35*t1)-1)
+   Pb64_2 <- U8Pb4*(exp(l38*t2)-1)
+   Pb74_2 <- U5Pb4*(exp(l35*t2)-1)
+   Pb64 <- Pb64i + (1-floss)*Pb64_1 + floss*Pb64_2
+   Pb74 <- Pb74i + (1-floss)*Pb74_1 + floss*Pb74_2
+   tabUPb <- signif(cbind(Pb64,Pb74,U8Pb4),3)
+   rownames(tabUPb) <- c('aliquot A','aliquot B','aliquot C','aliquot D')
+   colnames(tabUPb) <- c("^206^Pb/^204^Pb","^207^Pb/^204^Pb","^238^U/^204^Pb")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabUPb)
+   ```
+   a. Calculate the ^206^Pb/^238^U and ^207^Pb/^235^U ages
+
+   b. Sketch a geological history for the sample (hint: consider the
+   U-Pb composion in concordia space).
+   
+   ```{r include=solution, fig.width=4, fig.height=4}
+   # common Pb composition:
+   Pb64i <- tabUPb[1,1]
+   Pb74i <- tabUPb[1,2]
+   Pb6U8 <- (tabUPb[-1,1]-Pb64i)/tabUPb[-1,3]
+   Pb7U8 <- (tabUPb[-1,2]-Pb74i)/tabUPb[-1,3]
+   Pb85 <- 137.818
+   Pb7U5 <- Pb7U8*Pb85
+   tPb6U8 <- log(Pb6U8+1)/l38
+   tPb7U5 <- log(Pb7U5+1)/l35
+   ttab <- signif(cbind(tPb6U8,tPb7U5),3)
+   colnames(ttab) <- c('t(206Pb/238U)','t(207Pb/235U)')
+   print(rbind(ttab))
+   colnames(tabUPb) <- c('206Pb/204Pb','207Pb/204Pb','238U/204Pb')
+   print(tabUPb)
+   IsoplotR::concordia(tlim=c(0,2500))
+   points(Pb7U5,Pb6U8,pch=16)
+   lines(Pb7U5,Pb6U8)
+   text(Pb7U5,Pb6U8,labels=c('B','C','D'),pos=1)
+   ```
+   
+   \ifsol Aliquot A does not contain uranium, and therefore
+   constrains the common Pb composition of the sample. Aliquots B and
+   D yielded concordant U-Pb ages and constrain two geological
+   events. Aliquot B gives the crystallisation age. Aliquot D is
+   younger and dates a resetting event.  Aliquot C has experienced
+   partial Pb-loss. It falls halfway between B and D on the mixing
+   line defined by these two points.  Hence the geological history is
+   as follows:
+
+   \begin{enumerate}
+   \item Crystallisation at 2000 Ma
+   \item A metamorphic event at 1000 Ma resulting in partial Pb-loss
+   \item Subsequent tectonic quiescence
+   \end{enumerate}
+   \fi
+
+1. Consider the Pb-Pb composition of three aliquots from a meteorite:
+   ```{r include=FALSE}
+   l35 <- IsoplotR::settings('lambda','U235')[1]
+   l38 <- IsoplotR::settings('lambda','U238')[1]
+   tPbPb <- 4550
+   Pb64_i <- 4/0.6
+   Pb74_i <- 4
+   Pb64_r <- c(100,400,1000)
+   U85 <- 137.818
+   Pb74_r <- Pb64_r*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)/U85
+   Pb64 <- Pb64_i + Pb64_r
+   Pb74 <- Pb74_i + Pb74_r
+   PbPbtab <- signif(rbind(Pb64,Pb74),3)
+   rownames(PbPbtab) <- c("^206^Pb/^204^Pb","^207^Pb/^204^Pb")
+   colnames(PbPbtab) <- 1:3
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(PbPbtab)
+   ```
+   Use the following lookup table to estimate the age of the meteorite:
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   tgrid <- seq(from=tPbPb-100,to=tPbPb+100,by=25)
+   Pb76ratios <- IsoplotR::age2ratio(tgrid,ratio="Pb207Pb206")[,1]
+   ttab <- rbind(format(tgrid,digits=1),signif(Pb76ratios,3))
+   rownames(ttab) <- c("age (Ma)","^207^Pb/^206^Pb")
+   knitr::kable(ttab)
+   ```
+
+   Hint: think isochrons.
+   ```{r include=solution, out.width='60%', fig.width=5, fig.height=4}
+   Pb64 <- PbPbtab[1,]
+   Pb74 <- PbPbtab[2,]
+   Pb76 <- lm(Pb74 ~ Pb64)$coefficients[2]
+   result <- IsoplotR::age(Pb76,method="Pb207-Pb206")[1]
+   message("The age of the meteorite is ",signif(result,3),' Ma.')
+   plot(x=Pb64,y=Pb74,type='b',
+	 xlab=expression(""^206*"Pb/"^204*"Pb"),
+	 ylab=expression(""^207*"Pb/"^204*"Pb")
+   )
+   ```
+
+1. The silicate Earth weighs approximately $4\times{10}^{24}$ kg and
+contains 250 ppm potassium. How much ^40^Ar is created in 4.5 billion
+years?  Given that ^40^Ar cannot escape from the Earth and the
+quantity of ^40^Ar in the atmosphere is 66000 Gt, what is the ``K-Ar
+age of the Earth's atmosphere''?  K has three isotopes with
+^39^K/^40^K = 7771 and ^41^K/^40^K = 561. ^40^K is radioactive and
+undergoes branched decay to ^40^Ar (10.72%) and ^40^Ca (89.28%) with a
+half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
+
+   ```{r include=solution}
+   GtEarth <- 4e24/1e12  # convert kg to Gt
+   GtK <- GtEarth*250e-6 # Gt of K in the silicate Earth
+   MK <- 39.1e-6 # Gt/Gmol
+   GmolK <- GtK/MK # Gmol
+   f40K <- 1/(7771 + 561 + 1) # 40K/K
+   GmolK40 <- GmolK*f40K # Gmol of 40K in the silicate Earth
+   GtAr40 <- 66e3
+   M40K <- 40e-6 # Gt/Gmol
+   GmolAr40 <- GtAr40/M40K
+   Ar40K40 <- GmolAr40/GmolK40
+   l40 <- log(2)/1.248
+   fec <- 0.1072 # fraction of 40K decaying to 40Ar
+   atmage <- log(Ar40K40/fec+1)/l40
+   message("The 40Ar/40K-age of the Earth's atmosphere is ",
+          signif(atmage,3),' Ga.')
+   ```
+   
 1. ^129^I is an extinct nuclide of Iodine with a half-life of 15.7
 million years. It decays (or rather: decayed!) to the noble gas
 ^129^Xe. Although there is no (natural) ^129^I in the Solar System
@@ -257,72 +393,298 @@ today, the nuclide did exist during its earliest stages. Iodine-rich
 meteorites that within the first few 10s of millions of years of
 Solary System history contain measurable amounts of excess of ^129^Xe.
 
-    Consider two meteorites with ^129^Xe/^127^I ratios of
-    13$\times{10}^{-5}$ and 8$\times{10}^{-5}$, respectively. What is
-    the age difference between the two meteorites? Assume that all the
-    ^129^Xe is radiogenic, and that the early Solar System had a
-    homogeneous ^129^I/^127^I-composition.
+   Consider two meteorites with ^129^Xe/^127^I ratios of
+   13$\times{10}^{-5}$ and 8$\times{10}^{-5}$, respectively. What is
+   the age difference between the two meteorites? Assume that all the
+   ^129^Xe is radiogenic, and that the early Solar System had a
+   homogeneous ^129^I/^127^I-composition.
 
-    \ifsol
-    Let $[{}^{129}I/{}^{127}I]_\circ$ be the (unknown) ^129^I/^127^I-composition
-    of the early Solar System, and let $t_A$ and $t_B$ be the ages of the
-    two meteorites (counting from the start of the Solar System). Then
-    \[
-    \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
-    \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_A]
-    \]
-    and
-    \[
-    \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
-    \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_B]
-    \]
-    The ratio of the two ratios is:
-    \[
-    \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B}
-         {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A} =
+   \ifsol
+   Let $[{}^{129}I/{}^{127}I]_\circ$ be the (unknown) ^129^I/^127^I-composition
+   of the early Solar System, and let $t_A$ and $t_B$ be the ages of the
+   two meteorites (counting from the start of the Solar System). Then
+   \[
+   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
+   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_A]
+   \]
+   and
+   \[
+   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
+   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_B]
+   \]
+   The ratio of the two ratios is:
+   \[
+   \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B}
+       {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A} =
 	 \exp[\lambda_{129}(t_B-t_A)]
-    \]
-    Hence
-    \[
-    t_B-t_A = \frac{1}{\lambda_{129}}
-    \left(
-    \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B -
-    \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
-    \right)
-    \]
-    \fi
-    ```{r include=solution}
-    l129 <- log(2)/15.7
-    XeIA <- 13e-5
-    XeIB <- 8e-5
-    dt <- (log(XeIB)-log(XeIA))/l129
-    message('The age difference between the two meteorites is ',
-    signif(dt,3),' million years.')
-    ```
+   \]
+   Hence
+   \[
+   t_B-t_A = \frac{1}{\lambda_{129}}
+   \left(
+   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B -
+   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
+   \right)
+   \]
+   \fi
+   ```{r include=solution}
+   l129 <- log(2)/15.7
+   XeIA <- 13e-5
+   XeIB <- 8e-5
+   dt <- (log(XeIB)-log(XeIA))/l129
+   message('The age difference between the two meteorites is ',
+   signif(dt,3),' million years.')
+   ```
 
-1. The silicate Earth weighs approximately $4\times{10}^{24}$ kg and
-contains 250 ppm potassium. How much ^40^Ar is created in 4.5 billion
-years?  Given that ^40^Ar cannot escape from the Earth and the
-quantity of ^40^Ar in the atmosphere is 66000 Gt, what is the ``K--Ar
-age of the Earth's atmosphere''?  K has three isotopes with
-^39^K/^40^K = 7771 and ^41^K/^40^K = 561. ^40^K is radioactive and
-undergoes branched decay to ^40^Ar (10.72%) and ^40^Ca (89.28%) with a
-half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
+1. Analysis of a granite yields:
+   ```{r include=FALSE}
+   l38 <- IsoplotR::settings('lambda','U238')[1]
+   l40 <- IsoplotR::settings('lambda','K40')[1]
+   l87 <- IsoplotR::settings('lambda','Rb87')[1]
+   tUPbzirc <- 520
+   tKAramp <- 480
+   tKArbio <- 400
+   tRbSrmusc <- 470
+   tRbSrbio <- 460
+   PbUzirc <- exp(l38*tUPbzirc)-1
+   ArKamp <- exp(l40*tKAramp)-1
+   ArKbio <- exp(l40*tKArbio)-1
+   SrRbmusc <- exp(l87*tRbSrmusc)-1
+   SrRbbio <- exp(l87*tRbSrbio)-1
+   ttab <- matrix(signif(c(PbUzirc,ArKamp,ArKbio,SrRbmusc,SrRbbio),3),1,5)
+   colnames(ttab) <- c("^206^Pb*/^238^U (zircon)","^40^Ar*/^40^K (amphibole)",
+                       "^40^Ar*/^40^K (biotite)","^87^Sr*/^87^Rb (muscovite)",
+       		       "^87^Sr*/^87^Rb (biotite)")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(ttab)
+   ```
+   What is the likely age of intrusion of this granite? How reliable
+   is the result?
 
-    ```{r include=solution}
-    GtEarth <- 4e24/1e12  # convert kg to Gt
-    GtK <- GtEarth*250e-6 # Gt of K in the silicate Earth
-    MK <- 39.1e-6 # Gt/Gmol
-    GmolK <- GtK/MK # Gmol
-    f40K <- 1/(7771 + 561 + 1) # 40K/K
-    GmolK40 <- GmolK*f40K # Gmol of 40K in the silicate Earth
-    GtAr40 <- 66e3
-    M40K <- 40e-6 # Gt/Gmol
-    GmolAr40 <- GtAr40/M40K
-    Ar40K40 <- GmolAr40/GmolK40
-    l40 <- log(2)/1.248
-    fec <- 0.1072 # fraction of 40K decaying to 40Ar
-    atmage <- log(Ar40K40/fec+1)/l40
-    message("The 40Ar/40K-age of the Earth's atmosphere is ",
-             signif(atmage,3),' Ga.')
-    ```
+   ```{r include=solution}
+   tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
+   colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
+   	     	     'Rb-Sr (musc)','Rb-Sr (bio)')
+   print(tt)
+   ```
+   \ifsol
+   The true age is probably around 550--520 Ma. The reason
+   being that some disruptive phenomenon has affected the region as
+   there is clearly a discordance in ages. The most robust of the
+   chronometers is U-Pb on zircons, but it is not perfect and this
+   apparent age may be made a little older. But this reasoning is
+   very rough and ready as can be seen!
+   \fi
+
+# Practicals
+
+## Intro 
+
+1. Write a function to simulate radioactive decay, following the
+recipe shown in slide 13 of the first theory presentation. Compare the
+numerical approximation with the analytical solution. Explore the
+effect of different time steps on the accuracy of the simulation.
+
+   ```{r include=solution}
+   P0 <- 100
+   lambda <- 0.1
+   t12 <- log(2)/lambda
+   dt <- 1
+   tt <- seq(from=0,to=5*t12,by=dt)
+   nt <- length(tt)
+   P <- rep(P0,nt) # initialise
+   for (i in 2:nt){
+     dPdt <- -P[i-1]*lambda
+     P[i] <- P[i-1] + dPdt*dt
+   }
+   Pexact <- P0*exp(-lambda*tt)
+   plot(tt,P,pch=16,cex=0.5)
+   lines(tt,Pexact)
+   ```
+
+1. Install the `IsoplotRgui` package and start it using the
+`IsoplotR()` function. Explore the Rb-Sr, Sm-Nd, Re-Os and Lu-Hf
+functions.
+
+## U-Pb
+
+1. Plot the U-Pb composition of sample 91500 on a Wetherill concordia
+diagram.
+
+   ```{r include=solution}
+   # Given the results of the main U-Pb practical:
+   smp0735a <- 1.873638
+   smp0638a <- 0.1819523
+   # A. basic solution
+   tt <- seq(from=0,to=2000,length.out=50)
+   x <- exp(l35*tt)-1
+   y <- exp(l38*tt)-1
+   if (FALSE){ # basic solution
+     plot(x,y,type='l')
+     points(smp0735a,smp0638a)
+   } else { # fancy solution
+     plot(x,y,type='l',
+          xlab=expression(''^207*'Pb/'^235*'U'),
+   	  ylab=expression(''^206*'Pb/'^238*'U'))
+     points(smp0735a,smp0638a,pch=21,bg='white')
+   }
+   # add age ticks to the concordia plot:
+   ttick <- seq(from=0,to=2000,by=250)
+   xt <- exp(l35*ttick)-1
+   yt <- exp(l38*ttick)-1
+   points(xt,yt,pch=16)
+   text(xt,yt,labels=ttick,pos=2)
+   ```
+
+1. Plot the U-Pb composition of sample 91500 on a Tera-Wasserburg
+concordia diagram (^207^Pb/^206^Pb vs. ^238^U/^206^Pb). Use a
+^238^U/^235^U-ratio of 137.818 for the conversion from Wetherill to
+Tera-Wasserburg space.
+
+   ```{r include=solution}
+     # Compute the Pb207/Pb206-ratio from the conventional ratios:
+     U3835 <- 137.818
+     smp0706a <- smp0735a/(U3835*smp0638a)
+     # draw the concordia line
+     l38 <- 0.000155125
+     l35 <- 0.00098485
+     tt <- seq(from=100,to=2000,length.out=50)
+     x <- 1/(exp(l38*tt)-1)
+     y <- (exp(l35*tt)-1)/(U3835*(exp(l38*tt)-1))
+     plot(x,y,type='l',
+          xlab=expression(''^238*'U/'^238*'Pb'),
+          ylab=expression(''^207*'Pb/'^206*'Pb'))
+     # add the sample data:
+     points(x=1/smp0638a,y=smp0706a,pch=21,bg='white')
+     # add age ticks to the concordia plot:
+     ttick <- seq(from=0,to=2000,by=250)
+     xt <- 1/(exp(l38*ttick)-1)
+     yt <- (exp(l35*ttick)-1)/(U3835*(exp(l38*ttick)-1))
+     points(xt,yt,pch=16)
+     text(xt,yt,labels=ttick,pos=4)
+   ```
+
+1. Explore the U-Pb functionality of the `IsoplotRgui` package.
+Change the options to compare different input formats. Each row in the
+example datasets represents an isotopic composition that was computed
+from mass spectrometer data using software that is similar to the `R`
+code that you wrote to process sample 91500. Plot data as Wetherill
+and Tera-Wasserburg concordia diagrams.
+
+```{r include=FALSE}
+dir <- '/home/pvermees/Documents/geotopes/practicals/extra/'
+setwd(dir)
+
+# generate synthetic Ar/Ar dataset
+J <- 0.003
+l40 <- 5.543e-4
+a4036 <- 295.5
+t <- 30:180 # acquisition times
+
+createfile <- function(t36_0,t39_0,t40_0,t,fname){
+   nt <- length(t)
+   r36 <- rpois(n=nt,lambda=t36_0-(t36_0/1000)*t)
+   r39 <- rpois(n=nt,lambda=t39_0-(t39_0/1000)*t)
+   r40 <- rpois(n=nt,lambda=t40_0-(t40_0/1000)*t)
+   tab <- cbind(t,r36,r39,r40)
+   colnames(tab) <- c('t','Ar36','Ar39','Ar40')
+   write.csv(tab,file=fname,row.names=FALSE)
+}
+
+ts <- 27.8
+s36_0 <- 5
+s40a <- a4036*s36_0
+s40t <- 400000
+s40_0 <- s40t + s40a
+s4039t <- (exp(l40*ts)-1)/J
+s39_0 <- s40t/s4039t
+createfile(s36_0,s39_0,s40_0,t,'stnd.csv')
+
+b36_0 <- 1
+b40_0 <- b36_0*a4036
+b39_0 <- 1
+createfile(b36_0,b39_0,b40_0,t,'blnk.csv')
+
+tx <- c(45,65,80,90,95,97.5,99,101,99,100)
+x36_0 <- 10
+x40a <- a4036*x36_0
+x40t <- c(0.02,0.05,0.1,0.4,0.5,0.5,0.6,0.4,0.2,0.05)*700000
+x40_0 <- x40t + x40a
+x4039t <- (exp(l40*tx)-1)/J
+x39_0 <- x40t/x4039t
+
+for (i in 1:length(tx)){
+   fname <- paste0('smpl',i,'.csv')
+   createfile(x36_0,x39_0[i],x40_0[i],t,fname)
+}
+```
+
+## Ar-Ar
+
+1. Process files `smpl1.csv` through `smpl10.csv` using your Ar-Ar
+data reduction script. Plot the results as an Ar-Ar release spectrum,
+using the following function. `Ar39` and `tx` are both vectors
+containing the blank corrected ^39^Ar signals and ^40^Ar/^39^Ar age
+estimates, respectively:
+
+   ```{r include=TRUE}
+   spectrum <- function(Ar39,tx){
+      Ar39n <- cumsum(c(0,Ar39))/sum(Ar39) # normalise
+      plot(x=Ar39n, y=c(tx[1],tx), type='s',
+           xlab=expression(''^39*"Ar (%)"), ylab='Ar-Ar age (Ma)')
+   }
+   ```
+
+   ```{r include=solution}
+   process <- function(std,smp,blk){
+      # linear regression of the data
+      std36fit <- lm(Ar36 ~ t, data=std)
+      std39fit <- lm(Ar39 ~ t, data=std)
+      std40fit <- lm(Ar40 ~ t, data=std)
+      smp36fit <- lm(Ar36 ~ t, data=smp)
+      smp39fit <- lm(Ar39 ~ t, data=smp)
+      smp40fit <- lm(Ar40 ~ t, data=smp)
+      blk36fit <- lm(Ar36 ~ t, data=blk)
+      blk39fit <- lm(Ar39 ~ t, data=blk)
+      blk40fit <- lm(Ar40 ~ t, data=blk)
+      # blank correction
+      std36b <- std36fit$coefficients[1] - blk36fit$coefficients[1]
+      std39b <- std39fit$coefficients[1] - blk39fit$coefficients[1]
+      std40b <- std40fit$coefficients[1] - blk40fit$coefficients[1]
+      smp36b <- smp36fit$coefficients[1] - blk36fit$coefficients[1]
+      smp39b <- smp39fit$coefficients[1] - blk39fit$coefficients[1]
+      smp40b <- smp40fit$coefficients[1] - blk40fit$coefficients[1]
+      # atmospheric correction
+      a4036 <- 298.5
+      std40r <- std40b - std36b*a4036
+      smp40r <- smp40b - smp36b*a4036
+      # calculate J
+      tstd <- 27.8    # standard age, in Ma
+      l40 <- 5.543e-4 # decay constant, in Ma-1
+      J <- (exp(l40*tstd)-1)*(std39b/std40r)
+      # calculate age
+      tx = log(1 + J*smp40r/smp39b)/l40
+      out <- list(Ar39=smp39b,tx=tx)
+      return(out)
+   }
+
+   setwd(dir)
+   std <- read.csv("stnd.csv",header=TRUE)
+   blk <- read.csv("blnk.csv",header=TRUE)
+   ns <- 10 # number of samples
+   Ar39 <- rep(NA,ns)
+   tx <- rep(NA,ns)
+   for (i in 1:ns){
+      sname <- paste0('smpl',i,'.csv')
+      smp <- read.csv(sname,header=TRUE)
+      results <- process(std,smp,blk)
+      Ar39[i] <- results$Ar39
+      tx[i] <- results$tx
+   }
+
+   spectrum(Ar39,tx)
+   ```
+
+1. Explore the ^40^Ar/^39^Ar-functionality of `IsoplotRgui`, including
+the plateau and isochron functions.
