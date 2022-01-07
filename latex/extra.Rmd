@@ -414,16 +414,16 @@ Solary System history contain measurable amounts of excess of ^129^Xe.
    \]
    The ratio of the two ratios is:
    \[
-   \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B}
-       {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A} =
-	 \exp[\lambda_{129}(t_B-t_A)]
+   \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A}
+       {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B} =
+	 \exp[\lambda_{129}(t_A-t_B)]
    \]
    Hence
    \[
-   t_B-t_A = \frac{1}{\lambda_{129}}
+   t_A-t_B = \frac{1}{\lambda_{129}}
    \left(
-   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B -
-   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
+   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A -
+   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
    \right)
    \]
    \fi
@@ -431,10 +431,142 @@ Solary System history contain measurable amounts of excess of ^129^Xe.
    l129 <- log(2)/15.7
    XeIA <- 13e-5
    XeIB <- 8e-5
-   dt <- (log(XeIB)-log(XeIA))/l129
+   dt <- (log(XeIA)-log(XeIB))/l129
    message('The age difference between the two meteorites is ',
    signif(dt,3),' million years.')
    ```
+
+```{r include=FALSE}
+tsmp <- 200
+tstd <- 98
+l40 <- log(2)/1248
+J <- 0.0025
+# 1. standard:
+Ar06std_a <- 298.5
+Ar09std_r <- (exp(l40*tstd)-1)/J
+Ar96std <- 100
+Ar06std_m <- Ar09std_r*Ar96std + Ar06std_a
+# 2. sample:
+Ar06smp_a <- 350
+Ar09smp_r <- (exp(l40*tsmp)-1)/J
+Ar96smp <- c(10,110,160)
+Ar06smp_m <- Ar09smp_r*Ar96smp + Ar06smp_a
+tabArAr <- round(rbind(c(Ar96std,Ar06std_m),
+                 cbind(Ar96smp,Ar06smp_m)))
+colnames(tabArAr) <- c("^39^Ar/^36^Ar","^40^Ar/^36^Ar")
+rownames(tabArAr) <- c("std","smp1","smp2","smp3")
+```
+1. Given the ^40^Ar/^39^Ar-data shown in the following table:
+
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabArAr)
+   ```
+
+   'std' is a 98 Ma reference material whose inherited argon content
+   is of atmospheric origin ($[$^40^Ar/^36^Ar$]$~atm~=298.5); whereas
+   'smp1', 'smp2' and 'smp3' are three cogenetic aliquots of a
+   metamorphic sample of unknown age.  What are the age and
+   non-radiogenic ^40^Ar/^36^Ar-ratio of the sample? Recall that the
+   half-life of ^40^K is 1248 Myr.
+
+   ```{r include=solution, out.width='50%', fig.width=5, fig.height=4}
+   # 1. atmospheric correction of the standard
+   Ar40Ar36a <- 298.5
+   Ar40Ar36m <- tabArAr['std',2]
+   Ar40Ar36r <- Ar40Ar36m - Ar40Ar36a
+   # 2. compute the J factor
+   tstd <- 98
+   l40 <- log(2)/1248
+   Ar39Ar36m <- tabArAr['std',1]
+   J <- (exp(l40*tstd)-1)*Ar39Ar36m/Ar40Ar36r
+   # 3. construct an isochron for the sample:
+   Ar39Ar36_smp <- tabArAr[2:4,1]
+   Ar40Ar36_smp <- tabArAr[2:4,2]
+   plot(x=Ar39Ar36_smp,y=Ar40Ar36_smp,type='b')
+   # 4. you can compute the slope and intercept of the line
+   #    either manually or using R's lm function:
+   fit <- lm(Ar40Ar36_smp ~ Ar39Ar36_smp)
+   Ar40Ar36_smp_0 <- fit$coefficients[1]
+   Ar40Ar39_smp_r <- fit$coefficients[2]
+   # 5. compute the age of the sample
+   tsmp <- log(J*Ar40Ar39_smp_r + 1)/l40
+   message('age=',signif(tsmp,2),
+           'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
+   ```
+
+1. Consider a rapidly cooled (volcanic) apatite of 10 Ma with an
+atomic Th/U ratio of 5. What is the ratio of helium atoms to fission
+tracks in it?  Look up the relevant decay constants in the notes.
+
+   \ifsol
+   The helium ingrowth equation:
+
+   $$
+   He =
+   \left[
+   8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
+   7 \frac{1}{138.818} (e^{\lambda_{235}t}-1)
+   \right] U + 6 (e^{\lambda_{232}t}-1) Th
+   $$
+
+   Because Th/U=5:
+  
+   $$
+   He =
+   \left[
+   8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
+   7 \frac{1}{138.818} (e^{\lambda_{235}t}-1) +
+   5 \times 6 (e^{\lambda_{232}t}-1)
+   \right] U
+   $$
+
+   The fundamental fission track age equation:
+
+   $$
+   n_s = \frac{\lambda_f}{\lambda_{238}}
+   \frac{137.818}{138.818} U (e^{\lambda_{238}t}-1)
+   $$
+
+   Hence:
+
+   $$
+   \frac{He}{n_s} =
+   \frac{
+   8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
+   7 \frac{1}{138.818} (e^{\lambda_{235}t}-1) +
+   30 (e^{\lambda_{232}t}-1)
+   }{
+   \frac{\lambda_f}{\lambda_{238}}
+   \frac{137.818}{138.818} (e^{\lambda_{238}t}-1)
+   }
+   $$
+
+   In \texttt{R}:
+   \fi
+   ```{r include=solution}
+   lf <- 8.46e-11 # Myr-1
+   l238 <- 1.55125e-4 # Myr-1
+   l235 <- 9.8485e-4 # Myr-1
+   l232 <- 4.95e-5 # Myr-1
+   tap <- 10 # Ma
+   num <- 8*(137.818/138.818)*(exp(l238*tap)-1) +
+         (7/138.818)*exp(l235*tap-1) + 30*(exp(l232*tap)-1)
+   den <- (lf/l238)*(137.818/138.818)*(exp(l238*tap)-1)
+   HeFT <- num/den
+   message('The He/FT-ratio is ',signif(HeFT,2))
+   ```
+   \ifsol
+   Even though spontaneous fission of ${}^{238}$U happens `only'
+   1.8 million times less frequently than $\alpha$-decay,
+   the apatite has produced 55 million times more $\alpha$ particles
+   than fission tracks because (1) each ${}^{238}$U atom produces
+   not one but eight helium atoms, and (2) not only ${}^{238}$U
+   but also ${}^{235}$U and ${}^{232}$Th contribute to the helium
+   budget. NB: $\alpha$-recoil damages the crystal lattice of
+   apatite and other U-bearing minerals, thereby affecting its
+   diffusivity. Thus the closure temperature of apatite can
+   vary as a function of time and U (and Th) concentration.
+   \fi
 
 1. Analysis of a granite yields:
    ```{r include=FALSE}
@@ -479,8 +611,6 @@ Solary System history contain measurable amounts of excess of ^129^Xe.
 
 # Practicals
 
-## Intro 
-
 1. Write a function to simulate radioactive decay, following the
 recipe shown in slide 13 of the first theory presentation. Compare the
 numerical approximation with the analytical solution. Explore the
@@ -503,14 +633,10 @@ effect of different time steps on the accuracy of the simulation.
    lines(tt,Pexact)
    ```
 
-1. Install the `IsoplotRgui` package and start it using the
-`IsoplotR()` function. Explore the Rb-Sr, Sm-Nd, Re-Os and Lu-Hf
-functions.
-
-## U-Pb
-
-1. Plot the U-Pb composition of sample 91500 on a Wetherill concordia
-diagram.
+1. Plot the U-Pb composition of sample 91500 on a Tera-Wasserburg
+concordia diagram (^207^Pb/^206^Pb vs. ^238^U/^206^Pb). Use a
+^238^U/^235^U-ratio of 137.818 for the conversion from Wetherill to
+Tera-Wasserburg space.
 
    ```{r include=solution}
    # Given the results of the main U-Pb practical:
@@ -536,12 +662,6 @@ diagram.
    points(xt,yt,pch=16)
    text(xt,yt,labels=ttick,pos=2)
    ```
-
-1. Plot the U-Pb composition of sample 91500 on a Tera-Wasserburg
-concordia diagram (^207^Pb/^206^Pb vs. ^238^U/^206^Pb). Use a
-^238^U/^235^U-ratio of 137.818 for the conversion from Wetherill to
-Tera-Wasserburg space.
-
    ```{r include=solution}
      # Compute the Pb207/Pb206-ratio from the conventional ratios:
      U3835 <- 137.818
@@ -564,13 +684,6 @@ Tera-Wasserburg space.
      points(xt,yt,pch=16)
      text(xt,yt,labels=ttick,pos=4)
    ```
-
-1. Explore the U-Pb functionality of the `IsoplotRgui` package.
-Change the options to compare different input formats. Each row in the
-example datasets represents an isotopic composition that was computed
-from mass spectrometer data using software that is similar to the `R`
-code that you wrote to process sample 91500. Plot data as Wetherill
-and Tera-Wasserburg concordia diagrams.
 
 ```{r include=FALSE}
 dir <- '/home/pvermees/Documents/geotopes/practicals/extra/'
@@ -619,8 +732,6 @@ for (i in 1:length(tx)){
    createfile(x36_0,x39_0[i],x40_0[i],t,fname)
 }
 ```
-
-## Ar-Ar
 
 1. Process files `smpl1.csv` through `smpl10.csv` using your Ar-Ar
 data reduction script. Plot the results as an Ar-Ar release spectrum,
@@ -686,5 +797,6 @@ estimates, respectively:
    spectrum(Ar39,tx)
    ```
 
-1. Explore the ^40^Ar/^39^Ar-functionality of `IsoplotRgui`, including
-the plateau and isochron functions.
+1. Install the `IsoplotRgui` package and start it using the
+`IsoplotR()` function. Explore the Rb-Sr, Sm-Nd, Re-Os and Lu-Hf
+functions.
