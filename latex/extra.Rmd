@@ -494,6 +494,47 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
            'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
    ```
 
+1. Analysis of a granite yields:
+   ```{r include=FALSE}
+   l38 <- IsoplotR::settings('lambda','U238')[1]
+   l40 <- IsoplotR::settings('lambda','K40')[1]
+   l87 <- IsoplotR::settings('lambda','Rb87')[1]
+   tUPbzirc <- 520
+   tKAramp <- 480
+   tKArbio <- 400
+   tRbSrmusc <- 470
+   tRbSrbio <- 460
+   PbUzirc <- exp(l38*tUPbzirc)-1
+   ArKamp <- exp(l40*tKAramp)-1
+   ArKbio <- exp(l40*tKArbio)-1
+   SrRbmusc <- exp(l87*tRbSrmusc)-1
+   SrRbbio <- exp(l87*tRbSrbio)-1
+   ttab <- matrix(signif(c(PbUzirc,ArKamp,ArKbio,SrRbmusc,SrRbbio),3),1,5)
+   colnames(ttab) <- c("^206^Pb*/^238^U (zircon)","^40^Ar*/^40^K (amphibole)",
+                       "^40^Ar*/^40^K (biotite)","^87^Sr*/^87^Rb (muscovite)",
+       		       "^87^Sr*/^87^Rb (biotite)")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(ttab)
+   ```
+   What is the likely age of intrusion of this granite? How reliable
+   is the result?
+
+   ```{r include=solution}
+   tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
+   colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
+   	     	     'Rb-Sr (musc)','Rb-Sr (bio)')
+   print(tt)
+   ```
+   \ifsol
+   The true age is probably around 550--520 Ma. The reason
+   being that some disruptive phenomenon has affected the region as
+   there is clearly a discordance in ages. The most robust of the
+   chronometers is U-Pb on zircons, but it is not perfect and this
+   apparent age may be made a little older. But this reasoning is
+   very rough and ready as can be seen!
+   \fi
+	
 1. Consider a rapidly cooled (volcanic) apatite of 10 Ma with an
 atomic Th/U ratio of 5. What is the ratio of helium atoms to fission
 tracks in it?  Look up the relevant decay constants in the notes.
@@ -555,6 +596,7 @@ tracks in it?  Look up the relevant decay constants in the notes.
    HeFT <- num/den
    message('The He/FT-ratio is ',signif(HeFT,2))
    ```
+	
    \ifsol
    Even though spontaneous fission of ${}^{238}$U happens `only'
    1.8 million times less frequently than $\alpha$-decay,
@@ -568,46 +610,134 @@ tracks in it?  Look up the relevant decay constants in the notes.
    vary as a function of time and U (and Th) concentration.
    \fi
 
-1. Analysis of a granite yields:
-   ```{r include=FALSE}
-   l38 <- IsoplotR::settings('lambda','U238')[1]
-   l40 <- IsoplotR::settings('lambda','K40')[1]
-   l87 <- IsoplotR::settings('lambda','Rb87')[1]
-   tUPbzirc <- 520
-   tKAramp <- 480
-   tKArbio <- 400
-   tRbSrmusc <- 470
-   tRbSrbio <- 460
-   PbUzirc <- exp(l38*tUPbzirc)-1
-   ArKamp <- exp(l40*tKAramp)-1
-   ArKbio <- exp(l40*tKArbio)-1
-   SrRbmusc <- exp(l87*tRbSrmusc)-1
-   SrRbbio <- exp(l87*tRbSrbio)-1
-   ttab <- matrix(signif(c(PbUzirc,ArKamp,ArKbio,SrRbmusc,SrRbbio),3),1,5)
-   colnames(ttab) <- c("^206^Pb*/^238^U (zircon)","^40^Ar*/^40^K (amphibole)",
-                       "^40^Ar*/^40^K (biotite)","^87^Sr*/^87^Rb (muscovite)",
-       		       "^87^Sr*/^87^Rb (biotite)")
-   ```
-   ```{r include=TRUE, echo=FALSE, results='asis'}
-   knitr::kable(ttab)
-   ```
-   What is the likely age of intrusion of this granite? How reliable
-   is the result?
+1. Recent advances in analytical chemistry allow fission track
+geochronologist to replace the trusted external detector method with
+an alternative approach, in which the U-content of the sample is
+measured directly by Laser Ablation Inductively Coupled Mass
+Spectrometry (LA-ICP-MS), the same technique that is also used for
+in-situ U-Pb geochronology. Using LA-ICP-MS, it is possible to compute
+fission track ages using Equation 7.8 of the notes. Calculate the
+fission track age and propagate its uncertainty for the following
+apatite data:
+
+   | parameter | value |
+   |-----------|-------|
+   | fission track track count | 49 |
+   | counting area | 5000 \textmu m^2^ |
+   | average fission track length | 15 \textmu m |
+   | U-concentration | 10 ppm |
+   | density of apatite | 3.19 g/cm^3^ |
+   | molar mass of U | 238.04 g/mol |
 
    ```{r include=solution}
-   tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
-   colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
-   	     	     'Rb-Sr (musc)','Rb-Sr (bio)')
-   print(tt)
+   Ns <- 49        # dimensionless
+   A <- 5000       # micron^2
+   L <- 15         # micron
+   Uppm <- 10      # microgram/gram
+   apdens <- 3.19  # g/cc
+   MU <- 238.04    # g/mol
+   rhos <- Ns/A    # micron^-2
+   atmumol <- 6.022e17                    # atoms/micromol (Avogadro's number)
+   ccmum3 <- 1e-12                        # cc/micron^3
+   Umumolg <- Uppm/MU                     # micromol/g
+   Umumolcc <- Umumolg*apdens             # micromol/cc
+   Uatmum3 <- Umumolcc*ccmum3*atmumol     # atoms(U)/micron^3
+   U238atmum3 <- Uatmum3*137.818/138.818  # atoms(U238)/micron^3
+   l38 <- 1.55125e-4 # 238U total decay constant, Myr-1
+   lf <- 8.46e-11    # 238U fission decay constant, Myr-1
+   R <- l38*rhos/(lf*U238atmum3*L)
+   tFT <- log(1+R)/l38
+   rhoserr <- sqrt(Ns)/A
+   Rerr <- l38*rhoserr/(lf*U238atmum3*L)
+   tFTerr <- Rerr/((1+R)*l38)
+   message('age=',signif(tFT,3),'Ma, s.e.=',signif(tFTerr,3),'Ma')
    ```
+
+1. The ^234^U/^238^U activity ratio of sea water is rarely exceeds
+1.15.  However, much higher activity ratios have been measured in
+fresh waters and cave carbonates (speleothems). Suppose that we have
+measured a ^234^U/^238^U activity ratio of 1.1 in a 1 Ma old
+speleothem. What was its _initial_ ^234^U/^238^U-ratio?
+
    \ifsol
-   The true age is probably around 550--520 Ma. The reason
-   being that some disruptive phenomenon has affected the region as
-   there is clearly a discordance in ages. The most robust of the
-   chronometers is U-Pb on zircons, but it is not perfect and this
-   apparent age may be made a little older. But this reasoning is
-   very rough and ready as can be seen!
+   Rearrange Equation 9.3 of the notes for $\gamma_\circ$:
+   $$
+   \gamma_\circ = 1 + \left(\frac{A(^{234}U)}{A(^{238}U)} - 1\right) e^{\lambda_{234}t}
+   $$
    \fi
+   ```{r include=solution}
+   tU48 <- 1000 # ka
+   l234 <- 0.00282206 # kyr-1
+   A48 <- 1.1
+   g0 <- 1 + (A48-1)*exp(l234*tU48)
+   message('The initial 234U/238U activity ratio was ',signif(g0,3))
+   ```
+
+1. Although U-series disequilibrium measurements were historically
+done by $\alpha$-counting, in recent decades this method has been
+replaced by mass specrometry. Consider the following composition of
+three cogenetic aliquots:
+
+   ```{r include=FALSE}
+   tThU <- 50
+   A02i <- 0.5
+   l238 <- 1.55125e-7 # kyr-1
+   Uppm <- c(2,4,5)
+   Umumolg <- Uppm/238.03
+   U238mumolg <- Umumolg*137.818/138.818
+   AU238 <- U238mumolg*l238
+   l232 <- 4.95e-8 # kyr-1
+   l230 <- 0.0091705 # kyr-1
+   Thppm <- c(5,3,3)
+   Th232mumolg <- Thppm/232.04
+   ATh232 <- Th232mumolg*l232
+   A02 <- A02i + (AU238/ATh232)*(1-exp(-l230*tThU))
+   ATh230 <- ATh232*A02
+   Th230mumolg <- ATh230/l230
+   Th02 <- Th230mumolg/Th232mumolg
+   tabThU <- cbind(Uppm,Thppm,
+   format(Th02,digits=4,scientific=FALSE))
+   colnames(tabThU) <- c('ppm U','ppm Th','^230^Th/^232^Th')
+   rownames(tabThU) <- 1:length(Uppm)
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabThU)
+   ```
+   How old is the rock?
+   ```{r include=solution}
+   # 1. store the data into three variables:
+   Uppm
+   Thppm
+   Th02
+   # 2. convert Uppm and Thppm to activities:
+   l238 <- 1.55125e-7 # kyr-1
+   l232 <- 4.95e-8 # kyr-1
+   MU <- 238.03
+   MTh <- 232.04
+   U238mumolg <- (Uppm/MU)*(137.818/138.818)
+   Th232mumolg <- Thppm/MTh
+   AU238 <- U238mumolg*l238
+   ATh232 <- Th232mumolg*l232
+   # (inspect the activities in relatable units):
+   Navog <- 6.022e23
+   AU238dpmg <- AU238*Navog/(1e4*365*24*60) # decay events per minute per gram
+   ATh232dpmg <- ATh232*Navog/(1e4*365*24*60) # decay events per minute per gram
+   message('A(U238)=',signif(AU238dpmg,3),' decay events per minute and gram')
+   message('A(Th232)=',signif(ATh232dpmg,3),' decay events per minute and gram')
+   # 3. compute the activity ratios:
+   A82 <- U238mumolg/Th232mumolg
+   Th230mumolg <- Th232mumolg*Th02
+   l230 <- 0.0091705 # kyr-1
+   ATh230 <- Th230mumolg*l230
+   A02 <- ATh230/ATh232
+   # 4. plot on an isochron diagram and find the slope:
+   plot(x=A82,y=A02,type='b',xlab='U238/Th232',ylab='Th230/Th232')
+   fit <- lm(A02 ~ A82)$coefficients[2]
+   # alternatively:
+   slope <- diff(A02)/diff(A82)
+   # 5. compute the age:
+   
+   ```
 
 # Practicals
 
@@ -796,7 +926,3 @@ estimates, respectively:
 
    spectrum(Ar39,tx)
    ```
-
-1. Install the `IsoplotRgui` package and start it using the
-`IsoplotR()` function. Explore the Rb-Sr, Sm-Nd, Re-Os and Lu-Hf
-functions.
