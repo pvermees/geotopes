@@ -9,7 +9,7 @@ output:
 
 ```{r settings, include = FALSE}
 solution <- FALSE
-knitr::opts_chunk$set(include=TRUE, echo=TRUE)
+knitr::opts_chunk$set(echo=solution, include=FALSE)
 set.seed(1)
 # rmarkdown::render('~/Documents/geotopes/latex/extra.Rmd')
 ```
@@ -33,7 +33,7 @@ $1.660538\times{10}^{-27}$ kg.
    \]
    \fi
 
-   ```{r include=solution}
+   ```{r}
    e <- 1.60219e-19 # C
    r <- 0.3 # m
    H <- 0.5 # T
@@ -72,7 +72,7 @@ does that correspond to?
    \]
    \fi
 
-   ```{r include=solution}
+   ```{r}
    r57 <- 2.5933
    f87 <- 1/(1+r57) # mol/mol
    ppmRb <- 10     # ug/g
@@ -92,7 +92,7 @@ billion years ago?
    \]
    \fi
 
-   ```{r include=solution}
+   ```{r}
    # 1. compute the decay constant:
    t12 = 48.8
    l87 = log(2)/t12
@@ -115,7 +115,7 @@ Egyptian artefact from approximately 2000 BC. What is the approximate
 activity (A) of this artefact? If our method can measure 1 dpm, what
 mass of the (probably precious) sample will have to be destroyed?
 
-   ```{r include=solution}
+   ```{r}
    # decay constant:
    t12 <- 5730
    l14 <- log(2)/t12
@@ -172,7 +172,7 @@ ice.
    $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
    out to be a mere 21 million atoms per kg!
    \fi
-   ```{r include=solution, fig.width=4, fig.height=4}
+   ```{r fig.width=4, fig.height=4}
    depth <- tabPb210[1,]
    Pb210 <- tabPb210[2,]
    fit <- lm(log(Pb210) ~ depth)
@@ -204,7 +204,7 @@ sample:
    ```
    How old is the sample?
 
-   ```{r include=solution, fig.width=4, fig.height=4}
+   ```{r fig.width=4, fig.height=4}
    RbSr <- tabRbSr[,1]
    SrSr <- tabRbSr[,2]
    plot(x=RbSr,y=SrSr,type='b')
@@ -219,7 +219,7 @@ half-lives of ^238^U and ^235^U are 4.468 and 0.704 Gyr, respectively.
 The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
 ^207^Pb/^206^Pb-ratio for modern uranium-ores?
 
-   ```{r include=solution}
+   ```{r}
    # meteorite:
    tPbPb <- 4.57
    l38 <- log(2)/4.468
@@ -249,7 +249,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    \frac{N_{207}}{N_{206}} = \frac{\lambda_{235}N_{235}}{\lambda_{238}N_{238}}
    \]
    \fi
-   ```{r include=solution}
+   ```{r}
    message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l38/l35,3))
    ```
 
@@ -283,7 +283,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    b. Sketch a geological history for the sample (hint: consider the
    U-Pb composition in concordia space).
    
-   ```{r include=solution, fig.width=4, fig.height=4}
+   ```{r fig.width=4, fig.height=4}
    # common Pb composition:
    Pb64i <- tabUPb[1,1]
    Pb74i <- tabUPb[1,2]
@@ -349,7 +349,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    ```
 
    Hint: think isochrons.
-   ```{r include=solution, out.width='60%', fig.width=5, fig.height=4}
+   ```{r out.width='60%', fig.width=5, fig.height=4}
    Pb64 <- PbPbtab[1,]
    Pb74 <- PbPbtab[2,]
    Pb76 <- lm(Pb74 ~ Pb64)$coefficients[2]
@@ -370,7 +370,7 @@ age of the Earth's atmosphere''?  K has three isotopes with
 undergoes branched decay to ^40^Ar (10.72%) and ^40^Ca (89.28%) with a
 half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
 
-   ```{r include=solution}
+   ```{r}
    GtEarth <- 4e24/1e12  # convert kg to Gt
    GtK <- GtEarth*250e-6 # Gt of K in the silicate Earth
    MK <- 39.1e-6 # Gt/Gmol
@@ -429,7 +429,7 @@ Solary System history contain measurable amounts of excess of ^129^Xe.
    \right)
    \]
    \fi
-   ```{r include=solution}
+   ```{r}
    l129 <- log(2)/15.7
    XeIA <- 13e-5
    XeIB <- 8e-5
@@ -471,7 +471,7 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    non-radiogenic ^40^Ar/^36^Ar-ratio of the sample? Recall that the
    half-life of ^40^K is 1248 Myr.
 
-   ```{r include=solution, out.width='50%', fig.width=5, fig.height=4}
+   ```{r out.width='50%', fig.width=5, fig.height=4}
    # 1. atmospheric correction of the standard
    Ar40Ar36a <- 298.5
    Ar40Ar36m <- tabArAr['std',2]
@@ -522,7 +522,7 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    What is the likely age of intrusion of this granite? How reliable
    is the result?
 
-   ```{r include=solution}
+   ```{r}
    tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
    colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
    	     	     'Rb-Sr (musc)','Rb-Sr (bio)')
@@ -586,7 +586,7 @@ tracks in it?  Look up the relevant decay constants in the notes.
 
    In \texttt{R}:
    \fi
-   ```{r include=solution}
+   ```{r}
    lf <- 8.46e-11 # Myr-1
    l238 <- 1.55125e-4 # Myr-1
    l235 <- 9.8485e-4 # Myr-1
@@ -631,7 +631,7 @@ apatite data:
    | density of apatite | 3.19 g/cm^3^ |
    | molar mass of U | 238.04 g/mol |
 
-   ```{r include=solution}
+   ```{r}
    Ns <- 49        # dimensionless
    A <- 5000       # micron^2
    L <- 15         # micron
@@ -667,7 +667,7 @@ speleothem. What was its _initial_ ^234^U/^238^U-ratio?
    \gamma_\circ = 1 + \left(\frac{A(^{234}U)}{A(^{238}U)} - 1\right) e^{\lambda_{234}t}
    $$
    \fi
-   ```{r include=solution}
+   ```{r}
    tU48 <- 1000 # ka
    l234 <- 0.00282206 # kyr-1
    A48 <- 1.1
@@ -705,7 +705,7 @@ three cogenetic aliquots:
    knitr::kable(tabThU)
    ```
    How old is the rock?
-   ```{r include=solution}
+   ```{r}
    # 1. store the data into three variables:
    Uppm
    Thppm
@@ -747,7 +747,7 @@ recipe shown in slide 13 of the first theory presentation. Compare the
 numerical approximation with the analytical solution. Explore the
 effect of different time steps on the accuracy of the simulation.
 
-   ```{r include=solution}
+   ```{r}
    decay <- function(P0=100,lambda=0.1,dt=1){
       t12 <- log(2)/lambda
       tt <- seq(from=0,to=5*t12,by=dt)
@@ -777,7 +777,7 @@ concordia diagram (^207^Pb/^206^Pb vs. ^238^U/^206^Pb). Use a
 ^238^U/^235^U-ratio of 137.818 for the conversion from Wetherill to
 Tera-Wasserburg space.
 
-   ```{r include=solution}
+   ```{r}
    # Given the results of the main U-Pb practical:
    smp0735a <- 1.873638
    smp0638a <- 0.1819523
@@ -801,7 +801,7 @@ Tera-Wasserburg space.
    points(xt,yt,pch=16)
    text(xt,yt,labels=ttick,pos=2)
    ```
-   ```{r include=solution}
+   ```{r}
      # Compute the Pb207/Pb206-ratio from the conventional ratios:
      U3835 <- 137.818
      smp0706a <- smp0735a/(U3835*smp0638a)
@@ -886,7 +886,7 @@ estimates, respectively:
    }
    ```
 
-   ```{r include=solution}
+   ```{r}
    process <- function(std,smp,blk){
       # linear regression of the data
       std36fit <- lm(Ar36 ~ t, data=std)
