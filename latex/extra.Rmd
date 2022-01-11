@@ -21,8 +21,10 @@ set.seed(1)
 
 1. A mass spectrometer has a radius of 0.3 m and an acceleration
 voltage of 10 000 V. The magnetic field is adjusted to the various
-masses to be measured. Calculate the atomic mass corresponding to a
-field of 0.5 T.
+masses to be measured. Calculate the atomic mass of a single charged
+ion corresponding to a field of 0.5 T. Note: the elementary charge is
+$1.60219\times{10}^{-19}$ C and 1 atomic mass unit (amu) =
+$1.660538\times{10}^{-27}$ kg.
 
    \ifsol
    Rearrange Equation 3.4 of the notes:
@@ -43,20 +45,20 @@ field of 0.5 T.
 
 1. What types of radioactivity are involved in the following
 reactions: ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd,
-${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{23}$Cr, ${}^{230}_{~90}$Th
+${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr, ${}^{230}_{~90}$Th
 $\rightarrow$ ${}^{226}_{88}$Ra?
 
    \ifsol
    ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd: $\alpha$
    
-   ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{23}$Cr: e.c.
+   ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr: e.c.
    
    ${}^{230}_{~90}$Th $\rightarrow$ ${}^{226}_{88}$Ra: $\alpha$
    \fi
 
 1. Rb has two isotopes, ^85^Rb and ^87^Rb, which exist in a constant
 ratio in our Solar System: ^85^Rb/^87^Rb = 2.5933. The molar mass of
-Rb is 85.4678. A rock contains 10pm of Rb. How many mol/g of ^87^Rb
+Rb is 85.4678. A rock contains 10ppm of Rb. How many mol/g of ^87^Rb
 does that correspond to?
 
    \ifsol
@@ -127,33 +129,6 @@ mass of the (probably precious) sample will have to be destroyed?
    ', which requires ',signif(mass,2),' mg of material.')
    ```
 
-1. Consider the Rb-Sr composition of three aliquots from the same
-sample:
-   ```{r include=FALSE}
-   t12Rb87 <- 48.8
-   l87 <- log(2)/t12Rb87
-   tRbSr <- 1.5
-   Rb87Sr86 <- c(0.05,0.1,0.2)
-   Sr87Sr86_0 <- 0.7
-   Sr87Sr86 <- Sr87Sr86_0 + Rb87Sr86*(exp(l87*tRbSr)-1)
-   tabRbSr <- cbind(Rb87Sr86,signif(Sr87Sr86,5))
-   colnames(tabRbSr) <- c("^87^Rb/^86^Sr","^87^Rb/^86^Rb")
-   rownames(tabRbSr) <- c("mineral A","mineral B","mineral C")
-   ```
-   ```{r include=TRUE, echo=FALSE, results='asis'}
-   knitr::kable(tabRbSr)
-   ```
-   How old is the sample?
-
-   ```{r include=solution, fig.width=4, fig.height=4}
-   RbSr <- tabRbSr[,1]
-   SrSr <- tabRbSr[,2]
-   plot(x=RbSr,y=SrSr,type='b')
-   fit <- lm(SrSr ~ RbSr)
-   tRbSr <- log(fit$coefficients[2]+1)/l87
-   message('Rb/Sr-age = ',signif(tRbSr*1000,2),' Ma')
-   ```
-
 1. ^210^Pb is a short lived (t~1/2~=22.3 yr) intermediate daughter of
 the ^238^U decay chain. This natural radioactive lead is incorporated
 into ice deposited in Greenland by forming successive layers of ice
@@ -165,7 +140,7 @@ ice.
    depth <- c(0,1,1.5,2.5)
    Pb210 <- c(75,32,24,10)
    tabPb210 <- rbind(depth,Pb210)
-   rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/k)")
+   rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/kg)")
    colnames(tabPb210) <- 1:length(depth)
    ```
    ```{r include=TRUE, echo=FALSE, results='asis'}
@@ -209,6 +184,33 @@ ice.
    message("1 kg of modern ice contains ", round(Pb210atoms/1e6),' million atoms of 210Pb')
    plot(depth,Pb210,type='p',log='y')
    lines(depth,exp(fit$fitted.values))
+   ```
+
+1. Consider the Rb-Sr composition of three aliquots from the same
+sample:
+   ```{r include=FALSE}
+   t12Rb87 <- 48.8
+   l87 <- log(2)/t12Rb87
+   tRbSr <- 1.5
+   Rb87Sr86 <- c(0.05,0.1,0.2)
+   Sr87Sr86_0 <- 0.7
+   Sr87Sr86 <- Sr87Sr86_0 + Rb87Sr86*(exp(l87*tRbSr)-1)
+   tabRbSr <- cbind(Rb87Sr86,signif(Sr87Sr86,5))
+   colnames(tabRbSr) <- c("^87^Rb/^86^Sr","^87^Rb/^86^Rb")
+   rownames(tabRbSr) <- c("mineral A","mineral B","mineral C")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabRbSr)
+   ```
+   How old is the sample?
+
+   ```{r include=solution, fig.width=4, fig.height=4}
+   RbSr <- tabRbSr[,1]
+   SrSr <- tabRbSr[,2]
+   plot(x=RbSr,y=SrSr,type='b')
+   fit <- lm(SrSr ~ RbSr)
+   tRbSr <- log(fit$coefficients[2]+1)/l87
+   message('Rb/Sr-age = ',signif(tRbSr*1000,2),' Ma')
    ```
 
 1. What is the expected ^207^Pb/^206^Pb-ratio of a 4.57 billion year
@@ -279,7 +281,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    a. Calculate the ^206^Pb/^238^U and ^207^Pb/^235^U ages
 
    b. Sketch a geological history for the sample (hint: consider the
-   U-Pb composion in concordia space).
+   U-Pb composition in concordia space).
    
    ```{r include=solution, fig.width=4, fig.height=4}
    # common Pb composition:
@@ -695,8 +697,7 @@ three cogenetic aliquots:
    ATh230 <- ATh232*A02
    Th230mumolg <- ATh230/l230
    Th02 <- Th230mumolg/Th232mumolg
-   tabThU <- cbind(Uppm,Thppm,
-   format(Th02,digits=4,scientific=FALSE))
+   tabThU <- cbind(Uppm,Thppm,format(Th02,digits=4,scientific=FALSE))
    colnames(tabThU) <- c('ppm U','ppm Th','^230^Th/^232^Th')
    rownames(tabThU) <- 1:length(Uppm)
    ```
@@ -720,23 +721,23 @@ three cogenetic aliquots:
    ATh232 <- Th232mumolg*l232
    # (inspect the activities in relatable units):
    Navog <- 6.022e23
-   AU238dpmg <- AU238*Navog/(1e4*365*24*60) # decay events per minute per gram
-   ATh232dpmg <- ATh232*Navog/(1e4*365*24*60) # decay events per minute per gram
-   message('A(U238)=',signif(AU238dpmg,3),' decay events per minute and gram')
-   message('A(Th232)=',signif(ATh232dpmg,3),' decay events per minute and gram')
+   AU238dpmg <- AU238*Navog/(1e3*365*24*60) # dpm per gram
+   ATh232dpmg <- ATh232*Navog/(1e3*365*24*60) # dpm per gram
+   message('A(U238)=',paste0(signif(AU238dpmg,6),', '),' dpm/g')
+   message('A(Th232)=',paste0(signif(ATh232dpmg,6),', '),' dpm/g')
    # 3. compute the activity ratios:
-   A82 <- U238mumolg/Th232mumolg
+   A82 <- AU238/ATh232
    Th230mumolg <- Th232mumolg*Th02
    l230 <- 0.0091705 # kyr-1
    ATh230 <- Th230mumolg*l230
    A02 <- ATh230/ATh232
    # 4. plot on an isochron diagram and find the slope:
    plot(x=A82,y=A02,type='b',xlab='U238/Th232',ylab='Th230/Th232')
-   fit <- lm(A02 ~ A82)$coefficients[2]
-   # alternatively:
-   slope <- diff(A02)/diff(A82)
+   slope <- lm(A02 ~ A82)$coefficients[2]
+   # verify that this equals diff(A02)/diff(A82)
    # 5. compute the age:
-   
+   tThU <- -log(1-slope)/l230
+   message('the Th/U-age is ',signif(tThU,3),'ka')
    ```
 
 # Practicals
@@ -747,20 +748,28 @@ numerical approximation with the analytical solution. Explore the
 effect of different time steps on the accuracy of the simulation.
 
    ```{r include=solution}
-   P0 <- 100
-   lambda <- 0.1
-   t12 <- log(2)/lambda
-   dt <- 1
-   tt <- seq(from=0,to=5*t12,by=dt)
-   nt <- length(tt)
-   P <- rep(P0,nt) # initialise
-   for (i in 2:nt){
-     dPdt <- -P[i-1]*lambda
-     P[i] <- P[i-1] + dPdt*dt
+   decay <- function(P0=100,lambda=0.1,dt=1){
+      t12 <- log(2)/lambda
+      tt <- seq(from=0,to=5*t12,by=dt)
+      nt <- length(tt)
+      P <- rep(P0,nt) # initialise
+      for (i in 2:nt){
+      dPdt <- -P[i-1]*lambda
+      P[i] <- P[i-1] + dPdt*dt
+      }
+      Pexact <- P0*exp(-lambda*tt)
+      plot(tt,P,pch=16,cex=0.5)
+      mtext(text=paste0('P0=',P0,', lambda=',lambda,', dt=',dt),
+            side=3,line=-1,cex=0.8)
+      lines(tt,Pexact)
    }
-   Pexact <- P0*exp(-lambda*tt)
-   plot(tt,P,pch=16,cex=0.5)
-   lines(tt,Pexact)
+
+   # use the function:
+   par(mfrow=c(2,2),mar=c(4,4,0.5,0.5))
+   decay()
+   decay(dt=5)
+   decay(dt=0.01)
+   decay(P0=1000)
    ```
 
 1. Plot the U-Pb composition of sample 91500 on a Tera-Wasserburg
