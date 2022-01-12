@@ -135,11 +135,13 @@ into ice deposited in Greenland by forming successive layers of ice
 which can be studied like sedimentary strata.  The activity of ^210^Pb
 is measured at four levels in disintegrations per hour per kilogram of
 ice.
-
    ```{r include=FALSE}
    depth <- c(0,1,1.5,2.5)
-   Pb210 <- c(75,32,24,10)
-   tabPb210 <- rbind(depth,Pb210)
+   l210 <- log(2)/22.3 # yr-1
+   Pb210i <- 75
+   rate <- 4e-2 # m/yr
+   Pb210 <- Pb210i*exp(-l210*depth/rate)
+   tabPb210 <- rbind(depth,signif(Pb210,3))
    rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/kg)")
    colnames(tabPb210) <- 1:length(depth)
    ```
@@ -148,27 +150,27 @@ ice.
    ```
    
    Calculate the sedimentation rate of the ice. Assuming a constant
-   rate and a compaction factor of 5, how thick will the glacier be
-   in 5000 years?  Calculate the ^210^Pb-content of fresh ice (in
-   mol/kg or atoms/kg).
+   rate and a compaction factor of 5, how much ice will have
+   accumulated in 5000 years?  Calculate the ^210^Pb-content of fresh
+   ice (in mol/kg or atoms/kg).
 
    \ifsol
    \[
    {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}t]
    \]
-   If the rate of deposition is $R$ and thickness $T$, we have $t = T/R$.
+   If the rate of deposition is $r$ and depth $d$, we have $t = d/r$.
    The equation then becomes:
    \[
-   {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}T/R]
+   {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}d/r]
    \]
    Taking logarithms:
    \[
-   \ln[{}^{210}Pb] = \ln[{}^{210}Pb_\circ] -\lambda_{210}T/R
+   \ln[{}^{210}Pb] = \ln[{}^{210}Pb_\circ] -\lambda_{210}d/r
    \]
-   If the \textsuperscript{210}Pb content has remained constant over time,
-   the data points must be aligned in a ($\ln[{}^{210}Pb]$ -- T plot.
-   The slope is therefore $-\lambda_{210}$/R.
-   A modern activity of $\lambda_{210}N_{210} \times 75$ dph/kg corresponds to
+   If the initial \textsuperscript{210}Pb content has remained constant over time,
+   the data points must be aligned in a plot of $\ln[{}^{210}Pb]$ vs. $d$.
+   The slope is therefore $-\lambda_{210}$/r.
+   A modern activity of $\lambda_{210}N_{210} = 75$ dph/kg corresponds to
    $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
    out to be a mere 21 million atoms per kg!
    \fi
@@ -177,9 +179,9 @@ ice.
    Pb210 <- tabPb210[2,]
    fit <- lm(log(Pb210) ~ depth)
    l210 <- log(2)/22.3
-   R <- -l210/fit$coefficients[2]
-   message("The accumulation rate is ",signif(100*R,3),'cm/yr')
-   message("In 5000 years, there will be ",signif(5000*R/5,3),'m of ice accumulation')
+   r <- -l210/fit$coefficients[2]
+   message("The accumulation rate is ",signif(100*r,3),'cm/yr')
+   message("In 5000 years, there will be ",signif(5000*r/5,3),'m of ice accumulation')
    Pb210atoms <- Pb210[1]*24*365.25/l210 
    message("1 kg of modern ice contains ", round(Pb210atoms/1e6),' million atoms of 210Pb')
    plot(depth,Pb210,type='p',log='y')
@@ -271,7 +273,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    Pb74_2 <- U5Pb4*(exp(l35*t2)-1)
    Pb64 <- Pb64i + (1-floss)*Pb64_1 + floss*Pb64_2
    Pb74 <- Pb74i + (1-floss)*Pb74_1 + floss*Pb74_2
-   tabUPb <- signif(cbind(Pb64,Pb74,U8Pb4),3)
+   tabUPb <- signif(cbind(Pb64,Pb74,U8Pb4),4)
    rownames(tabUPb) <- c('aliquot A','aliquot B','aliquot C','aliquot D')
    colnames(tabUPb) <- c("^206^Pb/^204^Pb","^207^Pb/^204^Pb","^238^U/^204^Pb")
    ```
@@ -297,7 +299,6 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    colnames(ttab) <- c('t(206Pb/238U)','t(207Pb/235U)')
    print(rbind(ttab))
    colnames(tabUPb) <- c('206Pb/204Pb','207Pb/204Pb','238U/204Pb')
-   print(tabUPb)
    IsoplotR::concordia(tlim=c(0,2500))
    points(Pb7U5,Pb6U8,pch=16)
    lines(Pb7U5,Pb6U8)
@@ -348,7 +349,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    knitr::kable(ttab)
    ```
 
-   Hint: think isochrons.
+   Hint: plot ^207^Pb/^204^Pb vs. ^206^Pb/^204^Pb.
    ```{r out.width='60%', fig.width=5, fig.height=4}
    Pb64 <- PbPbtab[1,]
    Pb74 <- PbPbtab[2,]
@@ -392,13 +393,14 @@ half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
 million years. It decays (or rather: decayed!) to the noble gas
 ^129^Xe. Although there is no (natural) ^129^I in the Solar System
 today, the nuclide did exist during its earliest stages. Iodine-rich
-meteorites that within the first few 10s of millions of years of
-Solary System history contain measurable amounts of excess of ^129^Xe.
+meteorites that existed within the first few 10s of millions of years
+of Solar System history contain measurable amounts of excess of
+^129^Xe.
 
    Consider two meteorites with ^129^Xe/^127^I ratios of
    13$\times{10}^{-5}$ and 8$\times{10}^{-5}$, respectively. What is
-   the age difference between the two meteorites? Assume that all the
-   ^129^Xe is radiogenic, and that the early Solar System had a
+   the age _difference_ between the two meteorites? Assume that all
+   the ^129^Xe is radiogenic, and that the early Solar System had a
    homogeneous ^129^I/^127^I-composition.
 
    \ifsol
@@ -406,23 +408,23 @@ Solary System history contain measurable amounts of excess of ^129^Xe.
    of the early Solar System, and let $t_A$ and $t_B$ be the ages of the
    two meteorites (counting from the start of the Solar System). Then
    \[
-   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A
-   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_A]
+   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A =
+   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[-\lambda_{129}t_A]
    \]
    and
    \[
-   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
-   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[\lambda_{129}t_B]
+   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B =
+   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[-\lambda_{129}t_B]
    \]
    The ratio of the two ratios is:
    \[
    \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A}
        {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B} =
-	 \exp[\lambda_{129}(t_A-t_B)]
+	 \exp[\lambda_{129}(t_B-t_A)]
    \]
    Hence
    \[
-   t_A-t_B = \frac{1}{\lambda_{129}}
+   t_B-t_A = \frac{1}{\lambda_{129}}
    \left(
    \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A -
    \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
@@ -465,11 +467,11 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    ```
 
    'std' is a 98 Ma reference material whose inherited argon content
-   is of atmospheric origin ($[$^40^Ar/^36^Ar$]$~atm~=298.5); whereas
-   'smp1', 'smp2' and 'smp3' are three cogenetic aliquots of a
-   metamorphic sample of unknown age.  What are the age and
-   non-radiogenic ^40^Ar/^36^Ar-ratio of the sample? Recall that the
-   half-life of ^40^K is 1248 Myr.
+   is of atmospheric origin ($[$^40^Ar/^36^Ar$]$~atm~=298.5); 'smp1',
+   'smp2' and 'smp3' are three cogenetic aliquots of a metamorphic
+   sample of unknown age.  What are the age and non-radiogenic
+   ^40^Ar/^36^Ar-ratio of the sample? Recall that the half-life of
+   ^40^K is 1248 Myr.
 
    ```{r out.width='50%', fig.width=5, fig.height=4}
    # 1. atmospheric correction of the standard
@@ -534,9 +536,83 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    there is clearly a discordance in ages. The most robust of the
    chronometers is U-Pb on zircons, but it is not perfect and this
    apparent age may be made a little older. But this reasoning is
-   very rough and ready as can be seen!
+   very rough and ready! A more detailed assessment would involve
+   textural analysis, diffusion experiments and numerical modelling.
    \fi
-	
+
+1. Age-elevation profiles are a powerful method to determine tectonic
+exhumation rates: by measuring the U-Th-He (and/or fission track) ages
+of samples collected at different elevations along a steep mountain
+transect, it is possible to determine vertical travel times from the
+closure isotherm ($\sim{60}^\circ$C) to the Earth's surface.
+Consider the following dataset:
+```{r include=FALSE}
+   dzdt <- 5e-4 # m/yr
+   z <- c(2000,3000,3500,4000) # m, sample elevation
+   D <- 0 # m, elevation of the closure isotherm
+   tHe <- ((z-D)/dzdt)*1e-6
+   Uppm <- c(10,12,9,15) # ppm
+   Thppm <- c(20,15,12,25) # ppm
+   MU <- 238.03
+   MTh <- 232.04
+   l38 <- IsoplotR::settings('lambda','U238')[1]
+   l35 <- IsoplotR::settings('lambda','U235')[1]
+   l32 <- IsoplotR::settings('lambda','Th232')[1]
+   Unmolg <- 1000*Uppm/MU
+   Thnmolg <- 1000*Thppm/MTh
+   PU <- 8*(137.818/138.818)*(exp(l38*tHe)-1) + 7*(1/138.818)*(exp(l35*tHe)-1)
+   PTh <- 6*(exp(l32*tHe)-1)
+   Hepmolg <- (PU*Unmolg + PTh*Thnmolg)*1e3
+   UThHetab <- cbind(z,signif(Hepmolg,3),10,
+                     Uppm,1,Thppm,1)
+   rownames(UThHetab) <- 1:length(z)
+   colnames(UThHetab) <- c('elev (m)','He (pmol/g)','s(He)',
+                           'U (ppm)','s(U)', 'Th (ppm)','s(Th)')
+   tab <- UThHetab
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(UThHetab)
+   ```
+   
+   (a) Convert these data to internally consistent atomic units.
+
+   (b) Plug them into the online version of `IsoplotR` (
+   [`http://isoplotr.es.ucl.ac.uk`](http://isoplotr.es.ucl.ac.uk) ).
+
+   (c) Calculate the U-Th-He ages.
+
+   (d) Determine the exhumation rate.
+
+   ```{r}
+   # Suppose that the data are stored in a matrix called tab:
+   z <- tab[,1]
+   Hepmolg <- tab[,2]
+   sHepmolg <- tab[,3]
+   Uppm <- tab[,4]
+   sUppm <- tab[,5]
+   Thppm <- tab[,6]
+   sThppm <- tab[,7]
+   MU <- 238.03
+   MTh <- 232.04
+   # convert to micromol/g
+   U <- Uppm/MU
+   Th <- Thppm/MTh
+   He <- Hepmolg/1e6
+   sU <- sUppm/MU
+   sTh <- sThppm/MTh
+   sHe <- sHepmolg/1e6
+   IsoplotRtab <- cbind(He,sHe,U,sU,Th,sTh)
+   IsoplotRtab
+   # plug into IsoplotR
+   tHe <- IsoplotR::age(IsoplotR:::as.UThHe(IsoplotRtab))
+   tHe
+   # plot age-elevation profile:
+   plot(tHe[,1],z,type='b')
+   # exhumation rate:
+   slope <- lm(z ~ tHe[,1])$coefficients[2]
+   message('Exhumation rate = ',signif(slope,3), ' m/Myr')
+   ```
+
 1. Consider a rapidly cooled (volcanic) apatite of 10 Ma with an
 atomic Th/U ratio of 5. What is the ratio of helium atoms to fission
 tracks in it?  Look up the relevant decay constants in the notes.
@@ -626,10 +702,10 @@ apatite data:
    |-----------|-------|
    | fission track track count | 49 |
    | counting area | 5000 \textmu m^2^ |
-   | average fission track length | 15 \textmu m |
+   | fission track length | 15 \textmu m |
    | U-concentration | 10 ppm |
    | density of apatite | 3.19 g/cm^3^ |
-   | molar mass of U | 238.04 g/mol |
+   | molar mass of U | 238.03 g/mol |
 
    ```{r}
    Ns <- 49        # dimensionless
@@ -637,7 +713,7 @@ apatite data:
    L <- 15         # micron
    Uppm <- 10      # microgram/gram
    apdens <- 3.19  # g/cc
-   MU <- 238.04    # g/mol
+   MU <- 238.03    # g/mol
    rhos <- Ns/A    # micron^-2
    atmumol <- 6.022e17                    # atoms/micromol (Avogadro's number)
    ccmum3 <- 1e-12                        # cc/micron^3
@@ -654,8 +730,81 @@ apatite data:
    tFTerr <- Rerr/((1+R)*l38)
    message('age=',signif(tFT,3),'Ma, s.e.=',signif(tFTerr,3),'Ma')
    ```
+   ```{r include=FALSE}
+   tAr <- 50
+   tFT <- 50
+   tHe <- 50
+   J <- 0.005
+   zeta <- 300
+   rhoD <- 2.5e6
+   l40 <- log(2)/1248
+   l38 <- 1.55125e-4
+   Ar96 <- 100
+   Ar06 <- 298.5 + Ar96*(exp(l40*tAr)-1)/J
+   Ni <- 100
+   Ns <- round(Ni*(exp(l38*tFT)-1)*2/(l38*zeta*rhoD/1e6))
+   thermotab <- rbind(format(J,digits=3),Ar96,format(Ar06,digits=0),zeta,rhoD,Ns,Ni)
+   rownames(thermotab) <- c('J','^39^Ar/^36^Ar','^40^Ar/^36^Ar',
+   'zeta (yr cm^2^)','rho~D~ (cm^-2^)',
+   'N~s~','N~i~')
+   tab <- rbind(J,Ar96,round(Ar06),zeta,rhoD,Ns,Ni)
+   ```
+   
+1. Consider a rock whose U-Th-He age is `r tHe` Ma. Suppose that the
+following data were acquired on the same sample:
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(thermotab)
+   ```
 
-1. The ^234^U/^238^U activity ratio of sea water is rarely exceeds
+   Assuming that the ^36^Ar is of atmospheric origin (with
+   ^40^Ar/^36^Ar~atm~=298.5), and using the notes for decay constants etc.,
+   summarise the geological history of the sample.
+   ```{r}
+   # suppose that the data are in a table called tab:
+   J <- tab[1]
+   Ar96 <- tab[2]
+   Ar06 <- tab[3]
+   Ar06a <- 298.5
+   zeta <- tab[4]
+   rhoD <- tab[5]
+   Ns <- tab[6]
+   Ni <- tab[7]
+   tHe <- 50
+   Ar09r <- (Ar06-Ar06a)/Ar96 # radiogenic Ar40/Ar39 ratio
+   tArAr <- log(1+J*Ar09r)/l40
+   g <- 0.5
+   tFT <- log(1+g*l38*zeta*1e-6*rhoD*Ns/Ni)/l38
+   message('t(Ar-Ar)=',signif(tArAr,3),'=',
+           't(FT)=',signif(tFT,3),'=',
+	   't(U-Th-He)=',tHe,', suggesting rapid cooling')
+   ```
+
+1. Which of the following pairs of grain sizes and cooling rates are
+characterised by the same closure temperature?
+   ```{r}
+   r <- c(50,200,100,400,200,100)
+   C <- c(1,2,5,8,4,2)*1e5
+   dTdt <- C/(r^2)
+   difftab <- rbind(format(r,digits=0),dTdt)
+   rownames(difftab) <- c('r (micron)','dT/dt (K/Myr)')
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(difftab)
+   ```
+   \ifsol
+   According to Dodson's equation, closure temperature
+   is a function of $r^2 \times dT/dt$. Plotting this
+   product for the given data:
+   \fi
+   ```{r}
+   print(dTdt*r^2)
+   ```
+   \ifsol
+   leads to the conclusion that the first and the sixth samples have
+   the same closure temperature.
+   \fi
+
+1. The ^234^U/^238^U activity ratio of sea water rarely exceeds
 1.15.  However, much higher activity ratios have been measured in
 fresh waters and cave carbonates (speleothems). Suppose that we have
 measured a ^234^U/^238^U activity ratio of 1.1 in a 1 Ma old
@@ -677,7 +826,7 @@ speleothem. What was its _initial_ ^234^U/^238^U-ratio?
 
 1. Although U-series disequilibrium measurements were historically
 done by $\alpha$-counting, in recent decades this method has been
-replaced by mass specrometry. Consider the following composition of
+replaced by mass spectrometry. Consider the following composition of
 three cogenetic aliquots:
 
    ```{r include=FALSE}
@@ -706,11 +855,8 @@ three cogenetic aliquots:
    ```
    How old is the rock?
    ```{r}
-   # 1. store the data into three variables:
-   Uppm
-   Thppm
-   Th02
-   # 2. convert Uppm and Thppm to activities:
+   # store the data into three variables Uppm, Thppm, Th02
+   # 1. convert Uppm and Thppm to activities:
    l238 <- 1.55125e-7 # kyr-1
    l232 <- 4.95e-8 # kyr-1
    MU <- 238.03
@@ -725,13 +871,15 @@ three cogenetic aliquots:
    ATh232dpmg <- ATh232*Navog/(1e3*365*24*60) # dpm per gram
    message('A(U238)=',paste0(signif(AU238dpmg,6),', '),' dpm/g')
    message('A(Th232)=',paste0(signif(ATh232dpmg,6),', '),' dpm/g')
-   # 3. compute the activity ratios:
+   # 2. compute the activity ratios:
    A82 <- AU238/ATh232
    Th230mumolg <- Th232mumolg*Th02
    l230 <- 0.0091705 # kyr-1
    ATh230 <- Th230mumolg*l230
+   ATh230dpmg <- ATh230*Navog/(1e3*365*24*60) # dpm per gram
+   message('A(Th230)=',paste0(signif(ATh230dpmg,6),', '),' dpm/g')
    A02 <- ATh230/ATh232
-   # 4. plot on an isochron diagram and find the slope:
+   # 3. plot on an isochron diagram and find the slope:
    plot(x=A82,y=A02,type='b',xlab='U238/Th232',ylab='Th230/Th232')
    slope <- lm(A02 ~ A82)$coefficients[2]
    # verify that this equals diff(A02)/diff(A82)
