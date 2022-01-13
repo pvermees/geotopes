@@ -1,4 +1,4 @@
-setwd('~/Documents/IsoplotR/')
+setwd('~/Documents/geotopes/R/')
 
 blankcorr <- function(dat,bi,si){
     return(dat[si] - mean(dat[bi]))
@@ -21,17 +21,23 @@ calibration <- function(D,P,tstd,lambda,bi,si){
     return(out)
 }
 
-tUPb <- function(samp,stand,num='Pb206',den='U238',tstd,lambda,tb,ts){
-    measured <- meanUPbRatio(D=samp[[num]],P=samp[[den]],
-                             bi=(samp$Time<tb),si=(samp$Time>ts))
+atomic <- function(samp,stand,num='Pb206',den='U238',tstd,lambda,tb,ts){
+    bi <- samp$Time<tb
+    si <- samp$Time>ts
+    measured <- meanUPbRatio(D=samp[[num]],P=samp[[den]],bi=bi,si=si)
     cal <- calibration(D=std[[num]],P=std[[den]],
-                       tstd=tstd,lambda=lambda,
-                       bi=(stand$Time<tb),si=(stand$Time>ts))
-    atomic <- cal[1]*measured[1]
-    atomic_err <- atomic * sqrt( (cal[2]/cal[1])^2 + (measured[2]/measured[1])^2 )
+                       tstd=tstd,lambda=lambda,bi=bi,si=si)
     out <- c(0,0)
-    out[1] <- log(1+atomic)/lambda
-    out[2] <- (atomic_err/(1+atomic))*(1/lambda)
+    out[1] <- cal[1]*measured[1]
+    out[2] <- out[1]*sqrt( (cal[2]/cal[1])^2 + (measured[2]/measured[1])^2 )
+    return(out)
+}
+
+tUPb <- function(samp,stand,num='Pb206',den='U238',tstd,lambda,tb,ts){
+    a <- atomic(samp,stand,num,den,tstd,lambda,tb,ts)
+    out <- c(0,0)
+    out[1] <- log(1+a[1])/lambda
+    out[2] <- (a[2]/(1+a[1]))*(1/lambda)
     return(out)
 }
 
