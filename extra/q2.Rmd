@@ -1,0 +1,27 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+2\. What types of radioactivity are involved in the following
+reactions: ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd,
+${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr, ${}^{230}_{~90}$Th
+$\rightarrow$ ${}^{226}_{88}$Ra?
+
+   \ifsol
+   ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd: $\alpha$
+
+   ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr: e.c.
+
+   ${}^{230}_{~90}$Th $\rightarrow$ ${}^{226}_{88}$Ra: $\alpha$
+   \fi

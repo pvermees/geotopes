@@ -1,0 +1,89 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+16\. Consider a rapidly cooled (volcanic) apatite of 10 Ma with an
+atomic Th/U ratio of 5. What is the ratio of helium atoms to fission
+tracks in it?  Look up the relevant decay constants in the notes.
+
+   \ifsol
+   The helium ingrowth equation:
+
+   $$
+   He =
+   \left[
+   8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
+   7 \frac{1}{138.818} (e^{\lambda_{235}t}-1)
+   \right] U + 6 (e^{\lambda_{232}t}-1) Th
+   $$
+
+   Because Th/U=5:
+
+   $$
+   He =
+   \left[
+   8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
+   7 \frac{1}{138.818} (e^{\lambda_{235}t}-1) +
+   5 \times 6 (e^{\lambda_{232}t}-1)
+   \right] U
+   $$
+
+   The fundamental fission track age equation:
+
+   $$
+   n_s = \frac{\lambda_f}{\lambda_{238}}
+   \frac{137.818}{138.818} U (e^{\lambda_{238}t}-1)
+   $$
+
+   Hence:
+
+   $$
+   \frac{He}{n_s} =
+   \frac{
+      8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
+      7 \frac{1}{138.818} (e^{\lambda_{235}t}-1) +
+      30 (e^{\lambda_{232}t}-1)
+   }{
+      \frac{\lambda_f}{\lambda_{238}}
+      \frac{137.818}{138.818} (e^{\lambda_{238}t}-1)
+   }
+   $$
+
+   In \texttt{R}:
+   \fi
+   ```{r}
+   lf <- 8.46e-11 # Myr-1
+   l238 <- 1.55125e-4 # Myr-1
+   l235 <- 9.8485e-4 # Myr-1
+   l232 <- 4.95e-5 # Myr-1
+   tap <- 10 # Ma
+   num <- 8*(137.818/138.818)*(exp(l238*tap)-1) +
+   (7/138.818)*exp(l235*tap-1) + 30*(exp(l232*tap)-1)
+   den <- (lf/l238)*(137.818/138.818)*(exp(l238*tap)-1)
+   HeFT <- num/den
+   message('The He/FT-ratio is ',signif(HeFT,2))
+   ```
+
+   \ifsol
+   Even though spontaneous fission of ${}^{238}$U happens `only'
+   1.8 million times less frequently than $\alpha$-decay,
+   the apatite has produced 55 million times more $\alpha$ particles
+   than fission tracks because (1) each ${}^{238}$U atom produces
+   not one but eight helium atoms, and (2) not only ${}^{238}$U
+   but also ${}^{235}$U and ${}^{232}$Th contribute to the helium
+   budget. NB: $\alpha$-recoil damages the crystal lattice of
+   apatite and other U-bearing minerals, thereby affecting its
+   diffusivity. Thus the closure temperature of apatite can
+   vary as a function of time and U (and Th) concentration.
+   \fi

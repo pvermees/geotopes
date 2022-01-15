@@ -1,0 +1,38 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+1\. A mass spectrometer has a radius of 0.3 m and an acceleration voltage
+of 10 000 V. The magnetic field is adjusted to the various masses to
+be measured. Calculate the atomic mass of a single charged ion
+corresponding to a field of 0.5 T. Note: the elementary charge is
+$1.60219\times{10}^{-19}$ C and 1 atomic mass unit (amu) =
+$1.660538\times{10}^{-27}$ kg.
+
+   \ifsol
+   Rearrange Equation 3.4 of the notes:
+   \[
+   m = \frac{e(rH)^2}{2V}
+   \]
+   \fi
+   
+   ```{r}
+   e <- 1.60219e-19 # C
+   r <- 0.3 # m
+   H <- 0.5 # T
+   V <- 1e4 # V
+   M <- 1.660538e-27 # kg/nucleon
+   m <- (e*(r*H)^2)/(2*V)
+   m/M
+   ```

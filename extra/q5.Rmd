@@ -1,0 +1,35 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+5\. The half-life of ^14^C is 5730 years. The ^14^C content of the
+atmosphere is 13.2 disintegrations per minute and per gram (dpm
+g${}^{-1}$) of carbon (initial activity $A_0$). We wish to date an
+Egyptian artefact from approximately 2000 BC. What is the approximate
+activity (A) of this artefact? If our method can measure 1 dpm, what
+mass of the (probably precious) sample will have to be destroyed?
+
+   ```{r}
+   # decay constant:
+   t12 <- 5730
+   l14 <- log(2)/t12
+   BC <- 2000
+   now <- 2022
+   age <- now + BC
+   A0 <- 13.2
+   A <- A0*exp(-l14*age) # dpm/g
+   mass <- 1000/A
+   message('The expected activity ratio is ',signif(A,2),
+   ', which requires ',signif(mass,2),' mg of material.')
+   ```

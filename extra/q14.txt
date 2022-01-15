@@ -1,0 +1,41 @@
+Analysis of a granite yields:
+   ```{r include=FALSE}
+   l38 <- IsoplotR::settings('lambda','U238')[1]
+   l40 <- IsoplotR::settings('lambda','K40')[1]
+   l87 <- IsoplotR::settings('lambda','Rb87')[1]
+   tUPbzirc <- 520
+   tKAramp <- 480
+   tKArbio <- 400
+   tRbSrmusc <- 470
+   tRbSrbio <- 460
+   PbUzirc <- exp(l38*tUPbzirc)-1
+   ArKamp <- exp(l40*tKAramp)-1
+   ArKbio <- exp(l40*tKArbio)-1
+   SrRbmusc <- exp(l87*tRbSrmusc)-1
+   SrRbbio <- exp(l87*tRbSrbio)-1
+   ttab <- matrix(signif(c(PbUzirc,ArKamp,ArKbio,SrRbmusc,SrRbbio),3),1,5)
+   colnames(ttab) <- c("^206^Pb*/^238^U (zircon)","^40^Ar*/^40^K (amphibole)",
+   "^40^Ar*/^40^K (biotite)","^87^Sr*/^87^Rb (muscovite)",
+   "^87^Sr*/^87^Rb (biotite)")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(ttab)
+   ```
+   What is the likely age of intrusion of this granite? How reliable
+   is the result?
+
+   ```{r}
+   tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
+   colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
+   'Rb-Sr (musc)','Rb-Sr (bio)')
+   print(tt)
+   ```
+   \ifsol
+   The true age is probably around 550--520 Ma. The reason
+   being that some disruptive phenomenon has affected the region as
+   there is clearly a discordance in ages. The most robust of the
+   chronometers is U-Pb on zircons, but it is not perfect and this
+   apparent age may be made a little older. But this reasoning is
+   very rough and ready! A more detailed assessment would involve
+   textural analysis, diffusion experiments and numerical modelling.
+   \fi

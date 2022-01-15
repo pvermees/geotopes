@@ -1,0 +1,40 @@
+Consider the Pb-Pb composition of three aliquots from a meteorite:
+   ```{r include=FALSE}
+   l35 <- IsoplotR::settings('lambda','U235')[1]
+   l38 <- IsoplotR::settings('lambda','U238')[1]
+   tPbPb <- 4550
+   Pb64_i <- 4/0.6
+   Pb74_i <- 4
+   Pb64_r <- c(100,400,1000)
+   U85 <- 137.818
+   Pb74_r <- Pb64_r*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)/U85
+   Pb64 <- Pb64_i + Pb64_r
+   Pb74 <- Pb74_i + Pb74_r
+   PbPbtab <- signif(rbind(Pb64,Pb74),3)
+   rownames(PbPbtab) <- c("^206^Pb/^204^Pb","^207^Pb/^204^Pb")
+   colnames(PbPbtab) <- 1:3
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(PbPbtab)
+   ```
+   Use the following lookup table to estimate the age of the meteorite:
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   tgrid <- seq(from=tPbPb-100,to=tPbPb+100,by=25)
+   Pb76ratios <- IsoplotR::age2ratio(tgrid,ratio="Pb207Pb206")[,1]
+   ttab <- rbind(format(tgrid,digits=1),signif(Pb76ratios,3))
+   rownames(ttab) <- c("age (Ma)","^207^Pb/^206^Pb")
+   knitr::kable(ttab)
+   ```
+
+   Hint: plot ^207^Pb/^204^Pb vs. ^206^Pb/^204^Pb.
+   ```{r out.width='60%', fig.width=5, fig.height=4}
+   Pb64 <- PbPbtab[1,]
+   Pb74 <- PbPbtab[2,]
+   Pb76 <- lm(Pb74 ~ Pb64)$coefficients[2]
+   result <- IsoplotR::age(Pb76,method="Pb207-Pb206")[1]
+   message("The age of the meteorite is ",signif(result,3),' Ma.')
+   plot(x=Pb64,y=Pb74,type='b',
+        xlab=expression(""^206*"Pb/"^204*"Pb"),
+	ylab=expression(""^207*"Pb/"^204*"Pb")
+   )
+   ```

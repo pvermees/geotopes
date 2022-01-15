@@ -1,0 +1,124 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+3\. Visit [`https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/`](https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/) and download
+files `blnk.csv`, `stnd.csv` and `smpl1.csv` through `smpl10.csv`.
+Process these files using your Ar-Ar data reduction script.
+Plot the results as an Ar-Ar release spectrum,
+using the following function. `Ar39` and `tx` are both vectors
+containing the blank corrected ^39^Ar signals and ^40^Ar/^39^Ar age
+estimates, respectively:
+   ```{r include=FALSE}
+   dir <- '/home/pvermees/Documents/geotopes/practicals/ArAr/'
+
+   # generate synthetic Ar/Ar dataset
+   J <- 0.003
+   l40 <- 5.543e-4
+   a4036 <- 295.5
+   t <- 30:180 # acquisition times
+
+   createfile <- function(t36_0,t39_0,t40_0,t,fname){
+      nt <- length(t)
+      r36 <- rpois(n=nt,lambda=t36_0-(t36_0/1000)*t)
+      r39 <- rpois(n=nt,lambda=t39_0-(t39_0/1000)*t)
+      r40 <- rpois(n=nt,lambda=t40_0-(t40_0/1000)*t)
+      tab <- cbind(t,r36,r39,r40)
+      colnames(tab) <- c('t','Ar36','Ar39','Ar40')
+      write.csv(tab,file=fname,row.names=FALSE)
+   }
+
+   ts <- 27.8
+   s36_0 <- 5
+   s40a <- a4036*s36_0
+   s40t <- 400000
+   s40_0 <- s40t + s40a
+   s4039t <- (exp(l40*ts)-1)/J
+   s39_0 <- s40t/s4039t
+   createfile(s36_0,s39_0,s40_0,t,paste0(dir,'stnd.csv'))
+
+   b36_0 <- 1
+   b40_0 <- b36_0*a4036
+   b39_0 <- 1
+   createfile(b36_0,b39_0,b40_0,t,paste0(dir,'blnk.csv'))
+
+   tx <- c(45,65,80,90,95,97.5,99,101,99,100)
+   x36_0 <- 10
+   x40a <- a4036*x36_0
+   x40t <- c(0.02,0.05,0.1,0.4,0.5,0.5,0.6,0.4,0.2,0.05)*700000
+   x40_0 <- x40t + x40a
+   x4039t <- (exp(l40*tx)-1)/J
+   x39_0 <- x40t/x4039t
+
+   for (i in 1:length(tx)){
+      fname <- paste0(dir,'smpl',i,'.csv')
+      createfile(x36_0,x39_0[i],x40_0[i],t,fname)
+   }
+   ```
+   ```{r include=TRUE, echo=TRUE}
+   spectrum <- function(Ar39,tx){
+      Ar39n <- cumsum(c(0,Ar39))/sum(Ar39) # normalise
+      plot(x=Ar39n, y=c(tx[1],tx), type='s',
+      xlab=expression(''^39*"Ar (%)"), ylab='Ar-Ar age (Ma)')
+   }
+   ```
+
+   ```{r}
+   process <- function(std,smp,blk){
+      # linear regression of the data
+      std36fit <- lm(Ar36 ~ t, data=std)
+      std39fit <- lm(Ar39 ~ t, data=std)
+      std40fit <- lm(Ar40 ~ t, data=std)
+      smp36fit <- lm(Ar36 ~ t, data=smp)
+      smp39fit <- lm(Ar39 ~ t, data=smp)
+      smp40fit <- lm(Ar40 ~ t, data=smp)
+      blk36fit <- lm(Ar36 ~ t, data=blk)
+      blk39fit <- lm(Ar39 ~ t, data=blk)
+      blk40fit <- lm(Ar40 ~ t, data=blk)
+      # blank correction
+      std36b <- std36fit$coefficients[1] - blk36fit$coefficients[1]
+      std39b <- std39fit$coefficients[1] - blk39fit$coefficients[1]
+      std40b <- std40fit$coefficients[1] - blk40fit$coefficients[1]
+      smp36b <- smp36fit$coefficients[1] - blk36fit$coefficients[1]
+      smp39b <- smp39fit$coefficients[1] - blk39fit$coefficients[1]
+      smp40b <- smp40fit$coefficients[1] - blk40fit$coefficients[1]
+      # atmospheric correction
+      a4036 <- 298.5
+      std40r <- std40b - std36b*a4036
+      smp40r <- smp40b - smp36b*a4036
+      # calculate J
+      tstd <- 27.8    # standard age, in Ma
+      l40 <- 5.543e-4 # decay constant, in Ma-1
+      J <- (exp(l40*tstd)-1)*(std39b/std40r)
+      # calculate age
+      tx = log(1 + J*smp40r/smp39b)/l40
+      out <- list(Ar39=smp39b,tx=tx)
+      return(out)
+   }
+
+   std <- read.csv(paste0(dir,"stnd.csv"),header=TRUE)
+   blk <- read.csv(paste0(dir,"blnk.csv"),header=TRUE)
+   ns <- 10 # number of samples
+   Ar39 <- rep(NA,ns)
+   tx <- rep(NA,ns)
+   for (i in 1:ns){
+      sname <- paste0(dir,'smpl',i,'.csv')
+      smp <- read.csv(sname,header=TRUE)
+      results <- process(std,smp,blk)
+      Ar39[i] <- results$Ar39
+      tx[i] <- results$tx
+   }
+
+   spectrum(Ar39,tx)
+   ```

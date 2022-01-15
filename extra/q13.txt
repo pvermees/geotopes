@@ -1,0 +1,56 @@
+Given the ^40^Ar/^39^Ar-data shown in the following table:
+   ```{r include=FALSE}
+   tsmp <- 200
+   tstd <- 98
+   l40 <- log(2)/1248
+   J <- 0.0025
+   # 1. standard:
+   Ar06std_a <- 298.5
+   Ar09std_r <- (exp(l40*tstd)-1)/J
+   Ar96std <- 100
+   Ar06std_m <- Ar09std_r*Ar96std + Ar06std_a
+   # 2. sample:
+   Ar06smp_a <- 350
+   Ar09smp_r <- (exp(l40*tsmp)-1)/J
+   Ar96smp <- c(10,110,160)
+   Ar06smp_m <- Ar09smp_r*Ar96smp + Ar06smp_a
+   tabArAr <- round(rbind(c(Ar96std,Ar06std_m),
+   cbind(Ar96smp,Ar06smp_m)))
+   colnames(tabArAr) <- c("^39^Ar/^36^Ar","^40^Ar/^36^Ar")
+   rownames(tabArAr) <- c("std","smp1","smp2","smp3")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabArAr)
+   ```
+
+   'std' is a 98 Ma reference material whose inherited argon content
+   is of atmospheric origin ($[$^40^Ar/^36^Ar$]$~atm~=298.5); 'smp1',
+   'smp2' and 'smp3' are three cogenetic aliquots of a metamorphic
+   sample of unknown age.  What are the age and non-radiogenic
+   ^40^Ar/^36^Ar-ratio of the sample? Recall that the half-life of
+   ^40^K is 1248 Myr.
+
+   ```{r out.width='50%', fig.width=5, fig.height=4}
+   # 1. atmospheric correction of the standard
+   Ar40Ar36a <- 298.5
+   Ar40Ar36m <- tabArAr['std',2]
+   Ar40Ar36r <- Ar40Ar36m - Ar40Ar36a
+   # 2. compute the J factor
+   tstd <- 98
+   l40 <- log(2)/1248
+   Ar39Ar36m <- tabArAr['std',1]
+   J <- (exp(l40*tstd)-1)*Ar39Ar36m/Ar40Ar36r
+   # 3. construct an isochron for the sample:
+   Ar39Ar36_smp <- tabArAr[2:4,1]
+   Ar40Ar36_smp <- tabArAr[2:4,2]
+   plot(x=Ar39Ar36_smp,y=Ar40Ar36_smp,type='b')
+   # 4. you can compute the slope and intercept of the line
+   #    either manually or using R's lm function:
+   fit <- lm(Ar40Ar36_smp ~ Ar39Ar36_smp)
+   Ar40Ar36_smp_0 <- fit$coefficients[1]
+   Ar40Ar39_smp_r <- fit$coefficients[2]
+   # 5. compute the age of the sample
+   tsmp <- log(J*Ar40Ar39_smp_r + 1)/l40
+   message('age=',signif(tsmp,2),
+   'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
+   ```

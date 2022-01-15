@@ -1,0 +1,115 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+2\. Plot the U-Pb composition of sample 91500 on a Tera-Wasserburg
+concordia diagram (^207^Pb/^206^Pb vs. ^238^U/^206^Pb). Use a
+^238^U/^235^U-ratio of 137.818 for the conversion from Wetherill to
+Tera-Wasserburg space.
+
+   ```{r}
+   # Given the results of the main U-Pb practical:
+   smp0735a <- 1.873638
+   smp0638a <- 0.1819523
+   # A. basic solution
+   tt <- seq(from=0,to=2000,length.out=50)
+   l38 <- 1.55125e-4 # Myr-1
+   l35 <- 9.8485e-4 # Myr-1
+   x <- exp(l35*tt)-1
+   y <- exp(l38*tt)-1
+   if (FALSE){ # basic solution
+      plot(x,y,type='l')
+         points(smp0735a,smp0638a)
+   } else { # fancy solution
+      plot(x,y,type='l',
+      xlab=expression(''^207*'Pb/'^235*'U'),
+      ylab=expression(''^206*'Pb/'^238*'U'))
+      points(smp0735a,smp0638a,pch=21,bg='white')
+   }
+   # add age ticks to the concordia plot:
+   ttick <- seq(from=0,to=2000,by=250)
+   xt <- exp(l35*ttick)-1
+   yt <- exp(l38*ttick)-1
+   points(xt,yt,pch=16)
+   text(xt,yt,labels=ttick,pos=2)
+   ```
+   ```{r}
+   # Compute the Pb207/Pb206-ratio from the conventional ratios:
+   U3835 <- 137.818
+   smp0706a <- smp0735a/(U3835*smp0638a)
+   # draw the concordia line
+   l38 <- 0.000155125
+   l35 <- 0.00098485
+   tt <- seq(from=100,to=2000,length.out=50)
+   x <- 1/(exp(l38*tt)-1)
+   y <- (exp(l35*tt)-1)/(U3835*(exp(l38*tt)-1))
+   plot(x,y,type='l',
+        xlab=expression(''^238*'U/'^238*'Pb'),
+	ylab=expression(''^207*'Pb/'^206*'Pb'))
+   # add the sample data:
+   points(x=1/smp0638a,y=smp0706a,pch=21,bg='white')
+   # add age ticks to the concordia plot:
+   ttick <- seq(from=0,to=2000,by=250)
+   xt <- 1/(exp(l38*ttick)-1)
+   yt <- (exp(l35*ttick)-1)/(U3835*(exp(l38*ttick)-1))
+   points(xt,yt,pch=16)
+   text(xt,yt,labels=ttick,pos=4)
+   ```
+
+   ```{r include=FALSE}
+   dir <- '/home/pvermees/Documents/geotopes/practicals/ArAr/'
+
+   # generate synthetic Ar/Ar dataset
+   J <- 0.003
+   l40 <- 5.543e-4
+   a4036 <- 295.5
+   t <- 30:180 # acquisition times
+
+   createfile <- function(t36_0,t39_0,t40_0,t,fname){
+      nt <- length(t)
+      r36 <- rpois(n=nt,lambda=t36_0-(t36_0/1000)*t)
+      r39 <- rpois(n=nt,lambda=t39_0-(t39_0/1000)*t)
+      r40 <- rpois(n=nt,lambda=t40_0-(t40_0/1000)*t)
+      tab <- cbind(t,r36,r39,r40)
+      colnames(tab) <- c('t','Ar36','Ar39','Ar40')
+      write.csv(tab,file=fname,row.names=FALSE)
+   }
+
+   ts <- 27.8
+   s36_0 <- 5
+   s40a <- a4036*s36_0
+   s40t <- 400000
+   s40_0 <- s40t + s40a
+   s4039t <- (exp(l40*ts)-1)/J
+   s39_0 <- s40t/s4039t
+   createfile(s36_0,s39_0,s40_0,t,paste0(dir,'stnd.csv'))
+
+   b36_0 <- 1
+   b40_0 <- b36_0*a4036
+   b39_0 <- 1
+   createfile(b36_0,b39_0,b40_0,t,paste0(dir,'blnk.csv'))
+
+   tx <- c(45,65,80,90,95,97.5,99,101,99,100)
+   x36_0 <- 10
+   x40a <- a4036*x36_0
+   x40t <- c(0.02,0.05,0.1,0.4,0.5,0.5,0.6,0.4,0.2,0.05)*700000
+   x40_0 <- x40t + x40a
+   x4039t <- (exp(l40*tx)-1)/J
+   x39_0 <- x40t/x4039t
+
+   for (i in 1:length(tx)){
+      fname <- paste0(dir,'smpl',i,'.csv')
+      createfile(x36_0,x39_0[i],x40_0[i],t,fname)
+   }
+   ```

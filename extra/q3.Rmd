@@ -1,0 +1,39 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+3\. Rb has two isotopes, ^85^Rb and ^87^Rb, which exist in a constant
+ratio in our Solar System: ^85^Rb/^87^Rb = 2.5933. The molar mass of
+Rb is 85.4678. A rock contains 10ppm of Rb. How many mol/g of ^87^Rb
+does that correspond to?
+
+   \ifsol
+   Compute the abundance of ^87^Rb:
+   \[
+   f87 + f85 = 1
+   \Rightarrow
+   1 + \frac{f85}{f87} = \frac{1}{f87}
+   \Rightarrow
+   f87 = \frac{1}{1 + \frac{f85}{f87}}
+   \]
+   \fi
+
+   ```{r}
+   r57 <- 2.5933
+   f87 <- 1/(1+r57) # mol/mol
+   ppmRb <- 10     # ug/g
+   MRb <- 85.4678   # ug/umol
+   umolgRb87 <- f87*ppmRb/MRb
+   message(signif(umolgRb87,5),' micromol/g 87Rb')
+   ```

@@ -1,5 +1,5 @@
 ---
-title: "Additional exercises"
+title: Solutions to additional exercises
 output:
   pdf_document:
     includes:
@@ -8,15 +8,11 @@ output:
 ---
 
 ```{r settings, include = FALSE}
-solution <- FALSE
-knitr::opts_chunk$set(echo=solution, include=FALSE)
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
 set.seed(1)
-# rmarkdown::render('~/Documents/geotopes/latex/extra.Rmd')
 ```
-
 \newif\ifsol
-\sol`r ifelse(solution, 'true', 'false')`
-
+\soltrue
 This document contains additional exercises that are to be completed
 during the live sessions on Mondays and Tuesdays. Some of these are
 advanced exercises that require creative thinking. Completing these
@@ -28,12 +24,11 @@ quite involved.  Do not be afraid to ask for additional tips or hints
 if you get stuck. I will be happy to share the solution to all the
 questions with you, but only after you give them a try yourself.
 
-# Theory
-
-1. A mass spectrometer has a radius of 0.3 m and an acceleration
-voltage of 10 000 V. The magnetic field is adjusted to the various
-masses to be measured. Calculate the atomic mass of a single charged
-ion corresponding to a field of 0.5 T. Note: the elementary charge is
+# Theory (5 questions per week)
+1. A mass spectrometer has a radius of 0.3 m and an acceleration voltage
+of 10 000 V. The magnetic field is adjusted to the various masses to
+be measured. Calculate the atomic mass of a single charged ion
+corresponding to a field of 0.5 T. Note: the elementary charge is
 $1.60219\times{10}^{-19}$ C and 1 atomic mass unit (amu) =
 $1.660538\times{10}^{-27}$ kg.
 
@@ -43,7 +38,7 @@ $1.660538\times{10}^{-27}$ kg.
    m = \frac{e(rH)^2}{2V}
    \]
    \fi
-
+   
    ```{r}
    e <- 1.60219e-19 # C
    r <- 0.3 # m
@@ -53,7 +48,6 @@ $1.660538\times{10}^{-27}$ kg.
    m <- (e*(r*H)^2)/(2*V)
    m/M
    ```
-
 1. What types of radioactivity are involved in the following
 reactions: ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd,
 ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr, ${}^{230}_{~90}$Th
@@ -61,12 +55,11 @@ $\rightarrow$ ${}^{226}_{88}$Ra?
 
    \ifsol
    ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd: $\alpha$
-   
+
    ${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr: e.c.
-   
+
    ${}^{230}_{~90}$Th $\rightarrow$ ${}^{226}_{88}$Ra: $\alpha$
    \fi
-
 1. Rb has two isotopes, ^85^Rb and ^87^Rb, which exist in a constant
 ratio in our Solar System: ^85^Rb/^87^Rb = 2.5933. The molar mass of
 Rb is 85.4678. A rock contains 10ppm of Rb. How many mol/g of ^87^Rb
@@ -91,7 +84,6 @@ does that correspond to?
    umolgRb87 <- f87*ppmRb/MRb
    message(signif(umolgRb87,5),' micromol/g 87Rb')
    ```
-
 1. Following up from the previous question: ^87^Rb is radioactive with
 a half-life $t_{1/2}=48.8$ Gyr. What was the ^85^Rb/^87^Rb-ratio 2
 billion years ago?
@@ -102,7 +94,7 @@ billion years ago?
    P_\circ = P\exp[\lambda{t}]
    \]
    \fi
-
+   
    ```{r}
    # 1. compute the decay constant:
    t12 = 48.8
@@ -118,7 +110,6 @@ billion years ago?
    r57_o <- umolgRb85_o/umolgRb87_o
    message('87Rb/85Rb ratio at 2 Ga: ',signif(r57_o,5))
    ```
-
 1. The half-life of ^14^C is 5730 years. The ^14^C content of the
 atmosphere is 13.2 disintegrations per minute and per gram (dpm
 g${}^{-1}$) of carbon (initial activity $A_0$). We wish to date an
@@ -139,13 +130,13 @@ mass of the (probably precious) sample will have to be destroyed?
    message('The expected activity ratio is ',signif(A,2),
    ', which requires ',signif(mass,2),' mg of material.')
    ```
-
 1. ^210^Pb is a short lived (t~1/2~=22.3 yr) intermediate daughter of
 the ^238^U decay chain. This natural radioactive lead is incorporated
 into ice deposited in Greenland by forming successive layers of ice
 which can be studied like sedimentary strata.  The activity of ^210^Pb
 is measured at four levels in disintegrations per hour per kilogram of
 ice.
+
    ```{r include=FALSE}
    depth <- c(0,1,1.5,2.5)
    l210 <- log(2)/22.3 # yr-1
@@ -156,10 +147,11 @@ ice.
    rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/kg)")
    colnames(tabPb210) <- 1:length(depth)
    ```
+
    ```{r include=TRUE, echo=FALSE, results='asis'}
    knitr::kable(tabPb210)
    ```
-   
+
    Calculate the sedimentation rate of the ice. Assuming a constant
    rate and a compaction factor of 5, how much ice will have
    accumulated in 5000 years?  Calculate the ^210^Pb-content of fresh
@@ -185,6 +177,7 @@ ice.
    $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
    out to be a mere 21 million atoms per kg!
    \fi
+
    ```{r fig.width=4, fig.height=4}
    depth <- tabPb210[1,]
    Pb210 <- tabPb210[2,]
@@ -192,15 +185,19 @@ ice.
    l210 <- log(2)/22.3
    r <- -l210/fit$coefficients[2]
    message("The accumulation rate is ",signif(100*r,3),'cm/yr')
-   message("In 5000 years, there will be ",signif(5000*r/5,3),'m of ice accumulation')
+   message("In 5000 years, there will be ",
+           signif(5000*r/5,3),
+           "m of ice accumulation")
    Pb210atoms <- Pb210[1]*24*365.25/l210 
-   message("1 kg of modern ice contains ", round(Pb210atoms/1e6),' million atoms of 210Pb')
+   message("1 kg of modern ice contains ",
+           round(Pb210atoms/1e6),
+	   " million atoms of 210Pb")
    plot(depth,Pb210,type='p',log='y')
    lines(depth,exp(fit$fitted.values))
    ```
-
 1. Consider the Rb-Sr composition of three aliquots from the same
 sample:
+
    ```{r include=FALSE}
    t12Rb87 <- 48.8
    l87 <- log(2)/t12Rb87
@@ -216,7 +213,6 @@ sample:
    knitr::kable(tabRbSr)
    ```
    How old is the sample?
-
    ```{r fig.width=4, fig.height=4}
    RbSr <- tabRbSr[,1]
    SrSr <- tabRbSr[,2]
@@ -225,7 +221,6 @@ sample:
    tRbSr <- log(fit$coefficients[2]+1)/l87
    message('Rb/Sr-age = ',signif(tRbSr*1000,2),' Ma')
    ```
-
 1. What is the expected ^207^Pb/^206^Pb-ratio of a 4.57 billion year
 old meteorite? Assume that the meteorite contained no initial Pb.  The
 half-lives of ^238^U and ^235^U are 4.468 and 0.704 Gyr, respectively.
@@ -240,7 +235,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    r58 <- 1/137.818
    rPbPb_meteorite <- r58*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)
    message('Expected 207Pb/206Pb-ratio for a 4.57 Ga meteorite = ',
-   	    signif(rPbPb_meteorite,3))
+   signif(rPbPb_meteorite,3))
    ```
    \ifsol
    For modern U-ores, assuming secular equilibrium:
@@ -265,7 +260,6 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    ```{r}
    message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l38/l35,3))
    ```
-
 1. Consider the following three aliquots from the same sample:
    ```{r include=FALSE}
    l38 <- log(2)/4468
@@ -295,7 +289,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
 
    b. Sketch a geological history for the sample (hint: consider the
    U-Pb composition in concordia space).
-   
+
    ```{r fig.width=4, fig.height=4}
    # common Pb composition:
    Pb64i <- tabUPb[1,1]
@@ -315,7 +309,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    lines(Pb7U5,Pb6U8)
    text(Pb7U5,Pb6U8,labels=c('B','C','D'),pos=1)
    ```
-   
+
    \ifsol Aliquot A does not contain uranium, and therefore
    constrains the common Pb composition of the sample. Aliquots B and
    D yielded concordant U-Pb ages and constrain two geological
@@ -331,7 +325,6 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    \item Subsequent tectonic quiescence
    \end{enumerate}
    \fi
-
 1. Consider the Pb-Pb composition of three aliquots from a meteorite:
    ```{r include=FALSE}
    l35 <- IsoplotR::settings('lambda','U235')[1]
@@ -368,11 +361,10 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    result <- IsoplotR::age(Pb76,method="Pb207-Pb206")[1]
    message("The age of the meteorite is ",signif(result,3),' Ma.')
    plot(x=Pb64,y=Pb74,type='b',
-	 xlab=expression(""^206*"Pb/"^204*"Pb"),
-	 ylab=expression(""^207*"Pb/"^204*"Pb")
+        xlab=expression(""^206*"Pb/"^204*"Pb"),
+	ylab=expression(""^207*"Pb/"^204*"Pb")
    )
    ```
-
 1. The silicate Earth weighs approximately $4\times{10}^{24}$ kg and
 contains 250 ppm potassium. How much ^40^Ar is created in 4.5 billion
 years?  Given that ^40^Ar cannot escape from the Earth and the
@@ -397,9 +389,8 @@ half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
    fec <- 0.1072 # fraction of 40K decaying to 40Ar
    atmage <- log(Ar40K40/fec+1)/l40
    message("The 40Ar/40K-age of the Earth's atmosphere is ",
-          signif(atmage,3),' Ga.')
+   signif(atmage,3),' Ga.')
    ```
-   
 1. ^129^I is an extinct nuclide of Iodine with a half-life of 15.7
 million years. It decays (or rather: decayed!) to the noble gas
 ^129^Xe. Although there is no (natural) ^129^I in the Solar System
@@ -430,8 +421,8 @@ of Solar System history contain measurable amounts of excess of
    The ratio of the two ratios is:
    \[
    \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A}
-       {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B} =
-	 \exp[\lambda_{129}(t_B-t_A)]
+   {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B} =
+   \exp[\lambda_{129}(t_B-t_A)]
    \]
    Hence
    \[
@@ -450,29 +441,27 @@ of Solar System history contain measurable amounts of excess of
    message('The age difference between the two meteorites is ',
    signif(dt,3),' million years.')
    ```
-
-```{r include=FALSE}
-tsmp <- 200
-tstd <- 98
-l40 <- log(2)/1248
-J <- 0.0025
-# 1. standard:
-Ar06std_a <- 298.5
-Ar09std_r <- (exp(l40*tstd)-1)/J
-Ar96std <- 100
-Ar06std_m <- Ar09std_r*Ar96std + Ar06std_a
-# 2. sample:
-Ar06smp_a <- 350
-Ar09smp_r <- (exp(l40*tsmp)-1)/J
-Ar96smp <- c(10,110,160)
-Ar06smp_m <- Ar09smp_r*Ar96smp + Ar06smp_a
-tabArAr <- round(rbind(c(Ar96std,Ar06std_m),
-                 cbind(Ar96smp,Ar06smp_m)))
-colnames(tabArAr) <- c("^39^Ar/^36^Ar","^40^Ar/^36^Ar")
-rownames(tabArAr) <- c("std","smp1","smp2","smp3")
-```
 1. Given the ^40^Ar/^39^Ar-data shown in the following table:
-
+   ```{r include=FALSE}
+   tsmp <- 200
+   tstd <- 98
+   l40 <- log(2)/1248
+   J <- 0.0025
+   # 1. standard:
+   Ar06std_a <- 298.5
+   Ar09std_r <- (exp(l40*tstd)-1)/J
+   Ar96std <- 100
+   Ar06std_m <- Ar09std_r*Ar96std + Ar06std_a
+   # 2. sample:
+   Ar06smp_a <- 350
+   Ar09smp_r <- (exp(l40*tsmp)-1)/J
+   Ar96smp <- c(10,110,160)
+   Ar06smp_m <- Ar09smp_r*Ar96smp + Ar06smp_a
+   tabArAr <- round(rbind(c(Ar96std,Ar06std_m),
+   cbind(Ar96smp,Ar06smp_m)))
+   colnames(tabArAr) <- c("^39^Ar/^36^Ar","^40^Ar/^36^Ar")
+   rownames(tabArAr) <- c("std","smp1","smp2","smp3")
+   ```
    ```{r include=TRUE, echo=FALSE, results='asis'}
    knitr::kable(tabArAr)
    ```
@@ -506,9 +495,8 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    # 5. compute the age of the sample
    tsmp <- log(J*Ar40Ar39_smp_r + 1)/l40
    message('age=',signif(tsmp,2),
-           'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
+   'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
    ```
-
 1. Analysis of a granite yields:
    ```{r include=FALSE}
    l38 <- IsoplotR::settings('lambda','U238')[1]
@@ -526,8 +514,8 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    SrRbbio <- exp(l87*tRbSrbio)-1
    ttab <- matrix(signif(c(PbUzirc,ArKamp,ArKbio,SrRbmusc,SrRbbio),3),1,5)
    colnames(ttab) <- c("^206^Pb*/^238^U (zircon)","^40^Ar*/^40^K (amphibole)",
-                       "^40^Ar*/^40^K (biotite)","^87^Sr*/^87^Rb (muscovite)",
-       		       "^87^Sr*/^87^Rb (biotite)")
+   "^40^Ar*/^40^K (biotite)","^87^Sr*/^87^Rb (muscovite)",
+   "^87^Sr*/^87^Rb (biotite)")
    ```
    ```{r include=TRUE, echo=FALSE, results='asis'}
    knitr::kable(ttab)
@@ -538,7 +526,7 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    ```{r}
    tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
    colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
-   	     	     'Rb-Sr (musc)','Rb-Sr (bio)')
+   'Rb-Sr (musc)','Rb-Sr (bio)')
    print(tt)
    ```
    \ifsol
@@ -550,14 +538,13 @@ rownames(tabArAr) <- c("std","smp1","smp2","smp3")
    very rough and ready! A more detailed assessment would involve
    textural analysis, diffusion experiments and numerical modelling.
    \fi
-
 1. Age-elevation profiles are a powerful method to determine tectonic
 exhumation rates: by measuring the U-Th-He (and/or fission track) ages
 of samples collected at different elevations along a steep mountain
 transect, it is possible to determine vertical travel times from the
 closure isotherm ($\sim{60}^\circ$C) to the Earth's surface.
 Consider the following dataset:
-```{r include=FALSE}
+   ```{r include=FALSE}
    dzdt <- 5e-4 # m/yr
    z <- c(2000,3000,3500,4000) # m, sample elevation
    D <- 0 # m, elevation of the closure isotherm
@@ -575,16 +562,16 @@ Consider the following dataset:
    PTh <- 6*(exp(l32*tHe)-1)
    Hepmolg <- (PU*Unmolg + PTh*Thnmolg)*1e3
    UThHetab <- cbind(z,signif(Hepmolg,3),10,
-                     Uppm,1,Thppm,1)
+   Uppm,1,Thppm,1)
    rownames(UThHetab) <- 1:length(z)
    colnames(UThHetab) <- c('elev (m)','He (pmol/g)','s(He)',
-                           'U (ppm)','s(U)', 'Th (ppm)','s(Th)')
+   'U (ppm)','s(U)', 'Th (ppm)','s(Th)')
    tab <- UThHetab
    ```
    ```{r include=TRUE, echo=FALSE, results='asis'}
    knitr::kable(UThHetab)
    ```
-   
+
    (a) Convert these data to internally consistent atomic units.
 
    (b) Plug them into the online version of `IsoplotR` (
@@ -623,7 +610,6 @@ Consider the following dataset:
    slope <- lm(z ~ tHe[,1])$coefficients[2]
    message('Exhumation rate = ',signif(slope,3), ' m/Myr')
    ```
-
 1. Consider a rapidly cooled (volcanic) apatite of 10 Ma with an
 atomic Th/U ratio of 5. What is the ratio of helium atoms to fission
 tracks in it?  Look up the relevant decay constants in the notes.
@@ -640,7 +626,7 @@ tracks in it?  Look up the relevant decay constants in the notes.
    $$
 
    Because Th/U=5:
-  
+
    $$
    He =
    \left[
@@ -662,12 +648,12 @@ tracks in it?  Look up the relevant decay constants in the notes.
    $$
    \frac{He}{n_s} =
    \frac{
-   8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
-   7 \frac{1}{138.818} (e^{\lambda_{235}t}-1) +
-   30 (e^{\lambda_{232}t}-1)
+      8 \frac{137.818}{138.818} (e^{\lambda_{238}t}-1) +
+      7 \frac{1}{138.818} (e^{\lambda_{235}t}-1) +
+      30 (e^{\lambda_{232}t}-1)
    }{
-   \frac{\lambda_f}{\lambda_{238}}
-   \frac{137.818}{138.818} (e^{\lambda_{238}t}-1)
+      \frac{\lambda_f}{\lambda_{238}}
+      \frac{137.818}{138.818} (e^{\lambda_{238}t}-1)
    }
    $$
 
@@ -680,12 +666,12 @@ tracks in it?  Look up the relevant decay constants in the notes.
    l232 <- 4.95e-5 # Myr-1
    tap <- 10 # Ma
    num <- 8*(137.818/138.818)*(exp(l238*tap)-1) +
-         (7/138.818)*exp(l235*tap-1) + 30*(exp(l232*tap)-1)
+   (7/138.818)*exp(l235*tap-1) + 30*(exp(l232*tap)-1)
    den <- (lf/l238)*(137.818/138.818)*(exp(l238*tap)-1)
    HeFT <- num/den
    message('The He/FT-ratio is ',signif(HeFT,2))
    ```
-	
+
    \ifsol
    Even though spontaneous fission of ${}^{238}$U happens `only'
    1.8 million times less frequently than $\alpha$-decay,
@@ -698,7 +684,6 @@ tracks in it?  Look up the relevant decay constants in the notes.
    diffusivity. Thus the closure temperature of apatite can
    vary as a function of time and U (and Th) concentration.
    \fi
-
 1. Recent advances in analytical chemistry allow fission track
 geochronologist to replace the trusted external detector method with
 an alternative approach, in which the U-content of the sample is
@@ -760,13 +745,11 @@ apatite data:
    'N~s~','N~i~')
    tab <- rbind(J,Ar96,round(Ar06),zeta,rhoD,Ns,Ni)
    ```
-   
 1. Consider a rock whose U-Th-He age is `r tHe` Ma. Suppose that the
 following data were acquired on the same sample:
    ```{r include=TRUE, echo=FALSE, results='asis'}
    knitr::kable(thermotab)
    ```
-
    Assuming that the ^36^Ar is of atmospheric origin (with
    ^40^Ar/^36^Ar~atm~=298.5), and using the notes for decay constants etc.,
    summarise the geological history of the sample.
@@ -786,10 +769,9 @@ following data were acquired on the same sample:
    g <- 0.5
    tFT <- log(1+g*l38*zeta*1e-6*rhoD*Ns/Ni)/l38
    message('t(Ar-Ar)=',signif(tArAr,3),'=',
-           't(FT)=',signif(tFT,3),'=',
-	   't(U-Th-He)=',tHe,', suggesting rapid cooling')
+   't(FT)=',signif(tFT,3),'=',
+   't(U-Th-He)=',tHe,', suggesting rapid cooling')
    ```
-
 1. Which of the following pairs of grain sizes and cooling rates are
 characterised by the same closure temperature?
    ```{r}
@@ -814,7 +796,6 @@ characterised by the same closure temperature?
    leads to the conclusion that the first and the sixth samples have
    the same closure temperature.
    \fi
-
 1. The ^234^U/^238^U activity ratio of sea water rarely exceeds
 1.15.  However, much higher activity ratios have been measured in
 fresh waters and cave carbonates (speleothems). Suppose that we have
@@ -824,7 +805,8 @@ speleothem. What was its _initial_ ^234^U/^238^U-ratio?
    \ifsol
    Rearrange Equation 9.3 of the notes for $\gamma_\circ$:
    $$
-   \gamma_\circ = 1 + \left(\frac{A(^{234}U)}{A(^{238}U)} - 1\right) e^{\lambda_{234}t}
+   \gamma_\circ = 1 + \left(\frac{A(^{234}U)}{A(^{238}U)} - 1\right)
+                  e^{\lambda_{234}t}
    $$
    \fi
    ```{r}
@@ -834,7 +816,6 @@ speleothem. What was its _initial_ ^234^U/^238^U-ratio?
    g0 <- 1 + (A48-1)*exp(l234*tU48)
    message('The initial 234U/238U activity ratio was ',signif(g0,3))
    ```
-
 1. Although U-series disequilibrium measurements were historically
 done by $\alpha$-counting, in recent decades this method has been
 replaced by mass spectrometry. Consider the following composition of
@@ -898,9 +879,6 @@ three cogenetic aliquots:
    tThU <- -log(1-slope)/l230
    message('the Th/U-age is ',signif(tThU,3),'ka')
    ```
-
-# Practicals
-
 1. Write a function to simulate radioactive decay, following the
 recipe shown in slide 13 of the first theory presentation. Compare the
 numerical approximation with the analytical solution. Explore the
@@ -913,13 +891,13 @@ effect of different time steps on the accuracy of the simulation.
       nt <- length(tt)
       P <- rep(P0,nt) # initialise
       for (i in 2:nt){
-      dPdt <- -P[i-1]*lambda
-      P[i] <- P[i-1] + dPdt*dt
+         dPdt <- -P[i-1]*lambda
+	 P[i] <- P[i-1] + dPdt*dt
       }
       Pexact <- P0*exp(-lambda*tt)
       plot(tt,P,pch=16,cex=0.5)
       mtext(text=paste0('P0=',P0,', lambda=',lambda,', dt=',dt),
-            side=3,line=-1,cex=0.8)
+      side=3,line=-1,cex=0.8)
       lines(tt,Pexact)
    }
 
@@ -930,7 +908,6 @@ effect of different time steps on the accuracy of the simulation.
    decay(dt=0.01)
    decay(P0=1000)
    ```
-
 1. Plot the U-Pb composition of sample 91500 on a Tera-Wasserburg
 concordia diagram (^207^Pb/^206^Pb vs. ^238^U/^206^Pb). Use a
 ^238^U/^235^U-ratio of 137.818 for the conversion from Wetherill to
@@ -942,16 +919,18 @@ Tera-Wasserburg space.
    smp0638a <- 0.1819523
    # A. basic solution
    tt <- seq(from=0,to=2000,length.out=50)
+   l38 <- 1.55125e-4 # Myr-1
+   l35 <- 9.8485e-4 # Myr-1
    x <- exp(l35*tt)-1
    y <- exp(l38*tt)-1
    if (FALSE){ # basic solution
-     plot(x,y,type='l')
-     points(smp0735a,smp0638a)
+      plot(x,y,type='l')
+         points(smp0735a,smp0638a)
    } else { # fancy solution
-     plot(x,y,type='l',
-          xlab=expression(''^207*'Pb/'^235*'U'),
-   	  ylab=expression(''^206*'Pb/'^238*'U'))
-     points(smp0735a,smp0638a,pch=21,bg='white')
+      plot(x,y,type='l',
+      xlab=expression(''^207*'Pb/'^235*'U'),
+      ylab=expression(''^206*'Pb/'^238*'U'))
+      points(smp0735a,smp0638a,pch=21,bg='white')
    }
    # add age ticks to the concordia plot:
    ttick <- seq(from=0,to=2000,by=250)
@@ -961,74 +940,74 @@ Tera-Wasserburg space.
    text(xt,yt,labels=ttick,pos=2)
    ```
    ```{r}
-     # Compute the Pb207/Pb206-ratio from the conventional ratios:
-     U3835 <- 137.818
-     smp0706a <- smp0735a/(U3835*smp0638a)
-     # draw the concordia line
-     l38 <- 0.000155125
-     l35 <- 0.00098485
-     tt <- seq(from=100,to=2000,length.out=50)
-     x <- 1/(exp(l38*tt)-1)
-     y <- (exp(l35*tt)-1)/(U3835*(exp(l38*tt)-1))
-     plot(x,y,type='l',
-          xlab=expression(''^238*'U/'^238*'Pb'),
-          ylab=expression(''^207*'Pb/'^206*'Pb'))
-     # add the sample data:
-     points(x=1/smp0638a,y=smp0706a,pch=21,bg='white')
-     # add age ticks to the concordia plot:
-     ttick <- seq(from=0,to=2000,by=250)
-     xt <- 1/(exp(l38*ttick)-1)
-     yt <- (exp(l35*ttick)-1)/(U3835*(exp(l38*ttick)-1))
-     points(xt,yt,pch=16)
-     text(xt,yt,labels=ttick,pos=4)
+   # Compute the Pb207/Pb206-ratio from the conventional ratios:
+   U3835 <- 137.818
+   smp0706a <- smp0735a/(U3835*smp0638a)
+   # draw the concordia line
+   l38 <- 0.000155125
+   l35 <- 0.00098485
+   tt <- seq(from=100,to=2000,length.out=50)
+   x <- 1/(exp(l38*tt)-1)
+   y <- (exp(l35*tt)-1)/(U3835*(exp(l38*tt)-1))
+   plot(x,y,type='l',
+        xlab=expression(''^238*'U/'^238*'Pb'),
+	ylab=expression(''^207*'Pb/'^206*'Pb'))
+   # add the sample data:
+   points(x=1/smp0638a,y=smp0706a,pch=21,bg='white')
+   # add age ticks to the concordia plot:
+   ttick <- seq(from=0,to=2000,by=250)
+   xt <- 1/(exp(l38*ttick)-1)
+   yt <- (exp(l35*ttick)-1)/(U3835*(exp(l38*ttick)-1))
+   points(xt,yt,pch=16)
+   text(xt,yt,labels=ttick,pos=4)
    ```
 
-```{r include=FALSE}
-setwd('/home/pvermees/Documents/geotopes/practicals/ArAr/')
+   ```{r include=FALSE}
+   dir <- '/home/pvermees/Documents/geotopes/practicals/ArAr/'
 
-# generate synthetic Ar/Ar dataset
-J <- 0.003
-l40 <- 5.543e-4
-a4036 <- 295.5
-t <- 30:180 # acquisition times
+   # generate synthetic Ar/Ar dataset
+   J <- 0.003
+   l40 <- 5.543e-4
+   a4036 <- 295.5
+   t <- 30:180 # acquisition times
 
-createfile <- function(t36_0,t39_0,t40_0,t,fname){
-   nt <- length(t)
-   r36 <- rpois(n=nt,lambda=t36_0-(t36_0/1000)*t)
-   r39 <- rpois(n=nt,lambda=t39_0-(t39_0/1000)*t)
-   r40 <- rpois(n=nt,lambda=t40_0-(t40_0/1000)*t)
-   tab <- cbind(t,r36,r39,r40)
-   colnames(tab) <- c('t','Ar36','Ar39','Ar40')
-   write.csv(tab,file=fname,row.names=FALSE)
-}
+   createfile <- function(t36_0,t39_0,t40_0,t,fname){
+      nt <- length(t)
+      r36 <- rpois(n=nt,lambda=t36_0-(t36_0/1000)*t)
+      r39 <- rpois(n=nt,lambda=t39_0-(t39_0/1000)*t)
+      r40 <- rpois(n=nt,lambda=t40_0-(t40_0/1000)*t)
+      tab <- cbind(t,r36,r39,r40)
+      colnames(tab) <- c('t','Ar36','Ar39','Ar40')
+      write.csv(tab,file=fname,row.names=FALSE)
+   }
 
-ts <- 27.8
-s36_0 <- 5
-s40a <- a4036*s36_0
-s40t <- 400000
-s40_0 <- s40t + s40a
-s4039t <- (exp(l40*ts)-1)/J
-s39_0 <- s40t/s4039t
-createfile(s36_0,s39_0,s40_0,t,'stnd.csv')
+   ts <- 27.8
+   s36_0 <- 5
+   s40a <- a4036*s36_0
+   s40t <- 400000
+   s40_0 <- s40t + s40a
+   s4039t <- (exp(l40*ts)-1)/J
+   s39_0 <- s40t/s4039t
+   createfile(s36_0,s39_0,s40_0,t,paste0(dir,'stnd.csv'))
 
-b36_0 <- 1
-b40_0 <- b36_0*a4036
-b39_0 <- 1
-createfile(b36_0,b39_0,b40_0,t,'blnk.csv')
+   b36_0 <- 1
+   b40_0 <- b36_0*a4036
+   b39_0 <- 1
+   createfile(b36_0,b39_0,b40_0,t,paste0(dir,'blnk.csv'))
 
-tx <- c(45,65,80,90,95,97.5,99,101,99,100)
-x36_0 <- 10
-x40a <- a4036*x36_0
-x40t <- c(0.02,0.05,0.1,0.4,0.5,0.5,0.6,0.4,0.2,0.05)*700000
-x40_0 <- x40t + x40a
-x4039t <- (exp(l40*tx)-1)/J
-x39_0 <- x40t/x4039t
+   tx <- c(45,65,80,90,95,97.5,99,101,99,100)
+   x36_0 <- 10
+   x40a <- a4036*x36_0
+   x40t <- c(0.02,0.05,0.1,0.4,0.5,0.5,0.6,0.4,0.2,0.05)*700000
+   x40_0 <- x40t + x40a
+   x4039t <- (exp(l40*tx)-1)/J
+   x39_0 <- x40t/x4039t
 
-for (i in 1:length(tx)){
-   fname <- paste0('smpl',i,'.csv')
-   createfile(x36_0,x39_0[i],x40_0[i],t,fname)
-}
-```
+   for (i in 1:length(tx)){
+      fname <- paste0(dir,'smpl',i,'.csv')
+      createfile(x36_0,x39_0[i],x40_0[i],t,fname)
+   }
+   ```
 1. Visit [`https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/`](https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/) and download
 files `blnk.csv`, `stnd.csv` and `smpl1.csv` through `smpl10.csv`.
 Process these files using your Ar-Ar data reduction script.
@@ -1036,11 +1015,57 @@ Plot the results as an Ar-Ar release spectrum,
 using the following function. `Ar39` and `tx` are both vectors
 containing the blank corrected ^39^Ar signals and ^40^Ar/^39^Ar age
 estimates, respectively:
+   ```{r include=FALSE}
+   dir <- '/home/pvermees/Documents/geotopes/practicals/ArAr/'
+
+   # generate synthetic Ar/Ar dataset
+   J <- 0.003
+   l40 <- 5.543e-4
+   a4036 <- 295.5
+   t <- 30:180 # acquisition times
+
+   createfile <- function(t36_0,t39_0,t40_0,t,fname){
+      nt <- length(t)
+      r36 <- rpois(n=nt,lambda=t36_0-(t36_0/1000)*t)
+      r39 <- rpois(n=nt,lambda=t39_0-(t39_0/1000)*t)
+      r40 <- rpois(n=nt,lambda=t40_0-(t40_0/1000)*t)
+      tab <- cbind(t,r36,r39,r40)
+      colnames(tab) <- c('t','Ar36','Ar39','Ar40')
+      write.csv(tab,file=fname,row.names=FALSE)
+   }
+
+   ts <- 27.8
+   s36_0 <- 5
+   s40a <- a4036*s36_0
+   s40t <- 400000
+   s40_0 <- s40t + s40a
+   s4039t <- (exp(l40*ts)-1)/J
+   s39_0 <- s40t/s4039t
+   createfile(s36_0,s39_0,s40_0,t,paste0(dir,'stnd.csv'))
+
+   b36_0 <- 1
+   b40_0 <- b36_0*a4036
+   b39_0 <- 1
+   createfile(b36_0,b39_0,b40_0,t,paste0(dir,'blnk.csv'))
+
+   tx <- c(45,65,80,90,95,97.5,99,101,99,100)
+   x36_0 <- 10
+   x40a <- a4036*x36_0
+   x40t <- c(0.02,0.05,0.1,0.4,0.5,0.5,0.6,0.4,0.2,0.05)*700000
+   x40_0 <- x40t + x40a
+   x4039t <- (exp(l40*tx)-1)/J
+   x39_0 <- x40t/x4039t
+
+   for (i in 1:length(tx)){
+      fname <- paste0(dir,'smpl',i,'.csv')
+      createfile(x36_0,x39_0[i],x40_0[i],t,fname)
+   }
+   ```
    ```{r include=TRUE, echo=TRUE}
    spectrum <- function(Ar39,tx){
       Ar39n <- cumsum(c(0,Ar39))/sum(Ar39) # normalise
       plot(x=Ar39n, y=c(tx[1],tx), type='s',
-           xlab=expression(''^39*"Ar (%)"), ylab='Ar-Ar age (Ma)')
+      xlab=expression(''^39*"Ar (%)"), ylab='Ar-Ar age (Ma)')
    }
    ```
 
@@ -1077,14 +1102,13 @@ estimates, respectively:
       return(out)
    }
 
-   setwd('/home/pvermees/Documents/geotopes/practicals/ArAr/')
-   std <- read.csv("stnd.csv",header=TRUE)
-   blk <- read.csv("blnk.csv",header=TRUE)
+   std <- read.csv(paste0(dir,"stnd.csv"),header=TRUE)
+   blk <- read.csv(paste0(dir,"blnk.csv"),header=TRUE)
    ns <- 10 # number of samples
    Ar39 <- rep(NA,ns)
    tx <- rep(NA,ns)
    for (i in 1:ns){
-      sname <- paste0('smpl',i,'.csv')
+      sname <- paste0(dir,'smpl',i,'.csv')
       smp <- read.csv(sname,header=TRUE)
       results <- process(std,smp,blk)
       Ar39[i] <- results$Ar39
@@ -1117,7 +1141,7 @@ files `GJ1.csv` (standard) and `smp1.csv` through `smp4.csv` (samples).
    the data on a concordia diagram.
    
    ```{r}
-   setwd('/home/pvermees/Documents/geotopes/practicals/UPb/')
+   dir <- '/home/pvermees/Documents/geotopes/practicals/UPb/'
 
    blankcorr <- function(dat,bi,si){
       return(dat[si] - mean(dat[bi]))
@@ -1165,12 +1189,12 @@ files `GJ1.csv` (standard) and `smp1.csv` through `smp4.csv` (samples).
    tstd <- 600.4 # Ma
    l38 <- 1.55125e-4 # Myr-1
    l35 <- 9.8485e-4 # Myr-1
-   std <- read.csv("GJ1.csv",header=TRUE)
+   std <- read.csv(paste0(dir,"GJ1.csv"),header=TRUE)
    ns <- 4
    tab <- matrix(0,nrow=ns,ncol=5)
    colnames(tab) <- c('Pb207/U235','err','Pb206/U238','err','rho')
    for (i in 1:ns){
-      sname <- paste0('smp',i,'.csv')
+      sname <- paste0(dir,'smp',i,'.csv')
       smp <- read.csv(file=sname,header=TRUE)
       tab[i,1:2] <- atomic(samp=smp,stand=std,num='Pb207',den='U235',
 		           tstd=tstd,lambda=l35,tb=tb,ts=ts)
@@ -1181,7 +1205,6 @@ files `GJ1.csv` (standard) and `smp1.csv` through `smp4.csv` (samples).
    # The following line produces the same output as the online GUI:
    IsoplotR::concordia(IsoplotR:::as.UPb(tab,format=1))
    ```
-
 1. Install `IsoplotRgui` on your computer using
 `install.packages('IsoplotRgui')`.  Start the program by typing
 `IsoplotRgui::IsoplotR()`.

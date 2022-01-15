@@ -1,0 +1,61 @@
+Recent advances in analytical chemistry allow fission track
+geochronologist to replace the trusted external detector method with
+an alternative approach, in which the U-content of the sample is
+measured directly by Laser Ablation Inductively Coupled Mass
+Spectrometry (LA-ICP-MS), the same technique that is also used for
+in-situ U-Pb geochronology. Using LA-ICP-MS, it is possible to compute
+fission track ages using Equation 7.8 of the notes. Calculate the
+fission track age and propagate its uncertainty for the following
+apatite data:
+
+   | parameter | value |
+   |-----------|-------|
+   | fission track track count | 49 |
+   | counting area | 5000 \textmu m^2^ |
+   | fission track length | 15 \textmu m |
+   | U-concentration | 10 ppm |
+   | density of apatite | 3.19 g/cm^3^ |
+   | molar mass of U | 238.03 g/mol |
+
+   ```{r}
+   Ns <- 49        # dimensionless
+   A <- 5000       # micron^2
+   L <- 15         # micron
+   Uppm <- 10      # microgram/gram
+   apdens <- 3.19  # g/cc
+   MU <- 238.03    # g/mol
+   rhos <- Ns/A    # micron^-2
+   atmumol <- 6.022e17                    # atoms/micromol (Avogadro's number)
+   ccmum3 <- 1e-12                        # cc/micron^3
+   Umumolg <- Uppm/MU                     # micromol/g
+   Umumolcc <- Umumolg*apdens             # micromol/cc
+   Uatmum3 <- Umumolcc*ccmum3*atmumol     # atoms(U)/micron^3
+   U238atmum3 <- Uatmum3*137.818/138.818  # atoms(U238)/micron^3
+   l38 <- 1.55125e-4 # 238U total decay constant, Myr-1
+   lf <- 8.46e-11    # 238U fission decay constant, Myr-1
+   R <- l38*rhos/(lf*U238atmum3*L)
+   tFT <- log(1+R)/l38
+   rhoserr <- sqrt(Ns)/A
+   Rerr <- l38*rhoserr/(lf*U238atmum3*L)
+   tFTerr <- Rerr/((1+R)*l38)
+   message('age=',signif(tFT,3),'Ma, s.e.=',signif(tFTerr,3),'Ma')
+   ```
+   ```{r include=FALSE}
+   tAr <- 50
+   tFT <- 50
+   tHe <- 50
+   J <- 0.005
+   zeta <- 300
+   rhoD <- 2.5e6
+   l40 <- log(2)/1248
+   l38 <- 1.55125e-4
+   Ar96 <- 100
+   Ar06 <- 298.5 + Ar96*(exp(l40*tAr)-1)/J
+   Ni <- 100
+   Ns <- round(Ni*(exp(l38*tFT)-1)*2/(l38*zeta*rhoD/1e6))
+   thermotab <- rbind(format(J,digits=3),Ar96,format(Ar06,digits=0),zeta,rhoD,Ns,Ni)
+   rownames(thermotab) <- c('J','^39^Ar/^36^Ar','^40^Ar/^36^Ar',
+   'zeta (yr cm^2^)','rho~D~ (cm^-2^)',
+   'N~s~','N~i~')
+   tab <- rbind(J,Ar96,round(Ar06),zeta,rhoD,Ns,Ni)
+   ```

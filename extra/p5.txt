@@ -1,0 +1,28 @@
+Install `IsoplotRgui` on your computer using
+`install.packages('IsoplotRgui')`.  Start the program by typing
+`IsoplotRgui::IsoplotR()`.
+
+   (a) Open the `RbSr.csv` file from Moodle (first
+   practical) and paste the data into `IsoplotRgui`. Compare with the
+   output of exercise 12.1.12 of the notes.
+
+   (b) Visit
+   [`https://github.com/pvermees/IsoplotR/tree/master/inst`](https://github.com/pvermees/IsoplotR/tree/master/inst)
+   and download the following files: `UPb2.csv`, `ArAr3.csv`,
+   `ThU2.csv`.
+
+   (c) Using the insights learned from step (a), plot `UPb2.csv` on a
+   concordia diagram; first using the GUI (`IsoplotRgui`) and then
+   from the command line (`IsoplotR`).
+
+   (d) Plot `ArAr3.csv` as an age spectrum, first using `IsoplotRgui`,
+   then using `IsoplotR`.
+
+   (e) Plot the U-series dataset `ThU2.csv` as an isochron, first
+   using `IsoplotRgui`, then using `IsoplotR`.
+
+   Hint: besides `read.data`, you will also need `IsoplotR`'s
+   `concordia`, `agespectrum` and `isochron` functions.  See
+   `?concordia` etc. for help, or download the complete documentation
+   from
+   [`https://CRAN.R-project.org/package=IsoplotR`](https://CRAN.R-project.org/package=IsoplotR).

@@ -1,0 +1,41 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+4\. Following up from the previous question: ^87^Rb is radioactive with
+a half-life $t_{1/2}=48.8$ Gyr. What was the ^85^Rb/^87^Rb-ratio 2
+billion years ago?
+
+   \ifsol
+   Compute initial ^87^Rb from present amount:
+   \[
+   P_\circ = P\exp[\lambda{t}]
+   \]
+   \fi
+   
+   ```{r}
+   # 1. compute the decay constant:
+   t12 = 48.8
+   l87 = log(2)/t12
+   # 2. restore 87Rb to 2 Ga:
+   f85 <- 1-f87
+   umolgRb <- ppmRb/MRb
+   umolgRb85 <- f85*umolgRb
+   umolgRb87 <- f87*umolgRb
+   age <- 2
+   umolgRb85_o <- umolgRb85
+   umolgRb87_o <- umolgRb87*exp(l87*age)
+   r57_o <- umolgRb85_o/umolgRb87_o
+   message('87Rb/85Rb ratio at 2 Ga: ',signif(r57_o,5))
+   ```

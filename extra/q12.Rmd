@@ -1,0 +1,65 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+12\. ^129^I is an extinct nuclide of Iodine with a half-life of 15.7
+million years. It decays (or rather: decayed!) to the noble gas
+^129^Xe. Although there is no (natural) ^129^I in the Solar System
+today, the nuclide did exist during its earliest stages. Iodine-rich
+meteorites that existed within the first few 10s of millions of years
+of Solar System history contain measurable amounts of excess of
+^129^Xe.
+
+   Consider two meteorites with ^129^Xe/^127^I ratios of
+   13$\times{10}^{-5}$ and 8$\times{10}^{-5}$, respectively. What is
+   the age _difference_ between the two meteorites? Assume that all
+   the ^129^Xe is radiogenic, and that the early Solar System had a
+   homogeneous ^129^I/^127^I-composition.
+
+   \ifsol
+   Let $[{}^{129}I/{}^{127}I]_\circ$ be the (unknown) ^129^I/^127^I-composition
+   of the early Solar System, and let $t_A$ and $t_B$ be the ages of the
+   two meteorites (counting from the start of the Solar System). Then
+   \[
+   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A =
+   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[-\lambda_{129}t_A]
+   \]
+   and
+   \[
+   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B =
+   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[-\lambda_{129}t_B]
+   \]
+   The ratio of the two ratios is:
+   \[
+   \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A}
+   {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B} =
+   \exp[\lambda_{129}(t_B-t_A)]
+   \]
+   Hence
+   \[
+   t_B-t_A = \frac{1}{\lambda_{129}}
+   \left(
+   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A -
+   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
+   \right)
+   \]
+   \fi
+   ```{r}
+   l129 <- log(2)/15.7
+   XeIA <- 13e-5
+   XeIB <- 8e-5
+   dt <- (log(XeIA)-log(XeIB))/l129
+   message('The age difference between the two meteorites is ',
+   signif(dt,3),' million years.')
+   ```

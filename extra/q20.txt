@@ -1,0 +1,20 @@
+The ^234^U/^238^U activity ratio of sea water rarely exceeds
+1.15.  However, much higher activity ratios have been measured in
+fresh waters and cave carbonates (speleothems). Suppose that we have
+measured a ^234^U/^238^U activity ratio of 1.1 in a 1 Ma old
+speleothem. What was its _initial_ ^234^U/^238^U-ratio?
+
+   \ifsol
+   Rearrange Equation 9.3 of the notes for $\gamma_\circ$:
+   $$
+   \gamma_\circ = 1 + \left(\frac{A(^{234}U)}{A(^{238}U)} - 1\right)
+                  e^{\lambda_{234}t}
+   $$
+   \fi
+   ```{r}
+   tU48 <- 1000 # ka
+   l234 <- 0.00282206 # kyr-1
+   A48 <- 1.1
+   g0 <- 1 + (A48-1)*exp(l234*tU48)
+   message('The initial 234U/238U activity ratio was ',signif(g0,3))
+   ```

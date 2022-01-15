@@ -1,0 +1,80 @@
+---
+output:
+  pdf_document:
+    includes:
+      keep_tex: yes
+    number_sections: yes
+---
+
+```{r settings, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include=TRUE)
+set.seed(1)
+```
+\newif\ifsol
+\soltrue
+\pagestyle{empty}
+6\. ^210^Pb is a short lived (t~1/2~=22.3 yr) intermediate daughter of
+the ^238^U decay chain. This natural radioactive lead is incorporated
+into ice deposited in Greenland by forming successive layers of ice
+which can be studied like sedimentary strata.  The activity of ^210^Pb
+is measured at four levels in disintegrations per hour per kilogram of
+ice.
+
+   ```{r include=FALSE}
+   depth <- c(0,1,1.5,2.5)
+   l210 <- log(2)/22.3 # yr-1
+   Pb210i <- 75
+   rate <- 4e-2 # m/yr
+   Pb210 <- Pb210i*exp(-l210*depth/rate)
+   tabPb210 <- rbind(depth,signif(Pb210,3))
+   rownames(tabPb210) <- c("depth (m)","^210^Pb (dph/kg)")
+   colnames(tabPb210) <- 1:length(depth)
+   ```
+
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabPb210)
+   ```
+
+   Calculate the sedimentation rate of the ice. Assuming a constant
+   rate and a compaction factor of 5, how much ice will have
+   accumulated in 5000 years?  Calculate the ^210^Pb-content of fresh
+   ice (in mol/kg or atoms/kg).
+
+   \ifsol
+   \[
+   {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}t]
+   \]
+   If the rate of deposition is $r$ and depth $d$, we have $t = d/r$.
+   The equation then becomes:
+   \[
+   {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}d/r]
+   \]
+   Taking logarithms:
+   \[
+   \ln[{}^{210}Pb] = \ln[{}^{210}Pb_\circ] -\lambda_{210}d/r
+   \]
+   If the initial \textsuperscript{210}Pb content has remained constant over time,
+   the data points must be aligned in a plot of $\ln[{}^{210}Pb]$ vs. $d$.
+   The slope is therefore $-\lambda_{210}$/r.
+   A modern activity of $\lambda_{210}N_{210} = 75$ dph/kg corresponds to
+   $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
+   out to be a mere 21 million atoms per kg!
+   \fi
+
+   ```{r fig.width=4, fig.height=4}
+   depth <- tabPb210[1,]
+   Pb210 <- tabPb210[2,]
+   fit <- lm(log(Pb210) ~ depth)
+   l210 <- log(2)/22.3
+   r <- -l210/fit$coefficients[2]
+   message("The accumulation rate is ",signif(100*r,3),'cm/yr')
+   message("In 5000 years, there will be ",
+           signif(5000*r/5,3),
+           "m of ice accumulation")
+   Pb210atoms <- Pb210[1]*24*365.25/l210 
+   message("1 kg of modern ice contains ",
+           round(Pb210atoms/1e6),
+	   " million atoms of 210Pb")
+   plot(depth,Pb210,type='p',log='y')
+   lines(depth,exp(fit$fitted.values))
+   ```

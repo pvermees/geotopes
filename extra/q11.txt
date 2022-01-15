@@ -1,0 +1,26 @@
+The silicate Earth weighs approximately $4\times{10}^{24}$ kg and
+contains 250 ppm potassium. How much ^40^Ar is created in 4.5 billion
+years?  Given that ^40^Ar cannot escape from the Earth and the
+quantity of ^40^Ar in the atmosphere is 66000 Gt, what is the ``K-Ar
+age of the Earth's atmosphere''?  K has three isotopes with
+^39^K/^40^K = 7771 and ^41^K/^40^K = 561. ^40^K is radioactive and
+undergoes branched decay to ^40^Ar (10.72%) and ^40^Ca (89.28%) with a
+half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
+
+   ```{r}
+   GtEarth <- 4e24/1e12  # convert kg to Gt
+   GtK <- GtEarth*250e-6 # Gt of K in the silicate Earth
+   MK <- 39.1e-6 # Gt/Gmol
+   GmolK <- GtK/MK # Gmol
+   f40K <- 1/(7771 + 561 + 1) # 40K/K
+   GmolK40 <- GmolK*f40K # Gmol of 40K in the silicate Earth
+   GtAr40 <- 66e3
+   M40K <- 40e-6 # Gt/Gmol
+   GmolAr40 <- GtAr40/M40K
+   Ar40K40 <- GmolAr40/GmolK40
+   l40 <- log(2)/1.248
+   fec <- 0.1072 # fraction of 40K decaying to 40Ar
+   atmage <- log(Ar40K40/fec+1)/l40
+   message("The 40Ar/40K-age of the Earth's atmosphere is ",
+   signif(atmage,3),' Ga.')
+   ```

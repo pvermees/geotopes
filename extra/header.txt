@@ -1,0 +1,11 @@
+This document contains additional exercises that are to be completed
+during the live sessions on Mondays and Tuesdays. Some of these are
+advanced exercises that require creative thinking. Completing these
+exercises will deepen your understanding of the taught material.  They
+illustrate how the tools provided in the notes can be generalised to
+other chronometers, which we lack the time to discuss in
+detail. Practical exercises 3 and 4 in Part 2 of this document are
+quite involved.  Do not be afraid to ask for additional tips or hints
+if you get stuck. I will be happy to share the solution to all the
+questions with you, but only after you give them a try yourself.
+
