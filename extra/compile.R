@@ -1,8 +1,10 @@
-setwd('/home/pvermees/Documents/geotopes/extra/')
+idir <- '/home/pvermees/Documents/geotopes/extra/'
+odir <- '/home/pvermees/Desktop/extra/'
 
 solution <- TRUE
 results <- TRUE
 multidoc <- FALSE
+randomise <- TRUE
 
 preamble <- paste0("---\n",
 ifelse(solution,ifelse(multidoc,"",
@@ -24,8 +26,8 @@ set.seed(1)
 fread <- function(fname){
     readChar(fname, file.info(fname)$size)
 }
-
-FNAME <- 'extra.Rmd'
+set.seed(1)
+FNAME <- paste0(odir,'extra.Rmd')
 cat(preamble,file=FNAME)
 if (solution){
     cat("\\newif\\ifsol\n\\soltrue\n",file=FNAME,append=TRUE)
@@ -35,20 +37,23 @@ if (solution){
 if (solution & multidoc){
     cat("\\pagestyle{empty}\n",file=FNAME,append=TRUE)
 } else {
-    cat(fread('header.txt'),file=FNAME,append=TRUE)
+    cat(fread(paste0(idir,'header.txt')),file=FNAME,append=TRUE)
     cat("# Theory (5 questions per week)\n",file=FNAME,append=TRUE)
 }
-for (q in 1:21){
+nq <- 21
+NN <- round(runif(n=nq,min=0,max=100))
+for (q in 1:nq){
     if (solution & multidoc){
-        qname <- paste0('q',q,'.Rmd')
+        qname <- paste0(odir,'q',q,ifelse(randomise,NN[q],''),'.Rmd')
+        print(qname)
         qfile <- cat(fread(FNAME),file=qname)
         cat(q,file=qname,append=TRUE)
         cat("\\. ",file=qname,append=TRUE)
-        cat(fread(paste0("q",q,".txt")),file=qname,append=TRUE)
+        cat(fread(paste0(idir,"q",q,".txt")),file=qname,append=TRUE)
         rmarkdown::render(qname, 'pdf_document')
     } else {
         cat("1. ",file=FNAME,append=TRUE)
-        cat(fread(paste0("q",q,".txt")),file=FNAME,append=TRUE)
+        cat(fread(paste0(idir,"q",q,".txt")),file=FNAME,append=TRUE)
     }
 }
 if (!solution){
@@ -56,15 +61,15 @@ if (!solution){
 }
 for (p in 1:5){
     if (solution & multidoc){
-        pname <- paste0('p',p,'.Rmd')
+        pname <- paste0(odir,'p',p,ifelse(randomise,NN[p],''),'.Rmd')
         pfile <- cat(fread(FNAME),file=pname)
         cat(p,file=pname,append=TRUE)
         cat("\\. ",file=pname,append=TRUE)
-        cat(fread(paste0("p",p,".txt")),file=pname,append=TRUE)
+        cat(fread(paste0(idir,"p",p,".txt")),file=pname,append=TRUE)
         rmarkdown::render(pname, 'pdf_document')        
     } else {
         cat("1. ",file=FNAME,append=TRUE)
-        cat(fread(paste0("p",p,".txt")),file=FNAME,append=TRUE)
+        cat(fread(paste0(idir,"p",p,".txt")),file=FNAME,append=TRUE)
     }
 }
 if (!solution | !multidoc){
