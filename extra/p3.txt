@@ -1,10 +1,18 @@
-Visit [`https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/`](https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/) and download
-files `blnk.csv`, `stnd.csv` and `smpl1.csv` through `smpl10.csv`.
-Process these files using your Ar-Ar data reduction script.
-Plot the results as an Ar-Ar release spectrum,
-using the following function. `Ar39` and `tx` are both vectors
-containing the blank corrected ^39^Ar signals and ^40^Ar/^39^Ar age
-estimates, respectively:
+
+   (a) Visit
+   [`github:pvermees/geotopes/practicals/ArAr/`](https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/)
+   and download files `blnk.csv`, `stnd.csv` and `smpl1.csv` through
+   `smpl10.csv`.
+
+   (b) Turn your Ar-Ar data reduction script from the third practical
+   into a function.
+
+   (c) Process the 10 data files with this function.
+
+   (d) Plot the results as an Ar-Ar release spectrum using the
+   following function, in which `Ar39` and `tx` are both vectors
+   containing the blank corrected ^39^Ar signals and ^40^Ar/^39^Ar age
+   estimates, respectively:
    ```{r include=FALSE}
    dir <- '/home/pvermees/Documents/geotopes/practicals/ArAr/'
 
@@ -58,7 +66,10 @@ estimates, respectively:
       xlab=expression(''^39*"Ar (%)"), ylab='Ar-Ar age (Ma)')
    }
    ```
-
+   \ifsol
+   First, we need to cast the solution to the third practical
+   into a function:
+   \fi
    ```{r}
    process <- function(std,smp,blk){
       # linear regression of the data
@@ -91,19 +102,29 @@ estimates, respectively:
       out <- list(Ar39=smp39b,tx=tx)
       return(out)
    }
+   ```
+   \ifsol
+   Next, we use this function to process the 10 samples:
+   \fi
+   ```{r}
+   setwd('/home/pvermees/Documents/geotopes/practicals/ArAr/')
 
-   std <- read.csv(paste0(dir,"stnd.csv"),header=TRUE)
-   blk <- read.csv(paste0(dir,"blnk.csv"),header=TRUE)
+   std <- read.csv("stnd.csv",header=TRUE)
+   blk <- read.csv("blnk.csv",header=TRUE)
    ns <- 10 # number of samples
    Ar39 <- rep(NA,ns)
    tx <- rep(NA,ns)
    for (i in 1:ns){
-      sname <- paste0(dir,'smpl',i,'.csv')
+      sname <- paste0('smpl',i,'.csv')
       smp <- read.csv(sname,header=TRUE)
       results <- process(std,smp,blk)
       Ar39[i] <- results$Ar39
       tx[i] <- results$tx
    }
-
+   ```
+   \ifsol
+   Finally, we plot the results as a spectrum:
+   \fi
+   ```{r}
    spectrum(Ar39,tx)
    ```

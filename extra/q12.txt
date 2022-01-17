@@ -46,5 +46,5 @@ of Solar System history contain measurable amounts of excess of
    XeIB <- 8e-5
    dt <- (log(XeIA)-log(XeIB))/l129
    message('The age difference between the two meteorites is ',
-   signif(dt,3),' million years.')
+           signif(dt,3),' million years.')
    ```

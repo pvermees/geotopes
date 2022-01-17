@@ -1,5 +1,5 @@
 idir <- '/home/pvermees/Documents/geotopes/extra/'
-odir <- '/home/pvermees/Desktop/extra/'
+odir <- '/home/pvermees/Desktop/GEOL0017/'
 
 solution <- TRUE
 results <- TRUE
@@ -38,7 +38,7 @@ if (solution & multidoc){
     cat("\\pagestyle{empty}\n",file=FNAME,append=TRUE)
 } else {
     cat(fread(paste0(idir,'header.txt')),file=FNAME,append=TRUE)
-    cat("# Theory (5 questions per week)\n",file=FNAME,append=TRUE)
+    cat("# Theory (5 questions per week)\n\n",file=FNAME,append=TRUE)
 }
 nq <- 21
 NN <- round(runif(n=nq,min=0,max=100))
@@ -56,8 +56,8 @@ for (q in 1:nq){
         cat(fread(paste0(idir,"q",q,".txt")),file=FNAME,append=TRUE)
     }
 }
-if (!solution){
-    cat("# Practicals (1 problem per week)\n",file=FNAME,append=TRUE)
+if (!solution | !multidoc){
+    cat("\n# Practicals (1 problem per week)\n\n",file=FNAME,append=TRUE)
 }
 for (p in 1:5){
     if (solution & multidoc){

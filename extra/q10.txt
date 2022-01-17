@@ -35,6 +35,6 @@ Consider the Pb-Pb composition of three aliquots from a meteorite:
    message("The age of the meteorite is ",signif(result,3),' Ma.')
    plot(x=Pb64,y=Pb74,type='b',
         xlab=expression(""^206*"Pb/"^204*"Pb"),
-	ylab=expression(""^207*"Pb/"^204*"Pb")
+        ylab=expression(""^207*"Pb/"^204*"Pb")
    )
    ```

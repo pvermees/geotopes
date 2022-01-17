@@ -59,7 +59,7 @@ ice.
    Pb210atoms <- Pb210[1]*24*365.25/l210 
    message("1 kg of modern ice contains ",
            round(Pb210atoms/1e6),
-	   " million atoms of 210Pb")
+           " million atoms of 210Pb")
    plot(depth,Pb210,type='p',log='y')
    lines(depth,exp(fit$fitted.values))
    ```

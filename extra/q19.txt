@@ -1,6 +1,6 @@
 Which of the following pairs of grain sizes and cooling rates are
 characterised by the same closure temperature?
-   ```{r}
+   ```{r include=FALSE}
    r <- c(50,200,100,400,200,100)
    C <- c(1,2,5,8,4,2)*1e5
    dTdt <- C/(r^2)
@@ -12,10 +12,13 @@ characterised by the same closure temperature?
    ```
    \ifsol
    According to Dodson's equation, closure temperature
-   is a function of $r^2 \times dT/dt$. Plotting this
+   is a function of $r^2 \times dT/dt$. Calculating this
    product for the given data:
    \fi
    ```{r}
+   r <- c(50,200,100,400,200,100)
+   C <- c(1,2,5,8,4,2)*1e5
+   dTdt <- C/(r^2)
    print(dTdt*r^2)
    ```
    \ifsol

@@ -27,7 +27,7 @@ Analysis of a granite yields:
    ```{r}
    tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
    colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
-   'Rb-Sr (musc)','Rb-Sr (bio)')
+                     'Rb-Sr (musc)','Rb-Sr (bio)')
    print(tt)
    ```
    \ifsol

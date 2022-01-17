@@ -1,5 +1,24 @@
 Consider a rock whose U-Th-He age is `r tHe` Ma. Suppose that the
 following data were acquired on the same sample:
+   ```{r include=FALSE}
+   tAr <- 50
+   tFT <- 50
+   tHe <- 50
+   J <- 0.005
+   zeta <- 300
+   rhoD <- 2.5e6
+   l40 <- log(2)/1248
+   l38 <- 1.55125e-4
+   Ar96 <- 100
+   Ar06 <- 298.5 + Ar96*(exp(l40*tAr)-1)/J
+   Ni <- 100
+   Ns <- round(Ni*(exp(l38*tFT)-1)*2/(l38*zeta*rhoD/1e6))
+   thermotab <- rbind(format(J,digits=3),Ar96,format(Ar06,digits=0),zeta,rhoD,Ns,Ni)
+   rownames(thermotab) <- c('J','^39^Ar/^36^Ar','^40^Ar/^36^Ar',
+   'zeta (yr cm^2^)','rho~D~ (cm^-2^)',
+   'N~s~','N~i~')
+   tab <- rbind(J,Ar96,round(Ar06),zeta,rhoD,Ns,Ni)
+   ```
    ```{r include=TRUE, echo=FALSE, results='asis'}
    knitr::kable(thermotab)
    ```
@@ -21,7 +40,7 @@ following data were acquired on the same sample:
    tArAr <- log(1+J*Ar09r)/l40
    g <- 0.5
    tFT <- log(1+g*l38*zeta*1e-6*rhoD*Ns/Ni)/l38
-   message('t(Ar-Ar)=',signif(tArAr,3),'=',
-   't(FT)=',signif(tFT,3),'=',
-   't(U-Th-He)=',tHe,', suggesting rapid cooling')
+   message('t(Ar-Ar)=',signif(tArAr,3),'~=',
+           't(FT)=',signif(tFT,3),'~=',
+           't(U-Th-He)=',tHe,', suggesting rapid cooling')
    ```

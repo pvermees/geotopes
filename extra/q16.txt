@@ -1,6 +1,6 @@
 Consider a rapidly cooled (volcanic) apatite of 10 Ma with an
 atomic Th/U ratio of 5. What is the ratio of helium atoms to fission
-tracks in it?  Look up the relevant decay constants in the notes.
+tracks in it?  Look up the relevant decay constants from the notes.
 
    \ifsol
    The helium ingrowth equation:
@@ -69,6 +69,7 @@ tracks in it?  Look up the relevant decay constants in the notes.
    but also ${}^{235}$U and ${}^{232}$Th contribute to the helium
    budget. NB: $\alpha$-recoil damages the crystal lattice of
    apatite and other U-bearing minerals, thereby affecting its
-   diffusivity. Thus the closure temperature of apatite can
-   vary as a function of time and U (and Th) concentration.
+   diffusivity. This actually affects the closure temperature of
+   apatite, which can therefore vary as a function of time and U
+   (and Th) concentration.
    \fi

@@ -45,7 +45,7 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    Ar40Ar36_smp <- tabArAr[2:4,2]
    plot(x=Ar39Ar36_smp,y=Ar40Ar36_smp,type='b')
    # 4. you can compute the slope and intercept of the line
-   #    either manually or using R's lm function:
+   #    either manually or using R's lm() function:
    fit <- lm(Ar40Ar36_smp ~ Ar39Ar36_smp)
    Ar40Ar36_smp_0 <- fit$coefficients[1]
    Ar40Ar39_smp_r <- fit$coefficients[2]

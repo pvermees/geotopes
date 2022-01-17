@@ -16,5 +16,5 @@ mass of the (probably precious) sample will have to be destroyed?
    A <- A0*exp(-l14*age) # dpm/g
    mass <- 1000/A
    message('The expected activity ratio is ',signif(A,2),
-   ', which requires ',signif(mass,2),' mg of material.')
+           ', which requires ',signif(mass,2),' mg of material.')
    ```

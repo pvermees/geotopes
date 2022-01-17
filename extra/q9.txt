@@ -28,7 +28,7 @@ Consider the following three aliquots from the same sample:
    b. Sketch a geological history for the sample (hint: consider the
    U-Pb composition in concordia space).
 
-   ```{r fig.width=4, fig.height=4}
+   ```{r}
    # common Pb composition:
    Pb64i <- tabUPb[1,1]
    Pb74i <- tabUPb[1,2]
@@ -41,25 +41,31 @@ Consider the following three aliquots from the same sample:
    ttab <- signif(cbind(tPb6U8,tPb7U5),3)
    colnames(ttab) <- c('t(206Pb/238U)','t(207Pb/235U)')
    print(rbind(ttab))
-   colnames(tabUPb) <- c('206Pb/204Pb','207Pb/204Pb','238U/204Pb')
-   IsoplotR::concordia(tlim=c(0,2500))
-   points(Pb7U5,Pb6U8,pch=16)
-   lines(Pb7U5,Pb6U8)
-   text(Pb7U5,Pb6U8,labels=c('B','C','D'),pos=1)
    ```
 
-   \ifsol Aliquot A does not contain uranium, and therefore
-   constrains the common Pb composition of the sample. Aliquots B and
-   D yielded concordant U-Pb ages and constrain two geological
-   events. Aliquot B gives the crystallisation age. Aliquot D is
-   younger and dates a resetting event.  Aliquot C has experienced
-   partial Pb-loss. It falls halfway between B and D on the mixing
-   line defined by these two points.  Hence the geological history is
-   as follows:
+   \ifsol Aliquot A does not contain uranium, and therefore constrains
+   the common Pb composition of the sample. Aliquots B and D yielded
+   concordant U-Pb ages and constrain two geological events. Aliquot B
+   gives the crystallisation age. Aliquot D is younger and dates a
+   resetting event.  Aliquot C has experienced partial Pb-loss. It
+   falls halfway between B and D on the mixing line defined by these
+   two points (see concordia diagram below).  Hence the geological
+   history is as follows:
 
    \begin{enumerate}
    \item Crystallisation at 2000 Ma
    \item A metamorphic event at 1000 Ma resulting in partial Pb-loss
    \item Subsequent tectonic quiescence
    \end{enumerate}
+
+   You can reproduce the mixing line of samples B, C and D by hand,
+   but in the following block of code, I will use the `IsoplotR`
+   package to do it:
    \fi
+
+   ```{r fig.width=4, fig.height=4}
+   IsoplotR::concordia(tlim=c(0,2500))
+   points(Pb7U5,Pb6U8,pch=16)
+   lines(Pb7U5,Pb6U8)
+   text(Pb7U5,Pb6U8,labels=c('B','C','D'),pos=1)
+   ```

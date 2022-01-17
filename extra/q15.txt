@@ -61,12 +61,12 @@ Consider the following dataset:
    sHe <- sHepmolg/1e6
    IsoplotRtab <- cbind(He,sHe,U,sU,Th,sTh)
    IsoplotRtab
-   # plug into IsoplotR
+   # plug into IsoplotR (this produces the same result as the GUI)
    tHe <- IsoplotR::age(IsoplotR:::as.UThHe(IsoplotRtab))
    tHe
    # plot age-elevation profile:
    plot(tHe[,1],z,type='b')
-   # exhumation rate:
+   # calculate the exhumation rate:
    slope <- lm(z ~ tHe[,1])$coefficients[2]
    message('Exhumation rate = ',signif(slope,3), ' m/Myr')
    ```

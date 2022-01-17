@@ -22,5 +22,5 @@ half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
    fec <- 0.1072 # fraction of 40K decaying to 40Ar
    atmage <- log(Ar40K40/fec+1)/l40
    message("The 40Ar/40K-age of the Earth's atmosphere is ",
-   signif(atmage,3),' Ga.')
+           signif(atmage,3),' Ga.')
    ```

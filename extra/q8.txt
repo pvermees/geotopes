@@ -12,7 +12,7 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    r58 <- 1/137.818
    rPbPb_meteorite <- r58*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)
    message('Expected 207Pb/206Pb-ratio for a 4.57 Ga meteorite = ',
-   signif(rPbPb_meteorite,3))
+           signif(rPbPb_meteorite,3))
    ```
    \ifsol
    For modern U-ores, assuming secular equilibrium:
@@ -25,13 +25,13 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    \partial{N_{206}}/\partial{t} = \lambda_{238}N_{238},
    \partial{N_{207}}/\partial{t} = \lambda_{235}N_{235}
    \]
-   and
-   \[
-   N_{238}/N_{235} = 137.818
-   \]
    $\Rightarrow$
    \[
    \frac{N_{207}}{N_{206}} = \frac{\lambda_{235}N_{235}}{\lambda_{238}N_{238}}
+   \]
+   with
+   \[
+   N_{238}/N_{235} = 137.818
    \]
    \fi
    ```{r}
