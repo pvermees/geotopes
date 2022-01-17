@@ -17,8 +17,8 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    \ifsol
    For modern U-ores, assuming secular equilibrium:
    \[
-   \frac{{}^{207}Pb}{{}^{206}Pb} =
-   \frac{\partial{N_{207}}/\partial{t}}{\partial{N_{206}}/\partial{t}}
+   \left.\frac{{}^{207}Pb}{{}^{206}Pb}\right|_{t=0} =
+   \frac{\partial{N_{207}}/\partial{t}|_{t=0}}{\partial{N_{206}}/\partial{t}|_{t=0}}
    \]
    with
    \[

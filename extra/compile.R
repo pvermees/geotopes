@@ -3,7 +3,7 @@ odir <- '/home/pvermees/Desktop/GEOL0017/'
 
 solution <- TRUE
 results <- TRUE
-multidoc <- FALSE
+multidoc <- TRUE
 randomise <- TRUE
 
 preamble <- paste0("---\n",
