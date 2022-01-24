@@ -29,7 +29,7 @@ Consider the following three aliquots from the same sample:
    U-Pb composition in concordia space).
 
    ```{r}
-   # common Pb composition:
+   # common Pb correction:
    Pb64i <- tabUPb[1,1]
    Pb74i <- tabUPb[1,2]
    Pb6U8 <- (tabUPb[-1,1]-Pb64i)/tabUPb[-1,3]
@@ -59,7 +59,7 @@ Consider the following three aliquots from the same sample:
    \end{enumerate}
 
    You can reproduce the mixing line of samples B, C and D by hand,
-   but in the following block of code, I will use the `IsoplotR`
+   but in the following block of code, I have used the `IsoplotR`
    package to do it:
    \fi
 

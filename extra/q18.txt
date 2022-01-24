@@ -1,9 +1,8 @@
-Consider a rock whose U-Th-He age is `r tHe` Ma. Suppose that the
+Consider a rock whose U-Th-He age is 50 Ma. Suppose that the
 following data were acquired on the same sample:
    ```{r include=FALSE}
    tAr <- 50
    tFT <- 50
-   tHe <- 50
    J <- 0.005
    zeta <- 300
    rhoD <- 2.5e6

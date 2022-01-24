@@ -6,6 +6,7 @@ illustrate how the tools provided in the notes can be generalised to
 other chronometers, which we lack the time to discuss in
 detail. Practical exercises 3 and 4 in Part 2 of this document are
 quite involved.  Do not be afraid to ask for additional tips or hints
-if you get stuck. I will be happy to share the solution to all the
-questions with you, but only after you give them a try yourself.
+if you get stuck. You can download the model answer by uploading your
+own solution to
+[`http://doubleblind.dynu.net/GEOL0017/`](http://doubleblind.dynu.net/GEOL0017/)
 

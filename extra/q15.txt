@@ -41,7 +41,7 @@ Consider the following dataset:
 
    (d) Determine the exhumation rate.
 
-   ```{r}
+   ```{r out.width='50%', fig.width=6, fig.height=5}
    # Suppose that the data are stored in a matrix called tab:
    z <- tab[,1]
    Hepmolg <- tab[,2]
