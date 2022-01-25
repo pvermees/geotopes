@@ -21,7 +21,7 @@ Tera-Wasserburg space.
    y <- exp(l38*tt)-1
    if (FALSE){ # basic solution
       plot(x,y,type='l')
-         points(smp0735a,smp0638a)
+      points(smp0735a,smp0638a)
    } else { # fancy solution
       plot(x,y,type='l',
       xlab=expression(''^207*'Pb/'^235*'U'),
@@ -35,6 +35,7 @@ Tera-Wasserburg space.
    points(xt,yt,pch=16)
    text(xt,yt,labels=ttick,pos=2)
    ```
+   
    \ifsol
    Now let's move on to the Tera-Wasserburg diagram:
    \fi
@@ -50,7 +51,7 @@ Tera-Wasserburg space.
    y <- (exp(l35*tt)-1)/(U3835*(exp(l38*tt)-1))
    plot(x,y,type='l',
         xlab=expression(''^238*'U/'^238*'Pb'),
-	ylab=expression(''^207*'Pb/'^206*'Pb'))
+        ylab=expression(''^207*'Pb/'^206*'Pb'))
    # add the sample data:
    points(x=1/smp0638a,y=smp0706a,pch=21,bg='white')
    # add age ticks to the concordia plot:

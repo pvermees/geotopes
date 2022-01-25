@@ -11,7 +11,7 @@ effect of different time steps on the accuracy of the simulation.
       P <- rep(P0,nt) # initialise
       for (i in 2:nt){
          dPdt <- -P[i-1]*lambda
-	 P[i] <- P[i-1] + dPdt*dt
+         P[i] <- P[i-1] + dPdt*dt
       }
       Pexact <- P0*exp(-lambda*tt)
       plot(tt,P,pch=16,cex=0.5)

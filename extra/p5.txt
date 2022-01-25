@@ -23,6 +23,20 @@ Install `IsoplotRgui` on your computer using
 
    Hint: besides `read.data`, you will also need `IsoplotR`'s
    `concordia`, `agespectrum` and `isochron` functions.  See
-   `?concordia` etc. for help, or download the complete documentation
-   from
+   `?concordia` etc. for help, or view the complete documentation
+   at
    [`https://CRAN.R-project.org/package=IsoplotR`](https://CRAN.R-project.org/package=IsoplotR).
+
+   ```{r out.width='50%', fig.width=6, fig.height=6}
+   library(IsoplotR)
+   setwd('~/Documents/geotopes/R/')
+   # (c)
+   UPb <- read.data('UPb2.csv',method='U-Pb',format=2)
+   concordia(UPb)
+   # (d)
+   ArAr <- read.data('ArAr3.csv',method='Ar-Ar',format=3)
+   agespectrum(ArAr)
+   # (e)
+   ThU <- read.data('ThU2.csv',method='Th-U',format=2)
+   isochron(ThU)
+   ```

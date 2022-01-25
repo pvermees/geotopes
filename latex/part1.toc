@@ -33,7 +33,7 @@
 \contentsline {chapter}{\numberline {9}U-series dating}{55}{chapter.9}%
 \contentsline {section}{\numberline {9.1}The $^{234}$U-$^{238}$U method}{56}{section.9.1}%
 \contentsline {section}{\numberline {9.2}The $^{230}$Th method}{56}{section.9.2}%
-\contentsline {section}{\numberline {9.3}The $^{230}$Th-$^{238}$U method}{57}{section.9.3}%
+\contentsline {section}{\numberline {9.3}The $^{230}$Th-U method}{57}{section.9.3}%
 \contentsline {chapter}{\numberline {10}Error propagation}{59}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Some basic definitions}{59}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Examples}{61}{section.10.2}%

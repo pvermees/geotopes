@@ -35,5 +35,5 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    \]
    \fi
    ```{r}
-   message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l38/l35,3))
+   message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l35/l38,3))
    ```

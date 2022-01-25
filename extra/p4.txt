@@ -57,6 +57,8 @@
 		           tstd=tstd,lambda=l38,tb=tb,ts=ts)
       tab[i,5] <- getcorr(smp,D1='Pb207',P1='U235',D2='Pb206',P2='U238',tb=tb,ts=ts)
    }
+   # write the data to a csv file, open in Excel, copy & paste into IsoplotR:
+   write.csv(tab,file='~/Desktop/data4isoplotr.csv',row.names=FALSE)
    # The following line produces the same output as the online GUI:
    IsoplotR::concordia(IsoplotR:::as.UPb(tab,format=1))
    ```

@@ -9,7 +9,7 @@ sample:
    Sr87Sr86_0 <- 0.7
    Sr87Sr86 <- Sr87Sr86_0 + Rb87Sr86*(exp(l87*tRbSr)-1)
    tabRbSr <- cbind(Rb87Sr86,signif(Sr87Sr86,5))
-   colnames(tabRbSr) <- c("^87^Rb/^86^Sr","^87^Rb/^86^Rb")
+   colnames(tabRbSr) <- c("^87^Rb/^86^Sr","^87^Sr/^86^Sr")
    rownames(tabRbSr) <- c("mineral A","mineral B","mineral C")
    ```
    ```{r include=TRUE, echo=FALSE, results='asis'}
