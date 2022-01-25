@@ -1,0 +1,49 @@
+intercepts <- function(dat){
+    nr <- 3
+    out <- rep(0,nr)
+    names(out) <- c('Ar36','Ar39','Ar40')
+    for (i in 1:nr){
+        fit <- lm(Ar ~ t, data=dat)
+        out[i] <- fit$coefficients[1]
+    }
+    return(out)
+}
+
+blankcorr <- function(sig,blk){
+    out <- sig
+    for (Ar in names(sig)){
+        out[Ar] <- sig[Ar] - blk[Ar]
+    }
+    return(out)
+}
+
+process <- function(smpfile,stdfile,blkfile){
+    std <- read.csv(stdfile,header=TRUE)
+    smp <- read.csv(smpfile,header=TRUE)
+    blk <- read.csv(blkfile,header=TRUE)
+
+    stdint <- intercepts(smp)
+    smpint <- intercepts(std)
+    blkint <- intercepts(blk)
+
+    stdblk <- blankcorr(stdint,blkint)
+    smpblk <- blankcorr(smpint,blkint)
+
+    # atmospheric correction
+    a4036 <- 298.5
+    std40r <- stdblk['Ar40'] - stdblk['Ar40']*a4036
+    std40r <- smpblk['Ar40'] - smpblk['Ar40']*a4036
+    
+    # calculate J
+    tstd <- 27.8    # standard age, in Ma
+    l40 <- 5.543e-4 # decay constant, in Ma-1
+    J <- (exp(l40*tstd)-1)*(std39b/std40r)
+
+    # calculate age
+    tx = log(1 + J*smp40r/smp39b)/l40
+    out <- list(Ar39=smp39b,tx=tx)
+    return(out)
+}
+
+setwd('~/Documents/geotopes/R/')
+age <- process('smpl.csv','stnd.csv','blnk.csv')

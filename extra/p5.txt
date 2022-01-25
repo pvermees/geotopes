@@ -24,7 +24,7 @@ Install `IsoplotRgui` on your computer using
    Hint: besides `read.data`, you will also need `IsoplotR`'s
    `concordia`, `agespectrum` and `isochron` functions.  See
    `?concordia` etc. for help, or view the complete documentation
-   at
+   at\
    [`https://CRAN.R-project.org/package=IsoplotR`](https://CRAN.R-project.org/package=IsoplotR).
 
    ```{r out.width='50%', fig.width=6, fig.height=6}

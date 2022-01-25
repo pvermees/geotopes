@@ -1,8 +1,8 @@
 
-   (a) Visit
-   [`github:pvermees/geotopes/practicals/ArAr/`](https://github.com/pvermees/geotopes/tree/master/practicals/ArAr/)
-   and download files `blnk.csv`, `stnd.csv` and `smpl1.csv` through
-   `smpl10.csv`.
+   (a) Download
+   [`github:pvermees/geotopes/practicals/ArAr.zip`](https://github.com/pvermees/geotopes/tree/master/practicals/ArAr.zip)
+   and unzip its contents (files `blnk.csv`, `stnd.csv` and
+   `smpl1.csv` through `smpl10.csv`) to your computer.
 
    (b) Turn your Ar-Ar data reduction script from the third practical
    into a function.
