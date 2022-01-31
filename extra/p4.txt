@@ -26,7 +26,7 @@
    Note: change to input format 1 in the `Options` menu. Visualise the
    data on a concordia diagram.
    
-   ```{r}
+   ```{r out.width='70%'}
    setwd('/home/pvermees/Documents/geotopes/practicals/UPb/')
 
    source('atomic.R')

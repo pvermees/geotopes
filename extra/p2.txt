@@ -9,7 +9,7 @@ Tera-Wasserburg space.
    haven't done this, here is the solution:
    \fi
 
-   ```{r}
+   ```{r out.width='70%'}
    # Given the results of the main U-Pb practical:
    smp0735a <- 1.873638
    smp0638a <- 0.1819523
@@ -39,7 +39,7 @@ Tera-Wasserburg space.
    \ifsol
    Now let's move on to the Tera-Wasserburg diagram:
    \fi
-   ```{r}
+   ```{r out.width='70%'}
    # Compute the Pb207/Pb206-ratio from the conventional ratios:
    U3835 <- 137.818
    smp0706a <- smp0735a/(U3835*smp0638a)

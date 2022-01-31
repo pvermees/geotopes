@@ -8,18 +8,25 @@ undergoes branched decay to ^40^Ar (10.72%) and ^40^Ca (89.28%) with a
 half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
 
    ```{r}
+   # 1. Compute Gmol of 40K
    GtEarth <- 4e24/1e12  # convert kg to Gt
    GtK <- GtEarth*250e-6 # Gt of K in the silicate Earth
-   MK <- 39.1e-12 # Gt/Gmol
+   MK <- 39.1e-6 # Gt/Gmol
    GmolK <- GtK/MK # Gmol
    f40K <- 1/(7771 + 561 + 1) # 40K/K
    GmolK40 <- GmolK*f40K # Gmol of 40K in the silicate Earth
-   GtAr40 <- 66e3
-   M40K <- 40e-12 # Gt/Gmol
-   GmolAr40 <- GtAr40/M40K
-   Ar40K40 <- GmolAr40/GmolK40
+   # 2. Compute the amount of Ar40 produced over the past 4.5 Gyr
    l40 <- log(2)/1.248
    fec <- 0.1072 # fraction of 40K decaying to 40Ar
+   GmolAr40_4.5Ga <- GmolK40*fec*(exp(l40*4.5)-1)
+   M40K <- 40e-6 # Gt/Gmol
+   GtAr40_4.5Ga <- GmolAr40_4.5Ga*M40K
+   message(signif(GtAr40_4.5Ga,3),
+           " Gt of 40Ar was produced over the past 4.5 Gyr")
+   # 3. Estimate 'atmospheric age' of the Earth:
+   GtAr40 <- 66e3
+   GmolAr40 <- GtAr40/M40K
+   Ar40K40 <- GmolAr40/GmolK40
    atmage <- log(Ar40K40/fec+1)/l40
    message("The 40Ar/40K-age of the Earth's atmosphere is ",
            signif(atmage,3),' Ga.')

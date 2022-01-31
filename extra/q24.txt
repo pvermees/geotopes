@@ -1,0 +1,63 @@
+Although U-series disequilibrium measurements were historically
+done by $\alpha$-counting, in recent decades this method has been
+replaced by mass spectrometry. Consider the following composition of
+three cogenetic aliquots:
+
+   ```{r include=FALSE}
+   tThU <- 50
+   A02i <- 0.5
+   l238 <- 1.55125e-7 # kyr-1
+   Uppm <- c(2,4,5)
+   Umumolg <- Uppm/238.03
+   U238mumolg <- Umumolg*137.818/138.818
+   AU238 <- U238mumolg*l238
+   l232 <- 4.95e-8 # kyr-1
+   l230 <- 0.0091705 # kyr-1
+   Thppm <- c(5,3,3)
+   Th232mumolg <- Thppm/232.04
+   ATh232 <- Th232mumolg*l232
+   A02 <- A02i + (AU238/ATh232)*(1-exp(-l230*tThU))
+   ATh230 <- ATh232*A02
+   Th230mumolg <- ATh230/l230
+   Th02 <- Th230mumolg/Th232mumolg
+   tabThU <- cbind(Uppm,Thppm,format(Th02,digits=4,scientific=FALSE))
+   colnames(tabThU) <- c('ppm U','ppm Th','^230^Th/^232^Th')
+   rownames(tabThU) <- 1:length(Uppm)
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(tabThU)
+   ```
+   How old is the rock?
+   ```{r out.width='50%'}
+   # store the data into three variables Uppm, Thppm, Th02
+   # 1. convert Uppm and Thppm to activities:
+   l238 <- 1.55125e-7 # kyr-1
+   l232 <- 4.95e-8 # kyr-1
+   MU <- 238.03
+   MTh <- 232.04
+   U238mumolg <- (Uppm/MU)*(137.818/138.818)
+   Th232mumolg <- Thppm/MTh
+   AU238 <- U238mumolg*l238
+   ATh232 <- Th232mumolg*l232
+   # (inspect the activities in relatable units):
+   Navog <- 6.022e23
+   AU238dpmg <- AU238*Navog/(1e3*365*24*60) # dpm per gram
+   ATh232dpmg <- ATh232*Navog/(1e3*365*24*60) # dpm per gram
+   message('A(U238)=',paste0(signif(AU238dpmg,6),', '),' dpm/g')
+   message('A(Th232)=',paste0(signif(ATh232dpmg,6),', '),' dpm/g')
+   # 2. compute the activity ratios:
+   A82 <- AU238/ATh232
+   Th230mumolg <- Th232mumolg*Th02
+   l230 <- 0.0091705 # kyr-1
+   ATh230 <- Th230mumolg*l230
+   ATh230dpmg <- ATh230*Navog/(1e3*365*24*60) # dpm per gram
+   message('A(Th230)=',paste0(signif(ATh230dpmg,6),', '),' dpm/g')
+   A02 <- ATh230/ATh232
+   # 3. plot on an isochron diagram and find the slope:
+   plot(x=A82,y=A02,type='b',xlab='U238/Th232',ylab='Th230/Th232')
+   slope <- lm(A02 ~ A82)$coefficients[2]
+   # verify that this equals diff(A02)/diff(A82)
+   # 5. compute the age:
+   tThU <- -log(1-slope)/l230
+   message('the Th/U-age is ',signif(tThU,3),'ka')
+   ```

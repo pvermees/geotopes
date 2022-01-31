@@ -40,7 +40,7 @@ if (solution & multidoc){
     cat(fread(paste0(idir,'header.txt')),file=FNAME,append=TRUE)
     cat("# Theory (5 questions per week)\n\n",file=FNAME,append=TRUE)
 }
-nq <- 21
+nq <- 24
 NN <- round(runif(n=nq,min=0,max=100))
 for (q in 1:nq){
     if (solution & multidoc){

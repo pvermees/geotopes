@@ -52,14 +52,14 @@ Consider the following dataset:
    sThppm <- tab[,7]
    MU <- 238.03
    MTh <- 232.04
-   # convert to micromol/g
-   U <- Uppm/MU
-   Th <- Thppm/MTh
-   He <- Hepmolg/1e6
-   sU <- sUppm/MU
-   sTh <- sThppm/MTh
-   sHe <- sHepmolg/1e6
-   IsoplotRtab <- cbind(He,sHe,U,sU,Th,sTh)
+   # convert to pmol/g
+   U <- 1e6*Uppm/MU
+   Th <- 1e6*Thppm/MTh
+   He <- Hepmolg
+   sU <- 1e6*sUppm/MU
+   sTh <- 1e6*sThppm/MTh
+   sHe <- sHepmolg
+   IsoplotRtab <- round(cbind(He,sHe,U,sU,Th,sTh))
    IsoplotRtab
    # plug into IsoplotR (this produces the same result as the GUI)
    tHe <- IsoplotR::age(IsoplotR:::as.UThHe(IsoplotRtab))

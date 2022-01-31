@@ -54,7 +54,7 @@ tracks in it?  Look up the relevant decay constants from the notes.
    l232 <- 4.95e-5 # Myr-1
    tap <- 10 # Ma
    num <- 8*(137.818/138.818)*(exp(l238*tap)-1) +
-   (7/138.818)*exp(l235*tap-1) + 30*(exp(l232*tap)-1)
+          (7/138.818)*(exp(l235*tap)-1) + 30*(exp(l232*tap)-1)
    den <- (lf/l238)*(137.818/138.818)*(exp(l238*tap)-1)
    HeFT <- num/den
    message('The He/FT-ratio is ',signif(HeFT,2))
@@ -63,13 +63,15 @@ tracks in it?  Look up the relevant decay constants from the notes.
    \ifsol
    Even though spontaneous fission of ${}^{238}$U happens `only'
    1.8 million times less frequently than $\alpha$-decay,
-   the apatite has produced 55 million times more $\alpha$ particles
+   the apatite has produced 33 million times more $\alpha$ particles
    than fission tracks because (1) each ${}^{238}$U atom produces
    not one but eight helium atoms, and (2) not only ${}^{238}$U
    but also ${}^{235}$U and ${}^{232}$Th contribute to the helium
-   budget. NB: $\alpha$-recoil damages the crystal lattice of
-   apatite and other U-bearing minerals, thereby affecting its
-   diffusivity. This actually affects the closure temperature of
-   apatite, which can therefore vary as a function of time and U
-   (and Th) concentration.
+   budget.
+
+   Side note: the tremendous number of $\alpha$-recoil events can
+   damage the crystal lattice of apatite and other U-bearing minerals,
+   thereby affecting their diffusivity. This actually affects the
+   closure temperature of apatite, which can therefore vary as a
+   function of time and U (and Th) concentration.
    \fi

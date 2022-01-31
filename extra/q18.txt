@@ -1,45 +1,80 @@
-Consider a rock whose U-Th-He age is 50 Ma. Suppose that the
-following data were acquired on the same sample:
-   ```{r include=FALSE}
-   tAr <- 50
-   tFT <- 50
-   J <- 0.005
-   zeta <- 300
-   rhoD <- 2.5e6
-   l40 <- log(2)/1248
-   l38 <- 1.55125e-4
-   Ar96 <- 100
-   Ar06 <- 298.5 + Ar96*(exp(l40*tAr)-1)/J
-   Ni <- 100
-   Ns <- round(Ni*(exp(l38*tFT)-1)*2/(l38*zeta*rhoD/1e6))
-   thermotab <- rbind(format(J,digits=3),Ar96,format(Ar06,digits=0),zeta,rhoD,Ns,Ni)
-   rownames(thermotab) <- c('J','^39^Ar/^36^Ar','^40^Ar/^36^Ar',
-   'zeta (yr cm^2^)','rho~D~ (cm^-2^)',
-   'N~s~','N~i~')
-   tab <- rbind(J,Ar96,round(Ar06),zeta,rhoD,Ns,Ni)
-   ```
-   ```{r include=TRUE, echo=FALSE, results='asis'}
-   knitr::kable(thermotab)
-   ```
-   Assuming that the ^36^Ar is of atmospheric origin (with
-   ^40^Ar/^36^Ar~atm~=298.5), and using the notes for decay constants etc.,
-   summarise the geological history of the sample.
+Consider the following equation:
+$$
+z = 2 + 3 x + 5 x^2 + x \ln(y)
+$$
+Let $x={3}\pm{0.1}$ and $y={5}\pm{0.2}$. Predict $z$ and propagate its
+uncertainty.
+
    ```{r}
-   # suppose that the data are in a table called tab:
-   J <- tab[1]
-   Ar96 <- tab[2]
-   Ar06 <- tab[3]
-   Ar06a <- 298.5
-   zeta <- tab[4]
-   rhoD <- tab[5]
-   Ns <- tab[6]
-   Ni <- tab[7]
-   tHe <- 50
-   Ar09r <- (Ar06-Ar06a)/Ar96 # radiogenic Ar40/Ar39 ratio
-   tArAr <- log(1+J*Ar09r)/l40
-   g <- 0.5
-   tFT <- log(1+g*l38*zeta*1e-6*rhoD*Ns/Ni)/l38
-   message('t(Ar-Ar)=',signif(tArAr,3),'~=',
-           't(FT)=',signif(tFT,3),'~=',
-           't(U-Th-He)=',tHe,', suggesting rapid cooling')
+   a <- 2
+   b <- 3
+   c <- 5
+   x <- 3
+   y <- 5
+   z <- a + b*x + c*x^2 + x*log(y)
+   message('z=',signif(z,3))
+   ```
+
+   \ifsol
+   The equation does not immediately match any of the expressions
+   in the notes. However, we can break it down into smaller parts
+   that do fit the existing solutions. For example:
+   $$
+   z = A + B + C + D
+   $$
+   where $A = 2$, $B = 3 x$, $C = 5 x^2$, $D = x \ln(y)$. Then using
+   the error propagation formula for a sum:
+   $$
+   s[z] = \sqrt{s[A]^2 + s[B]^2 + s[C]^2 + s[D]^2}
+   $$
+   where
+   $$
+   s[A] = 0
+   $$
+   $$
+   s[B] = 3 s[x] = 3 \times 0.1 = 0.3 \mbox{~(Equation 10.11)}
+   $$
+   $$
+   s[C] = 5 \times 2 x \times s[x] = 3 \mbox{~(Equation 10.17)}
+   $$
+   $$
+   s[D] = x \ln(y) \sqrt{
+                  \left(\frac{s[x]}{x}\right)^2 +
+                  \left(\frac{s[\ln(y)]}{\ln(y)}\right)^2
+		 } =
+          2 E
+	  \sqrt{\left(\frac{0.1}{2}\right)^2 +
+                \left(\frac{s[E]}{E}\right)^2
+	       }
+   \mbox{~(Equation 10.13)}
+   $$
+   with 
+   $$
+   s[E] = \frac{s[y]}{y} = \frac{0.2}{5} \mbox{~(Equation 10.16)}
+   $$
+   so that
+   $$
+   s[D] = (2 \times \ln(5))
+	  \sqrt{ \left(\frac{0.1}{2}\right)^2 +
+                 \left(\frac{0.2}{5\ln(5)}\right)^2
+	       } = 0.2
+   $$
+   Hence
+   $$
+   s[z] = \sqrt{0.09 + 9 + 0.04} = 3.02
+   $$
+   \fi
+   ```{r}
+   sx <- 0.1
+   sy <- 0.2
+   B <- b*x
+   C <- c*x^2
+   E <- log(y)
+   D <- x*E
+   sB <- b*sx
+   sC <- 2*c*x*sx
+   sE <- sy/y
+   sD <- D * sqrt( (sx/x)^2 + (sE/E)^2 )
+   sz <- sqrt(sB^2 + sC^2 + sD^2)
+   message('s(z)=',signif(sz,3))
    ```

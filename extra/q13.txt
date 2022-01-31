@@ -23,12 +23,12 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    knitr::kable(tabArAr)
    ```
 
-   'std' is a 98 Ma reference material whose inherited argon content
-   is of atmospheric origin ($[$^40^Ar/^36^Ar$]$~atm~=298.5); 'smp1',
-   'smp2' and 'smp3' are three cogenetic aliquots of a metamorphic
-   sample of unknown age.  What are the age and non-radiogenic
-   ^40^Ar/^36^Ar-ratio of the sample? Recall that the half-life of
-   ^40^K is 1248 Myr.
+   where 'std' is a 98 Ma reference material whose inherited argon
+   content is of atmospheric origin ($[$^40^Ar/^36^Ar$]$~atm~=298.5);
+   while 'smp1', 'smp2' and 'smp3' are three cogenetic aliquots of a
+   metamorphic sample of unknown age.  What are the age and
+   non-radiogenic ^40^Ar/^36^Ar-ratio of the sample? Recall that the
+   half-life of ^40^K is 1248 Myr.
 
    ```{r out.width='50%', fig.width=5, fig.height=4}
    # 1. atmospheric correction of the standard
@@ -52,5 +52,5 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    # 5. compute the age of the sample
    tsmp <- log(J*Ar40Ar39_smp_r + 1)/l40
    message('age=',signif(tsmp,2),
-   'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
+           'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
    ```

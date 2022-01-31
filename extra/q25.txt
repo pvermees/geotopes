@@ -1,0 +1,55 @@
+Given the following biotite ^40^Ar/^39^Ar-data and uncertainties:
+   ```{r include=FALSE}
+   tAr <- 50
+   J <- 0.005
+   sJ <- J/50
+   l40 <- log(2)/1248
+   Ar96 <- 100
+   sAr96 <- Ar96/10
+   Ar06 <- 298.5 + Ar96*(exp(l40*tAr)-1)/J
+   sAr06 <- Ar06/50
+   thermotab <- rbind(format(c(J,sJ),digits=3),
+                      c(Ar96,sAr96),
+                      format(c(Ar06,sAr06),digits=0))
+   rownames(thermotab) <- c('J','^39^Ar/^36^Ar','^40^Ar/^36^Ar')
+   colnames(thermotab) <- c('value','err')
+   tab <- rbind(c(J,sJ),c(Ar96,sAr96),round(c(Ar06,sAr06)))
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(thermotab)
+   ```
+   
+   Estimate the ^40^Ar/^39^Ar-age of the sample assuming that the
+   ^36^Ar is of atmospheric origin (with
+   ^40^Ar/^36^Ar~atm~=298.5). Recall that ^40^Ar has a 1248 Myr
+   half-life. Propagate the analytical uncertainty of the age estimate
+   assuming that the measurements uncertainties are uncorrelated and
+   ignoring the uncertainties of the decay constants and atmospheric
+   argon composition.
+   
+   ```{r}
+   # suppose that the data are in a table called tab:
+   J <- tab[1,1]
+   Ar96 <- tab[2,1]
+   Ar06 <- tab[3,1]
+   Ar06a <- 298.5
+   Ar06r <- Ar06-Ar06a # atmospheric correction
+   Ar09r <- Ar06r/Ar96 # radiogenic Ar40/Ar39 ratio
+   tArAr <- log(1+J*Ar09r)/l40
+   # extract the analytical uncertainties of the measurements from the table:
+   sJ <- tab[1,2]
+   sAr96 <- tab[2,2]
+   sAr06 <- tab[3,2]
+   # propagate the uncertainty of Ar06r:
+   sAr06r <- sAr06 # =sqrt(sAr06^2 + sAr06a^2) with sAr06a=0
+   # propagate the uncertainty of Ar09r:
+   sAr09r <- Ar09r * sqrt( (sAr06r/Ar06r)^2 + (sAr96/Ar96)^2 )
+   # Propagate the uncertainty of X = 1 + J*Ar09r:
+   R <- J*Ar09r
+   X <- 1+R
+   sR <- R * sqrt( (sJ/J)^2 + (sAr09r/Ar09r)^2 )
+   sX <- sR
+   # Propagate the age uncertainty, where tArAr = log(X)/l40
+   stArAr <- (sX/X)/l40
+   message('t(Ar-Ar)=',signif(tArAr,3),', err=',signif(stArAr,3))
+   ```

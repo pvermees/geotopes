@@ -125,6 +125,6 @@
    \ifsol
    Finally, we plot the results as a spectrum:
    \fi
-   ```{r}
+   ```{r out.width='70%'}
    spectrum(Ar39,tx)
    ```

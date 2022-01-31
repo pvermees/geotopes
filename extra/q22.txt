@@ -1,0 +1,42 @@
+Recent advances in analytical chemistry allow fission track
+geochronologist to replace the trusted external detector method with
+an alternative approach, in which the U-content of the sample is
+measured directly by Laser Ablation Inductively Coupled Mass
+Spectrometry (LA-ICP-MS), the same technique that is also used for
+in-situ U-Pb geochronology. Using LA-ICP-MS, it is possible to compute
+fission track ages using Equation 7.8 of the notes. Calculate the
+fission track age and propagate its uncertainty for the following
+apatite data:
+
+   | parameter | value |
+   |-----------|-------|
+   | fission track track count | 49 |
+   | counting area | 5000 \textmu m^2^ |
+   | fission track length | 15 \textmu m |
+   | U-concentration | 10 ppm |
+   | density of apatite | 3.19 g/cm^3^ |
+   | molar mass of U | 238.03 g/mol |
+
+   ```{r}
+   Ns <- 49        # dimensionless
+   A <- 5000       # micron^2
+   L <- 15         # micron
+   Uppm <- 10      # microgram/gram
+   apdens <- 3.19  # g/cc
+   MU <- 238.03    # g/mol
+   rhos <- Ns/A    # micron^-2
+   atmumol <- 6.022e17                    # atoms/micromol (Avogadro's number)
+   ccmum3 <- 1e-12                        # cc/micron^3
+   Umumolg <- Uppm/MU                     # micromol/g
+   Umumolcc <- Umumolg*apdens             # micromol/cc
+   Uatmum3 <- Umumolcc*ccmum3*atmumol     # atoms(U)/micron^3
+   U238atmum3 <- Uatmum3*137.818/138.818  # atoms(U238)/micron^3
+   l38 <- 1.55125e-4 # 238U total decay constant, Myr-1
+   lf <- 8.46e-11    # 238U fission decay constant, Myr-1
+   R <- l38*rhos/(lf*U238atmum3*L)
+   tFT <- log(1+R)/l38                    # FT age, Ma
+   rhoserr <- sqrt(Ns)/A
+   Rerr <- l38*rhoserr/(lf*U238atmum3*L)
+   tFTerr <- Rerr/((1+R)*l38)             # FT age uncertainty, Ma
+   message('age=',signif(tFT,3),'Ma, s.e.=',signif(tFTerr,3),'Ma')
+   ```

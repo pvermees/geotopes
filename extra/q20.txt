@@ -1,20 +1,91 @@
-The ^234^U/^238^U activity ratio of sea water rarely exceeds
-1.15.  However, much higher activity ratios have been measured in
-fresh waters and cave carbonates (speleothems). Suppose that we have
-measured a ^234^U/^238^U activity ratio of 1.1 in a 1 Ma old
-speleothem. What was its _initial_ ^234^U/^238^U-ratio?
+Consider the following raw apatite fission track data:
 
-   \ifsol
-   Rearrange Equation 9.3 of the notes for $\gamma_\circ$:
+   ```{r include=FALSE}
+   tFT <- 50
+   zeta <- 330 # yr cm^2
+   szeta <- 10
+   Nd <- 300 
+   Ad <- 25000 # um^2
+   l38 <- 1.55125e-4
+   g <- 0.5
+   rhoD <- Nd/(Ad*1e-8)
+   NsNi <- (exp(l38*tFT)-1)/(g*l38*zeta*rhoD/1e6)
+   Ni <- 200
+   Ns <- round(NsNi*Ni)
+   thermotab <- matrix(c(zeta,szeta,Nd,Ad,Ns,Ni),nrow=1)	
+   colnames(thermotab) <- c("$\\zeta$ [yr cm^2^]","err($\\zeta$)",
+                            "N~d~","$A_d$ [$\\mu$m^2^]","$N_s$","$N_i$")
+   ```
+   ```{r include=TRUE, echo=FALSE, results='asis'}
+   knitr::kable(thermotab)
+   ```
+   where N~d~ represents the number of dosimeter tracks counted in an
+   area $A_d$ (i.e. $\rho_d = N_d/A_d$). Calculate the fission track age
+   assuming that the spontaneous and induced fission track densities
+   were counted over the same areas
+   (i.e. $A_s=A_i$ so that ${\rho_s}/{\rho_i}={N_s}/{N_i}$).
+   Propagate the analytical
+   uncertainty of the age estimate given the fact that fission track
+   counts follow a Poisson distribution whose variance equals its mean,
+   i.e.
    $$
-   \gamma_\circ = 1 + \left(\frac{A(^{234}U)}{A(^{238}U)} - 1\right)
-                  e^{\lambda_{234}t}
+   s[N]^2 = N \Rightarrow s[N] = \sqrt{N}
    $$
-   \fi
+
    ```{r}
-   tU48 <- 1000 # ka
-   l234 <- 0.00282206 # kyr-1
-   A48 <- 1.1
-   g0 <- 1 + (A48-1)*exp(l234*tU48)
-   message('The initial 234U/238U activity ratio was ',signif(g0,3))
+   g <- 0.5
+   lambda <- 1.55125e-4
+   Ns <- 51
+   Ni <- 200
+   Nd <- 300
+   A <- 25000*1e-8 # cm^2
+   rhoD <- Nd/A
+   zeta <- 330e-6 # Myr cm^2
+   tFT <- log(1+g*lambda*zeta*rhoD*Ns/Ni)/lambda
+   message('t(FT)=',signif(tFT,3),' Ma')
+   ```
+   \ifsol
+   \underline{Error propagation}
+
+   Given the age equation:
+   $$
+   t = \frac{1}{\lambda} \ln\left(1 + R\right)
+   $$
+   where
+   $$
+   R = \frac{g_i}{g_s} \lambda \zeta \rho_d \frac{N_s}{N_i}
+   $$
+   Using the same logic as the previous exercise:
+   $$
+   s[t] = \frac{1}{\lambda} \frac{s[R]}{1 + R}
+   $$
+   with
+   $$
+   \left(\frac{s[R]}{R}\right)^2 =
+   \left(\frac{s[\zeta]}{\zeta}\right)^2 +
+   \left(\frac{s[\rho_d]}{\rho_d}\right)^2 +
+   \left(\frac{s[N_s]}{N_s}\right)^2 +
+   \left(\frac{s[N_i]}{N_i}\right)^2
+   $$
+   where $s[N_s]^2 = N_s$, $s[N_i]^2 = N_i$ and
+   $$
+   \rho_d = \frac{N_d}{A_d} \Rightarrow s[\rho_d]^2 = \frac{N_d}{A^2}
+   $$
+   so that
+   $$
+   \left(\frac{s[R]}{R}\right)^2 = 
+   \frac{1}{N_d} + \frac{1}{N_s} + \frac{1}{N_i} \Rightarrow
+   s[R] = R \sqrt{\left(\frac{s[\zeta]}{\zeta}\right)^2 +
+          \frac{1}{N_d} + \frac{1}{N_s} + \frac{1}{N_i}}
+   $$
+   
+   In \texttt{R}:
+   \fi
+
+   ```{r}
+   szeta <- 10e-6
+   R <- g*lambda*zeta*rhoD*Ns/Ni
+   sR <- R*sqrt((szeta/zeta)^2 + 1/Nd + 1/Ns + 1/Ni)
+   stFT <- (1/lambda)*sR/(1+R)
+   message('s[t(FT)]=',signif(stFT,3))
    ```

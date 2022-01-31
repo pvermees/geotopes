@@ -30,11 +30,11 @@ Consider the Pb-Pb composition of three aliquots from a meteorite:
    ```{r out.width='60%', fig.width=5, fig.height=4}
    Pb64 <- PbPbtab[1,]
    Pb74 <- PbPbtab[2,]
-   Pb76 <- lm(Pb74 ~ Pb64)$coefficients[2]
-   result <- IsoplotR::age(Pb76,method="Pb207-Pb206")[1]
-   message("The age of the meteorite is ",signif(result,3),' Ma.')
    plot(x=Pb64,y=Pb74,type='b',
         xlab=expression(""^206*"Pb/"^204*"Pb"),
         ylab=expression(""^207*"Pb/"^204*"Pb")
    )
+   Pb76 <- lm(Pb74 ~ Pb64)$coefficients[2]
+   message("Pb207/Pb206=",signif(Pb76,4),
+           ", so the age of the sample is just shy of 4450 Ma.")
    ```

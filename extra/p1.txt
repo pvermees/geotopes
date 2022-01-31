@@ -3,7 +3,7 @@ recipe shown in slide 13 of the first theory presentation. Compare the
 numerical approximation with the analytical solution. Explore the
 effect of different time steps on the accuracy of the simulation.
 
-   ```{r}
+   ```{r out.width='80%'}
    decay <- function(P0=100,lambda=0.1,dt=1){
       t12 <- log(2)/lambda
       tt <- seq(from=0,to=5*t12,by=dt)
