@@ -34,7 +34,7 @@ We measured the following ^40^K and ^40^Ar concentrations:
    Ar40K40 <- meanAr40/meanK40
    seAr40K40 <- Ar40K40*sqrt((seAr40/meanAr40)^2+(seK40/meanK40)^2)
 
-   # (d) Calculating the K--Ar age:
+   # (d) Calculating the K-Ar age:
    L <- 5.543e-4 # lambda
    LLe <- 9.3284 # lambda/lambda_e
    tKAr <- log(1+LLe*Ar40K40)/L

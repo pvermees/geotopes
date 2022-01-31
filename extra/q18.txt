@@ -42,7 +42,7 @@ uncertainty.
                   \left(\frac{s[x]}{x}\right)^2 +
                   \left(\frac{s[\ln(y)]}{\ln(y)}\right)^2
 		 } =
-          2 E
+          3 E
 	  \sqrt{\left(\frac{0.1}{2}\right)^2 +
                 \left(\frac{s[E]}{E}\right)^2
 	       }
@@ -54,8 +54,8 @@ uncertainty.
    $$
    so that
    $$
-   s[D] = (2 \times \ln(5))
-	  \sqrt{ \left(\frac{0.1}{2}\right)^2 +
+   s[D] = 3 \times \ln(5) \times
+	  \sqrt{ \left(\frac{0.1}{3}\right)^2 +
                  \left(\frac{0.2}{5\ln(5)}\right)^2
 	       } = 0.2
    $$

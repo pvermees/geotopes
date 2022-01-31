@@ -22,6 +22,6 @@ characterised by the same closure temperature?
    print(dTdt*r^2)
    ```
    \ifsol
-   leads to the conclusion that the first and the sixth samples have
-   the same closure temperature.
+   This leads to the conclusion that the second and the sixth samples
+   have the same closure temperature.
    \fi
