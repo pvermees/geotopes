@@ -68,4 +68,3 @@ se_t0638 <- (se_x/x)*(1/l38)
 y <- 1 + smp0735a
 se_y <- se_smp0735a
 se_t0735 <- (se_y/y)*(1/l35)
-

@@ -17,7 +17,6 @@ characterised by the same closure temperature?
    \fi
    ```{r}
    r <- c(50,200,100,400,200,100)
-   C <- c(1,2,5,8,4,2)*1e5
    dTdt <- C/(r^2)
    print(dTdt*r^2)
    ```

@@ -40,33 +40,33 @@ J <- (exp(l40*tstd)-1)*(std39b/std40r)
 # calculate age
 tx = log(1 + J*smp40r/smp39b)/l40
 
-# calculate the standard errors of the intercepts:
-std36merr <- summary(std36fit)$coefficients[1,2]
-std39merr <- summary(std39fit)$coefficients[1,2]
-std40merr <- summary(std40fit)$coefficients[1,2]
-smp36merr <- summary(smp36fit)$coefficients[1,2]
-smp39merr <- summary(smp39fit)$coefficients[1,2]
-smp40merr <- summary(smp40fit)$coefficients[1,2]
-blk36merr <- summary(blk36fit)$coefficients[1,2]
-blk39merr <- summary(blk39fit)$coefficients[1,2]
-blk40merr <- summary(blk40fit)$coefficients[1,2]
+# calculate the variances of the intercepts:
+std36merr2 <- vcov(std36fit)[1,1]
+std39merr2 <- vcov(std39fit)[1,1]
+std40merr2 <- vcov(std40fit)[1,1]
+smp36merr2 <- vcov(smp36fit)[1,1]
+smp39merr2 <- vcov(smp39fit)[1,1]
+smp40merr2 <- vcov(smp40fit)[1,1]
+blk36merr2 <- vcov(blk36fit)[1,1]
+blk39merr2 <- vcov(blk39fit)[1,1]
+blk40merr2 <- vcov(blk40fit)[1,1]
 
-# standard errors of the blank corrections:
-std36berr <- std36merr + blk36merr
-std39berr <- std39merr + blk39merr
-std40berr <- std40merr + blk40merr
-smp36berr <- smp36merr + blk36merr
-smp39berr <- smp39merr + blk39merr
-smp40berr <- smp40merr + blk40merr
+# variances of the blank corrections:
+std36berr2 <- std36merr2 + blk36merr2
+std39berr2 <- std39merr2 + blk39merr2
+std40berr2 <- std40merr2 + blk40merr2
+smp36berr2 <- smp36merr2 + blk36merr2
+smp39berr2 <- smp39merr2 + blk39merr2
+smp40berr2 <- smp40merr2 + blk40merr2
 
-# standard error of the atmospheric correction
-std40rerr <- std40berr + std36berr*a4036
-smp40rerr <- smp40berr + smp36berr*a4036
+# variance of the atmospheric correction
+std40rerr2 <- std40berr2 + std36berr2*a4036^2
+smp40rerr2 <- smp40berr2 + smp36berr2*a4036^2
 
 # J error
 Jerr <- (exp(l40*tstd)-1) * (std39b/std40r) * 
-  sqrt((std39berr/std39b)^2+(std40rerr/std40r)^2)
+  sqrt((std39berr2/std39b^2) + (std40rerr2/std40r^2))
 
 # age error
 txerr = (J*smp40r/smp39b)*
-  sqrt((Jerr/J)^2 + (smp40rerr/smp40r)^2+(smp39berr/smp39b)^2)/l40
+  sqrt((Jerr/J)^2 + (smp40rerr2/smp40r^2)+(smp39berr2/smp39b^2))/l40
