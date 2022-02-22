@@ -9,8 +9,9 @@ Analysis of a granite yields:
    tRbSrmusc <- 470
    tRbSrbio <- 460
    PbUzirc <- exp(l38*tUPbzirc)-1
-   ArKamp <- exp(l40*tKAramp)-1
-   ArKbio <- exp(l40*tKArbio)-1
+   lel <- 0.1072
+   ArKamp <- lel*(exp(l40*tKAramp)-1)
+   ArKbio <- lel*(exp(l40*tKArbio)-1)
    SrRbmusc <- exp(l87*tRbSrmusc)-1
    SrRbbio <- exp(l87*tRbSrbio)-1
    ttab <- matrix(signif(c(PbUzirc,ArKamp,ArKbio,SrRbmusc,SrRbbio),3),1,5)
@@ -25,9 +26,15 @@ Analysis of a granite yields:
    is the result?
 
    ```{r}
-   tt <- log(ttab+1)/c(l38,l40,l40,l87,l87)
-   colnames(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
-                     'Rb-Sr (musc)','Rb-Sr (bio)')
+   tUPb <- log(PbUzirc+1)/l38
+   lel <- 0.1072
+   tKAramp <- log(ArKamp/lel+1)/l40
+   tKArbio <- log(ArKbio/lel+1)/l40
+   tRbSrmusc <- log(SrRbmusc+1)/l87
+   tRbSrbio <- log(SrRbbio+1)/l87
+   tt <- c(tUPb,tKAramp,tKArbio,tRbSrmusc,tRbSrbio)
+   names(tt) <- c('U-Pb (zirc)','K-Ar (amp)','K-Ar (bio)',
+   	          'Rb-Sr (musc)','Rb-Sr (bio)')
    print(signif(tt,3))
    ```
    \ifsol
