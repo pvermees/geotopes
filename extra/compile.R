@@ -3,8 +3,8 @@ odir <- '/home/pvermees/Desktop/GEOL0017/'
 
 solution <- TRUE
 results <- TRUE
-multidoc <- FALSE
-randomise <- FALSE
+multidoc <- TRUE
+randomise <- TRUE
 
 preamble <- paste0("---\n",
 ifelse(solution,ifelse(multidoc,"",
@@ -40,7 +40,7 @@ if (solution & multidoc){
     cat(fread(paste0(idir,'header.txt')),file=FNAME,append=TRUE)
     cat("# Theory (5 questions per week)\n\n",file=FNAME,append=TRUE)
 }
-nq <- 24
+nq <- 25
 NN <- round(runif(n=nq,min=0,max=100))
 for (q in 1:nq){
     if (solution & multidoc){
