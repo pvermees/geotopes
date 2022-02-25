@@ -1,10 +1,17 @@
 idir <- '/home/pvermees/Documents/geotopes/extra/'
 odir <- '/home/pvermees/Desktop/GEOL0017/'
 
+<<<<<<< HEAD
 solution <- FALSE
 results <- FALSE
 multidoc <- FALSE
 randomise <- FALSE
+=======
+solution <- TRUE
+results <- TRUE
+multidoc <- TRUE
+randomise <- TRUE
+>>>>>>> 07874941e409ea9b129515d639f7f986fca4e477
 
 preamble <- paste0("---\n",
 ifelse(solution,ifelse(multidoc,"",

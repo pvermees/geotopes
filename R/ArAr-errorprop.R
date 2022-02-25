@@ -67,6 +67,9 @@ smp40rerr2 <- smp40berr2 + smp36berr2*a4036^2
 Jerr <- (exp(l40*tstd)-1) * (std39b/std40r) * 
   sqrt((std39berr2/std39b^2) + (std40rerr2/std40r^2))
 
-# age error
-txerr = (J*smp40r/smp39b)*
+# age error (linear approximation)
+txerra <- (J*smp40r/smp39b)*
   sqrt((Jerr/J)^2 + (smp40rerr2/smp40r^2)+(smp39berr2/smp39b^2))/l40
+
+# age error (full chain rule)
+txerrb = txerra/(1+J*smp40r/smp39b)

@@ -10,15 +10,15 @@
    following script as a starting point:
    [`github:pvermees/practicals/UPb/atomic.R`](https://github.com/pvermees/geotopes/tree/master/practicals/UPb/atomic.R)
 
-   (c) Write a function to determine the error correlation between
-   the blank-corrected ^207^Pb/^235^U and ^206^Pb/^238^U-ratios
-   of the samples.
+   (c) Write a function to determine the _error correlation_ between
+   the blank-corrected ^207^Pb/^235^U and ^206^Pb/^238^U-ratios of the
+   samples, using ~R~'s ~cor()~ function.
 
    (d) Form a matrix with four rows (one for each sample) and
    five columns with the ^207^Pb/^235^U-ratios, the standard errors
    of the ^207^Pb/^235^U-ratios, the ^206^Pb/^238^U-ratios,
    the standard errors of the ^206^Pb/^238^U-ratios,
-   and the error correlations obtained from part (b).
+   and the error correlations obtained from part (c).
 
    (e) Enter the values in this matrix into the online version of
    `IsoplotR` at
