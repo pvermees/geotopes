@@ -168,7 +168,10 @@ of the \textsuperscript{230}Th/\textsuperscript{238}U-,
 \textsuperscript{234}U/\textsuperscript{238}U-activity
 ratios. \texttt{IsoplotR} performs this calculation using the maximum
 likelihood algorithm of \citet{ludwig1994}. This solves the following
-system of equations:
+system of equations\footnote{The same calculations can also be
+performed in `Rosholt space', with \textsuperscript{232}Th as a common
+denominator, but an in-depth discussion of this is omitted for the
+sake of brevity.}:
 \begin{equation}
   \begin{cases}
     \left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_i =
@@ -223,9 +226,27 @@ obtained by substituting the estimate of $a$ for
 $\left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_i$ and
 $\alpha$ for
 $\left[\frac{{}^{230}\mbox{Th}}{{}^{238}\mbox{U}}\right]_i$ in
-Equation~\ref{eq:Th-U}, and setting $A[{}^{230}Th]_{\circ}=0$.  The
-results of the three-dimensional isochron regression can be visualised
-in four possible ways:
+Equation~\ref{eq:Th-U}, and setting $A[{}^{230}Th]_{\circ}=0$.
+Additionally, the fit parameters ($a$, $b$, $\alpha$ and $\beta$) can
+also be used to estimate the following quantities:
+
+\begin{enumerate}
+\item{(\textsuperscript{234}U/\textsuperscript{238}U)\textsubscript{0}} $=a$:
+  the authigenic \textsuperscript{234}U/\textsuperscript{238}U
+  activity ratio;
+\item{(\textsuperscript{230}Th/\textsuperscript{232}Th)\textsubscript{0}}
+  $=\beta$: the authigenic
+  \textsuperscript{230}Th/\textsuperscript{232}Th activity ratio;
+\item{(\textsuperscript{230}Th/\textsuperscript{238}U)\textsubscript{0}}
+  $=\alpha$: the detrital
+  \textsuperscript{230}Th/\textsuperscript{238}U activity ratio;
+\item{(\textsuperscript{234}U/\textsuperscript{238}U)\textsubscript{i}}
+  = $1 + (a-1)e^{\lambda_{234}t}$: the initial
+  \textsuperscript{234}U/\textsuperscript{238}U activity ratio.
+\end{enumerate}
+
+The results of the three-dimensional isochron regression can be
+visualised in four possible ways:
 
 \noindent\begin{minipage}[t][][b]{.65\linewidth}
 \includegraphics[width=\textwidth]{../figures/ThUisochron.pdf}

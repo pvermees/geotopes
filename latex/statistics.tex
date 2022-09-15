@@ -665,8 +665,8 @@ their uncertainties ($s[X']$ and $s[Y']$) and error correlations
     r[X'Y'] =
     \left(\frac{X'}{s[X']}\right)
     \left[
-    \left(\frac{Y}{s[Y]}\right) -
-    r[X,Y]\left(\frac{X}{s[X]}\right)
+    \left(\frac{s[Y]}{Y}\right) -
+    r[X,Y]\left(\frac{s[X]}{X}\right)
     \right]
   \end{cases}
   \label{eq:transformation}
@@ -1009,24 +1009,26 @@ and the 95\% confidence interval for $\mu$ is wider as a consequence.
   \label{fig:tdof}
 \end{minipage}
 
-\texttt{IsoplotR} reports the age uncertainties in the following
-form:
+Given an age estimate $\hat{\tau}$ and its standard error
+$s[\hat{\tau}]$, \texttt{IsoplotR} reports the age uncertainties in
+the following form:
 
 \[
-t = \hat{t} \pm x \mid y (\mid z)
+\tau = \hat{\tau} \pm x (\mid y)
 \]
 
 \noindent where
 
 \begin{description}
-\item[$\hat{t}$] is the age estimate
-\item[$x$] is the standard error of $\hat{t}$
-\item[$y$] $= t_{df,1-\alpha/2} \times x$ is the 95\% confidence interval for
-  $\hat{t}$
-\item[$z$] $= \sqrt{MSWD} \times y$ is the 95\% confidence interval for
-  $\hat{t}$ adjusted for overdispersion. This value is only reported
-  for model-1 fits when the p-value of the chi-square test is less
-  than 0.05.
+\item[$x$] $= f \times s[\hat{\tau}]$ is either reported at one
+  standard error ($f=1$), at two standard errors ($f=2$), or as a
+  $100(1-\alpha)$\% confidence interval ($f$ = the $1-\alpha/2$
+  quantile of a standard normal distribution), in absolute or relative
+  (\%) units.
+\item[$y$] $= t_{df,1-\alpha/2} \sqrt{MSWD} \times s[\hat{\theta}]$ is
+  the uncertainty for $\hat{\tau}$, adjusted for overdispersion. This
+  value is only reported for model-1 fits when the p-value of the
+  chi-square test is less than 0.05.
 \end{description}
 
 \noindent\begin{minipage}[t][][b]{.6\textwidth}
@@ -1036,8 +1038,8 @@ t = \hat{t} \pm x \mid y (\mid z)
   \captionof{figure}{a) weighted mean (Figure~\ref{fig:wtdmeanMSWD}c)
     and b) Rb--Sr isochron (Figure~\ref{fig:isochronMSWD}c) regression
     using a model-1 fit. The legend reports the best fit age and
-    uncertainties reported as standard errors, and 95\% confidence
-    intervals without and with overdispersion.  }
+    uncertainties reported as absolute `2-sigma' errors without and
+    with overdispersion.}
   \label{fig:model-1}
 \end{minipage}
 
@@ -1088,7 +1090,6 @@ being developed to make this possible
     equals the dispersion parameter ($\omega$).}
   \label{fig:WtdMeanModel1vsRandomEffects}
 \end{minipage}
-
 
 \printbibliography[heading=subbibliography]
 
