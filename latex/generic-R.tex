@@ -155,20 +155,41 @@ Using character~23 replaces the filled circles with filled diamonds.
 radialplot(data1,pch=23)
 \end{console}
   
-\item By default, \texttt{IsoplotR} reports confidence intervals (for
-  the central age) on a 95\% confidence level.
+\item By default, \texttt{IsoplotR} reports uncertainties (for the
+  central age) as absolute 2-sigma (2 standard error) confidence
+  intervals.
+
+\noindent\begin{minipage}[t]{.25\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/oerr.png}
+\end{minipage}
+\begin{minipage}[t]{.75\linewidth}
+  The significance level can be adjusted here, from 1 to 2 standard
+  errors or any arbitrary confidence level, as either absolute or
+  relative uncertainties.
+\end{minipage}
+
+\begin{console}
+radialplot(data1,oerr=4)
+\end{console}
+
+When choosing arbitrary confidence intervals (`\texttt{ci(abs)}' or
+`\texttt{ci(\%)}' in the pull-down menu), the confidence level can be
+changed from the default $\alpha=0.05$ to any other value between 0
+and 1:
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/OtherRadialAlpha.png}
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
-The significance level can be adjusted here, for example to a 99\%
-confidence level.
+Set the probability cutoff to 0.01 to obtain 99\% confidence
+intervals.
 \end{minipage}
 
 \begin{console}
-radialplot(data1,alpha=0.01)
+settings('alpha',0.01)
+radialplot(data1,oerr=3)
 \end{console}
 
 \item The number of significant digits can be specified relative to
@@ -196,45 +217,44 @@ radialplot(data1,sigdig=3)
 \includegraphics[width=\linewidth]{../figures/OtherRadialBG.png}
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
-One can either assign a fixed colour to all aliquots.
+Choose a fixed colour by clicking on the first coloured rectangle.
 \end{minipage}
 
 \begin{console}
-radialplot(data1,bg='blue')
+radialplot(data1,bg='green')
 \end{console}
 
 Alternatively, the fill colour can be used to visualise an additional
 variable, by pasting a vector of values into the optional \texttt{(C)}
-column of the input table (Section~\ref{sec:GUI}).
-
-\noindent\begin{minipage}[t]{.5\linewidth}
-\strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/OtherRadialBGC.png}
-\end{minipage}
-\begin{minipage}[t]{.5\linewidth}
-  The corresponding fill and stroke colours can be specified by
-  supplying a vector of colours in the text box of the GUI.\\
-\end{minipage}
-
-For the sake of illustration, let us demonstrate this feature by
-constructing a colour scale based on the relative measurement
-uncertainties (uncertainty divided by age) of the test data:
+column of the input table (Section~\ref{sec:GUI}). For the sake of
+illustration, let us demonstrate this feature by constructing a colour
+scale based on the relative measurement uncertainties (uncertainty
+divided by age) of the test data:
 
 \begin{script}
 relerr <- data1[,2]/data1[,1]
-radialplot(data1,levels=relerr,bg=c('white','red'))
+radialplot(data1,levels=relerr,bg=c('green','red'))
 \end{script}
+
+\noindent\begin{minipage}[t]{.5\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/OtherRainbow.png}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+  A colour scale can be defined either by defining its start and end
+  colour, or by choosing one of the preset colour ramps.\\
+\end{minipage}
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/OtherRadialClabel.png}
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
-  The colour scale can be labelled for clarity.
+  The colour scale can also be labelled for clarity.
 \end{minipage}
 
 \begin{script}[firstnumber=2]
-radialplot(data1,levels=relerr,bg=c('white','red'),clabel='s[t]/t')
+radialplot(data1,levels=relerr,bg=rainbow(n=100),clabel='s[t]/t')
 \end{script}
 
 \item The font size of the sample numbers, axis labels, and any legend
@@ -357,20 +377,21 @@ isochron(data2,model=2,xlim=c(0,300),ylim=c(0,1500))
 \item Other options are similar to the radial plot
   (Section~\ref{sec:OtherRadial}).
 
-\noindent\begin{minipage}[t]{.45\linewidth}
+\noindent\begin{minipage}[t]{.5\linewidth}
   \strut\vspace*{-\baselineskip}\newline
   \includegraphics[width=\linewidth]{../figures/OtherRegressionAlpha.png}
 \end{minipage}
-\begin{minipage}[t]{.55\linewidth}
-  The default values for the significance level (\texttt{alpha}=0.05),
-  number of significant digits (\texttt{sigdig}=2), and font
-  magnification (\texttt{cex}=1) can be changed by entering the
-  appropriate value in these text boxes.
+\begin{minipage}[t]{.5\linewidth}
+  The default values for the output errors (\texttt{2 s.e. (abs)}),
+  significance level (\texttt{alpha=0.05}), number of significant
+  digits (\texttt{sigdig}=2), and font magnification (\texttt{cex}=1)
+  can be changed by entering the appropriate value in these text
+  boxes.
 \end{minipage}
 
 \begin{script}
 oldpar <- par(cex=1.1)
-isochron(data2,alpha=0.01,sigdig=4)
+isochron(data2,oerr=6,alpha=0.01,sigdig=4)
 par(oldpar)
 \end{script}
 
@@ -389,7 +410,7 @@ the ellipses a uniform red.
 
 \begin{script}
 isochron(data2,levels=data2[,5],clabel='rho',
-         ellipse.fill=topo.colors(n=100),ellipse.stroke='red')
+         ellipse.fill=c('#0000FF','#00FFFF'),ellipse.stroke='red')
 \end{script}
   
 \end{enumerate}
