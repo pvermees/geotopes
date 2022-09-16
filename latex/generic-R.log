@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.7)  15 SEP 2022 23:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.4)  16 SEP 2022 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4327,8 +4327,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no ( in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ' in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ' in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -4422,23 +4426,13 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (10.49991pt too wide) in paragraph at lines 176--180
-\OT1/cmtt/m/n/10 ci
+Overfull \hbox (36.74968pt too wide) in paragraph at lines 176--180
+\OT1/cmtt/m/n/10 ci(abs)
  []
 
 
 Overfull \hbox (26.24977pt too wide) in paragraph at lines 176--180
-\OT1/cmtt/m/n/10 (abs)
- []
-
-
-Overfull \hbox (10.49991pt too wide) in paragraph at lines 176--180
-\OT1/cmtt/m/n/10 ci
- []
-
-
-Overfull \hbox (15.74986pt too wide) in paragraph at lines 176--180
-\OT1/cmtt/m/n/10 (%)
+\OT1/cmtt/m/n/10 ci(%)
  []
 
 
@@ -5351,7 +5345,7 @@ Missing character: There is no n in font nullfont!
 <write> ...: Reference `sec:GUI' on page \thepage 
                                                   \space undefined\on@line .
 l.229 ...of the input table (Section~\ref{sec:GUI}
-                                                  ).
+                                                  ). For the sake of
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -5362,230 +5356,6 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Reference `sec:GUI' on page  undefined on input line 229.
 
 Missing character: There is no ) in font nullfont!
-Missing character: There is no . in font nullfont!
-
-Overfull \hbox (15.74986pt too wide) in paragraph at lines 227--230
-\OT1/cmtt/m/n/10 (C)
- []
-
-
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 227--230
-[] 
- []
-
-! Undefined control sequence.
-l.233 \includegraphics
-                      [width=\linewidth]{../figures/OtherRainbow.png}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no = in font nullfont!
-! Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.233 \includegraphics[width=\linewidth]
-                                        {../figures/OtherRainbow.png}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.233 \includegraphics[width=\linewidth]
-                                        {../figures/OtherRainbow.png}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-Missing character: There is no ] in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no O in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -5747,13 +5517,23 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no : in font nullfont!
 
+Overfull \hbox (15.74986pt too wide) in paragraph at lines 227--233
+\OT1/cmtt/m/n/10 (C)
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 227--233
+[]
+ []
+
+
 ! LaTeX Error: Environment script undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.245 \begin{script}
+l.234 \begin{script}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5823,11 +5603,11 @@ Missing character: There is no = in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no ( in font nullfont!
 Missing character: There is no ' in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no ' in font nullfont!
@@ -5844,14 +5624,178 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.248 \end{script}
+l.237 \end{script}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.252 \includegraphics
+l.241 \includegraphics
+                      [width=\linewidth]{../figures/OtherRainbow.png}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.241 \includegraphics[width=\linewidth]
+                                        {../figures/OtherRainbow.png}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.241 \includegraphics[width=\linewidth]
+                                        {../figures/OtherRainbow.png}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+l.250 \includegraphics
                       [width=\linewidth]{../figures/OtherRadialClabel.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5869,7 +5813,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.252 \includegraphics[width=\linewidth]
+l.250 \includegraphics[width=\linewidth]
                                         {../figures/OtherRadialClabel.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -5878,7 +5822,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.252 \includegraphics[width=\linewidth]
+l.250 \includegraphics[width=\linewidth]
                                         {../figures/OtherRadialClabel.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -5937,6 +5881,10 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
@@ -5965,7 +5913,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.258 \begin{script}
+l.256 \begin{script}
                     [firstnumber=2]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6058,7 +6006,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.260 \end{script}
+l.258 \end{script}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6147,7 +6095,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.267 \includegraphics
+l.265 \includegraphics
                       [width=\linewidth]{../figures/OtherRadialCEX.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6165,7 +6113,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.267 \includegraphics[width=\linewidth]
+l.265 \includegraphics[width=\linewidth]
                                         {../figures/OtherRadialCEX.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -6174,7 +6122,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.267 \includegraphics[width=\linewidth]
+l.265 \includegraphics[width=\linewidth]
                                         {../figures/OtherRadialCEX.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -6366,12 +6314,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (15.74986pt too wide) in paragraph at lines 274--276
+Overfull \hbox (15.74986pt too wide) in paragraph at lines 272--274
 \OT1/cmtt/m/n/10 cex
  []
 
 
-Overfull \hbox (26.24977pt too wide) in paragraph at lines 274--276
+Overfull \hbox (26.24977pt too wide) in paragraph at lines 272--274
 \OT1/cmtt/m/n/10 par()
  []
 
@@ -6382,7 +6330,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.277 \begin{script}
+l.275 \begin{script}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6437,7 +6385,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no ) in font nullfont!
 ! You can't use `macro parameter character #' in horizontal mode.
-l.280 par(oldpar) #
+l.278 par(oldpar) #
                     restore the old cex value
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -6472,14 +6420,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.281 \end{script}
+l.279 \end{script}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.285 \includegraphics
+l.283 \includegraphics
                       [width=\linewidth]{../figures/OtherRadialPCHcex.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6497,7 +6445,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.285 \includegraphics[width=\linewidth]
+l.283 \includegraphics[width=\linewidth]
                                         {../figures/OtherRadialPCHcex.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -6506,7 +6454,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.285 \includegraphics[width=\linewidth]
+l.283 \includegraphics[width=\linewidth]
                                         {../figures/OtherRadialPCHcex.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -6591,7 +6539,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 \begin{console}
+l.289 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6629,14 +6577,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.293 \end{console}
+l.291 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.297 \section
+l.295 \section
               {Regression}\label{sec:OtherRegression}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6655,12 +6603,12 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 297--298
+Overfull \hbox (20.0pt too wide) in paragraph at lines 295--296
 [][] 
  []
 
 ! Undefined control sequence.
-l.299 \citet
+l.297 \citet
             {york2004} regression requires a table of measurements for the
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6833,37 +6781,37 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 299--304
+Overfull \hbox (20.0pt too wide) in paragraph at lines 297--302
 []
  []
 
 
-Overfull \hbox (5.24995pt too wide) in paragraph at lines 299--304
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 297--302
 \OT1/cmtt/m/n/10 X
  []
 
 
-Overfull \hbox (5.24995pt too wide) in paragraph at lines 299--304
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 297--302
 \OT1/cmtt/m/n/10 Y
  []
 
 
-Overfull \hbox (31.49973pt too wide) in paragraph at lines 299--304
+Overfull \hbox (31.49973pt too wide) in paragraph at lines 297--302
 \OT1/cmtt/m/n/10 err[X]
  []
 
 
-Overfull \hbox (31.49973pt too wide) in paragraph at lines 299--304
+Overfull \hbox (31.49973pt too wide) in paragraph at lines 297--302
 \OT1/cmtt/m/n/10 err[Y]
  []
 
 
-Overfull \hbox (41.99963pt too wide) in paragraph at lines 299--304
+Overfull \hbox (41.99963pt too wide) in paragraph at lines 297--302
 \OT1/cmtt/m/n/10 err[rXY] 
  []
 
 ! Undefined control sequence.
-l.307   \includegraphics
+l.305   \includegraphics
                         [width=\linewidth]{../figures/OtherRegressionInput.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6881,7 +6829,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.307   \includegraphics[width=\linewidth]
+l.305   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionInput.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -6890,7 +6838,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.307   \includegraphics[width=\linewidth]
+l.305   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionInput.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -7068,7 +7016,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ... `eq:redundantratios' on page \thepage 
                                                   \space undefined\on@line .
-l.312 ...s using Equation~\ref{eq:redundantratios}
+l.310 ...s using Equation~\ref{eq:redundantratios}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7078,11 +7026,11 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `eq:redundantratios' on page  undefined on input line 
-312.
+310.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 310--313
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 308--311
 [] 
  []
 
@@ -7093,7 +7041,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.315 \begin{console}
+l.313 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7121,14 +7069,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.317 \end{console}
+l.315 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 316--318
+Overfull \hbox (20.0pt too wide) in paragraph at lines 314--316
 []
  []
 
@@ -7168,7 +7116,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 319--320
+Overfull \hbox (20.0pt too wide) in paragraph at lines 317--318
 []
  []
 
@@ -7179,7 +7127,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.321 \begin{script}
+l.319 \begin{script}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7267,19 +7215,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.325 \end{script}
+l.323 \end{script}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 322--326
+Overfull \hbox (20.0pt too wide) in paragraph at lines 320--324
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 327--327
+Overfull \hbox (20.0pt too wide) in paragraph at lines 325--325
 [] 
  []
 
@@ -7361,12 +7309,12 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (41.99963pt too wide) in paragraph at lines 329--331
+Overfull \hbox (41.99963pt too wide) in paragraph at lines 327--329
 \OT1/cmtt/m/n/10 IsoplotR
  []
 
 ! Undefined control sequence.
-l.334 \includegraphics
+l.332 \includegraphics
                       [width=\linewidth]{../figures/OtherRegressionModels.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7384,7 +7332,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.334 \includegraphics[width=\linewidth]
+l.332 \includegraphics[width=\linewidth]
                                         {../figures/OtherRegressionModels.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -7393,7 +7341,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.334 \includegraphics[width=\linewidth]
+l.332 \includegraphics[width=\linewidth]
                                         {../figures/OtherRegressionModels.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -7562,7 +7510,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...ce `fig:isochronMSWD' on page \thepage 
                                                   \space undefined\on@line .
-l.339   (Figure~\ref{fig:isochronMSWD}
+l.337   (Figure~\ref{fig:isochronMSWD}
                                       ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7572,12 +7520,12 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `fig:isochronMSWD' on page  undefined on input line 33
-9.
+7.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 337--340
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 335--338
 [] 
  []
 
@@ -7588,7 +7536,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.342 \begin{console}
+l.340 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7618,13 +7566,13 @@ Missing character: There is no = in font nullfont!
 Missing character: There is no 3 in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 327 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 325 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.344 \end{console}
+l.342 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7730,7 +7678,7 @@ Missing character: There is no x in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.351   \includegraphics
+l.349   \includegraphics
                         [width=\linewidth]{../figures/concordiashownumbers.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7748,7 +7696,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.351   \includegraphics[width=\linewidth]
+l.349   \includegraphics[width=\linewidth]
                                           {../figures/concordiashownumbers.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -7757,7 +7705,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.351   \includegraphics[width=\linewidth]
+l.349   \includegraphics[width=\linewidth]
                                           {../figures/concordiashownumbers.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -7852,7 +7800,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.357 \begin{console}
+l.355 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7892,13 +7840,13 @@ Missing character: There is no U in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 327 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 325 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.359 \end{console}
+l.357 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7968,7 +7916,7 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.366   \includegraphics
+l.364   \includegraphics
                         [width=\linewidth]{../figures/OtherRegressionXYlims....
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7986,7 +7934,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.366   \includegraphics[width=\linewidth]
+l.364   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionXYlims....
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -7995,7 +7943,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.366   \includegraphics[width=\linewidth]
+l.364   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionXYlims....
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -8166,7 +8114,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.375 \begin{console}
+l.373 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -8225,13 +8173,13 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 327 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 325 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 \end{console}
+l.375 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -8285,7 +8233,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...nce `sec:OtherRadial' on page \thepage 
                                                   \space undefined\on@line .
-l.380   (Section~\ref{sec:OtherRadial}
+l.378   (Section~\ref{sec:OtherRadial}
                                       ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8294,18 +8242,18 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `sec:OtherRadial' on page  undefined on input line 380
+LaTeX Warning: Reference `sec:OtherRadial' on page  undefined on input line 378
 .
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 379--381
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 377--379
 [] 
  []
 
 ! Undefined control sequence.
-l.384   \includegraphics
+l.382   \includegraphics
                         [width=\linewidth]{../figures/OtherRegressionAlpha.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8323,7 +8271,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.384   \includegraphics[width=\linewidth]
+l.382   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionAlpha.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -8332,7 +8280,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.384   \includegraphics[width=\linewidth]
+l.382   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionAlpha.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -8412,25 +8360,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no ( in font nullfont!
-! Undefined control sequence.
-l.387 ...ault values for the output errors (\textt
-                                                  {2 s.e. (abs)}),
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -8566,17 +8495,32 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (52.49954pt too wide) in paragraph at lines 387--392
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 385--390
+\OT1/cmtt/m/n/10 2
+ []
+
+
+Overfull \hbox (20.99982pt too wide) in paragraph at lines 385--390
+\OT1/cmtt/m/n/10 s.e.
+ []
+
+
+Overfull \hbox (26.24977pt too wide) in paragraph at lines 385--390
+\OT1/cmtt/m/n/10 (abs)
+ []
+
+
+Overfull \hbox (52.49954pt too wide) in paragraph at lines 385--390
 \OT1/cmtt/m/n/10 alpha=0.05
  []
 
 
-Overfull \hbox (31.49973pt too wide) in paragraph at lines 387--392
+Overfull \hbox (31.49973pt too wide) in paragraph at lines 385--390
 \OT1/cmtt/m/n/10 sigdig
  []
 
 
-Overfull \hbox (15.74986pt too wide) in paragraph at lines 387--392
+Overfull \hbox (15.74986pt too wide) in paragraph at lines 385--390
 \OT1/cmtt/m/n/10 cex
  []
 
@@ -8587,7 +8531,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.394 \begin{script}
+l.392 \begin{script}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -8667,13 +8611,13 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 327 ended by \end{script}.
+! LaTeX Error: \begin{enumerate} on input line 325 ended by \end{script}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.398 \end{script}
+l.396 \end{script}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -8779,7 +8723,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.405   \includegraphics
+l.403   \includegraphics
                         [width=\linewidth]{../figures/OtherRegressionFillStr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8797,7 +8741,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.405   \includegraphics[width=\linewidth]
+l.403   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionFillStr...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -8806,7 +8750,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.405   \includegraphics[width=\linewidth]
+l.403   \includegraphics[width=\linewidth]
                                           {../figures/OtherRegressionFillStr...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -8998,7 +8942,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.413 \begin{script}
+l.411 \begin{script}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -9064,39 +9008,37 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no ( in font nullfont!
-Missing character: There is no ' in font nullfont!
-! You can't use `macro parameter character #' in horizontal mode.
-l.415          ellipse.fill=c('#
-                                0000FF','#00FFFF'),ellipse.stroke='red')
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no ' in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
-Missing character: There is no ' in font nullfont!
-! You can't use `macro parameter character #' in horizontal mode.
-l.415          ellipse.fill=c('#0000FF','#
-                                          00FFFF'),ellipse.stroke='red')
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
 Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no ' in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -9121,20 +9063,20 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 327 ended by \end{script}.
+! LaTeX Error: \begin{enumerate} on input line 325 ended by \end{script}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.416 \end{script}
+l.415 \end{script}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.420 \section
+l.419 \section
               {Weighted means}\label{sec:OtherWeightedMean}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9156,12 +9098,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 420--421
+Overfull \hbox (20.0pt too wide) in paragraph at lines 419--420
 []
  []
 
 ! Undefined control sequence.
-l.424   \includegraphics
+l.423   \includegraphics
                         [width=\linewidth]{../figures/OtherWtdMeanData.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9179,7 +9121,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.424   \includegraphics[width=\linewidth]
+l.423   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanData.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -9188,7 +9130,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.424   \includegraphics[width=\linewidth]
+l.423   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanData.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -9465,7 +9407,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 433--433
+Overfull \hbox (20.0pt too wide) in paragraph at lines 432--432
 [] 
  []
 
@@ -9533,7 +9475,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...eference `eq:wtdmean' on page \thepage 
                                                   \space undefined\on@line .
-l.436   weighted mean of Equation~\ref{eq:wtdmean}
+l.435   weighted mean of Equation~\ref{eq:wtdmean}
                                                    and the random effects
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9542,7 +9484,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `eq:wtdmean' on page  undefined on input line 436.
+LaTeX Warning: Reference `eq:wtdmean' on page  undefined on input line 435.
 
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -9581,7 +9523,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ... `eq:wtdmean-model-3' on page \thepage 
                                                   \space undefined\on@line .
-l.437   model of Equation~\ref{eq:wtdmean-model-3}
+l.436   model of Equation~\ref{eq:wtdmean-model-3}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9591,26 +9533,26 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `eq:wtdmean-model-3' on page  undefined on input line 
-437.
+436.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (41.99963pt too wide) in paragraph at lines 435--438
+Overfull \hbox (41.99963pt too wide) in paragraph at lines 434--437
 \OT1/cmtt/m/n/10 IsoplotR
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 435--438
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 434--437
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 435--438
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 434--437
 [] 
  []
 
 ! Undefined control sequence.
-l.441   \includegraphics
+l.440   \includegraphics
                         [width=\linewidth]{../figures/OtherWtdMeanRandomEffe...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9628,7 +9570,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.441   \includegraphics[width=\linewidth]
+l.440   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanRandomEffe...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -9637,7 +9579,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.441   \includegraphics[width=\linewidth]
+l.440   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanRandomEffe...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -10091,12 +10033,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 449--454
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 448--453
 \OML/cmm/m/it/10 >
  []
 
 
-Overfull \hbox (10.00003pt too wide) in paragraph at lines 449--454
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 448--453
 \OT1/cmr/m/n/10 10$
  []
 
@@ -10107,7 +10049,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 \begin{console}
+l.454 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10153,13 +10095,13 @@ Missing character: There is no U in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 433 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 432 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.457 \end{console}
+l.456 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10230,7 +10172,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ce `sec:weightedmean' on page \thepage 
                                                   \space undefined\on@line .
-l.460   Section~\ref{sec:weightedmean}
+l.459   Section~\ref{sec:weightedmean}
                                       .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10239,17 +10181,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `sec:weightedmean' on page  undefined on input line 46
-0.
+LaTeX Warning: Reference `sec:weightedmean' on page  undefined on input line 45
+9.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 459--461
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 458--460
 [] 
  []
 
 ! Undefined control sequence.
-l.464   \includegraphics
+l.463   \includegraphics
                         [width=\linewidth]{../figures/OtherWtdMeanOutliers.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10267,7 +10209,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.464   \includegraphics[width=\linewidth]
+l.463   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanOutliers.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -10276,7 +10218,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.464   \includegraphics[width=\linewidth]
+l.463   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanOutliers.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -10479,7 +10421,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 \begin{console}
+l.471 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10544,13 +10486,13 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 433 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 432 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.474 \end{console}
+l.473 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10613,7 +10555,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.481   \includegraphics
+l.480   \includegraphics
                         [width=\linewidth]{../figures/OtherWtdMeanRank.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10631,7 +10573,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.481   \includegraphics[width=\linewidth]
+l.480   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanRank.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -10640,7 +10582,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.481   \includegraphics[width=\linewidth]
+l.480   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanRank.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -10737,7 +10679,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.487 \begin{console}
+l.486 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10775,13 +10717,13 @@ Missing character: There is no U in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 433 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 432 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.489 \end{console}
+l.488 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10912,7 +10854,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no : in font nullfont!
 ! Undefined control sequence.
-l.497   \includegraphics
+l.496   \includegraphics
                         [width=\linewidth]{../figures/OtherWtdMeanRemainingO...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10930,7 +10872,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.497   \includegraphics[width=\linewidth]
+l.496   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanRemainingO...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -10939,7 +10881,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.497   \includegraphics[width=\linewidth]
+l.496   \includegraphics[width=\linewidth]
                                           {../figures/OtherWtdMeanRemainingO...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -11291,7 +11233,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.49991pt too wide) in paragraph at lines 500--506
+Overfull \hbox (10.49991pt too wide) in paragraph at lines 499--505
 \OT1/cmtt/m/n/10 NA
  []
 
@@ -11302,7 +11244,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.508 \begin{script}
+l.507 \begin{script}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -11373,7 +11315,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no ' in font nullfont!
 ! You can't use `macro parameter character #' in horizontal mode.
-l.510              rect.col='#
+l.509              rect.col='#
                               FF000080',outlier.col=NA)
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -11406,20 +11348,20 @@ Missing character: There is no N in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 433 ended by \end{script}.
+! LaTeX Error: \begin{enumerate} on input line 432 ended by \end{script}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.511 \end{script}
+l.510 \end{script}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.515 \section
+l.514 \section
               {Age spectra}\label{sec:OtherAgeSpectra}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11438,7 +11380,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 515--516
+Overfull \hbox (20.0pt too wide) in paragraph at lines 514--515
 []
  []
 
@@ -11573,17 +11515,17 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 517--521
+Overfull \hbox (20.0pt too wide) in paragraph at lines 516--520
 []
  []
 
 
-Overfull \hbox (16.94452pt too wide) in paragraph at lines 517--521
+Overfull \hbox (16.94452pt too wide) in paragraph at lines 516--520
 []$$[]$
  []
 
 ! Undefined control sequence.
-l.524   \includegraphics
+l.523   \includegraphics
                         [width=\linewidth]{../figures/OtherAgeSpectrumData.p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11601,7 +11543,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.524   \includegraphics[width=\linewidth]
+l.523   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumData.p...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -11610,7 +11552,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.524   \includegraphics[width=\linewidth]
+l.523   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumData.p...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -11678,7 +11620,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ence `sec:agespectra' on page \thepage 
                                                   \space undefined\on@line .
-l.527 ...discussed in Section~\ref{sec:agespectra}
+l.526 ...discussed in Section~\ref{sec:agespectra}
                                                   , a release spectrum is
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11687,7 +11629,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `sec:agespectra' on page  undefined on input line 527.
+LaTeX Warning: Reference `sec:agespectra' on page  undefined on input line 526.
 
 
 Missing character: There is no , in font nullfont!
@@ -11971,7 +11913,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 527--533
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 526--532
 []
  []
 
@@ -11982,7 +11924,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.535 \begin{console}
+l.534 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12013,19 +11955,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.537 \end{console}
+l.536 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 536--538
+Overfull \hbox (20.0pt too wide) in paragraph at lines 535--537
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 539--539
+Overfull \hbox (20.0pt too wide) in paragraph at lines 538--538
 [] 
  []
 
@@ -12138,7 +12080,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ce `sec:weightedmean' on page \thepage 
                                                   \space undefined\on@line .
-l.543   Section~\ref{sec:weightedmean}
+l.542   Section~\ref{sec:weightedmean}
                                       .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12148,16 +12090,16 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `sec:weightedmean' on page  undefined on input line 54
-3.
+2.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 541--544
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 540--543
 [] 
  []
 
 ! Undefined control sequence.
-l.547   \includegraphics
+l.546   \includegraphics
                         [width=\linewidth]{../figures/OtherAgeSpectrumPlatea...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12175,7 +12117,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.547   \includegraphics[width=\linewidth]
+l.546   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumPlatea...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -12184,7 +12126,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.547   \includegraphics[width=\linewidth]
+l.546   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumPlatea...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -12357,7 +12299,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (41.99963pt too wide) in paragraph at lines 550--553
+Overfull \hbox (41.99963pt too wide) in paragraph at lines 549--552
 \OT1/cmtt/m/n/10 IsoplotR
  []
 
@@ -12368,7 +12310,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.555 \begin{console}
+l.554 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12407,13 +12349,13 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 539 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 538 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.557 \end{console}
+l.556 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12501,7 +12443,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...eference `eq:wtdmean' on page \thepage 
                                                   \space undefined\on@line .
-l.560 ...an algorithm of Equation~\ref{eq:wtdmean}
+l.559 ...an algorithm of Equation~\ref{eq:wtdmean}
                                                   , or the random
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12510,7 +12452,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `eq:wtdmean' on page  undefined on input line 560.
+LaTeX Warning: Reference `eq:wtdmean' on page  undefined on input line 559.
 
 Missing character: There is no , in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -12549,7 +12491,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ... `eq:wtdmean-model-3' on page \thepage 
                                                   \space undefined\on@line .
-l.561 ...odel of Equation~\ref{eq:wtdmean-model-3}
+l.560 ...odel of Equation~\ref{eq:wtdmean-model-3}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12559,21 +12501,21 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `eq:wtdmean-model-3' on page  undefined on input line 
-561.
+560.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 559--562
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 558--561
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 559--562
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 558--561
 [] 
  []
 
 ! Undefined control sequence.
-l.565   \includegraphics
+l.564   \includegraphics
                         [width=\linewidth]{../figures/OtherAgeSpectrumRandom...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12591,7 +12533,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.565   \includegraphics[width=\linewidth]
+l.564   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumRandom...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -12600,7 +12542,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.565   \includegraphics[width=\linewidth]
+l.564   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumRandom...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -12789,7 +12731,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.573 \begin{console}
+l.572 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12834,13 +12776,13 @@ Missing character: There is no U in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 539 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 538 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.575 \end{console}
+l.574 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12914,7 +12856,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ec:OtherWeightedMean' on page \thepage 
                                                   \space undefined\on@line .
-l.578 ...ot of Section~\ref{sec:OtherWeightedMean}
+l.577 ...ot of Section~\ref{sec:OtherWeightedMean}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12924,16 +12866,16 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `sec:OtherWeightedMean' on page  undefined on input li
-ne 578.
+ne 577.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 577--579
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 576--578
 [] 
  []
 
 ! Undefined control sequence.
-l.582   \includegraphics
+l.581   \includegraphics
                         [width=\linewidth]{../figures/OtherAgeSpectrumExtraO...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12951,7 +12893,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.582   \includegraphics[width=\linewidth]
+l.581   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumExtraO...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -12960,7 +12902,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.582   \includegraphics[width=\linewidth]
+l.581   \includegraphics[width=\linewidth]
                                           {../figures/OtherAgeSpectrumExtraO...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -13249,19 +13191,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.592 \begin{console}
+l.591 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-! Interruption.
-\GenericError  ...                                
-                                                  \endgroup 
-l.592 \begin{console}
-                     
-? q
-OK, entering \batchmode...
 Missing character: There is no a in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -13325,20 +13260,20 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 539 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 538 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.594 \end{console}
+l.593 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.598 \section
+l.597 \section
               {Kernel density estimates}\label{sec:OtherKDE}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13369,12 +13304,12 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 598--599
+Overfull \hbox (20.0pt too wide) in paragraph at lines 597--598
 []
  []
 
 ! Undefined control sequence.
-l.602   \includegraphics
+l.601   \includegraphics
                         [width=\linewidth]{../figures/OtherKDEdata.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13392,7 +13327,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.602   \includegraphics[width=\linewidth]
+l.601   \includegraphics[width=\linewidth]
                                           {../figures/OtherKDEdata.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -13401,7 +13336,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.602   \includegraphics[width=\linewidth]
+l.601   \includegraphics[width=\linewidth]
                                           {../figures/OtherKDEdata.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -13623,7 +13558,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.611 \begin{console}
+l.610 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -13646,19 +13581,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.613 \end{console}
+l.612 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 612--614
+Overfull \hbox (20.0pt too wide) in paragraph at lines 611--613
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 615--615
+Overfull \hbox (20.0pt too wide) in paragraph at lines 614--614
 [] 
  []
 
@@ -13758,7 +13693,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.622 \includegraphics
+l.621 \includegraphics
                       [width=\linewidth]{../figures/OtherKDEfromto.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13776,7 +13711,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.622 \includegraphics[width=\linewidth]
+l.621 \includegraphics[width=\linewidth]
                                         {../figures/OtherKDEfromto.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -13785,7 +13720,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.622 \includegraphics[width=\linewidth]
+l.621 \includegraphics[width=\linewidth]
                                         {../figures/OtherKDEfromto.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -13887,7 +13822,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.628 \begin{console}
+l.627 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -13920,13 +13855,13 @@ Missing character: There is no 8 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 615 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 614 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.630 \end{console}
+l.629 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -13981,7 +13916,7 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 ! Undefined control sequence.
-l.633   \citet
+l.632   \citet
               {botev2010}, and the default histogram binwidth by Sturges'
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14045,7 +13980,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.638 \includegraphics
+l.637 \includegraphics
                       [width=\linewidth]{../figures/OtherKDEbandbin.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14063,7 +13998,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.638 \includegraphics[width=\linewidth]
+l.637 \includegraphics[width=\linewidth]
                                         {../figures/OtherKDEbandbin.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -14072,7 +14007,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.638 \includegraphics[width=\linewidth]
+l.637 \includegraphics[width=\linewidth]
                                         {../figures/OtherKDEbandbin.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -14215,7 +14150,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.645 \begin{console}
+l.644 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14248,13 +14183,13 @@ Missing character: There is no = in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 615 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 614 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.647 \end{console}
+l.646 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14336,7 +14271,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.654 \includegraphics
+l.653 \includegraphics
                       [width=\linewidth]{../figures/UPbKDElogarithm.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14354,7 +14289,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.654 \includegraphics[width=\linewidth]
+l.653 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDElogarithm.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -14363,7 +14298,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.654 \includegraphics[width=\linewidth]
+l.653 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDElogarithm.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -14669,12 +14604,12 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (35.55559pt too wide) in paragraph at lines 661--665
+Overfull \hbox (35.55559pt too wide) in paragraph at lines 660--664
 \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 250 =
  []
 
 
-Overfull \hbox (22.77785pt too wide) in paragraph at lines 661--665
+Overfull \hbox (22.77785pt too wide) in paragraph at lines 660--664
 \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 012$
  []
 
@@ -14685,7 +14620,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.666 \begin{console}
+l.665 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14751,13 +14686,13 @@ Missing character: There is no 8 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 615 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 614 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.668 \end{console}
+l.667 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14815,7 +14750,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.674 \includegraphics
+l.673 \includegraphics
                       [width=\linewidth]{../figures/UPbKDEhistogram.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14833,7 +14768,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.674 \includegraphics[width=\linewidth]
+l.673 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDEhistogram.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -14842,7 +14777,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.674 \includegraphics[width=\linewidth]
+l.673 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDEhistogram.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -15006,7 +14941,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.682 \begin{console}
+l.681 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -15039,13 +14974,13 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 615 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 614 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.684 \end{console}
+l.683 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -15078,7 +15013,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.686 \item The KDE estimate is adjusted by \citet
+l.685 \item The KDE estimate is adjusted by \citet
                                                   {abramson1982}'s adaptive
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15128,7 +15063,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.691 \includegraphics
+l.690 \includegraphics
                       [width=\linewidth]{../figures/UPbKDEadaptive.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15146,7 +15081,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.691 \includegraphics[width=\linewidth]
+l.690 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDEadaptive.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -15155,7 +15090,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.691 \includegraphics[width=\linewidth]
+l.690 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDEadaptive.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -15230,7 +15165,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Undefined control sequence.
-l.694 ...ng the box reverts to the standard \citet
+l.693 ...ng the box reverts to the standard \citet
                                                   {botev2010}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15308,7 +15243,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.698 \begin{console}
+l.697 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -15340,13 +15275,13 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 615 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 614 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.700 \end{console}
+l.699 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -15400,7 +15335,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.706 \includegraphics
+l.705 \includegraphics
                       [width=\linewidth]{../figures/UPbKDErug.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15418,7 +15353,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.706 \includegraphics[width=\linewidth]
+l.705 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDErug.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -15427,7 +15362,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.706 \includegraphics[width=\linewidth]
+l.705 \includegraphics[width=\linewidth]
                                         {../figures/UPbKDErug.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -15566,7 +15501,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.713 \begin{console}
+l.712 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -15593,20 +15528,20 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 615 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 614 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.715 \end{console}
+l.714 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.719 \section
+l.718 \section
               {Cumulative age distributions}\label{sec:OtherCAD}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15641,12 +15576,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 719--720
+Overfull \hbox (20.0pt too wide) in paragraph at lines 718--719
 []
  []
 
 ! Undefined control sequence.
-l.723   \includegraphics
+l.722   \includegraphics
                         [width=\linewidth]{../figures/OtherKDEdata.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15664,7 +15599,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.723   \includegraphics[width=\linewidth]
+l.722   \includegraphics[width=\linewidth]
                                           {../figures/OtherKDEdata.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -15673,7 +15608,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.723   \includegraphics[width=\linewidth]
+l.722   \includegraphics[width=\linewidth]
                                           {../figures/OtherKDEdata.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -15903,7 +15838,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ...ference `sec:KDE+CAD' on page \thepage 
                                                   \space undefined\on@line .
-l.729 CAD does not (Section~\ref{sec:KDE+CAD}
+l.728 CAD does not (Section~\ref{sec:KDE+CAD}
                                              ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15912,12 +15847,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `sec:KDE+CAD' on page  undefined on input line 729.
+LaTeX Warning: Reference `sec:KDE+CAD' on page  undefined on input line 728.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 726--730
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 725--729
 [] 
  []
 
@@ -15928,7 +15863,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.732 \begin{console}
+l.731 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -15951,19 +15886,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.734 \end{console}
+l.733 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 733--735
+Overfull \hbox (20.0pt too wide) in paragraph at lines 732--734
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 736--736
+Overfull \hbox (20.0pt too wide) in paragraph at lines 735--735
 [] 
  []
 
@@ -16021,7 +15956,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.742 \includegraphics
+l.741 \includegraphics
                       [width=\linewidth]{../figures/UPbCADverticals.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -16039,7 +15974,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.742 \includegraphics[width=\linewidth]
+l.741 \includegraphics[width=\linewidth]
                                         {../figures/UPbCADverticals.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -16048,7 +15983,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.742 \includegraphics[width=\linewidth]
+l.741 \includegraphics[width=\linewidth]
                                         {../figures/UPbCADverticals.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -16135,7 +16070,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.748 \begin{console}
+l.747 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -16168,13 +16103,13 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 736 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 735 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.750 \end{console}
+l.749 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -16229,7 +16164,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.756 \includegraphics
+l.755 \includegraphics
                       [width=\linewidth]{../figures/UPbCADpch.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -16247,7 +16182,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.756 \includegraphics[width=\linewidth]
+l.755 \includegraphics[width=\linewidth]
                                         {../figures/UPbCADpch.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -16256,7 +16191,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.756 \includegraphics[width=\linewidth]
+l.755 \includegraphics[width=\linewidth]
                                         {../figures/UPbCADpch.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -16313,7 +16248,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (31.49973pt too wide) in paragraph at lines 759--760
+Overfull \hbox (31.49973pt too wide) in paragraph at lines 758--759
 []\OT1/cmtt/m/n/10 pch=16
  []
 
@@ -16324,7 +16259,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.762 \begin{console}
+l.761 \begin{console}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -16364,20 +16299,20 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-! LaTeX Error: \begin{enumerate} on input line 736 ended by \end{console}.
+! LaTeX Error: \begin{enumerate} on input line 735 ended by \end{console}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.764 \end{console}
+l.763 \end{console}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.768 \printbibliography
+l.767 \printbibliography
                         [heading=subbibliography]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -16411,7 +16346,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 768--769
+Overfull \hbox (20.0pt too wide) in paragraph at lines 767--768
 [] 
  []
 
@@ -16422,7 +16357,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.770 \end{refsection}
+l.769 \end{refsection}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -16436,11 +16371,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 44 strings out of 478287
- 767 string characters out of 5849290
- 310005 words of memory out of 5000000
- 18339 multiletter control sequences out of 15000+600000
- 469735 words of font info for 30 fonts, out of 8000000 for 9000
+ 43 strings out of 481239
+ 749 string characters out of 5920378
+ 256563 words of memory out of 5000000
+ 15409 multiletter control sequences out of 15000+600000
+ 532814 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,4n,15p,150b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,4n,15p,127b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

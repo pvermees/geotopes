@@ -346,16 +346,16 @@ concordia(UPb1,type=2,xlim=c(10,30),ylim=c(0.05,0.06))
 
   \noindent\begin{minipage}[t]{.4\linewidth}
   \strut\vspace*{-\baselineskip}\newline
-  \includegraphics[width=\linewidth]{../figures/ConcordiaAlpha.png}
+  \includegraphics[width=\linewidth]{../figures/concordiaAlpha.png}
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
-To plot the data as `2 sigma' ellipses, this can be changed to
-$\alpha=0.14$ here, which covers 86\% of the area under a bivariate
-normal distribution (Figure~\ref{fig:norm2dmarginal}):
+  To plot the data as 90\% confidence ellipses, change the output
+  error format to \texttt{ci} and the confidence level to
+  $\alpha=0.1$:
 \end{minipage}
 
 \begin{console}
-concordia(UPb1,alpha=0.14)
+concordia(UPb1,oerr=3,alpha=0.1)
 \end{console}
 
 \item An extra variable can be entered in the optional \texttt{(C)}
@@ -368,7 +368,8 @@ concordia(UPb1,alpha=0.14)
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
   The corresponding fill and stroke colours can be specified by
-  entering \texttt{R} code in the text box of the GUI.\\
+  selecting the desired ramp and colours from the pull down menu and
+  selection box.\\
 \end{minipage}
 
 \noindent To illustrate the different possibilities, let us consider a
@@ -385,14 +386,15 @@ concordia(UPb3,type=2,levels=ThU,ellipse.fill=c('blue','red'))
 
 \noindent Using red-green-blue-transparency (rgb-alpha) specifiers:
 \begin{console}
-concordia(UPb3,type=2,levels=ThU,ellipse.fill=c(rgb(1,0,0,0.5),rgb(0,1,0,0.5)))
+concordia(UPb3,type=2,levels=ThU,
+          ellipse.fill=c(rgb(1,0,0,0.5),rgb(0,1,0,0.5)))
 \end{console}
 
 \noindent Specifying the stroke colours as a colour palette with 80\% opacity
 and using a uniform white colour for the fill colour:
 \begin{script}
 concordia(UPb3,type=2,levels=ThU,ellipse.fill='white',
-          ellipse.stroke=heat.colors(n=10,alpha=0.8))
+          ellipse.stroke=heat.colors(n=100,alpha=0.8))
 \end{script}
 
 \noindent Leaving the error ellipses empty but using a reversed colour palette

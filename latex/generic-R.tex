@@ -408,9 +408,10 @@ ellipses according to the error correlation, and paint the outline of
 the ellipses a uniform red.
 \end{minipage}
 
-\begin{script}
+\begin{script}[firstnumber=2]
 isochron(data2,levels=data2[,5],clabel='rho',
-         ellipse.fill=c('#0000FF','#00FFFF'),ellipse.stroke='red')
+         ellipse.fill=c(rgb(1,0,0,0.5),rgb(0,1,1,0,0.5)),
+         ellipse.stroke='red')
 \end{script}
   
 \end{enumerate}
@@ -498,14 +499,14 @@ weightedmean(data3,ranked=TRUE)
   The minimum and maximum extent of the age scale can be specified;
   the fill colour of the rectangular segments can be modified based on
   an additional variable, with a designated separate colour for
-  outliers (\texttt{NA} produces empty rectangles); and the confidence
-  level and significant digits can be specified as in the radial plots
-  and isochron regression plots.
+  outliers; and the confidence level and significant digits can be
+  specified as in the radial plots and isochron regression plots.
 \end{minipage}
 
 \begin{script}
-weightedmean(data3,from=220,to=280,alpha=0.1,sigdig=1,
-             rect.col='#FF000080',outlier.col=NA)
+weightedmean(data3,from=220,to=280,sigdig=1,
+             rect.col=c('#FF880080','8CFF0080'),
+             outlier.col='#00FFFF')
 \end{script}
 
 \end{enumerate}
@@ -580,11 +581,9 @@ agespectrum(data4,random.effects=TRUE)
   \includegraphics[width=\linewidth]{../figures/OtherAgeSpectrumExtraOptions.png}
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
-  The minimum and maximum extent of the age scale can be specified;
-  the fill colour of the rectangular segments can be modified based on
+  The fill colour of the rectangular segments can be modified based on
   an additional variable, with a designated separate colour for
-  outliers; and the confidence level and significant digits can be
-  specified.
+  outliers, and the significant digits can be specified.
 \end{minipage}
 
 \begin{console}
