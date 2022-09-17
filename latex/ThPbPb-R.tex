@@ -123,19 +123,21 @@ isochron(PbPb2,growth=TRUE)
 \includegraphics[width=\linewidth]{../figures/PbPbIsochronOtherOptions.png}
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
-  Tick the checkbox to propagate decay constant uncertainties
+  Use the textboxes to set the axis limits (\texttt{xlim} and
+  \texttt{ylim}), the number of significant digits (\texttt{sigdig}),
+  font size (\texttt{cex}) and colour legend (\texttt{levels} and
+  \texttt{clabel}). Use the pull-down menu and selection boxes to
+  adjust the fill and stroke colour of the error ellipses
+  (\texttt{ellipse.fill} and \texttt{ellipse.stroke}). Tick the
+  checkboxes to propagate decay constant uncertainties
   (\texttt{exterr}) and label the error ellipses with the row numbers
-  of the input data (\texttt{show.numbers}). Use the textboxes to set
-  the axis limits (\texttt{xlim} and \texttt{ylim}), significance
-  level (\texttt{alpha}), significant digits (\texttt{sigdig}), the
-  fill and stroke colour of the error ellipses (\texttt{ellipse.fill}
-  and \texttt{ellipse.stroke}), font size (\texttt{cex}) and colour
-  legend (\texttt{levels} and \texttt{clabel}).
+  of the input data (\texttt{show.numbers}).
 \end{minipage}
 
-\begin{script}
-isochron(PbPb,exterr=TRUE,show.numbers=TRUE,xlim=c(0,0.03),ylim=c(0,0.75),
-         alpha=0.01,sigdig=3,ellipse.fill=NA,ellipse.stroke="red")
+\begin{script}[firstnumber=2]
+isochron(PbPb2,exterr=TRUE,show.numbers=TRUE,
+         xlim=c(0.075,0.09),ylim=c(1.0,1.2),
+         sigdig=3,ellipse.fill=NA,ellipse.stroke="red",growth=TRUE)
 \end{script}
   
 \end{enumerate}

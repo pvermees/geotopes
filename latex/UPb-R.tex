@@ -685,20 +685,19 @@ par(oldpar)
     many of the same optional arguments as the \texttt{concordia}
     function.  Thus, we can change the horizontal (\texttt{xlim}) and
     vertical (\texttt{ylim}) extent of the plot, adjust the number of
-    significant digits (\texttt{sigdig}), modify the significance
-    level (\texttt{alpha}) of the numerical results and error
-    ellipses, label the error ellipses with the sample numbers
-    (\texttt{show.numbers}), propagate the decay constant
-    uncertainties (\texttt{exterr}), and label and colour those
-    ellipses (\texttt{ellipse.fill} and \texttt{ellipse.stroke})
-    according to some additional variable (\texttt{levels}).
+    significant digits (\texttt{sigdig}), label the error ellipses
+    with the sample numbers (\texttt{show.numbers}), propagate the
+    decay constant uncertainties (\texttt{exterr}), and label and
+    colour those ellipses (\texttt{ellipse.fill} and
+    \texttt{ellipse.stroke}) according to some additional variable
+    (\texttt{levels}).
 \end{minipage}
 From the CLI, we can also store the results of the isochron regression
 in a variable for further processing. For example:
 \begin{script}
 ThU <- UPb3$x[,'Th232U238']
 fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),ylim=c(0,0.6),
-                alpha=0.05,exterr=TRUE,sigdig=3,show.numbers=TRUE,
+                exterr=TRUE,sigdig=3,show.numbers=TRUE,
                 levels=ThU,ellipse.fill=c('white','red'),
                 ellipse.stroke='blue',clabel='Th/U')
 \end{script}
@@ -885,8 +884,8 @@ Section~\ref{sec:OtherWeightedMean}.\\
 \begin{script}
 weightedmean(UPb3,random.effects=TRUE,detect.outliers=TRUE,
              outlier.col='red',ranked=TRUE,from=-10,to=110,
-             alpha=0.02,sigdig=1,levels=UPb3$x[,'Th232U238'],
-             rect.col=rev(topo.colors(n=100)),clabel='Th/U')
+             sigdig=1,levels=UPb3$x[,'Th232U238'],
+             rect.col=heat.colors(n=100,alpha=0.5),clabel='Th/U')
 \end{script}
 
 \section{Kernel density estimates}
@@ -898,12 +897,12 @@ U--(Th)--Pb dates.\\
 
 \noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
-\includegraphics[width=\linewidth]{../figures/UPbKDEsettings.png}
+\includegraphics[width=\linewidth]{../figures/UPbKDEsettings.png}\\
 \end{minipage}
 \begin{minipage}[t]{.5\linewidth}
  The U--Pb data may or may not be corrected for common Pb and initial
  disequilibrium, and may or may not have passed through a discordance
- filter.
+ filter.\\
 \end{minipage}
 
 CLI examples:
@@ -975,13 +974,26 @@ estimate discordance of each aliquot.
 \end{minipage}
 \begin{minipage}[t]{.6\linewidth}
   Note that, for formats 1--3, the common Pb correction always
-  produces perfectly concordant ages. Which may not be the most
+  produces perfectly concordant ages. This may not be the most
   informative result.
 \end{minipage}
 
 \begin{console}
 age(UPb2,common.Pb=3)
 \end{console}
+
+\item By default, age uncertainties are reported as absolute 2-sigma
+  (2 standard error) confidence intervals.
+
+\noindent\begin{minipage}[t]{.25\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/oerr.png}
+\end{minipage}
+\begin{minipage}[t]{.75\linewidth}
+  The confidence levels for the analytical uncertainties can be
+  adjusted here, to 2 standard errors or any arbitrary confidence
+  level, in either absolute or relative units.
+\end{minipage}
 
 \item The decay constant uncertainties can be added to each age.
 
@@ -1002,7 +1014,7 @@ age(UPb1,exterr=TRUE)
   the estimated discordance for each aliquot, which can either be
   calculated before or after the common Pb correction.
   \begin{center}
-  \includegraphics[width=.85\linewidth]{../figures/UPbAgesDiscordance.png}
+  \includegraphics[width=\linewidth]{../figures/UPbAgesDiscordance.png}
   \end{center}
   In addition to the six discordance filter options that were
   available to the radial, weighted mean, KDE and CAD plots, the ages
@@ -1013,6 +1025,9 @@ age(UPb1,exterr=TRUE)
 \begin{console}
 age(UPb1,discordance=discfilter(before=TRUE,option=6))
 \end{console}
+
+\item The numerical results can be reported to any number of
+  significant digits.
 
 \item The numerical results can be reported to any number of
   significant digits.
