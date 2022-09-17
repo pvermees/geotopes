@@ -301,9 +301,9 @@ function:\\
   ordinary weighted mean algorithm of Equation~\ref{eq:wtdmean}, or
   the random effects model of Equation~\ref{eq:wtdmean-model-3}.  The
   rectangular segments of the age spectrum can be coloured based on
-  any additional parameter. Here a topographic colour ramp is used for
-  aliquots that belong to the age plateau, whereas segments that do
-  not belong to the plateau are left empty.
+  any additional parameter. Here a reversed(rainbow) colour ramp is
+  used for aliquots that belong to the age plateau, whereas segments
+  that do not belong to the plateau are left empty.
 \end{minipage}
 
 At the CLI, the \textsuperscript{40}Ar/\textsuperscript{36}Ar-ratio
@@ -315,7 +315,7 @@ superscripts:
 
 \begin{script}
 agespectrum(ArAr,levels=ArAr$x[,'Ar40Ar36'],plateau=TRUE,
-            plateau.col=topo.colors(n=100,alpha=0.5),
+            plateau.col=rev(rainbow(n=100,alpha=0.5)),
             exterr=TRUE,i2i=FALSE,random.effects=FALSE,
             clabel=expression(''^40*'Ar/'^36*'Ar'))
 \end{script}

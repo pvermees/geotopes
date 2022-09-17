@@ -125,6 +125,23 @@ of \citet{york2004} is used.\\
 isochron(ThU1,type=3,model=1)
 \end{script}
 
+\noindent\begin{minipage}[t]{.25\linewidth}
+\strut\vspace*{-\baselineskip}\newline
+\includegraphics[width=\linewidth]{../figures/ThUy0.png}
+\end{minipage}
+\begin{minipage}[t]{.75\linewidth}
+Along with the isochron age, \texttt{IsoplotR} can also report 1) the
+authigenic \textsuperscript{234}U/\textsuperscript{238}U activity
+ratio; 2) authigenic \textsuperscript{230}Th/\textsuperscript{232}Th
+activity ratio; 3) detrital
+\textsuperscript{230}Th/\textsuperscript{238}U activity ratio; or 4)
+initial \textsuperscript{234}U/\textsuperscript{238}U activity ratio.
+\end{minipage}
+
+\begin{script}
+isochron(ThU1,type=3,model=1,y0option=2)
+\end{script}
+
 All the other isochron options are as in the generic regression
 function of Section~\ref{sec:OtherRegression}.
 
@@ -277,11 +294,11 @@ evolution(ThU3)
 evolution(ThU1,isochron=TRUE,model=1,exterr=TRUE)
 \end{console}
 
-\item\begin{minipage}[t]{.45\linewidth}
+\item\begin{minipage}[t]{.5\linewidth}
     \strut\vspace*{-\baselineskip}\newline
     \includegraphics[width=\linewidth]{../figures/ThUevolutionOtherOptions.png}
   \end{minipage}
-  \begin{minipage}[t]{.55\linewidth}
+  \begin{minipage}[t]{.5\linewidth}
     The remaining options of the Th--U evolution function allow the
     user to add sample numbers to the error ellipses, specify the
     significance level of those ellipses (as well as the confidence
@@ -289,12 +306,13 @@ evolution(ThU1,isochron=TRUE,model=1,exterr=TRUE)
     stroke colour to them.
   \end{minipage}
 
-  Plotting the error ellipses at a `2-sigma' level ($\alpha=0.14$) and
-  colouring them according to their U/Th ratio:
+  Reporting the isochron uncertainties as relative `2-sigma' errors,
+  and colouring the error ellipses by U/Th ratio:
 
 \begin{script}
-evolution(ThU1,alpha=0.14,levels=ThU1$x[,'U238Th232'],clabel='U/Th',
-          ellipse.fill=cm.colors(n=10,alpha=0.5),ellipse.stroke='orange')
+evolution(ThU1,oerr=5,levels=ThU1$x[,'U238Th232'],clabel='U/Th',
+          ellipse.fill=c('#A1B2C380','#FF000080'),
+          ellipse.stroke='#1A2B3C00')
 \end{script}
 
 \end{enumerate}

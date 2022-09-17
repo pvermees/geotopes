@@ -197,9 +197,8 @@ age(RbSr,isochron=FALSE,exterr=FALSE,i2i=TRUE)
 \end{minipage}
 
 \begin{script}
-  radialplot(LuHf,show.numbers=TRUE,transformation='linear',
-             cex=1.5,levels=LuHf$x[,'Luppm'],clabel='Lu [ppm]',
-             bg=rev(topo.colors(n=100)),i2i=TRUE)
+radialplot(LuHf,show.numbers=TRUE,transformation='linear',cex=1.5,i2i=TRUE,
+           levels=LuHf$x[,'Luppm'],bg=c('white','red'),clabel='Lu [ppm]')
 \end{script}
 
 \item\noindent\begin{minipage}[t]{.55\linewidth}

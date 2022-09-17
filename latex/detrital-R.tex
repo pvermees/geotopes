@@ -176,12 +176,13 @@ different colour to each sample, using a colour ramp function such as
 \includegraphics[width=\linewidth]{../figures/detritalCADcol.png}
 \end{minipage}
 \begin{minipage}[t]{.68\linewidth}
-  As the name suggests, the \texttt{rainbow} palette assigns a
-  different colour of the rainbow to each sample in the dataset.
+  Each sample in the dataset can be assigned a different colour
+  according to one of the palettes that are available from the
+  pull-down menu.
 \end{minipage}
 
 \begin{console}
-cad(DZ,col='rainbow')
+cad(DZ,col='topo.colors')
 \end{console}
 
 \section{Multidimensional scaling}
@@ -236,11 +237,11 @@ mds(DZ,classical=FALSE,shepard=TRUE)
 mds(DZ,nnlines=TRUE)
 \end{console}
 
-\item\noindent\begin{minipage}[t]{.47\linewidth}
+\item\noindent\begin{minipage}[t]{.5\linewidth}
 \strut\vspace*{-\baselineskip}\newline
 \includegraphics[width=\linewidth]{../figures/detritalMDSotheroptions.png}
 \end{minipage}
-\begin{minipage}[t]{.53\linewidth}
+\begin{minipage}[t]{.5\linewidth}
   The samples can be marked by different plot characters (22 stands
   for a filled square), with sample labels placed either at
   (\texttt{pos=0}), below (\texttt{pos=1}), to the left of

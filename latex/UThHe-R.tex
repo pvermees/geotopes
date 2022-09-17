@@ -229,18 +229,19 @@ generic \texttt{radialplot()} (Section~\ref{sec:OtherRadial}),
 \texttt{kde()} (Section~\ref{sec:OtherKDE}) and \texttt{cad()}
 (Section~\ref{sec:OtherCAD}) functions. For example, this screenshot
 shows a radial plot using a square root transformation, with grains
-coloured by Sm-content, using a three-colour scale, and applying the
-minimum age model of Section~\ref{sec:mixtures}. All other settings
-use the default values.
+coloured by Sm-content, using a custom-made colour ramp, and applying
+the minimum age model of Section~\ref{sec:mixtures}. All other
+settings use the default values.
 \end{minipage}
-  
+
 \begin{script}
 radialplot(UThSmHe,transformation='sqrt',k='min',clabel='Sm',
-           levels=UThSmHe[,'Sm'],bg=c('blue','white','red'))
+           levels=UThSmHe[,'Sm'],bg=c('blue','red'))
 \end{script}
 
 Plotting the same data on a weighted mean diagram, using the random
-effects model and ranking the aliquots by age:
+effects model, ranking the aliquots by age, and adding a third colour
+to the colour ramp:
 
 \begin{script}
 weightedmean(UThSmHe,random.effects=TRUE,ranked=TRUE,clabel='Sm',
