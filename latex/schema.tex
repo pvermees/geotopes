@@ -85,8 +85,8 @@ data structure consists of four branches:
   (Spanish) or \texttt{"zh"} (Mandarin Chinese).
 \item{\tt "geochronometer"}: one of \sloppy{\texttt{"fissiontracks"},
   \texttt{"detritals"}, \texttt{"U-Pb"}, \texttt{"Th-U"},
-  \texttt{"Pb-Pb"}, \texttt{"Ar-Ar"}, \texttt{"Th-Pb"},
-  \texttt{"Rb-Sr"}, \texttt{"Sm-Nd"}, \texttt{"Re-Os"},
+  \texttt{"Pb-Pb"}, \texttt{"Ar-Ar"}, \texttt{"K-Ca"},
+  \texttt{"Th-Pb"}, \texttt{"Rb-Sr"}, \texttt{"Sm-Nd"}, \texttt{"Re-Os"},
   \texttt{"Lu-Hf"}, \texttt{"U-Th-He"} or \texttt{"other"}}.
 \item{\tt "plotdevice"}: one of \sloppy{\texttt{"concordia"},
   \texttt{"evolution"}, \texttt{"isochron"}, \texttt{"regression"},
@@ -95,6 +95,16 @@ data structure consists of four branches:
   \texttt{"helioplot"} or \texttt{"ages"}}.
 \item{\tt "ierr"}: \sloppy{an integer from 1 to 4, corresponding to
   the eponymous input argument of the \texttt{read.data()} function.}
+\item{\tt "oerr"}: \sloppy{an integer from 1 to 6, corresponding to
+  the eponymous input argument of the \texttt{age()},
+  \texttt{agespectrum()}, \texttt{ci()}, \texttt{evolution()},
+  \texttt{helioplot()}, \texttt{isochron()}, \texttt{peakfit()},
+  \texttt{radialplot()}, \texttt{scatterplot()}, \texttt{set.zeta()}
+  and \texttt{weightedmean()} functions.}
+\item{\tt "alpha"}: an integer between 0 and 1, setting the decision
+  boundaries of Chi-square tests and outlier detectors.
+\item{\tt "sigdig"}: a positive number, determining the number of
+  significant digits to which the numerical output should be reported.
 \item{\tt "par"}: \texttt{json} object with global settings to be
   passed on to \texttt{R}'s \texttt{par()} function. May, for example,
   contain \texttt{\{"cex": 1\}}.
@@ -139,7 +149,7 @@ data structure consists of four branches:
     to be used in \texttt{discfilter()}'s \texttt{cutoff} argument.
   \item{\tt "commonPb"}: an integer between 0 and 3, to be supplied to
     the \texttt{option} argument of the \texttt{Pb0corr()} function.
-  \item{\tt "diseq"}: logical. If \texttt{"TRUE"}, applies an initial
+  \item{\tt "diseq"}: logical. If \texttt{true}, applies an initial
     disequilibrium correction using the \texttt{diseq()} function.
   \item{\tt "U48"}: two-element vector containing the arguments
     \texttt{x} and \texttt{option} of the eponymous argument to the
@@ -159,18 +169,15 @@ data structure consists of four branches:
   \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "format"}: an integer from 1 to 4, corresponding to the
     eponymous argument of the \texttt{read.data()} function.
-  \item{\tt "detritus"}: an integer from 0 to 3, representing different
+  \item{\tt "Th0i"}: an integer from 0 to 3, representing different
     approaches to detrital \textsuperscript{230}Th-correction, as
     implemented by the eponymous argument to the \texttt{age()},
     \texttt{radialplot()}, \texttt{weightedmean()}, and other
     functions.
-  \item{\tt "Th02"}: a 2-element vector to be passed on to the
+  \item{\tt "Th02i"}: a 2-element vector to be passed on to the
     eponymous argument of \texttt{read.data()}.
   \item{\tt "Th02U48"}: a 9-element vector to be passed on to the
     eponymous argument of \texttt{read.data()}.
-  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
-    on to the eponymous argument of \texttt{age()},
-    \texttt{radialplot()} and other functions.
   \end{enumerate}
 \item{\tt "Pb-Pb"}: a \texttt{json} object with the following
   attributes:
@@ -179,83 +186,90 @@ data structure consists of four branches:
     eponymous argument of the \texttt{read.data()} function.
   \item{\tt "commonPb"}: an integer between 0 and 3, to be supplied to
     the \texttt{option} argument of the \texttt{Pb0corr()} function.
-  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the eponymous argument of the \texttt{isochron()}
-    function,
+  \item{\tt "inverse"}: logical. To be passed on to the eponymous
+    argument of the \texttt{isochron()} function.
+  \item{\tt "projerr"}: logical. To be passed on to the eponymous
+    argument of the \texttt{age()} function.
   \end{enumerate}
 \item{\tt "Ar-Ar"}: a \texttt{json} object with the following
   attributes:
   \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "format"}: an integer from 1 to 3, corresponding to the
     eponymous argument of the \texttt{read.data()} function.
-  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
-    on to the eponymous argument of \texttt{age()},
-  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the eponymous argument of the \texttt{isochron()}
-    function,
+  \item{\tt "i2i"}: logical. To be passed on to the eponymous argument
+    of \texttt{age()},
+  \item{\tt "projerr"}: logical. To be passed on to the eponymous
+    argument of the \texttt{age()} function.
+  \item{\tt "inverse "}: logical. To be passed on to the eponymous
+    argument of the \texttt{isochron()} function,
   \end{enumerate}
 \item{\tt "Th-Pb"}: a \texttt{json} object with the following
   attributes:
   \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "format"}: an integer from 1 to 3, corresponding to the
     eponymous argument of the \texttt{read.data()} function.
-  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
-    on to the eponymous argument of \texttt{age()},
-  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the eponymous argument of the \texttt{isochron()}
-    function,
+  \item{\tt "i2i"}: logical. To be passed on to the eponymous argument
+    of \texttt{age()},
+  \item{\tt "projerr"}: logical. To be passed on to the eponymous
+    argument of the \texttt{age()} function.
+  \item{\tt "inverse "}: logical. To be passed on to the eponymous
+    argument of the \texttt{isochron()} function,
   \end{enumerate}
 \item{\tt "Rb-Sr"}: a \texttt{json} object with the following
   attributes:
   \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "format"}: an integer from 1 to 3, corresponding to the
     eponymous argument of the \texttt{read.data()} function.
-  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
-    on to the eponymous argument of \texttt{age()},
-  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the eponymous argument of the \texttt{isochron()}
-    function,
+  \item{\tt "i2i"}: logical. To be passed on to the eponymous argument
+    of \texttt{age()},
+  \item{\tt "projerr"}: logical. To be passed on to the eponymous
+    argument of the \texttt{age()} function.
+  \item{\tt "inverse "}: logical. To be passed on to the eponymous
+    argument of the \texttt{isochron()} function,
   \end{enumerate}
 \item{\tt "Sm-Nd"}: a \texttt{json} object with the following
   attributes:
   \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "format"}: an integer from 1 to 3, corresponding to the
     eponymous argument of the \texttt{read.data()} function.
-  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
-    on to the eponymous argument of \texttt{age()},
-  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the eponymous argument of the \texttt{isochron()}
-    function,
+  \item{\tt "i2i"}: logical. To be passed on to the eponymous argument
+    of \texttt{age()},
+  \item{\tt "projerr"}: logical. To be passed on to the eponymous
+    argument of the \texttt{age()} function.
+  \item{\tt "inverse "}: logical. To be passed on to the eponymous
+    argument of the \texttt{isochron()} function,
   \end{enumerate}
 \item{\tt "Re-Os"}: a \texttt{json} object with the following
   attributes:
   \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "format"}: an integer from 1 to 3, corresponding to the
     eponymous argument of the \texttt{read.data()} function.
-  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
-    on to the eponymous argument of \texttt{age()},
-  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the eponymous argument of the \texttt{isochron()}
-    function,
+  \item{\tt "i2i"}: logical. To be passed on to the eponymous argument
+    of \texttt{age()},
+  \item{\tt "projerr"}: logical. To be passed on to the eponymous
+    argument of the \texttt{age()} function.
+  \item{\tt "inverse "}: logical. To be passed on to the eponymous
+    argument of the \texttt{isochron()} function,
   \end{enumerate}
 \item{\tt "Lu-Hf"}: a \texttt{json} object with the following
   attributes:
   \begin{enumerate}[leftmargin=\parindent,align=left,labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "format"}: an integer from 1 to 3, corresponding to the
     eponymous argument of the \texttt{read.data()} function.
-  \item{\tt "i2i"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be passed
-    on to the eponymous argument of \texttt{age()},
-  \item{\tt "inverse "}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the eponymous argument of the \texttt{isochron()}
-    function,
+  \item{\tt "i2i"}: logical. To be passed on to the eponymous argument
+    of \texttt{age()},
+  \item{\tt "projerr"}: logical. To be passed on to the eponymous
+    argument of the \texttt{age()} function.
+  \item{\tt "inverse "}: logical. To be passed on to the eponymous
+    argument of the \texttt{isochron()} function,
   \end{enumerate}
 \item{\tt "U-Th-He"}: this attribute is just an empty placeholder.
 \item{\tt "other"}: a \texttt{json} object with a single attribute,
   \texttt{"format"}, which corresponds to the eponymous argument of
-    the \texttt{read.data()} function.
-  \item{\tt "concordia"}: a \texttt{json} object whose attributes
-    correspond to eponymous arguments of the \texttt{concordia()}
-    function, unless stated otherwise:
+  the \texttt{read.data()} function.
+\item{\tt "concordia"}: a \texttt{json} object whose attributes
+  correspond to eponymous arguments of the \texttt{concordia()}
+  function, unless stated otherwise:
   \begin{enumerate}[leftmargin=\parindent,align=left,
       labelwidth=\parindent,label*=\arabic*.]
     \item{\tt "mint"}: either \texttt{"auto"} or a number marking the
@@ -276,12 +290,11 @@ data structure consists of four branches:
     \item{\tt "maxy"}: either \texttt{"auto"} or a number marking the
       second value of the \texttt{ylim} argument in the
       \texttt{concordia()} function.
-    \item{\tt "alpha"}: an integer between 0 and 1.
     \item{\tt "type"}: an integer from 1 and 3.
-    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To
-      be passed on to the argument \texttt{show.numbers} argument of
-      the \texttt{concordia()} function.
+    \item{\tt "exterr"}: logical.
+    \item{\tt "shownumbers"}: logical. To be passed on to the argument
+      \texttt{show.numbers} argument of the \texttt{concordia()}
+      function.
     \item{\tt "showage"}: an integer from 0 to 4, to be passed on to the
       argument \texttt{show.age} argument of the \texttt{concordia()}
       function.
@@ -290,13 +303,24 @@ data structure consists of four branches:
     \item{\tt "tanchor"}: a number, marking the second value of the
       \texttt{anchor} argument to the \texttt{concordia()} function,
       to be used if the first value is 2.
-    \item{\tt "sigdig"}: a positive number.
-    \item{\tt "ellipsefill"}: a valid entry for the
-      \texttt{ellipse.fill} argument of the \texttt{concordia()}
-      function.
-    \item{\tt "ellipsestroke"}: a valid entry for the
-      \texttt{ellipse.stroke} argument of the \texttt{concordia()}
-      function.
+    \item{\tt "ellipsefill"}\label{it:fill}: a \texttt{json} object
+      with the following attributes:
+      \begin{enumerate}[leftmargin=\parindent,align=left,
+      labelwidth=\parindent,label*=\arabic*.]
+        \item{\tt "option"}: either \verb|"custom_ramp"|, or
+          \texttt{"rainbow"}, \verb|"rainbow_reversed"|,
+          \texttt{"heat"}, \verb|"heat_reversed"|, etc.
+        \item{\tt "alpha"}: a number between 0 and 1, controlling the
+          opaqueness of the fill colour.
+        \item{\verb|"ramp_start"|}: a text string representing a valid
+          colour specification (e.g. \texttt{"red"},
+          \texttt{"rgb(1,0,0)"} or \texttt{"\#FF0000"}).
+        \item{\tt "\verb|ramp_end|"}: a text string representing a
+          valid colour specification.
+      \end{enumerate}
+    \item{\tt "ellipsestroke"}: a text string representing a valid
+      colour specification (e.g. \texttt{"red"}, \texttt{rgb(1,0,0)}
+      or \texttt{\#FF0000}).
     \item{\tt "clabel"}: a text string.
     \item{\tt "ticks"}: either \texttt{"auto"} or a vector of numbers.
 \end{enumerate}
@@ -307,10 +331,10 @@ data structure consists of four branches:
       labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "min08"}: either \texttt{"auto"} or a number marking the
     first value of the \texttt{xlim} argument in the
-    \texttt{evolution()} function if \texttt{transform="FALSE"}.
+    \texttt{evolution()} function if \texttt{transform=false}.
   \item{\tt "max08"}: either \texttt{"auto"} or a number marking the
     second value of the \texttt{xlim} argument in the
-    \texttt{evolution()} function if \texttt{transform="FALSE"}.
+    \texttt{evolution()} function if \texttt{transform=false}.
   \item{\tt "min48"}: either \texttt{"auto"} or a number marking the
     first value of the \texttt{ylim} argument in the
     \texttt{evolution()} function.
@@ -319,24 +343,24 @@ data structure consists of four branches:
     \texttt{evolution()} function.
   \item{\tt "mint"}: either \texttt{"auto"} or a number marking the
     first value of the \texttt{xlim} argument in the
-    \texttt{evolution()} function if \texttt{transform="TRUE"}.
+    \texttt{evolution()} function if \texttt{transform=true}.
   \item{\tt "maxt"}: either \texttt{"auto"} or a number marking the
     second value of the \texttt{xlim} argument in the
-    \texttt{evolution()} function if \texttt{transform="TRUE"}.
-  \item{\tt "alpha"}: an integer between 0 and 1.
-  \item{\tt "transform"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-  \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-  \item{\tt "isochron"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-  \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the argument \texttt{show.numbers} argument of the
-    \texttt{evolution()} function.
-  \item{\tt "sigdig"}: a positive number.
-  \item{\tt "ellipsefill"}: a valid entry for the
-    \texttt{ellipse.fill} argument of the \texttt{concordia()}
+    \texttt{evolution()} function if \texttt{transform=true}.
+  \item{\tt "transform"}: logical. If \texttt{true}, plots the data as
+    \textsuperscript{234}U/\textsuperscript{238}U activity ratio
+    vs. age.
+  \item{\tt "exterr"}: logical.
+  \item{\tt "isochron"}: logical. If \texttt{true}, adds an isochron
+    fit to the plot.
+  \item{\tt "shownumbers"}: logical. To be passed on to the argument
+    \texttt{show.numbers} argument of the \texttt{evolution()}
     function.
-  \item{\tt "ellipsestroke"}: a valid entry for the
-    \texttt{ellipse.stroke} argument of the \texttt{concordia()}
-    function.
+  \item{\tt "ellipsefill"}: a \texttt{json} object. See
+    item~\ref{it:fill} for details.
+  \item{\tt "ellipsestroke"}: a text string representing a valid
+    colour specification (e.g. \texttt{"red"}, \texttt{rgb(1,0,0)} or
+    \texttt{\#FF0000}).
   \item{\tt "clabel"}: a text string.
   \item{\tt "model"}: an integer from 1 to 3.
   \end{enumerate}
@@ -345,26 +369,29 @@ data structure consists of four branches:
   function, unless stated otherwise:
   \begin{enumerate}[leftmargin=\parindent,align=left,
       labelwidth=\parindent,label*=\arabic*.]
-      \item{\tt UPbtype"}: an integer from 1 and 4, to be passed on to
+      \item{\tt "UPbtype"}: an integer from 1 and 4, to be passed on to
         \texttt{type} if \texttt{"geochronometer"} equals
         \texttt{"U-Pb"}.
-      \item{\tt ThUtype"}: an integer from 1 and 4, to be passed on to
+      \item{\tt "ThUtype"}: an integer from 1 and 4, to be passed on to
         \texttt{type} if \texttt{"geochronometer"} equals
         \texttt{"Th-U"}.
+      \item{\tt "y0option"}: an integer from 1 to 4, controlling the
+        type of y-intercept to be reported along with the isochron age
+        of Th-U data.
       \item{\tt model"}: an integer from 1 to 3.
-      \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-      \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-        passed on to the argument \texttt{show.numbers} argument of the
+      \item{\tt "exterr"}: logical.
+      \item{\tt "joint"}: logical. If \texttt{true}, carries out 3D
+        U-Pb isochron regression. Otherwise reverts to 2D regression,
+        which is more robust.
+      \item{\tt "shownumbers"}: logical. To be passed on to the
+        argument \texttt{show.numbers} argument of the
         \texttt{isochron()} function.
-      \item{\tt "ellipsefill"}: a valid entry for the
-        \texttt{ellipse.fill} argument of the \texttt{isochron()}
-        function.
-      \item{\tt "ellipsestroke"}: a valid entry for the
-        \texttt{ellipse.stroke} argument of the \texttt{isochron()}
-        function.
+      \item{\tt "ellipsefill"}: a \texttt{json} object. See
+        item~\ref{it:fill} for details.
+      \item{\tt "ellipsestroke"}: a text string representing a valid
+        colour specification (e.g. \texttt{"red"}, \texttt{rgb(1,0,0)} or
+        \texttt{\#FF0000}).
       \item{\tt "clabel"}: a text string.
-      \item{\tt "sigdig"}: a positive number.
-      \item{\tt "alpha"}: an integer between 0 and 1.
       \item{\tt "minx"}: either \texttt{"auto"} or a number marking the
         first value of the \texttt{xlim} argument in the
         \texttt{isochron()} function.
@@ -377,7 +404,8 @@ data structure consists of four branches:
       \item{\tt "maxy"}: either \texttt{"auto"} or a number marking the
         second value of the \texttt{ylim} argument in the
         \texttt{isochron()} function.
-      \item{\tt growth"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+      \item{\tt growth"}: logical. If \texttt{true}, adds a
+        Stacey-Kramers growth curve to the plot.
   \end{enumerate}
 \item{\tt "regression"}: a \texttt{.json} object containing a sumbset
   of the arguments to \texttt{"isochron"}, to be used with
@@ -390,10 +418,6 @@ data structure consists of four branches:
   \item{\tt "maxx"}: see \texttt{"isochron"}.
   \item{\tt "miny"}: see \texttt{"isochron"}.
   \item{\tt "maxy"}: see \texttt{"isochron"}.
-  \item{\tt "alpha"}: see \texttt{"isochron"}.
-  \item{\tt "sigdig"}: see \texttt{"isochron"}.
-  \item{\tt "alpha"}: see \texttt{"isochron"}.
-  \item{\tt "sigdig"}: see \texttt{"isochron"}.
   \item{\tt "ellipsefill"}: see \texttt{"isochron"}.
   \item{\tt "ellipsestroke"}: see \texttt{"isochron"}.
   \item{\tt "clabel"}: see \texttt{"isochron"}.
@@ -415,43 +439,41 @@ data structure consists of four branches:
   \item{\tt "pch"}: a valid plot character according to \texttt{?par}
     in \texttt{R}.
   \item{\tt "cex"}: a positive number.
-  \item{\tt "bg"}: a valid colour code or name.
-  \item{\tt "sigdig"}: a positive number.
-  \item{\tt "alpha"}: a number between 0 and 1.
-  \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-    passed on to the argument \texttt{show.numbers} argument of the
-    \texttt{isochron()} function.
+  \item{\tt "bg"}: a \texttt{json} object. See item~\ref{it:fill} for
+    details.
+  \item{\tt "shownumbers"}: logical. To be passed on to the argument
+    \texttt{show.numbers} argument of the \texttt{isochron()}
+    function.
   \item{\tt "numpeaks"}: \texttt{"auto"}, \texttt{"min"}, or an
     integer from 0 to 5.
   \item{\tt "clabel"}: a text string.
-  \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \item{\tt "exterr"}: logical.
   \end{enumerate}  
 \item{\tt "average"}: a \texttt{json} object whose attributes
   correspond to eponymous arguments of the \texttt{weightedmean()}
   function, unless stated otherwise:
   \begin{enumerate}[leftmargin=\parindent,align=left,
       labelwidth=\parindent,label*=\arabic*.]
-    \item{\tt "outliers"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
+    \item{\tt "outliers"}: logical. To be
       passed on to the \texttt{detect.outliers} argument of the
       \texttt{weightedmean()} function.
-    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "alpha"}: a number between 0 and 1.
-    \item{\tt "sigdig"}: a positive number.
-    \item{\tt "randomeffects"}: \texttt{"TRUE"} or
-      \texttt{"FALSE"}. To be passed on to the \texttt{random.effects}
-      argument of \texttt{weightedmean}.
+    \item{\tt "exterr"}: logical.
+    \item{\tt "randomeffects"}: logical. To be passed on to the
+      \texttt{random.effects} argument of \texttt{weightedmean}.
     \item{\tt "mint"}: either \texttt{"auto"} or a number to be passed
       on to the \texttt{from} argument of the \texttt{weightedmean()}
       function.
     \item{\tt "maxt"}: either \texttt{"auto"} or a number to be passed
       on to the \texttt{to} argument of the \texttt{weightedmean()}
       function.
-    \item{\tt "ranked"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "rectcol"}: a valid entry for the \texttt{rect.col}
-      argument of the \texttt{weightedmean()} function.
-    \item{\tt "outliercol"}: a valid entry for the
-      \texttt{outlier.col} argument of the \texttt{weightedmean()}
-      function.
+    \item{\tt "ranked"}: logical.
+    \item{\tt "bg"}: a \texttt{json} object. See item~\ref{it:fill}
+      for details.
+    \item{\tt "outliercol"}: a text string representing a valid colour
+      specification (e.g. \texttt{"red"}, \texttt{rgb(1,0,0)} or
+      \texttt{\#FF0000}).
+    \item{ \verb|rect_alpha|}: a number between 0 and 1, controlling
+      the opaqueness of the outlier fill colour.
     \item{\tt "clabel"}: a text string.
   \end{enumerate}  
 \item{\tt "spectrum"}: a \texttt{json} object whose attributes
@@ -459,20 +481,18 @@ data structure consists of four branches:
   function, unless stated otherwise:
   \begin{enumerate}[leftmargin=\parindent,align=left,
       labelwidth=\parindent,label*=\arabic*.]
-    \item{\tt "plateau"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "alpha"}: a number between 0 and 1.
-    \item{\tt "sigdig"}: a positive number.
-    \item{\tt "randomeffects"}: \texttt{"TRUE"} or
-      \texttt{"FALSE"}. To be passed on to the \texttt{random.effects}
-      argument of the \texttt{agespectrum()} function.
-    \item{\tt "plateaucol"}: a valid entry for the
-      \texttt{plateau.col} argument of the \texttt{agespectrum()}
-      function.
-    \item{\tt "nonplateaucol"}: a valid entry for the
+  \item{\tt "plateau"}: logical.
+    \item{\tt "exterr"}: logical.
+    \item{\tt "randomeffects"}: logical.
+    \item{\tt "bg"}: a \texttt{json} object. See item~\ref{it:fill}
+      for details.
+    \item{\tt "nonplateaucol"}: a text string representing a valid
+      colour specification (e.g. \texttt{"red"}, \texttt{rgb(1,0,0)}
+      or \texttt{\#FF0000}). To be passed on to the
       \texttt{non.plateau.col} argument of the \texttt{agespectrum()}
       function.
-    \item{\tt "clabel"}: a text string.
+    \item{ \verb|"nonplateau_alpha|}: a number between 0 and 1,
+      controlling the opaqueness of the non plateau fill colour.
   \end{enumerate}  
 \item{\tt "KDE"}: a \texttt{json} object whose attributes correspond
   to eponymous arguments of the \texttt{kde()} function, unless stated
@@ -481,16 +501,15 @@ data structure consists of four branches:
       labelwidth=\parindent,label*=\arabic*.]
     \item{\tt "ncol"}: either \texttt{"auto"} or an integer.
     \item{\tt "xlab"}: a text string.
-    \item{\tt "showhist"}: \texttt{"TRUE"} or \texttt{"FALSE"}. To be
-      passed on to the \texttt{show.hist} argument of the
-      \texttt{kde()} function.
+    \item{\tt "showhist"}: logical. To be passed on to the
+      \texttt{show.hist} argument of the \texttt{kde()} function.
     \item{\tt "binwidth"}: either \texttt{"auto"} or a positive
       number.
     \item{\tt "bw"}: either \texttt{"auto"} or a positive number.
-    \item{\tt "samebandwidth"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "normalise"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "log"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "adaptive"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "samebandwidth"}: logical.
+    \item{\tt "normalise"}: logical.
+    \item{\tt "log"}: logical.
+    \item{\tt "adaptive"}: logical.
     \item{\tt "minx"}: either \texttt{"auto"} or a number to be passed
       on to the \texttt{from} argument of the \texttt{kde()} function.
     \item{\tt "maxx"}: either \texttt{"auto"} or a number to be passed
@@ -498,11 +517,12 @@ data structure consists of four branches:
     \item{\tt "bandwidth"}: either \texttt{"auto"} or a number to be
       passed on to the \texttt{bw} argument of the \texttt{kde()}
       function.
-    \item{\tt "rugdetritals"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-      To be passed on to the \texttt{rug} argument of the
-      \texttt{kde()} function if \texttt{"geochronometer"} is
-      \texttt{"detritals"}.
-    \item{\tt "rug"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "rugdetritals"}: logical.  To be passed on to the
+      \texttt{rug} argument of the \texttt{kde()} function if
+      \texttt{"geochronometer"} is \texttt{"detritals"}.
+    \item{\tt "rug"}: logical. To be passed on to the \texttt{rug}
+      argument of the \texttt{kde()} function if
+      \texttt{"geochronometer"} is NOT \texttt{"detritals"}.
   \end{enumerate}  
 \item{\tt "CAD"}: a \texttt{json} object whose attributes correspond
   to eponymous arguments of the \texttt{cad()} function, unless stated
@@ -511,7 +531,7 @@ data structure consists of four branches:
       labelwidth=\parindent,label*=\arabic*.]
   \item{\tt "pch"}: either \texttt{"none"} or a valid plot character
     according to \texttt{?par} in \texttt{R}.
-  \item{\tt "verticals"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+  \item{\tt "verticals"}: logical.
   \item{\tt "colmap"}: the name of a valid colour palette to be passed
     on to the \texttt{col} argument of the \texttt{cad()} function.
   \end{enumerate}  
@@ -520,38 +540,37 @@ data structure consists of four branches:
   function:
   \begin{enumerate}[leftmargin=\parindent,align=left,
       labelwidth=\parindent,label*=\arabic*.]
-    \item{\tt "sigdig"}: a positive number.
-    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "exterr"}: logical.
   \end{enumerate}  
 \item{\tt "MDS"}: a \texttt{json} object whose attributes correspond
   to eponymous arguments of the \texttt{mds()} function, unless stated
   otherwise:
   \begin{enumerate}[leftmargin=\parindent,align=left,
       labelwidth=\parindent,label*=\arabic*.]
-    \item{\tt "classical"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "shepard"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "nnlines"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
+    \item{\tt "classical"}: logical.
+    \item{\tt "shepard"}: logical.
+    \item{\tt "nnlines"}: logical.
     \item{\tt "pch"}: a valid plot character according to
       \texttt{?par} in \texttt{R}.
     \item{\tt "pos"}: an integer from 0 to 4.
     \item{\tt "cex"}: a postive number.
-    \item{\tt "col"}: a valid colour code or name.
-    \item{\tt "bg"}: a valid colour code or name.
+    \item{\tt "col"}: a text string representing a valid colour code
+      or name.
+    \item{\tt "bg"}: a text string representing a valid colour code or
+      name.
   \end{enumerate}
 \item{\tt "helioplot"}: a \texttt{json} object whose attributes
   correspond to eponymous arguments of the \texttt{helioplot()}
   function, unless stated otherwise:
   \begin{enumerate}[leftmargin=\parindent,align=left,
       labelwidth=\parindent,label*=\arabic*.]
-    \item{\tt "logratio"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "shownumbers"}: \texttt{"TRUE"} or \texttt{"FALSE"}.  To
-      be passed on to the \texttt{show.numbers} argument of the
-      \texttt{helioplot()} function.
-    \item{\tt "showcentralcomp"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-      To be passed on to the \texttt{show.central.comp} argument of
-      the \texttt{helioplot()} function.
-    \item{\tt "alpha"}: a number between 0 and 1.
-    \item{\tt "sigdig"}: a positive number.
+    \item{\tt "logratio"}: logical.
+    \item{\tt "shownumbers"}: logical.  To be passed on to the
+      \texttt{show.numbers} argument of the \texttt{helioplot()}
+      function.
+    \item{\tt "showcentralcomp"}: logical.  To be passed on to the
+      \texttt{show.central.comp} argument of the \texttt{helioplot()}
+      function.
     \item{\tt "minx"}: either \texttt{"auto"} or a number marking the
       first value of the \texttt{xlim} argument in the
       \texttt{helioplot()} function.
@@ -566,12 +585,11 @@ data structure consists of four branches:
       \texttt{helioplot()} function.
     \item{\tt "fact"}: either \texttt{"auto"} or a three-element
       vector of positive numbers.
-      \item{\tt "ellipsefill"}: a valid entry for the
-        \texttt{ellipse.fill} argument of the \texttt{helioplot()}
-        function.
-      \item{\tt "ellipsestroke"}: a valid entry for the
-        \texttt{ellipse.stroke} argument of the \texttt{helioplot()}
-        function.
+      \item{\tt "ellipsefill"}: a \texttt{json} object. See
+        item~\ref{it:fill} for details.
+      \item{\tt "ellipsestroke"}: a text string representing a valid
+        colour specification (e.g. \texttt{"red"}, \texttt{rgb(1,0,0)}
+        or \texttt{\#FF0000}).
     \item{\tt "model"}: an integer between 1 and 3.
     \item{\tt "clabel"}: a text string.
   \end{enumerate}
@@ -586,9 +604,7 @@ data structure consists of four branches:
     \item{\tt "discoption"}: an integer from 0 to 5, storing the value
       to be passed on to the \texttt{option} argument of the
       \texttt{discfilter} function.
-    \item{\tt "exterr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-      \item{\tt "projerr"}: \texttt{"TRUE"} or \texttt{"FALSE"}.
-    \item{\tt "sigdig"}: a positive number
+    \item{\tt "exterr"}: logical.
   \end{enumerate}
 \end{enumerate}
 
