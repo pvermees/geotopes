@@ -18,13 +18,13 @@
 # U-Pb format 1, 1se absolute input errors:
 UPb1 <- read.data('UPb1.csv',method='U-Pb',format=1)
 # U-Pb format 6, 1se relative input errors:
-UPb2 <- read.data('UPb6c.csv',method='U-Pb',format=6,ierr=3)
+UPb2 <- read.data('UPb6b.csv',method='U-Pb',format=6,ierr=3)
 # U-Pb format 8, 2se relative input errors:
-UPb3 <- read.data('UPb8d.csv',method='U-Pb',format=8,ierr=4)
+UPb3 <- read.data('UPb8b.csv',method='U-Pb',format=8,ierr=4)
 \end{script}
 
-\noindent where \texttt{UPb1.csv}, \texttt{UPb6c.csv} and
-\texttt{UPb8d.csv} are files that, like the example files of
+\noindent where \texttt{UPb1.csv}, \texttt{UPb6b.csv} and
+\texttt{UPb8b.csv} are files that, like the example files of
 Chapter~\ref{ch:generic-R}, can be downloaded from
 \url{https://tinyurl.com/IsoplotRdata}. \texttt{read.data()} returns a
 list with three items:
@@ -663,7 +663,11 @@ par(oldpar)
 \end{minipage}
 
 \begin{script}
-isochron(UPb2,joint=FALSE)
+UPb5 <- read.data('UPb5b.csv',method='U-Pb',format=5)
+op <- par(mfrow=c(1,2))
+isochron(UPb5,type=1,joint=FALSE)
+isochron(UPb5,typ3=2,joint=FALSE)
+par(op)
 \end{script}
 
 \item \noindent\begin{minipage}[t]{.45\linewidth}
@@ -678,7 +682,7 @@ isochron(UPb2,joint=FALSE)
 \end{minipage}
 
 \noindent $2\times{2}$ grid of CLI examples:
-\begin{console}
+\begin{script}
 oldpar <- par(mfrow=c(2,2))
 # model-3 regression of 204Pb/206Pb vs. 238U/206Pb:
 isochron(UPb2,type=1,model=3)
@@ -689,7 +693,7 @@ isochron(UPb3,type=2,model=1)
 # model-3 regression of 207Pbc/208Pb vs. 232Th/208Pb:
 isochron(UPb3,type=3,model=3)
 par(oldpar)
-\end{console}
+\end{script}
 
 \item \noindent\begin{minipage}[t]{.4\linewidth}
   \strut\vspace*{-\baselineskip}\newline

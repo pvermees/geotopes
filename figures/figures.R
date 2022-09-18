@@ -747,20 +747,30 @@ Pb640 <- 20
 Pb740 <- 16
 n <- 10
 f <- runif(n,min=1/10,max=1)
-U8Pb6t <- (1-f)/m$Pb206U238
-U5Pb7t <- (1-f)/m$Pb207U235
-Pb46t <- f/Pb640
-Pb47t <- f/Pb740
-relerr <- 0.02
+U8 <- U85
+U5 <- 1
+Pb6r <- U8*m$Pb206U238
+Pb7r <- U5*m$Pb207U235
+Pb6c <- Pb6r*runif(n,min=0,max=0.1)
+Pb7c <- Pb6c*Pb740/Pb640
+Pb4c <- Pb6c/Pb640
+U8Pb6t <- U8/(Pb6r+Pb6c)
+U5Pb7t <- U5/(Pb7r+Pb7c)
+Pb46t <- Pb4c/(Pb6r+Pb6c)
+Pb47t <- Pb4c/(Pb7r+Pb7c)
+relerr <- 0.005
 U8Pb6m <- U8Pb6t*(1+rnorm(n,mean=0,sd=relerr))
 U5Pb7m <- U5Pb7t*(1+rnorm(n,mean=0,sd=relerr))
 Pb46m <- Pb46t*(1+rnorm(n,mean=0,sd=relerr))
 Pb47m <- Pb47t*(1+rnorm(n,mean=0,sd=relerr))
+Pb76m <- Pb46m/Pb47m
+err76 <- sqrt(2*relerr^2)
 Pb76m <- U8Pb6m/(U85*U5Pb7m)
-dat <- cbind(U8Pb6m,100*relerr,Pb76m,100*relerr,Pb46m,100*relerr,0,0,0)
+dat <- cbind(U8Pb6m,100*relerr,Pb76m,100*err76,Pb46m,100*relerr,0,0,0)
 UPb <- IsoplotR:::as.UPb(dat,format=5,ierr=3)
-isochron(UPb,type=1,joint=FALSE)
+op <- par(mfrow=c(1,2))
+isochron(UPb,type=1,model=1,joint=FALSE)
 legend('topright',legend='a)',bty='n',adj=c(0,-1/2),cex=1.2)
-isochron(UPb,type=2,joint=FALSE)
+isochron(UPb,type=2,model=1,joint=FALSE)
 legend('topright',legend='b)',bty='n',adj=c(0,-1/2),cex=1.2)
 dev.off()
