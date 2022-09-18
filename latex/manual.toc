@@ -62,91 +62,91 @@
 \contentsline {section}{\numberline {15.3}Discordia/isochron regression}{84}{section.15.3}%
 \contentsline {section}{\numberline {15.4}Common Pb}{86}{section.15.4}%
 \contentsline {section}{\numberline {15.5}Initial disequilibrium}{89}{section.15.5}%
-\contentsline {section}{\numberline {15.6}Discordance filters}{91}{section.15.6}%
-\contentsline {chapter}{\numberline {16}Pb--Pb and Th--Pb}{95}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Pb--Pb}{95}{section.16.1}%
-\contentsline {section}{\numberline {16.2}(inverse) isochrons}{95}{section.16.2}%
-\contentsline {section}{\numberline {16.3}The Stacey-Kramers growth curve}{96}{section.16.3}%
-\contentsline {section}{\numberline {16.4}Th--Pb}{97}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Single grain ages}{98}{section.16.5}%
-\contentsline {chapter}{\numberline {17}Ar--Ar and K--Ca}{99}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Ar--Ar}{99}{section.17.1}%
-\contentsline {section}{\numberline {17.2}Age spectra}{100}{section.17.2}%
-\contentsline {section}{\numberline {17.3}K--Ca}{101}{section.17.3}%
-\contentsline {chapter}{\numberline {18}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{102}{chapter.18}%
-\contentsline {chapter}{\numberline {19}U--Th--(Sm)--He}{104}{chapter.19}%
-\contentsline {section}{\numberline {19.1}The \textalpha -ejection correction}{104}{section.19.1}%
-\contentsline {section}{\numberline {19.2}Isochrons}{106}{section.19.2}%
-\contentsline {section}{\numberline {19.3}Compositional data analysis and the `helioplot'}{106}{section.19.3}%
-\contentsline {chapter}{\numberline {20}Fission tracks}{109}{chapter.20}%
-\contentsline {section}{\numberline {20.1}The external detector method}{109}{section.20.1}%
-\contentsline {section}{\numberline {20.2}LA-ICP-MS based fission track dating}{110}{section.20.2}%
-\contentsline {section}{\numberline {20.3}Compositional zoning}{111}{section.20.3}%
-\contentsline {section}{\numberline {20.4}Zero track counts}{112}{section.20.4}%
-\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U}{114}{chapter.21}%
-\contentsline {section}{\numberline {21.1}Data formats}{115}{section.21.1}%
-\contentsline {section}{\numberline {21.2}Isochrons}{115}{section.21.2}%
-\contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{117}{section.21.3}%
-\contentsline {chapter}{\numberline {22}Detrital geochronology}{119}{chapter.22}%
-\contentsline {section}{\numberline {22.1}Maximum depositional age estimation}{119}{section.22.1}%
-\contentsline {section}{\numberline {22.2}Multi-sample plots}{120}{section.22.2}%
-\contentsline {section}{\numberline {22.3}Multidimensional scaling}{122}{section.22.3}%
-\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{126}{part.3}%
-\contentsline {chapter}{\numberline {23}Introduction to \texttt {IsoplotR}}{127}{chapter.23}%
-\contentsline {section}{\numberline {23.1}Software architecture}{127}{section.23.1}%
-\contentsline {section}{\numberline {23.2}The Graphical User Interface (GUI)}{128}{section.23.2}%
-\contentsline {section}{\numberline {23.3}The Command Line Interface (CLI)}{129}{section.23.3}%
-\contentsline {chapter}{\numberline {24}Generic functions}{132}{chapter.24}%
-\contentsline {section}{\numberline {24.1}Radial plots}{133}{section.24.1}%
-\contentsline {section}{\numberline {24.2}Regression}{135}{section.24.2}%
-\contentsline {section}{\numberline {24.3}Weighted means}{137}{section.24.3}%
-\contentsline {section}{\numberline {24.4}Age spectra}{138}{section.24.4}%
-\contentsline {section}{\numberline {24.5}Kernel density estimates}{139}{section.24.5}%
-\contentsline {section}{\numberline {24.6}Cumulative age distributions}{140}{section.24.6}%
-\contentsline {chapter}{\numberline {25}U--Pb}{142}{chapter.25}%
-\contentsline {section}{\numberline {25.1}General options}{143}{section.25.1}%
-\contentsline {section}{\numberline {25.2}Concordia}{145}{section.25.2}%
-\contentsline {section}{\numberline {25.3}Isochrons}{148}{section.25.3}%
-\contentsline {section}{\numberline {25.4}Radial plots}{150}{section.25.4}%
-\contentsline {section}{\numberline {25.5}Weighted mean}{151}{section.25.5}%
-\contentsline {section}{\numberline {25.6}Kernel density estimates}{152}{section.25.6}%
-\contentsline {section}{\numberline {25.7}Cumulative age distributions}{153}{section.25.7}%
-\contentsline {section}{\numberline {25.8}Ages}{153}{section.25.8}%
-\contentsline {chapter}{\numberline {26}Pb--Pb and Th--Pb}{156}{chapter.26}%
-\contentsline {section}{\numberline {26.1}Pb--Pb}{156}{section.26.1}%
-\contentsline {section}{\numberline {26.2}Pb--Pb isochrons}{156}{section.26.2}%
-\contentsline {section}{\numberline {26.3}Pb--Pb ages}{157}{section.26.3}%
-\contentsline {section}{\numberline {26.4}Th--Pb}{159}{section.26.4}%
-\contentsline {section}{\numberline {26.5}Th--Pb isochrons}{159}{section.26.5}%
-\contentsline {section}{\numberline {26.6}Th--Pb ages}{160}{section.26.6}%
-\contentsline {section}{\numberline {26.7}Radial, weighted mean, KDE and CAD plots}{160}{section.26.7}%
-\contentsline {chapter}{\numberline {27}Ar--Ar and K--Ca}{163}{chapter.27}%
-\contentsline {section}{\numberline {27.1}Ar--Ar}{163}{section.27.1}%
-\contentsline {section}{\numberline {27.2}K--Ca}{164}{section.27.2}%
-\contentsline {section}{\numberline {27.3}Isochrons}{164}{section.27.3}%
-\contentsline {section}{\numberline {27.4}Ages}{165}{section.27.4}%
-\contentsline {section}{\numberline {27.5}Ar--Ar age spectra}{166}{section.27.5}%
-\contentsline {section}{\numberline {27.6}Radial, weighted mean, KDE and CAD plots}{167}{section.27.6}%
-\contentsline {chapter}{\numberline {28}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{169}{chapter.28}%
-\contentsline {section}{\numberline {28.1}Stable isotope ratios and decay constants}{169}{section.28.1}%
-\contentsline {section}{\numberline {28.2}Isochrons}{170}{section.28.2}%
-\contentsline {section}{\numberline {28.3}Ages, weighted means, radial, KDE and CAD plots}{171}{section.28.3}%
-\contentsline {chapter}{\numberline {29}U--Th--(Sm)--He}{174}{chapter.29}%
-\contentsline {section}{\numberline {29.1}Helioplots}{175}{section.29.1}%
-\contentsline {section}{\numberline {29.2}Ages and other plots}{176}{section.29.2}%
-\contentsline {chapter}{\numberline {30}Fission tracks}{178}{chapter.30}%
-\contentsline {section}{\numberline {30.1}Radial plots}{180}{section.30.1}%
-\contentsline {section}{\numberline {30.2}\textzeta -calibration}{181}{section.30.2}%
-\contentsline {section}{\numberline {30.3}Age, weighted mean, KDE and CAD functions}{182}{section.30.3}%
-\contentsline {chapter}{\numberline {31}\textsuperscript {230}Th--U}{183}{chapter.31}%
-\contentsline {section}{\numberline {31.1}Isochrons}{184}{section.31.1}%
-\contentsline {section}{\numberline {31.2}Evolution diagrams}{185}{section.31.2}%
-\contentsline {section}{\numberline {31.3}Ages}{187}{section.31.3}%
-\contentsline {section}{\numberline {31.4}Radial, weighted mean, KDE and CAD plots}{188}{section.31.4}%
-\contentsline {chapter}{\numberline {32}Detrital geochronology}{190}{chapter.32}%
-\contentsline {section}{\numberline {32.1}Kernel density estimates}{190}{section.32.1}%
-\contentsline {section}{\numberline {32.2}Cumulative age distributions}{192}{section.32.2}%
-\contentsline {section}{\numberline {32.3}Multidimensional scaling}{192}{section.32.3}%
-\contentsline {part}{IV\hspace {1em}Extending \texttt {IsoplotR}}{194}{part.4}%
-\contentsline {chapter}{\numberline {33}Application Programming Interface}{195}{chapter.33}%
-\contentsline {chapter}{\numberline {34}\texttt {json} schema}{199}{chapter.34}%
+\contentsline {section}{\numberline {15.6}Discordance filters}{92}{section.15.6}%
+\contentsline {chapter}{\numberline {16}Pb--Pb and Th--Pb}{96}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Pb--Pb}{96}{section.16.1}%
+\contentsline {section}{\numberline {16.2}(inverse) isochrons}{96}{section.16.2}%
+\contentsline {section}{\numberline {16.3}The Stacey-Kramers growth curve}{97}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Th--Pb}{98}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Single grain ages}{99}{section.16.5}%
+\contentsline {chapter}{\numberline {17}Ar--Ar and K--Ca}{100}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Ar--Ar}{100}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Age spectra}{101}{section.17.2}%
+\contentsline {section}{\numberline {17.3}K--Ca}{102}{section.17.3}%
+\contentsline {chapter}{\numberline {18}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{103}{chapter.18}%
+\contentsline {chapter}{\numberline {19}U--Th--(Sm)--He}{105}{chapter.19}%
+\contentsline {section}{\numberline {19.1}The \textalpha -ejection correction}{105}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Isochrons}{107}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Compositional data analysis and the `helioplot'}{107}{section.19.3}%
+\contentsline {chapter}{\numberline {20}Fission tracks}{110}{chapter.20}%
+\contentsline {section}{\numberline {20.1}The external detector method}{110}{section.20.1}%
+\contentsline {section}{\numberline {20.2}LA-ICP-MS based fission track dating}{111}{section.20.2}%
+\contentsline {section}{\numberline {20.3}Compositional zoning}{112}{section.20.3}%
+\contentsline {section}{\numberline {20.4}Zero track counts}{113}{section.20.4}%
+\contentsline {chapter}{\numberline {21}\textsuperscript {230}Th--U}{115}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Data formats}{116}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Isochrons}{116}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Th--U evolution diagrams}{118}{section.21.3}%
+\contentsline {chapter}{\numberline {22}Detrital geochronology}{120}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Maximum depositional age estimation}{120}{section.22.1}%
+\contentsline {section}{\numberline {22.2}Multi-sample plots}{121}{section.22.2}%
+\contentsline {section}{\numberline {22.3}Multidimensional scaling}{123}{section.22.3}%
+\contentsline {part}{III\hspace {1em}\texttt {IsoplotR} manual}{127}{part.3}%
+\contentsline {chapter}{\numberline {23}Introduction to \texttt {IsoplotR}}{128}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Software architecture}{128}{section.23.1}%
+\contentsline {section}{\numberline {23.2}The Graphical User Interface (GUI)}{129}{section.23.2}%
+\contentsline {section}{\numberline {23.3}The Command Line Interface (CLI)}{130}{section.23.3}%
+\contentsline {chapter}{\numberline {24}Generic functions}{133}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Radial plots}{134}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Regression}{136}{section.24.2}%
+\contentsline {section}{\numberline {24.3}Weighted means}{138}{section.24.3}%
+\contentsline {section}{\numberline {24.4}Age spectra}{139}{section.24.4}%
+\contentsline {section}{\numberline {24.5}Kernel density estimates}{140}{section.24.5}%
+\contentsline {section}{\numberline {24.6}Cumulative age distributions}{141}{section.24.6}%
+\contentsline {chapter}{\numberline {25}U--Pb}{143}{chapter.25}%
+\contentsline {section}{\numberline {25.1}General options}{144}{section.25.1}%
+\contentsline {section}{\numberline {25.2}Concordia}{146}{section.25.2}%
+\contentsline {section}{\numberline {25.3}Isochrons}{149}{section.25.3}%
+\contentsline {section}{\numberline {25.4}Radial plots}{151}{section.25.4}%
+\contentsline {section}{\numberline {25.5}Weighted mean}{153}{section.25.5}%
+\contentsline {section}{\numberline {25.6}Kernel density estimates}{153}{section.25.6}%
+\contentsline {section}{\numberline {25.7}Cumulative age distributions}{154}{section.25.7}%
+\contentsline {section}{\numberline {25.8}Ages}{154}{section.25.8}%
+\contentsline {chapter}{\numberline {26}Pb--Pb and Th--Pb}{157}{chapter.26}%
+\contentsline {section}{\numberline {26.1}Pb--Pb}{157}{section.26.1}%
+\contentsline {section}{\numberline {26.2}Pb--Pb isochrons}{157}{section.26.2}%
+\contentsline {section}{\numberline {26.3}Pb--Pb ages}{158}{section.26.3}%
+\contentsline {section}{\numberline {26.4}Th--Pb}{160}{section.26.4}%
+\contentsline {section}{\numberline {26.5}Th--Pb isochrons}{160}{section.26.5}%
+\contentsline {section}{\numberline {26.6}Th--Pb ages}{161}{section.26.6}%
+\contentsline {section}{\numberline {26.7}Radial, weighted mean, KDE and CAD plots}{161}{section.26.7}%
+\contentsline {chapter}{\numberline {27}Ar--Ar and K--Ca}{164}{chapter.27}%
+\contentsline {section}{\numberline {27.1}Ar--Ar}{164}{section.27.1}%
+\contentsline {section}{\numberline {27.2}K--Ca}{165}{section.27.2}%
+\contentsline {section}{\numberline {27.3}Isochrons}{165}{section.27.3}%
+\contentsline {section}{\numberline {27.4}Ages}{166}{section.27.4}%
+\contentsline {section}{\numberline {27.5}Ar--Ar age spectra}{167}{section.27.5}%
+\contentsline {section}{\numberline {27.6}Radial, weighted mean, KDE and CAD plots}{168}{section.27.6}%
+\contentsline {chapter}{\numberline {28}Rb--Sr, Sm--Nd, Lu--Hf and Re--Os}{170}{chapter.28}%
+\contentsline {section}{\numberline {28.1}Stable isotope ratios and decay constants}{170}{section.28.1}%
+\contentsline {section}{\numberline {28.2}Isochrons}{171}{section.28.2}%
+\contentsline {section}{\numberline {28.3}Ages, weighted means, radial, KDE and CAD plots}{172}{section.28.3}%
+\contentsline {chapter}{\numberline {29}U--Th--(Sm)--He}{175}{chapter.29}%
+\contentsline {section}{\numberline {29.1}Helioplots}{176}{section.29.1}%
+\contentsline {section}{\numberline {29.2}Ages and other plots}{177}{section.29.2}%
+\contentsline {chapter}{\numberline {30}Fission tracks}{179}{chapter.30}%
+\contentsline {section}{\numberline {30.1}Radial plots}{181}{section.30.1}%
+\contentsline {section}{\numberline {30.2}\textzeta -calibration}{182}{section.30.2}%
+\contentsline {section}{\numberline {30.3}Age, weighted mean, KDE and CAD functions}{183}{section.30.3}%
+\contentsline {chapter}{\numberline {31}\textsuperscript {230}Th--U}{184}{chapter.31}%
+\contentsline {section}{\numberline {31.1}Isochrons}{185}{section.31.1}%
+\contentsline {section}{\numberline {31.2}Evolution diagrams}{186}{section.31.2}%
+\contentsline {section}{\numberline {31.3}Ages}{188}{section.31.3}%
+\contentsline {section}{\numberline {31.4}Radial, weighted mean, KDE and CAD plots}{189}{section.31.4}%
+\contentsline {chapter}{\numberline {32}Detrital geochronology}{191}{chapter.32}%
+\contentsline {section}{\numberline {32.1}Kernel density estimates}{191}{section.32.1}%
+\contentsline {section}{\numberline {32.2}Cumulative age distributions}{193}{section.32.2}%
+\contentsline {section}{\numberline {32.3}Multidimensional scaling}{193}{section.32.3}%
+\contentsline {part}{IV\hspace {1em}Extending \texttt {IsoplotR}}{195}{part.4}%
+\contentsline {chapter}{\numberline {33}Application Programming Interface}{196}{chapter.33}%
+\contentsline {chapter}{\numberline {34}\texttt {json} schema}{200}{chapter.34}%

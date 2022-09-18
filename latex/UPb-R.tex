@@ -598,9 +598,9 @@ data formats 4--8.
 
 \begin{enumerate}
 
-  \item For formats 4--6, \textsuperscript{204}Pb is used as a
-    normalising isotope
-    (Section~\ref{sec:discordia}.\ref{it:UPbIsochron46}).
+\item For formats 4--6, \textsuperscript{204}Pb is used as a
+  normalising isotope
+  (Section~\ref{sec:discordia}.\ref{it:UPbIsochron46}).
 
 \noindent\begin{minipage}[t]{.3\linewidth}
 \strut\vspace*{-\baselineskip}\newline
@@ -649,6 +649,21 @@ isochron(UPb3,type=2) # 208Pbc/207Pb vs. 235U/207Pb
 isochron(UPb3,type=3) # 206Pbc/208Pb vs. 232Th/208Pb
 isochron(UPb3,type=4) # 207Pbc/208Pb vs. 232Th/208Pb
 par(oldpar)
+\end{script}
+
+\item \noindent\begin{minipage}[t]{.2\linewidth}
+  \strut\vspace*{-\baselineskip}\newline
+  \includegraphics[width=\linewidth]{../figures/2D.png}
+\end{minipage}
+\begin{minipage}[t]{.80\linewidth}
+  For formats 4--8, the isochron calculation regression can be done in
+  three dimensions (Total U/Pb or U-Th/Pb), or in 2D.  The latter
+  option is more robust and advantageous in extreme cases of extinct
+  initial disequilibrium.
+\end{minipage}
+
+\begin{script}
+isochron(UPb2,joint=FALSE)
 \end{script}
 
 \item \noindent\begin{minipage}[t]{.45\linewidth}

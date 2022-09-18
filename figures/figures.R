@@ -480,15 +480,15 @@ cairo(file='~/Documents/temp/diseq.pdf',height=4,width=9)
 pars(mfrow=c(1,2),mar=c(3.2,3.2,2.8,0.5))
 fn <- system.file("diseq.csv",package="IsoplotR")
 UPb <- read.data(fn,method='U-Pb',format=2)
-concordia(UPb,type=2,show.age=1,
-          xlim=c(-500,5000),ylim=c(0.045,0.056),
-          ticks=c(2,3,5,10,50,100,200,300,400))
+concordia(UPb,show.age=1,type=2,tlim=c(0.1,1000),
+          ticks=c(0.2,0.5,1,2,3,5,10,20,50,100,1000,2000,3000,4000),
+          xlim=c(-90,700),ylim=c(0.05,0.5))
 d <- diseq(U48=list(x=0,option=1),ThU=list(x=2,option=1),
            RaU=list(x=2,option=1),PaU=list(x=2,option=1))
 UPb <- read.data(fn,method='U-Pb',format=2,d=d)
-concordia(UPb,type=2,show.age=1,
-          xlim=c(-500,5000),ylim=c(0.047,0.056),
-          ticks=c(2,3,5,10,50,100,200,300,400))
+concordia(UPb,show.age=1,type=2,tlim=c(0.1,1000),
+          ticks=c(0.2,0.5,1,2,3,5,10,20,50,100,1000,2000,3000,4000),
+          xlim=c(-90,700),ylim=c(0.05,0.5))
 dev.off()
 
 cairo(file='~/Documents/temp/PbPb.pdf',height=4,width=8)
@@ -694,19 +694,6 @@ weightedmean(examples$ArAr,hide=1,random.effects=TRUE,exterr=TRUE)
 legend('topleft',legend='b)',bty='n')
 dev.off()
 
-agespectrum(examples$ArAr,levels=1/examples$ArAr$x[,'Ar36Ar40'],
-            plateau.col=topo.colors(n=100,alpha=0.5),
-            random.effects=FALSE,clabel=expression(''^40*'Ar/'^36*'Ar'))
-
-kde(examples$KCa,log=TRUE,from=700,to=1000,bw=0.02,
-    binwidth=0.02,adaptive=FALSE,i2i=TRUE)
-
-lev <- 1/examples$ArAr$x[,'Ar36Ar40']
-radialplot(examples$ArAr,from=60,to=64,z0=61,levels=lev,
-           clabel=expression(''^40*'Ar/'^36*'Ar'))
-
-cad(examples$KCa,i2i=TRUE,col='blue')
-
 cairo(file='~/Documents/temp/UPb8commonPb.pdf',height=3.5,width=4)
 pars(mar=c(3,3,1,1))
 fn <- system.file('UPb8.csv',package='IsoplotR')
@@ -744,4 +731,36 @@ d <- diseq(U48=list(x=1.1634,sx=0.00105,option=2),
            RaU=list(x=0,sx=0,option=1))
 UPb <- read.data('McLean.csv',method='U-Pb',format=2,ierr=3,d=d)
 concordia(UPb,type=2,show.age=2,ticks=c(0.10,0.12,0.15,0.24))
+dev.off()
+
+cairo(file='~/Documents/temp/2DUPbisochron.pdf',height=4,width=9)
+pars(mar=c(2.4,2.7,3,1),mfrow=c(1,2))
+set.seed(1)
+d <- diseq(U48=list(x=5,option=1),
+           ThU=list(x=0,option=1),
+           RaU=list(x=0,option=1),
+           PaU=list(x=0,option=1))
+tt <- 5
+m <- mclean(t=tt,d=d)
+U85 <- settings('iratio','U238U235')[1]
+Pb640 <- 20
+Pb740 <- 16
+n <- 10
+f <- runif(n,min=1/10,max=1)
+U8Pb6t <- (1-f)/m$Pb206U238
+U5Pb7t <- (1-f)/m$Pb207U235
+Pb46t <- f/Pb640
+Pb47t <- f/Pb740
+relerr <- 0.02
+U8Pb6m <- U8Pb6t*(1+rnorm(n,mean=0,sd=relerr))
+U5Pb7m <- U5Pb7t*(1+rnorm(n,mean=0,sd=relerr))
+Pb46m <- Pb46t*(1+rnorm(n,mean=0,sd=relerr))
+Pb47m <- Pb47t*(1+rnorm(n,mean=0,sd=relerr))
+Pb76m <- U8Pb6m/(U85*U5Pb7m)
+dat <- cbind(U8Pb6m,100*relerr,Pb76m,100*relerr,Pb46m,100*relerr,0,0,0)
+UPb <- IsoplotR:::as.UPb(dat,format=5,ierr=3)
+isochron(UPb,type=1,joint=FALSE)
+legend('topright',legend='a)',bty='n',adj=c(0,-1/2),cex=1.2)
+isochron(UPb,type=2,joint=FALSE)
+legend('topright',legend='b)',bty='n',adj=c(0,-1/2),cex=1.2)
 dev.off()
