@@ -4,14 +4,33 @@ Rb is 85.4678. A rock contains 10ppm of Rb. How many mol/g of ^87^Rb
 does that correspond to?
 
    \ifsol
-   Compute the abundance of ^87^Rb:
+   *By hand:*
+
+   1. Convert the Rb concentration from mass units to molar units:
+   \[
+   10\mbox{~ppm Rb} =
+   10~\mbox{\textmu{g/g}} \propto
+   \frac{10~\mbox{\textmu{g/g}}}{85.4678~\mbox{\textmu{mol}/}\mbox{\textmu{g}}} =
+   0.117~\mbox{\textmu{mol}/g}
+   \]
+   
+   2. Compute the molar fraction of ^87^Rb:
    \[
    f87 + f85 = 1
    \Rightarrow
    1 + \frac{f85}{f87} = \frac{1}{f87}
    \Rightarrow
-   f87 = \frac{1}{1 + \frac{f85}{f87}}
+   f87 = \frac{1}{1 + \frac{f85}{f87}} = \frac{1}{1 + 2.5933} = 0.278 = 27.8\%
    \]
+
+   3. Calculate the molar abundance of ^87^Rb:
+   \[
+   0.117~\mbox{\textmu{mol/g}} \times
+   0.278~\frac{\mbox{\textmu{mol}}{~}^{87}\mbox{Rb}}{\mbox{\textmu{mol}}~\mbox{Rb}} =
+   0.0325~\mbox{\textmu{mol}}^{87}\mbox{Rb/g}
+   \]
+
+   *In R*:
    \fi
 
    ```{r}

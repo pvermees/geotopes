@@ -1,4 +1,5 @@
 Consider the Pb-Pb composition of three aliquots from a meteorite:
+
    ```{r include=FALSE}
    l35 <- IsoplotR::settings('lambda','U235')[1]
    l38 <- IsoplotR::settings('lambda','U238')[1]
@@ -27,6 +28,28 @@ Consider the Pb-Pb composition of three aliquots from a meteorite:
    ```
 
    Hint: plot ^207^Pb/^204^Pb vs. ^206^Pb/^204^Pb.
+
+   \ifsol
+   *By hand:*
+
+   Plotting ^207^Pb/^204^Pb against ^206^Pb/^204^Pb produces a perfect
+   isochron (see the output of the R code below). The slope of this
+   line gives the radiogenic ^207^Pb/^206^Pb-ratio. This slope can
+   either be fitted by linear regression using R's \texttt{lm()}
+   function or, because the fit is perfect, by hand using any two
+   aliquots. For example:
+
+   \[
+   \mbox{slope} = \frac{622-65.8}{1010-107.0} = 0.616
+   \]
+
+   Comparing this radiogenic ^207^Pb/^206^Pb-ratio with the lookup
+   table suggests that the ^207^Pb/^206^Pb-age falls between 4525 and
+   4550 Ma.
+
+   *Using R:*
+   \fi
+
    ```{r out.width='60%', fig.width=5, fig.height=4}
    Pb64 <- PbPbtab[1,]
    Pb74 <- PbPbtab[2,]
@@ -35,6 +58,11 @@ Consider the Pb-Pb composition of three aliquots from a meteorite:
         ylab=expression(""^207*"Pb/"^204*"Pb")
    )
    Pb76 <- lm(Pb74 ~ Pb64)$coefficients[2]
-   message("Pb207/Pb206=",signif(Pb76,4),
-           ", so the age of the sample is just shy of 4450 Ma.")
+   t76 <- seq(from=4450,to=4650,by=25)
+   U85 <- 137.818
+   l35 <- 0.00098485
+   l8 <- 0.000155125
+   r76 <- (1/U85)*(exp(l35*t76)-1)/(exp(l38*t76)-1)
+   result <- approx(x=r76,y=t76,xout=Pb76)
+   message("t(Pb207/Pb206)=",signif(result$y,4)," Ma")
    ```

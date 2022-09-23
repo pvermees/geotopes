@@ -2,8 +2,27 @@ The half-life of ^14^C is 5730 years. The ^14^C content of the
 atmosphere is 13.2 disintegrations per minute and per gram (dpm
 g${}^{-1}$) of carbon (initial activity $A_0$). We wish to date an
 Egyptian artefact from approximately 2000 BC. What is the approximate
-activity (A) of this artefact? If our method can measure 1 dpm, what
-mass of the (probably precious) sample will have to be destroyed?
+activity (A) of this artefact? Suppose that our detector needs signals
+of at least 1~dpm to produce precise results. What mass of the
+(probably precious) sample will have to be destroyed?
+
+   \ifsol
+   *By hand:*
+
+   1. The decay constant of ^14^C is
+   \[
+   \lambda_{14} = \ln[2]/5730 = 0.000121\mbox{~yr}^{-1}
+   \]
+
+   2. Formulating the decay equation:
+   \[
+   A = A_0 \exp[-\lambda_{14}t] = 13.2 \exp[-0.000121 \times 4023] = 8.1\mbox{~dpm/g}
+   \]
+
+   3. If 1 g produces 8.1 dpm, then 1 dpm requires 1/8.1 = 0.12 g or 120 mg.
+
+   *Using R:*
+   \fi
 
    ```{r}
    # decay constant:
@@ -16,5 +35,5 @@ mass of the (probably precious) sample will have to be destroyed?
    A <- A0*exp(-l14*age) # dpm/g
    mass <- 1000/A
    message('The expected activity ratio is ',signif(A,2),
-           ', which requires ',signif(mass,2),' mg of material.')
+   ', which requires ',signif(mass,2),' mg of material.')
    ```

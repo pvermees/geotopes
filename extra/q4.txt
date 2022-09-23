@@ -3,24 +3,38 @@ a half-life $t_{1/2}=48.8$ Gyr. What was the ^85^Rb/^87^Rb-ratio 2
 billion years ago?
 
    \ifsol
-   Compute initial ^87^Rb from present amount:
+   *By hand:*
+
+   Rearranging the ^87^Rb decay equation to obtain the initial 
+   ^85^Rb/^87^Rb-ratio from the current amount ^85^Rb/^87^Rb-ratio:
    \[
-   P_\circ = P\exp[\lambda{t}]
+   {}^{87}\mbox{Rb} = {}^{87}\mbox{Rb}_\circ\exp[-\lambda{t}] \Rightarrow
+   \left[\frac{{}^{85}\mbox{Rb}}{{}^{87}\mbox{Rb}}\right]_\circ =
+   \left[\frac{{}^{85}\mbox{Rb}}{{}^{87}\mbox{Rb}}\right]\exp[-\lambda{t}]
    \]
+
+   The decay constant is given by
+   \[
+   \lambda = \ln[2]/4.48 = 0.0142
+   \]
+
+   Therefore
+
+   \[
+   \left[\frac{{}^{85}\mbox{Rb}}{{}^{87}\mbox{Rb}}\right]_\circ =
+   2.5933 \exp[-{0.0142}\times{2}] = 2.5207
+   \]
+
+   *Using R:*
    \fi
-   
+
    ```{r}
    # 1. compute the decay constant:
    t12 = 48.8
    l87 = log(2)/t12
-   # 2. restore 87Rb to 2 Ga:
-   f85 <- 1-f87
-   umolgRb <- ppmRb/MRb
-   umolgRb85 <- f85*umolgRb
-   umolgRb87 <- f87*umolgRb
-   age <- 2
-   umolgRb85_o <- umolgRb85
-   umolgRb87_o <- umolgRb87*exp(l87*age)
-   r57_o <- umolgRb85_o/umolgRb87_o
+   # 2. restore 85Rb/87Rb to 2 Ga:
+   r57 <- 2.5933
+   tt <- 2
+   r57_o <- r57*exp(-l87*tt)
    message('87Rb/85Rb ratio at 2 Ga: ',signif(r57_o,5))
    ```

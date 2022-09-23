@@ -20,12 +20,14 @@ ice.
    knitr::kable(tabPb210)
    ```
 
-   Calculate the sedimentation rate of the ice. Assuming a constant
-   rate and a compaction factor of 5, how much ice will have
-   accumulated in 5000 years?  Calculate the ^210^Pb-content of fresh
-   ice (in mol/kg or atoms/kg).
+   Calculate the sedimentation rate of the ice. Assuming a constant rate
+   and a compaction factor of 5, how much ice will have accumulated in
+   5000 years?  Calculate the ^210^Pb-content of fresh ice (in mol/kg or
+   atoms/kg).
 
    \ifsol
+   *By hand:*
+
    \[
    {}^{210}Pb = {}^{210}Pb_\circ \exp[-\lambda_{210}t]
    \]
@@ -38,28 +40,51 @@ ice.
    \[
    \ln[{}^{210}Pb] = \ln[{}^{210}Pb_\circ] -\lambda_{210}d/r
    \]
-   If the initial \textsuperscript{210}Pb content has remained constant over time,
-   the data points must be aligned in a plot of $\ln[{}^{210}Pb]$ vs. $d$.
-   The slope is therefore $-\lambda_{210}$/r.
+
+   If the initial \textsuperscript{210}Pb content has remained constant
+   over time, the data points must be aligned in a plot of
+   $\ln[{}^{210}Pb]$ vs. $d$ (see the output of the R code below). The
+   slope of this line is $-\lambda_{210}$/r.  Manually calculating this
+   slope from the first and the last measurement of the perfectly
+   log-linear set of data:
+
+   \[
+   \mbox{slope} = \frac{\ln(10.7)-\ln(75)}{2.5-0} = -0.779
+   \]
+   Calculating the decay constant:
+   \[
+   \lambda_{210} = \ln[2]/22.3 = 0.0311~\mbox{yr}^{-1}
+   \]
+   Therefore
+   \[
+   r = -\frac{\lambda_{210}}{\mbox{slope}} = 
+   \frac{0.0311}{0.779} = 0.0399~\mbox{m/yr} = 3.99~\mbox{cm/yr}
+   \]
    A modern activity of $\lambda_{210}N_{210} = 75$ dph/kg corresponds to
-   $(75\times{24}\times{365.25})/\lambda_{210}$ atoms of ${}^{210}$Pb. This turns
-   out to be a mere 21 million atoms per kg!
+   \[
+   N_{210} = \frac{75\mbox{~dph/kg}}{\lambda_{210}} =
+   \frac{75\times{24}\times{365.25}\mbox{~yr}^{-1}\mbox{kg}^{-1}}{0.0311\mbox{~yr}^{-1}} =
+   21\times{10}^6\mbox{atoms/kg}
+   \]
+
+   *Using R:*
    \fi
 
    ```{r fig.width=4, fig.height=4}
+   # assuming that the data were stored in a variable called tabPb210:
    depth <- tabPb210[1,]
    Pb210 <- tabPb210[2,]
-   fit <- lm(log(Pb210) ~ depth)
+   plot(depth,Pb210,type='b',log='y')
+   # fitting a linear model:
+   fit <- lm(log(Pb210) ~ depth) 
    l210 <- log(2)/22.3
    r <- -l210/fit$coefficients[2]
    message("The accumulation rate is ",signif(100*r,3),'cm/yr')
    message("In 5000 years, there will be ",
-           signif(5000*r/5,3),
-           "m of ice accumulation")
+   signif(5000*r/5,3),
+   "m of ice accumulation")
    Pb210atoms <- Pb210[1]*24*365.25/l210 
    message("1 kg of modern ice contains ",
-           round(Pb210atoms/1e6),
-           " million atoms of 210Pb")
-   plot(depth,Pb210,type='p',log='y')
-   lines(depth,exp(fit$fitted.values))
+   round(Pb210atoms/1e6),
+   " million atoms of 210Pb")
    ```

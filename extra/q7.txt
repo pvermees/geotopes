@@ -16,11 +16,38 @@ sample:
    knitr::kable(tabRbSr)
    ```
    How old is the sample?
+
+   \ifsol
+   *By hand:*
+
+   Plotting the data on an isochron diagram (see the output of the R
+   code below) produces a straight line whose slope can be obtained by
+   least squares regression using R's \texttt{lm()} function or, because
+   the fit is perfect in this synthetic case, by hand using the first
+   and the last aliquot:
+   \[
+   \mbox{slope} = \frac{0.70431-0.70108}{0.20-0.05} = 0.0215
+   \]
+   According to Equation 4.7 of the notes:
+   \[
+   \mbox{slope} = \exp[\lambda_{87}t]-1 \mbox{~where~}
+   \lambda_{87} = \ln[2]/48.8 = 0.0142~\mbox{Gyr}^{-1}
+   \]
+   Therefore
+   \[
+   t = \ln(1+\mbox{slope})/\lambda_{87} = \ln(1+0.0215)/0.0142 = 1.5~\mbox{Ga}
+   \]
+
+   *Using R:*
+   \fi
+
    ```{r fig.width=4, fig.height=4}
    RbSr <- tabRbSr[,1]
    SrSr <- tabRbSr[,2]
    plot(x=RbSr,y=SrSr,type='b')
+   # Least squares fit through the data:
    fit <- lm(SrSr ~ RbSr)
+   l87 <- log(2)/48.8
    tRbSr <- log(fit$coefficients[2]+1)/l87
    message('Rb/Sr-age = ',signif(tRbSr*1000,2),' Ma')
    ```

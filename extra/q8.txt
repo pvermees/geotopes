@@ -4,6 +4,47 @@ half-lives of ^238^U and ^235^U are 4.468 and 0.704 Gyr, respectively.
 The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
 ^207^Pb/^206^Pb-ratio for modern uranium-ores?
 
+   \ifsol
+   *By hand:*
+
+   For modern U-ores, assuming secular equilibrium:
+
+   \[
+   \left.\frac{{}^{207}Pb}{{}^{206}Pb}\right|_{t=0} =
+   \frac{\partial{N_{207}}/\partial{t}|_{t=0}}{\partial{N_{206}}/\partial{t}|_{t=0}}
+   \]
+
+   with
+
+   \[
+   \partial{N_{206}}/\partial{t} = \lambda_{238}N_{238},
+   \partial{N_{207}}/\partial{t} = \lambda_{235}N_{235}
+   \]
+
+   Therefore
+
+   \[
+   \frac{N_{207}}{N_{206}} = \frac{\lambda_{235}N_{235}}{\lambda_{238}N_{238}}
+   \]
+
+   with
+
+   \[
+   N_{238}/N_{235} = 137.818 \mbox{~,~}
+   \lambda_{238} = \ln[2]/4.468 = 0.1551~\mbox{Gyr}^{-1} \mbox{~and~}
+   \lambda_{235} = \ln[2]/0.704 = 0.9846~\mbox{Gyr}^{-1}
+   \]
+
+   so that
+
+   \[
+   \frac{N_{207}}{N_{206}} = \frac{0.9846}{0.1551 \times 137.818} = 0.0461
+   \]
+
+   *Using R:*
+   \fi
+
+
    ```{r}
    # meteorite:
    tPbPb <- 4.57
@@ -12,28 +53,5 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    r58 <- 1/137.818
    rPbPb_meteorite <- r58*(exp(l35*tPbPb)-1)/(exp(l38*tPbPb)-1)
    message('Expected 207Pb/206Pb-ratio for a 4.57 Ga meteorite = ',
-           signif(rPbPb_meteorite,3))
-   ```
-   \ifsol
-   For modern U-ores, assuming secular equilibrium:
-   \[
-   \left.\frac{{}^{207}Pb}{{}^{206}Pb}\right|_{t=0} =
-   \frac{\partial{N_{207}}/\partial{t}|_{t=0}}{\partial{N_{206}}/\partial{t}|_{t=0}}
-   \]
-   with
-   \[
-   \partial{N_{206}}/\partial{t} = \lambda_{238}N_{238},
-   \partial{N_{207}}/\partial{t} = \lambda_{235}N_{235}
-   \]
-   $\Rightarrow$
-   \[
-   \frac{N_{207}}{N_{206}} = \frac{\lambda_{235}N_{235}}{\lambda_{238}N_{238}}
-   \]
-   with
-   \[
-   N_{238}/N_{235} = 137.818
-   \]
-   \fi
-   ```{r}
+   signif(rPbPb_meteorite,3))
    message('expected 207Pb/206Pb ratio of modern U-ores = ',signif(r58*l35/l38,3))
-   ```
