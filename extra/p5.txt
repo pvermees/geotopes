@@ -29,14 +29,14 @@ Install `IsoplotRgui` on your computer using
 
    ```{r out.width='50%', fig.width=6, fig.height=6}
    library(IsoplotR)
-   setwd('~/Documents/geotopes/R/')
+   d <- '~/Documents/geotopes/R/'
    # (c)
-   UPb <- read.data('UPb2.csv',method='U-Pb',format=2)
+   UPb <- read.data(paste0(d,'UPb2.csv'),method='U-Pb',format=2)
    concordia(UPb)
    # (d)
-   ArAr <- read.data('ArAr3.csv',method='Ar-Ar',format=3)
+   ArAr <- read.data(paste0(d,'ArAr3.csv'),method='Ar-Ar',format=3)
    agespectrum(ArAr)
    # (e)
-   ThU <- read.data('ThU2.csv',method='Th-U',format=2)
+   ThU <- read.data(paste0(d,'ThU2.csv'),method='Th-U',format=2)
    isochron(ThU)
    ```

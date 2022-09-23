@@ -27,9 +27,9 @@
    data on a concordia diagram.
    
    ```{r out.width='70%'}
-   setwd('/home/pvermees/Documents/geotopes/practicals/UPb/')
+   d <- '/home/pvermees/Documents/geotopes/practicals/UPb/'
 
-   source('atomic.R')
+   source(paste0(d,'atomic.R'))
 
    getcorr <- function(samp,D1,P1,D2,P2,tb,ts){
       bi <- (samp$Time<tb)
@@ -44,12 +44,12 @@
    tstd <- 600.4 # Ma
    l38 <- 1.55125e-4 # Myr-1
    l35 <- 9.8485e-4 # Myr-1
-   std <- read.csv("GJ1.csv",header=TRUE)
+   std <- read.csv(paste0(d,'GJ1.csv'),header=TRUE)
    ns <- 4
    tab <- matrix(0,nrow=ns,ncol=5)
    colnames(tab) <- c('Pb207/U235','err','Pb206/U238','err','rho')
    for (i in 1:ns){
-      sname <- paste0('smp',i,'.csv')
+      sname <- paste0(d,'smp',i,'.csv')
       smp <- read.csv(file=sname,header=TRUE)
       tab[i,1:2] <- atomic(samp=smp,stand=std,num='Pb207',den='U235',
 		           tstd=tstd,lambda=l35,tb=tb,ts=ts)

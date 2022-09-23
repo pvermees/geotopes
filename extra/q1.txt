@@ -6,10 +6,23 @@ $1.60219\times{10}^{-19}$ C and 1 atomic mass unit (amu) =
 $1.660538\times{10}^{-27}$ kg.
 
    \ifsol
+   *By hand:*
+   
    Rearrange Equation 3.4 of the notes:
    \[
-   m = \frac{e(rH)^2}{2V}
+   m =
+   \frac{e(rH)^2}{2V} =
+   \frac{1.60219\times 10^{-19} \times (0.3 \times 0.5)^2}{2 \times 10^4} =
+   1.8 \times 10^{-25} \mbox{kg}
    \]
+
+   which is equivalent to
+
+   \[
+   \frac{1.8 \times 10^{-25}}{1.660538\times{10}^{-27}} = 108.5 \mbox{amu}
+   \]
+
+   *Using R:*
    \fi
    
    ```{r}
