@@ -1,9 +1,9 @@
 idir <- '/home/pvermees/Documents/geotopes/extra/'
 odir <- '/home/pvermees/Desktop/GEOL0017/'
 
-solution <- TRUE
-results <- TRUE
-multidoc <- TRUE
+solution <- FALSE
+results <- FALSE
+multidoc <- FALSE
 randomise <- FALSE
 
 preamble <- paste0("---\n",
@@ -42,7 +42,7 @@ if (solution & multidoc){
 }
 nq <- 25
 NN <- round(runif(n=nq,min=0,max=100))
-for (q in 1:nq){
+for (q in (1:nq)){
     if (solution & multidoc){
         qname <- paste0(odir,'q',q,ifelse(randomise,NN[q],''),'.Rmd')
         print(qname)

@@ -19,7 +19,7 @@ $1.660538\times{10}^{-27}$ kg.
    which is equivalent to
 
    \[
-   \frac{1.8 \times 10^{-25}}{1.660538\times{10}^{-27}} = 108.5 \mbox{amu}
+   \frac{1.8 \times 10^{-25}}{1.660538\times{10}^{-27}} = 108.5~\mbox{amu}
    \]
 
    *Using R:*

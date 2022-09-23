@@ -13,32 +13,41 @@ of Solar System history contain measurable amounts of excess of
    homogeneous ^129^I/^127^I-composition.
 
    \ifsol
+   *By hand:*
+   
    Let $[{}^{129}I/{}^{127}I]_\circ$ be the (unknown) ^129^I/^127^I-composition
    of the early Solar System, and let $t_A$ and $t_B$ be the ages of the
    two meteorites (counting from the start of the Solar System). Then
    \[
-   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A =
-   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[-\lambda_{129}t_A]
+   \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_\circ\exp[-\lambda_{129}t_A]
    \]
    and
    \[
-   \left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B =
-   \left[\frac{{}^{129}I}{{}^{127}I}\right]_\circ\exp[-\lambda_{129}t_B]
+   \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_B =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_\circ\exp[-\lambda_{129}t_B]
    \]
    The ratio of the two ratios is:
    \[
-   \frac{\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A}
-   {\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B} =
+   \frac{\left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A}
+   {\left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_B} =
    \exp[\lambda_{129}(t_B-t_A)]
    \]
    Hence
    \[
    t_B-t_A = \frac{1}{\lambda_{129}}
    \left(
-   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_A -
-   \ln\left[\frac{{}^{129}Xe}{{}^{127}I}\right]_B
+   \ln\left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A -
+   \ln\left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_B
    \right)
    \]
+   \[
+   = \frac{15.7}{\ln[2]}
+   \left(\ln[13\times{10}^{-5}] - \ln[8\times{10}^{-5}]\right)
+   = 11.0\mbox{~Myr}
+   \]
+
+   *Using R:*
    \fi
    ```{r}
    l129 <- log(2)/15.7

@@ -1,32 +1,120 @@
 The silicate Earth weighs approximately $4\times{10}^{24}$ kg and
 contains 250 ppm potassium. How much ^40^Ar is created in 4.5 billion
 years?  Given that ^40^Ar cannot escape from the Earth and the
-quantity of ^40^Ar in the atmosphere is 66000 Gt, what is the ``K-Ar
-age of the Earth's atmosphere''?  K has three isotopes with
+quantity of ^40^Ar in the atmosphere is 66000 Gt, what is the
+``K-Ar age of the Earth's atmosphere''?  K has three isotopes with
 ^39^K/^40^K = 7771 and ^41^K/^40^K = 561. ^40^K is radioactive and
 undergoes branched decay to ^40^Ar (10.72%) and ^40^Ca (89.28%) with a
 half-life of 1.248 billion years. The molar mass of K is 39.1 g/mol.
 
+   \ifsol
+   *By hand:*
+
+   1. Compute the mass of K in the silicate Earth:
+   \[
+   4\times{10}^{24}\mbox{kg} \times
+   250\times{10}^{-6}\frac{\mbox{kg~K}}{\mbox{kg}}
+   = {10}^{21}\mbox{kg~K}
+   \]
+   Convert to moles:
+   \[
+   \frac{{10}^{21}
+   \mbox{kg K}}{{10}^{-3}\frac{\mbox{kg}}{\mbox{g}} \times
+   39.1\frac{\mbox{g K}}{\mbox{mol K}}}
+   = 25.58\times{10}^{21}\mbox{mol K}
+   \]
+   Compute the fraction of ^40^K:
+   \[
+   \frac{{}^{40}\mbox{K}}{{}^{39}\mbox{K}+{}^{40}\mbox{K}+{}^{41}\mbox{K}}
+   =
+   \frac{1}{
+   {}^{39}\mbox{K/}^{40}\mbox{K} +
+   {}^{40}\mbox{K/}^{40}\mbox{K} +
+   {}^{41}\mbox{K/}^{40}\mbox{K}
+   }= \frac{1}{7771+1+561} = 0.00012
+   \]
+   Estimate the number of moles of ^40^K:
+   \[
+   25.58\times{10}^{21}\mbox{mol K} \times
+   0.00012 \frac{\mbox{mol}^{40}\mbox{K}}{\mbox{mol K}}
+   = 3.0696\times{10}^{18}\mbox{mol}^{40}\mbox{K}
+   \]
+   Calculate the decay constant of ^40^K:
+   \[
+   \lambda_{40} = \ln[2]/1.248 = 0.5554064\mbox{~Gyr}^{-1}
+   \]
+   Estimate the molar amount of ^40^Ar produced over the past 4.5 Gyr:
+   \[
+   {}^{40}\mbox{Ar} = \frac{\lambda_e}{\lambda_{40}}
+   {}^{40}\mbox{K}
+   \left(\exp[\lambda_{40}t]-1\right)
+   \]
+   \[
+   =
+   0.1072 \times 3.0696\times{10}^{18} \mbox{mol}^{40}\mbox{K}
+   \times \left(\exp[0.5554064\times4.5]-1\right)
+   \]
+   \[
+   = 3.677\times{10}^{18}\mbox{mol}^{40}\mbox{Ar}
+   \]
+   which is equivalent to
+   $3.677\times{10}^{18}\mbox{mol}\times{40}\mbox{~g/mol} =
+   1.47\times{10}^{20}\mbox{g}$ or 147,000 Gt of ^40^Ar.
+   
+   2. Calculate the molar abundance of ^40^Ar in the atmosphere,
+   using the fact that 1 Gt = $10^{12}$kg and that the molar mass
+   of ^40^Ar = 40 g = $4\times{10}^{-2}$kg:
+   \[
+   \frac{
+   66\times{10}^{15}\mbox{kg}
+   }{
+   4\times{10}^{-2}\mbox{kg/mol}
+   } = 1.65\times{10}^{18}\mbox{mol}^{40}\mbox{Ar}
+   \]
+   Compute the ^40^Ar/^40^K ratio of the silicate Earth + atmosphere system:
+   \[
+   \frac{{}^{40}\mbox{Ar}}{{}^{40}\mbox{K}} =
+   \frac{
+   1.65\times{10}^{18}\mbox{mol}
+   }{
+   3.0696\times{10}^{18}\mbox{mol}
+   } = 0.5375
+   \]
+   Therefore the ^40^Ar/^40^K age of the silicate Earth + atmosphere system is:
+   \[
+   t = \frac{1}{\lambda_{40}}
+   \ln\left(
+   1+\frac{\lambda_{40}}{\lambda_e}
+   \frac{{}^{40}\mbox{Ar}}{{}^{40}\mbox{K}}
+   \right)
+   = \frac{1}{0.5554064}
+   \ln\left(1+\frac{0.5375}{0.1072} \right)
+   = 3.23\mbox{~Ga}
+   \]
+
+   *Using R:*
+   \fi
+
    ```{r}
-   # 1. Compute Gmol of 40K
-   GtEarth <- 4e24/1e12  # convert kg to Gt
-   GtK <- GtEarth*250e-6 # Gt of K in the silicate Earth
-   MK <- 39.1e-6 # Gt/Gmol
-   GmolK <- GtK/MK # Gmol
+   # 1. Compute mol of 40K
+   MEarth <- 4e24             # kg of silicate Earth
+   Kconc <- 250e-6            # kg/kg K
+   KEarth <- MEarth*Kconc     # kg of K in the silicate Earth
+   MK <- 39.1e-3              # kg/mol
+   molK <- KEarth/MK          # mol of K in the silicate Earth
    f40K <- 1/(7771 + 561 + 1) # 40K/K
-   GmolK40 <- GmolK*f40K # Gmol of 40K in the silicate Earth
-   # 2. Compute the amount of Ar40 produced over the past 4.5 Gyr
-   l40 <- log(2)/1.248
-   fec <- 0.1072 # fraction of 40K decaying to 40Ar
-   GmolAr40_4.5Ga <- GmolK40*fec*(exp(l40*4.5)-1)
-   M40K <- 40e-6 # Gt/Gmol
-   GtAr40_4.5Ga <- GmolAr40_4.5Ga*M40K
+   molK40 <- molK*f40K        # mol of 40K in the silicate Earth
+   l40 <- log(2)/1.248        # Gyr-1
+   fec <- 0.1072              # fraction of 40K decaying to 40Ar
+   molAr40_4.5Ga <- molK40*fec*(exp(l40*4.5)-1)
+   M40Ar <- 40e-3             # kg/mol
+   GtAr40_4.5Ga <- molAr40_4.5Ga*M40Ar/1e12
    message(signif(GtAr40_4.5Ga,3),
            " Gt of 40Ar was produced over the past 4.5 Gyr")
-   # 3. Estimate 'atmospheric age' of the Earth:
-   GtAr40 <- 66e3
-   GmolAr40 <- GtAr40/M40K
-   Ar40K40 <- GmolAr40/GmolK40
+   # 2. Estimate 'atmospheric age' of the Earth:
+   kgAr40 <- 66e15            # kg 40Ar
+   molAr40 <- kgAr40/M40Ar
+   Ar40K40 <- molAr40/molK40
    atmage <- log(Ar40K40/fec+1)/l40
    message("The 40Ar/40K-age of the Earth's atmosphere is ",
            signif(atmage,3),' Ga.')

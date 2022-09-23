@@ -1,4 +1,5 @@
 Given the ^40^Ar/^39^Ar-data shown in the following table:
+
    ```{r include=FALSE}
    tsmp <- 200
    tstd <- 98
@@ -22,34 +23,88 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    ```{r include=TRUE, echo=FALSE, results='asis'}
    knitr::kable(tabArAr)
    ```
-
    where 'std' is a 98 Ma reference material whose inherited argon
    content is of atmospheric origin ($[$^40^Ar/^36^Ar$]$~atm~=298.5);
-   while 'smp1', 'smp2' and 'smp3' are three cogenetic aliquots of a
+   whereas 'smp1', 'smp2' and 'smp3' are three cogenetic aliquots of a
    metamorphic sample of unknown age.  What are the age and
    non-radiogenic ^40^Ar/^36^Ar-ratio of the sample? Recall that the
    half-life of ^40^K is 1248 Myr.
 
+   \ifsol
+   *By hand:*
+   
+   1. Atmospheric correction of the standard:
+   
+   \[
+   \left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{std}
+   = \frac{
+   {}^{40}\mbox{Ar}/{}^{36}\mbox{Ar} - 298.5
+   }{
+   {}^{39}\mbox{Ar}/{}^{36}\mbox{Ar}
+   } = \frac{2536 - 298.5}{100} = 22.375
+   \]
+   Compute the ^40^K decay constant:
+   \[
+   \lambda_{40} = \ln[2]/1248 = 0.0005554\mbox{~Myr}^{-1}
+   \]
+   Compute the J-factor of the standard:
+   \[
+   J = \left(\exp[\lambda_{40}t_{std}]-1\right)
+   \left(\frac{{}^{39}\mbox{Ar}}{{}^{40}\mbox{Ar}}\right)^{\!*}_{std}
+   = \left(\exp[0.0005554\times{98}]-1\right)/22.375
+   = 0.00250
+   \]
+   
+   2. Plot the ^40^Ar/^36^Ar ratios of the sample against
+   the corresponding ^39^Ar/^36^Ar ratios to form a conventional
+   isochron plot (see the graphical output of the R code below).
+   Normally you would fit a line through these data using the
+   method of least squares (with R's \texttt{lm()} function).
+   However, because the linear fit of this synthetic dataset
+   is perfect, you can also calculate it manually using any
+   pair of aliquots. For example:
+   
+   \[
+   \left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{std} =
+   \mbox{slope} = \frac{7869-820}{160-10} = 47.0
+   \]
+   The y-intercept of the isochron gives the inherited ^40^Ar/^36^Ar
+   ratio of the sample:
+   \[
+   \left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)_\circ
+   = 820 - 10 \times \mbox{slope} = 350
+   \]
+   
+   3. Compute the age of the standard:
+   
+   \[
+   t_{smp} = \frac{1}{\lambda_{40}}
+   \ln\left[
+   1+J\left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{std}
+   \right]
+   = \ln\left(1+0.00250\times{47.0}\right)/0.0005554 = 200\mbox{~Ma}
+   \]
+   
+   *Using R:*
+   \fi
+
    ```{r out.width='50%', fig.width=5, fig.height=4}
-   # 1. atmospheric correction of the standard
+   # 1. Compute the J-factor of the standard
    Ar40Ar36a <- 298.5
    Ar40Ar36m <- tabArAr['std',2]
    Ar40Ar36r <- Ar40Ar36m - Ar40Ar36a
-   # 2. compute the J factor
    tstd <- 98
    l40 <- log(2)/1248
    Ar39Ar36m <- tabArAr['std',1]
    J <- (exp(l40*tstd)-1)*Ar39Ar36m/Ar40Ar36r
-   # 3. construct an isochron for the sample:
+   # 2. construct an isochron for the sample:
    Ar39Ar36_smp <- tabArAr[2:4,1]
    Ar40Ar36_smp <- tabArAr[2:4,2]
    plot(x=Ar39Ar36_smp,y=Ar40Ar36_smp,type='b')
-   # 4. you can compute the slope and intercept of the line
-   #    either manually or using R's lm() function:
    fit <- lm(Ar40Ar36_smp ~ Ar39Ar36_smp)
    Ar40Ar36_smp_0 <- fit$coefficients[1]
    Ar40Ar39_smp_r <- fit$coefficients[2]
-   # 5. compute the age of the sample
+   # 3. compute the age of the sample
    tsmp <- log(J*Ar40Ar39_smp_r + 1)/l40
    message('age=',signif(tsmp,2),
            'Ma, inherited 40/36-ratio=',signif(Ar40Ar36_smp_0,2))
