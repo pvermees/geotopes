@@ -1,9 +1,9 @@
 idir <- '/home/pvermees/Documents/geotopes/extra/'
 odir <- '/home/pvermees/Desktop/GEOL0017/'
 
-solution <- FALSE
-results <- FALSE
-multidoc <- FALSE
+solution <- TRUE
+results <- TRUE
+multidoc <- TRUE
 randomise <- FALSE
 
 preamble <- paste0("---\n",
@@ -25,6 +25,9 @@ set.seed(1)
 
 fread <- function(fname){
     readChar(fname, file.info(fname)$size)
+}
+for (img in list.files(idir,pattern='*.png')){
+    file.copy(from=paste0(idir,img),to=paste0(odir,img))
 }
 set.seed(1)
 FNAME <- paste0(odir,'extra.Rmd')

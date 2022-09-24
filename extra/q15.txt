@@ -35,11 +35,44 @@ Consider the following dataset:
    (a) Convert these data to internally consistent atomic units.
 
    (b) Plug them into the online version of `IsoplotR` (
-   [`http://isoplotr.es.ucl.ac.uk`](http://isoplotr.es.ucl.ac.uk) ).
+   [`https://isoplotr.es.ucl.ac.uk`](https://isoplotr.es.ucl.ac.uk) )
+   and calculate the U-Th-He ages.
 
-   (c) Calculate the U-Th-He ages.
+   (c) Determine the exhumation rate.
 
-   (d) Determine the exhumation rate.
+   \ifsol
+   *By hand:*
+   
+   (a) Convert all the measurements and uncertainties to pmol/g, using the
+   fact that the molar mass of U is 238.03 and that of Th is 232.04, and that
+   there are 10^6^ pg in 1 \textmu{g}:
+
+   | He | s(He) | U | s(U) | Th | s(Th) |
+   |--|--|------|------|------|------|
+   | 315 | 10 | $\frac{10\times{10}^{6}}{238.03}=42011$ | $\frac{1\times{10}^{6}}{238.03}=4201$ | $\frac{20\times{20}^{6}}{232.04}=86192$ | $\frac{1\times{10}^{6}}{232.04}=4310$ |
+   | 503 | 10 | $\frac{12\times{10}^{6}}{238.03}=50414$ | $\frac{1\times{10}^{6}}{238.03}=4201$ | $\frac{20\times{15}^{6}}{232.04}=64644$ | $\frac{1\times{10}^{6}}{232.04}=4310$ |
+   | 447 | 10 | $\frac{\phantom{~}9\times{10}^{6}}{238.03}=37810$ | $\frac{1\times{10}^{6}}{238.03}=4201$ | $\frac{20\times{12}^{6}}{232.04}=51715$ | $\frac{1\times{10}^{6}}{232.04}=4310$ |
+   | 903 | 10 | $\frac{15\times{10}^{6}}{238.03}=63017$ | $\frac{1\times{10}^{6}}{238.03}=4201$ | $\frac{20\times{25}^{6}}{232.04}=107740$ | $\frac{1\times{10}^{6}}{232.04}=4310$ |
+   
+   (b) Pasting the data into `IsoplotR`:
+
+   ```{r out.width='100%', include=TRUE, echo=FALSE}
+   knitr::include_graphics('IsoplotR.png')
+   ```
+
+   (c) Plotting the U-Th-He ages against elevation reveals a linear
+   trend (see graphical output of the R code below), whose slope gives
+   the exhumation rate.  This slope can either be calculated using R's
+   \texttt{lm()} function or, because the fit is perfect, from any
+   pair of measurements. For example:
+
+   \[
+   \mbox{slope} = \frac{4000-2000\mbox{~m}}{8-4\mbox{~Ma}} =
+   500\mbox{~m/Myr} = 0.5~\mbox{mm/yr}
+   \]
+
+   *Using R:*
+   \fi
 
    ```{r out.width='50%', fig.width=6, fig.height=5}
    # Suppose that the data are stored in a matrix called tab:
