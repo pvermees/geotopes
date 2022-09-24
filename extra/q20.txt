@@ -28,11 +28,75 @@ Consider the following raw apatite fission track data:
    uncertainty of the age estimate given the fact that fission track
    counts follow a Poisson distribution whose variance equals its mean,
    i.e.
-   $$
+   \[
    s[N]^2 = N \Rightarrow s[N] = \sqrt{N}
-   $$
+   \]
+   
+   \ifsol
+   *By hand:*
+   
+   (a) Calculate the age:
+   \[
+   t = \frac{1}{\lambda} \ln\left(1 + R\right)
+   \]
+   where
+   \[
+   R = \frac{g_i}{g_s} \lambda \zeta \rho_d \frac{N_s}{N_i}
+   \]
+   in which
+   \[
+   \frac{g_i}{g_s} = \frac{1}{2}\mbox{,~}
+   \lambda = 0.000155125\mbox{,~and~}
+   \rho_d = \frac{300}{25\times{10}^{-5}\mbox{cm}^2} = 12\times{10}^{5}\mbox{cm}^{-2}
+   \]
+   so that
+   \[
+   R = \frac{1}{2} 0.000155125 \times{330}\times{10}^{-6}
+   \times{0.012}\times\frac{51}{200} = 0.007832
+   \]
+   The age can be calculated as:
+   \[
+   t = \ln\left(1 + 0.007832\right)/0.000155125 = 50.3\mbox{~Ma}
+   \]
+   
+   (b) Propagate the uncertainty:
+   \[
+   s[t] = \frac{1}{\lambda} \frac{s[R]}{1 + R}
+   \]
+   with
+   \[
+   \left(\frac{s[R]}{R}\right)^2 =
+   \left(\frac{s[\zeta]}{\zeta}\right)^2 +
+   \left(\frac{s[\rho_d]}{\rho_d}\right)^2 +
+   \left(\frac{s[N_s]}{N_s}\right)^2 +
+   \left(\frac{s[N_i]}{N_i}\right)^2
+   \]
+   where $s[N_s]^2 = N_s$, $s[N_i]^2 = N_i$ and
+   \[
+   \rho_d = \frac{N_d}{A_d} \Rightarrow s[\rho_d]^2 = \frac{N_d}{A^2}
+   \]
+   so that
+   \[
+   \left(\frac{s[R]}{R}\right)^2 = 
+   \frac{1}{N_d} + \frac{1}{N_s} + \frac{1}{N_i} \Rightarrow
+   s[R] = R \sqrt{\left(\frac{s[\zeta]}{\zeta}\right)^2 +
+          \frac{1}{N_d} + \frac{1}{N_s} + \frac{1}{N_i}}
+   \]
+   which gives
+   \[
+   s[R] = 0.007832 \sqrt{\left(\frac{10}{330}\right)^2 +
+          \left(\frac{10}{300}\right)^2 + \frac{1}{51} + \frac{1}{200}} = 0.00133
+   \]
+   and, hence
+   \[
+   s[t] = \frac{1}{0.000155125} \frac{0.00133}{1 + 0.000226} = 8.5\mbox{~Ma}
+   \]
+   
+   *Using R:*
+   \fi
 
    ```{r}
+   # (a) age calculation:
    g <- 0.5
    lambda <- 1.55125e-4
    Ns <- 51
@@ -43,46 +107,7 @@ Consider the following raw apatite fission track data:
    zeta <- 330e-6 # Myr cm^2
    tFT <- log(1+g*lambda*zeta*rhoD*Ns/Ni)/lambda
    message('t(FT)=',signif(tFT,3),' Ma')
-   ```
-   \ifsol
-   \underline{Error propagation}
-
-   Given the age equation:
-   $$
-   t = \frac{1}{\lambda} \ln\left(1 + R\right)
-   $$
-   where
-   $$
-   R = \frac{g_i}{g_s} \lambda \zeta \rho_d \frac{N_s}{N_i}
-   $$
-   Using the same logic as the previous exercise:
-   $$
-   s[t] = \frac{1}{\lambda} \frac{s[R]}{1 + R}
-   $$
-   with
-   $$
-   \left(\frac{s[R]}{R}\right)^2 =
-   \left(\frac{s[\zeta]}{\zeta}\right)^2 +
-   \left(\frac{s[\rho_d]}{\rho_d}\right)^2 +
-   \left(\frac{s[N_s]}{N_s}\right)^2 +
-   \left(\frac{s[N_i]}{N_i}\right)^2
-   $$
-   where $s[N_s]^2 = N_s$, $s[N_i]^2 = N_i$ and
-   $$
-   \rho_d = \frac{N_d}{A_d} \Rightarrow s[\rho_d]^2 = \frac{N_d}{A^2}
-   $$
-   so that
-   $$
-   \left(\frac{s[R]}{R}\right)^2 = 
-   \frac{1}{N_d} + \frac{1}{N_s} + \frac{1}{N_i} \Rightarrow
-   s[R] = R \sqrt{\left(\frac{s[\zeta]}{\zeta}\right)^2 +
-          \frac{1}{N_d} + \frac{1}{N_s} + \frac{1}{N_i}}
-   $$
-   
-   In \texttt{R}:
-   \fi
-
-   ```{r}
+   # (b) error propagation:
    szeta <- 10e-6
    R <- g*lambda*zeta*rhoD*Ns/Ni
    sR <- R*sqrt((szeta/zeta)^2 + 1/Nd + 1/Ns + 1/Ni)

@@ -16,6 +16,75 @@ We measured the following ^40^K and ^40^Ar concentrations:
    (d) Calculate the age and its standard error using decay constants and
    branching ratios from the notes. Assume that all ^40^Ar is radiogenic.
 
+   \ifsol
+   *By hand:*
+   
+   (a) Calculate the means:
+   \[
+   \bar{K} = \frac{1}{5}(2093 + 2105 + 2055 + 2099 + 2030)\times{10}^{-10} =
+   2076.4\times{10}^{-10}
+   \]
+   \[
+   \bar{Ar} = \frac{1}{6}(6.015 + 6.010 + 6.030 + 6.005 + 6.020 + 6.018)\times{10}^{-10} =
+   6.0163\times{10}^{-10}
+   \]
+
+   (b) Standard deviations:
+   \[
+   s[K] = \frac{1}{4}\left((2093-2076.4)^2 + (2105-2076.4)^2 + (2055-2076.4)^2\right.
+   \]
+   \[
+   \left. + (2099-2076.4)^2 + (2030-2076.4)^2\right)\times{10}^{-10} =
+   32.46\times{10}^{-10}
+   \]
+   \[
+   s[Ar] = \frac{1}{5}\left((6.015-6.0163)^2 + (6.010-6.0163)^2 +
+   (6.030-6.0163)^2 + (6.005-6.0163)^2 \right.
+   \]
+   \[
+    \left. + (6.020-6.0163)^2 + (6.018-6.0163)^2\right)
+    \times{10}^{-10} = 8.641\times{10}^{-12}
+   \]
+   To calculate the standard errors of the means, we divide these
+   values by the square root of the number values:
+   \[
+   s[\bar{K}] = \frac{1}{\sqrt{5}}32.46\times{10}^{-10} = 14.52\times{10}^{-10}
+   \]
+   \[
+   s[\bar{Ar}] = \frac{1}{\sqrt{6}}8.641\times{10}^{-12} = 3.528\times{10}^{-12}
+   \]
+
+   (c) The ^40^Ar/^40^K-ratio:
+   \[
+   R = \frac{\bar{Ar}}{\bar{K}} = \frac{6.0163}{2076.4} = 2.8975\times{10}^{-3}
+   \]
+   Its standard error, using the error propagation formula for a quotient:
+   \[
+   s[R] = 2.8975\times{10}^{-3} \sqrt{
+   \left(\frac{14.52}{2076.4}\right)^2 +
+   \left(\frac{0.003528}{6.0163}\right)^2
+   } = 2.0333\times{10}^{-5}
+   \]
+
+   (d) Calculating the age:
+   \[
+   t = \frac{1}{\lambda}\ln\left(1+R\frac{\lambda}{\lambda_e}\right) = 
+   \frac{1}{0.00055305}\ln\left(1+2.8975\times{10}^{-3}/0.1072\right) = 48.2\mbox{~Ma}
+   \]
+   and its standard error:
+   \[
+   s[t] = \frac{1}{\lambda}\frac{s[R]\lambda/\lambda_e}{1+R\lambda/\lambda_e} =
+   \frac{1}{0.00055305}
+   \frac{
+   2.0333\times{10}^{-5}/0.1072
+   }{
+   (1+2.8975\times{10}^{-3}/0.1072)
+   } = 0.333\mbox{~Ma}
+   \]
+   
+   *Using R:*
+   \fi
+
    ```{r}
    # (a) Calculating the means:
    K40 <- c(2093,2105,2055,2099,2030)

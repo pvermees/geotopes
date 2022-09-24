@@ -11,16 +11,25 @@ characterised by the same closure temperature?
    knitr::kable(difftab)
    ```
    \ifsol
+   *By hand:*
+   
    According to Dodson's equation, closure temperature
    is a function of $r^2 \times dT/dt$. Calculating this
    product for the given data:
+
+   |      |  |  |  |  |  |  |
+   |------|--|--|--|--|--|--|
+   | r (micron) | 50 | 200 | 100 | 400 | 200 | 100 |
+   | dT/dt (K/Myr) | 40 | 5 | 50 | 5 | 10 | 20 |
+   | r^2^$\times$ dT/dt ($\times{10}^5$) | 1 | **2** | 5 | 8 | 4 | **2** |
+
+   This leads to the conclusion that the second and the sixth samples
+   have the same closure temperature.
+   
+   *Using R:*
    \fi
    ```{r}
    r <- c(50,200,100,400,200,100)
    dTdt <- C/(r^2)
    print(dTdt*r^2)
    ```
-   \ifsol
-   This leads to the conclusion that the second and the sixth samples
-   have the same closure temperature.
-   \fi

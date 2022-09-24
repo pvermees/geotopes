@@ -17,6 +17,85 @@ apatite data:
    | density of apatite | 3.19 g/cm^3^ |
    | molar mass of U | 238.03 g/mol |
 
+
+   \ifsol
+   *By hand:*
+
+   Recalling Equation 7.8 of the notes:
+   \[
+   t = \frac{1}{\lambda}
+   \ln\left(\frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g_s L}+1\right)
+   \]
+   where
+   \[
+   \lambda = 1.55125\times{10}^{-4}\mbox{~Myr}^{-1}\mbox{,~}
+   \lambda_f = 8.46\times{10}^{-11}\mbox{~Myr}^{-1}\mbox{,~and~}
+   \rho_s = \frac{49}{5000\mbox{\textmu{m}}^2} =
+   9.8\times{10}^{-3}\mbox{~\textmu{m}}^{-2}
+   \]
+   To calculate the ^238^U concentration in atoms per \textmu{m}^2^,
+   we first convert the ^238^U concentration from ppm to
+   \textmu{mol}/g:
+   \[
+   \frac{10\mbox{~\textmu{g} U/g}}{238.03\mbox{~\textmu{g}/\textmu{mol} U}} =
+   0.042\mbox{~\textmu{mol U}/g}
+   \]
+   Converting to atoms U/\textmu{m}m^3^:
+   \[
+   0.042\mbox{~\textmu{mol U}/g} \times
+   6.022\times{10}^{17}\mbox{~atoms/\textmu{mol}} \times
+   3.19\mbox{~g/cm}^{3} \times 10^{-12}\mbox{cm}^3/\mbox{\textmu{m}}^3 =
+   80700\mbox{~atoms U/\textmu{m}}^3
+   \]
+   Converting to atoms ^238^U/\textmu{m}m^3^:
+   \[
+   [^{238}\mbox{U}] = 80700 \frac{137.818}{138.818} = 80120\mbox{~atoms/\textmu{m}}^3
+   \]
+   Let
+   \[
+   t = \frac{1}{\lambda}\ln\left(1+R\right)
+   \]
+   with
+   \[
+   R = \frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g_s L}
+   \]
+   then
+   \[
+   R = \frac{1.55125\times{10}^{-4}}{8.46\times{10}^{-11}}
+   \frac{9.8\times{10}^{-3}}{80120 \times 1 \times 15} = 0.01495
+   \]
+   so that
+   \[
+   t = \frac{1}{1.55125\times{10}^{-4}}\ln\left(1+0.01495\right) = 95.7\mbox{~Ma}
+   \]
+   To propagate the uncertainties:
+   \[
+   s[t] = \frac{1}{\lambda}\frac{s[R]}{1+R}
+   \]
+   where
+   \[
+   s[R] = \frac{\lambda}{\lambda_f}\frac{s[\rho_s]}{[^{238}U] g_s L}
+   \]
+   with
+   \[
+   s[\rho_s] = \frac{\sqrt{49}}{5000\mbox{\textmu{m}}^2} =
+   1.4\times{10}^{-3}\mbox{~\textmu{m}}^{-2}
+   \]
+   so that
+   \[
+   s[R] = \frac{1.55125\times{10}^{-4}}{8.46\times{10}^{-11}}
+   \frac{1.4\times{10}^{-3}}{80120 \times 1 \times 15} = 0.00213603
+   \]
+   and hence
+   \[
+   s[t] =
+   \frac{1}{1.55125\times{10}^{-4}}\frac{0.00213603}{1+0.01495} =
+   13.6\mbox{~Ma}
+   \]
+   
+   *Using R:*
+   \fi
+
    ```{r}
    Ns <- 49        # dimensionless
    A <- 5000       # micron^2
