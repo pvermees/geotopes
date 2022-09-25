@@ -2,7 +2,6 @@ Although U-series disequilibrium measurements were historically
 done by $\alpha$-counting, in recent decades this method has been
 replaced by mass spectrometry. Consider the following composition of
 three cogenetic aliquots:
-
    ```{r include=FALSE}
    tThU <- 50
    A02i <- 0.5
@@ -28,36 +27,72 @@ three cogenetic aliquots:
    knitr::kable(tabThU)
    ```
    How old is the rock?
+
+   \ifsol
+   *By hand:*
+
+   (1) Convert the U and Th concentrations from ppm to activities
+   [\textmu{mol}/(g.yr)]:
+   \[
+   A[^{238}\mbox{U}] =
+   \frac{\mbox{ppm U}}{238.03\mbox{~\textmu{g}/\textmu{mol}}}
+   \frac{137.818}{138.818}\lambda_{238},
+   \]
+   \[
+   A[^{232}\mbox{Th}] =
+   \frac{\mbox{ppm Th}}{232.04\mbox{~\textmu{g}/\textmu{mol}}}\lambda_{238}
+   \]
+   and
+   \[
+   A[^{230}\mbox{Th}]/A[^{232}\mbox{Th}] =
+   \frac{^{230}\mbox{Th}}{^{232}\mbox{Th}}
+   \frac{\lambda_{230}}{\lambda_{232}}
+   \]
+   
+   which gives:
+   
+   | A[$^{238}$U] [\textmu{mol}/(g.yr)] | A[$^{232}$Th] [\textmu{mol}/(g.yr)] | A[$^{230}$Th]/A[$^{232}$Th] |
+   |-----------|-------|-------|
+   | $\frac{2}{238.03}\frac{137.818}{138.818}1.55125\times{10}^{-10} = 1.29$ | $\frac{5}{232.04}4.95\times{10}^{-11} = 1.067$ | $\frac{917050}{4.95}5.107\times{10}^{-6} = 0.946$ |
+   | $\frac{2}{238.03}\frac{137.818}{138.818}1.55125\times{10}^{-10} = 2.59$ | $\frac{3}{232.04}4.95\times{10}^{-11} = 0.640$ | $\frac{917050}{4.95}10.727\times{10}^{-6} = 1.987$ |
+   | $\frac{2}{238.03}\frac{137.818}{138.818}1.55125\times{10}^{-10} = 3.24$ | $\frac{3}{232.04}4.95\times{10}^{-11} = 0.640$ | $\frac{917050}{4.95}12.734\times{10}^{-6} = 2.359$ |
+
+   (2) Plot the activity ratios on an isochron plot (see the graphical
+   output of the R code below) and determine the slope of the best fit
+   line.  This can either be done by least squares regression using
+   R's \texttt{lm()} function, or (because the fit is perfect in this
+   synthetic example), by hand using any two aliquots:
+
+   \[
+   \mbox{slope} = \frac{2.359-0.946}{(3.24/0.640)-(1.29/1.067)} = 0.367
+   \]
+
+   (3) Calculate the ^230^Th/U-age:
+   \[
+   t = -\ln(1-\mbox{slope})/\lambda_{230} = -\ln(1-0.367)/0.0091705 = 50\mbox{~ka}
+   \]
+
+   *Using R:*
+   \fi
+
    ```{r out.width='50%'}
    # store the data into three variables Uppm, Thppm, Th02
    # 1. convert Uppm and Thppm to activities:
    l238 <- 1.55125e-7 # kyr-1
    l232 <- 4.95e-8 # kyr-1
+   l230 <- 0.0091705 # kyr-1
    MU <- 238.03
    MTh <- 232.04
-   U238mumolg <- (Uppm/MU)*(137.818/138.818)
-   Th232mumolg <- Thppm/MTh
-   AU238 <- U238mumolg*l238
-   ATh232 <- Th232mumolg*l232
-   # (inspect the activities in relatable units):
-   Navog <- 6.022e23
-   AU238dpmg <- AU238*Navog/(1e3*365*24*60) # dpm per gram
-   ATh232dpmg <- ATh232*Navog/(1e3*365*24*60) # dpm per gram
-   message('A(U238)=',paste0(signif(AU238dpmg,6),', '),' dpm/g')
-   message('A(Th232)=',paste0(signif(ATh232dpmg,6),', '),' dpm/g')
-   # 2. compute the activity ratios:
-   A82 <- AU238/ATh232
-   Th230mumolg <- Th232mumolg*Th02
-   l230 <- 0.0091705 # kyr-1
-   ATh230 <- Th230mumolg*l230
-   ATh230dpmg <- ATh230*Navog/(1e3*365*24*60) # dpm per gram
-   message('A(Th230)=',paste0(signif(ATh230dpmg,6),', '),' dpm/g')
-   A02 <- ATh230/ATh232
-   # 3. plot on an isochron diagram and find the slope:
+   A238 <- (Uppm/MU)*(137.818/138.818)*l238
+   A232 <- (Thppm/MTh)*l232
+   message('A(U238)=',paste0(signif(A238,6),', '),' mol/(g.kyr)')
+   message('A(Th232)=',paste0(signif(A232,6),', '),' mol/(g.kyr)')
+   # 2. plot on an isochron diagram and find the slope:
+   A82 <- A238/A232
+   A02 <- Th02*l230/l232
    plot(x=A82,y=A02,type='b',xlab='U238/Th232',ylab='Th230/Th232')
    slope <- lm(A02 ~ A82)$coefficients[2]
-   # verify that this equals diff(A02)/diff(A82)
-   # 5. compute the age:
+   # 3. compute the age:
    tThU <- -log(1-slope)/l230
    message('the Th/U-age is ',signif(tThU,3),'ka')
    ```

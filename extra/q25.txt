@@ -1,27 +1,63 @@
 In the absence of initial ^230^Th, Equation 9.4 of the notes can be
 written as:
 
-   $$
-   A\left[^{230}Th\right] = A\left[^{238}U\right] \left( 1 - e^{-\lambda_{230}t}\right)
-   $$
+   \[
+   A\left[^{230}Th\right] = A\left[^{238}U\right] \left( 1 - \exp[-\lambda_{230}t]\right)
+   \]
 
    As explained in the FAQ document on Moodle, this equation is an
    approximation of the following formula:
 
-   $$
-   A\left[^{230}Th\right] = A\left[^{238}U\right] \frac{\lambda_{230} -\lambda_{238}}{\lambda_{230}}
-   \left( 1 - e^{\left[\lambda_{238}-\lambda_{230}\right]t } \right)
-   $$
+   \[
+   A\left[^{230}Th\right] =
+   A\left[^{238}U\right] \frac{\lambda_{230} -\lambda_{238}}{\lambda_{230}}
+   \left( 1 - \exp[\left(\lambda_{238}-\lambda_{230}\right)t ] \right)
+   \]
 
    Assess the accuracy of the approximation for $t=50$kyr. Note: the
    half-lives of ^238^U and ^230^Th are 4.468 Gyr and 75.38 kyr,
    respectively.
 
+   \ifsol
+   *By hand:*
+   
+   Calculate the decay constants of ^238^U and ^230^Th:
+   \[
+   \lambda_{238} =
+   \ln(2)/4.468\times{10}^6\mbox{~kyr} = 1.5513\times{10}^{-7}\mbox{~kyr}^{-1}
+   \mbox{~and~}
+   \ln(2)/75.38\mbox{~kyr} = 9.195\times{10}^{-3}\mbox{~kyr}^{-1}
+   \]
+   Predict the ^230^Th/^238^U activity ratio using the approximate formula:
+   \[
+   \frac{A\left[^{230}Th\right]}{A\left[^{238}U\right]} =
+   1 - \exp[-\lambda_{230}t] =
+   1 - \exp[-9.195\times{10}^{-3} \times 50] = 0.3685585
+   \]
+   and again using the exact formula:
+   \[
+   \frac{A\left[^{230}Th\right]}{A\left[^{238}U\right]} =
+   \frac{\lambda_{230} -\lambda_{238}}{\lambda_{230}}
+   \left( 1 - \exp[\left(\lambda_{238}-\lambda_{230}\right)t ] \right)
+   \]
+   \[
+   = \frac{9.195\times{10}^{-3} - 1.5513\times{10}^{-7}}{9.195\times{10}^{-3}}
+   \left( 1 - \exp[\left(1.5513\times{10}^{-7}-9.195\times{10}^{-3}\right) 50 ] \right)
+   = 0.3685474
+   \]
+   The difference between these two estimates is:
+   \[
+   \frac{0.3685585-0.3685474}{0.3685585} = 3.01\times{10}^{-5} = 0.00301\%
+   \]
+
+   *Using R:*
+   \fi
+
    ```{r}
    l238 <- log(2)/4468e3
    l230 <- log(2)/75.38
-   A238 <- 1 # arbitrary value
-   A230_approx <- A238*(1-exp(-l230*t1))
-   A230_exact <- A238*((l230-l238)/l230)*(1-exp((l238-l230)*t1))
-   A230_approx/A230_exact
+   tt <- 50
+   A08_approx <- 1-exp(-l230*tt)
+   A08_exact <- ((l230-l238)/l230)*(1-exp((l238-l230)*tt))
+   (A08_approx-A08_exact)/A08_approx
    ```

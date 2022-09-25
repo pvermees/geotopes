@@ -5,11 +5,19 @@ measured a ^234^U/^238^U activity ratio of 1.1 in a 1 Ma old
 speleothem. What was its _initial_ ^234^U/^238^U-ratio?
 
    \ifsol
+   *By hand:*
+
    Rearrange Equation 9.3 of the notes for $\gamma_\circ$:
-   $$
+   \[
    \gamma_\circ = 1 + \left(\frac{A(^{234}U)}{A(^{238}U)} - 1\right)
-                  e^{\lambda_{234}t}
-   $$
+                  \exp[\lambda_{234}t]
+   \]
+   Plugging in the parameter values:	
+   \[
+   \gamma_\circ = 1 + \left(1.1 - 1\right)\exp[0.00282206 \times 1000] = 2.68\mbox{~ka}
+   \]
+
+   *Using R:*
    \fi
    ```{r}
    tU48 <- 1000 # ka
