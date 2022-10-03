@@ -25,46 +25,46 @@ evolution(ThU2,transform=TRUE)
 
 evolution(ThU2,transform=TRUE,xlim=c(100,250),ylim=c(1,1.2))
 
-evolution(ThU1,detritus=1)
+evolution(ThU1,Th0i=1)
 
 ThU2b <- read.data('ThU2.csv',method='Th-U',
-                   format=2,Th02=c(1,0.1))
-evolution(ThU2b,detritus=2)
+                   format=2,Th02i=c(1,0.1))
+evolution(ThU2b,Th0i=3)
 
 ThU2c <- read.data('ThU2.csv',method='Th-U',format=2,
                    Th02U48=c(1,0.02,2,0.1,1,0.1,0,0,0))
-evolution(ThU2c,detritus=3)
+evolution(ThU2c,Th0i=2)
 
 evolution(ThU3)
 
 evolution(ThU1,isochron=TRUE,model=1,exterr=TRUE)
 
-evolution(ThU1,alpha=0.14,levels=ThU1$x[,'U238Th232'],
+evolution(ThU1,oerr=4,levels=ThU1$x[,'U238Th232'],
           clabel='U/Th',ellipse.fill=
           cm.colors(n=10,alpha=0.5),ellipse.stroke='orange')
 
-age(ThU1,detritus=1)
+age(ThU1,Th0i=1)
 
 ThU2b <- read.data('ThU2.csv',method='Th-U',
-                   format=2,Th02=c(1,0.1))
-age(ThU2b,detritus=2)
+                   format=2,Th02i=c(1,0.1))
+age(ThU2b,Th0i=3)
 
 ThU2c <- read.data('ThU2.csv',method='Th-U',format=2,
                    Th02U48=c(1,0.02,2,0.1,1,0.1,0,0,0))
-age(ThU2c,detritus=3)
+age(ThU2c,Th0i=2)
 
 ThU3b <- read.data('ThU3.csv',method='Th-U',
-                   format=3,Th02=c(1,0))
-age(ThU3b,i2i=FALSE)
+                   format=3,Th02i=c(1,0))
+age(ThU3b,Th0i=0)
 
-age(ThU3,i2i=TRUE)
+age(ThU3,Th0i=1)
 
 radialplot(ThU1,show.numbers=TRUE,
-           col='blue',detrital=0,omit=1)
+           col='blue',Th0i=0,omit=1)
 
-weightedmean(ThU2c,detritus=3,ranked=TRUE)
+weightedmean(ThU2c,Th0i=2,ranked=TRUE)
 
-kde(ThU3,i2i=TRUE,log=TRUE,from=120,
+kde(ThU3,Th0i=1,log=TRUE,from=120,
     to=200,bw=0.05,binwidth=0.05)
 
-cad(ThU3b,i2i=FALSE)
+cad(ThU3b,Th0i=0)

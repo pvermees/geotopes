@@ -47,7 +47,7 @@ concordia(UPb1,tlim=c(300,3000))
 
 concordia(UPb1,type=2,xlim=c(10,30),ylim=c(0.05,0.06))
 
-concordia(UPb1,alpha=0.14)
+concordia(UPb1,oerr=1)
 
 ThU <- UPb3$x[,'Th232U238']
 concordia(UPb3,levels=ThU,type=2,
@@ -107,7 +107,7 @@ par(oldpar)
 
 ThU <- UPb3$x[,'Th232U238']
 fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),
-                ylim=c(0,0.6),alpha=0.05,exterr=TRUE,
+                ylim=c(0,0.6),exterr=TRUE,
                 sigdig=3,show.numbers=TRUE,
                 levels=ThU,ellipse.fill=c('white','red'),
                 ellipse.stroke='blue',clabel='Th/U')
@@ -123,7 +123,7 @@ radialplot(UPb2,common.Pb=2,cutoff.disc=dscf)
 
 oldpar <- par(cex=0.9) # font magnification
 radialplot(UPb3,show.numbers=TRUE,exterr=TRUE,from=5,z0=30,to=150,
-           pch=21,alpha=0.05,bg=c('white','red'),cex=2,
+           pch=21,bg=c('white','red'),cex=2,
            levels=UPb3$x[,'Th232U238'],clabel='Th/U')
 par(oldpar)
 
@@ -132,10 +132,12 @@ weightedmean(UPb1)
 dscf <- discfilter(option=5,before=FALSE,cutoff=c(-2,7))
 weightedmean(UPb2,type=2,common.Pb=2,cutoff.disc=dscf)
 
+settings('alpha',0.02)
 weightedmean(UPb3,random.effects=TRUE,detect.outliers=TRUE,
              outlier.col='red',ranked=TRUE,from=-10,to=110,
-             alpha=0.02,sigdig=1,levels=UPb3$x[,'Th232U238'],
+             oerr=3,sigdig=1,levels=UPb3$x[,'Th232U238'],
              rect.col=rev(topo.colors(n=100)),clabel='Th/U')
+settings('alpha',0.05)
 
 dscf <- discfilter(option=4,before=FALSE,cutoff=c(-1,5))
 kde(UPb2,common.Pb=2,type=2,cutoff.disc=dscf)

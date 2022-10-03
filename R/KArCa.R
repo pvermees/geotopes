@@ -17,8 +17,7 @@ isochron(ArAr,inverse=FALSE,exterr=FALSE)
 isochron(KCa,inverse=TRUE)
 
 isochron(KCa,inverse=TRUE,exterr=FALSE,show.numbers=TRUE,
-         xlim=c(0,2),ylim=c(0,0.02),alpha=0.5,
-         ellipse.fill=rgb(0.5,1,0.5,0.2))
+         xlim=c(0,2),ylim=c(0,0.02),ellipse.fill=rgb(0.5,1,0.5,0.2))
 
 age(ArAr,i2i=TRUE)
 

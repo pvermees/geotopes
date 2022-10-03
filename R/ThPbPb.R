@@ -12,10 +12,12 @@ isochron(PbPb,inverse=FALSE,growth=TRUE)
 PbPb2 <- read.data('Kamber.csv',method='Pb-Pb',format=1)
 isochron(PbPb2,growth=TRUE)
 
+settings('alpha',0.01)
 isochron(PbPb,exterr=TRUE,show.numbers=TRUE,
          xlim=c(0,0.03),ylim=c(0,0.75),
-         alpha=0.01,sigdig=3,ellipse.fill=NA,
+         oerr=3,sigdig=3,ellipse.fill=NA,
          ellipse.stroke="red")
+settings('alpha',0.05)
 
 age(PbPb,isochron=FALSE,common.Pb=2,i=2)
 

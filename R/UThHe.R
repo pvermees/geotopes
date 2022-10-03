@@ -16,7 +16,7 @@ helioplot(UThHe,show.central.comp=TRUE)
 
 helioplot(UThHe,model=3)
 
-helioplot(UThHe,alpha=0.61,sigdig=3)
+helioplot(UThHe,oerr=1,sigdig=3)
 
 helioplot(UThHe,logratio=TRUE,xlim=c(3,5),ylim=c(3,5))
 
