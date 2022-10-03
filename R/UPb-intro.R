@@ -1,4 +1,4 @@
-setwd('~/Documents/IsoplotR/')
+setwd('~/Documents/geotopes/R/')
 
 # 1. load the data
 smp <- read.csv("91500.csv",header=TRUE)

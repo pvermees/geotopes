@@ -1,8 +1,8 @@
 library(IsoplotR)
 
 UPb1 <- read.data('UPb1.csv',method='U-Pb',format=1)
-UPb2 <- read.data('UPb6c.csv',method='U-Pb',format=6,ierr=3)
-UPb3 <- read.data('UPb8d.csv',method='U-Pb',format=8,ierr=4)
+UPb2 <- read.data('UPb6b.csv',method='U-Pb',format=6,ierr=3)
+UPb3 <- read.data('UPb8b.csv',method='U-Pb',format=8,ierr=4)
 
 settings('iratio','U238U235',137.88,0)
 settings('lambda','U238',0.000154993,0.00000013)

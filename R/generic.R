@@ -18,12 +18,13 @@ radialplot(data1,transformation='sqrt')
 
 radialplot(data1,k='auto')
 
-radialplot(data1,k='min',from=10,to=200,z0=18.27,
-           alpha=0.01,sigdig=3)
+radialplot(data1,k='min',from=10,to=200,z0=18.27,oerr=1,sigdig=3)
 
 radialplot(data1,pch=23)
 
-radialplot(data1,alpha=0.01)
+settings('alpha',0.01)
+radialplot(data1,oerr=3)
+settings('alpha',0.05)
 
 radialplot(data1,sigdig=3)
 
@@ -47,7 +48,7 @@ isochron(data2,show.numbers=TRUE)
 isochron(data2,model=2,xlim=c(0,300),ylim=c(0,1500))
 
 oldpar <- par(cex=1.1)
-isochron(data2,alpha=0.01,sigdig=4)
+isochron(data2,oerr=5,sigdig=4)
 par(oldpar)
 
 isochron(data2,levels=data2[,5],clabel='rho',
@@ -59,7 +60,7 @@ weightedmean(data3,detect.outliers=FALSE,outlier.col='red')
 
 weightedmean(data3,ranked=TRUE)
 
-weightedmean(data3,from=220,to=280,alpha=0.1,sigdig=1,
+weightedmean(data3,from=220,to=280,oerr=4,sigdig=1,
              rect.col='#FF000080',outlier.col=NA)
 
 agespectrum(data4)
