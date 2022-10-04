@@ -192,7 +192,7 @@ de <- c(8.46319657,1.86649249,-0.07321272,12.75171960,-12.72951972,
 dd <- d + de
 d3 <- cbind(dd,2)
 weightedmean(d3,random.effects=FALSE,detect.outliers=FALSE)
-isochron(RbSr,model=1)
+isochron(RbSr,model=1,exterr=TRUE)
 dev.off()
 
 dat <- read.data('Ludwig.csv',method='other')
@@ -688,9 +688,10 @@ dev.off()
 
 cairo(file='~/Documents/temp/WtdMeanModel1vsRandomEffects.pdf',height=3.5,width=7)
 pars(mfrow=c(1,2),mar=c(3,3,3,1))
-weightedmean(examples$ArAr,hide=1,exterr=TRUE)
+weightedmean(examples$ArAr,hide=1,exterr=TRUE,detect.outliers=FALSE)
 legend('topleft',legend='a)',bty='n')
-weightedmean(examples$ArAr,hide=1,random.effects=TRUE,exterr=TRUE)
+weightedmean(examples$ArAr,hide=1,random.effects=TRUE,
+             exterr=TRUE,detect.outliers=FALSE)
 legend('topleft',legend='b)',bty='n')
 dev.off()
 

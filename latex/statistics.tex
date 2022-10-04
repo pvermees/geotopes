@@ -1017,7 +1017,7 @@ the following form:
 \tau = \hat{\tau} \pm x (\mid y)
 \]
 
-\noindent where
+\noindent where (if systematic errors are omitted):
 
 \begin{description}
 \item[$x$] $= f \times s[\hat{\tau}]$ is either reported at one
@@ -1025,10 +1025,13 @@ the following form:
   $100(1-\alpha)$\% confidence interval ($f$ = the $1-\alpha/2$
   quantile of a standard normal distribution), in absolute or relative
   (\%) units.
-\item[$y$] $= t_{df,1-\alpha/2} \sqrt{MSWD} \times s[\hat{\theta}]$ is
-  the uncertainty for $\hat{\tau}$, adjusted for overdispersion. This
-  value is only reported for model-1 fits when the p-value of the
-  chi-square test is less than 0.05.
+\item[$y$] $= g \sqrt{MSWD} \times s[\hat{\tau}]$ is the uncertainty
+  for $\hat{\tau}$, adjusted for overdispersion. This value is only
+  reported for model-1 fits when the p-value of the chi-square test is
+  less than $\alpha$. $g=f$ if uncertainties are requested at one
+  ($f=1$) or two ($f=2$) standard errors; $g=t_{df,1-\alpha/2}$ if
+  uncertainties are requested as $100(1-\alpha)$\% confidence
+  intervals.
 \end{description}
 
 \noindent\begin{minipage}[t][][b]{.6\textwidth}
@@ -1039,7 +1042,7 @@ the following form:
     and b) Rb--Sr isochron (Figure~\ref{fig:isochronMSWD}c) regression
     using a model-1 fit. The legend reports the best fit age and
     uncertainties reported as absolute `2-sigma' errors without and
-    with overdispersion.}
+    with overdispersion. Uncertainties include decay constant errors.}
   \label{fig:model-1}
 \end{minipage}
 

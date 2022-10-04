@@ -18,9 +18,11 @@ radialplot(data1,transformation='sqrt')
 
 radialplot(data1,k='auto')
 
-radialplot(data1,k='min',from=10,to=200,z0=18.27,oerr=1,sigdig=3)
+radialplot(data1,k='min',from=10,to=200,z0=18.28)
 
 radialplot(data1,pch=23)
+
+radialplot(data1,pch=23,oerr=1)
 
 settings('alpha',0.01)
 radialplot(data1,oerr=3)
@@ -33,7 +35,8 @@ radialplot(data1,bg='blue')
 relerr <- data1[,2]/data1[,1]
 radialplot(data1,levels=relerr,bg=c('white','red'))
 
-radialplot(data1,levels=relerr,bg=c('white','red'),clabel='s[t]/t')
+radialplot(data1,levels=relerr,
+           bg=c('white','red'),clabel='s[t]/t')
 
 oldpar <- par(cex=0.5)
 radialplot(data1,cex=2)
@@ -52,7 +55,8 @@ isochron(data2,oerr=5,sigdig=4)
 par(oldpar)
 
 isochron(data2,levels=data2[,5],clabel='rho',
-         ellipse.fill=topo.colors(n=100),ellipse.stroke='red')
+         ellipse.fill=topo.colors(n=100),
+         ellipse.stroke='red')
 
 weightedmean(data3,random.effects=FALSE)
 
