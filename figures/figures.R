@@ -737,7 +737,7 @@ dev.off()
 cairo(file='~/Documents/temp/2DUPbisochron.pdf',height=4,width=9)
 pars(mar=c(2.4,2.7,3,1),mfrow=c(1,2))
 set.seed(1)
-d <- diseq(U48=list(x=5,option=1),
+d <- diseq(U48=list(x=10,option=1),
            ThU=list(x=0,option=1),
            RaU=list(x=0,option=1),
            PaU=list(x=0,option=1))

@@ -1,3 +1,5 @@
+setwd('~/Documents/geotopes/R/')
+
 library(IsoplotR)
 
 UPb1 <- read.data('UPb1.csv',method='U-Pb',format=1)
@@ -105,6 +107,12 @@ isochron(UPb3,type=2,model=1)
 isochron(UPb3,type=3,model=3)
 par(oldpar)
 
+UPb5 <- read.data('UPb5b.csv',method='U-Pb',format=5)
+oldpar <- par(mfrow=c(1,2))
+isochron(UPb5,type=1,joint=FALSE)
+isochron(UPb5,type=2,joint=FALSE)
+par(oldpar)
+
 ThU <- UPb3$x[,'Th232U238']
 fit <- isochron(UPb3,type=3,model=1,xlim=c(0,2000),
                 ylim=c(0,0.6),exterr=TRUE,
@@ -123,8 +131,8 @@ radialplot(UPb2,common.Pb=2,cutoff.disc=dscf)
 
 oldpar <- par(cex=0.9) # font magnification
 radialplot(UPb3,show.numbers=TRUE,exterr=TRUE,from=5,z0=30,to=150,
-           pch=21,bg=c('white','red'),cex=2,
-           levels=UPb3$x[,'Th232U238'],clabel='Th/U')
+           oerr=4,cex=2,bg=c('white','red'),
+           clabel='Th/U',levels=UPb3$x[,'Th232U238'])
 par(oldpar)
 
 weightedmean(UPb1)

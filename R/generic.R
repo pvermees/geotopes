@@ -73,7 +73,8 @@ agespectrum(data4,plateau=FALSE)
 
 agespectrum(data4,random.effects=TRUE)
 
-agespectrum(data4,plateau.col='blue',non.plateau.col='yellow')
+agespectrum(data4,plateau.col='blue',
+            non.plateau.col='yellow')
 
 kde(data5)
 
