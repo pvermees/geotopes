@@ -287,32 +287,38 @@ In both types of evolution diagrams, \texttt{IsoplotR} provides the
 option to project the raw measurements along the best fitting isochron
 line and thereby remove the detrital
 \textsuperscript{230}Th-component. This procedure allows a visual
-assessment of the degree of homogeneity within a dataset, as is
-quantified by the MSWD.\\
+assessment of the degree of homogeneity within a dataset, as
+quantified by the MSWD.\medskip
+
+\noindent
+\includegraphics[width=\linewidth]{../figures/evolution12.pdf}
+\captionof{figure}{The data of Figure~\ref{fig:ThUisochron}
+  visualised on a \textsuperscript{230}Th--U evolution diagram a)
+  showing the raw data with an isochron fit and the inferred
+  authigenic end member composition shown as a white ellipse; and b)
+  showing the data projected along the isochron.  c) shows the
+  projected data in initial
+  \textsuperscript{234}U/\textsuperscript{238}U-activity
+  vs. \textsuperscript{230}Th--U age space.\medskip}
+\label{fig:evolution12}
 
 Neither the U-series evolution diagram nor the
 \textsuperscript{234}U/\textsuperscript{238}U vs. age plot is
 applicable to igneous datasets, in which \textsuperscript{234}U and
 \textsuperscript{238}U are in secular equilibrium.  For such datasets,
 \texttt{IsoplotR} produces an Rosholt type-I style regression plot
-that is decorated with a fanning set of isochron lines.
+that is decorated with a fanning set of isochron lines.\medskip
 
-\noindent\begin{minipage}[t][][b]{.65\linewidth}
-\includegraphics[width=\textwidth]{../figures/evolution.pdf}
+\noindent\begin{minipage}[t][][b]{.7\linewidth}
+\includegraphics[width=\textwidth]{../figures/evolution34.pdf}
 \end{minipage}
-\begin{minipage}[t][][t]{.35\linewidth}
-  \captionof{figure}{The data of Figure~\ref{fig:ThUisochron}
-    visualised on a \textsuperscript{230}Th--U evolution diagram a)
-    showing the raw data with an isochron fit and the inferred
-    authigenic end member composition shown as a white ellipse; and b)
-    showing the data projected along the isochron.  c) shows the
-    projected data in initial
-    \textsuperscript{234}U/\textsuperscript{238}U-activity
-    vs. \textsuperscript{230}Th--U age space.  d) shows
-    \texttt{IsoplotR}'s output for an evolution diagram of data
-    formats 3 and 4. In this case the data are shown in Rosholt type-I
-    space with isochrons shown in salmon red.}
-  \label{fig:evolution}
+\begin{minipage}[t][][t]{.29\linewidth}
+  \captionof{figure}{ An evolution diagram of data formats~3 and 4
+    plots the data in Rosholt type-I space with isochrons shown in
+    salmon red a) without detrital \textsuperscript{230}Th correction;
+    and b) using a whole rock U/Th activity ratio of 2 to estimate the
+    \textsuperscript{230}Th/\textsuperscript{238}U isochron ratios.}
+  \label{fig:evolution34}
 \end{minipage}
 
 \printbibliography[heading=subbibliography]
