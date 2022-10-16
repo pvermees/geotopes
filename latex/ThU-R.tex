@@ -145,7 +145,7 @@ isochron(ThU1,type=3,model=1,y0option=2)
 All the other isochron options are as in the generic regression
 function of Section~\ref{sec:OtherRegression}.
 
-\section{Evolution diagrams}
+\section{Evolution diagrams}\label{sec:evolution}
 
 Th--U diagrams also work differently for formats~1 and 2 than they do
 for formats~3 and 4.
@@ -358,11 +358,11 @@ function behaves in a slightly different way for Th--U formats~1 and
 
   \begin{enumerate}
   
-  \item \begin{minipage}[t]{.4\linewidth}
+  \item \begin{minipage}[t]{.35\linewidth}
     \strut\vspace*{-\baselineskip}\newline
     \includegraphics[width=\linewidth]{../figures/ThUdetritalisochroncorr.png}
   \end{minipage}
-    \begin{minipage}[t]{.6\linewidth}
+    \begin{minipage}[t]{.65\linewidth}
       A second option is to use the inferred detrital
       \textsuperscript{230}Th/\textsuperscript{232}Th-ratio obtained
       by three-dimensional (model-1) isochron regression.
@@ -386,7 +386,7 @@ age(ThU2b,Th0i=2)
 \noindent where \texttt{ThU2b} (as defined above) contains the
 measured composition of the detritus.
 
-\item \begin{minipage}[t]{.7\linewidth}
+\item\begin{minipage}[t]{.7\linewidth}
     \strut\vspace*{-\baselineskip}\newline
     \includegraphics[width=\linewidth]{../figures/ThUinitialThassumed.png}
   \end{minipage}
@@ -412,34 +412,33 @@ age(ThU2c,Th0i=3)
 
   \begin{enumerate}
 
-\item\begin{minipage}[t]{.7\linewidth}
+  \item\begin{minipage}[t]{.35\linewidth}
     \strut\vspace*{-\baselineskip}\newline
-    \includegraphics[width=\linewidth]{../figures/ThUformat34initial02.png}
+    \includegraphics[width=\linewidth]{../figures/ThUdetritalisochroncorr.png}
   \end{minipage}
-    \begin{minipage}[t]{.3\linewidth}
-      A nominal detrital Th-correction requires the initial
+    \begin{minipage}[t]{.65\linewidth}
+      The initial
       \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio
-      of the rock.\\
-    \end{minipage}    
+      can be inferred by isochron regression.\\
+    \end{minipage}
 
-\begin{script}
-ThU3b <- read.data('ThU3.csv',method='Th-U',format=3,Th02=c(1,0))
-age(ThU3b,i2i=FALSE)
-\end{script}
-
-    
-\item\begin{minipage}[t]{.7\linewidth}
-    \strut\vspace*{-\baselineskip}\newline
-    \includegraphics[width=\linewidth]{../figures/ThUi2i.png}
-  \end{minipage}
-    \begin{minipage}[t]{.3\linewidth}
-      Alternatively, the initial
-      \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio
-      can also be inferred by isochron regression.\\
-    \end{minipage}    
+    Or, from the CLI:
 
 \begin{console}
-age(ThU3,i2i=TRUE)
+age(ThU3,ThU0i=1)
+\end{console}
+    
+\item Alternatively, the inherited \textsuperscript{230}Th-correction
+  can be inferred from the
+  \textsuperscript{238}U/\textsuperscript{232}Th-activity ratio of the
+  whole rock:\medskip
+
+  \noindent\includegraphics[width=.9\linewidth]{../figures/ThUformat34initial02.png}
+
+From the CLI, using the data from Section~\ref{sec:evolution}:
+  
+\begin{console}
+age(ThU3b,ThU0i=2)
 \end{console}
 
   \end{enumerate}
@@ -462,7 +461,7 @@ CLI examples:
   colour:
   
 \begin{console}
-radialplot(ThU1,show.numbers=TRUE,col='blue',detrital=0,omit=1)
+radialplot(ThU1,show.numbers=TRUE,col='blue',Th0i=0,omit=1)
 \end{console}
 
 \item A ranked weighted mean plot of carbonate Th--U data whose
@@ -480,15 +479,15 @@ weightedmean(ThU2b,Th0i=2,ranked=TRUE)
   kernel bandwidth and histogram bin width of 5\%:
 
 \begin{console}
-kde(ThU3,i2i=TRUE,log=TRUE,from=120,to=200,bw=0.05,binwidth=0.05)
+kde(ThU3,Th0i=1,log=TRUE,from=120,to=200,bw=0.05,binwidth=0.05)
 \end{console}
 
 \item A CAD of volcanic Th--U measurements whose initial
-  \textsuperscript{230}Th component was removed using a nominal
-  \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio:
+  \textsuperscript{230}Th component was removed using the whole rock
+  \textsuperscript{238}U/\textsuperscript{232}Th-activity ratio:
 
 \begin{console}
-cad(ThU3b,i2i=FALSE)
+cad(ThU3b,Th0i=2)
 \end{console}
   
 \end{enumerate}

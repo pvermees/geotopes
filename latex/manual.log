@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  15 OCT 2022 17:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  16 OCT 2022 09:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6252,12 +6252,7 @@ File: ../figures/ThUdetritalisochroncorr.png Graphic file (type png)
 <use ../figures/ThUdetritalisochroncorr.png>
 Package pdftex.def Info: ../figures/ThUdetritalisochroncorr.png  used on input 
 line 363.
-(pdftex.def)             Requested size: 172.49501pt x 65.39755pt.
-
-Underfull \hbox (badness 3679) in paragraph at lines 366--369
-[]\OT1/cmr/m/n/10.95 A sec-ond op-tion is to use the in-ferred de-tri-
- []
-
+(pdftex.def)             Requested size: 150.93806pt x 57.22542pt.
 
 Overfull \hbox (2.43332pt too wide) in paragraph at lines 361--370
 [][] [] 
@@ -6309,22 +6304,11 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 389--398
 [][] [] 
  []
 
-<../figures/ThUformat34initial02.png, id=5462, 793.96625pt x 91.34125pt>
-File: ../figures/ThUformat34initial02.png Graphic file (type png)
-<use ../figures/ThUformat34initial02.png>
-Package pdftex.def Info: ../figures/ThUformat34initial02.png  used on input lin
-e 417.
-(pdftex.def)             Requested size: 301.86955pt x 34.72815pt.
-
-Underfull \hbox (badness 4132) in paragraph at lines 420--423
-[]\OT1/cmr/m/n/10.95 A nom-i-nal de-tri-tal Th-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 420--423
-\OT1/cmr/m/n/10.95 tial $[]$Th/$[]$Th-activity
- []
-
+File: ../figures/ThUdetritalisochroncorr.png Graphic file (type png)
+<use ../figures/ThUdetritalisochroncorr.png>
+Package pdftex.def Info: ../figures/ThUdetritalisochroncorr.png  used on input 
+line 417.
+(pdftex.def)             Requested size: 150.93806pt x 57.22542pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 420--423
 
@@ -6335,35 +6319,15 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 415--424
 [][] [] 
  []
 
-<../figures/ThUi2i.png, id=5463, 793.96625pt x 36.135pt>
-File: ../figures/ThUi2i.png Graphic file (type png)
-<use ../figures/ThUi2i.png>
-Package pdftex.def Info: ../figures/ThUi2i.png  used on input line 433.
-(pdftex.def)             Requested size: 301.86955pt x 13.73859pt.
-
-Underfull \hbox (badness 4013) in paragraph at lines 436--439
-[]\OT1/cmr/m/n/10.95 Alternatively, the ini-tial
- []
-
-
-Underfull \hbox (badness 2165) in paragraph at lines 436--439
-\OT1/cmr/m/n/10.95 can also be in-ferred by
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 436--439
-
- []
-
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 431--440
-[][] [] 
- []
-
-[189 <../figures/ThUformat34initial02.png> <../figures/ThUi2i.png>]
-Package biblatex Info: Reference section=0 on input line 498.
-)
-(./detrital-R.tex
+<../figures/ThUformat34initial02.png, id=5462, 879.285pt x 105.39375pt>
+File: ../figures/ThUformat34initial02.png Graphic file (type png)
+<use ../figures/ThUformat34initial02.png>
+Package pdftex.def Info: ../figures/ThUformat34initial02.png  used on input lin
+e 436.
+(pdftex.def)             Requested size: 388.11707pt x 46.51973pt.
+[189 <../figures/ThUformat34initial02.png>]
+Package biblatex Info: Reference section=0 on input line 497.
+) (./detrital-R.tex
 \c@blx@maxsegment@22=\count475
 \c@blx@sectionciteorder@22=\count476
 Package biblatex Info: Reference section=22 on input line 1.
@@ -6377,7 +6341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<../figures/detritalInputTable.png, id=5486, 1296.845pt x 119.44624pt>
+<../figures/detritalInputTable.png, id=5485, 1296.845pt x 119.44624pt>
 File: ../figures/detritalInputTable.png Graphic file (type png)
 <use ../figures/detritalInputTable.png>
 Package pdftex.def Info: ../figures/detritalInputTable.png  used on input line 
@@ -6393,7 +6357,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
 
-<../figures/detritalInputTableWithoutNames.png, id=5487, 1294.8375pt x 89.33376
+<../figures/detritalInputTableWithoutNames.png, id=5486, 1294.8375pt x 89.33376
 pt>
 File: ../figures/detritalInputTableWithoutNames.png Graphic file (type png)
 <use ../figures/detritalInputTableWithoutNames.png>
@@ -6405,7 +6369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-<../figures/detritalOmit.png, id=5488, 569.12625pt x 49.18375pt>
+<../figures/detritalOmit.png, id=5487, 569.12625pt x 49.18375pt>
 File: ../figures/detritalOmit.png Graphic file (type png)
 <use ../figures/detritalOmit.png>
 Package pdftex.def Info: ../figures/detritalOmit.png  used on input line 30.
@@ -6415,7 +6379,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 28--36
 [] [] 
  []
 
-<../figures/detritalKDElimits.png, id=5489, 511.9125pt x 78.2925pt>
+<../figures/detritalKDElimits.png, id=5488, 511.9125pt x 78.2925pt>
 File: ../figures/detritalKDElimits.png Graphic file (type png)
 <use ../figures/detritalKDElimits.png>
 Package pdftex.def Info: ../figures/detritalKDElimits.png  used on input line 5
@@ -6430,7 +6394,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 49--56
 
  <../figures/detritalInputTable.png> <../figures/detritalInputTableWithoutNames
 .png> <../figures/detritalOmit.png> <../figures/detritalKDElimits.png>]
-<../figures/detritalKDElogscale.png, id=5499, 509.905pt x 105.39375pt>
+<../figures/detritalKDElogscale.png, id=5498, 509.905pt x 105.39375pt>
 File: ../figures/detritalKDElogscale.png Graphic file (type png)
 <use ../figures/detritalKDElogscale.png>
 Package pdftex.def Info: ../figures/detritalKDElogscale.png  used on input line
@@ -6441,7 +6405,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 66--74
 [] [] 
  []
 
-<../figures/detritalKDEsamebandwidth.png, id=5501, 460.72125pt x 36.135pt>
+<../figures/detritalKDEsamebandwidth.png, id=5500, 460.72125pt x 36.135pt>
 File: ../figures/detritalKDEsamebandwidth.png Graphic file (type png)
 <use ../figures/detritalKDEsamebandwidth.png>
 Package pdftex.def Info: ../figures/detritalKDEsamebandwidth.png  used on input
@@ -6452,7 +6416,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 85--93
 [] [] 
  []
 
-<../figures/detritalKDEcustombandwidth.png, id=5504, 510.90875pt x 78.2925pt>
+<../figures/detritalKDEcustombandwidth.png, id=5503, 510.90875pt x 78.2925pt>
 File: ../figures/detritalKDEcustombandwidth.png Graphic file (type png)
 <use ../figures/detritalKDEcustombandwidth.png>
 Package pdftex.def Info: ../figures/detritalKDEcustombandwidth.png  used on inp
@@ -6463,7 +6427,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 102--110
 [] [] 
  []
 
-<../figures/detritalrug.png, id=5505, 211.79124pt x 34.1275pt>
+<../figures/detritalrug.png, id=5504, 211.79124pt x 34.1275pt>
 File: ../figures/detritalrug.png Graphic file (type png)
 <use ../figures/detritalrug.png>
 Package pdftex.def Info: ../figures/detritalrug.png  used on input line 119.
@@ -6473,7 +6437,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 117--125
 [][] [] 
  []
 
-<../figures/detritalKDEnormalise.png, id=5506, 455.7025pt x 37.13875pt>
+<../figures/detritalKDEnormalise.png, id=5505, 455.7025pt x 37.13875pt>
 File: ../figures/detritalKDEnormalise.png Graphic file (type png)
 <use ../figures/detritalKDEnormalise.png>
 Package pdftex.def Info: ../figures/detritalKDEnormalise.png  used on input lin
@@ -6484,7 +6448,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 134--142
 [] [] 
  []
 
-<../figures/detritalKDEadaptive.png, id=5508, 231.86626pt x 36.135pt>
+<../figures/detritalKDEadaptive.png, id=5507, 231.86626pt x 36.135pt>
 File: ../figures/detritalKDEadaptive.png Graphic file (type png)
 <use ../figures/detritalKDEadaptive.png>
 Package pdftex.def Info: ../figures/detritalKDEadaptive.png  used on input line
@@ -6503,7 +6467,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--173
 [192 <../figures/detritalKDElogscale.png> <../figures/detritalKDEsamebandwidth.
 png> <../figures/detritalKDEcustombandwidth.png> <../figures/detritalrug.png> <
 ../figures/detritalKDEnormalise.png> <../figures/detritalKDEadaptive.png>]
-<../figures/detritalCADcol.png, id=5528, 344.28625pt x 143.53625pt>
+<../figures/detritalCADcol.png, id=5527, 344.28625pt x 143.53625pt>
 File: ../figures/detritalCADcol.png Graphic file (type png)
 <use ../figures/detritalCADcol.png>
 Package pdftex.def Info: ../figures/detritalCADcol.png  used on input line 176.
@@ -6514,7 +6478,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 174--183
 [] [] 
  []
 
-<../figures/detritalMDSclassical.png, id=5530, 231.86626pt x 36.135pt>
+<../figures/detritalMDSclassical.png, id=5529, 231.86626pt x 36.135pt>
 File: ../figures/detritalMDSclassical.png Graphic file (type png)
 <use ../figures/detritalMDSclassical.png>
 Package pdftex.def Info: ../figures/detritalMDSclassical.png  used on input lin
@@ -6525,7 +6489,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 195--204
 [] [] 
  []
 
-<../figures/detritalMDSshepard.png, id=5531, 230.8625pt x 90.3375pt>
+<../figures/detritalMDSshepard.png, id=5530, 230.8625pt x 90.3375pt>
 File: ../figures/detritalMDSshepard.png Graphic file (type png)
 <use ../figures/detritalMDSshepard.png>
 Package pdftex.def Info: ../figures/detritalMDSshepard.png  used on input line 
@@ -6536,7 +6500,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 209--217
 [][] [] 
  []
 
-<../figures/detritalMDSnnlines.png, id=5534, 411.5375pt x 37.13875pt>
+<../figures/detritalMDSnnlines.png, id=5533, 411.5375pt x 37.13875pt>
 File: ../figures/detritalMDSnnlines.png Graphic file (type png)
 <use ../figures/detritalMDSnnlines.png>
 Package pdftex.def Info: ../figures/detritalMDSnnlines.png  used on input line 
@@ -6547,7 +6511,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 227--235
 [] [] 
  []
 
-<../figures/detritalMDSotheroptions.png, id=5535, 555.07375pt x 228.855pt>
+<../figures/detritalMDSotheroptions.png, id=5534, 555.07375pt x 228.855pt>
 File: ../figures/detritalMDSotheroptions.png Graphic file (type png)
 <use ../figures/detritalMDSotheroptions.png>
 Package pdftex.def Info: ../figures/detritalMDSotheroptions.png  used on input 
@@ -6651,10 +6615,10 @@ Package logreq Info: Writing requests to 'manual.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26387 strings out of 478287
- 487893 string characters out of 5849288
- 1022545 words of memory out of 5000000
- 42410 multiletter control sequences out of 15000+600000
+ 26381 strings out of 478287
+ 487741 string characters out of 5849288
+ 1022538 words of memory out of 5000000
+ 42405 multiletter control sequences out of 15000+600000
  491997 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,17n,77p,2201b,2102s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -6699,10 +6663,10 @@ ublic/cbfonts/grxn1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cb
 fonts/grxn1440.pfb></usr/share/texmf/fonts/type1/public/lm/lmb10.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on manual.pdf (211 pages, 5468295 bytes).
+Output written on manual.pdf (211 pages, 5463494 bytes).
 PDF statistics:
- 6362 PDF objects out of 7423 (max. 8388607)
- 4923 compressed objects within 50 object streams
+ 6361 PDF objects out of 7423 (max. 8388607)
+ 4924 compressed objects within 50 object streams
  1432 named destinations out of 1440 (max. 500000)
- 2667 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2662 words of extra memory for PDF output out of 10000 (max. 10000000)
 
