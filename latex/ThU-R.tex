@@ -219,43 +219,23 @@ evolution(ThU2,transform=TRUE,xlim=c(100,250),ylim=c(1,1.2))
     \end{minipage}
 
 \begin{console}
-evolution(ThU1,detritus=1)
+evolution(ThU1,Th0i=1)
 \end{console}
 
-  \item \begin{minipage}[t]{.7\linewidth}
-    \strut\vspace*{-\baselineskip}\newline
-    \includegraphics[width=\linewidth]{../figures/ThUinitialThassumed.png}
-  \end{minipage}
-    \begin{minipage}[t]{.3\linewidth}
-      A nominal detrital Th-correction requires the initial
-      \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio
-      of the detritus.\\
-    \end{minipage}
-
-    At the CLI, the initial
-    \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio
-    must be provided to \texttt{IsoplotR} via the \texttt{read.data()}
-    function:
-
-\begin{script}
-ThU2b <- read.data('ThU2.csv',method='Th-U',format=2,Th02=c(1,0.1))
-evolution(ThU2b,detritus=2)
-\end{script}
-
-\item Finally, the third way to correct for detrital
-  \textsuperscript{230}Th is to measure the present day
+\item A second way to correct for detrital \textsuperscript{230}Th is
+  to measure the present day
   \textsuperscript{230}Th--\textsuperscript{232}Th--\textsuperscript{234}U--\textsuperscript{238}U
   activities of the detritus:\\
 
   \noindent\includegraphics[width=\linewidth]{../figures/ThUmeasureddetritus.png}\\
 
- Again, the CLI accommodates these measurements via the
- \texttt{read.data()} function:
+At the CLI, the activity ratio measurements must be provided to
+\texttt{IsoplotR} via the \texttt{read.data()} function:
 
 \begin{script}
-ThU2c <- read.data('ThU2.csv',method='Th-U',format=2,
+ThU2b <- read.data('ThU2.csv',method='Th-U',format=2,
                    Th02U48=c(1,0.02,2,0.1,1,0.1,0,0,0))
-evolution(ThU2c,detritus=3)
+evolution(ThU2b,Th0i=1)
 \end{script}
 
 \noindent where \texttt{Th02U48} contains the measured composition of
@@ -265,6 +245,25 @@ the detritus, expressed as a 9-element vector containing the
 \textsuperscript{234}U/\textsuperscript{238}U activity ratios and
 their standard errors, as well as the error correlations between them.
 
+  \item \begin{minipage}[t]{.7\linewidth}
+    \strut\vspace*{-\baselineskip}\newline
+    \includegraphics[width=\linewidth]{../figures/ThUinitialThassumed.png}
+  \end{minipage}
+    \begin{minipage}[t]{.3\linewidth}
+      Finally, a nominal detrital Th-correction requires the initial
+      \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio
+      of the detritus.\\
+    \end{minipage}
+
+    Again, the
+    \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio is
+    provided to the CLI via the \texttt{read.data()} function:
+    
+\begin{script}
+ThU2c <- read.data('ThU2.csv',method='Th-U',format=2,Th02=c(1,0.1))
+evolution(ThU2c,Th0i=3)
+\end{script}
+
 \end{enumerate}
 
 \item For Th--U formats~3 and 4, the evolution plot is simply a
@@ -273,6 +272,30 @@ their standard errors, as well as the error correlations between them.
 \begin{console}
 evolution(ThU3)
 \end{console}
+
+By default this assumes that the (igneous) rock contained no initial
+\textsuperscript{230}Th. This assumption can be changed using the
+optional \texttt{Th0i} argument. To estimate the initial
+\textsuperscript{230}Th/\textsuperscript{238}U activity ratios by
+isochron regression:
+
+\begin{console}
+evolution(ThU3,Th0i=1)
+\end{console}
+
+\noindent and to estimate initial
+\textsuperscript{230}Th/\textsuperscript{238}U activity ratios by
+assuming fractionation from a magma source whose
+\textsuperscript{232}Th/\textsuperscript{238}U activity ratio is
+represented by the measured whole rock composition:
+
+\begin{console}
+ThU3b <- read.data('ThU3.csv',method='Th-U',format=3,U8Th2=2)
+evolution(ThU3b,Th0i=2)
+\end{console}
+
+\noindent where \texttt{U8Th2=2} represents a whole rock
+\textsuperscript{232}Th/\textsuperscript{238}U activity ratio of 2.
 
 \item For all four Th--U formats, the isochron fit can be projected
   onto the evolution diagram.\\
@@ -346,43 +369,39 @@ function behaves in a slightly different way for Th--U formats~1 and
     \end{minipage}
 
 \begin{console}
-age(ThU1,detritus=1)
+age(ThU1,Th0i=1)
 \end{console}
+
+\item A second way to correct for detrital \textsuperscript{230}Th is
+  to measure the present day
+  \textsuperscript{230}Th--\textsuperscript{232}Th--\textsuperscript{234}U--\textsuperscript{238}U
+  activities of the detritus:\\
+
+  \noindent\includegraphics[width=\linewidth]{../figures/ThUmeasureddetritus.png}\\
+
+\begin{script}
+age(ThU2b,Th0i=2)
+\end{script}
+
+\noindent where \texttt{ThU2b} (as defined above) contains the
+measured composition of the detritus.
 
 \item \begin{minipage}[t]{.7\linewidth}
     \strut\vspace*{-\baselineskip}\newline
     \includegraphics[width=\linewidth]{../figures/ThUinitialThassumed.png}
   \end{minipage}
     \begin{minipage}[t]{.3\linewidth}
-      A nominal detrital Th-correction requires the initial
+      Finally, a nominal detrital Th-correction requires the initial
       \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio
       of the detritus.\\
     \end{minipage}
 
-    At the CLI, the initial
-    \textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio
-    must be provided to \texttt{IsoplotR} via the \texttt{read.data()}
-    function:
+At the CLI, the initial
+\textsuperscript{230}Th/\textsuperscript{232}Th-activity ratio must be
+provided to \texttt{IsoplotR} via the \texttt{read.data()} function:
 
 \begin{script}
-ThU2b <- read.data('ThU2.csv',method='Th-U',format=2,Th02=c(1,0.1))
-age(ThU2b,detritus=2)
-\end{script}
-
-\item Finally, the third way to correct for detrital
-  \textsuperscript{230}Th is to measure the present day
-  \textsuperscript{230}Th--\textsuperscript{232}Th--\textsuperscript{234}U--\textsuperscript{238}U
-  activities of the detritus:\\
-
-  \noindent\includegraphics[width=\linewidth]{../figures/ThUmeasureddetritus.png}\\
-
- Again, the CLI accommodates these measurements via the
- \texttt{read.data()} function:
-
-\begin{script}
-ThU2c <- read.data('ThU2.csv',method='Th-U',format=2,
-                   Th02U48=c(1,0.02,2,0.1,1,0.1,0,0,0))
-age(ThU2c,detritus=3)
+age(ThU2c,Th0i=3)
 \end{script}
 
 \end{enumerate}
@@ -452,7 +471,7 @@ radialplot(ThU1,show.numbers=TRUE,col='blue',detrital=0,omit=1)
   \textsuperscript{234}U and \textsuperscript{238}U activities:
 
 \begin{console}
-weightedmean(ThU2c,detritus=3,ranked=TRUE)
+weightedmean(ThU2b,Th0i=2,ranked=TRUE)
 \end{console}
 
 \item A KDE of volcanic Th--U measurements whose initial

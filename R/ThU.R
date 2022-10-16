@@ -17,6 +17,8 @@ isochron(ThU3,type=2)
 
 isochron(ThU1,type=3,model=3)
 
+isochron(ThU1,type=3,model=1,y0option=1)
+
 evolution(ThU2)
 
 evolution(ThU2,xlim=c(0.2,1.2),ylim=c(0.5,1.5))
@@ -27,15 +29,21 @@ evolution(ThU2,transform=TRUE,xlim=c(100,250),ylim=c(1,1.2))
 
 evolution(ThU1,Th0i=1)
 
-ThU2b <- read.data('ThU2.csv',method='Th-U',
-                   format=2,Th02i=c(1,0.1))
-evolution(ThU2b,Th0i=3)
-
-ThU2c <- read.data('ThU2.csv',method='Th-U',format=2,
+ThU2b <- read.data('ThU2.csv',method='Th-U',format=2,
                    Th02U48=c(1,0.02,2,0.1,1,0.1,0,0,0))
-evolution(ThU2c,Th0i=2)
+evolution(ThU2b,Th0i=2)
+
+ThU2c <- read.data('ThU2.csv',method='Th-U',
+                   format=2,Th02i=c(1,0.1))
+evolution(ThU2c,Th0i=3)
 
 evolution(ThU3)
+
+evolution(ThU3b,Th0i=1)
+
+ThU3b <- read.data('ThU3.csv',method='Th-U',
+                   format=3,U8Th2=2)
+evolution(ThU3b,Th0i=2)
 
 evolution(ThU1,isochron=TRUE,model=1,exterr=TRUE)
 
@@ -45,17 +53,9 @@ evolution(ThU1,oerr=4,levels=ThU1$x[,'U238Th232'],
 
 age(ThU1,Th0i=1)
 
-ThU2b <- read.data('ThU2.csv',method='Th-U',
-                   format=2,Th02i=c(1,0.1))
-age(ThU2b,Th0i=3)
+age(ThU2b,Th0i=2)
 
-ThU2c <- read.data('ThU2.csv',method='Th-U',format=2,
-                   Th02U48=c(1,0.02,2,0.1,1,0.1,0,0,0))
-age(ThU2c,Th0i=2)
-
-ThU3b <- read.data('ThU3.csv',method='Th-U',
-                   format=3,Th02i=c(1,0))
-age(ThU3b,Th0i=0)
+age(ThU2c,Th0i=3)
 
 age(ThU3,Th0i=1)
 

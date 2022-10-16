@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  12 OCT 2022 20:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  15 OCT 2022 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6141,12 +6141,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 194--202
 [] [] 
  []
 
-<../figures/ThUdetritalisochroncorr.png, id=5425, 452.69125pt x 141.52875pt>
+<../figures/ThUdetritalisochroncorr.png, id=5425, 394.47375pt x 149.55875pt>
 File: ../figures/ThUdetritalisochroncorr.png Graphic file (type png)
 <use ../figures/ThUdetritalisochroncorr.png>
 Package pdftex.def Info: ../figures/ThUdetritalisochroncorr.png  used on input 
 line 213.
-(pdftex.def)             Requested size: 172.49501pt x 53.92833pt.
+(pdftex.def)             Requested size: 172.49501pt x 65.39755pt.
 
 Underfull \hbox (badness 7415) in paragraph at lines 216--219
 []\OT1/cmr/m/n/10.95 A first op-tion is to use the in-ferred de-tri-
@@ -6157,52 +6157,65 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 211--220
 [][] [] 
  []
 
-<../figures/ThUinitialThassumed.png, id=5426, 818.05624pt x 87.32625pt>
-File: ../figures/ThUinitialThassumed.png Graphic file (type png)
-<use ../figures/ThUinitialThassumed.png>
-Package pdftex.def Info: ../figures/ThUinitialThassumed.png  used on input line
- 227.
-(pdftex.def)             Requested size: 301.86955pt x 32.22491pt.
 
-Underfull \hbox (badness 4132) in paragraph at lines 230--233
-[]\OT1/cmr/m/n/10.95 A nom-i-nal de-tri-tal Th-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--233
-\OT1/cmr/m/n/10.95 tial $[]$Th/$[]$Th-activity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--233
+Underfull \hbox (badness 10000) in paragraph at lines 225--229
 
  []
 
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 225--234
-[][] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--249
-
- []
-
-<../figures/ThUmeasureddetritus.png, id=5427, 929.4725pt x 136.51pt>
+<../figures/ThUmeasureddetritus.png, id=5426, 929.4725pt x 136.51pt>
 File: ../figures/ThUmeasureddetritus.png Graphic file (type png)
 <use ../figures/ThUmeasureddetritus.png>
 Package pdftex.def Info: ../figures/ThUmeasureddetritus.png  used on input line
- 250.
+ 230.
 (pdftex.def)             Requested size: 431.24411pt x 63.33484pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
+ []
+
+
+Overfull \hbox (17.85603pt too wide) in paragraph at lines 232--234
+[]\OT1/cmr/m/n/10.95 At the CLI, the ac-tiv-ity ra-tio mea-sure-ments must be p
+ro-vided to \OT1/cmtt/m/n/10.95 IsoplotR \OT1/cmr/m/n/10.95 via the \OT1/cmtt/m
+/n/10.95 read.data()
  []
 
 [186 <../figures/ThUformat12evolutionLimits.png> <../figures/ThUvsAge.png> <../
 figures/ThUvsAgeLimits.png> <../figures/ThUdetritalisochroncorr.png> <../figure
-s/ThUinitialThassumed.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 277--279
+s/ThUmeasureddetritus.png>]
+<../figures/ThUinitialThassumed.png, id=5439, 818.05624pt x 87.32625pt>
+File: ../figures/ThUinitialThassumed.png Graphic file (type png)
+<use ../figures/ThUinitialThassumed.png>
+Package pdftex.def Info: ../figures/ThUinitialThassumed.png  used on input line
+ 250.
+(pdftex.def)             Requested size: 301.86955pt x 32.22491pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+\OT1/cmr/m/n/10.95 Th-correction re-quires
+ []
+
+
+Underfull \hbox (badness 7308) in paragraph at lines 253--256
+\OT1/cmr/m/n/10.95 the ini-tial $[]$Th/$[]$Th-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+\OT1/cmr/m/n/10.95 activity ra-tio of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+
+ []
+
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 248--257
+[][] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
@@ -6210,15 +6223,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--279
 File: ../figures/ThUevolutionIsochron.png Graphic file (type png)
 <use ../figures/ThUevolutionIsochron.png>
 Package pdftex.def Info: ../figures/ThUevolutionIsochron.png  used on input lin
-e 282.
+e 305.
 (pdftex.def)             Requested size: 243.7856pt x 82.46838pt.
 
-Underfull \hbox (badness 1152) in paragraph at lines 285--291
+Underfull \hbox (badness 1152) in paragraph at lines 308--314
 \OT1/cmr/m/n/10.95 the same three fit mod-els as for the
  []
 
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 280--292
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 303--315
 [][] [] 
  []
 
@@ -6226,124 +6239,129 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 280--292
 File: ../figures/ThUevolutionOtherOptions.png Graphic file (type png)
 <use ../figures/ThUevolutionOtherOptions.png>
 Package pdftex.def Info: ../figures/ThUevolutionOtherOptions.png  used on input
- line 299.
+ line 322.
 (pdftex.def)             Requested size: 221.62206pt x 173.55814pt.
 
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 297--308
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 320--331
 [][] [] 
  []
 
-[187 <../figures/ThUmeasureddetritus.png> <../figures/ThUevolutionIsochron.png>
- <../figures/ThUevolutionOtherOptions.png>]
+[187 <../figures/ThUinitialThassumed.png> <../figures/ThUevolutionIsochron.png>
+]
 File: ../figures/ThUdetritalisochroncorr.png Graphic file (type png)
 <use ../figures/ThUdetritalisochroncorr.png>
 Package pdftex.def Info: ../figures/ThUdetritalisochroncorr.png  used on input 
-line 340.
-(pdftex.def)             Requested size: 172.49501pt x 53.92833pt.
+line 363.
+(pdftex.def)             Requested size: 172.49501pt x 65.39755pt.
 
-Underfull \hbox (badness 3679) in paragraph at lines 343--346
+Underfull \hbox (badness 3679) in paragraph at lines 366--369
 []\OT1/cmr/m/n/10.95 A sec-ond op-tion is to use the in-ferred de-tri-
  []
 
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 338--347
-[][] [] 
- []
-
-File: ../figures/ThUinitialThassumed.png Graphic file (type png)
-<use ../figures/ThUinitialThassumed.png>
-Package pdftex.def Info: ../figures/ThUinitialThassumed.png  used on input line
- 354.
-(pdftex.def)             Requested size: 301.86955pt x 32.22491pt.
-
-Underfull \hbox (badness 4132) in paragraph at lines 357--360
-[]\OT1/cmr/m/n/10.95 A nom-i-nal de-tri-tal Th-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--360
-\OT1/cmr/m/n/10.95 tial $[]$Th/$[]$Th-activity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--360
-
- []
-
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 352--361
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 361--370
 [][] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--376
+Underfull \hbox (badness 10000) in paragraph at lines 375--379
 
  []
 
 File: ../figures/ThUmeasureddetritus.png Graphic file (type png)
 <use ../figures/ThUmeasureddetritus.png>
 Package pdftex.def Info: ../figures/ThUmeasureddetritus.png  used on input line
- 377.
+ 380.
 (pdftex.def)             Requested size: 431.24411pt x 63.33484pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
-<../figures/ThUformat34initial02.png, id=5455, 793.96625pt x 91.34125pt>
+[188 <../figures/ThUevolutionOtherOptions.png>]
+File: ../figures/ThUinitialThassumed.png Graphic file (type png)
+<use ../figures/ThUinitialThassumed.png>
+Package pdftex.def Info: ../figures/ThUinitialThassumed.png  used on input line
+ 391.
+(pdftex.def)             Requested size: 301.86955pt x 32.22491pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
+\OT1/cmr/m/n/10.95 Th-correction re-quires
+ []
+
+
+Underfull \hbox (badness 7308) in paragraph at lines 394--397
+\OT1/cmr/m/n/10.95 the ini-tial $[]$Th/$[]$Th-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
+\OT1/cmr/m/n/10.95 activity ra-tio of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
+
+ []
+
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 389--398
+[][] [] 
+ []
+
+<../figures/ThUformat34initial02.png, id=5462, 793.96625pt x 91.34125pt>
 File: ../figures/ThUformat34initial02.png Graphic file (type png)
 <use ../figures/ThUformat34initial02.png>
 Package pdftex.def Info: ../figures/ThUformat34initial02.png  used on input lin
-e 398.
+e 417.
 (pdftex.def)             Requested size: 301.86955pt x 34.72815pt.
 
-Underfull \hbox (badness 4132) in paragraph at lines 401--404
+Underfull \hbox (badness 4132) in paragraph at lines 420--423
 []\OT1/cmr/m/n/10.95 A nom-i-nal de-tri-tal Th-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--404
+Underfull \hbox (badness 10000) in paragraph at lines 420--423
 \OT1/cmr/m/n/10.95 tial $[]$Th/$[]$Th-activity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--404
+Underfull \hbox (badness 10000) in paragraph at lines 420--423
 
  []
 
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 396--405
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 415--424
 [][] [] 
  []
 
-[188]
-<../figures/ThUi2i.png, id=5464, 793.96625pt x 36.135pt>
+<../figures/ThUi2i.png, id=5463, 793.96625pt x 36.135pt>
 File: ../figures/ThUi2i.png Graphic file (type png)
 <use ../figures/ThUi2i.png>
-Package pdftex.def Info: ../figures/ThUi2i.png  used on input line 414.
+Package pdftex.def Info: ../figures/ThUi2i.png  used on input line 433.
 (pdftex.def)             Requested size: 301.86955pt x 13.73859pt.
 
-Underfull \hbox (badness 4013) in paragraph at lines 417--420
+Underfull \hbox (badness 4013) in paragraph at lines 436--439
 []\OT1/cmr/m/n/10.95 Alternatively, the ini-tial
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 417--420
+Underfull \hbox (badness 2165) in paragraph at lines 436--439
 \OT1/cmr/m/n/10.95 can also be in-ferred by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--420
+Underfull \hbox (badness 10000) in paragraph at lines 436--439
 
  []
 
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 412--421
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 431--440
 [][] [] 
  []
 
 [189 <../figures/ThUformat34initial02.png> <../figures/ThUi2i.png>]
-Package biblatex Info: Reference section=0 on input line 479.
+Package biblatex Info: Reference section=0 on input line 498.
 )
 (./detrital-R.tex
 \c@blx@maxsegment@22=\count475
@@ -6626,9 +6644,6 @@ LaTeX Warning: Empty bibliography on input line 730.
 
 Package biblatex Info: Reference section=0 on input line 732.
 ) [210] [211] (./manual.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `manual.out' has not changed.
 (rerunfilecheck)             Checksum: 3E96DA053E7D2CBB9F8E56A4417F8B97;23092.
 Package logreq Info: Writing requests to 'manual.run.xml'.
@@ -6638,7 +6653,7 @@ Package logreq Info: Writing requests to 'manual.run.xml'.
 Here is how much of TeX's memory you used:
  26387 strings out of 478287
  487893 string characters out of 5849288
- 1022537 words of memory out of 5000000
+ 1022545 words of memory out of 5000000
  42410 multiletter control sequences out of 15000+600000
  491997 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -6684,7 +6699,7 @@ ublic/cbfonts/grxn1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cb
 fonts/grxn1440.pfb></usr/share/texmf/fonts/type1/public/lm/lmb10.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on manual.pdf (211 pages, 5467014 bytes).
+Output written on manual.pdf (211 pages, 5468295 bytes).
 PDF statistics:
  6362 PDF objects out of 7423 (max. 8388607)
  4923 compressed objects within 50 object streams
