@@ -1,0 +1,664 @@
+\documentclass{article}
+\usepackage[subtle]{savetrees}
+\usepackage[a4paper, landscape, margin=1.2cm]{geometry}
+\usepackage{amsmath,graphicx,caption,color,upquote,enumitem,multicol}
+\pagestyle{empty}
+\title{Key equations}
+\author{\vspace{-5ex}}
+\date{\vspace{-5ex}}
+\setlength\parindent{0pt}
+\begin{document}
+
+\begin{multicols}{3}
+
+\section{Constants}
+
+\subsection{Molar mass}
+
+H: 1.00794, He: 4.002602, C: 12.0107, O: 15.9994, Al: 26.98154, Si:
+28.0855, K: 39.0983, Ar: 39.948, Ca: 40.078, Rb: 85.4678, Sr: 87.62,
+I: 126.904, Xe: 131.293 Nd: 144.242, Sm: 150.36, Eu:151.964, Lu:
+174.967, Hf: 178.49, W: 183.84, Re: 186.207 Os: 190.23, Pb: 207.2, Th:
+232.03806, U: 238.02891
+
+\subsection{Isotopic ratios}
+
+\begin{tabular}{p{.03\linewidth}p{.9\linewidth}}
+K: & \textsuperscript{40}K/K = 0.01167\% \\
+
+Ar: & \textsuperscript{40}Ar/\textsuperscript{36}Ar (atm) = 298.5;
+\textsuperscript{38}Ar/\textsuperscript{36}Ar = 0.187 \\
+
+Rb: & \textsuperscript{85}Rb/\textsuperscript{87}Rb=2.59337 \\
+
+Sr: & \textsuperscript{84}Sr/\textsuperscript{86}Sr=0.056584;
+\textsuperscript{86}Sr/\textsuperscript{88}Sr=0.1194 \\
+
+Sm: & \textsuperscript{147}Sm/Sm = 14.99\% \\
+
+U: & \textsuperscript{238}U/\textsuperscript{235}U = 137.818; \\
+~ & A(^{234}$U$)/A(^{238}$U$)$[modern ocean] $\approx 1.15$.
+
+\end{tabular}
+
+\subsection{Half-lives and decay constants}
+
+\begin{tabular}{p{.03\linewidth}p{.9\linewidth}}
+C: & t\textsubscript{1/2}(\textsuperscript{14}C) = 5730 yr \\
+
+K: & $\lambda_{\beta^-} = 4.962 \times 10^{-10} \mbox{yr}^{-1}$; 
+$\lambda_{e} = 0.581 \times 10^{-10} \mbox{yr}^{-1}$;
+$t_{1/2}(e+\beta^-)=1.248$ Gyr \\
+
+Rb: & t\textsubscript{1/2}(\textsuperscript{87}Rb) = 48.8 Gyr \\
+
+Sm: & t\textsubscript{1/2}(\textsuperscript{147}Sm) = 106 Gyr \\
+
+U: & t\textsubscript{1/2}(\textsuperscript{238}U) = 4.468 Gyr;
+t\textsubscript{1/2}(\textsuperscript{235}U) = 703.8 Myr;
+t\textsubscript{1/2}(\textsuperscript{234}U) = 245.5 kyr;
+$\lambda_f = 8.46\times{10}^{-17}$yr\textsuperscript{-1}\\
+
+Th: & t\textsubscript{1/2}(\textsuperscript{232}Th) = 14.05 Gyr;
+t\textsubscript{1/2}(\textsuperscript{230}Th) = 75.38 kyr \\
+
+\end{tabular}
+
+\section{Basic notions}
+\label{ch:basic-notions}
+
+\subsection{Radioactivity}
+\label{sec:radioactivity}
+
+The decay equation:
+\begin{equation}
+\frac{dP}{dt} = -\lambda P
+\label{eq:dPdt}
+\end{equation}
+
+Its solution:
+\begin{equation}
+P = P_\circ e^{-\lambda t}
+\label{eq:P}
+\end{equation}
+
+The fundamental age equation:
+\begin{equation}
+t = \frac{1}{\lambda} \ln\left(\frac{D*}{P} + 1\right)
+\label{eq:t}
+\end{equation}
+
+where $D_*$ marks the radiogenic daughter component. Half-life
+vs. decay constant:
+\begin{equation}
+\frac{P_\circ}{2} = P_\circ e^{-\lambda t_{1/2}} 
+\Rightarrow t_{1/2} = \frac{\ln(2)}{\lambda}
+\label{eq:T12}
+\end{equation}
+
+\subsection{Decay series}
+\label{sec:decay-series}
+
+\begin{align}
+\mbox{for~} P &: dP/dt = -\lambda_P P \label{eq:P1}\\
+\mbox{for~} D_1 &: dD_1/dt = \lambda_P P - \lambda_1 D_1 \label{eq:D1}\\
+\mbox{for~} D_* &: dD_*/dt = \lambda_1 D_1 \label{eq:D*}
+\end{align}
+
+Assuming that $D_1=0$ at $t=0$:
+\begin{equation}
+D_1 = \frac{\lambda_P}{\lambda_1 - \lambda_P} P_\circ \left[
+  e^{-\lambda_P t} - e^{-\lambda_1 t}\right]
+\label{eq:ND1}
+\end{equation}
+
+Secular equilibrium:
+\begin{equation}
+D_1 \lambda_1 = P \lambda_P
+\label{eq:ND1L1}
+\end{equation}
+
+or, equivalently:
+\begin{equation}
+\frac{P}{D_1} = \frac{t_{1/2}(P)}{t_{1/2}(D_1)}
+\label{eq:NPND1}
+\end{equation}
+
+\section{Analytical techniques}
+\label{ch:analyticaltechniques}
+
+\subsection{Mass spectrometry}
+\label{sec:mass-specs}
+
+Kinetic energy of single-charged ion of $m$ a.m.u. in a mass
+spectrometer:
+\begin{equation}
+E = e V = \frac{m v^2}{2}
+\label{eq:E}
+\end{equation}
+
+With $e = 1.60219 \times 10^{-19}$C and 1 a.m.u. = 1.660538 $\times
+10^{-27}$kg. The mass analyser deflects the ions according to the
+following equation:
+\begin{equation}
+H e v = \frac{m v^2}{r}
+\label{eq:Hev}
+\end{equation}
+
+from which it follows that:
+\begin{equation}
+r = \frac{1}{H}\sqrt{\frac{2 m V}{e}}
+\label{eq:rH}
+\end{equation}
+
+\subsection{Isotope dilution}
+\label{sec:isotope-dilution}
+
+Will not be part of the exam.
+
+\subsection{Sample-standard bracketing}
+\label{sec:bracketing}
+
+Will not be part of the exam.
+
+\section{Simple parent-daughter pairs}
+\label{ch:intro2PD}
+
+\subsection{$^{14}$C dating}
+\label{sec:14C}
+
+\begin{equation}
+\frac{d^{14}C}{dt} = -\lambda_{14} \times {}^{14}C
+\label{eq:d14Cdt}
+\end{equation}
+
+where $\lambda_{14}$ = 0.120968 kyr$^{-1}$.
+\begin{equation}
+t = -\frac{1}{\lambda_{14}}
+\ln\left[\frac{d{}^{14}C/dt}{(d{}^{14}C/dt)_\circ}\right]
+\label{eq:t14C}
+\end{equation}
+
+\subsection{The Rb-Sr method}
+\label{sec:Rb-Sr}
+
+Ingrowth equation:
+\begin{equation}
+{}^{87}Sr = {}^{87}Sr_\circ + {}^{87}Rb (e^{\lambda_{87} t} - 1)
+\label{eq:87Sr*}
+\end{equation}
+
+where $^{87}Sr_\circ$ is the initial $^{87}$Sr content.
+$^{87}$Rb/$^{86}$Sr-ratio is calculated as:
+\begin{equation}
+\frac{^{87}Rb}{^{86}Sr} =
+\frac{Rb}{Sr} \frac{Ab(^{87}Rb)
+  M(Sr)}{Ab(^{86}Sr) M(Rb)}
+\label{eq:87Rb86Sr}
+\end{equation}
+
+where $Ab(\cdot)$ signifies `abundance'.
+
+\subsection{Isochrons}
+\label{sec:isochrons}
+
+The universal isochron equation:
+\begin{equation}
+\frac{D}{d} = \left(\frac{D}{d}\right)_\circ + \frac{P}{d} (e^{\lambda_{P} t} - 1)
+\label{eq:isochron}
+\end{equation}
+
+where $P$ = the parent isotope, $D$ = the daughter isotope, $d$ = a
+non-radiogenic sister isotope of the radiogenic daughter. For the
+Rb--Sr method:
+\begin{equation}
+\frac{^{87}Sr}{^{86}Sr} =
+\left(\frac{^{87}Sr}{^{86}Sr}\right)_\circ +
+\frac{^{87}Rb}{^{86}Sr} (e^{\lambda_{87} t} - 1)
+\label{eq:87Sr86Sr}
+\end{equation}
+
+\subsection{The Sm-Nd method}
+\label{sec:Sm-Nd}
+
+The age equation:
+\begin{equation}
+^{143}Nd = ^{143}Nd_\circ + {}^{147}Sm (e^{\lambda_{147} t} - 1)
+\label{eq:144Nd*}
+\end{equation}
+
+Isochron equation:
+\begin{equation}
+\frac{^{143}Nd}{^{144}Nd} =
+\left(\frac{^{143}Nd}{^{144}Nd}\right)_{\circ} +
+\frac{^{147}Sm}{^{144}Nd} \left(e^{\lambda_{147}t} -
+1\right)
+\label{eq:143Nd147Nd}
+\end{equation}
+
+\section{The U-Pb system}
+\label{sec:U-Pb}
+
+\begin{equation}
+\begin{array}{rl}
+^{238}U \rightarrow & {}^{206}Pb + 8\alpha + 6\beta + 47\mbox{MeV} \\ 
+^{235}U \rightarrow & {}^{207}Pb + 7\alpha + 4\beta + 45\mbox{MeV} \\
+^{232}Th \rightarrow & {}^{208}Pb + 6\alpha + 4\beta + 40\mbox{MeV} 
+\end{array}
+\label{eq:UThdecay}
+\end{equation}
+
+\section{The U-(Th-)Pb method}
+\label{sec:U-Th-Pb}
+
+Ingrowth equations:
+\begin{equation}
+  \begin{array}{rl}
+    &{}^{206}Pb^* = {}^{238}U \left(e^{\lambda_{238}t} - 1\right)\\ 
+    &{}^{207}Pb^* = {}^{235}U \left(e^{\lambda_{235}t} - 1\right)\\ 
+    &{}^{208}Pb^* = {}^{232}Th \left(e^{\lambda_{232}t} - 1\right)
+  \end{array}
+  \label{eq:Pb*}
+\end{equation}
+
+where ${}^{20x}$Pb$^*$ is the radiogenic ${}^{20x}$Pb component
+(${}^{20x}$Pb = ${}^{20x}$Pb$^*$ + ${}^{20x}$Pb$_\circ$). The
+corresponding age equations are:
+\begin{equation}
+  \begin{array}{rl}
+    t_{206} & = \frac{1}{\lambda_{238}}
+    \ln \left(\frac{{}^{206}Pb^*}{{}^{238}U}+1\right)\\
+    t_{207} & = \frac{1}{\lambda_{235}}
+    \ln \left(\frac{{}^{207}Pb^*}{{}^{235}U}+1\right)\\
+    t_{208} & = \frac{1}{\lambda_{232}}
+    \ln \left(\frac{{}^{208}Pb^*}{{}^{232}Th}+1\right)
+  \end{array}
+  \label{eq:tPb*}
+\end{equation}
+
+with common Pb correction:
+\begin{equation}
+\begin{array}{c}
+  t_{206}=\frac{1}{\lambda_{238}}\ln\left(\frac{\left(\frac{^{206}Pb}{^{204}Pb}\right)-
+    \left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ}{\frac{^{238}U}{^{204}Pb}}+1\right)\\
+  t_{207}=\frac{1}{\lambda_{235}}\ln\left(\frac{\left(\frac{^{207}Pb}{^{204}Pb}\right)-
+    \left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ}{\frac{^{235}U}{^{204}Pb}}+1\right)\\
+  t_{208}=\frac{1}{\lambda_{232}}\ln\left(\frac{\left(\frac{^{208}Pb}{^{204}Pb}\right)-
+    \left(\frac{^{208}Pb}{^{204}Pb}\right)_\circ}{\frac{^{232}Th}{^{204}Pb}}+1\right)
+\end{array}
+\label{eq:tPb}
+\end{equation}
+
+\subsection{The Pb-Pb method}
+\label{sec:Pb-Pb}
+
+Age equation:
+\begin{equation}
+\frac{^{207}Pb^*}{^{206}Pb^*} = 
+\frac{\left(\frac{^{207}Pb}{^{204}Pb}\right)-\left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ}
+{\left(\frac{^{206}Pb}{^{204}Pb}\right)-\left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ}
+= \frac{1}{137.818} \frac{e^{\lambda_{235}t}-1}{e^{\lambda_{238}t}-1}
+\label{eq:PbPb}
+\end{equation}
+
+where $^{238}$U/$^{235}$U=137.818. For modern samples:
+\begin{equation}
+  \left(\frac{^{207}Pb}{^{206}Pb}\right)^*_p =
+  \frac{\lambda_{235}}{137.818\lambda_{238}} = 0.04607
+\label{eq:commonPb}
+\end{equation}
+
+\subsection{Concordia}
+\label{sec:intro2concordia}
+
+Wetherill concordia:
+\begin{equation}
+\begin{array}{rl}
+\frac{^{206}Pb^*}{^{238}U} & = e^{\lambda_{238}t}-1 \mbox{~and}\\
+\frac{^{207}Pb^*}{^{235}U} & = e^{\lambda_{235}t}-1
+\end{array}
+\label{eq:wetherill}
+\end{equation}
+
+\begingroup
+\def\svgwidth{.25\textwidth}
+\input{wetherill.pdf_tex}
+\endgroup
+
+\section{The K--Ar system}
+\label{sec:K-Ar}
+
+Ingrowth equation:
+\begin{equation}
+\begin{array}{rl}
+^{40}Ar & = {}^{40}Ar_\circ + {}^{40}Ar^*\\ 
+\mbox{where~} {}^{40}Ar^* & =
+  \frac{\lambda_e}{\lambda} {}^{40}K \left( e^{\lambda t} - 1 \right)
+\end{array}
+\label{eq:Ar}
+\end{equation}
+
+\subsection{K-Ar dating}
+
+Age equation:
+\begin{equation}
+t = \frac{1}{\lambda} \ln\left[ 1 + \frac{\lambda}{\lambda_e}
+  \left(\frac{^{40}Ar^*}{^{40}K}\right) \right]
+\label{eq:K-Ar}
+\end{equation}
+
+Isochron equation:
+\begin{equation}
+\frac{^{40}Ar}{^{36}Ar} = \left(\frac{^{40}Ar}{^{36}Ar}\right)_\circ +
+\frac{\lambda_e}{\lambda} \frac{^{40}K}{^{36}Ar} \left( e^{\lambda t} - 1 \right)
+\label{eq:K-Ar-isochron}
+\end{equation}
+
+\subsection{$^{40}$Ar/$^{39}$Ar dating}
+\label{sec:Ar-Ar}
+
+Sample:
+\begin{equation}
+t_x = \frac{1}{\lambda} \ln\left[
+1 + J \left(\frac{^{40}Ar^*}{^{39}Ar}\right)_x 
+\right]
+\label{eq:Ar-Ar}
+\end{equation}
+
+Standard:
+\begin{equation}
+t_s = \frac{1}{\lambda} \ln\left[
+1 + J \left(\frac{^{40}Ar^*}{^{39}Ar}\right)_s 
+\right]
+\label{eq:J}
+\end{equation}
+
+Age equation:
+\begin{equation}
+\frac{{}^{40}Ar}{{}^{36}Ar} =
+\left(\frac{{}^{40}Ar}{{}^{36}Ar}\right)_\circ +
+\frac{{}^{39}Ar}{{}^{36}Ar}\frac{e^{\lambda t} - 1}{J}
+\label{eq:Ar-Ar-isochron}
+\end{equation}
+
+\section{Thermochronology}
+
+\subsection{The U-Th-He method}
+\label{sec:U-Th-He}
+
+Ingrowth equation:
+\begin{equation}
+\begin{split}
+  \left[^4\mbox{He}\right] = &
+  8 (e^{\lambda_{238}t} - 1) \mbox{[\textsuperscript{238}U]} + 
+  7 (e^{\lambda_{235}t} - 1) \mbox{[\textsuperscript{235}U]} + \\
+  ~ & 6 (e^{\lambda_{232}t} - 1) \mbox{[\textsuperscript{232}Th]} +
+  (e^{\lambda_{147}t} - 1) \mbox{[\textsuperscript{147}Sm]}
+\end{split}
+\label{eq:U-Th-He}
+\end{equation}
+
+where [\textsuperscript{4}He], [\textsuperscript{238}U],
+[\textsuperscript{235}U] [\textsuperscript{232}Th] and
+[\textsuperscript{147}Sm] are concentrations in atoms or moles per
+unit mass or volume.
+
+Fick's Law:
+\begin{equation}
+\frac{\partial C}{\partial t} = D \left(
+\frac{\partial^2C}{\partial x^2} + \frac{\partial^2C}{\partial y^2} +
+\frac{\partial^2C}{\partial z^2}\right)
+\label{eq:fick}
+\end{equation}
+
+Arrhenius equation:
+\begin{equation}
+\ln(D) = \ln(D_\circ) - \frac{E_a}{RT}
+\label{eq:logD}
+\end{equation}
+
+where R = 8.3144621 J/mol.K.\medskip
+
+Closure temperature (assuming that $t \propto 1/T$):
+\begin{equation}
+\frac{E_a}{RT_c} = \ln\left(\frac{ART_c^2D_\circ/r^2}{E_adT/dt}\right)
+\label{eq:Tc}
+\end{equation}
+
+where $A$ = 55 for a sphere, 27 for a cylinder and 8.7 for a plane
+sheet.
+
+\subsection{Fission tracks}
+\label{sec:fission-tracks}
+
+The volume density $n_s$ (in cm$^{-3}$) of fission tracks:
+\begin{equation}
+n_{s} = \frac{\lambda_f}{\lambda} [^{238}U] \left(e^{\lambda t}-1\right)
+\label{eq:Ns}
+\end{equation}
+
+The surface density $\rho_s$ (in cm$^{-2}$):
+\begin{equation}
+\rho_s = g_s L n_s
+\label{eq:rhos}
+\end{equation}
+
+Where $g$\textsubscript{s}=1 for internal and $g$\textsubscript{s}=1/2
+for external surfaces and $L\sim$15\textmu{m} for apatite. Age
+equation:
+\begin{equation}
+t = \frac{1}{\lambda}
+\ln\left(\frac{\lambda}{\lambda_f}\frac{\rho_s}{[^{238}U] g_s L
+}+1\right)
+\label{eq:tFT}
+\end{equation}
+
+External detector method:
+\begin{equation}
+t =
+\frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{\rho_s}{\rho_i}\right)
+\label{eq:tzeta}
+\end{equation}
+
+Arrhenius relationship for fading fission tracks:
+\begin{equation}
+\ln(t) = \frac{E_A}{kT} +
+\ln\left[\ln\left(\frac{\rho_\circ}{\rho}\right)\right] - \ln(C)
+\label{eq:lnt}
+\end{equation}
+
+where $k=8.616\times{10}^{-5}$eV/K.
+
+\section[Cosmogenic Nuclides]{Cosmogenic nuclides}
+\label{sec:cosmo}
+
+Will not be part of the exam.
+
+\section[U-series dating]{U-series disequilibrium}
+\label{ch:intro2Useries}
+
+\subsection{The $^{234}$U-$^{238}$U method}
+\label{sec:234238}
+
+Age equation:
+\begin{equation}
+\frac{A(^{234}U)}{A(^{238}U)} = 1 + [ \gamma_\circ - 1 ] e^{-\lambda_{234}t} 
+\label{eq:A234A238}
+\end{equation}
+
+\subsection{The $^{230}$Th method}
+\label{sec:230}
+
+Ingrowth equation:
+\begin{equation}
+A(^{230}Th) = A(^{230}Th)_\circ e^{-\lambda_{230}t} + A(^{238}U)(1-e^{-\lambda_{230}t})
+\label{eq:A230}
+\end{equation}
+
+Isochron equation:
+\begin{equation}
+  \frac{A(^{230}Th)}{A(^{232}Th)} =
+  \frac{A(^{230}Th)_\circ}{A(^{232}Th)} e^{-\lambda_{230}t} + 
+  \frac{A(^{238}U)}{A(^{232}Th)}(1-e^{-\lambda_{230}t})
+\label{eq:230232}
+\end{equation}
+
+\subsection{The $^{230}$Th-U method}
+\label{sec:230238}
+
+Decay series:
+\begin{align}
+~ & A(^{230}Th) =  A(^{230}Th)^s + A(^{230}Th)^x \label{eq:230total}\\
+\mbox{with:~} & A(^{230}Th)^s = A(^{238}U) (1-e^{-\lambda_{230}t}) \label{eq:230s}\\
+\mbox{and:~} & A(^{230}Th)^x = \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} 
+A(^{234}U)_\circ^x\left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right) \label{eq:230x}
+\end{align}
+
+Age equation:
+\begin{equation}
+  \frac{A(^{230}Th)}{A(^{238}U)} = 1 - e^{-\lambda_{230}t} +
+  \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} (\gamma_\circ-1)
+\left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right)
+\label{eq:230238}
+\end{equation}
+
+If $\gamma_\circ = 1$:
+\begin{equation}
+\frac{A(^{230}Th)}{A(^{238}U)} = 1-e^{-\lambda_{230}t}
+\label{eq:230238b}
+\end{equation}
+
+\section{Error propagation}
+\label{ch:error-propagation}
+
+\subsection{Basic definitions}
+\label{sec:summarystatistics}
+
+Mean:
+\begin{equation}
+\left\{
+\begin{array}{rl}
+\overline{x} \equiv & \frac{1}{n} \sum_{i=1}^{n} x_i\\
+\overline{y} \equiv & \frac{1}{n} \sum_{i=1}^{n} y_i
+\end{array}
+\right.
+\label{eq:mean}
+\end{equation}
+
+Variance:
+\begin{equation}
+\left\{
+\begin{array}{rl}
+s[x]^2 \equiv & \frac{1}{n-1} \sum_{i=1}^{n} (x_i-\overline{x})^2\\
+s[y]^2 \equiv & \frac{1}{n-1} \sum_{i=1}^{n} (y_i-\overline{y})^2
+\end{array}
+\right.
+\label{eq:variance}
+\end{equation}
+
+Covariance:
+\begin{equation}
+s[x,y] \equiv \frac{1}{n-1} \sum_{i=1}^{n} (x_i-\overline{x})(y_i-\overline{y})
+\label{eq:covariance}
+\end{equation}
+
+General equation for the error propagation of a function $t=f(x,y)$:
+\begin{equation}
+s[t]^2 s[x]^2 \left(\frac{\partial f}{\partial x}\right)^2 +
+s[y]^2 \left(\frac{\partial f}{\partial y}\right)^2 +
+2~s[x,y] \frac{\partial f}{\partial x} \frac{\partial f}{\partial y} \label{eq:s2t}
+\end{equation}
+
+In matrix form:
+\begin{equation}
+s[t]^2 = 
+\left[
+\begin{array}{@{}c@{~}c@{}}
+\frac{\partial t}{\partial x}&\frac{\partial t}{\partial y}
+\end{array}
+\right]
+\left[
+\begin{array}{@{}c@{~}c@{}}
+s[x]^2 & s[x,y]\\
+s[x,y] & s[y]^2
+\end{array}
+\right]
+\left[
+\begin{array}{@{}c@{}}
+\frac{\partial t}{\partial x} \\
+\frac{\partial t}{\partial y}
+\end{array}
+\right]
+\label{eq:s2tmatrix}
+\end{equation}
+
+\subsection{Examples}
+
+Let $x$ and $y$ indicate measured quantities associated with
+analytical uncertainty.  And let $a$ and $b$ be some error free
+parameters.
+\begin{enumerate}
+\item{addition ($t = a x + b y$):}
+\begin{equation}
+  s[t]^2 = a^2 s[x]^2 + b^2 s[y]^2 + 2ab~s[x,y]
+  \label{eq:addition}
+\end{equation}
+
+\item{subtraction ($t = a x - b y$):}
+\begin{equation}
+s[t]^2 = a^2 s[y]^2 + b^2 s[y]^2 - 2ab~s[x,y]
+\label{eq:subtraction}
+\end{equation}
+
+\item{multiplication ($t = a x y$):}
+\begin{equation}
+\left(\frac{s[t]}{t}\right)^2 = \left(\frac{s[x]}{x}\right)^2 + 
+  \left(\frac{s[y]}{y}\right)^2 + 2 \frac{s[x,y]}{x y}
+\label{eq:multiplication}
+\end{equation}
+
+\item{division ($t = a \frac{x}{y}$):}
+\begin{equation}
+  \left(\frac{s[t]}{t}\right)^2 = \left(\frac{s[x]}{x}\right)^2 + 
+  \left(\frac{s[y]}{y}\right)^2 - 2 \frac{s[x,y]}{x y}
+\label{eq:division}
+\end{equation}
+
+\item{exponentiation ($t = a~e^{bx}$):}
+\begin{equation}
+s[t]^2 = (b t)^2 s[x]^2
+\label{eq:exponentiation}
+\end{equation}
+
+\item{logarithms ($t = a~\ln(bx)$):}
+\begin{equation}
+s[t]^2 = a^2 \left(\frac{s[x]}{x}\right)^2
+\label{eq:logarithms}
+\end{equation}
+
+\item{power ($t = a x^b$):}
+\begin{equation}
+\left(\frac{s[t]}{t}\right)^2 = b^2\left(\frac{s[x]}{x}\right)^2
+\label{eq:power}
+\end{equation}
+
+\end{enumerate}
+
+\subsection{Standard error of the mean}
+
+If $cov(x_i,x_j)=0 ~\forall~ i, j$:
+\begin{equation}
+s[\overline{x}]^2 = \frac{1}{n} \sum_{i=1}^{n} s[x_i]^2 =
+\frac{s[x]^2}{n} \Rightarrow s[\overline{x}] = \frac{s[x]}{\sqrt{n}}
+\label{eq:varianceofthemean}
+\end{equation}
+
+\subsection{Poissonian counting statistics}
+
+\begin{equation}
+  s[N]^2 = N
+\end{equation}
+
+\end{multicols}
+
+\end{document}

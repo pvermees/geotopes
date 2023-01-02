@@ -3,7 +3,7 @@ atmosphere is 13.2 disintegrations per minute and per gram (dpm
 g${}^{-1}$) of carbon (initial activity $A_0$). We wish to date an
 Egyptian artefact from approximately 2000 BC. What is the approximate
 activity (A) of this artefact? Suppose that our detector needs signals
-of at least 1~dpm to produce precise results. What mass of the
+of at least 1 dpm to produce precise results. What mass of the
 (probably precious) sample will have to be destroyed?
 
    \ifsol
