@@ -57,7 +57,7 @@ tracks in it?  Look up the relevant decay constants from the notes.
 
    Side note: the tremendous number of $\alpha$-recoil events can
    damage the crystal lattice of apatite and other U-bearing minerals,
-   thereby affecting their diffusivity. This actually affects the
+   thereby affecting their diffusivity. This actually changes the
    closure temperature of apatite, which can therefore vary as a
    function of time and U (and Th) concentration.
 

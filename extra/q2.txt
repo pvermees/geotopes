@@ -1,7 +1,7 @@
 What types of radioactivity are involved in the following
 reactions: ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd,
-${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr, ${}^{231}_{~90}$Th
-$\rightarrow$ ${}^{231}_{89}$Pa?
+${}^{53}_{25}$Mn $\rightarrow$ ${}^{53}_{24}$Cr, ${}^{234}_{~90}$Th
+$\rightarrow$ ${}^{234}_{91}$Pa?
 
    \ifsol
    ${}^{146}_{~62}$Sm $\rightarrow$ ${}^{142}_{60}$Nd: $\alpha$
@@ -11,5 +11,5 @@ $\rightarrow$ ${}^{231}_{89}$Pa?
    is caused by positron emission or by electron capture. It turns out
    that it is electron capture.
 
-   ${}^{231}_{~90}$Th $\rightarrow$ ${}^{231}_{89}$Ra: $\beta^-$
+   ${}^{234}_{~90}$Th $\rightarrow$ ${}^{234}_{91}$Pa: $\beta^-$
    \fi

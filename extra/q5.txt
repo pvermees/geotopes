@@ -16,7 +16,7 @@ of at least 1 dpm to produce precise results. What mass of the
 
    2. Formulating the decay equation:
    \[
-   A = A_0 \exp[-\lambda_{14}t] = 13.2 \exp[-0.000121 \times 4023] = 8.1\mbox{~dpm/g}
+   A = A_0 \exp[-\lambda_{14}t] = 13.2 \exp[-0.000121 \times (2000+2023)] = 8.1\mbox{~dpm/g}
    \]
 
    3. If 1 g produces 8.1 dpm, then 1 dpm requires 1/8.1 = 0.12 g or 120 mg.
@@ -29,7 +29,7 @@ of at least 1 dpm to produce precise results. What mass of the
    t12 <- 5730
    l14 <- log(2)/t12
    BC <- 2000
-   now <- 2022
+   now <- 2023
    age <- now + BC
    A0 <- 13.2
    A <- A0*exp(-l14*age) # dpm/g

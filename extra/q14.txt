@@ -49,14 +49,14 @@ Analysis of a granite yields:
    t(\mbox{bi,RbSr}) = \ln(1+0.0.00645)/0.000013972 = 460\mbox{~Ma}
    \]
 
-   The true age is probably around 550--520 Ma. The reason being that
-   some disruptive phenomenon has affected the region as there is
-   clearly a discordance in ages. The biotite K-Ar system is the most
-   sensitive to resetting and therefore has the youngest age. The most
-   robust of the chronometers is U-Pb on zircon, but it is not perfect
-   and may have also been disturbed in a minor way. But this reasoning
-   is very rough and ready! A more detailed assessment would involve
-   textural analysis, diffusion experiments and numerical modelling.
+   Ranking the chronometers in order of decreasing temperature
+   sensitivity: zircon U-Pb $\rightarrow$ muscovite Rb-Sr
+   $\rightarrow$ biotite Rb-Sr $\rightarrow$ muscovite K-Ar
+   $\rightarrow$ biotite K-Ar. The zircon U-Pb age is closest to the
+   crystallisation age of the rock, and the biotite K-Ar marks the
+   most recent phase of cooling or resetting. A more detailed
+   assessment would involve textural analysis, diffusion experiments
+   and numerical modelling.
 
    *Using R:*
    \fi

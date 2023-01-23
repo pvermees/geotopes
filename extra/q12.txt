@@ -15,19 +15,46 @@ of Solar System history contain measurable amounts of excess of
    \ifsol
    *By hand:*
    
-   Let $[{}^{129}I/{}^{127}I]_\circ$ be the (unknown) ^129^I/^127^I-composition
+   Let $[{}^{129}I/{}^{127}I]_0$ be the (unknown) ^129^I/^127^I-composition
    of the early Solar System, and let $t_A$ and $t_B$ be the ages of the
-   two meteorites (counting from the start of the Solar System). Then
+   two meteorites (counting from the start of the Solar System, $t_S$).
+   Then the initial $[{}^{129}I/{}^{127}I]$-ratios of the two meteorites were:
+   \[
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_A} =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_0\exp[-\lambda_{129}t_A]
+   \]
+   and
+   \[
+   \left[\frac{{}^{129}\mbox{X}}{{}^{127}\mbox{I}}\right]_{t_B} =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_0\exp[-\lambda_{129}t_B]
+   \]
+   Subsequent decay of the ^129^I to ^129^Xe yielded:
    \[
    \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A =
-   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_\circ\exp[-\lambda_{129}t_A]
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_A}
+   \left(1-\exp[-\lambda_{129}(t_S-t_A)]\right)
    \]
    and
    \[
    \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_B =
-   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_\circ\exp[-\lambda_{129}t_B]
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_B}
+   \left(1-\exp[-\lambda_{129}(t_S-t_B)]\right)
    \]
-   The ratio of the two ratios is:
+   Because $t_S$ is many orders of magnitude greater than the half-life of
+   ^129^I, these equations simplify to:
+   \[
+   \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_A} =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_0\exp[-\lambda_{129}t_A]
+   \]
+   and
+   \[
+   \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_B =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_B} =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_0\exp[-\lambda_{129}t_B]
+   \]
+   In other words, all the ^129^I that was present in the meteorites at $t_A$ and
+   $t_B$ has turned into ^129^Xe. The ratio of the last two equations is:
    \[
    \frac{\left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A}
    {\left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_B} =

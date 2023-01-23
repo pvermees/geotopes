@@ -34,7 +34,6 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    *By hand:*
    
    1. Atmospheric correction of the standard:
-   
    \[
    \left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{std}
    = \frac{
@@ -63,7 +62,6 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    However, because the linear fit of this synthetic dataset
    is perfect, you can also calculate it manually using any
    pair of aliquots. For example:
-   
    \[
    \left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{std} =
    \mbox{slope} = \frac{7869-820}{160-10} = 47.0
@@ -75,8 +73,7 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    = 820 - 10 \times \mbox{slope} = 350
    \]
    
-   3. Compute the age of the standard:
-   
+   3. Compute the age of the sample:
    \[
    t_{smp} = \frac{1}{\lambda_{40}}
    \ln\left[

@@ -50,6 +50,8 @@ The present-day ^238^U/^235^U-ratio is 137.818. What is the expected
    \frac{N_{207}}{N_{206}} = \frac{0.9846}{0.1551 \times 137.818} = 0.0461
    \]
 
+   which derives Equation 5.7 of the notes.
+
    *Using R:*
    \fi
 
