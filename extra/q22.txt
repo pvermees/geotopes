@@ -5,8 +5,9 @@ measured directly by Laser Ablation Inductively Coupled Mass
 Spectrometry (LA-ICP-MS), the same technique that is also used for
 in-situ U-Pb geochronology. Using LA-ICP-MS, it is possible to compute
 fission track ages using Equation 7.8 of the notes. Calculate the
-fission track age and propagate its uncertainty for the following
-apatite data:
+fission track age and propagate its uncertainty (assuming that only
+track count is subject to analytical error) for the following apatite
+data:
 
    | parameter | value |
    |-----------|-------|

@@ -1,3 +1,6 @@
+# replace with your own working directory:
+setwd('~/Documents/geotopes/R/')
+
 intercepts <- function(dat){
     out <- rep(0,3)
     names(out) <- c('Ar36','Ar39','Ar40')

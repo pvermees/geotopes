@@ -1,8 +1,8 @@
 idir <- '/home/pvermees/Documents/geotopes/extra/'
 odir <- '/home/pvermees/Desktop/GEOL0017/'
 
-solution <- FALSE
-results <- FALSE
+solution <- TRUE
+results <- TRUE
 multidoc <- FALSE
 randomise <- FALSE
 

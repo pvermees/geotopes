@@ -10,7 +10,7 @@ does that correspond to?
    \[
    10\mbox{~ppm Rb} =
    10~\mbox{\textmu{g/g}} \propto
-   \frac{10~\mbox{\textmu{g/g}}}{85.4678~\mbox{\textmu{mol}/}\mbox{\textmu{g}}} =
+   \frac{10~\mbox{\textmu{g/g}}}{85.4678~\mbox{\textmu{g}/}\mbox{\textmu{mol}}} =
    0.117~\mbox{\textmu{mol}/g}
    \]
    

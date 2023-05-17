@@ -1,3 +1,6 @@
+# replace with your own working directory:
+setwd('~/Documents/geotopes/R/')
+
 # load the data
 std <- read.csv("stnd.csv",header=TRUE)
 smp <- read.csv("smpl.csv",header=TRUE)

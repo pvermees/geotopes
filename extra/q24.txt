@@ -40,7 +40,7 @@ three cogenetic aliquots:
    \]
    \[
    A[^{232}\mbox{Th}] =
-   \frac{\mbox{ppm Th}}{232.04\mbox{~\textmu{g}/\textmu{mol}}}\lambda_{238}
+   \frac{\mbox{ppm Th}}{232.04\mbox{~\textmu{g}/\textmu{mol}}}\lambda_{232}
    \]
    and
    \[

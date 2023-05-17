@@ -1,3 +1,4 @@
+# replace with your own working directory:
 setwd('~/Documents/geotopes/R/')
 
 # 1. load the data

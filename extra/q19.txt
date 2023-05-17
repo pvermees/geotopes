@@ -31,19 +31,23 @@ We measured the following ^40^K and ^40^Ar concentrations:
 
    (b) Standard deviations:
    \[
-   s[K] = \frac{1}{4}\left((2093-2076.4)^2 + (2105-2076.4)^2 + (2055-2076.4)^2\right.
+   s[K]^2 = \frac{1}{4}\left((2093-2076.4)^2 + (2105-2076.4)^2 + (2055-2076.4)^2\right.
    \]
    \[
-   \left. + (2099-2076.4)^2 + (2030-2076.4)^2\right)\times{10}^{-10} =
-   32.46\times{10}^{-10}
+   \left. + (2099-2076.4)^2 + (2030-2076.4)^2\right)\times{10}^{-20} 
    \]
    \[
-   s[Ar] = \frac{1}{5}\left((6.015-6.0163)^2 + (6.010-6.0163)^2 +
+   \Rightarrow s[K] = 32.46\times{10}^{-10}
+   \]
+   \[
+   s[Ar]^2 = \frac{1}{5}\left((6.015-6.0163)^2 + (6.010-6.0163)^2 +
    (6.030-6.0163)^2 + (6.005-6.0163)^2 \right.
    \]
    \[
-    \left. + (6.020-6.0163)^2 + (6.018-6.0163)^2\right)
-    \times{10}^{-10} = 8.641\times{10}^{-12}
+    \left. + (6.020-6.0163)^2 + (6.018-6.0163)^2\right) \times{10}^{-20}
+   \]
+   \[
+   \Rightarrow s[Ar] = 8.641\times{10}^{-12}
    \]
    To calculate the standard errors of the means, we divide these
    values by the square root of the number values:

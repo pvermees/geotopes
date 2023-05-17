@@ -15,7 +15,7 @@ billion years ago?
 
    The decay constant is given by
    \[
-   \lambda = \ln[2]/4.48 = 0.0142
+   \lambda = \ln[2]/48.8 = 0.0142
    \]
 
    Therefore

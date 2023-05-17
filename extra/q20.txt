@@ -85,11 +85,11 @@ Consider the following raw apatite fission track data:
    which gives
    \[
    s[R] = 0.007832 \sqrt{\left(\frac{10}{330}\right)^2 +
-          \left(\frac{10}{300}\right)^2 + \frac{1}{51} + \frac{1}{200}} = 0.00133
+          \frac{1}{300} + \frac{1}{51} + \frac{1}{200}} = 0.00133
    \]
    and, hence
    \[
-   s[t] = \frac{1}{0.000155125} \frac{0.00133}{1 + 0.000226} = 8.5\mbox{~Ma}
+   s[t] = \frac{1}{0.000155125} \frac{0.00133}{1 + 0.007832} = 8.5\mbox{~Ma}
    \]
    
    *Using R:*
