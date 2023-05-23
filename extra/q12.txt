@@ -25,10 +25,28 @@ of Solar System history contain measurable amounts of excess of
    \]
    and
    \[
-   \left[\frac{{}^{129}\mbox{X}}{{}^{127}\mbox{I}}\right]_{t_B} =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_B} =
    \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_0\exp[-\lambda_{129}t_B]
    \]
    Subsequent decay of the ^129^I to ^129^Xe yielded:
+   \[
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_A =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_A}\exp[-\lambda_{129}(t_S-t_A)]
+   \]
+   and
+   \[
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_B =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_B}\exp[-\lambda_{129}(t_S-t_B)]
+   \]
+   Because
+   $\left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_A} =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_A +
+   \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A$
+   and 
+   $\left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_B} =
+   \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_B +
+   \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_B$,
+   we can rearrange this as:
    \[
    \left[\frac{{}^{129}\mbox{Xe}}{{}^{127}\mbox{I}}\right]_A =
    \left[\frac{{}^{129}\mbox{I}}{{}^{127}\mbox{I}}\right]_{t_A}
