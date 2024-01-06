@@ -2,6 +2,7 @@
 \usepackage[subtle]{savetrees}
 \usepackage[a4paper, landscape, margin=1.2cm]{geometry}
 \usepackage{amsmath,graphicx,caption,color,upquote,enumitem,multicol}
+%\usepackage{cmbright} % switch to sans-serif font
 \pagestyle{empty}
 \title{Key equations}
 \author{\vspace{-5ex}}
@@ -19,7 +20,7 @@ H: 1.00794, He: 4.002602, C: 12.0107, O: 15.9994, Al: 26.98154, Si:
 28.0855, K: 39.0983, Ar: 39.948, Ca: 40.078, Rb: 85.4678, Sr: 87.62,
 I: 126.904, Xe: 131.293 Nd: 144.242, Sm: 150.36, Eu:151.964, Lu:
 174.967, Hf: 178.49, W: 183.84, Re: 186.207 Os: 190.23, Pb: 207.2, Th:
-232.03806, U: 238.02891
+232.04, U: 238.04
 
 \subsection{Isotopic ratios}
 
@@ -308,23 +309,6 @@ where $^{238}$U/$^{235}$U=137.818. For modern samples:
 \label{eq:commonPb}
 \end{equation}
 
-\subsection{Concordia}
-\label{sec:intro2concordia}
-
-Wetherill concordia:
-\begin{equation}
-\begin{array}{rl}
-\frac{^{206}Pb^*}{^{238}U} & = e^{\lambda_{238}t}-1 \mbox{~and}\\
-\frac{^{207}Pb^*}{^{235}U} & = e^{\lambda_{235}t}-1
-\end{array}
-\label{eq:wetherill}
-\end{equation}
-
-\begingroup
-\def\svgwidth{.25\textwidth}
-\input{wetherill.pdf_tex}
-\endgroup
-
 \section{The K--Ar system}
 \label{sec:K-Ar}
 
@@ -456,11 +440,12 @@ t = \frac{1}{\lambda}
 External detector method:
 \begin{equation}
 t =
-\frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{\rho_s}{\rho_i}\right)
+\frac{1}{\lambda}\ln\left(1+\frac{g_i}{g_s}\lambda\zeta\rho_d\frac{N_s}{N_i}\right)
 \label{eq:tzeta}
 \end{equation}
 
-Arrhenius relationship for fading fission tracks:
+\noindent where $N_s$ and $N_i$ are the spontaneous and induced track
+counts. Arrhenius relationship for fading fission tracks:
 \begin{equation}
 \ln(t) = \frac{E_A}{kT} +
 \ln\left[\ln\left(\frac{\rho_\circ}{\rho}\right)\right] - \ln(C)
