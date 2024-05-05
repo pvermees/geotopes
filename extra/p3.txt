@@ -14,7 +14,7 @@
    containing the blank corrected ^39^Ar signals and ^40^Ar/^39^Ar age
    estimates, respectively:
    ```{r include=FALSE}
-   d <- '/home/pvermees/Documents/geotopes/practicals/ArAr/'
+   d <- '/home/pvermees/git/geotopes/practicals/ArAr'
 
    # generate synthetic Ar/Ar dataset
    J <- 0.003
@@ -39,12 +39,12 @@
    s40_0 <- s40t + s40a
    s4039t <- (exp(l40*ts)-1)/J
    s39_0 <- s40t/s4039t
-   createfile(s36_0,s39_0,s40_0,t,paste0(d,'stnd.csv'))
+   createfile(s36_0,s39_0,s40_0,t,file.path(d,'stnd.csv'))
 
    b36_0 <- 1
    b40_0 <- b36_0*a4036
    b39_0 <- 1
-   createfile(b36_0,b39_0,b40_0,t,paste0(d,'blnk.csv'))
+   createfile(b36_0,b39_0,b40_0,t,file.path(d,'blnk.csv'))
 
    tx <- c(45,65,80,90,95,97.5,99,101,99,100)
    x36_0 <- 10
@@ -55,7 +55,7 @@
    x39_0 <- x40t/x4039t
 
    for (i in 1:length(tx)){
-      fname <- paste0(d,'smpl',i,'.csv')
+      fname <- file.path(d,paste0('smpl',i,'.csv'))
       createfile(x36_0,x39_0[i],x40_0[i],t,fname)
    }
    ```
@@ -107,16 +107,16 @@
    Next, we use this function to process the 10 samples:
    \fi
    ```{r}
-   d <- '/home/pvermees/Documents/geotopes/practicals/ArAr/'
+   d <- '/home/pvermees/git/geotopes/practicals/ArAr'
 
-   std <- read.csv(paste0(d,"stnd.csv"),header=TRUE)
-   blk <- read.csv(paste0(d,"blnk.csv"),header=TRUE)
+   std <- read.csv(file.path(d,"stnd.csv"),header=TRUE)
+   blk <- read.csv(file.path(d,"blnk.csv"),header=TRUE)
    ns <- 10 # number of samples
    Ar39 <- rep(NA,ns)
    tx <- rep(NA,ns)
    for (i in 1:ns){
-      sname <- paste0(d,'smpl',i,'.csv')
-      smp <- read.csv(sname,header=TRUE)
+      sname <- file.path(d,paste0('smpl',i,'.csv'))
+      smp <- read.csv(sname)
       results <- process(std,smp,blk)
       Ar39[i] <- results$Ar39
       tx[i] <- results$tx
