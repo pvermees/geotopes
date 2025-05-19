@@ -63,7 +63,7 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    is perfect, you can also calculate it manually using any
    pair of aliquots. For example:
    \[
-   \left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{std} =
+   \left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{smp} =
    \mbox{slope} = \frac{7869-820}{160-10} = 47.0
    \]
    The y-intercept of the isochron gives the inherited ^40^Ar/^36^Ar
@@ -77,7 +77,7 @@ Given the ^40^Ar/^39^Ar-data shown in the following table:
    \[
    t_{smp} = \frac{1}{\lambda_{40}}
    \ln\left[
-   1+J\left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{std}
+   1+J\left(\frac{{}^{40}\mbox{Ar}}{{}^{39}\mbox{Ar}}\right)^{\!*}_{smp}
    \right]
    = \ln\left(1+0.00250\times{47.0}\right)/0.0005554 = 200\mbox{~Ma}
    \]

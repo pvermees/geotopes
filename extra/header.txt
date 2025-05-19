@@ -1,7 +1,7 @@
 This document contains additional exercises that are to be completed
 during the live sessions on Mondays and Tuesdays. Some of these are
 advanced exercises that require creative thinking. You can use the
-notes and cheet sheet to answer them. Completing these exercises will
+notes and cheat sheet to answer them. Completing these exercises will
 deepen your understanding of the taught material.  They illustrate how
 the tools provided in the notes can be generalised to other
 chronometers, which we lack the time to discuss in detail. Practical

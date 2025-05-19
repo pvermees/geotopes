@@ -4,7 +4,7 @@ characterised by the same closure temperature?
    r <- c(50,200,100,400,200,100)
    C <- c(1,2,5,8,4,2)*1e5
    dTdt <- C/(r^2)
-   difftab <- rbind(format(r,digits=0),dTdt)
+   difftab <- rbind(format(r,digits=1),dTdt)
    rownames(difftab) <- c('r (micron)','dT/dt (K/Myr)')
    ```
    ```{r include=TRUE, echo=FALSE, results='asis'}
