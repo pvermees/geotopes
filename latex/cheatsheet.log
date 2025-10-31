@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  23 APR 2025 17:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.31)  31 OCT 2025 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -457,30 +457,30 @@ Overfull \hbox (6.3404pt too wide) in paragraph at lines 47--67
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 (./cheatsheet.aux) ) 
 Here is how much of TeX's memory you used:
- 7202 strings out of 478287
- 123676 string characters out of 5849289
- 496577 words of memory out of 5000000
- 25223 multiletter control sequences out of 15000+600000
+ 7202 strings out of 480171
+ 123676 string characters out of 5894488
+ 491779 words of memory out of 5000000
+ 24979 multiletter control sequences out of 15000+600000
  485082 words of font info for 126 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 59 hyphenation exceptions out of 8191
  69i,19n,117p,1026b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on cheatsheet.pdf (3 pages, 184470 bytes).
+ </home/pvermees/.texlive2021/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/
+cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb>
+Output written on cheatsheet.pdf (3 pages, 176119 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  50177 words of extra memory for PDF output out of 51595 (max. 10000000)
