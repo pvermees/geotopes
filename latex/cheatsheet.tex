@@ -37,8 +37,7 @@ Sr: & \textsuperscript{84}Sr/\textsuperscript{86}Sr=0.056584;
 
 Sm: & \textsuperscript{147}Sm/Sm = 14.99\% \\
 
-U: & \textsuperscript{238}U/\textsuperscript{235}U = 137.818; \\
-~ & A($^{234}$U)/A($^{238}$U)[modern ocean] $\approx$ 1.15.
+U: & \textsuperscript{238}U/\textsuperscript{235}U = 137.818.
 
 \end{tabular}
 
@@ -113,9 +112,9 @@ D_1 = \frac{\lambda_P}{\lambda_1 - \lambda_P} P_\circ \left[
 \label{eq:ND1}
 \end{equation}
 
-Secular equilibrium:
+Secular equilibrium, where $A(\cdot)$ is `the activity of $\cdot$':
 \begin{equation}
-D_1 \lambda_1 = P \lambda_P
+A(D_1) = D_1 \lambda_1 = P \lambda_P = A(P)
 \label{eq:ND1L1}
 \end{equation}
 
@@ -169,14 +168,13 @@ Will not be part of the exam.
 \label{sec:14C}
 
 \begin{equation}
-\frac{d^{14}C}{dt} = -\lambda_{14} \times {}^{14}C
+\frac{d^{14}\mbox{C}}{dt} = -\lambda_{14} \times {}^{14}\mbox{C}
 \label{eq:d14Cdt}
 \end{equation}
 
-where $\lambda_{14}$ = 0.120968 kyr$^{-1}$.
 \begin{equation}
 t = -\frac{1}{\lambda_{14}}
-\ln\left[\frac{d{}^{14}C/dt}{(d{}^{14}C/dt)_\circ}\right]
+\ln\left[\frac{d{}^{14}\mbox{C}/dt}{(d{}^{14}\mbox{C}/dt)_\circ}\right]
 \label{eq:t14C}
 \end{equation}
 
@@ -185,20 +183,20 @@ t = -\frac{1}{\lambda_{14}}
 
 Ingrowth equation:
 \begin{equation}
-{}^{87}Sr = {}^{87}Sr_\circ + {}^{87}Rb \, (e^{\lambda_{87} t} - 1)
+{}^{87}\mbox{Sr} = {}^{87}\mbox{Sr}_\circ + {}^{87}\mbox{Rb} \, (e^{\lambda_{87} t} - 1)
 \label{eq:87Sr*}
 \end{equation}
 
-where $^{87}Sr_\circ$ is the initial $^{87}$Sr content.
+where $^{87}\mbox{Sr}_\circ$ is the initial $^{87}$Sr content.
 $^{87}$Rb/$^{86}$Sr-ratio is calculated as:
 \begin{equation}
-\frac{^{87}Rb}{^{86}Sr} =
-\frac{Rb}{Sr} \frac{Ab(^{87}Rb)
-  M(Sr)}{Ab(^{86}Sr) M(Rb)}
+\frac{^{87}\mbox{Rb}}{^{86}\mbox{Sr}} =
+\frac{\mbox{Rb}}{\mbox{Sr}} \frac{\mbox{Ab}(^{87}\mbox{Rb})
+  \mbox{M(Sr)}}{\mbox{Ab}(^{86}\mbox{Sr}) \mbox{M(Rb)}}
 \label{eq:87Rb86Sr}
 \end{equation}
 
-where $Ab(\cdot)$ signifies `abundance'.
+where $\mbox{Ab}(\cdot)$ signifies `the abundance of $\cdot$'.
 
 \subsection{Isochrons}
 \label{sec:isochrons}
@@ -213,9 +211,9 @@ where $P$ = the parent isotope, $D$ = the daughter isotope, $d$ = a
 non-radiogenic sister isotope of the radiogenic daughter. For the
 Rb--Sr method:
 \begin{equation}
-\frac{^{87}Sr}{^{86}Sr} =
-\left(\frac{^{87}Sr}{^{86}Sr}\right)_\circ +
-\frac{^{87}Rb}{^{86}Sr} (e^{\lambda_{87} t} - 1)
+\frac{^{87}\mbox{Sr}}{^{86}\mbox{Sr}} =
+\left(\frac{^{87}\mbox{Sr}}{^{86}\mbox{Sr}}\right)_\circ +
+\frac{^{87}\mbox{Rb}}{^{86}\mbox{Sr}} (e^{\lambda_{87} t} - 1)
 \label{eq:87Sr86Sr}
 \end{equation}
 
@@ -224,15 +222,15 @@ Rb--Sr method:
 
 The age equation:
 \begin{equation}
-^{143}Nd = ^{143}Nd_\circ + {}^{147}Sm (e^{\lambda_{147} t} - 1)
+^{143}\mbox{Nd} = ^{143}\mbox{Nd}_\circ + {}^{147}\mbox{Sm} (e^{\lambda_{147} t} - 1)
 \label{eq:144Nd*}
 \end{equation}
 
 Isochron equation:
 \begin{equation}
-\frac{^{143}Nd}{^{144}Nd} =
-\left(\frac{^{143}Nd}{^{144}Nd}\right)_{\circ} +
-\frac{^{147}Sm}{^{144}Nd} \left(e^{\lambda_{147}t} -
+\frac{^{143}\mbox{Nd}}{^{144}\mbox{Nd}} =
+\left(\frac{^{143}\mbox{Nd}}{^{144}\mbox{Nd}}\right)_{\circ} +
+\frac{^{147}\mbox{Sm}}{^{144}\mbox{Nd}} \left(e^{\lambda_{147}t} -
 1\right)
 \label{eq:143Nd147Nd}
 \end{equation}
@@ -241,10 +239,10 @@ Isochron equation:
 \label{sec:U-Pb}
 
 \begin{equation}
-\begin{array}{rl}
-^{238}U \rightarrow & {}^{206}Pb + 8\alpha + 6\beta + 47\mbox{MeV} \\ 
-^{235}U \rightarrow & {}^{207}Pb + 7\alpha + 4\beta + 45\mbox{MeV} \\
-^{232}Th \rightarrow & {}^{208}Pb + 6\alpha + 4\beta + 40\mbox{MeV} 
+\begin{array}{r@{~}l}
+^{238}\mbox{U} \rightarrow & {}^{206}\mbox{Pb} + 8\,\alpha + 6\,\beta + 47\,\mbox{MeV} \\ 
+^{235}\mbox{U} \rightarrow & {}^{207}\mbox{Pb} + 7\,\alpha + 4\,\beta + 45\,\mbox{MeV} \\
+^{232}\mbox{Th} \rightarrow & {}^{208}\mbox{Pb} + 6\,\alpha + 4\,\beta + 40\,\mbox{MeV} 
 \end{array}
 \label{eq:UThdecay}
 \end{equation}
@@ -255,9 +253,9 @@ Isochron equation:
 Ingrowth equations:
 \begin{equation}
   \begin{array}{rl}
-    &{}^{206}Pb^* = {}^{238}U \left(e^{\lambda_{238}t} - 1\right)\\ 
-    &{}^{207}Pb^* = {}^{235}U \left(e^{\lambda_{235}t} - 1\right)\\ 
-    &{}^{208}Pb^* = {}^{232}Th \left(e^{\lambda_{232}t} - 1\right)
+    &{}^{206}\mbox{Pb}^* = {}^{238}\mbox{U} \left(e^{\lambda_{238}t} - 1\right)\\ 
+    &{}^{207}\mbox{Pb}^* = {}^{235}\mbox{U} \left(e^{\lambda_{235}t} - 1\right)\\ 
+    &{}^{208}\mbox{Pb}^* = {}^{232}\mbox{Th} \left(e^{\lambda_{232}t} - 1\right)
   \end{array}
   \label{eq:Pb*}
 \end{equation}
@@ -268,11 +266,11 @@ corresponding age equations are:
 \begin{equation}
   \begin{array}{rl}
     t_{206} & = \frac{1}{\lambda_{238}}
-    \ln \left(\frac{{}^{206}Pb^*}{{}^{238}U}+1\right)\\
+    \ln \left(\frac{{}^{206}\mbox{Pb}^*}{{}^{238}\mbox{U}}+1\right)\\
     t_{207} & = \frac{1}{\lambda_{235}}
-    \ln \left(\frac{{}^{207}Pb^*}{{}^{235}U}+1\right)\\
+    \ln \left(\frac{{}^{207}\mbox{Pb}^*}{{}^{235}\mbox{U}}+1\right)\\
     t_{208} & = \frac{1}{\lambda_{232}}
-    \ln \left(\frac{{}^{208}Pb^*}{{}^{232}Th}+1\right)
+    \ln \left(\frac{{}^{208}\mbox{Pb}^*}{{}^{232}\mbox{Th}}+1\right)
   \end{array}
   \label{eq:tPb*}
 \end{equation}
@@ -280,12 +278,12 @@ corresponding age equations are:
 with common Pb correction:
 \begin{equation}
 \begin{array}{c}
-  t_{206}=\frac{1}{\lambda_{238}}\ln\left(\frac{\left(\frac{^{206}Pb}{^{204}Pb}\right)-
-    \left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ}{\frac{^{238}U}{^{204}Pb}}+1\right)\\
-  t_{207}=\frac{1}{\lambda_{235}}\ln\left(\frac{\left(\frac{^{207}Pb}{^{204}Pb}\right)-
-    \left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ}{\frac{^{235}U}{^{204}Pb}}+1\right)\\
-  t_{208}=\frac{1}{\lambda_{232}}\ln\left(\frac{\left(\frac{^{208}Pb}{^{204}Pb}\right)-
-    \left(\frac{^{208}Pb}{^{204}Pb}\right)_\circ}{\frac{^{232}Th}{^{204}Pb}}+1\right)
+  t_{206}=\frac{1}{\lambda_{238}}\ln\left(\frac{\left(\frac{{}^{206}\mbox{Pb}}{^{204}\mbox{Pb}}\right)-
+    \left(\frac{^{206}\mbox{Pb}}{^{204}\mbox{Pb}}\right)_\circ}{\frac{^{238}\mbox{U}}{^{204}\mbox{Pb}}}+1\right)\\
+  t_{207}=\frac{1}{\lambda_{235}}\ln\left(\frac{\left(\frac{^{207}\mbox{Pb}}{^{204}\mbox{Pb}}\right)-
+    \left(\frac{^{207}\mbox{Pb}}{^{204}\mbox{Pb}}\right)_\circ}{\frac{^{235}\mbox{U}}{^{204}\mbox{Pb}}}+1\right)\\
+  t_{208}=\frac{1}{\lambda_{232}}\ln\left(\frac{\left(\frac{^{208}\mbox{Pb}}{^{204}\mbox{Pb}}\right)-
+    \left(\frac{^{208}\mbox{Pb}}{^{204}\mbox{Pb}}\right)_\circ}{\frac{^{232}\mbox{Th}}{^{204}\mbox{Pb}}}+1\right)
 \end{array}
 \label{eq:tPb}
 \end{equation}
@@ -295,17 +293,17 @@ with common Pb correction:
 
 Age equation:
 \begin{equation}
-\frac{^{207}Pb^*}{^{206}Pb^*} = 
-\frac{\left(\frac{^{207}Pb}{^{204}Pb}\right)-\left(\frac{^{207}Pb}{^{204}Pb}\right)_\circ}
-{\left(\frac{^{206}Pb}{^{204}Pb}\right)-\left(\frac{^{206}Pb}{^{204}Pb}\right)_\circ}
-= \frac{1}{137.818} \frac{e^{\lambda_{235}t}-1}{e^{\lambda_{238}t}-1}
+\frac{^{207}\mbox{Pb}^*}{^{206}\mbox{Pb}^*} = 
+\frac{\left(\frac{^{207}\mbox{Pb}}{^{204}\mbox{Pb}}\right)-\left(\frac{^{207}\mbox{Pb}}{^{204}\mbox{Pb}}\right)_\circ}
+{\left(\frac{^{206}\mbox{Pb}}{^{204}\mbox{Pb}}\right)-\left(\frac{^{206}\mbox{Pb}}{^{204}\mbox{Pb}}\right)_\circ}
+= \frac{{}^{235}\mbox{U}}{{}^{238}\mbox{U}} \frac{e^{\lambda_{235}t}-1}{e^{\lambda_{238}t}-1}
 \label{eq:PbPb}
 \end{equation}
 
-where $^{238}$U/$^{235}$U=137.818. For modern samples:
+where $^{235}$U/$^{238}$U=1/137.818. For modern samples:
 \begin{equation}
-  \left(\frac{^{207}Pb}{^{206}Pb}\right)^*_p =
-  \frac{\lambda_{235}}{137.818\lambda_{238}} = 0.04607
+  \left(\frac{^{207}\mbox{Pb}}{^{206}\mbox{Pb}}\right)^*_{t=0} =
+  \frac{\lambda_{235}}{\lambda_{238}}\frac{^{235}\mbox{U}}{^{238}\mbox{U}} = 0.04607
 \label{eq:commonPb}
 \end{equation}
 
@@ -314,10 +312,10 @@ where $^{238}$U/$^{235}$U=137.818. For modern samples:
 
 Ingrowth equation:
 \begin{equation}
-\begin{array}{rl}
-^{40}Ar & = {}^{40}Ar_\circ + {}^{40}Ar^*\\ 
-\mbox{where~} {}^{40}Ar^* & =
-  \frac{\lambda_e}{\lambda} {}^{40}K \left( e^{\lambda t} - 1 \right)
+\begin{array}{r@{~}l}
+^{40}\mbox{Ar} & = {}^{40}\mbox{Ar}_\circ + {}^{40}\mbox{Ar}^*\\ 
+\mbox{where~} {}^{40}\mbox{Ar}^* & =
+  \frac{\lambda_e}{\lambda} {}^{40}\mbox{K} \left( e^{\lambda t} - 1 \right)
 \end{array}
 \label{eq:Ar}
 \end{equation}
@@ -327,14 +325,14 @@ Ingrowth equation:
 Age equation:
 \begin{equation}
 t = \frac{1}{\lambda} \ln\left[ 1 + \frac{\lambda}{\lambda_e}
-  \left(\frac{^{40}Ar^*}{^{40}K}\right) \right]
+  \left(\frac{^{40}\mbox{Ar}^*}{^{40}\mbox{K}}\right) \right]
 \label{eq:K-Ar}
 \end{equation}
 
 Isochron equation:
 \begin{equation}
-\frac{^{40}Ar}{^{36}Ar} = \left(\frac{^{40}Ar}{^{36}Ar}\right)_\circ +
-\frac{\lambda_e}{\lambda} \frac{^{40}K}{^{36}Ar} \left( e^{\lambda t} - 1 \right)
+\frac{^{40}\mbox{Ar}}{^{36}\mbox{Ar}} = \left(\frac{^{40}\mbox{Ar}}{^{36}\mbox{Ar}}\right)_\circ +
+\frac{\lambda_e}{\lambda} \frac{^{40}\mbox{K}}{^{36}\mbox{Ar}} \left( e^{\lambda t} - 1 \right)
 \label{eq:K-Ar-isochron}
 \end{equation}
 
@@ -344,7 +342,7 @@ Isochron equation:
 Sample:
 \begin{equation}
 t_x = \frac{1}{\lambda} \ln\left[
-1 + J \left(\frac{^{40}Ar^*}{^{39}Ar}\right)_x 
+1 + J \left(\frac{^{40}\mbox{Ar}^*}{^{39}\mbox{Ar}}\right)_x 
 \right]
 \label{eq:Ar-Ar}
 \end{equation}
@@ -352,16 +350,16 @@ t_x = \frac{1}{\lambda} \ln\left[
 Standard:
 \begin{equation}
 t_s = \frac{1}{\lambda} \ln\left[
-1 + J \left(\frac{^{40}Ar^*}{^{39}Ar}\right)_s 
+1 + J \left(\frac{^{40}\mbox{Ar}^*}{^{39}\mbox{Ar}}\right)_s 
 \right]
 \label{eq:J}
 \end{equation}
 
 Isochron equation:
 \begin{equation}
-\frac{{}^{40}Ar}{{}^{36}Ar} =
-\left(\frac{{}^{40}Ar}{{}^{36}Ar}\right)_\circ +
-\frac{{}^{39}Ar}{{}^{36}Ar}\frac{e^{\lambda t} - 1}{J}
+\frac{{}^{40}\mbox{Ar}}{{}^{36}\mbox{Ar}} =
+\left(\frac{{}^{40}\mbox{Ar}}{{}^{36}\mbox{Ar}}\right)_\circ +
+\frac{{}^{39}\mbox{Ar}}{{}^{36}\mbox{Ar}}\frac{e^{\lambda t} - 1}{J}
 \label{eq:Ar-Ar-isochron}
 \end{equation}
 
@@ -374,10 +372,10 @@ Ingrowth equation:
 \begin{equation}
 \begin{split}
   \left[^4\mbox{He}\right] = &
-  8 (e^{\lambda_{238}t} - 1) \mbox{[\textsuperscript{238}U]} + 
-  7 (e^{\lambda_{235}t} - 1) \mbox{[\textsuperscript{235}U]} + \\
-  ~ & 6 (e^{\lambda_{232}t} - 1) \mbox{[\textsuperscript{232}Th]} +
-  (e^{\lambda_{147}t} - 1) \mbox{[\textsuperscript{147}Sm]}
+  8 (e^{\lambda_{238}t} - 1) \mbox{[\textsuperscript{238}\mbox{U}]} + 
+  7 (e^{\lambda_{235}t} - 1) \mbox{[\textsuperscript{235}\mbox{U}]} + \\
+  ~ & 6 (e^{\lambda_{232}t} - 1) \mbox{[\textsuperscript{232}\mbox{Th}]} +
+  (e^{\lambda_{147}t} - 1) \mbox{[\textsuperscript{147}\mbox{Sm}]}
 \end{split}
 \label{eq:U-Th-He}
 \end{equation}
@@ -466,24 +464,28 @@ Will not be part of the exam.
 
 Age equation:
 \begin{equation}
-\frac{A(^{234}U)}{A(^{238}U)} = 1 + [ \gamma_\circ - 1 ] e^{-\lambda_{234}t} 
+\frac{A(^{234}\mbox{U})}{A(^{238}\mbox{U})} = 1 + [ \gamma_\circ - 1 ] e^{-\lambda_{234}t} 
 \label{eq:A234A238}
 \end{equation}
+
+\noindent where $\gamma_\circ =
+\left[\frac{{}^{234}\mbox{U}}{{}^{238}\mbox{U}}\right]_{\mbox{init}}$ ($\approx 1.15$
+for modern ocean water).
 
 \subsection{The $^{230}$Th method}
 \label{sec:230}
 
 Ingrowth equation:
 \begin{equation}
-A(^{230}Th) = A(^{230}Th)_\circ e^{-\lambda_{230}t} + A(^{238}U)(1-e^{-\lambda_{230}t})
+A(^{230}\mbox{Th}) = A(^{230}\mbox{Th})_\circ e^{-\lambda_{230}t} + A(^{238}\mbox{U})(1-e^{-\lambda_{230}t})
 \label{eq:A230}
 \end{equation}
 
 Isochron equation:
 \begin{equation}
-  \frac{A(^{230}Th)}{A(^{232}Th)} =
-  \frac{A(^{230}Th)_\circ}{A(^{232}Th)} e^{-\lambda_{230}t} + 
-  \frac{A(^{238}U)}{A(^{232}Th)}(1-e^{-\lambda_{230}t})
+  \frac{A(^{230}\mbox{Th})}{A(^{232}\mbox{Th})} =
+  \frac{A(^{230}\mbox{Th})_\circ}{A(^{232}\mbox{Th})} e^{-\lambda_{230}t} + 
+  \frac{A(^{238}\mbox{U})}{A(^{232}\mbox{Th})}(1-e^{-\lambda_{230}t})
 \label{eq:230232}
 \end{equation}
 
@@ -492,24 +494,18 @@ Isochron equation:
 
 Decay series:
 \begin{align}
-~ & A(^{230}Th) =  A(^{230}Th)^s + A(^{230}Th)^x \label{eq:230total}\\
-\mbox{with:~} & A(^{230}Th)^s = A(^{238}U) (1-e^{-\lambda_{230}t}) \label{eq:230s}\\
-\mbox{and:~} & A(^{230}Th)^x = \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} 
-A(^{234}U)_\circ^x\left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right) \label{eq:230x}
+~ & A(^{230}\mbox{Th}) =  A(^{230}\mbox{Th})^s + A(^{230}\mbox{Th})^x \label{eq:230total}\\
+\mbox{with:~} & A(^{230}\mbox{Th})^s = A(^{238}\mbox{U}) (1-e^{-\lambda_{230}t}) \label{eq:230s}\\
+\mbox{and:~} & A(^{230}\mbox{Th})^x = \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} 
+A(^{234}\mbox{U})_\circ^x\left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right) \label{eq:230x}
 \end{align}
 
 Age equation:
 \begin{equation}
-  \frac{A(^{230}Th)}{A(^{238}U)} = 1 - e^{-\lambda_{230}t} +
+  \frac{A(^{230}\mbox{Th})}{A(^{238}\mbox{U})} = 1 - e^{-\lambda_{230}t} +
   \frac{\lambda_{230}}{\lambda_{230}-\lambda_{234}} (\gamma_\circ-1)
 \left(e^{-\lambda_{234}t}-e^{-\lambda_{230}t}\right)
 \label{eq:230238}
-\end{equation}
-
-If $\gamma_\circ = 1$:
-\begin{equation}
-\frac{A(^{230}Th)}{A(^{238}U)} = 1-e^{-\lambda_{230}t}
-\label{eq:230238b}
 \end{equation}
 
 \section{Error propagation}
@@ -549,8 +545,8 @@ s[x,y] \equiv \frac{1}{n-1} \sum_{i=1}^{n} (x_i-\overline{x})(y_i-\overline{y})
 General equation for the error propagation of a function $t=f(x,y)$:
 \begin{equation}
 s[t]^2 s[x]^2 \left(\frac{\partial f}{\partial x}\right)^2 +
-s[y]^2 \left(\frac{\partial f}{\partial y}\right)^2 +
-2~s[x,y] \frac{\partial f}{\partial x} \frac{\partial f}{\partial y} \label{eq:s2t}
+s[y]^2 \left(\frac{\partial f}{\partial y}\right)^2
++ 2~s[x,y] \frac{\partial f}{\partial x} \frac{\partial f}{\partial y} \label{eq:s2t}
 \end{equation}
 
 In matrix form:
@@ -579,7 +575,7 @@ s[x,y] & s[y]^2
 \subsection{Examples}
 
 Let $x$ and $y$ indicate measured quantities associated with
-analytical uncertainty.  And let $a$ and $b$ be some error free
+analytical uncertainty, and let $a$ and $b$ be some error free
 parameters.
 \begin{enumerate}
 \item{addition ($t = a x + b y$):}
