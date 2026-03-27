@@ -14,7 +14,7 @@ speleothem. What was its _initial_ ^234^U/^238^U-ratio?
    \]
    Plugging in the parameter values:	
    \[
-   \gamma_\circ = 1 + \left(1.1 - 1\right)\exp[0.00282206 \times 1000] = 2.68\mbox{~ka}
+   \gamma_\circ = 1 + \left(1.1 - 1\right)\exp[0.00282206 \times 1000] = 2.68
    \]
 
    *Using R:*
